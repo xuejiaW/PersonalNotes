@@ -1,0 +1,13 @@
+{
+  "baseFontSize": 16,
+  "cssTheme": "Minimal",
+  "translucency": false,
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "ColorfulHeading",
+    "heading",
+    "FoldingGlutter",
+    "TableBorder",
+    "ImageCaption"
+  ]
+}

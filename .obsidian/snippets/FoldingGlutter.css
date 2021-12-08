@@ -1,0 +1,17 @@
+/* Always display folding glutter in preview mode */
+.markdown-preview-view .heading-collapse-indicator.collapse-indicator svg,
+.markdown-preview-view ol > li .collapse-indicator svg,
+.markdown-preview-view ul > li .collapse-indicator svg {
+    opacity: 0.5;
+}
+
+.markdown-preview-view .is-collapsed .collapse-indicator svg,
+.markdown-preview-view .collapse-indicator:hover svg {
+    opacity: 1;
+}
+
+/* Always display folding glutter in edit mode*/
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after {
+    opacity: 1;
+}

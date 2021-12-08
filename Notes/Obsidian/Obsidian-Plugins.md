@@ -1,0 +1,360 @@
+---
+tags:
+    - Obsidian
+created: 2021-12-08
+updated: 2021-12-08
+---
+
+在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
+
+# Core Plugins
+
+## Workspaces
+
+该插件用来管理 Obsidian 的页面布局，当开启后可以在左侧边栏点开 `Manage workspaces` 图标，并在弹出的页面中保存或读取 workspaces。
+
+## Tag Pane
+
+该插件开启后，可以通过 `Tag pane: Show tag pane` 开启 Tab Pane，在其中会展示 Vault 中所有表示的 Tag。如下所示：
+![](assets/Obsidian-Plugins/image-20211121231038137.png)
+
+## Quick Switcher
+
+该插件开启后，可通过默认为 `Ctrl+O` 的快捷键快速选择文件跳转，类似于[VSCode](../VSCode/VSCode.md) 中的 `Go to file (Ctrl + P)` 功能。
+
+可在 `Settings/Quick switcher / Quick Switcher / Show attachments` 中选择跳转文件时，是否要展示附件文件。
+
+
+# Community Plugins
+
+## Admonition[^1] 
+
+该插件用来为 Obsidian 增加 Admonition（Callout）功能，支持的类型参考 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+
+对于每个 Admonition 都必须以 `ad-` 开头。最简的使用格式如下：
+
+<pre><code>```ad-note
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+``` code></pre>
+
+效果为：
+
+```ad-note
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+### 所有支持 Admonition 类型
+
+上述的 `note` 为 `Admonition` 的类型，对于不同的类型会有不同颜色和不同图标的显示，所有支持的类型如下所示：
+
+```ad-note
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-abstract
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-summary
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-info
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-todo
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-tip
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-hint
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-important
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-success
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-check
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-done
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-warning
+rem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-caution
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-attention
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-failure
+rem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-fail
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-missing
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-danger
+rem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-error
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-bug
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-example
+rem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-quote
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+```ad-cite
+orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+### 自定义 Admonition
+
+对于 Admonition 可以自定义标题，是否支持折叠，图标和颜色，如下所示：
+
+```ad-note
+title: Custom Title $\sum\frac{\pi}{\sigma}$
+collapse: open
+icon: triforce
+color: 200, 200, 200
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+```
+
+可以在 `Settings\Plugin Options\Admonition\Collapsible by Default` 选择是否默认折叠 Admonition.
+
+所有 Icon 必须来自于 [FontAwesome](https://fontawesome.com/) 或 [RpgAwesome](https://nagoshiashumari.github.io/Rpg-Awesome/)
+
+### 嵌套 Admonition
+
+当需要嵌套 Admonition 时，可以为外部的 Admonition 加入更多的 \`，如下所示：
+<pre><code> `````ad-note
+title: Nested Admonitions
+collapse: open
+
+Hello!
+
+````ad-note
+title: This admonition is nested.
+This is a nested admonition!
+
+```ad-warning
+title: This admonition is closed.
+collapse: close
+```
+````
+
+This is in the original admonition.
+`````</pre>
+
+效果如下：
+
+`````ad-note
+title: Nested Admonitions
+collapse: open
+
+Hello!
+
+````ad-note
+title: This admonition is nested.
+This is a nested admonition!
+
+```ad-warning
+title: This admonition is closed.
+collapse: close
+```
+
+````
+
+This is in the original admonition.
+`````
+
+还可使用 Python 风格的 Markdown如下的代码实现嵌套 Admonition：
+
+<pre><code>```ad-note
+title: Nested Admonitions
+collapse: open
+
+Hello!
+
+!!! ad-note
+    title: This admonition is nested.
+    This is a nested admonition!
+    !!! ad-warning
+        title: This admonition is closed.
+        collapse: close
+
+
+This is in the original admonition.
+```</pre>
+
+效果如下：
+
+```ad-note
+title: Nested Admonitions
+collapse: open
+
+Hello!
+
+!!! ad-note
+    title: This admonition is nested.
+    This is a nested admonition!
+    !!! ad-warning
+        title: This admonition is closed.
+        collapse: close
+
+This is in the original admonition.
+```
+
+#### 嵌套代码块
+
+当需要在 Admonition 中嵌套代码块时，可以用更多的 \` 表示，也可以用则需要使用 `~~~` 表示：
+
+<pre><code> ````ad-info
+
+```ad-bug
+title: I'm Nested!
+~~~javascript
+throw new Error("Oops, I'm a bug.");
+~~~
+```
+
+```javascript
+console.log("Hello!");
+```
+
+```` </pre>
+
+效果如下：
+
+````ad-info
+
+```ad-bug
+title: I'm Nested!
+~~~javascript
+throw new Error("Oops, I'm a bug.");
+~~~
+```
+
+```javascript
+console.log("Hello!");
+```
+
+````
+
+## Custom Attachment Location[^2] 
+
+该插件控制在
+Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中的插件 [VSCode-Extensions](../VSCode/VSCode-Extensions.md)
+
+当安装完成后，可直接通过 `Ctrl+V` 在界面中以 markdown 格式黏贴图片，图片的源文件会被保存在 `./asset/` 目录下的与文件同名的子文件夹下。
+
+具体的保存路径可以在 `Settings/Custom Attachment Location` 中进行配置。
+
+
+## PlantUML[^3]
+
+该插件实现在 Obsidian 中插入 [PlantUML](../PlantUML/PlantUML.md) 的功能。
+
+其中将 PlantUML 的代码定义在 `plnatuml` 代码块中，如下所示：
+<pre><code> ````plantuml
+
+A --> B
+
+```` </pre>
+
+效果如下：
+````plantuml
+
+A --> B
+
+````
+
+```ad-note
+为了编写的 PlantUML 代码可以同时在 VSCode 中展示，推荐使用如下的格式：
+<pre><code> ````plantuml
+@startuml
+A --> B
+@enduml
+```` </pre>
+```
+
+## Better Footnote [^4]
+
+该插件支持更好的展示脚注。在下载打开该插件后，当光标移动到文中的脚注部分，会在 PopOver 窗口中显示对应的脚注，如下所示：
+
+![|200](assets/Obsidian-Plugins/GIF%2011-27-2021%2010-41-46%20PM.gif)
+
+默认安装插件后，脚注的内容就不会在文章中显示，可以通过 `Settings/Better footnote\Show reference` 重新打开显示。
+
+## Quick Explorer[^5]
+
+该插件实现了文件夹目录的快速访问如下所示：
+
+![](assets/Obsidian-Plugins/GIF%2011-28-2021%2011-05-12%20PM.gif)
+
+## Tag Wrangler[^6]
+
+该插件增强了 [Tag Pane](Obsidian-Plugins.md#Tag%20Pane) 的功能，主要提供了为 [Obsidian-Tag](Obsidian-Tag.md) 重命名的功能。
+
+当安装插件后，在 Tag Panel 中右键 Tag 会展现出重命名的选项。
+
+## Sliding Panes[^7]
+
+Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该插件实现了自动在新页面打开并将多个页面折叠滑动的效果，如下所示：
+![](assets/Obsidian-Plugins/screenshot.gif)
+
+可以在快捷键中设置 `Focus on Pane to the left` 和 `Focus on Pane to the right` 命令向左或向右切换 Pane。
+
+## Advanced Tables [^8]
+
+该插件帮助可以更快的插入表格。
+
+## File Explorer Note Count[^9]
+
+该插件实现在文件夹侧面显示该文件夹中笔记的数量，如下所示：
+![|300](assets/Obsidian-Plugins/image-20211208001137254.png)
+
+
+# Reference
+
+[^1]: [Admonition](https://github.com/valentine195/obsidian-admonition)
+[^2]: [Custom Attachment Location](https://github.com/RainCat1998/obsidian-custom-attachment-location)
+[^3]: [PlantUML](https://github.com/joethei/obsidian-plantuml)
+[^4]: [Better Footnote](https://github.com/aidenlx/better-fn)
+[^5]: [Quick Explorer](https://github.com/pjeby/quick-explorer)
+[^6]:[tag-wrangler](https://github.com/pjeby/tag-wrangler)
+[^7]:[Sliding Panes](https://github.com/deathau/sliding-panes-obsidian)
+[^8]: [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
+[^9]: [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count)

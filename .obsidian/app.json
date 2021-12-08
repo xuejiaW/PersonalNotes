@@ -1,0 +1,12 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./assets/CSharp-$ Character",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "foldIndent": true,
+  "foldHeading": true,
+  "newFileLocation": "root",
+  "useTab": false,
+  "vimMode": false
+}
