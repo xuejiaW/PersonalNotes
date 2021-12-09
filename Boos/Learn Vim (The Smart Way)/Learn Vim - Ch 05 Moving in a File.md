@@ -1,6 +1,6 @@
 ---
 created: 2021-12-09
-updated: 2021-12-09
+updated: 2021-12-10
 ---
 ```ad-note
 这一章不会阐述 Vim 支持的所有移动方式。更多的移动相关信息，可见 `:h motion.txt`
