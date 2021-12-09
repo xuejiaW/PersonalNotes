@@ -15,3 +15,7 @@ $ 字符用来表示 `字符串内插（string interpolation）`，
 # Referece
 
 [$ - string interpolation - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
+
+[String interpolation - C# tutorial | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/exploration/interpolated-strings-local)
+
+[String interpolation in C# | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/string-interpolation)

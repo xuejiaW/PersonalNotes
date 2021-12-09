@@ -11,5 +11,6 @@
   "sliding-panes-obsidian",
   "table-editor-obsidian",
   "file-explorer-note-count",
-  "obsidian-git"
+  "obsidian-git",
+  "update-time-on-edit"
 ]

@@ -1,6 +1,8 @@
 ---
 tags:
     - C#
+created: 2021-12-09
+updated: 2021-12-09
 ---
 
 # Overview
@@ -87,6 +89,8 @@ partial void OnNameChanged()
 ```ad-note
 即不满足上述任一条件，则实际上 Partial 函数就必须定义实现，此时 Partial 函数也就失去了原有的意义。
 ```
+
+
 
 # Reference
 

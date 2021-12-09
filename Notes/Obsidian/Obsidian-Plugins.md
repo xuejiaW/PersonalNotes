@@ -1,7 +1,7 @@
 ---
 tags:
     - Obsidian
-created: 2021-12-08
+created: 2021-11-21
 updated: 2021-12-09
 ---
 
@@ -346,6 +346,17 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 该插件实现在文件夹侧面显示该文件夹中笔记的数量，如下所示：
 ![|300](assets/Obsidian-Plugins/image-20211208001137254.png)
 
+## Obsidian Git[^10]
+
+该插件用来自动定义将 Obsidian Vault 中内容通过 Git 备份。
+
+在使用前需要在 Vault 文件夹中先初始化 Git，如果需要推送至远端也需要先将远端地址设置好，插件并不会自己配置 Git 环境等。
+
+通过 `Settings/Obsidian Git` 可以为插件进行配置，如每隔多少分钟进行一次备份，备份时是否需要将 Commit 推送至远端等。
+
+该插件也提供了一系列快捷键选项，如下所示：
+![|500](assets/Obsidian-Plugins/image-20211209082916125.png)
+
 
 # Reference
 
@@ -358,3 +369,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^7]:[Sliding Panes](https://github.com/deathau/sliding-panes-obsidian)
 [^8]: [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
 [^9]: [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count)
+[^10]: [obsidian-git](https://github.com/denolehov/obsidian-git)
