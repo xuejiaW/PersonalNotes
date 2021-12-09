@@ -2,8 +2,6 @@
 Alias: Visual Studio Code
 tags: 
     - VSCode
-created: 2021-12-08
-updated: 2021-12-09
 ---
 
 [VSCode-Extensions](VSCode-Extensions.md): Visual Code Studio 中的插件

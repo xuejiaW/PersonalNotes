@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-$ Character.md",
+            "file": "Notes/VSCode/VSCode.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ Character.md"
+                "file": "Notes/VSCode/VSCode.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ Character.md",
+                "file": "Notes/VSCode/VSCode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ Character.md",
+                "file": "Notes/VSCode/VSCode.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "f874a56ea62f6a6d",
   "lastOpenFiles": [
+    "Notes/VSCode/VSCode.md",
+    "Notes/VSCode/VSCode-Extensions.md",
+    "Notes/VSCode/VSCode-Cpp.md",
+    "Notes/VSCode/VSCode-Settings.md",
+    "TO-DO.md",
     "Notes/CSharp/CSharp-$ Character.md",
     "Notes/CSharp/CSharp-Partial Classes And Methods.md",
+    "Notes/Unity/Unity-VSCode.md",
     "Notes/OpenGL/OpenGL-Projection Matrix.md",
-    "Notes/OpenGL/OpenGL-Scissor Test.md",
-    "Notes/OpenGL/OpenGL-Viewport.md",
-    "Notes/OpenGL/OpenGL-Viewport VS Scissor Test.md",
-    "Notes/VSCode/VSCode-Settings.md",
-    "Notes/VSCode/VSCode-Extensions.md",
-    "Notes/VSCode/VSCode.md",
-    "Notes/VSCode/VSCode-Cpp.md"
+    "Notes/OpenGL/OpenGL-Scissor Test.md"
   ]
 }
