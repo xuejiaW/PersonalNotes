@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-String Interpolation.md",
+            "file": "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 05 Moving in a File.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mark",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -48,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-String Interpolation.md"
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 05 Moving in a File.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-String Interpolation.md",
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 05 Moving in a File.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-String Interpolation.md",
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 05 Moving in a File.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +153,7 @@
   },
   "active": "5c55c3d2aedc63d3",
   "lastOpenFiles": [
+    "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 05 Moving in a File.md",
     "Notes/CSharp/CSharp-String Interpolation.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Obsidian/Obsidian-Settings.md",
@@ -160,7 +162,6 @@
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Notes/Obsidian/Obsidian.md",
     "Notes/Android Debug Bridge.md",
-    "Notes/Chocolatey.md",
-    "Notes/Clang-Format.md"
+    "Notes/Chocolatey.md"
   ]
 }
