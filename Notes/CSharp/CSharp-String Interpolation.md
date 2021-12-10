@@ -86,6 +86,10 @@ Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
 ```
 
 ```ad-note
+所谓的控制字符宽度，实际上是决定显示最少的**字符数**。因此如果显示系统中每个字符的宽度是不相等的话，如 `i` 和 `a` 的宽度在某些显示系统下会有较大差异，则即使控制字符宽度也无法实现对其的效果。
+
+如下为相同输出结果在 Unity 的 Console 面板中的展示：
+![|300](assets/CSharp-String%20Interpolation/image-20211210201354094.png)
 
 ```
 
