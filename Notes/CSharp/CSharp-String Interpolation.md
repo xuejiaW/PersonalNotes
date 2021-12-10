@@ -69,6 +69,11 @@ Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
 ~~~
 ```
 
+# 控制内插表达式的字符宽度和对齐方式
+
+
+
+
 # Reference
 
 [String interpolation - C# tutorial | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/exploration/interpolated-strings-local)
