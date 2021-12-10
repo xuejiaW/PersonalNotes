@@ -60,8 +60,14 @@ On 12/10/2021, value is 1.123
 
 在内插表达式中的各表达式中可以通过 `:` 后加控制的字符格式化输出。如上例中的  `d` 和 `f3` 即为控制字符。
 
-`:` 后的控制字符，相当于在调用 `ToString` 时作为形参
+```ad-note
+`:` 后的控制字符，相当于在调用 `ToString` 时作为形参控制表达式的输出。
 
+上述表达式等同于：
+~~~csharp
+Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
+~~~
+```
 
 # Reference
 
