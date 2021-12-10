@@ -12,7 +12,7 @@ Debug.Log($"Hello,{name}.");
 ```
 
 输出结果为：`Hello,wxj.`。
-其中 `$"Hello,{name}.")` 被称为 `内插字符串表达式（interpolated string expression）`，最后输出的 `Hello,wxj.` 被称为 `结果字符串（result string）`
+其中 `$"Hello,{name}.")` 被称为 `内插字符串表达式（interpolated string expression）`（下简称 `内插bi'a`），最后输出的 `Hello,wxj.` 被称为 `结果字符串（result string）`
 
 由上例可以看出字符串插值的两个必要因素：
 1. 在字符串前需要有 `@` 字符标记，且该字符与后续的 `"` 间不能有空格。
@@ -20,7 +20,7 @@ Debug.Log($"Hello,{name}.");
 
 # 包含不同的数据类型
 
-对于内插字符串表达式中的各 C# 表达式可以是任何类型的，如下所示：
+对于内插表达式中的各 C# 表达式可以是任何类型的，如下所示：
 ```csharp
 var item = (Name: "eggplant", Price: 1.99m, perPackage: 3);
 var date = DateTime.Now;
@@ -36,6 +36,8 @@ Debug.Log($"On {date}, the price of {item.Name} was {item.Price} per {item.perPa
 2. 如果表达式结果不为 `null`，对其调用 `ToString` 函数。
 
 # 控制内插表达式的格式
+
+在内插表达式中，还可以控制
 
 
 # Reference
