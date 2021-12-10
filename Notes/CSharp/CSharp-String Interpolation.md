@@ -73,7 +73,18 @@ Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
 
 在内插表达式中的个表达式中可以通过 `,` 后加数字来控制字符宽度和对其方式，如下所示：
 ```csharp
+var inventory = new Dictionary<string, int>()
+{
+    ["hammer, ball pein"] = 18,
+    ["hammer, cross pein"] = 5,
+    ["screwdriver, Phillips #2"] = 14
+};
 
+string result = $"|{"Item",-25}|{"Quantity",10}|\n";
+foreach (var item in inventory)
+    result += $"|{item.Key,-25}|{item.Value,10}|\n";
+
+Debug.Log(result);
 ```
 
 输出结果为：
