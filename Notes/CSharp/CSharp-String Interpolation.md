@@ -71,9 +71,23 @@ Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
 
 # 控制内插表达式的字符宽度和对齐方式
 
-在内插表达式中的个表达式中可以通过 `,` 后加数字来控制字符宽度和对其方式
+在内插表达式中的个表达式中可以通过 `,` 后加数字来控制字符宽度和对其方式，如下所示：
+```csharp
 
+```
 
+输出结果为：
+```text
+|Item                     |  Quantity|
+|hammer, ball pein        |        14|
+|hammer, ball pein a      |        18|
+|hammer, cross pein       |         5|
+|screwdriver, Phillips #2 |        14|
+```
+
+```ad-note
+
+```
 
 # Reference
 
