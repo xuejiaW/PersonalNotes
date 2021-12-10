@@ -3,7 +3,7 @@ created: 2021-12-09
 updated: 2021-12-10
 ---
 
-# Creating an interpolated string
+# 创建内插字符串
 
 `字符串插值（String Interpolation）` 是用来将表达式插入到字符串中的方式，简单的示例如下所示：
 ```csharp
@@ -18,7 +18,7 @@ Debug.Log($"Hello,{name}.");
 1. 在字符串前需要有 `@` 字符标记，且该字符与后续的 `"` 间不能有空格。
 2. 在内插字符串表达式内部可以有一个或多个 `{}` ，其中包含着任何返回结果的 C# 表达式，表达式的返回值也可以为 `null`。
 
-# Include different data types
+# 包含不同的数据类型
 
 对于内插字符串表达式中的各 C# 表达式可以是任何类型的，如下所示：
 ```csharp
@@ -27,11 +27,15 @@ var date = DateTime.Now;
 Debug.Log($"On {date}, the price of {item.Name} was {item.Price} per {item.perPackage} items.");
 ```
 
-输出结果为：`On 12/10/2021 8:26:07 AM, the price of eggplant was 1.99 per 3 items.`
+输出结果为：`On 12/10/2021 8:26:07 AM, the price of eggplant was 1.99 per 3 items.`。
 
-```ad-note
-表达式的返回结果为 `null` 时，字符串插值仍然可以正常工作，此时表达式的结果相当于为空字符串。
-```
+可以看到该内插字符串表达式中包含有各种类型的表达式（`string`，`Decimal`，`int`，`DeltaTime`），在最终的结果中都被正确的解析。
+
+内插字符串表达式，各表达式都会被转换为 `string`，且规则如下：
+1. 如果表达式结果为 `null` ，将其转换为空字符串。
+2. 如果表达式结果不为 `null`，对其调用 `ToString` 函数。
+
+# 控制内插表达式的格式
 
 
 # Reference
