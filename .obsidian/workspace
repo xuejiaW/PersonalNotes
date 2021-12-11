@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+            "file": "Notes/Unity/Unity-.Net In Unity.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md"
+                "file": "Notes/Unity/Unity-.Net In Unity.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+                "file": "Notes/Unity/Unity-.Net In Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+                "file": "Notes/Unity/Unity-.Net In Unity.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,10 +152,10 @@
   },
   "active": "5f01abf6b16f9624",
   "lastOpenFiles": [
-    "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/Unity/Unity-.Net In Unity.md",
-    ".Net In Unity.md",
     "Notes/Unity/Unity-Scripting Architecture.md",
+    "Notes/CSharp/CSharp-$ String Interpolation.md",
+    ".Net In Unity.md",
     "Notes/Unity/Unit-Mipmap Bias.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Unity/Unity.md",
