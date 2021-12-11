@@ -9,7 +9,20 @@ updated: 2021-12-11
 
 # 支持使用 C# 关键字做表示
 
-默认而言，C# 中无法使用关键字作为标识符，如无法将 `for` 作为
+默认而言，无法使用 C# 关键字作为标识符，如无法将 `for` 作为一个变量的命名。但可以使用 `@` 关键字作为代码元素的前缀，之后编译器就会将代编元素解释为标识符，而非 C# 关键字。
+
+如下所示，使用了 `for` 作为了数组变量的名称：
+```csharp
+        string[] @for = { "John", "James", "Joan", "Jamie" };
+        for (int ctr = 0; ctr < @for.Length; ctr++)
+        {
+            Debug.Log($"Here is your gift, {@for[ctr]}!");
+        }
+
+```
+
+结果为：
+
 
 
 
