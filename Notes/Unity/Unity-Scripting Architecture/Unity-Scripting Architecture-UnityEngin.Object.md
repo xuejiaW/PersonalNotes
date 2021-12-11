@@ -15,11 +15,11 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 
 对于一个 C++ 侧内存已经释放，而 C# 侧还未释放的 Unity Object 而言，如果再次访问该对象，除了 `MonoBehaviour` 和 `ScriptableObject` 类型外，Unity 都会自动在 C++ 侧重新为其创建数据。
 
-对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 `==` 和 `!=` 操作符。如果使用这两个操作符去判断 `MonoBehaviour` 和 `ScriptableObject` 是否为空，实际上判断的对象是 C++ 侧的内存。
+对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 == 和 != 操作符。如果使用这两个操作符去判断 `MonoBehaviour` 和 `ScriptableObject` 是否为空，实际上判断的对象是 C++ 侧的内存。
 
 ```ad-note
-因为 Unity 重载了 == 操作符，真实操作是去检查 C++ 中的对象，所以 == 操作符在运行时也会有比较大的开销。
-``
+因为对于 `MonoBehaviour` 和 `ScriptableObject` 调用 == 和 != ，真实操作是去检查 C++ 中的对象，所以 == 操作符在运行时也会有比较大的开销。
+```
 
 ```ad-warning
 ?? 和 ?. 操作符，Unity并没有进行重载。因此，如果这两个操作符操作的对象派生自 Unity.Object 则可能出现与 == 操作符判断结果不一致的情况。
