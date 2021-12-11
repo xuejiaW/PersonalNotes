@@ -53,9 +53,11 @@ c:\\documents\\files\\u0066.txt
 
 可以看到当使用了 `@` 作为前缀时，无论 `\` 还是 `\\` 都会直接被解析为原义。
 
-⚠️ `""` 不会被原义解释，。如下所示：
-
+⚠️ 当使用 `@` 作为前缀时，`\` 会被原义解释，因此原先 [转义序列](CSharp-Escape%20Sequences.md) 中通过 `\"` 输出双引号的方法失效。因此当使用 `@` 时，需要通过 `""` 输出双引号。如下所示：
 ```csharp
+// string result = @"\" DEF \""; // Compile error
+string result = @""" DEF """;
+Debug.Log(result);
 ```
 
 
