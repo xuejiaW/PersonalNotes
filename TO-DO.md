@@ -12,6 +12,7 @@ updated: 2021-12-11
 - [ ]  Obsidian VimRC 配置插件
 - [ ]  Obsidian Vim Input Method 切换插件
 - [ ] Switch Expression 笔记整理
+- [ ] Unity 内存泄露，如 Mesh，Texture 等。
    [C# 9.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
 
 

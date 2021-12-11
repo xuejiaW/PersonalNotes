@@ -76,7 +76,30 @@ Debug.Log(result);
 
 C# 中可以通过继承 `Attribute` 类自定义属性，且自定义属性的命名通常以 `Attribute` 作为后缀，如下所示：
 ```csharp
+[AttributeUsage(AttributeTargets.Method)]
+public class InfoAttribute : Attribute
+{
+    private string information;
 
+    public InfoAttribute(string info)
+    {
+        information = info;
+    }
+}
+```
+
+以 `Attribute` 作为后缀并非是编译器的强制要求，因此可以同样定义如下的 `Attribute`：
+```csharp
+[AttributeUsage(AttributeTargets.Class)]
+public class Info : Attribute
+{
+    private string information;
+
+    public Info(string info)
+    {
+        information = info;
+    }
+}
 ```
 
 # Reference
