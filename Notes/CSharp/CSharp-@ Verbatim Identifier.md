@@ -111,7 +111,7 @@ public class Info : Attribute
 }
 ```
 
-当同时存在 `InfoAtt`
+当同时存在 `InfoAttribute` 和 `Info` 两个属性定义时，
 
 
 # Reference
