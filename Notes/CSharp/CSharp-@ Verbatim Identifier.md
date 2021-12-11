@@ -49,6 +49,10 @@ c:\documents\files\u0066.txt
 c:\\documents\\files\\u0066.txt
 ```
 
+可以看到当使用了 `@` 作为前缀时，无论 `\` 还是 `\\` 都会直接被解析为原义。
+
+但是
+
 # Reference
 
 [@ - C# Reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
