@@ -111,7 +111,12 @@ public class Info : Attribute
 }
 ```
 
-当同时存在 `InfoAttribute` 和 `Info` 两个属性定义时，使用 `Info` 则会造成
+当同时存在 `InfoAttribute` 和 `Info` 两个属性定义时，使用 `Info` 则会造成命名冲突，因为编译器无法决定要使用的究竟是 `InfoAttribute` 还是 `Info`。
+
+因此为了使用 `Info` 属性，需要在前加入 `@` 字符，如下所示：
+```csharp
+```
+
 
 
 # Reference
