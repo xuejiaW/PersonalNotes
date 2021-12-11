@@ -4,23 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f874a56ea62f6a6d",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
         "id": "32ba95c574041a28",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-String Interpolation.md",
+            "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
             "mode": "source"
           }
         }
@@ -80,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md"
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md"
               }
             }
           },
@@ -101,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,17 +149,17 @@
     "direction": "horizontal",
     "width": 292.5
   },
-  "active": "f874a56ea62f6a6d",
+  "active": "32ba95c574041a28",
   "lastOpenFiles": [
-    "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
+    "Notes/CSharp/CSharp-String Interpolation.md",
+    "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+    "Notes/CSharp/CSharp-$.md",
     "Notes/CSharp/CSharp-Partial Classes And Methods.md",
     "TO-DO.md",
-    "Notes/CSharp/CSharp-String Interpolation.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/VSCode/VSCode-Extensions.md",
     "Notes/VSCode/VSCode-Settings.md",
-    "Notes/VSCode/VSCode-Cpp.md",
-    "Notes/VSCode/VSCode.md"
+    "Notes/VSCode/VSCode-Cpp.md"
   ]
 }
