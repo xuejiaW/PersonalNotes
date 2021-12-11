@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity-.Net In Unity.md",
-            "mode": "source"
+            "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md"
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md",
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md",
+                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "5f01abf6b16f9624",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/Unity/Unity-.Net In Unity.md",
     ".Net In Unity.md",
     "Notes/Unity/Unity-Scripting Architecture.md",
@@ -160,7 +161,6 @@
     "Notes/Unity/Unity.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/CSharp/CSharp-Escape Sequences.md"
   ]
 }
