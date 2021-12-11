@@ -35,7 +35,7 @@ updated: 2021-12-10
 
 <pre><code>```ad-note
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-```<code></pre>
+```</code></pre>
 
 效果为：
 
@@ -175,7 +175,7 @@ collapse: close
 ````
 
 This is in the original admonition.
-`````</pre>
+`````</code></pre>
 
 效果如下：
 
@@ -216,7 +216,7 @@ Hello!
 
 
 This is in the original admonition.
-```</pre>
+```</code></pre>
 
 效果如下：
 
@@ -253,7 +253,7 @@ throw new Error("Oops, I'm a bug.");
 console.log("Hello!");
 ```
 
-```` </pre>
+````</code></pre>
 
 效果如下：
 
@@ -291,7 +291,7 @@ Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中
 
 A --> B
 
-```` </pre>
+````</code></pre>
 
 效果如下：
 ````plantuml
@@ -306,7 +306,7 @@ A --> B
 @startuml
 A --> B
 @enduml
-```` </pre>
+````</code></pre>
 ```
 
 ## Better Footnote [^4]
@@ -356,6 +356,10 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 该插件也提供了一系列快捷键选项，如下所示：
 ![|500](assets/Obsidian-Plugins/image-20211209082916125.png)
 
+## Emoji Toolbar[^11]
+
+该插件用来支持插入 Emoji，安装插件后可为命令 
+
 # Reference
 
 [^1]: [Admonition](https://github.com/valentine195/obsidian-admonition)
@@ -368,3 +372,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^8]: [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
 [^9]: [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count)
 [^10]: [obsidian-git](https://github.com/denolehov/obsidian-git)
+[^11]: [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
