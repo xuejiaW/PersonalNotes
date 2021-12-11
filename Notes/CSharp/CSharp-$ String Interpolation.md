@@ -134,7 +134,14 @@ Debug.Log($"[{DateTime.Now,-10:HH}]");
 如果要在内插表达式中可以使用转义序列，当需要多次使用转义序列时也可使用 [原义标识符@](CSharp-@%20Verbatim%20Identifier.md) 替代。
 
 如下所示，分别使用使用了转义序列和原文标识符：
+```cshap
+        string userName = "Jane";
+        string stringWithEscapes = $"C:\\Users\\{userName}\\Documents";
+        string verbatimInterpolated = $@"C:\Users\{userName}\Documents";
+        Debug.Log(stringWithEscapes);
+        Debug.Log(verbatimInterpolated);
 
+```
 
 
 
