@@ -80,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md"
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md",
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md",
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,10 +160,10 @@
     "direction": "horizontal",
     "width": 292.5
   },
-  "active": "6ce7018c52efff40",
+  "active": "88486a627b19bcfd",
   "lastOpenFiles": [
-    "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/CSharp/CSharp-Escape Sequences.md",
