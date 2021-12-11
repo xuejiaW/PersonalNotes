@@ -18,7 +18,7 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 `==` 和 `!=` 操作符。如果使用这两个操作符去判断 `MonoBehaviour` 和 `ScriptableObject` 是否为空，实际上判断的对象是 C++ 侧的内存。
 
 ```ad-note
-因为对于 `MonoBehaviour` 和 `ScriptableObject` 进行 `==` 和 `!=` 
+因为对于 `MonoBehaviour` 和 `ScriptableObject` 进行 `==` 和 `!=` 实际访问的是 C++ 对象，因此
 ```
 
 # Reference
