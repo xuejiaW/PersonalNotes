@@ -69,13 +69,14 @@ Debug.Log("On " + date.ToString("d") + ", value is " + value.ToString("f3"));
 ~~~
 ```
 
-# 控制内插表达式的字符宽度和对齐方式
+# 控制内插表达式的对齐方式
 
 在内插表达式中的个表达式中可以通过 `,` 后加数字来控制字符宽度和对其方式，如下所示：
 ```csharp
 var inventory = new Dictionary<string, int>()
 {
-    ["hammer, ball pein"] = 18,
+    ["hammer, ball pein"] = 14,
+    ["hammer, ball pein a"] = 18,
     ["hammer, cross pein"] = 5,
     ["screwdriver, Phillips #2"] = 14
 };
@@ -101,12 +102,8 @@ Debug.Log(result);
 如下为相同输出结果在 Unity 的 Console 面板中的展示：
 ![|300](assets/CSharp-String%20Interpolation/image-20211210201354094.png)
 
-```ad-note
-所谓的控制字符宽度，实际上是决定显示最少的**字符数**。因此如果显示系统中每个字符的宽度是不相等的话，如 `i` 和 `a` 的宽度在某些显示系统下会有较大差异，则即使控制字符宽度也无法实现对其的效果。
+表达式格式和对齐方式也可以一起设定，但需要首先设定对其方式，再she'din
 
-
-
-```
 
 # Reference
 
