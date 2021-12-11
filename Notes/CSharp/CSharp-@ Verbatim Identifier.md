@@ -68,8 +68,11 @@ Debug.Log(result);
 ```
 
 ```ad-note
-当使用 [字符串插值](CSharp-$%20String%20Interpolation.md) 时，因为 `{` 也变成了特殊含义字符，因此 `@` ye
+当使用 [字符串插值](CSharp-$%20String%20Interpolation.md) 时，因为 `{` 也变成了特殊含义字符，因此 `@` 也不会将其原义解释。
+当需要在字符串中插入 `{` 时，需要使用 `{{`。
 ```
+
+# 让编译器在命名冲突时区分属性
 
 # Reference
 
