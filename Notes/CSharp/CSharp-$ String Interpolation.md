@@ -129,7 +129,7 @@ Debug.Log($"[{DateTime.Now,-10:HH}]");
 
 #  内插表达式中使用转义序列
 
-如果要在内插表达式中使用转义序列，可使用 [原义标识符@](CSharp-@%20Verbatim%20Identifier.md)
+如果要在内插表达式中可以使用转义序列，可使用 [原义标识符@](CSharp-@%20Verbatim%20Identifier.md) 替代。如下所示，分别使用
 
 
 

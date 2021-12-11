@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
-            "mode": "preview"
+            "file": "Notes/CSharp/assets/CSharp-.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md"
+                "file": "Notes/CSharp/assets/CSharp-.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+                "file": "Notes/CSharp/assets/CSharp-.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-$ String Interpolation.md",
+                "file": "Notes/CSharp/assets/CSharp-.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,7 @@
   },
   "active": "2f8a1b7d8f608295",
   "lastOpenFiles": [
+    "Notes/CSharp/assets/CSharp-.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
@@ -159,7 +160,6 @@
     "TO-DO.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/VSCode/VSCode-Extensions.md",
-    "Notes/VSCode/VSCode-Settings.md",
-    "Notes/VSCode/VSCode-Cpp.md"
+    "Notes/VSCode/VSCode-Settings.md"
   ]
 }
