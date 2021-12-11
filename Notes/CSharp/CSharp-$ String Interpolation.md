@@ -7,7 +7,15 @@ updated: 2021-12-11
 
 `$` 字符用来表示内插字符串，它提供类似于 `String.Format` 的效果。如下分别使用 `$` 和 `String.Format`：
 ```csharp
+int value = 3;
+Debug.Log($"Value is {value}");
+Debug.Log(String.Format("Value is {0}", value));
+```
 
+输出结果为：
+```text
+Value is 3
+Value is 3
 ```
 
 # 创建内插字符串
