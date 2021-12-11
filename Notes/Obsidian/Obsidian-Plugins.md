@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2021-12-10
+updated: 2021-12-11
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -358,7 +358,10 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 ## Emoji Toolbar[^11]
 
-该插件用来支持插入 Emoji，安装插件后可为命令 
+该插件用来支持插入 Emoji，安装插件后可为命令 `Emoji Toolbar: Open emoji picker` 设定快捷键（此设为 `Ctrl+;`），当使用快捷键时打开插入 Emoji 的界面，如下所示：
+![|400](assets/Obsidian-Plugins/GIF%2012-11-2021%202-26-19%20PM.gif)
+
+
 
 # Reference
 
