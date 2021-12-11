@@ -135,7 +135,7 @@ Debug.Log($"[{DateTime.Now,-10:HH}]");
 
 如下所示，分别使用使用了转义序列和原文标识符：
 ```cshap
-string userName = "Jane";
+string userName = "wxj";
 string stringWithEscapes = $"C:\\Users\\{userName}\\Documents";
 string verbatimInterpolated = $@"C:\Users\{userName}\Documents";
 Debug.Log(stringWithEscapes);
@@ -144,11 +144,13 @@ Debug.Log(verbatimInterpolated);
 
 输出结果为：
 ```text
-C:\Users\Jane\Documents
-C:\Users\Jane\Documents
+C:\Users\wxj\Documents
+C:\Users\wxj\Documents
 ```
 
-
+```ad-tip
+C# 8.0 后，`$` 与 `@` 的先后顺序不会造成任何影响。在早期版本中，必须先写 `$` 再写 `@`。
+```
 # Reference
 [$ - string interpolation - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
 

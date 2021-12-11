@@ -1,12 +1,13 @@
 ---
 created: 2021-12-08
-updated: 2021-12-09
+updated: 2021-12-11
 ---
 - [x] 图片并行显示
 - [x] Projection 笔记移植
 - [x] Viewport 笔记移植
 - [x] Obsidian Git 插件
-- [ ]  Ob
+- [ ]  Obsidian VimRC 配置插件
+- [ ]  Obsidian Vim Input Method 切换插件
 - [ ] Switch Expression 笔记整理
 [C# 9.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
 - [ ] $ 操作符笔记整理
