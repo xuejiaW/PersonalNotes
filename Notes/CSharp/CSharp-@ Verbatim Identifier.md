@@ -22,7 +22,12 @@ updated: 2021-12-11
 ```
 
 结果为：
-
+```text
+Here is your gift, John!
+Here is your gift, James!
+Here is your gift, Joan!
+Here is your gift, Jamie!
+```
 
 
 
