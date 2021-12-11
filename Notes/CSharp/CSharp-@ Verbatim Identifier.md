@@ -115,6 +115,11 @@ public class Info : Attribute
 
 因此为了使用 `Info` 属性，需要在前加入 `@` 字符，如下所示：
 ```csharp
+[@Info("Start Function")]
+private void Start() { }
+
+[InfoAttribute("Start Function")]
+private void Update() { }
 ```
 
 
