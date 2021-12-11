@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity-Scripting Architecture",
+  "attachmentFolderPath": "./assets/Obsidian-Plugins",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

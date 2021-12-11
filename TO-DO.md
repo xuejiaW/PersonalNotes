@@ -15,3 +15,4 @@ updated: 2021-12-11
 - [ ]  Obsidian VimRC 配置插件
 - [ ]  Obsidian Vim Input Method 切换插件
 - [ ] Unity 内存泄露，如 Mesh，Texture 等。
+- [ ] Vim-盘古 自动为中英文加空格
