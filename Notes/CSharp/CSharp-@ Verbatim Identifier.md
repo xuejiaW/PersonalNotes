@@ -7,7 +7,7 @@ updated: 2021-12-11
 
 # Overview
 
-`@` 关键字
+`@` 关键字用来作为原义标识符（Verbatim Identifi）
 
 # Reference
 
