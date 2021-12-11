@@ -9,4 +9,12 @@ updated: 2021-12-11
 Unity C++ 侧与 C# 侧的关系如下所示：
 ![](assets/Unity-Scripting%20Architecture-UnityEngin.Object/image-20211211183229890.png)
 
+# Destroy Unity Object
+
+当使用类似 `Object.Destroy` 的接口来销毁 Unity Object 时，该接口实际上释放了 C++ 侧的内存数据，而 C# 侧的内存数据并没有立即被释放，需要等到下一次 GC 时。
+
+对于一个 C++ 侧内存已经释放，而 C# 侧还未释放的 Unity Object 而言，如果再次访问该对象，除了 `MonoBehaviour` 和 `ScriptableObject` 类型外，Unity 都会自动在 C++ 侧重新为其创建数据。
+
 # Reference
+
+ [Unity - Manual: Overview of .NET in Unity (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/overview-of-dot-net-in-unity.html)
