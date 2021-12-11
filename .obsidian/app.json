@@ -10,5 +10,5 @@
   "useTab": false,
   "vimMode": true,
   "strictLineBreaks": false,
-  "showLineNumber": false
+  "showLineNumber": true
 }
