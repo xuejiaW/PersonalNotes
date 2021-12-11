@@ -135,14 +135,18 @@ Debug.Log($"[{DateTime.Now,-10:HH}]");
 
 如下所示，分别使用使用了转义序列和原文标识符：
 ```cshap
-        string userName = "Jane";
-        string stringWithEscapes = $"C:\\Users\\{userName}\\Documents";
-        string verbatimInterpolated = $@"C:\Users\{userName}\Documents";
-        Debug.Log(stringWithEscapes);
-        Debug.Log(verbatimInterpolated);
-
+string userName = "Jane";
+string stringWithEscapes = $"C:\\Users\\{userName}\\Documents";
+string verbatimInterpolated = $@"C:\Users\{userName}\Documents";
+Debug.Log(stringWithEscapes);
+Debug.Log(verbatimInterpolated);
 ```
 
+输出结果为：
+```text
+C:\Users\Jane\Documents
+C:\Users\Jane\Documents
+```
 
 
 # Reference

@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSharp-Escape Sequences",
+  "attachmentFolderPath": "./assets/CSharp-$ String Interpolation",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
