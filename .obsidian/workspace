@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "6ce7018c52efff40",
+        "id": "5f01abf6b16f9624",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity-Scripting Architecture.md",
+            "file": "Notes/Unity/Unity-.Net In Unity.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity-Scripting Architecture.md"
+                "file": "Notes/Unity/Unity-.Net In Unity.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity-Scripting Architecture.md",
+                "file": "Notes/Unity/Unity-.Net In Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity-Scripting Architecture.md",
+                "file": "Notes/Unity/Unity-.Net In Unity.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -150,17 +150,17 @@
     "direction": "horizontal",
     "width": 292.5
   },
-  "active": "6ce7018c52efff40",
+  "active": "5f01abf6b16f9624",
   "lastOpenFiles": [
+    "Notes/Unity/Unity-.Net In Unity.md",
+    ".Net In Unity.md",
     "Notes/Unity/Unity-Scripting Architecture.md",
+    "Notes/Unity/Unit-Mipmap Bias.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Unity/Unity.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
-    "Notes/CSharp/CSharp-Escape Sequences.md",
-    "Notes/CSharp/CSharp-Partial Classes And Methods.md",
-    "Notes/VSCode/VSCode-Settings.md",
-    "Notes/VSCode/VSCode-Extensions.md"
+    "Notes/CSharp/CSharp-Escape Sequences.md"
   ]
 }
