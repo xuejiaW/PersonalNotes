@@ -13,12 +13,12 @@ updated: 2021-12-11
 
 如下所示，使用了 `for` 作为了数组变量的名称：
 ```csharp
-        string[] @for = { "John", "James", "Joan", "Jamie" };
-        for (int ctr = 0; ctr < @for.Length; ctr++)
-        {
-            Debug.Log($"Here is your gift, {@for[ctr]}!");
-        }
+string[] @for = { "John", "James", "Joan", "Jamie" };
 
+for (int ctr = 0; ctr < @for.Length; ctr++)
+{
+    Debug.Log($"Here is your gift, {@for[ctr]}!");
+}
 ```
 
 结果为：

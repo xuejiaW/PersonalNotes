@@ -21,7 +21,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/Obsidian/Obsidian-Plugins.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -112,7 +112,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
