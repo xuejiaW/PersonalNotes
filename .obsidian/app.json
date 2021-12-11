@@ -8,5 +8,7 @@
   "foldHeading": true,
   "newFileLocation": "root",
   "useTab": false,
-  "vimMode": true
+  "vimMode": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false
 }
