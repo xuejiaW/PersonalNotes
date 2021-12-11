@@ -4,24 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "5f01abf6b16f9624",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
         "id": "cbbfa82ffb2c176c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
-            "mode": "source"
+            "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
+            "mode": "preview"
           }
         }
       }
@@ -161,7 +150,7 @@
     "direction": "horizontal",
     "width": 292.5
   },
-  "active": "5f01abf6b16f9624",
+  "active": "cbbfa82ffb2c176c",
   "lastOpenFiles": [
     "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
     "TO-DO.md",
