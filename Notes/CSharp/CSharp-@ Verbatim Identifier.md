@@ -88,7 +88,16 @@ public class InfoAttribute : Attribute
 }
 ```
 
-以 `Attribute` 作为后缀并非是编译器的强制要求，因此可以同样定义如下的 `Attribute`：
+当使用该属性时，可以通过 `InfoAttribute` ，也可以使用 `Info`，如下所示：
+```csharp
+[Info("Start Function")]
+private void Start() { }
+
+[InfoAttribute("Start Function")]
+private void Update() { }
+```
+
+以 `Attribute` 作为后缀并非是编译器的强制要求，因此可以同样定义如下的属性：
 ```csharp
 [AttributeUsage(AttributeTargets.Class)]
 public class Info : Attribute
@@ -101,6 +110,9 @@ public class Info : Attribute
     }
 }
 ```
+
+当同时存在 `InfoAtt`
+
 
 # Reference
 
