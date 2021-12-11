@@ -154,8 +154,20 @@ C# 8.0 后，`$` 与 `@` 的先后顺序不会造成任何影响。在早期版�
 
 在内插表达式中，如果需要输入 `{`，则需要输入 `{{`，如下所示：
 ```csharp
+int[] values = new int[] { 1, 2 };
+Debug.Log($"Value is {{{values[0]}, {values[1]}}}");
 ```
 
+输出结果为：
+```text
+Value is {1, 2}
+```
+
+
+# 内插表达式中使用 ?: 运算符
+
+因为 `:` 在内插表达式中用来指定格式，因此当使用 `?:` 运算符时，必须定义在括号内。如下所示：
+```
 
 # Reference
 [$ - string interpolation - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
