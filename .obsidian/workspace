@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
             "mode": "source"
           }
         }
@@ -63,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "086a6696003cb579",
@@ -81,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md"
               }
             }
           },
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,15 +162,15 @@
   },
   "active": "f874a56ea62f6a6d",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+    "Notes/CSharp/CSharp-$ String Interpolation.md",
+    "Notes/CSharp/CSharp-Partial Classes And Methods.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp-String Interpolation.md",
-    "Notes/CSharp/CSharp-$ Character.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/VSCode/VSCode-Extensions.md",
     "Notes/VSCode/VSCode-Settings.md",
     "Notes/VSCode/VSCode-Cpp.md",
-    "Notes/CSharp/CSharp-Partial Classes And Methods.md",
-    "Notes/VSCode/VSCode.md",
-    "Notes/OpenGL/OpenGL-Viewport VS Scissor Test.md"
+    "Notes/VSCode/VSCode.md"
   ]
 }
