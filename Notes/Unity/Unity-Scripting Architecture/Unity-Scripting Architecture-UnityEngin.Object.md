@@ -15,6 +15,8 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 
 对于一个 C++ 侧内存已经释放，而 C# 侧还未释放的 Unity Object 而言，如果再次访问该对象，除了 `MonoBehaviour` 和 `ScriptableObject` 类型外，Unity 都会自动在 C++ 侧重新为其创建数据。
 
+对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 `==` 和 `!=` 操作符
+
 # Reference
 
  [Unity - Manual: Overview of .NET in Unity (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/overview-of-dot-net-in-unity.html)
