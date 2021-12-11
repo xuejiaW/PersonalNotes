@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSharp-$ String Interpolation",
+  "attachmentFolderPath": "./assets/CSharp-@ Verbatim Identifier",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
