@@ -15,7 +15,11 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 
 对于一个 C++ 侧内存已经释放，而 C# 侧还未释放的 Unity Object 而言，如果再次访问该对象，除了 `MonoBehaviour` 和 `ScriptableObject` 类型外，Unity 都会自动在 C++ 侧重新为其创建数据。
 
-对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 `==` 和 `!=` 操作符
+对于 `MonoBehaviour` 和 `SciptableObject` Unity 重载了 `==` 和 `!=` 操作符。如果使用这两个操作符去判断 `MonoBehaviour` 和 `ScriptableObject` 是否为空，实际上判断的对象是 C++ 侧的内存。
+
+```ad-note
+因为对于 `MonoBehaviour` 和 `ScriptableObject` 进行 `==` 和 `!=` 
+```
 
 # Reference
 
