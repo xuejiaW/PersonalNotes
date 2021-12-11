@@ -151,6 +151,12 @@ C:\Users\wxj\Documents
 ```ad-tip
 C# 8.0 后，`$` 与 `@` 的先后顺序不会造成任何影响。在早期版本中，必须先写 `$` 再写 `@`。
 ```
+
+在内插表达式中，如果需要输入 `{`，则需要输入 `{{`，如下所示：
+```csharp
+```
+
+
 # Reference
 [$ - string interpolation - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
 
