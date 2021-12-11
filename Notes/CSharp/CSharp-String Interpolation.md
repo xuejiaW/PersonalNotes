@@ -102,7 +102,7 @@ Debug.Log(result);
 如下为相同输出结果在 Unity 的 Console 面板中的展示：
 ![|300](assets/CSharp-String%20Interpolation/image-20211210201354094.png)
 
-表达式格式和对齐方式也可以一起设定，但需要首先设定对其方式，再she'din
+表达式格式和对齐方式也可以一起设定，但需要首先设定对其方式，再设定格式，如下所示：
 
 
 # Reference
