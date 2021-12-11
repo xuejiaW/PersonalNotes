@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity-.Net In Unity.md",
-            "mode": "preview"
+            "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md"
+                "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md",
+                "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity-.Net In Unity.md",
+                "file": "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -138,7 +138,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224422,
+                  "scale": 0.7132754626224423,
                   "close": false
                 }
               }
@@ -152,15 +152,15 @@
   },
   "active": "5f01abf6b16f9624",
   "lastOpenFiles": [
+    "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
+    "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
     "Notes/Unity/Unity-.Net In Unity.md",
-    "Notes/Unity/Unity-Scripting Architecture.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
     ".Net In Unity.md",
     "Notes/Unity/Unit-Mipmap Bias.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Unity/Unity.md",
     "TO-DO.md",
-    "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp-Escape Sequences.md"
+    "Notes/CSharp/CSharp-@ Verbatim Identifier.md"
   ]
 }
