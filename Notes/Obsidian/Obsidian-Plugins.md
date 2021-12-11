@@ -35,7 +35,7 @@ updated: 2021-12-10
 
 <pre><code>```ad-note
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
-``` code></pre>
+```<code></pre>
 
 效果为：
 
@@ -138,7 +138,6 @@ orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 ```ad-cite
 orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 ```
-
 ### 自定义 Admonition
 
 对于 Admonition 可以自定义标题，是否支持折叠，图标和颜色，如下所示：
@@ -356,7 +355,6 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 该插件也提供了一系列快捷键选项，如下所示：
 ![|500](assets/Obsidian-Plugins/image-20211209082916125.png)
-
 
 # Reference
 

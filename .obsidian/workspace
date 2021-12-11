@@ -13,6 +13,17 @@
             "mode": "source"
           }
         }
+      },
+      {
+        "id": "6ce7018c52efff40",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Obsidian/Obsidian-Plugins.md",
+            "mode": "source"
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -69,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md"
+                "file": "Notes/Obsidian/Obsidian-Plugins.md"
               }
             }
           },
@@ -90,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,8 +160,9 @@
     "direction": "horizontal",
     "width": 292.5
   },
-  "active": "88486a627b19bcfd",
+  "active": "6ce7018c52efff40",
   "lastOpenFiles": [
+    "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/CSharp/CSharp-@ Verbatim Identifier.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp-$ String Interpolation.md",
@@ -159,7 +171,6 @@
     "Notes/VSCode/VSCode-Settings.md",
     "Notes/VSCode/VSCode-Extensions.md",
     "Notes/Obsidian/Obsidian-Image Gallery.md",
-    "Notes/CSharp/assets/CSharp-Es.md",
-    "Notes/CSharp/CSharp-$.md"
+    "Notes/CSharp/assets/CSharp-Es.md"
   ]
 }
