@@ -361,6 +361,13 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 该插件用来支持插入 Emoji，安装插件后可为命令 `Emoji Toolbar: Open emoji picker` 设定快捷键（此设为 `Ctrl+;`），当使用快捷键时打开插入 Emoji 的界面，如下所示：
 ![|400](assets/Obsidian-Plugins/GIF%2012-11-2021%202-26-19%20PM.gif)
 
+## Relative-line-numbers[^12]
+
+该插件用来支持在 Editor 模式下显示相对行号。
+
+```ad-fail
+该插件不支持同时显示绝对行号和相对行号
+```
 
 
 # Reference
@@ -376,3 +383,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^9]: [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count)
 [^10]: [obsidian-git](https://github.com/denolehov/obsidian-git)
 [^11]: [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
+[^12]: [obsidian-relative-line-numbers](https://github.com/nadavspi/obsidian-relative-line-numbers)

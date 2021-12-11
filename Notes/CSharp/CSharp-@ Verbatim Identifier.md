@@ -111,7 +111,7 @@ public class Info : Attribute
 }
 ```
 
-当同时存在 `InfoAttribute` 和 `Info` 两个属性定义时，
+当同时存在 `InfoAttribute` 和 `Info` 两个属性定义时，使用 `Info` 则会造成
 
 
 # Reference
