@@ -167,6 +167,19 @@ Value is {1, 2}
 # 内插表达式中使用 ?: 运算符
 
 因为 `:` 在内插表达式中用来指定格式，因此当使用 `?:` 运算符时，必须定义在括号内。如下所示：
+```csharp
+System.Random random = new System.Random();
+for (int i = 0; i != 3; ++i)
+{
+    Debug.Log($"Value is {(random.Next() % 2 == 1 ? "Odd" : "Even")}");
+}
+```
+
+输出结果为：
+```
+Even
+Odd
+Odd
 ```
 
 # Reference
