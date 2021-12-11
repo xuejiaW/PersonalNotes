@@ -31,9 +31,23 @@ Here is your gift, Jamie!
 
 # 支持使用原义解释字符串
 
-当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释：
+当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释。如下所示：
+```csharp
+string filename1 = @"c:\documents\files\u0066.txt";
+string filename2 = "c:\\documents\\files\\u0066.txt";
+string filename3 = @"c:\\documents\\files\\u0066.txt";
 
+Debug.Log(filename1);
+Debug.Log(filename2);
+Debug.Log(filename3);
+```
 
+输出结果为：
+```text
+c:\documents\files\u0066.txt
+c:\documents\files\u0066.txt
+c:\\documents\\files\\u0066.txt
+```
 
 # Reference
 
