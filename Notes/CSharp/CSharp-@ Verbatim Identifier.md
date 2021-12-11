@@ -74,6 +74,11 @@ Debug.Log(result);
 
 # 让编译器在命名冲突时区分属性
 
+C# 中可以通过继承 `Attribute` 类自定义属性，且自定义属性的命名通常以 `Attribute` 作为后缀，如下所示：
+```csharp
+
+```
+
 # Reference
 
 [@ - C# Reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
