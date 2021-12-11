@@ -31,7 +31,9 @@ Here is your gift, Jamie!
 
 # 支持使用原义解释字符串
 
-当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释。如下所示：
+当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释，即不再需要依赖于[转义序列](CSharp-Escape%20Sequences.md)。
+
+如下所示：
 ```csharp
 string filename1 = @"c:\documents\files\u0066.txt";
 string filename2 = "c:\\documents\\files\\u0066.txt";
@@ -51,7 +53,7 @@ c:\\documents\\files\\u0066.txt
 
 可以看到当使用了 `@` 作为前缀时，无论 `\` 还是 `\\` 都会直接被解析为原义。
 
-⚠️ 但是 `{{` 和 `""` 不会被原义解释，因此当例如需要输入 `{` 时，仍然需要使用 `{{`。如下所示：
+⚠️ `""` 不会被原义解释，。如下所示：
 
 ```csharp
 ```
