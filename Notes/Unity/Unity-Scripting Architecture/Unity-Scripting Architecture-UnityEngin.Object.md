@@ -27,7 +27,18 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 
 # Editor 模式下的 Fake Null
 
-在 Editor 模式下，Unity 还会为所有的 Mon 的 Field 对象自动创造出一个 Wrapper 。如以下代码，在 Editor 模式下仍然会分配内存：
+在 Editor 模式下，Unity 还会为所有的 `MoneBehaviour` 的 Field 对象自动创造出一个 Wrapper 。如以下代码，在 Editor 模式下仍然会分配内存：
+```csharp
+Camera camera = null;
+```
+
+Editor 模式下提供 Wrapper 的主要目的是为了增加调试信息，如告知开发者为空的 Field 对象处在哪个脚本之中。
+
+在 Editor 模式下，诸如 GetComponent 这样的函数，如果未找到对应的组件，则返回的也不是真正意义上的 Null, 而是一个 Wrapper ，只不过 Wrapper 中指向的 C++ 对象为空。
+
+```ad-tip
+因为 == 和 != 进行了重载，而 `??` 和 `?.` 没有，所以在 Editor 模式下使用 `?.` 和 `??` 操作符会得到错误的结果。
+```
 
 # Reference
 
