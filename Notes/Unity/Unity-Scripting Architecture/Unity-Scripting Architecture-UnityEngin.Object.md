@@ -44,8 +44,15 @@ Editor 模式下提供 Wrapper 的主要目的是为了增加调试信息，如�
 ```csharp
 Camera camera = null;
 // Case 1:
-if (GetComponent<Camera>() == null) camera = gameObject.AddComponent<Camera>(); // Case 2： camera = GetComponent<Camera>() ?? gameObject.AddComponent<Camera>(); // Result is still null
+if (GetComponent<Camera>() == null)
+    camera = gameObject.AddComponent<Camera>();
+
+// Case 2:
+camera = GetComponent<Camera>() ?? gameObject.AddComponent<Camera>(); // Result is still null
 ```
+
+在 Editor 模式下， `Case 1` 能正常的添加 `Camera` 组件，而 `Case 2` 则不能。
+在 Runtime 模式下， `Case 1` 和 `Case 2` 都能正常的添加 `Camera` 组件。
 
 # Reference
 
