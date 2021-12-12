@@ -25,9 +25,11 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 ?? 和 ?. 操作符，Unity并没有进行重载。因此，如果这两个操作符操作的对象派生自 Unity.Object 则可能出现与 == 操作符判断结果不一致的情况。
 ```
 
-#
+# Editor 模式下的 Fake Null
+
 
 
 # Reference
 
  [Unity - Manual: Overview of .NET in Unity (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/overview-of-dot-net-in-unity.html)
+ [Custom == operator, should we keep it? | Unity Blog](https://blog.unity.com/technology/custom-operator-should-we-keep-it)
