@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2021-12-12
-updated: 2021-12-12
+updated: 2021-12-13
 ---
 
 在 `Edit->Project Settings->Api Compatiability Level` 设置中可以切换 `.Net Standard 2.0` 和 `.Net 4x` 两种配置。
