@@ -147,11 +147,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 335.5
   },
   "active": "3cb6fe7f79379ad5",
   "lastOpenFiles": [
     "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-.Net Profile Support.md",
+    "Notes/CSharp/CSharp-$ String Interpolation.md",
     "Notes/Obsidian/Obsidian-MetaData.md",
     "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
     "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-UnityEngin.Object.md",
@@ -159,7 +160,6 @@
     "Notes/CSharp/CSharp.md",
     "Notes/CSharp/CSharp-Escape Sequences.md",
     "TO-DO.md",
-    "Notes/Obsidian/Obsidian-Plugins.md",
-    "Notes/Unity/Unity-.Net In Unity.md"
+    "Notes/Obsidian/Obsidian-Plugins.md"
   ]
 }
