@@ -34,10 +34,17 @@ Camera camera = null;
 
 Editor 模式下提供 Wrapper 的主要目的是为了增加调试信息，如告知开发者为空的 Field 对象处在哪个脚本之中。
 
-在 Editor 模式下，诸如 GetComponent 这样的函数，如果未找到对应的组件，则返回的也不是真正意义上的 Null, 而是一个 Wrapper ，只不过 Wrapper 中指向的 C++ 对象为空。
+在 Editor 模式下，诸如 GetComponent 这样的函数，如果未找到对应的组件，则返回的也不是真正意义上的 Null，而是一个 Wrapper ，Wrapper 指向的 C++ 对象为空。
 
 ```ad-tip
-因为 == 和 != 进行了重载，而 `??` 和 `?.` 没有，所以在 Editor 模式下使用 `?.` 和 `??` 操作符会得到错误的结果。
+因为 == 和 != 进行了重载，而 `??` 和 `?.` 没有，所以在 Editor 模式下使用 `?.` 和 `??` 操作符会得到错误的结果。而在 Runtime 时，不会产生错误的结果。
+```
+
+示例如下：
+```csharp
+Camera camera = null;
+// Case 1:
+if (GetComponent<Camera>() == null) camera = gameObject.AddComponent<Camera>(); // Case 2： camera = GetComponent<Camera>() ?? gameObject.AddComponent<Camera>(); // Result is still null
 ```
 
 # Reference
