@@ -27,7 +27,7 @@ Unity C++ 侧与 C# 侧的关系如下所示：
 
 # Editor 模式下的 Fake Null
 
-
+在 Editor 模式下，Unity 还会为所有的 Mon 的 Field 对象自动创造出一个 Wrapper 。如以下代码，在 Editor 模式下仍然会分配内存：
 
 # Reference
 
