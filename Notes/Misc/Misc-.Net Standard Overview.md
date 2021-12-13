@@ -20,6 +20,10 @@ updated: 2021-12-13
 如下为各 `.Net` 实现库与 `.Net Standard` 之间的关系列表[^1]：
 ![](assets/Misc-.Net%20Standard%20Overview/image-20211213082543001.png)
 
+```ad-note
+在指 `.Net` `上表中，`.Net` 和 `.Net Core` 表达意思
+```
+
 # .Net APIs
 
 `.Net Standard` 定义了各 `.Net` 实现库最小的 APIs 子集，各 `.Net` 库还会实现各自拓展的 APIs。
