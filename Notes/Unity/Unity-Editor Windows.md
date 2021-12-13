@@ -55,5 +55,10 @@ class MyWindow : EditorWindow
 
 窗口的样式需要通过自定义窗口类中的 `OnGUI` 函数绘制，如下所示：
 ```csharp
-
+private string textFieldString = "Hello World";
+void OnGUI()
+{
+    GUILayout.Label("Base Settings", EditorStyles.boldLabel);
+    textFieldString = EditorGUILayout.TextField("Text Field", textFieldString);
+}
 ```
