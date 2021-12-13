@@ -13,4 +13,8 @@ Unity 编辑器面板中的 `Scene`，`Game`，`Asset Store` 各区域本质上�
 
 # Derive From EditorWindow
 
-1. 定义一个派生自 `EditorWindow` 的类
+需要定义一个派生自 `EditorWindow` 的类，该类的脚本必须存放在 `Editor` 文件夹下。
+
+```ad-tip
+对于 `Editor` 文件夹的父文件夹并无要求
+```
