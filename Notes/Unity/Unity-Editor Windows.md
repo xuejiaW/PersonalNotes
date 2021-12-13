@@ -62,3 +62,6 @@ void OnGUI()
     textFieldString = EditorGUILayout.TextField("Text Field", textFieldString);
 }
 ```
+
+效果如下：
+![|400](assets/Unity-Editor%20Windows/image-20211213113234806.png)
