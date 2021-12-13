@@ -1,16 +1,18 @@
 ---
 Alias: adb
+created: 2021-12-13
+updated: 2021-12-13
 ---
 
 # 查看设备 IP 地址
 
 可通过 `ipconfig` 命令查看，如下所示：
-```
+```shell
 adb shell netcfg
 ```
 
 输出结果中需要关心的是 `wlan0` 部分，该部分的示例如下所示：
-```
+```text
 wlan0     Link encap:UNSPEC    Driver cnss_pci
           inet addr:192.168.2.11  Bcast:192.168.2.255  Mask:255.255.255.0
           inet6 addr: fe80::58ea:5850:9450:2c7/64 Scope: Link
@@ -26,7 +28,7 @@ wlan0     Link encap:UNSPEC    Driver cnss_pci
 # Wifi 连接 ADB
 
 对于想要通过 Wifi 连接 adb 的设备，首先需要使用 USB 将该设备连接至电脑，并通过 `adb tcp ip ` 设置之后网络连接的端口号，如下将端口号设置为 `5555`：
-```
+```shell
 adb tcpip 5555
 
 ```
@@ -39,3 +41,8 @@ adb connect 192.168.2.11
 ```
 
 断开时可使用 `adb disconnect <ip>` 与设备断开连接。
+
+# 打开应用
+
+```shell
+```
