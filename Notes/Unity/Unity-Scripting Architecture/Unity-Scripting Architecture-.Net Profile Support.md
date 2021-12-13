@@ -17,4 +17,4 @@ updated: 2021-12-13
 | .Net Framework     | Litmited support        | Supported     |
 | .Net Core          | Not supported           | Not supported |
 
-Unity  支持两种 `.Net` 的配置文件，`.Net Standard` 和 `.Net Framework`，这两种
+其中 `.Net Standard`，`.Net Framework`和 `.Net Core` 分别三个不同的 `.Net` 
