@@ -21,4 +21,4 @@ Unity 对于支持的 C# 版本，可能存在部分特性的不支持。其不�
 
 [^1]: [Unity - C# Compile - 2020](https://docs.unity3d.com/2020.3/Documentation/Manual/CSharpCompiler.html)
 [^2]: [Unity - C# Compile - 2021](https://docs.unity3d.com/2022.1/Documentation/Manual/CSharpCompiler.html)
-[^3]:[Unity - C# Compile - 2018](https://docs.unity3d.com/2018.3/Documentation/Manual/CSharpCompiler.html)
+[^3]:[Unity - C# Compile - 20180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000](https://docs.unity3d.com/2018.3/Documentation/Manual/CSharpCompiler.html)
