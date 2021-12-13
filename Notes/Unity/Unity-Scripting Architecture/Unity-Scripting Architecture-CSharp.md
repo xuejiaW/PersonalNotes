@@ -12,6 +12,8 @@ updated: 2021-12-13
 Unity 对于支持的 C# 版本，可能存在部分特性的不支持。其不支持的特性版本在各说明页面中都会有相应说明，如下为 `2022.1` 中不支持的 `C# 9.0` 特性[^2]：
 ![|350](assets/Unity-Scripting%20Architecture-CSharp/image-20211213084706350.png)
 
+# C# Version 与 .Net Profile 关系
+
 # Reference
 
 [^1]: [Unity - Manual: C# compiler (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/CSharpCompiler.html)
