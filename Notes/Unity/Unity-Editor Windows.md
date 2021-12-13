@@ -46,4 +46,4 @@ class MyWindow : EditorWindow
 
 该函数用来唤出自定义的窗口，其中 `Window/My Window` 决定了唤出该窗口的按钮在 Unity Editor 中的路径，本例中即通过路径 `Window -> My Window`。
 
-通过 `EditorWindow.GetWindow` 函数唤起窗口，该函数的泛型类型需要是需要唤起的
+通过 `EditorWindow.GetWindow` 函数唤起窗口，该函数的泛型类型是需要唤起的窗口的类
