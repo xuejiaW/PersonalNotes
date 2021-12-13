@@ -46,4 +46,14 @@ class MyWindow : EditorWindow
 
 该函数用来唤出自定义的窗口，其中 `Window/My Window` 决定了唤出该窗口的按钮在 Unity Editor 中的路径，本例中即通过路径 `Window -> My Window`。
 
-通过 `EditorWindow.GetWindow` 函数唤起窗口，该函数的泛型类型是需要唤起的窗口的类
+通过 `EditorWindow.GetWindow` 函数唤起窗口，该函数的泛型类型是定义需要唤起的窗口的类，并形参用来表示窗口的名称：
+
+上例的效果如下所示：
+![|400](assets/Unity-Editor%20Windows/GIF%2012-13-2021%2011-28-15%20AM.gif)
+
+# Implement Custom Window's GUI
+
+窗口的样式需要通过自定义窗口类中的 `OnGUI` 函数绘制，如下所示：
+```csharp
+
+```
