@@ -14,6 +14,10 @@ Unity 对于支持的 C# 版本，可能存在部分特性的不支持。其不�
 
 # C# Version 与 .Net Profile 关系
 
+早期的 Unity 版本中，其支持的 C# 版本会与选择的 [
+.Net Profile](Unity-Scripting%20Architecture-.Net%20Profile%20Support.md) 版本相互依赖，如 `2018.3` 版本中，根据不同的 `.Net Profile` 选择，会支持 `C# 4` 或 `C# 7.3`：
+
+
 # Reference
 
 [^1]: [Unity - Manual: C# compiler (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/CSharpCompiler.html)
