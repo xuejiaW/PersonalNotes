@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Misc-.Net Standard Overview",
+  "attachmentFolderPath": "./assets/Unity-Scripting Architecture-CSharp",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
