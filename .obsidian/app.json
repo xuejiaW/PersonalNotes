@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity-Scripting Architecture-CSharp",
+  "attachmentFolderPath": "./assets/Unity-Editor Windows",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
