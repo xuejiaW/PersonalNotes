@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity-Editor Windows",
+  "attachmentFolderPath": "./assets/OpenGL-Projection Matrix",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
