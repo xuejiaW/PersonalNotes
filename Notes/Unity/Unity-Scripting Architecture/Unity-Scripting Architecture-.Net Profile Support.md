@@ -12,7 +12,7 @@ updated: 2021-12-13
 
 | Compilation Target | API Compatibility Level |               |
 | ------------------ | ----------------------- | ------------- |
-|                    | .Net Standard 2.0       | .Net 3x       |
+|                    | .Net Standard 2.0       | .Net 4x       |
 | .Net Standard      | Supported               | Supported     |
 | .Net Framework     | Litmited support        | Supported     |
 | .Net Core          | Not supported           | Not supported |
