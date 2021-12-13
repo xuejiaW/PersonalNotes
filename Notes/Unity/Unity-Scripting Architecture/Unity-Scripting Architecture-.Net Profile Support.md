@@ -16,3 +16,4 @@ updated: 2021-12-13
 | .Net Standard      | Supported               | Supported     |
 | .Net Framework     | Litmited support        | Supported     |
 | .Net Core          | Not supported           | Not supported |
+
