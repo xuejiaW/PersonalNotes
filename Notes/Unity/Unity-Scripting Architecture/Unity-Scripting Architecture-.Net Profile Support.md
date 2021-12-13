@@ -16,5 +16,3 @@ updated: 2021-12-13
 | .Net Standard      | Supported               | Supported     |
 | .Net Framework     | Litmited support        | Supported     |
 | .Net Core          | Not supported           | Not supported |
-
-其中 `.Net Standard`，`.Net Framework`和 `.Net Core` 分别为三种不同的 .Net 配置。其中 `.Net Standard` 由 `.Net` 组织定义，其中定义了一系列各 `.Net` 实现库都必须实现的 APIs。

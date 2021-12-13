@@ -14,8 +14,11 @@ updated: 2021-12-13
 
 对于 `.Net` 实现库而言，它必须支持从最低的 `.Net Standard` 版本到该库所支持最高的 `.Net Standard` 版本间所有的 APIs 实现。如一个库支持 `.Net Standard 2.1`，则该库需要支持从 `.Net Standard 1.0`  到 `.Net Standard 2.1` 间所有定义的 APIs。
 
+如下为各`.Net` 实现库与 `.Net Standard` 之间的关系列表[^1]：
+![](assets/Misc-.Net%20Standard%20Overview/image-20211213082543001.png)
+
 
 
 # Reference
 
- [.NET Standard | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
+ [^1]:[.NET Standard | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
