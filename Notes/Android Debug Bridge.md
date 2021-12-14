@@ -45,4 +45,13 @@ adb connect 192.168.2.11
 # 打开应用
 
 ```shell
+adb shell am start <packageName>/<mainAcitvityName>
+// adb shell am start com.yvr.launcher2d/com.unity3d.player.UnityPlayerActivity
+```
+
+可通过 `-n` 标记位在打开应用的同时传递 Intent：
+
+```cpp
+adb shell am start -n <packageName>/<mainAcitvityName> --e<type> <intentKey> <intentValue>
+// adb shell am start -n com.yvr.launcher2d/com.unity3d.player.UnityPlayerActivity --es "packageName" "com.android.settings"
 ```

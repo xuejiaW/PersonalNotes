@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 01 Hello Window",
+  "attachmentFolderPath": "./assets/Android Debug Bridge",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
