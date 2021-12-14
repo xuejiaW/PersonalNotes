@@ -4,7 +4,9 @@ created: 2021-12-13
 updated: 2021-12-14
 ---
 
-# 查看设备 IP 地址
+# Shell 命令
+
+## 查看设备 IP 地址
 
 可通过 `ipconfig` 命令查看，如下所示：
 ```shell
@@ -25,7 +27,7 @@ wlan0     Link encap:UNSPEC    Driver cnss_pci
 
 其中 `inet addr` 后跟着的即为 IP 地址，示例中为 `192.168.2.11`。
 
-# Wifi 连接 ADB
+## Wifi 连接 ADB
 
 对于想要通过 Wifi 连接 adb 的设备，首先需要使用 USB 将该设备连接至电脑，并通过 `adb tcp ip ` 设置之后网络连接的端口号，如下将端口号设置为 `5555`：
 ```shell
@@ -42,7 +44,7 @@ adb connect 192.168.2.11
 
 断开时可使用 `adb disconnect <ip>` 与设备断开连接。
 
-# 打开应用
+## 打开应用
 
 ```shell
 adb shell am start <packageName>/<mainAcitvityName>
@@ -51,29 +53,62 @@ adb shell am start <packageName>/<mainAcitvityName>
 
 可通过 `-n` 标记位在打开应用的同时传递 Intent：
 
-```cpp
+```shell
 adb shell am start -n <packageName>/<mainAcitvityName> --e<type> <intentKey> <intentValue>
 // adb shell am start -n com.yvr.launcher2d/com.unity3d.player.UnityPlayerActivity --es "packageName" "com.android.settings"
 ```
 
-# 关闭应用
+## 关闭应用
 
-## force-stop
+### force-stop
 
-```cpp
+```shell
 adb shell am force-stop <packageName>
 ```
 
-## kill
+### kill
 
 首先通过 `ps` 找到需要关闭的应用的进程号，再通过 `kill` 命令关闭：
-```cpp
+```shell
 adb shell ps -A |grep <searchPattern>
 adb shell kill <processID>
 ```
 
-## killall
+### killall
 
 如果在已知应用包名的情况下，可以直接通过 `killall` 关闭应用：
 ```shell
+adb shell killall <packageName>
+```
 
+```ad-warning
+`kill` 和 `killall` 命令依赖设备的 Root 权限
+```
+
+## 截图
+
+```shell
+adb shell screencap <outputPath> #截图
+```
+
+## 录视频
+
+```shell
+adb shell screenrecord <outputPath> #录视频
+```
+
+## 模拟按键
+
+```shell
+adb shell input keyevent
+```
+
+# 错误处理
+
+## More then one device and emulator
+
+有的时候，当设备连接时会出现无法安装应用，之后通过 `adb devices` 发现除了设备外，还额外多出了一个模拟器。此时可以通过如下命令重启 `adb`， 消除模拟器：
+
+```bash
+adb kill-server
+```
