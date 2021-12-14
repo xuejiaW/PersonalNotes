@@ -2,7 +2,7 @@
 tags:
     - OpenGL
 created: 2021-12-14
-updated: 2021-12-14
+updated: 2021-12-15
 ---
 # Scissor Test
 

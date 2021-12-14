@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/GPU  Performance",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 02 Hello Triangle",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
