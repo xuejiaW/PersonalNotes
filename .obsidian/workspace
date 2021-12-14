@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
+            "file": "TO-DO.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,8 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "TO-DO.md",
+    "Notes/GPU  Performance.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md",
@@ -158,8 +160,6 @@
     "Notes/Chocolatey.md",
     "Notes/OpenGL/OpenGL-Projection Matrix.md",
     "Notes/OpenGL/OpenGL-Scissor Test.md",
-    "Notes/OpenGL/OpenGL-Viewport VS Scissor Test.md",
-    "Notes/OpenGL/OpenGL-Viewport.md",
-    "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md"
+    "Notes/OpenGL/OpenGL-Viewport VS Scissor Test.md"
   ]
 }
