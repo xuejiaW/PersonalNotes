@@ -13,5 +13,8 @@ GLFW是一个开源的OpenGL库，主要为创建窗口，OpenGL上下文，处�
 
 安装Cmake后，按下图进行配置，从上到下三个红框分别表示，GLFW的源代码地址，编译后结果的输出地址以及编译对象，这里因为想搭建的是VSCode环境下的地址，所以选择了`MinGW Makefiles`。其中第三个红框的窗口时通过按左下角的`Configure`按钮呼出的。
 
-![](assets/LearnOpenGL-Ch%2000%20Creating%20a%20Window/image-20211214094401003.png)
+![|400](assets/LearnOpenGL-Ch%2000%20Creating%20a%20Window/image-20211214094401003.png)
 
+```ad-warning
+选择 MinGW Makefiles 必须保证 MinGW已经安装，且 /bin/mingw32-make 文件存在，建议安装64位 [MinGW](http://www.mingw-w64.org/doku.php)
+```
