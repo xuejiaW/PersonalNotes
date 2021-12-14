@@ -100,7 +100,12 @@ adb shell screenrecord <outputPath> #录视频
 ## 模拟按键
 
 ```shell
-adb shell input keyevent
+adb shell input keyevent <KeyEvent>
+```
+
+该命令需要指定模拟的 [KeyEvent](https://developer.android.com/reference/android/view/KeyEvent)，如需要模拟 `Home` 键，则按键如下：
+```shell
+adb shell input keyevent KEYCODE_HOME
 ```
 
 # 错误处理
