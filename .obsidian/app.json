@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/OpenGL-Viewport",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 00 Creating a Window",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
