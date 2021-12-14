@@ -1,3 +1,10 @@
+---
+tags:
+    - OpenGL
+created: 2021-12-14
+updated: 2021-12-14
+---
+
 # Viewport Test
 
 Viewport 指目标绘制的屏幕空间范围，可以通过 `glViewport` 指定 Projection 后的 NDC Space 中的顶点该如何映射到 Screen Space 中。

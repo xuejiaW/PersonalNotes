@@ -1,3 +1,9 @@
+---
+tags:
+    - OpenGL
+created: 2021-12-14
+updated: 2021-12-14
+---
 # Scissor Test
 
 在 OpenGL 中，可以通过 `glEnable(GL_SCISSOR_TEST)` 开启 Scissor Test[^1]，并通过 `glScissor` 指定 Scissor Test 的范围。

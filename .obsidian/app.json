@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/OpenGL-Projection Matrix",
+  "attachmentFolderPath": "./assets/OpenGL-Viewport",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
