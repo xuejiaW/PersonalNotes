@@ -35,33 +35,29 @@ updated: 2021-12-15
 
 这也就是DrawCall数会影响CPU的原因，每一个DrawCall指令都需要经过一系列的翻译才能给到GPU进行绘制。如果将多个绘制较少内容的DrawCall进行合并，合并一个绘制更多内容的DrawCall，将就可以省下翻译的时间。
 
-<aside>
-⚠️ 在某些情况下，整个 `Present` 的时间并不等同于翻译绘制指令的时间。等待下一个 Vsync 或因为GPU Bound等待GPU绘制完成的时间，都会被Profiler统计在 `Present` 时间中。
-
-</aside>
+```ad-warning
+在某些情况下，整个 `Present` 的时间并不等同于翻译绘制指令的时间。等待下一个 Vsync 或因为GPU Bound等待GPU绘制完成的时间，都会被Profiler统计在 `Present` 时间中。
+```
 
 对于GPU芯片的设计师而言，如果将GPU的架构设计的如 3D API 所需要的类似，那么指令的翻译时间会很短，但可能会因为架构并不符合渲染的流程，而让GPU运行时间增长。相反，如果让架构极大程度的符合渲染的流程，则GPU运行时间会短，但可能会导致CPU翻译指令的时间更长。因此某些显卡可能更容易触发CPU Bound，而另一些更容易触发 GPU Bound。
 
 # CPU Bound Or GPU Bound
 
-<aside>
-⚠️ 这里将CPU的工作简化为三个部分， `Update` ， `Draw` ， `Translate Instruction`
-
-</aside>
+```ad-warning
+这里将CPU的工作简化为三个部分， `Update` ， `Draw` ， `Translate Instruction`
+```
 
 如果Profiler中显示一帧大量的时间耗费在在 `Update` 中，那么说明是 `CPU Bound`。
 
 但如果时间大量耗费在 `Draw` 和 `Translate Instruction` 中，则无法说明问题，可能是 `CPU Bound` （CPU翻译指令的时间消耗过久），也可能是 `GPU Bound`  （GPU上一帧的绘制没有及时完成，CPU必须等待GPU）。
 
-<aside>
-🚫 通过注释掉一部分的绘制命令来查看是否是GPU Bound的思路是行不通的，即使因为这个操作让帧率上升了，也无法得知究竟是因为减少了GPU操作（绘制的东西变少），还是因为减少了CPU操作（需要翻译的指令变少）。
+```ad-error
+通过注释掉一部分的绘制命令来查看是否是GPU Bound的思路是行不通的，即使因为这个操作让帧率上升了，也无法得知究竟是因为减少了GPU操作（绘制的东西变少），还是因为减少了CPU操作（需要翻译的指令变少）。
+```
 
-</aside>
-
-<aside>
-💡  可通过增加 `CPU Sleep` 的方式来确定是否是 `GPU Bound` 。如果是 `GPU Bound` 的情况下，CPU处于空载的状态，那么即使让CPU 挂起几毫秒（在空载的时间内），也不会造成帧率的下降。
-
-</aside>
+```ad-warning
+可通过增加 `CPU Sleep` 的方式来确定是否是 `GPU Bound` 。如果是 `GPU Bound` 的情况下，CPU处于空载的状态，那么即使让CPU 挂起几毫秒（在空载的时间内），也不会造成帧率的下降。
+```
 
 可通过以下的代码来检测究竟是 `CPU Bound` 还是 `GPU Bound` ：
 
@@ -208,10 +204,9 @@ graphicsDevice.DrawPrimitives(...);
 
 因此当调用 `SetData` 时，CPU必须确认GPU是否已经完成了上一帧的绘制，这样才能覆盖顶点数组的数据。如果未完成的话CPU必须等待GPU完成上一帧绘制才能继续执行，这就会导致CPU的阻塞（Update中必须等待GPU将上一帧画完，而不是正常的两者并行），且即使GPU在CPU访问时已经完成了上一帧的绘制，CPU向GPU查询操作也是个耗时较大的操作。即 `SetData` 会耗费CPU较长的时间甚至阻塞CPU。
 
-<aside>
-💡 在 `OpenGL` 中， `glBufferData` 是深拷贝。因此在这种情况下不会触发管线堵塞。但之前的几种情况，仍然会触发管线堵塞。
-
-</aside>
+```ad-note
+在 `OpenGL` 中， `glBufferData` 是深拷贝。因此在这种情况下不会触发管线堵塞。但之前的几种情况，仍然会触发管线堵塞。
+```
 
 # Reference
 
