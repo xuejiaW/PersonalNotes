@@ -1,7 +1,11 @@
 ---
 tags:
     - GPU
+created: 2021-12-14
+updated: 2021-12-14
 ---
+
+
 
 # CPU/GPU 工作模型
 
