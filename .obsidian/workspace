@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
+            "file": "Notes/Android Debug Bridge.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md"
+                "file": "Notes/Android Debug Bridge.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
+                "file": "Notes/Android Debug Bridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
+                "file": "Notes/Android Debug Bridge.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Notes/Android Debug Bridge.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md",
     "Notes/Misc/Misc-.Net Standard and Implementation.md",
@@ -159,7 +160,6 @@
     "Notes/OpenGL/OpenGL-Scissor Test.md",
     "Notes/OpenGL/OpenGL-Viewport VS Scissor Test.md",
     "Notes/OpenGL/OpenGL-Viewport.md",
-    "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
-    "Boos/Learn Vim (The Smart Way)/Learn Vim - Ch 09 Macros.md"
+    "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md"
   ]
 }
