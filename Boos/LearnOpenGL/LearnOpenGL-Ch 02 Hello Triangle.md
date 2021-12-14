@@ -65,8 +65,9 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(vertices),vertices, GL_STATIC_DRAW);
 -   `glBindBuffer` 函数将新缓冲绑定至目标类型，VBO的类型为 `GL_ARRAY_BUFFER`。
 -   `glBufferData` 函数将数据填充到缓冲中，前三个参数都好理解，最后一个参数会决定GPU将如何管理这块内存，因为这里装填了顶点信息后，后期并不会有关于顶点的修改，所以这里设为了 `GL_STATIC_DRAW`。如果有大量修改，可以设为 `GL_DYNAMIC_DRAW` ，这样GPU就会将信息放到高速访问的内存中，保证之后修改时的效率。
 
-vertices 数据是定义在内存中的， glBufferData 操作是将内存中的 vertices 数据拷贝到显存中由 VBO 表示的地址中去。 虽然是拷贝，但在调用 glBufferData 后仍然不建议修改 vertices ，因为可能会造成 [管线堵塞 （Pipeline stall）](../../Notes/GPU%20%20Performance.md#管线堵塞%20（Pipeline%20stall）)的问题
+vertices 数据是定义在内存中的， glBufferData 操作是将内存中的 vertices 数据拷贝到显存中由 VBO 表示的地址中去。 
 
+虽然是拷贝，但在调用 glBufferData 后仍然不建议修改 vertices ，因为可能会造成 [管线堵塞 （Pipeline stall）](../../Notes/GPU%20%20Performance.md#管线堵塞%20（Pipeline%20stall）)的问题
 
 # 索引缓冲对象
 
