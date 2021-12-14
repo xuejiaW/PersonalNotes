@@ -71,8 +71,166 @@ vertices 数据是定义在内存中的， glBufferData 操作是将内存中的
 
 # 索引缓冲对象
 
-<aside> 💡 
-
-</aside>
+```ad-tip
+索引缓冲对象并不是必须的
+```
 
 通常来说，图形都是由三角形构成，如一个四边形就是由两个三角形构成的。这两个三角形可以通过设置六个点来进行绘制，但这样实际上浪费了内存，一个四边形最少需要四个点就可以确定。而当设置四个点时，需要告诉OpenGL，这些点该如何组合构成两个三角形。这个步骤需要通过 `索引缓冲对象（Element Buffer Objects，EBO）`来完成。
+
+索引缓冲对象的类型为 `GL_ELEMENT_ARRAY_BUFFER`，其余的绑定流程与VBO即为类似，如下所示：
+
+```cpp
+GLuint EBO;
+glGenBuffers(1, &VBO);
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indics), indics, GL_STATIC_DRAW);
+```
+
+其中的 `indices` 为索引值，顶点数据和索引值可以如下设置：
+
+```cpp
+float vertices[] = {
+     0.5f,  0.5f, 0.0f,  // top right
+     0.5f, -0.5f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  // bottom left
+    -0.5f,  0.5f, 0.0f   // top left 
+};
+unsigned int indices[] = {  // note that we start from 0!
+    0, 1, 3,   // first triangle
+    1, 2, 3    // second triangle
+};
+```
+
+表示第0，1，3个顶点构成一个三角形，第1，2，3个顶点构成另一个三角形。
+
+# 链接顶点数据
+
+如之前所述，顶点数据中可能会包含多种信息，如位置，颜色，法线。因此在通过VBO传递了顶点数据后，OpenGL仍然不知道该如何正确的解析顶点数据，这里就需要用到函数 `glVertexAttribPointer` 。
+
+```cpp
+glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+glEnableVertexAttribArray(0);
+```
+
+`glVertexAtrribPointer` 函数中：
+
+-   第一个参数为需要配置的顶点数据，0即表示顶点着色器中的 `Position 0`，1则表示顶点着色器中的 `Position 1`。
+-   第二个参数是顶点数据的大小，如果传递的是 `vec3` ，则参数应该为3。
+-   第三个是参数类型，这里是GL_FLOAT
+-   第四个是是否 需要标准化，即换到0~1的区间内
+-   第五个是步长，即一组数据的总大小，比如有一组顶点数据同时存有位置和颜色，各3个数值，则这里应该是6_sizeof(GLfloat)，我们这里仅有位置，所以是3_sizeof(GLfloat)
+-   最后一个是偏移量，同时有位置和颜色，前3为位置，后3为颜色，则传递颜色是偏移量应该是 `(GLvoid*)3*sizeof(GLfloat)`
+
+`glEnableVertexAttribArray` 则是应用之前的操作，其参数与 `glVertexAttribPointer` 的第一个参数相同。
+
+```ad-tip
+链接顶点数据是针对于当前绑定的VBO而言的
+```
+
+# 顶点数组对象
+
+`顶点数组对象（vertex array object，VAO）` 如同VBO类似，也是个物体，因此同样需要经过生成数组ID，绑定数组等操作。VAO的存在是为了管理顶点数据的链接操作，当绑定了一个VAO后，各种关于顶点属性的解释都会被存储在这个VAO中。
+
+因此关于顶点数据的整个流程如下图所示，VAO管理了一系列顶点数据的链接过程，而每个数据的链接又与当前绑定的VBO相关。同时，VAO也可以管理索引缓冲对象。
+
+![|500](assets/LearnOpenGL-Ch%2002%20Hello%20Triangle/image-20211214233259386.png)
+
+VAO创建代码如下：
+
+```cpp
+unsigned int VAO = 0;
+glGenVertexArrays(1, &VAO);
+```
+
+完整流程代码如下：
+
+```cpp
+// 绑定VAO
+glBindVertexArray(VAO);
+
+// 绑定VBO
+glBindBuffer(GL_ARRAY_BUFFER, VBO);
+glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+// 绑定EBO
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+// 链接顶点数据
+glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
+glEnableVertexAttribArray(0);
+
+glBindBuffer(GL_ARRAY_BUFFER, 0);
+glBindVertexArray(0);
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0); // 必须在解绑VAO后才能解绑EBO
+```
+
+```ad-note
+在解绑 VAO 前不可解绑 EBO，因为VAO中包含了EBO的设置，如果在VAO解绑前解绑EBO，相当于在VAO中删除了相关的设置。 
+
+但在解绑VAO前可以解绑VBO，这是因为VAO中包含的并不是VBO本身，而是关于VBO中数据该如何解析的设置
+```
+
+# 着色器
+
+完整的着色器编译和链接头文件为 [SHADER.h](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/SHADER.h)
+
+## 顶点着色器
+
+最简单的顶点着色器如下所示：
+
+```glsl
+#version 330 core
+layout (location = 0) in vec3 aPos;
+
+void main()
+{
+    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
+}
+```
+
+其中 `gl_Position` 为OpenGL预定义的变量，为顶点的位置信息
+
+## 片段着色器
+
+最简单的片段着色器如下：
+
+```glsl
+#version 330 core
+out vec4 FragColor;
+
+void main()
+{
+    FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);
+}
+```
+
+片段着色器必须返回一个 `vec4` 变量表示像素最终的颜色。
+
+## 着色器编译
+
+编译着色器的流程如下：
+
+```cpp
+unsigned int shader;
+shader = glCreateShader(GL_FRAGMENT_SHADER);
+glShaderSource(fragmentShader, 1, &shaderSource, NULL);
+glCompileShader(fragmentShader);
+```
+
+还是传统的生成ID，绑定ID的流程，数据操作的流程。
+
+其中函数 `glShaderSource` 用来绑定shader的源码，第一个形参为ID，第二个形参为源码的数量，第三个参数类型必须是 `const GLchar*`，即需要将着色器文件读取成C风格字符串后传递给形参 `shaderSource`，第四个参数设为NULL表示源码长度不限定长度。
+
+顶点着色器和片段着色器都应该用类似的流程进行编译。
+
+编译结果可以通过以下代码进行检查：
+
+```cpp
+GLint success;
+GLchar infoLog[512];
+glGetShaderiv(id, GL_COMPILE_STATUS, &success);
+if(!success)
+	glGetShaderInfoLog(id, 512, nullptr, infoLog);
+std::cout << "Error in shader"<< infoLog << std::endl;
+```
