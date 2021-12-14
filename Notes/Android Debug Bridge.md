@@ -55,3 +55,25 @@ adb shell am start <packageName>/<mainAcitvityName>
 adb shell am start -n <packageName>/<mainAcitvityName> --e<type> <intentKey> <intentValue>
 // adb shell am start -n com.yvr.launcher2d/com.unity3d.player.UnityPlayerActivity --es "packageName" "com.android.settings"
 ```
+
+# 关闭应用
+
+## force-stop
+
+```cpp
+adb shell am force-stop <packageName>
+```
+
+## kill
+
+首先通过 `ps` 找到需要关闭的应用的进程号，再通过 `kill` 命令关闭：
+```cpp
+adb shell ps -A |grep <searchPattern>
+adb shell kill <processID>
+```
+
+## killall
+
+如果在已知应用包名的情况下，可以直接通过 `killall` 关闭应用：
+```shell
+
