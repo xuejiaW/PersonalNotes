@@ -1,3 +1,7 @@
+---
+created: 2021-12-14
+updated: 2021-12-14
+---
 # 引入相关库
 
 ```cpp
@@ -70,3 +74,36 @@ while (!glfwWindowShouldClose(window))
 `glfwSwapBuffers`设置双缓冲。如果仅使用单缓存时可能会有图像闪烁的原因，因为图像并不是瞬间被画出，而是从左至右，从下至上逐像素画出。为避免这种情况的发生，可以用双缓存，当前缓存在显示时，后缓存进行读取，当后缓存读完，交换前后缓存，如此，图像可瞬间画出。 
 
 `glfwPollEvents`用来检查是否有事件触发，包括键盘事件，鼠标事件，和窗口事件等。（即使不需要处理输入，也仍然要设定该函数）。
+
+# 按键处理
+
+```cpp
+void processInput(GLFWwindow *window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+```
+
+`glfwGetKey`用来获取当前窗口按下的按键。 `glfwSetWindowShouldClose`设置当前窗口需要被关闭，调用该函数后，窗口会被关闭。
+
+`processInput`函数需要在函数主循环中被调用，保证一直检查输入状态。
+
+# Viewport设置
+
+```cpp
+glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+```
+
+设置在窗口尺寸改变时，设置回调，并在回调中，调用`glViewport`函数更改viewport。
+
+# 终止GLFW
+
+```cpp
+glfwTerminate();
+```
