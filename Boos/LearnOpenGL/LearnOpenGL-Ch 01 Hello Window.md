@@ -17,7 +17,7 @@ glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 `glfwWindowHint`函数的第一个参数用来表示要设定的参数，所有参数都是以`GLFW_`开头，函数的第二个参数是需要设定的值。 `glfwWindowHint`接受的参数与参数值，可以在[GLFW文档](https://www.notion.so/Hellow-Window-8043f836bef641dcb87856decf739229)中设置。
 
-## 创建GLFW窗口
+# 创建GLFW窗口
 
 ```cpp
 GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
@@ -34,7 +34,7 @@ glfwMakeContextCurrent(window);
 
 `glfwMakeContextCurrent`将`glfwCreateWindow`返回的表示窗口的指针绑定给当前线程环境。
 
-##初始化GLAD
+# 初始化GLAD
 
 ```cpp
 if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -50,7 +50,7 @@ if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 
 因此需要先初始化`GLFW`，绑定`GLFW`窗口，再初始化`GLAD`，然后才能使用OpenGL相应的函数。
 
-## **渲染循环**
+# 渲染循环
 
 ```cpp
 while (!glfwWindowShouldClose(window))
@@ -63,4 +63,10 @@ while (!glfwWindowShouldClose(window))
 }
 ```
 
-`glClearColor`设置`ClearColor`的颜色。 `glClear`设置需要清理的对象，这里仅清理颜色缓存。 `glfwSwapBuffers`设置双缓冲。如果仅使用单缓存时可能会有图像闪烁的原因，因为图像并不是瞬间被画出，而是从左至右，从下至上逐像素画出。为避免这种情况的发生，可以用双缓存，当前缓存在显示时，后缓存进行读取，当后缓存读完，交换前后缓存，如此，图像可瞬间画出。 `glfwPollEvents`用来检查是否有事件触发，包括键盘事件，鼠标事件，和窗口事件等。（即使不需要处理输入，也仍然要设定该函数）。
+`glClearColor`设置`ClearColor`的颜色。 
+
+`glClear`设置需要清理的对象，这里仅清理颜色缓存。
+
+`glfwSwapBuffers`设置双缓冲。如果仅使用单缓存时可能会有图像闪烁的原因，因为图像并不是瞬间被画出，而是从左至右，从下至上逐像素画出。为避免这种情况的发生，可以用双缓存，当前缓存在显示时，后缓存进行读取，当后缓存读完，交换前后缓存，如此，图像可瞬间画出。 
+
+`glfwPollEvents`用来检查是否有事件触发，包括键盘事件，鼠标事件，和窗口事件等。（即使不需要处理输入，也仍然要设定该函数）。
