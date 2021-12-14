@@ -234,3 +234,81 @@ if(!success)
 	glGetShaderInfoLog(id, 512, nullptr, infoLog);
 std::cout << "Error in shader"<< infoLog << std::endl;
 ```
+
+## 着色器链接
+
+当着色器都编译后，需要链接给程序，流程如下：
+
+```cpp
+unsigned int shaderProgram;
+shaderProgram = glCreateProgram();
+glAttachShader(shaderProgram, vertexShader);
+glAttachShader(shaderProgram, fragmentShader);
+glLinkProgram(shaderProgram);
+```
+
+在将着色器链接给程序后，就可以将两个着色器程序删除
+
+```cpp
+glDeleteShader(vertexShader);
+glDeleteShader(fragmentShader);
+```
+
+链接的结果可以通过以下代码进行检查：
+
+```cpp
+GLint success;
+GLchar infoLog[512];
+glGetProgramiv(id, GL_LINK_STATUS, &success);
+if(!success)
+	glGetProgramInfoLog(id, 512, nullptr, infoLog);
+std::cout << "Error in shader" << infoLog << std::endl;
+```
+
+## 封装Shader
+
+关于Shader的读取，编译，链接等过程都可以封装进一个头文件[SHADER](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/SHADER.h)。当外部使用者使用头文件时，仅需要如下代码即可：
+
+```cpp
+Shader shader("./vertex.vert", "./fragment.frag");
+shader.Use();
+```
+
+```ad-warning
+当使用MakeFile对工程编译时，代码中的资源的相对路径是针对于MakeFile的路径而言的。 即 ./ 指的是MakeFile的路径，而不是CPP文件的路径，虽然两者在很多情况下路径相同。
+
+而 include 时的相对路径，仍然是针对于 CPP 文件
+```
+
+# 绘制
+
+之前已经准备好了所有绘制需要的内容，即VAO的创建和绑定（VAO中又管理了VBO和EBO）和着色器的编译与链接。之后直接进行绘制即可，绘制前需要绑定VAO，确认当前绘制的顶点对象，还需要使用着色器程序，确认当前要使用的着色器
+
+```cpp
+glUseProgram(shaderProgram);
+glBindVertexArray(VAO);
+```
+
+之后在渲染循环中，调用绘制命令即可。注意使用了EBO和不适用EBO时绘制的命令是不同的。
+
+```cpp
+// With EBO
+glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0)
+
+// Without EBO
+glDrawArrays(GL_TRIANGLES, 0, 3);
+```
+
+`glDrawElements` 函数中，第一个参数为绘制的图元类型，可选的还有 `GL_POINT`， `GL_LINE_STRIP` 等。第二个参数为需要绘制的顶点数量，第三参数为EBO的数据 `indices` 设置的类型，第四个参数是需要从 `indices` 的哪个索引开始读取。
+
+`glDrawArrays` 函数中，第一个参数同样为绘制的图元类型，第二个参数为VBO中的数据， `vertices` 中开始的索引值，第三个参数为需要绘制的顶点数量
+
+# 结果与源码
+
+![](assets/LearnOpenGL-Ch%2002%20Hello%20Triangle/image-20211214233511740.png)
+
+[CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/2.HelloTriangle/main.cpp)
+
+[Vertex](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/2.HelloTriangle/vertex.vert)
+
+[Fragment](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/2.HelloTriangle/fragment.frag)
