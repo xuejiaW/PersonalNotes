@@ -210,6 +210,6 @@ graphicsDevice.DrawPrimitives(...);
 
 # Reference
 
-[](http://www.shawnhargreaves.com/blogindex.html#gpuperformance)
+[GPU Performance](http://www.shawnhargreaves.com/blogindex.html#gpuperformance)
 
 [How are Direct3D and OpenGL instructions handled in a graphics card?](https://stackoverflow.com/questions/6352159/how-are-direct3d-and-opengl-instructions-handled-in-a-graphics-card)
