@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
+            "file": "TO-DO.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "TO-DO.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 10 Color.md",
     "Boos/LearnOpenGL/LearnOpenGL.md",
@@ -159,7 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Framework.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
-    "Notes/Obsidian/Obsidian-Image Gallery.md",
-    "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md"
+    "Notes/Obsidian/Obsidian-Image Gallery.md"
   ]
 }

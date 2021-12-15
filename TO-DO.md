@@ -17,3 +17,5 @@ updated: 2021-12-15
 - [ ]  Obsidian Vim Input Method 切换插件
 - [ ] Unity 内存泄露，如 Mesh，Texture 等。
 - [ ] Vim-盘古 自动为中英文加空格
+- [ ]  __VA_ARGS__ 和 ##__VA_ARGS__ 的区别
+- [ ]   __android_log_vprint 和 __android_log_print 区别
