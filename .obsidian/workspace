@@ -7,8 +7,11 @@
         "id": "986750e81ac0940f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md"
+              }
             }
           },
           {
@@ -85,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -144,8 +151,8 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
-    "Notes/GPU  Performance.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
+    "Notes/GPU  Performance.md",
     "TO-DO.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md",
