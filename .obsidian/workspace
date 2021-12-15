@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian-CSS Snippets.md",
-            "mode": "source"
+            "file": "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
+            "mode": "preview"
           }
         }
       }
@@ -48,13 +48,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-CSS Snippets.md"
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md"
               }
             }
           },
@@ -92,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-CSS Snippets.md",
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-CSS Snippets.md",
+                "file": "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +151,8 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 05 Transformations.md",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
@@ -160,8 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
     "Notes/GPU  Performance.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md",
-    "Notes/Misc/Misc-.Net Standard and Implementation.md",
-    "Notes/Chocolatey.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md"
   ]
 }
