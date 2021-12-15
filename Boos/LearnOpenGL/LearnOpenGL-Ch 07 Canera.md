@@ -116,149 +116,75 @@ cameraUp = glm::normalize(glm::cross(cameraRight, cameraFront));
 可以通过函数 `glfwSetCursorPosCallback` 设置鼠标移动的回调，并在回调中根据鼠标的移动，调整yaw和pitch角，并进一步更新摄像机的三个方向信息。并且可以通过函数 `glfwSetMouseButtonCallback` 设置仅当鼠标右键按下时，才对鼠标的移动进行操作。
 
 ```cpp
-
 glfwSetCursorPosCallback(window, mouse_callback);
-
 glfwSetMouseButtonCallback(window, mouse_button_Callback);
 
-  
-
 bool firstMouse = true;
-
 double lastX = 0.0, lastY = 0.0;
-
 double mouseSensitivity = 0.05;
-
 float yaw = -90.0f;
-
 float pitch = 0.0f;
-
 bool ClickDown = false;
 
-  
-
 void mouse_callback(GLFWwindow *window, double xpos, double ypos)
-
 {
+    if (!ClickDown)
+        return;
 
- if (!ClickDown)
+    if (firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
 
- return;
+    float xoffset = (xpos - lastX) * mouseSensitivity;
+    float yoffset = (lastY - ypos) * mouseSensitivity; // reversed since y-coordinates go from bottom to top
 
-  
+    lastX = xpos;
+    lastY = ypos;
 
- if (firstMouse)
+    yaw += xoffset;
+    pitch += yoffset;
 
- {
+    if (pitch > 89.0f)
+        pitch = 89.0f;
+    if (pitch < -89.0f)
+        pitch = -89.0f;
 
- lastX = xpos;
-
- lastY = ypos;
-
- firstMouse = false;
-
- }
-
-  
-
- float xoffset = (xpos - lastX) * mouseSensitivity;
-
- float yoffset = (lastY - ypos) * mouseSensitivity; // reversed since y-coordinates go from bottom to top
-
-  
-
- lastX = xpos;
-
- lastY = ypos;
-
-  
-
- yaw += xoffset;
-
- pitch += yoffset;
-
-  
-
- if (pitch > 89.0f)
-
- pitch = 89.0f;
-
- if (pitch < -89.0f)
-
- pitch = -89.0f;
-
-  
-
- glm::vec3 front;
-
- front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-
- front.y = sin(glm::radians(pitch));
-
- front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-
- cameraFront = glm::normalize(front);
-
- // also re-calculate the Right and Up vector
-
- glm::vec3 cameraRight = glm::normalize(glm::cross(cameraFront, glm::vec3(0, 1, 0))); // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
-
- cameraUp = glm::normalize(glm::cross(cameraRight, cameraFront));
-
+    glm::vec3 front;
+    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front.y = sin(glm::radians(pitch));
+    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
+    // also re-calculate the Right and Up vector
+    glm::vec3 cameraRight = glm::normalize(glm::cross(cameraFront, glm::vec3(0, 1, 0))); // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
+    cameraUp = glm::normalize(glm::cross(cameraRight, cameraFront));
 }
-
-  
 
 void mouse_button_Callback(GLFWwindow *window, int key, int action, int mode)
-
 {
-
- if (key == GLFW_MOUSE_BUTTON_RIGHT)
-
- {
-
- if (action == GLFW_PRESS)
-
- {
-
- ClickDown = GL_TRUE;
-
- }
-
- else if (action == GLFW_RELEASE)
-
- {
-
- ClickDown = GL_FALSE;
-
- }
-
- }
-
+    if (key == GLFW_MOUSE_BUTTON_RIGHT)
+    {
+        if (action == GLFW_PRESS)
+        {
+            ClickDown = GL_TRUE;
+        }
+        else if (action == GLFW_RELEASE)
+        {
+            ClickDown = GL_FALSE;
+        }
+    }
 }
-
 ```
-
   
-
 在上述代码中变量 `firstMouse` 是为了避免程序一开始因为 `lastX, lastY` 初始值为0导致的跳变。同时为了避免颠倒情况，将 `pitch` 的范围限制在 $-89 \sim 89$的范围内。
 
-  
-
 ## 结果与源码
-
-  
-
-![Camera%207e3c2189c9a5411da4b84cb9975c77f0/GIF.gif](Camera%207e3c2189c9a5411da4b84cb9975c77f0/GIF.gif)
-
-  
+![](assets/LearnOpenGL-Ch%2007%20Canera/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/7.Camera/main.cpp)
 
-  
-
 [Vertex](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/7.Camera/vertex.vert)
-
-  
 
 [Fragment](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/7.Camera/fragment.frag)
