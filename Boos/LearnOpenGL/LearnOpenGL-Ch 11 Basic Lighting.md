@@ -35,7 +35,7 @@ vec3 ambientComponent = ambientStrength * lightColor;
 
 漫反射光的原理是与光线方向越接近的地方可以从光源处获得更多的光亮。如下图所示，当光的方向与表面法线平行时（垂直于物体表面），漫反射分量最大。当光的方向与表面法线夹角 $\geq 90^{\circ}$时，漫反射分量为0。因此可以通过求光线方向与物体表面法线的夹角大小来判断漫反射分量的大小。
 
-![](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000202500.png)
+![300](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000202500.png)
 
 因此为了计算漫反射，需要额外获取两个信息，一个是表面的法线方向，一个是光线的方向。前者可以通过传递顶点的法线，并由顶点法线自动插值得到表面的法线。后者可以传递光源的位置，并计算出表面上每个点的位置，两者相减就能获得光线的方向。
 
@@ -62,7 +62,7 @@ glEnableVertexAttribArray(2);
 
 1.  方向是没有位移概念的，因此物体的模型变换中的位置信息需要去除，在原模型变换矩阵中取不含位置信息的左上$3\times3$子矩阵即可。
 2.  如果模型包含了非等比例的缩放，模型矩阵与法线直接相乘会导致法线不再垂直于物体表面，如下图所示，为了处理非等比例的缩放，正确的变换矩阵为 原模型矩阵的逆矩阵的转置。证明见 //TODO
-     ![](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000246152.png)
+     ![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000246152.png)
 
 因此最后片段着色器中，对法线的处理为：
 
@@ -105,7 +105,7 @@ fragPos=vec3(model*vec4(pos,1.0));
 vec3 lightDir=normalize(lightPos-fragPos);
 ```
 
-### 分量计算
+## 分量计算
 
 通过点乘即可以获得 `光线方向与法线方向夹角越小，值越大的效果` 。
 
@@ -113,3 +113,84 @@ vec3 lightDir=normalize(lightPos-fragPos);
 float diff=max(dot(normal,lightDir),0.0);
 vec3 diffuseComponent=diff*lightColor;
 ```
+
+# 镜面反射光
+
+镜面反射光取决于光的反射方向和人眼注视方向的夹角。如下图所示，想象有一面镜子，人的注视方向正好对着光反射的反向，此时人看到的就是一个巨大的光斑。因此人眼注释的方向与光反射方向的夹角越小，镜面反射光越大。
+
+![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000345055.png)
+
+## 光的反射方向
+
+为了得到光的反射方向，需要知道表面的法线方向和光的入射方向，这两个参数在之前已经进行了传递，之后使用 `GLSL` 中的内置函数 `reflect` 即可。
+
+```glsl
+vec3 reflectDir = reflect(-lightDir,normal);
+```
+
+```ad-warning
+注意这里需要对 `lightDir` 取反，因为之前求得的 `lightDir` 方向是从表面指向光源的，但求反射光时需要的入射光方向是从光源指向表面的。
+```
+
+## 注视方向
+
+为了求得注视方向，需要知道人眼的位置。
+
+如同在求光线方向一样，物理上人的注视方向应当是从人眼位置出发指向表面片元，而这里求得的注视方向是为了与法线求夹角，因此这里求的注视方向是从表面片元指向人眼。
+
+人眼位置可以通过 `uniform` 进行传递
+
+```glsl
+// 片段着色器
+uniform vec3 viewPos;
+
+// CPP
+cubeShader->SetVec3("viewPos", camera->GetTransform()->GetPosition());
+```
+
+表面片元的位置在求漫反射光时已经得到，因此注视方向为：
+
+```glsl
+vec3 viewDir=normalize(viewPos-fragPos);
+```
+
+## 分量计算
+
+当得到了反射方向和注释方向后，计算镜面反射光分量的步骤如下，其中 `specularStrength` 为调整镜面反射光亮度的光亮系数。
+
+```glsl
+float spec=pow(max(dot(viewDir,reflectDir),0.0),32);
+vec3 specularComponent=spec*lightColor*specularStrength;
+```
+
+在计算物体镜面反射光时，在取得了了视线方向和光反射方向的点乘后，还做了一个次幂运算。这里的次幂运算表示高光的反射度。次幂越高表示一个物体反射度越高，反射能力越强，散射越少，高光点越小。如下所示：
+![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000433025.png)
+
+# Phong Shading / Gouraud Shading
+
+这里将光照计算都放到了片段着色器中，因此可以为每个像素计算光照后的颜色。 光照计算也可以放到顶点着色器中，这样是为每个顶点计算光照后的颜色，而像素的颜色是通过顶点颜色插值得到。
+
+顶点着色器中计算光照，效果不如在片段着色器中得到的效果，但因为顶点数量通常远小于像素数量，因此效率更高。
+
+用 `Phone Shading` 指代在片段着色器中计算光照效果，用 `Gouraud Shading` 指代在顶点着色器中计算光照效果。两者对比如下所示：
+
+![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000452574.png)
+
+# 结果与源码
+
+将三个颜色的光亮分量合并就能得到最终的效果：
+
+```glsl
+vec3 light=ambientComponent + diffuseComponent + specularComponent;
+color = vec4(light*objectColor,1);
+```
+
+![|500](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/Basic_Lighting.gif)
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/9.BacisLighting/main.cpp)
+
+[object.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/9.BacisLighting/object.frag)
+
+[object.vert](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/9.BacisLighting/object.vert)
+
+[lamp.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/9.BacisLighting/lamp.frag)
