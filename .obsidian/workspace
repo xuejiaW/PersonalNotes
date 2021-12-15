@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
-            "mode": "source"
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +152,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
     "TO-DO.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
@@ -159,7 +161,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 00 Creating a Window.md",
     "Notes/Misc/Misc-.Net Standard and Implementation.md",
     "Notes/Chocolatey.md",
-    "Notes/OpenGL/OpenGL-Projection Matrix.md",
-    "Notes/OpenGL/OpenGL-Scissor Test.md"
+    "Notes/OpenGL/OpenGL-Projection Matrix.md"
   ]
 }
