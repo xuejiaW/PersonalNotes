@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md",
+            "file": "Boos/LearnOpenGL/Untitled.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md"
+                "file": "Boos/LearnOpenGL/Untitled.md"
               }
             }
           },
@@ -91,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md",
+                "file": "Boos/LearnOpenGL/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md",
+                "file": "Boos/LearnOpenGL/Untitled.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +151,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/Untitled.md",
     "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 05 Transformations.md",
     "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
@@ -160,7 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
     "TO-DO.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 02 Hello Triangle.md",
-    "Notes/GPU  Performance.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 01 Hello Window.md"
+    "Notes/GPU  Performance.md"
   ]
 }

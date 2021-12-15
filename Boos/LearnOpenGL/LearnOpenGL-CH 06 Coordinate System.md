@@ -1,10 +1,14 @@
+---
+created: 2021-12-15
+updated: 2021-12-15
+---
 # 坐标系统
 
 一个物体的顶点数据在最终转换到屏幕坐标系之前要经历多个流程：局部坐标（本地坐标），世界坐标，观察坐标，裁剪坐标，屏幕坐标。
 
 将物体的坐标变换拆成几个过度坐标系的好处在于，在某些特定的坐标系统中，某些运算将更加方便。
 
-![](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled.png)
+![|700](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled.png)
 
 ## 本地坐标系
 
@@ -26,9 +30,9 @@
 
 只有在透视投影下，才会有近大远小的效果，所以一般来说使用的都是透视投影。
 
-![正射投影](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled%201.png)  
+![正射投影|400](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled%201.png)  
 
-![透视投影](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled%202.png)
+![透视投影|400](assets/LearnOpenGL-CH%2006%20Coordinate%20System/Untitled%202.png)
 
 ## 屏幕坐标
 
@@ -49,11 +53,8 @@
 模型矩阵可通过平移，旋转，缩放等一系列操作完成。如一个物体，在本地坐标系下的位置是 $(0,0,0)$，在世界坐标系下的位置为$(10,0,20)$。从本地坐标系转换到世界坐标系的过程，实际上就是平移 $(10,0,20)$的操作。
 
 ```cpp
-
 glm::mat4 model;
-
 model = glm::translate(model, glm::vec3(10.0f, 0.0f, 20.0f));
-
 ```
 
 ## 观察矩阵
@@ -63,77 +64,42 @@ model = glm::translate(model, glm::vec3(10.0f, 0.0f, 20.0f));
 因为为OpenGL是右手坐标系，所以 $-Z$是朝向前方的。如果要做摄像机后退的效果，实际上等同于场景前移。
 
 ```cpp
-
 glm::mat4 view;
-
 view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-
 ```
-
-  
 
 ## 投影矩阵
 
-  
-
 glm中封装了正射投影和透视投影需要的矩阵：平头矩阵和透视投影，两者的使用如下：
-
-  
 
 ```cpp
 
 // 平头矩阵
-
 glm::mat4 projection;
-
 projection = glm::ortho(0.0f, 800.0f, 0.0f, 600.0f, 0.1f, 100.0f);
 
-  
-
 // 透视矩阵
-
 glm::mat4 projection;
-
 projection = glm::perspective(45.0f, screenWidth / screenHeight, 0.1f, 100.0f);
-
 ```
-
-  
 
 # 矩阵使用
 
-  
-
 每一个矩阵都应该在顶点着色器中与位置向量相乘，又因为OpenGL中矩阵是列向量，所以矩阵是通过左乘连接的。顶点着色器实例代码为：
 
-  
-
 ```glsl
-
-  
-
 ...
 
 uniform mat4 model;
-
 uniform mat4 view;
-
 uniform mat4 projection;
-
 ...
 
 gl_Position = projection * view * model * vec4(position, 1.0f);
-
-  
-
 ```
 
-  
 
 CPP段正常的使用 `glUniformMatrix4fv` 传递变量即可。
-
-  
-
 ```cpp
 
 glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
@@ -142,180 +108,89 @@ glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, gl
 
 ```
 
-  
-
 # Cube
-
-  
 
 之前的课程中，绘制的都是四边形，这里为了更好的体现透视效果，需要绘制一个立方体。
 
-  
-
 立方体的顶点与索引值定义如下：
-
-  
-
 ```cpp
 
 float vertices[] = {
-
  -0.5f, -0.5f, 0.5f, 0.0f, 0.0f, // front face
-
  0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
-
  0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
-
- -0.5f, 0.5f, 0.5f, 0.0f, 1.0f,
-
-  
+ -0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 
 
  0.5f, -0.5f, -0.5f, 0.0f, 0.0f, // back face
-
  -0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
-
  -0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
-
  0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
-
   
-
  0.5f, -0.5f, 0.5f, 0.0f, 0.0f, // right face
-
  0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
-
  0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
-
  0.5f, 0.5f, 0.5f, 0.0f, 1.0f,
 
-  
-
  -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, // left face
-
  -0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
-
  -0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
-
  -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
-
-  
 
  -0.5f, 0.5f, 0.5f, 0.0f, 0.0f, // top face
-
  0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
-
  0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
-
  -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
 
-  
-
  -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, // bottom face
-
  0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
-
  0.5f, -0.5f, 0.5f, 1.0f, 1.0f,
-
  -0.5f, -0.5f, 0.5f, 0.0f, 1.0f};
 
-  
-
  unsigned int indices[] = {
-
  0, 1, 2, // front face
-
  0, 2, 3,
 
-  
-
  4, 5, 6, // back face
-
  4, 6, 7,
 
-  
-
  8, 9, 10, // right face
-
  8, 10, 11,
 
-  
-
  12, 13, 14, // left face
-
  12, 14, 15,
-
-  
-
+ 
  16, 17, 18, // top face
-
  16, 18, 19,
 
-  
-
  20, 21, 22, // bottom face
-
  20, 22, 23};
 
 ```
 
-  
-
-<aside>
-
-⚠️  这里定义了24个顶点，即每个面使用了4个顶点。理论上，一个立方体只需要定义8个顶点即可画出，因为对于每一个顶点而言，如果只考虑位置，那么它是由三个面共同拥有的。但是这三个面对于这个顶点要求的Texcoord却是不一样的，因此在定义顶点时，需要针对三个面分别定义三个位置相同，但Texcoord不一样的点。因此，一共需要24个顶点才能满足立方体的绘制。
-
-  
-
-</aside>
-
-  
+```ad-warning
+这里定义了24个顶点，即每个面使用了4个顶点。理论上，一个立方体只需要定义8个顶点即可画出，因为对于每一个顶点而言，如果只考虑位置，那么它是由三个面共同拥有的。但是这三个面对于这个顶点要求的Texcoord却是不一样的，因此在定义顶点时，需要针对三个面分别定义三个位置相同，但Texcoord不一样的点。因此，一共需要24个顶点才能满足立方体的绘制。
+```
 
 # Z-Buffer
 
-  
-
 当绘制立方体时，立方体的顶点有着不同的Z坐标，即距离摄像机的远近不同。在真实世界中，靠的近的不透明物体会遮挡远的不透明物体。在OpenGL中，相同的效果通过Z-Buffer实现。
 
-  
-
 开启Z-Buffer的代码如下：
-
-  
-
 ```cpp
-
 glEnable(GL_DEPTH_TEST);
-
 ```
-
-  
 
 在使用了Z-Buffer后，每次绘制时就不仅仅需要清理颜色缓存，还需要清理深度缓存：
-
-  
-
 ```cpp
-
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 ```
-
-  
 
 # 结果与源码
 
-  
-
-![Coordinate%20System%20f25bb9155f2146a19060c3e0d635c601/GIF.gif](Coordinate%20System%20f25bb9155f2146a19060c3e0d635c601/GIF.gif)
-
-  
+![|400](assets/LearnOpenGL-CH%2006%20Coordinate%20System/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/6.CoordinateSystems/main.cpp)
 
-  
-
 [Vertex](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/6.CoordinateSystems/vertex.vert)
-
-  
 
 [Fragment](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/6.CoordinateSystems/fragment.frag)
