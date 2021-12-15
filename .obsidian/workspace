@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +137,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224423,
+                  "scale": 0.15592475224694108,
                   "close": false
                 }
               }
@@ -151,7 +151,6 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
-    "TO-DO.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 10 Color.md",
     "Boos/LearnOpenGL/LearnOpenGL.md",
@@ -160,6 +159,7 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Framework.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
-    "Notes/Obsidian/Obsidian-Image Gallery.md"
+    "Notes/Obsidian/Obsidian-Image Gallery.md",
+    "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md"
   ]
 }
