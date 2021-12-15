@@ -14,7 +14,7 @@ cssclass: [table-border]
 
 首先从 Assimp Github 页面上下载最新代码，然后在工程文件夹中通过 CMake 编译出需要的 MinGW 源文件：
 
-![](assets/LearnOpenGL-Ch%2008%20Model%20%20Loading/Untitled.png)
+![|500](assets/LearnOpenGL-Ch%2008%20Model%20%20Loading/Untitled.png)
 
 ```ad-tip
 测试时使用的 Github 仓库最新 Commit ID 为 96d0524fab2173a4198f12cd
@@ -23,6 +23,7 @@ cssclass: [table-border]
 进入生成的 `Build` 文件夹，并运行 `mingw32-make` 命令编译出需要的 dll 和 lib。当编译完成后，从 `Build/bin` 文件夹中的 `libassimp.dll` 和 `Build/lib` 文件夹中的 `libassimp.dll.a` 即为需要的资源。
 
 将 `libassimp.dll.a` 和 `libassimp.dll` 拷贝到工程的 `lib` 文件夹下，将 `libassimp.dll` 拷贝到 `bin` 文件夹下，此时两个文件夹中的文件如下所示：
+
 |                                                                       |                                                                       |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![](assets/LearnOpenGL-Ch%2008%20Model%20%20Loading/Untitled%201.png) | ![](assets/LearnOpenGL-Ch%2008%20Model%20%20Loading/Untitled%202.png) |
