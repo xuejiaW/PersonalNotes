@@ -1,3 +1,7 @@
+---
+created: 2021-12-15
+updated: 2021-12-15
+---
 # Getting Started
 
 [Ch 00 Creating a Window](LearnOpenGL-Ch%2000%20Creating%20a%20Window.md)
