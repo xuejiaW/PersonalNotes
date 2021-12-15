@@ -1,236 +1,119 @@
-# Camera
-
-  
-
-## 观察矩阵
-
-  
+---
+created: 2021-12-15
+updated: 2021-12-15
+---
+# 观察矩阵
 
 关于摄像机的实现，实际上就是调整观察矩阵的问题。为了确定观察矩阵，需要确认四个信息，摄像机的位置，摄像机的前方，摄像机的右方，摄像机的上方。这四个信息构成了观察矩阵，也可称为 `LookAt` 矩阵。
 
-  
-
 $$\text {LookAt}=\left[\begin{array}{cccc}R_{x} & R_{y} & R_{z} & 0 \\U_{x} & U_{y} & U_{z} & 0 \\D_{x} & D_{y} & D_{z} & 0 \\0 & 0 & 0 & 1\end{array}\right] *\left[\begin{array}{cccc}1 & 0 & 0 & -P_{x} \\0 & 1 & 0 & -P_{y} \\0 & 0 & 1 & -P_{z} \\0 & 0 & 0 & 1\end{array}\right]$$
-
-  
 
 其中$R$表示摄像机的右方，$U$表示摄像机的上方，$D$表示摄像机的前方，$P$表示摄像机的位置。
 
-  
-
 需要注意的是，虽然说观察矩阵是为了表现摄像机。但因为观察矩阵最后是与场景相乘的，因此观察矩阵要表达的变换是与摄像机要表达的变换相反的，例如摄像机后退三米相当于场景前进三米。也因此，LookAt矩阵中，旋转矩阵是经过了转置的，位移矩阵是取了负的。
 
-  
-
 GLM中提供了LookAt函数的接口，调用如下：
-
-  
-
 ```cpp
-
 glm::mat4 view;
-
 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
-
- glm::vec3(0.0f, 0.0f, 0.0f),
-
- glm::vec3(0.0f, 1.0f, 0.0f));
-
+glm::vec3(0.0f, 0.0f, 0.0f),
+glm::vec3(0.0f, 1.0f, 0.0f));
 ```
-
-  
 
 `lookAt` 函数需要三个向量，分别是摄像机的位置，摄像机的目标，摄像机的上方。前两个参数可以确定摄像机的前方，通过摄像机的前方和第三个参数摄像机的上方，可以叉乘获得摄像机的右方。
 
-  
-
-## 键盘控制摄像机位置
-
-  
+# 键盘控制摄像机位置
 
 可通过函数 `glfwGetKey` 获取键盘按键信息。在绘制循环函数中去检查输入信息，并根据输入信息对摄像机的位置进行调整，再根据摄像机的位置调整观察矩阵，即能满足键盘控制摄像机位置的效果：
 
-  
-
 ```cpp
-
 while (!glfwWindowShouldClose(window))
-
 {
-
- processInput(window);
-
- ...
-
- glm::mat4 view;
-
- view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-
- ...
-
+    processInput(window);
+		...
+		glm::mat4 view;
+    view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+		...
 }
-
-  
 
 ...
 
-  
-
 float lastFrameTime = 0.0f;
-
 float currFrameTime = 0.0f;
-
 float deltaTime = 0.0f;
-
 void processInput(GLFWwindow *window)
-
 {
+    currFrameTime = glfwGetTime();
+    deltaTime = currFrameTime - lastFrameTime;
+    lastFrameTime = currFrameTime;
 
- currFrameTime = glfwGetTime();
+    float cameraSpeed = 2.5f * deltaTime;
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        cameraPos += cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        cameraPos -= cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 
- deltaTime = currFrameTime - lastFrameTime;
-
- lastFrameTime = currFrameTime;
-
-  
-
- float cameraSpeed = 2.5f * deltaTime;
-
- if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-
- cameraPos += cameraSpeed * cameraFront;
-
- if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-
- cameraPos -= cameraSpeed * cameraFront;
-
- if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-
- cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-
- if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-
- cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-
-  
-
- if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-
- glfwSetWindowShouldClose(window, true);
-
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
 }
-
 ```
 
-  
-
-## 鼠标控制摄像机角度
-
-  
+# 鼠标控制摄像机角度
 
 首先需要了解摄像机角度的定义，对于摄像机有三个术语 `pitch, yaw, roll`分别描述绕着$x,y,z$三个轴的旋转：
-
-  
-
-![Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled.png](Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled.png)
-
-  
+![|700](assets/LearnOpenGL-Ch%2007%20Canera/Untitled.png)
 
 通量来说，只需要修改pitch角和yaw角度即可。可使用鼠标的水平平移来修改yaw角度，鼠标的前进后退来修改pitch角度。
 
-  
-
 通过pitch和yaw角度，可以计算出摄像机的前方向。根据前方向，和世界坐标的上方向$(0,1,0)$，可以计算出摄像机的右方向。再根据摄像机的前方向，摄像机的右方向，可求得摄像机的上方向。
 
-  
-
 首先只考虑yaw角度，根据示意图，可以很快的计算出yaw角度对于摄像机前方向的贡献：
-
-  
-
-![Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled%201.png](Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled%201.png)
-
-  
+![|300](assets/LearnOpenGL-Ch%2007%20Canera/Untitled%201.png)
 
 ```cpp
-
 glm::vec3 direction;
-
 direction.x = cos(glm::radians(yaw)); // Note that we convert the angle to radians first
-
 direction.z = sin(glm::radians(yaw));
-
 ```
-
-  
 
 然后计算pitch角度。想想物体躺在X轴上，pitch角度为$\theta$，y轴上分量为 $\sin\theta$，x轴上分量为$\cos\theta$。同理，当物体躺在Z轴上时，y轴上分量为 $\sin\theta$，z轴上分量为$\cos\theta$。示意图代码如下：
 
-  
-
-![Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled%202.png](Camera%207e3c2189c9a5411da4b84cb9975c77f0/Untitled%202.png)
-
-  
+![](assets/LearnOpenGL-Ch%2007%20Canera/Untitled%202.png)
 
 ```cpp
-
 direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-
 direction.y = sin(glm::radians(pitch));
-
 direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-
 ```
-
-  
 
 结合可得：
 
-  
-
 ```cpp
-
 glm::vec3 direction;
-
 direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-
 direction.y = sin(glm::radians(pitch));
-
 direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-
 cameraFront = glm::normalize(direction);
-
 ```
-
   
-
-<aside>
-
-💡 为了保证初始的cameraFront指向-z方向，yaw的初始值应该取-90°
-
+```ad-tip
+为了保证初始的cameraFront指向-z方向，yaw的初始值应该取-90°
+```
   
-
-</aside>
-
-  
-
 在获得了 `cameraFront` 后，可利用叉乘获得 `cameraRight` 和 `cameraUp`
-
-  
 
 ```cpp
 
 cameraRight = glm::normalize(glm::cross(cameraFront, WorldUp)); // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
 
 cameraUp = glm::normalize(glm::cross(cameraRight, cameraFront));
-
 ```
 
-  
-
 可以通过函数 `glfwSetCursorPosCallback` 设置鼠标移动的回调，并在回调中根据鼠标的移动，调整yaw和pitch角，并进一步更新摄像机的三个方向信息。并且可以通过函数 `glfwSetMouseButtonCallback` 设置仅当鼠标右键按下时，才对鼠标的移动进行操作。
-
-  
 
 ```cpp
 
