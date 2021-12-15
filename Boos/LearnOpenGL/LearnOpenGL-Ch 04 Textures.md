@@ -1,3 +1,7 @@
+---
+created: 2021-12-15
+updated: 2021-12-15
+---
 # 采样
 
 为了把纹理映射到图形上，我们需要指定三角形的每个顶点对应纹理图片的哪个地方，所以每个顶点都会关联一个 `纹理坐标（Texture Coordinate）`。
@@ -17,7 +21,7 @@
 - `GL_CLAMP_TO_EDGE`：边界拉伸
 - `GL_CLAMP_TO_BORDER` ：边界填充（需要设定填充颜色）
 
-![|300](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%204.png)
+![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%201.png)
 
 纹理映射可以分别对图片的三个轴进行设置，图片的三个轴称为 `S, T, R` ，并通过函数 `glTexParameter*` 设置，其中 `*` 表示要设置的参数的类型，如 `i` 表示int。设置代码如下：
 
@@ -42,7 +46,7 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
 
 临近插值的画面会导致颗粒感，线性插值的画面虽然更加平滑，但会显得模糊。
 
-![](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%204%201.png)
+![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%204%201.png)
 
 纹理过滤同样使用 `glTexParameter*` 设置，如下所示：
 
@@ -57,7 +61,7 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 OpenGL采用一个叫多级渐远纹理（Mipmap）的方法来解决这一问题，即有一系列纹理图像，后一个纹理图像的宽高是前一个纹理图像宽高的1/2。如下所示：
 
-![](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%205.png)
+![|300](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%205.png)
 
 可以通过调用函数 `glGenerateMipmaps` 生成Mipmap。
 
@@ -195,7 +199,7 @@ FragColor = texture(ourTexture, TexCoord);
 
 # 结果与源码
 
-![](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%206.png)
+![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%206.png)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/4.Textures/main.cpp)
 
