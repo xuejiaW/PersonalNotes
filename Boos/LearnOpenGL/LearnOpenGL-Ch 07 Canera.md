@@ -181,7 +181,7 @@ void mouse_button_Callback(GLFWwindow *window, int key, int action, int mode)
 在上述代码中变量 `firstMouse` 是为了避免程序一开始因为 `lastX, lastY` 初始值为0导致的跳变。同时为了避免颠倒情况，将 `pitch` 的范围限制在 $-89 \sim 89$的范围内。
 
 ## 结果与源码
-![](assets/LearnOpenGL-Ch%2007%20Canera/GIF.gif)
+![|400](assets/LearnOpenGL-Ch%2007%20Canera/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/7.Camera/main.cpp)
 
