@@ -52,7 +52,7 @@ Assimp 将不同的模型数据（如 `fbx` , `obj` ）都加载为 Assimp 定�
 
 加载 Assimp 数据的思路是从 `aiScene` 出发，先解析 `RootNode` 。对于每个 `aiNode` 而言，先解析其中的每个 `aiMesh` ，然后递归解析它的子结点 `Children` 。在解析 `aiMesh` 的过程中，会需要装填一系列顶点数据数据，并解析其中的 `aiMaterial` ，根据 `aiMaterial` 中读取的图片地址，加载纹理等。
 
-为了适配 [[F，这里将整个 Assimp 数据封装在 `Model` 类中， `Model` 类继承自 `GameObject` ，因此可以直接被添加到场景中。
+为了适配 [Framework](LearnOpenGL-Ch%2008%20Framework.md)，这里将整个 Assimp 数据封装在 `Model` 类中， `Model` 类继承自 `GameObject` ，因此可以直接被添加到场景中。
 
 -   在 `Model` 类中有一个 `MeshRender` 的数组，Assimp 数据中的每个 `aiMesh` 最终都会被解析为一个 `MeshRender` 。其中`aiMesh` 中的顶点相关数据会被装填到 `MeshRender` 的 `Mesh` 中， `aiMaterial` 中的纹理都会被解析到 `MeshRender` 的 `Material` 中。
 
