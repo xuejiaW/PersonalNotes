@@ -1,3 +1,7 @@
+---
+created: 2021-12-15
+updated: 2021-12-15
+---
 # GLM
 
 因为OpenGL没有自带的矩阵和向量，所以相关的变换操作需要自定义，可以使用第三方库[GLM](https://glm.g-truc.net/0.9.9/index.html)替代。GLM是一个纯头文件的库，因此不需要额外的链接和编译，将下载的头文件放到 `include` 下即可。通过以下代码引入：
@@ -8,7 +12,7 @@
 #include <glm/gtc/type_ptr.hpp>
 ```
 
-## 变换
+# 变换
 
 使用GLM表示变换时，通常先定义一个四维的矩阵，并依靠GLM中提供的函数，对矩阵进行相应操作：
 
@@ -19,10 +23,9 @@ trans = glm::rotate(trans, 90.0f, glm::vec3(0.0, 0.0, 1.0));
 trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
 ```
 
-<aside>
-⚠️ 在OpenGL中，vec4是列矩阵，所以所有的乘法都是左乘。因此虽然通常变换的顺序是缩放，旋转，位移。但代码中表现为位移，旋转，缩放。
-
-</aside>
+```ad-warning
+在OpenGL中，vec4是列矩阵，所以所有的乘法都是左乘。因此虽然通常变换的顺序是缩放，旋转，位移。但代码中表现为位移，旋转，缩放。
+```
 
 在Shader中对应的矩阵类型 `mat4`，可通过Uniform进行赋值
 
@@ -30,8 +33,8 @@ trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
 uniform mat4 transform;
 void main()
 {
-		gl_Position = transform * vec4(position, 1.0f);
-		...
+    gl_Position = transform * vec4(position, 1.0f);
+    ...
 }
 ```
 
@@ -44,7 +47,7 @@ glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
 ## 结果与源码
 
-![Transformations%2018479f2ab7f447da91e5bcee65b1b182/GIF.gif](Transformations%2018479f2ab7f447da91e5bcee65b1b182/GIF.gif)
+![|400](assets/LearnOpenGL-Ch%2005%20Transformations/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/5.Transformations/main.cpp)
 
