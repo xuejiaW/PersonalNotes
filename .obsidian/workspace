@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,15 +151,15 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Framework.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 07 Camera.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Model  Loading.md",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Notes/Obsidian/Obsidian-Image Gallery.md",
     "Boos/LearnOpenGL/LearnOpenGL-CH 06 Coordinate System.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 05 Transformations.md",
     "Boos/Learn Vim (The Smart Way)/Learn Vim (The Smart Way).md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 04 Textures.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md",
-    "TO-DO.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 03 Shaders.md"
   ]
 }
