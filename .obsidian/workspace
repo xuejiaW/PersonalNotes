@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md",
+            "file": "Notes/Android Debug Bridge.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md"
+                "file": "Notes/Android Debug Bridge.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md",
+                "file": "Notes/Android Debug Bridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md",
+                "file": "Notes/Android Debug Bridge.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Notes/Android Debug Bridge.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md",
     "Boos/LearnOpenGL/LearnOpenGL.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md",
@@ -159,7 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 10 Color.md",
     "Boos/Learn Vim (The Smart Way)/Learn Vim.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Framework.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md"
   ]
 }
