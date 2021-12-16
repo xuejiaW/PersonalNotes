@@ -55,7 +55,49 @@ glDepthFunc(GL_LESS);
  
  例如场景中存在两个立方体，红色的在绿色的前面，如下所示：
  
- ![](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled.png)
+ ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled.png)
  
  如果从红色立方体的正前方进行观察，则得到的效果为如下所示，即绿色的立方体因为在红色立方体的后方，所以被遮挡：
- ![](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%201.png)
+ 
+ ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%201.png)
+ 
+ 如果在绘制绿色立方体前，将检测函数设置为 GL_ALWAYS ，即绿色立方体始终进行绘制，则效果如下：
+ ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%202.png)
+ 
+ 代码为：
+
+```cpp
+GO_Cube *redCube = new GO_Cube();
+redCube->GetTransform()->SetPosition(vec3(-0.3, 0, 0.5));
+redCube->GetMeshRender()->GetMaterial()->SetColor(vec3(1, 0, 0));
+scene.AddGameObject(redCube);
+
+glDepthFunc(GL_ALWAYS);
+
+GO_Cube *greenCube = new GO_Cube();
+greenCube->GetMeshRender()->GetMaterial()->SetColor(vec3(0, 1, 0));
+scene.AddGameObject(greenCube);
+```
+
+# 深度值精度
+
+深度缓冲包含了一个介于0.0和1.0之间的深度值，在近剪切平面为0，在远剪切平面为1。即需要一个函数将Z值变换到 $0 \sim 1$ 之间，其中最简单的就是线性变化。
+
+$$F_{\text {depth}}=\frac{z-\text {near}}{\text {far}-\text {near}}$$
+
+函数图如下所示：
+![|500](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/image-20211216223132789.png)
+
+但在实践中几乎是永远不会使用线性变化的深度缓冲的。一般使用的都是一个非线性的深度方程。该函数在Z值较小的时候提供较大的精度，在Z值较大的时候提供较少的精度。因为人通常不会对远距离的物体的前后关系太敏感，如1000米外的两个物体，谁前谁后并不重要。实际中使用的函数如下：
+
+$$F_{\text {depth}}=\frac{1 / z-1 / \text {near}}{1 / \text {far }-1 / \text {near}}$$
+
+使用该函数后，Z值为 $1 \sim 2$，则对应的 $\frac{1}{z}$ 的值为 $0.5 \sim 1$，而当Z值为 $50\sim 100$时， 对应的 $\frac{1}{z}$ 值范围为 $0.01 \sim 0.02$，即随着Z值得增长，结果得变换会越来越缓慢（对Z变换越来越不敏感）。该函数的图像如下所示：
+
+![|500](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%204.png)
+
+如果将深度缓冲作为颜色进行输出，结果如下所示：
+
+```cpp
+FragColor= vec4(vec3(gl_FragCoord.z),1);
+```
