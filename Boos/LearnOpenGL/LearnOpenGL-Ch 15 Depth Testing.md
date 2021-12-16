@@ -52,18 +52,18 @@ glDepthFunc(GL_LESS);
 | GL_GREATER  | 在待写入深度值大于缓冲深度值时通过     |
 | GL_NOTEQUAL | 在待写入深度值大于缓冲深度值时通过     |
 | GL_GEQUAL   | 在待写入深度值大于等于缓冲深度值时通过 |
- 
+
  例如场景中存在两个立方体，红色的在绿色的前面，如下所示：
- 
+
  ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled.png)
- 
+
  如果从红色立方体的正前方进行观察，则得到的效果为如下所示，即绿色的立方体因为在红色立方体的后方，所以被遮挡：
- 
+
  ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%201.png)
- 
+
  如果在绘制绿色立方体前，将检测函数设置为 GL_ALWAYS ，即绿色立方体始终进行绘制，则效果如下：
  ![|400](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%202.png)
- 
+
  代码为：
 
 ```cpp
@@ -81,18 +81,18 @@ scene.AddGameObject(greenCube);
 
 # 深度值精度
 
-深度缓冲包含了一个介于0.0和1.0之间的深度值，在近剪切平面为0，在远剪切平面为1。即需要一个函数将Z值变换到 $0 \sim 1$ 之间，其中最简单的就是线性变化。
+深度缓冲包含了一个介于 0.0 和 1.0 之间的深度值，在近剪切平面为 0，在远剪切平面为 1。即需要一个函数将 Z 值变换到 $0 \sim 1$ 之间，其中最简单的就是线性变化。
 
 $$F_{\text {depth}}=\frac{z-\text {near}}{\text {far}-\text {near}}$$
 
 函数图如下所示：
 ![|500](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/image-20211216223132789.png)
 
-但在实践中几乎是永远不会使用线性变化的深度缓冲的。一般使用的都是一个非线性的深度方程。该函数在Z值较小的时候提供较大的精度，在Z值较大的时候提供较少的精度。因为人通常不会对远距离的物体的前后关系太敏感，如1000米外的两个物体，谁前谁后并不重要。实际中使用的函数如下：
+但在实践中几乎是永远不会使用线性变化的深度缓冲的。一般使用的都是一个非线性的深度方程。该函数在 Z 值较小的时候提供较大的精度，在 Z 值较大的时候提供较少的精度。因为人通常不会对远距离的物体的前后关系太敏感，如 1000 米外的两个物体，谁前谁后并不重要。实际中使用的函数如下：
 
 $$F_{\text {depth}}=\frac{1 / z-1 / \text {near}}{1 / \text {far }-1 / \text {near}}$$
 
-使用该函数后，Z值为 $1 \sim 2$，则对应的 $\frac{1}{z}$ 的值为 $0.5 \sim 1$，而当Z值为 $50\sim 100$时， 对应的 $\frac{1}{z}$ 值范围为 $0.01 \sim 0.02$，即随着Z值得增长，结果得变换会越来越缓慢（对Z变换越来越不敏感）。该函数的图像如下所示：
+使用该函数后，Z 值为 $1 \sim 2$，则对应的 $\frac{1}{z}$ 的值为 $0.5 \sim 1$，而当 Z 值为 $50\sim 100$时， 对应的 $\frac{1}{z}$ 值范围为 $0.01 \sim 0.02$，即随着 Z 值得增长，结果得变换会越来越缓慢（对 Z 变换越来越不敏感）。该函数的图像如下所示：
 
 ![|500](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%204.png)
 
@@ -101,3 +101,28 @@ $$F_{\text {depth}}=\frac{1 / z-1 / \text {near}}{1 / \text {far }-1 / \text {ne
 ```cpp
 FragColor= vec4(vec3(gl_FragCoord.z),1);
 ```
+
+![|500](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%205.png)
+
+可以发现画面几乎是纯白的，只有在离物体很近的时候，才会有黑色出现，这就是因为我们了非线性的深度方程，可以根据函数图发现，在 Z 值深度增加一点后，value 值很快的上升到了接近于 1，所以最终画面输出为白色
+
+```ad-warning
+gl_FragCoord.z 是根据每个顶点计算得到的深度值插值得到，而非在片元着色器中逐像素计算得到
+```
+
+# Z-Fighting
+
+当两个平面非常紧密的排列在一起时，深度缓冲没有足够的精度来决定哪个在前面。结果就会是两个形状不断的在切换前后顺序。 效果如下所示：
+![|300](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%206.png)
+
+解决思路有：
+
+1.  将物体间的距离扩大
+2.  将近剪切平面设远一些。因为在靠近近剪切平面时，深度测试的精度是很高的，而如果将近剪切屏幕设得很小，而实际上物体并没有在那么近的位置，则高精度的位置范围实际上是被浪费的。
+3.  使用更高的深度缓冲
+
+# 源码：
+
+ [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/13.DepthTesting/main.cpp)
+
+ [depthValue.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/13.DepthTesting/depthValue.frag)
