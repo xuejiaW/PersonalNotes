@@ -1,3 +1,7 @@
+---
+created: 2021-12-16
+updated: 2021-12-16
+---
 
 这一章与 [Color](LearnOpenGL-Ch%2010%20Color.md) 及 [Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 内容实际一致，但进行了进一步的封装。
 
@@ -84,4 +88,12 @@ color = vec4(light,1);
 ```
 
 # 结果与源码：
-![](assets/LearnOpenGL-Ch%2012%20Materials/Material.gif)
+![|500](assets/LearnOpenGL-Ch%2012%20Materials/Material.gif)
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/10.Materials/main.cpp)
+
+[lamp.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/10.Materials/lamp.frag)
+
+[object.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/10.Materials/object.frag)
+
+[object.vert](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/10.Materials/object.vert)
