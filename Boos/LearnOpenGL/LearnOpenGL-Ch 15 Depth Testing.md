@@ -53,3 +53,9 @@ glDepthFunc(GL_LESS);
 | GL_NOTEQUAL | 在待写入深度值大于缓冲深度值时通过     |
 | GL_GEQUAL   | 在待写入深度值大于等于缓冲深度值时通过 |
  
+ 例如场景中存在两个立方体，红色的在绿色的前面，如下所示：
+ 
+ ![](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled.png)
+ 
+ 如果从红色立方体的正前方进行观察，则得到的效果为如下所示，即绿色的立方体因为在红色立方体的后方，所以被遮挡：
+ ![](assets/LearnOpenGL-Ch%2015%20Depth%20Testing/Untitled%201.png)
