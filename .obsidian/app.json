@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-CH 13 Lighting Maps",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 14  Light Casters, Multiple Lights",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

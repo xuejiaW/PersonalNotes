@@ -1,3 +1,7 @@
+---
+created: 2021-12-16
+updated: 2021-12-16
+---
 
 这一章实际上只是 [Materials](LearnOpenGL-Ch%2012%20Materials.md)和 [Textures](LearnOpenGL-Ch%2004%20Textures.md) 两章内容的结合。
 
@@ -41,3 +45,23 @@ vec3 ambientComponent = light.ambient * vec3(texture(material.diffuse,texcoord))
 vec3 diffuseComponent=diff*light.diffuse*vec3(texture(material.diffuse,texcoord));
 vec3 specularComponent=spec*light.specular* vec3(texture(material.specular,texcoord));
 ```
+
+[Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中的计算如下：
+
+```glsl
+vec3 ambientComponent = light.ambient * material.ambient;
+vec3 diffuseComponent=diff*material.diffuse*light.diffuse;
+vec3 specularComponent=spec*material.specular*light.specular;
+```
+
+# 结果与源码
+
+![|500](assets/LearnOpenGL-CH%2013%20Lighting%20Maps/LightingMaps.gif)
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/11.LightingMaps/main.cpp)
+
+[lamp.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/11.LightingMaps/lamp.frag)
+
+[object.vert](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/11.LightingMaps/object.vert)
+
+[object.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/11.LightingMaps/object.frag)
