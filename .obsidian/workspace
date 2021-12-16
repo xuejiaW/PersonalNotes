@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,12 +151,12 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 14  Light Casters, Multiple Lights.md",
-    "Boos/LearnOpenGL/LearnOpenGL-CH 13 Lighting Maps.md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 13 Lighting Maps.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 12 Materials.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 11 Basic Lighting.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 10 Color.md",
-    "Boos/LearnOpenGL/LearnOpenGL.md",
     "Boos/Learn Vim (The Smart Way)/Learn Vim.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 09 Model  Loading.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 08 Framework.md",
