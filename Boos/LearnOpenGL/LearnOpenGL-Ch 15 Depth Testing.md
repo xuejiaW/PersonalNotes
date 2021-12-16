@@ -52,3 +52,4 @@ glDepthFunc(GL_LESS);
 | GL_GREATER  | 在待写入深度值大于缓冲深度值时通过     |
 | GL_NOTEQUAL | 在待写入深度值大于缓冲深度值时通过     |
 | GL_GEQUAL   | 在待写入深度值大于等于缓冲深度值时通过 |
+ 
