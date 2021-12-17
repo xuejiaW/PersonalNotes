@@ -1,3 +1,7 @@
+---
+created: 2021-12-17
+updated: 2021-12-17
+---
 混合是在 OpenGL 中实现物体透明度的一种技术。
 
 透明物体指的是一个非纯色的物体，在他后面的物体的颜色将会叠加到他上面，比如窗子就是一种透明物体，窗子会将他后面的物体的颜色叠加在他上面。所以将其称为混合（混合多个物体的颜色）。
@@ -93,5 +97,59 @@ glBlendFuncSeparate(Glunum sourceRGB, Glnum destRGB, Glnum sourceAlpha, Glnum de
 | GL_CONSTANT_COLOR           | 因子等于常数颜色向量 $C_{constant}$           |
 | GL_ONE_MINUS_CONSTANT_COLOR | 因子等于 $1- C{constant}$                     |
 | GL_CONSTANT_ALPHA           | 因子等于 $C_{constant}$ 的 $alpha$ 分量       |
-| GL_ONE_MINUS_CONSTANT_ALPHA | 因子等于 $1-C_{constant}$ 的 $alpha$ 分量     | 
+| GL_ONE_MINUS_CONSTANT_ALPHA | 因子等于 $1-C_{constant}$ 的 $alpha$ 分量     |
 
+其中的 $C_{constant}$ 可以通过 `glBlendColor` 设置：
+
+```cpp
+glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
+```
+
+## glBlendEquation
+
+可以通过 `glBlendEquation` 函数设置运算符：
+
+```cpp
+glBlendEquation(GLnum mode)
+```
+
+`mode` 有以下五种选项：
+
+| 选项                     | 含义                       | 公式                          |
+| ------------------------ | -------------------------- | ----------------------------- |
+| GL_FUNC_ADD              | 两个向量相加，默认设置     | $C_{result} = Src + Dest$     |
+| GL_FUNC_SUBTRACT         | 两个向量相减               | $C_{result} = Src - Dest$     |
+| GL_FUNC_REVERSE_SUBTRACT | 将两个向量以相反的顺序相减 | $C_{result} = Dest - Src$     |
+| GL_MIN                   | 取两个向量中较小的那个     | $C_{result} = min(Dest, Src)$ |
+| GL_MAX                   | 取两个向量中较大的那个     | $C_{result} = max(Dest, Src)$ |
+
+## 混合渲染流程
+
+1.  启用混合并设置相应函数：
+
+    ```cpp
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    ```
+
+2.  当开启混合后，着色器中就不需要丢弃片段
+
+    ```cpp
+    void main()
+    {
+        FragColor=texture(ourTexture,texcoord);
+    }
+    ```
+
+3.  因为在进行深度测试时，深度缓冲是不会检查片段是否是透明的，所以当存在混合时，应该先渲染离我们较远的物体，再渲染离我们较近的物体。当渲染一个有不透明物体和透明物体的场景时，大致的原则为：
+
+    - 先绘制所有不透明物体
+    - 对所有透明物体进行排序
+    - 先渲染离得较远的透明物体
+
+# 结果与源码
+![|500](assets/LearnOpenGL-Ch%2017%20Blending/Untitled%204.png)
+
+ [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/15.Blending/main.cpp)
+
+ [Grass.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/15.Blending/Grass.frag)
