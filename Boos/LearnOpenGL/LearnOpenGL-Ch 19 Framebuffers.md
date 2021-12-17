@@ -140,3 +140,74 @@ scene.postRender = []() {
 ```
 
 渲染的结果如下，深度缓冲，模板缓冲都能正常计算：
+![|500](assets/LearnOpenGL-Ch%2019%20Framebuffers/Untitled.png)
+
+# 后处理
+
+当使用帧缓冲渲染后，所有的场景显示内容被绘制到了帧缓冲的颜色附件中，该附件本质上就是一张图。因此可以对这张图进行后期的处理，如反色，变灰度值等，这些操作都可以在渲染颜色附件到默认帧缓冲的片段着色器中完成：
+
+反色处理：
+
+```glsl
+FragColor = vec4(vec3(1.0 - texture(screenTexture, TexCoords)), 1.0);
+```
+
+灰度值处理：
+
+灰度值处理本质上是将颜色的输出变为三个通道的平均值，但因为人眼对三原色的敏感度不同，因此不是完全的平均，而要额外乘一个系数：
+
+```glsl
+FragColor = texture(screenTexture, TexCoords);
+float average = 0.2126 * FragColor.r + 0.7152 * FragColor.g + 0.0722 * FragColor.b;
+FragColor = vec4(average, average, average, 1.0);
+```
+
+模糊处理：
+
+模糊处理的本质是卷积矩阵，即对于每一个像素而言，取它周围几个像素的颜色，将这些像素和自身的颜色取平均值，达到模糊的效果
+
+```glsl
+const float offset = 1.0 / 300.0; 
+vec2 offsets[9] = vec2[](
+    vec2(-offset,  offset), // top-left
+    vec2( 0.0f,    offset), // top-center
+    vec2( offset,  offset), // top-right
+    vec2(-offset,  0.0f),   // center-left
+    vec2( 0.0f,    0.0f),   // center-center
+    vec2( offset,  0.0f),   // center-right
+    vec2(-offset, -offset), // bottom-left
+    vec2( 0.0f,   -offset), // bottom-center
+    vec2( offset, -offset)  // bottom-right    
+);
+
+float kernel[9] = float[](
+    1.0 / 16, 2.0 / 16, 1.0 / 16,
+    2.0 / 16, 4.0 / 16, 2.0 / 16,
+    1.0 / 16, 2.0 / 16, 1.0 / 16  
+);
+
+vec3 sampleTex[9];
+
+for(int i = 0; i < 9; i++)
+    sampleTex[i] = vec3(texture(screenTexture, TexCoords.st + offsets[i]));
+
+vec3 col = vec3(0.0);
+
+for(int i = 0; i < 9; i++)
+    col += sampleTex[i] * kernel[i];
+
+FragColor = vec4(col, 1.0);
+```
+
+其中的 `offset` 是用来对 `Texcoords` 做一个偏移量，达到采样周围像素的效果。
+
+# 结果与源码：
+
+模糊效果：
+![|500](assets/LearnOpenGL-Ch%2019%20Framebuffers/Untitled%201.png)
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/17.Framebuffers/main.cpp)
+
+[Framebuffer.vert](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/17.Framebuffers/Framebuffer.vert)
+
+[Framebuffer.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/17.Framebuffers/Framebuffer.frag)
