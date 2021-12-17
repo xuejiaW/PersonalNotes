@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-CH 18 Face Culling",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 19 Framebuffers",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
