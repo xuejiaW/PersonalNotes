@@ -1,6 +1,6 @@
 ---
 created: 2021-12-17
-updated: 2021-12-17
+updated: 2021-12-18
 ---
 简单来说，立方体贴图就是一个包含了6个2D纹理的纹理，每个2D纹理都组成立方体的一个面。
 
@@ -89,7 +89,7 @@ void main()
 ```
 
 当方向向量的起点处在立方体的中心时，这个方向向量的值就等于与立方体相交点的值，即片元的位置。如下所示：
-![](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%201.png)
+![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%201.png)
 
 因此对于使用了立方体贴图的模型而言，可直接使用模型的片元位置表示Texcoords，但需要注意这里的片元位置是本地坐标系下的，并不需要进行位移旋转等操作：
 
@@ -145,8 +145,98 @@ scene.AddGameObject(sthElse);
 
 这里同样需要解决天空盒尺寸很小的问题，解决思路是将天空盒的深度信息改为1，即天空盒的深度信息值最大，此时只要深度缓冲被其他的任何模型进行过写入，那么天空盒的深度缓冲就不会通过。
 
-在 [LearnOpenGL-Ch 15 Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中了解到一个片元的深度信息存储在它的 `z` 分量中，又从 [Coordinate System](https://www.notion.so/Coordinate-System-33c1c9fee16c46e09899e1bf65a70d69) 中了解到对于一个片元而言，在投影变换时，需要进行 `z = z/w` 的操作，因此为了将最终片元的深度信息变为1，只要让 `w = z` 即可。
+在 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中了解到一个片元的深度信息存储在它的 `z` 分量中，又从 [Coordinate System](LearnOpenGL-CH%2006%20Coordinate%20System.md) 中了解到对于一个片元而言，在投影变换时，需要进行 `z = z/w` 的操作，因此为了将最终片元的深度信息变为1，只要让 `w = z` 即可。
 
+```glsl
+vec4 pos = projection * view *vec4(aPos, 1.0);
+gl_Position = pos.xyww;
+```
+
+但还要考虑到那些没有被任何模型写入过的深度缓冲，它们的默认值也为1，而这些缓冲需要让天空盒的深度测试通过，因此在渲染天空盒前，需要将深度测试的通过条件由默认的 $<$改为 $\leq$，即通过 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中介绍的 `glDepthFunc` 函数。
+
+```cpp
+scene.AddGameObject(sthElse);
+
+Skybox *skybox = new Skybox(cubemap);
+skybox->preRender = []() { glDepthFunc(GL_LEQUAL); };
+skybox->postRender = []() { glDepthFunc(GL_LESS); };
+scene.AddGameObject(skybox); // Render Skybox in the end
+```
+
+# 环境映射
+
+通常会用一个立方体采样立方体贴图作为天空盒，即作为整个场景的环境。同样也可以让场景内的其他物体也采样立方体贴图，但这些物体的目的是作为 `环境映射（Environment Mapping）`，最常见的环境映射有 `反射（Reflection）` 和 `折射（Refraction）`。
+
+## 反射
+
+反射变现为物体反射周围的环境，物体的颜色或多或少等于它的周围环境的颜色。如镜子就是反射性很强的物体，它会根据观察者的视角反射周围的环境。
+
+如下图所示，观察者的视线会在物体表面进行反射，而反射向量将击中的天空盒的某个位置，这个位置的颜色即是观察者在这个片元上应当看到的颜色。
+
+![](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%202.png)
+
+计算实现的反射方向的方法，如在 [Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中计算镜面光反射时，求光的反射方向一样。即先通过摄像机位置和片元位置求得实现方向，再利用 `reflect` 函数求得反射方向。
+
+```glsl
+vec3 viewDirection = normalize(position - cameraPos);
+vec3 reflection = reflect(viewDirection, normalize(normal));
+```
+
+```ad-warning
+需要注意，这里求反射方向的时候并没有考虑片元的绝对位置，即当片元与摄像机一起移动时，即使绝对位置发生了变化，所求得的反射方向也是相同的，即最终在立方体贴图上采样得到的颜色也是相同的。 这是因为通常天空盒是用来表示无穷远处的场景，因此片元的移动并不会对最终的画面造成太多的影响，所以不需要在计算环境反射时考虑片元的绝对位置。
+```
+
+利用反射方向对立方体贴图进行采样：
+
+```glsl
+FragColor = vec4(texture(skybox, reflection).rgb, 1.0);
+```
+
+![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%203.png)
+
+## 折射
+
+折射是光线由于传播介质的改变而产生的方向变化，如下图所示：
+
+![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%204.png)
+
+因此，对于折射物体而言，其背后的物体仍然可以被看到，但是看到它的视线路线发生了偏转。典型的折射物体如装了水的玻璃杯。
+
+对于不同的物体而言，折射率是不同的，常见的物体与对应的折射率如下：
+
+| 材质 | 折射率 |
+| ---- | ------ |
+| 空气 | 1.00   |
+| 水   | 1.33   |
+| 冰   | 1.309  |
+| 玻璃 | 1.52   |
+| 钻石 | 2.42       |
+
+在这里的例子中假设立方体是由玻璃做的，则视线是从空气到达玻璃中，因此折射率为 $1/1.52$，折射后的光线可以通过内置函数 `refract` 计算得到，因此片元着色器主要代码如下：
+
+```glsl
+float ratio= 1.00 /1.52; // glass refraction
+vec3 viewDirection = normalize(position - cameraPos);
+vec3 refraction = refract(viewDirection, normalize(normal),ratio);
+FragColor = vec4(texture(skybox, refraction).rgb, 1.0);
+```
+
+![|500](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%205.png)
+
+# 结果与源码
+![|500](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%206.png)
+
+左侧立方体为反射立方体，右侧立方体为折射立方体
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/18.Cubemaps/main.cpp)
+
+[environmentMapping.vert](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/18.Cubemaps/environmentMapping.vert) [reflection.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/18.Cubemaps/reflection.frag)
+
+[refraction.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/18.Cubemaps/refraction.frag)
+
+[Cubemap.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/Framework/Components/Cubemap.cpp)
+
+[Skybox.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/Framework/Components/Skybox.cpp)
 
 # Reference
 
