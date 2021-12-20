@@ -80,3 +80,17 @@ shadowTransforms.push_back(shadowProject *glm::lookAt(lightPos, lightPos + glm::
 shadowTransforms.push_back(shadowProject *glm::lookAt(lightPos, lightPos + glm::vec3(0, 0, 1), glm::vec3(0, -1, 0)));  // Back
 shadowTransforms.push_back(shadowProject *glm::lookAt(lightPos, lightPos + glm::vec3(0, 0, -1), glm::vec3(0, -1, 0))); // Front
 ```
+
+```ad-error
+需要注意的是，这里 `LookAt` 矩阵中 `Up` 方向与直觉上需要使用的方向是相反的。 如渲染 Front 面的时候， `Up` 方向是 $(0,-1,0)$ ，而直觉上应当使用 $(0,1,0)$，且在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中使用的 `Up` 就是与直觉相符的。
+
+这里与 [LearnOpenGL-Ch 27 Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 需要用到相反的 `Up` 方向的原因是，OpenGL 中 Cubemap 和 Texture2D 对于原点的定义是不同的 ，在 Cubemap 中原点处在左上角，而在 Texture2D 中原点处在左下角。这一点在 [Cubemaps](https://www.notion.so/Cubemaps-e705058f140e4c7295731e15966a5ac6) 中也进行了说明。
+```
+
+<aside> 🚨 
+
+</aside>
+
+### Depth shaders
+
+在 [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，顶点着色器需要负责使用 MVP 矩阵对输入的顶点进行变换。而在这里，如之前所述，需要用几何着色器将一个三角形转换为六个不同的三角形，因此这里的顶点着色器只需要负责用 Model 矩阵与输入顶点进行变换：
