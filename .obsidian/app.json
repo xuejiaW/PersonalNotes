@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 27 Shadow Map",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 28 Point Shadows",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

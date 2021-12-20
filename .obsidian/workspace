@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,8 +151,8 @@
   },
   "active": "ef96f50dadeb442c",
   "lastOpenFiles": [
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Mapping.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
     "Boos/Untitled.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
