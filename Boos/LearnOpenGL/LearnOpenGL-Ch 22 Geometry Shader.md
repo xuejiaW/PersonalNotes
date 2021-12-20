@@ -1,7 +1,9 @@
 ---
 created: 2021-12-20
 updated: 2021-12-20
+cssclass: [table-border]
 ---
+
 在顶点着色器和片段着色器之间，可以插入可选的着色器 `几何着色器（Geometry Shader`。几何着色器将构成一个图元一系列的顶点作为输入，然后将这些顶点数据重新组合（也可以生成更多的顶点数据），再传递给片段着色器。如下为一个几何着色器的例子，之后会逐渐对这个集合着色器进行解释：
 
 ```glsl
@@ -49,3 +51,30 @@ layout (line_strip, max_vertices = 2) out;
 |                                                                                                                                                |     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | ![](assets/LearnOpenGL-Ch%2022%20Geometry%20Shader/Untitled%201%201.png) | ![](assets/LearnOpenGL-Ch%2022%20Geometry%20Shader/Untitled%202.png)      |
+
+```ad-warning
+`triangle_strip` 可保证生成的三角形有相同的定义方向
+```
+
+对于传入进几何着色器的顶点，都封装在一个名为 `gl_in` 的数组中，对于其中每一个元素，结构大致如下：
+
+```glsl
+in gl_Vertex
+{
+    vec4  gl_Position;
+    float gl_PointSize;
+    float gl_ClipDistance[];
+} gl_in[];
+```
+
+输入的图元类型会决定 `gl_in` 数组的大小。
+
+# EmitVertex 和 EndPrimitive
+
+当调用 `EmitVertex` 时，表示将一个顶点输出到目前的图元上，当调用 `EndPrimitive` 时，表示一个图元绘制完毕。 在一个图形着色器中， `EndPrimitive` 可以被调用多次，即可以提交多个图元。
+
+# 使用几何着色器
+
+# Reference：
+
+[Triangle strip - Wikipedia](https://www.notion.so/Triangle-strip-Wikipedia-838258ef3c1c486e895b29bc531187fb)
