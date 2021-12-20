@@ -27,6 +27,6 @@ for(unsigned int i = 0; i < 6; i++)
 }
 ```
 
-还有一种方法是利用 [LearnOpenGL-Ch 22 Geometry Shader](LearnOpenGL-Ch%2022%20Geometry%20Shader.md) ，通过一次绘制命令就能直接将深度信息写入到Cubemap 的六个面中。该方法将六个不同的 `LookAt` 方向（对应 Cubemap 的每个面）传入到 Geometry Shader 中，并将输入的三角形与这六个 `LookAt` 方向相乘，得到六个新的三角形。即可以理解为，使用这六个不同的 `LookAt` 方向将一个三角形转换到以 Cubemap 的每一个面作为屏幕坐标的坐标系中。
+还有一种方法是利用 [Geometry Shader](LearnOpenGL-Ch%2022%20Geometry%20Shader.md) ，通过一次绘制命令就能直接将深度信息写入到Cubemap 的六个面中。该方法将六个不同的 `LookAt` 方向（对应 Cubemap 的每个面）传入到 Geometry Shader 中，并将输入的三角形与这六个 `LookAt` 方向相乘，得到六个新的三角形。即可以理解为，使用这六个不同的 `LookAt` 方向将一个三角形转换到以 Cubemap 的每一个面作为屏幕坐标的坐标系中。
 
 以下是使用 [Geometry Shader](https://www.notion.so/Geometry-Shader-60dcb813f60c4cbf82ab18bbff01995b) 方法渲染 `Depth Cubemap` 的具体步骤：
