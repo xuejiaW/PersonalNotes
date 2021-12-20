@@ -1,3 +1,7 @@
+---
+created: 2021-12-20
+updated: 2021-12-20
+---
 # 人眼感知与真实物理世界的差距
 
 如存在一个从全黑到全白的颜色变化，将这个变化的中点称为是中灰。理论上如果纯白物体的反射率为 100%，纯黑物体的反射率为0%，那么中灰物体的反射率应该为50%。 但假设有无数多的灰度逐渐变化的颜色，让人选择出其中的中灰，实际上人会选出反射率在20%左右的物体，而并非理论上的50%反射率。
@@ -98,3 +102,32 @@ glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB, width, height, 0, GL_RGB, GL_UNSIGNED_BY
 并非所有的纹理都是 sRGB 纹理，通常只有依靠人眼视觉效果产出的纹理是 sRGB纹理。如漫反射贴图通常表示物体看起来的样子，因此通常是sRGB纹理。而镜面反射系数贴图或法线贴图则通常是线性纹理。
 ```
 当修复了 sRGB 两次Gamma矫正后，效果如下：
+![|400](assets/LearnOpenGL-Ch%2026%20Gamma%20Correction/Untitled%203.png)
+
+# 光线衰减
+
+在真实物理世界中，光线衰减的速度基本与距离的平方相关，即
+
+```cpp
+float attenuation = 1.0 / (distance * distance);
+```
+
+但在之前的 [Light Casters, Multiple Lights](https://www.notion.so/Light-Casters-Multiple-Lights-90112da3fdbd483699bd89d1e5ea94c9) 中，是以距离的一次项为主导，而非距离的二次项。
+
+这是因为如果使用的是二次项，则在显示器Gamma变换的作用下，衰减速度会变为 $（1/{\text{distance}^2}）^{2.2} = 1/ \text{distance}^{4.4}$。而以一次项作为衰减的主要贡献时，衰减速度则会变为： $1/ \text{distance}^{2.2}$，即与真实世界物理规律相近。
+
+```ad-warning
+引入了 Gamma校正后，衰减应当以二次项作为主导，否则以一次项主导。
+```
+
+# 源码：
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/24.GammaCorrection/main.cpp)
+
+[blinn-phone.fs](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/24.GammaCorrection/blinn-phone.fs)
+
+[Framebuffer.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/24.GammaCorrection/Framebuffer.frag)
+
+# Reference
+
+[色彩校正中的 gamma 值是什么？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/27467127/answer/37555901)
+ 
