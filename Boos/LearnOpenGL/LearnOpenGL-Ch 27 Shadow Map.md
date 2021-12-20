@@ -355,3 +355,138 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 因此超过了视锥体的部分的深度信息，会重复视锥体内的深度信息（被采集到深度贴图中）。
 
 将上例中的地板扩大，修改下光源的位置，并将视锥体尺寸改小，可得如下结果：
+
+```cpp
+glm::mat4 projection = glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, 1.0f, 7.5f);
+...
+floorObj->GetTransform()->SetScale(vec3(20, 20, 5));
+...
+lamp->GetTransform()->SetPosition(vec3(3, 5, 2));
+```
+
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2012.png)
+
+解决方法为，将 `warpmode` 改为 `Clamp to border` 并将 `border color` 设为1，这样视锥体外的深度信息就永远为深度的最大值1，即视锥体外的像素不会被认为在阴影中。
+
+```cpp
+float borderColor[]{1.0f, 1.0f, 1.0f, 1.0f};
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
+```
+
+修改后的运行结果如下：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2013.png)
+
+可以看到，因为深度贴图重复而产生的错误阴影消失，但是仍然有一大块区域仍然错误的在阴影中。
+
+这是因为那部分区域超过了计算深度贴图的视锥体的远裁剪平面，因此在原深度贴图中根本无信息，即深度值为0，即远裁剪平面外的所有像素点都会被认为在阴影中。
+
+修改方法为调整像素着色器中关于阴影判断的计算，修改为：当像素超过了深度贴图视锥体的远裁剪平面，便直接判定该像素不会在阴影中：
+
+```cpp
+float ShaderCalculation(vec4 FragPosLightSpace, vec3 normal, vec3 lightDir)
+{
+...
+if (projCoords.z > 1.0)
+        return 0.0f;
+...
+}
+```
+
+调整后，运行结果如下，可正确渲染阴影：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2014.png)
+
+[main.cpp](https://www.notion.so/main-cpp-1e3f54d9a56e441faee09767edf8063f)
+
+[shadow.fs](https://www.notion.so/shadow-fs-c5ca8daa5b5d4337bc4d5a77e18303c6)
+
+# 减少阴影锯齿
+
+如果仔细观察上述渲染出的阴影，可以看到再阴影的边缘存在比较明显的锯齿，如当窗口的分辨率为 `1024*1024` ，而深度贴图的分辨率为 `256*256` 时，阴影的锯齿如下：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2015.png)
+
+产生锯齿的原因是，深度贴图的分辨率较小，因此当渲染场景时，会有多个像素采样原深度贴图中的同一个像素点，即会产生较大的锯齿。
+
+## 提高阴影贴图分辨率
+
+在上例中，如果将深度贴图的分辨率调整为 `1024*1024` 则效果如下，可以看到锯齿明显的减少：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2016.png)
+
+## PCF
+
+增加深度贴图分辨率的方法，会很大程度的增加消耗的性能。还有一种方法称为 `percentage-closer filtering（PCF）` 。
+
+`PCF` 方法是一种产生软阴影的方法，主要思想思路如双线性过滤类似，即从深度贴图中采样多个点，每个点都判断是否处在阴影之中，将所有采样的结果结合在一起并做平均。
+
+如下列代码就是一个最简单的 `PCF` 实现，它取包括目标采样点的周围9个像素，判断其是否处于阴影之中，并最终将平均值作为结果：
+
+```glsl
+float ShaderCalculation(vec4 FragPosLightSpace, vec3 normal, vec3 lightDir)
+{
+		...
+
+    float shadow = 0.0f;
+    vec2 texelSize = 1.0 / textureSize(depthMap, 0);
+
+    float currentDepth = projCoords.z;
+    float bias = max(0.05 * (1 - dot(normal, lightDir)), 0.01);
+    for (int x = -1; x <= 1; ++x)
+    {
+        for (int y = -1; y <= 1; ++y)
+        {
+            float closetDepth = texture(depthMap, projCoords.xy + vec2(x, y) * texelSize).r;
+            shadow += (currentDepth > closetDepth + bias ? 1.0 : 0.0);
+        }
+    }
+
+    return shadow /= 9.0;
+}
+```
+
+其中的 `textureSize` 函数会返回图片的分辨率，可利用这个函数算出一个像素的大小。
+
+使用了 `PCF` 绘制阴影的结果如下：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2017.png)
+
+# 正交投影与透视投影
+
+在之前计算阴影贴图的时候，使用的是 `正交投影`。在正交投影下，所有的光线都是平行的，所以正交投影特别适合于用来作为 `平行光` 的投影矩阵。
+
+而在使用 `透视投影` 时，光线则会表现的如同在一个点像各个方向发射出去，因此 `透视投影` 更适合于作为 `点光源` 和 `聚光灯` 的投影矩阵。
+
+`正交投影` 和 `透视投影` 两者差别的示意图如下：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2018.png)
+
+还有一定需要注意的是，在使用 `正交投影` 时，生成的深度贴图，其深度变化是线性。而当使用 `透视投影` 时，深度变化则是非线性的。
+
+因此在调试两者的深度贴图时，会看到 `透视投影` 时生成的深度贴图几乎是全白的，如同在 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中看到的。如果想要在使用 `透视投影` 的情况下，调试深度贴图，则首先需要将深度信息转换到线性空间中，可以使用如下的代码：
+
+```glsl
+float LinearizeDepth(float depth)
+{
+    float z = depth * 2.0 - 1.0; // Back to NDC
+    return (2.0 * near_plane * far_plane) / (far_plane + near_plane z * (far_plane - near_plane));
+}
+
+void main()
+{
+    float depthValue = texture(depthMap, TexCoords).r;
+    FragColor = vec4(vec3(LinearizeDepth(depthValue) / far_plane), 1.0); // Prospective
+    // FragColor = vec4(vec3(depthValue), 1.0); // Orthographic
+}
+```
+
+- [ ] 转换到线性空间的公式是怎么推导的？
+
+```ad-warning
+上述将深度转换到线性空间的操作仅在调试深度贴图时有用。并不会影响使用深度贴图来产生阴影的结果，因为无论是线性还是非线性，在将实际渲染场景时的深度信息与深度贴图中存储的信息做比较时，两者都是在处于同一个空间下。
+```
+
+# Reference
+
+[opengl - Cause of shadow acne - Computer Graphics Stack Exchange](https://www.notion.so/opengl-Cause-of-shadow-acne-Computer-Graphics-Stack-Exchange-c739e44c139d4209a1b024cd38aeefcc)
+
+[制作shadow map时，为什么剔除正面可以解决物体悬浮问题（Peter panning问题）？ - 知乎](https://www.notion.so/shadow-map-Peter-panning-7a8e8fa4fe984ac19a21a8fb7d53839a)
+
+[glsl - How to render depth linearly in modern OpenGL with gl_FragCoord.z in fragment shader? - Stack Overflow](https://www.notion.so/glsl-How-to-render-depth-linearly-in-modern-OpenGL-with-gl_FragCoord-z-in-fragment-shader-Stack-457af68fb62743ec98302b355a8ab7e6)
