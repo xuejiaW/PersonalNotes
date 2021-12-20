@@ -146,3 +146,168 @@ screenQuadRender->DrawMesh();
 [DrawDepthMapping.fs](https://www.notion.so/DrawDepthMapping-fs-1ea5ed7215da43f7a1c07d4c5c31b084)
 
 [DrawDepthMapping.vs](https://www.notion.so/DrawDepthMapping-vs-0ddf8a58a6a34dc0a9089000b0c13b37)
+
+# 渲染阴影
+
+在得到了 `深度贴图`后，就可以渲染带有阴影的场景了。
+
+在渲染物体的着色器中需要利用生成的 `深度贴图` ，来计算最终生成的像素究竟是处于阴影中还是不处于。
+
+## 顶点着色器改动
+
+顶点着色器如下：
+```glsl
+#version 330 core
+
+layout(location = 0) in vec3 Pos;
+layout(location = 1) in vec2 TexCoords;
+layout(location = 2) in vec3 Normal;
+
+out VS_OUT
+{
+    vec3 FragPos;
+    vec3 Normal;
+    vec2 TexCoords;
+    vec4 FragPosLightSpace;
+}
+vs_out;
+
+uniform mat4 projection;
+uniform mat4 view;
+uniform mat4 model;
+uniform mat4 lightSpaceMatrix;
+
+void main()
+{
+    vs_out.FragPos = vec3(model * vec4(Pos, 1.0));
+    vs_out.Normal = transpose(inverse(mat3(model))) * Normal;
+    vs_out.TexCoords = TexCoords;
+    vs_out.FragPosLightSpace = lightSpaceMatrix * model * vec4(Pos, 1.0);
+    gl_Position = projection * view * model * vec4(Pos, 1.0);
+}
+```
+
+与之前的顶点着色器的差别在于，需要一个新的输入`lightSpaceMatrix` ，该输入表示光源的 `view` 和 `projection` 矩阵相乘的结果。以及一个新的输出： `FragPosLightSpace` ，该输出是 `lightSpaceMatrix` 与物体的 `model` 相乘的结果，即将物体在一个把光源当作摄像机，所表示的摄像机空间中的坐标。
+
+```ad-warning
+ `FragPosLightSpace` 等同于之前生成深度贴图时所用的顶点着色器所生成的结果。
+```
+
+## 片段着色器：
+
+在片段着色器最后输出时，如果一个像素处在阴影中，则该像素不需要考虑漫反射和镜面反射光，（仍然考虑环境光）：
+
+```glsl
+float inShadow = ShaderCalculation(fs_in.FragPosLightSpace);
+vec3 lighting = (ambient + (1.0 - inShadow) * (diffuse + specular)) * color;
+```
+
+可以看出上述代码中是通过 `ShaderCalculation` 函数来判断像素是否在阴影中，该函数的完整实现如下：
+
+```glsl
+float ShaderCalculation(vec4 FragPosLightSpace)
+{
+    // perform projective divide, the result value range is [-1,1]
+    vec3 projCoords = FragPosLightSpace.xyz / FragPosLightSpace.w;
+    // The ProjectCoords is in NDC space which value range is [-1,1]
+    // change the value range to [0,1] which is equal to the texture coordinate ranges
+    projCoords = projCoords * 0.5 + 0.5;
+    float closetDepth = texture(depthMap, projCoords.xy).r;
+
+    float currentDepth = projCoords.z;
+    return currentDepth > closetDepth ? 1.0 : 0.0;
+}
+```
+
+该函数做的第一步是将顶点着色器输出的 `FragPosLightSpace` 做投影相除，即用 `w` 对 `xyz` 进行除，相除后的输出才是 NDC空间：
+
+```glsl
+vec3 projCoords = FragPosLightSpace.xyz / FragPosLightSpace.w;
+```
+
+此时的 `projCoords` 即相当于从光源位置出发去渲染物体，得到的在 NDC 坐标系中的坐标。
+
+```ad-warning
+与前面所述， `FragPosLightSpace` 是与生成深度贴图时所采用的顶点着色器生成的结果是相同的。在 `生成深度贴图` 的过程中，当顶点着色器的结果传递到片段着色器时，实际上渲染管线隐式的做了投影相除的操作。
+```
+
+又因为现在要从深度贴图中读取出像素的数值（表示一个像素的深度），而 `Texcoord` 的范围是 $0 \sim 1$ 。因此需要对NDC空间 （$-1 \sim 1$）的数值进行转换：
+
+```glsl
+projCoords = projCoords * 0.5 + 0.5;
+```
+
+此时 `projCoords.xy` 就是从光源位置出发看物体时的 `Texcoord` 空间，所以可以用它来解析深度贴图，解析的结果深度贴图在该点所记录下的深度：
+
+```glsl
+float closetDepth = texture(depthMap, projCoords.xy).r;
+```
+
+而 `projCoords.z` 即是目前该点从光源位置出发看过去的深度。因此如果 `projCoords.z` 大于 `closetDepth` 则说明这点处于阴影中，否则就不处于。
+
+```glsl
+float currentDepth = projCoords.z;
+return currentDepth > closetDepth ? 1.0 : 0.0;
+
+// 1.0 -> in shadow
+// 0.0 -> not in shadow
+```
+
+## 结果与源码：
+
+![|500](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%203.png)
+
+```ad-note
+可以看到阴影确实被生成出来，但也出现了许多错误的阴影（黑色条状），这种错误的阴影称为 `shadow acne`
+```
+
+[main.cpp](https://www.notion.so/main-cpp-26d01a47aac64358b381d2b68f5d67e3)
+
+[shadow.vs](https://www.notion.so/shadow-vs-9bef492e924e4d41b0b43b1c74c22b10)
+
+[Shadow.fs](https://www.notion.so/Shadow-fs-11d99475372a41cd805813134e5d1cd6)
+
+# 解决 Shadow Acne
+
+上述结果中产生的错误条状阴影可以由下图解释：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%204.png)
+
+对于深度贴图而言，它已经是一个离散的结果（由深度贴图中的像素表示），而要渲染的平面仍然还是连续的。因此当用一个离散的结果（上图中的紫色线条）与连续对象（上图中黑色的平面）比较时就可能产生问题。
+
+这就会导致，对于深度贴图中的一个像素而言，待渲染平面中的像素一部分深度值比它大（在阴影中），一部分深度值比它小（不在阴影中），所以就出现了上面的条纹状的错误阴影，称为 `shadow acne` 。
+
+```ad-tip
+`shadow acne` 的本质是因为离散采样的误差，让物体自己对自己产生了阴影
+```
+
+解决 `shadow acne` 的方法主要有 `Bias` 法和 `Front Face Culling` 法：
+
+## Bias
+
+一个最直接的解决方法就是将从深度贴图中读到的深度加上一个偏移量，如下图所示：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%205.png)
+
+代码实现如下：
+
+```glsl
+float bias = 0.01;
+float shadow = currentDepth > closestDepth + bias ? 1.0 : 0.0;
+```
+
+加上 `bias` 后的运行结果如下，可以看到 `shadow acne` 都消除了：
+![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%206.png)
+
+但是一个固定值的偏移量必然无法满足所有的情况。可以发现，当光源与平面的法线夹角越大，则需要的偏移量越多。可以想象，如果光线方向几乎与平面平行，那么上述示意图中的黄色折线则会几乎垂直于平面，因此需要更多的偏移量。加上根据光线方向调整偏移量的代码如下：
+
+```glsl
+float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.01);
+```
+
+完整的使用了 `Bias` 法的片段着色器如下：
+
+[shadow.fs - Bias](https://www.notion.so/shadow-fs-Bias-98f881b9513b41089f089e454f1d0475)
+
+但 `Bias` 法存在一个问题，当 `Bias` 的数值选择不准确（过大），它会让阴影与物体产生一种分离的感觉，这种失真称为 `Peter panning` 。如上例中，将 `Bias` 调整为 $0.3$ ，结果如下图所示，可以看到阴影与物体的距离过远。
+
+![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/image-20211220191908042.png)
+
