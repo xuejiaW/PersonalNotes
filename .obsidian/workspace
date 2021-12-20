@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ef96f50dadeb442c",
+        "id": "e489b269f9ad1673",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,8 +149,10 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "ef96f50dadeb442c",
+  "active": "e489b269f9ad1673",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
+    "Untitled.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Mapping.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
@@ -158,8 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 24 Anti Aliasing.md",
-    "Boos/LearnOpenGL/LearnOpenGL.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md"
   ]
 }
