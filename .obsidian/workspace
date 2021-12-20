@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Mesh Basics/Procedural Grid.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Mesh Basics/Procedural Grid.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,9 +152,9 @@
   },
   "active": "ef96f50dadeb442c",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
     "Boos/Untitled.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
