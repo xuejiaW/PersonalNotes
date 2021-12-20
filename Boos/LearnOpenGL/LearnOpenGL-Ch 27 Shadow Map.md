@@ -311,3 +311,47 @@ float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.01);
 
 ![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/image-20211220191908042.png)
 
+该现象可由下图解释，原先因为蓝色点的深度值比红色点大，因此蓝色点必然会处在阴影中。而加上 Bias 的过程，相当于是让红点的深度更大，如果增加的 Bias 值大于了红蓝两点本来的深度差，那么蓝色点就会被误认为不处于阴影中。即 Bias 会导致阴影的偏移。
+![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%208.png)
+
+因此在使用 `Bias` 法绘制阴影时，需要选择合适的偏移值。
+
+## Front Face Culling
+
+`Front Face Culling` 方法是另一种消除 `shadow acne` 的方法，且该方法不会引起 `Peter panning` 的问题。
+
+`Front Face Culling` 的流程为，在渲染深度贴图时，裁剪掉前向面（渲染后向面）。在正常渲染场景时，再正常的裁剪掉后向面（渲染前向面）。
+
+如下图所示，在渲染深度贴图时，渲染的是红色的边，在渲染场景时，渲染的是灰色的边。
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%209.png)
+
+因此在渲染灰色边时，它的深度必然比红色边的深度小不少，因此即使存在因离散而造成的采样误差，也不会出现 `shadow acne` 。
+
+而对于地板而言，因为它只有一边，即不存在后向面，因此地板并不会出现在深度贴图中，也就不会产生 `shadow acne` 。如下所示：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2010.png)
+
+对于被物体遮挡的地板而言，也不会有引入 `Bias` 而造成的阴影偏移，也就没了 `Peter Panning` 。
+
+使用 `Front Face Culling` 方法的渲染结果如下：
+![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2011.png)
+
+[main.cpp](https://www.notion.so/main-cpp-b46211259c274e39a18fdba2906bf073)
+
+[shadow.fs](https://www.notion.so/shadow-fs-4eb23cee60c442f5887f0643bfa17f18)
+
+# Over-Sampling 问题
+
+这里的 `over-sampling` 并不是指超采样，而是指超过了深度贴图所能采样的范围。
+
+因为深度贴图是通过一个从光源出发的摄像机渲染得到的，因此如果在这个摄像机的视锥体外的部分就无法被采样到深度贴图中。
+
+之前在生成深度贴图时，为 [Texture](LearnOpenGL-Ch%2004%20Textures.md) 设置的 `warpmode`为 `repeat` ，如下：
+
+```cpp
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+```
+
+因此超过了视锥体的部分的深度信息，会重复视锥体内的深度信息（被采集到深度贴图中）。
+
+将上例中的地板扩大，修改下光源的位置，并将视锥体尺寸改小，可得如下结果：
