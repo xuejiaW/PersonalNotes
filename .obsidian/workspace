@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 20 Cubemaps.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 19 Framebuffers.md",
@@ -160,7 +161,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 18 Face Culling.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 17 Blending.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 16  Stencil Testing.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md",
-    "Boos/LearnOpenGL/LearnOpenGL.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 15 Depth Testing.md"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 21 Advanced Data, GLSL",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 22 Geometry Shader",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
