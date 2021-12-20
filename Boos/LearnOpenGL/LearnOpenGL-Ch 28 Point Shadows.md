@@ -160,6 +160,146 @@ void main()
 
 ## Vertex Shader
 
-这里的顶点着色器与 [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中的基本相同。只不过在 [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，需要计算出 `FragPosLightSpace` 值，表示以光源为摄像机的摄像机坐标系下的坐标。在片段着色器中，会进一步利用该坐标采样二维的深度贴图。
+这里的顶点着色器与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中的基本相同。只不过在  [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，需要计算出 `FragPosLightSpace` 值，表示以光源为摄像机的摄像机坐标系下的坐标。在片段着色器中，会进一步利用该坐标采样二维的深度贴图。
 
-而这里生成得到的深度贴图是 Cubemap，如在 [Cubemaps](https://www.notion.so/Cubemaps-e705058f140e4c7295731e15966a5ac6) 中的描述，采样 Cubemap 使用的是方向，在这里需要用的就是从光源指向片元的方向，即不需要在顶点着色器中做额外计算，所以顶点着色器如下所示：
+而这里生成得到的深度贴图是 Cubemap，如在 [Cubemaps](LearnOpenGL-Ch%2020%20Cubemaps.md) 中的描述，采样 Cubemap 使用的是方向，在这里需要用的就是从光源指向片元的方向，即不需要在顶点着色器中做额外计算，所以顶点着色器如下所示：
+```glsl
+#version 330 core
+
+layout(location = 0) in vec3 Pos;
+layout(location = 1) in vec2 TexCoords;
+layout(location = 2) in vec3 Normal;
+
+out VS_OUT
+{
+    vec3 FragPos;
+    vec3 Normal;
+    vec2 TexCoords;
+}
+vs_out;
+
+uniform mat4 projection;
+uniform mat4 view;
+uniform mat4 model;
+
+void main()
+{
+    vs_out.FragPos = vec3(model * vec4(Pos, 1.0));
+    vs_out.Normal = transpose(inverse(mat3(model))) * Normal;
+    vs_out.TexCoords = TexCoords;
+    gl_Position = projection * view * model * vec4(Pos, 1.0);
+}
+```
+
+## Fragment shadow
+
+在片元着色器中，首先需要通过 uniform 传入之前得到的用来表示深度信息的 Cubemap：
+
+```glsl
+uniform samplerCube depthMap;
+```
+
+另外还需要通过 uniform 传入 `far_plane` 信息，因为在计算 Depth Cubemap 时，为了得到线性的深度信息，将光源与片元的距离除以了 `far_plane` ，所以这里需要重新乘以 `far_plane` ，即从 Depth Cubemap 中读到的深度信息应当表示为：
+
+```glsl
+float closestDepth = texture(depthMap,fragToLight).r;
+closestDepth *= far_plane;
+```
+
+而当前的片元的深度计算方法为：
+
+```glsl
+vec3 fragToLight = fragPos - lightPos;
+float currentDepth = length(fragToLight);
+```
+
+将两者对比，并引入 bias， 就能算出是否在阴影中，即：
+
+```glsl
+float ShaderCalculation(vec3 fragPos, vec3 normal, vec3 lightDir)
+{
+    vec3 fragToLight = fragPos - lightPos;
+    float currentDepth = length(fragToLight);
+
+    // Without PCF
+    float closestDepth = texture(depthMap,fragToLight).r;
+    closestDepth *= far_plane;
+
+    float bias = max(0.05 * (1 - dot(normal, lightDir)), 0.01);
+    float shadow =(currentDepth>closestDepth + bias ? 1.0 : 0.0);
+    return shadow;
+}
+```
+
+片段着色器的其他部分与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中类似，结果如下，其中红色方块表示光源位置：
+![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%202%201.png)
+
+在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md)  中，为了产生软阴影，使用的 PCF 方法，在点光源的计算中同样可以运用。只不过在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md)中 PCF 的计算是通过一个二维的嵌套循分别在 $x,y$ 方向上取采样点，而这里因为用的是 Depth Cubemap，所以需要额外的 $z$ 方向，即需要使用三维的嵌套循环：
+
+```glsl
+float bias = max(0.05 * (1 - dot(normal, lightDir)), 0.01);
+float shadow = 0.0;
+float offset = 0.1;
+float samples = 4.0;
+
+for(float x = -offset; x < offset; x += (offset*2)/samples )
+{
+        for(float y = -offset; y < offset; y += (offset*2)/samples )
+        {
+            for(float z = -offset; z < offset; z += (offset*2)/samples )
+            {
+                float closestDepth = texture(depthMap,fragToLight + vec3(x, y, z)).r;
+                closestDepth *= far_plane;
+                shadow += (currentDepth>closestDepth + bias ? 1.0 : 0.0);
+            }
+        }
+}
+shadow /= (samples * samples *samples);
+```
+
+使用上述的方法计算阴影，可以得到如下的软阴影结果：
+![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%203.png)
+
+但是这个方法存在的问题是，它需要采样过多的点。如在上例中，实际上采样了 $4_4_4=64$ 个点，且这些点朝向很可能是非常接近的，因此可能有大量的性能消耗在了提升并不明显的采样方向上。
+
+因此，一个优化方向为，仅使用那些相差较远的方向进行 PCF，对于 $x,y,z$ 方向而言，各取 $(0,1,-1)$ 这三种值，且保证一个方向上至多出现一个 $0$，即不要采样如 $(1,0,0)$ 这样的方向，这样就一共有 $20$ 种可能的方向（$3_3_3-3P2-1=20$）。使用该方法的 PCF 如下：
+
+```glsl
+float bias = max(0.1 * (1 - dot(normal, lightDir)), 0.05);
+float shadow = 0.0;
+float diskRadius = 0.05;
+vec3 sampleOffsetDirections[20] = vec3[]
+(
+   vec3( 1,  1,  1), vec3( 1, -1,  1), vec3(-1, -1,  1), vec3(-1,  1,  1), 
+   vec3( 1,  1, -1), vec3( 1, -1, -1), vec3(-1, -1, -1), vec3(-1,  1, -1),
+   vec3( 1,  1,  0), vec3( 1, -1,  0), vec3(-1, -1,  0), vec3(-1,  1,  0),
+   vec3( 1,  0,  1), vec3(-1,  0,  1), vec3( 1,  0, -1), vec3(-1,  0, -1),
+   vec3( 0,  1,  1), vec3( 0, -1,  1), vec3( 0, -1, -1), vec3( 0,  1, -1)
+);
+
+for(int i = 0; i != 20; ++i)
+{
+    float closestDepth = texture(depthMap,fragToLight + sampleOffsetDirections[i] * diskRadius  ).r;
+    closestDepth *= far_plane;
+    shadow += (currentDepth>closestDepth + bias ? 1.0 : 0.0);
+}
+
+shadow /= 20;
+```
+
+结果如下所示，可以看到同样产生了软阴影，但是阴影的显示效果并不如完全的 PCF 好：
+![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%204.png)
+
+## 源码：
+
+[main.cpp](https://www.notion.so/main-cpp-ac094df96e754cb1b9bca728f2361a8c)
+
+[DrawDepthCubemap.vs](https://www.notion.so/DrawDepthCubemap-vs-aac8c49f2d66469497b61253f5704c1b)
+
+[DrawDepthCubemap.fs](https://www.notion.so/DrawDepthCubemap-fs-6c664c06eff843ebb0a4300e21c883d5)
+
+[DrawDepthCubemap.gs](https://www.notion.so/DrawDepthCubemap-gs-07ade4622af34867809b7321fbbb0b70)
+
+[PointShadow.vs](https://www.notion.so/PointShadow-vs-621c413af029406ebfbdb9150d6beadc)
+
+[PointShadow.fs](https://www.notion.so/PointShadow-fs-04fdfe808a324524befd6f7074768bde)
