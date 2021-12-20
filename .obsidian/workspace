@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
+            "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
-    "Boos/LearnOpenGL/LearnOpenGL.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 24 Anti Aliasing.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md",
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 24 Anti Aliasing.md",
+    "Boos/LearnOpenGL/LearnOpenGL.md",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 20 Cubemaps.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 19 Framebuffers.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 99 Shadow Map.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 19 Framebuffers.md"
   ]
 }

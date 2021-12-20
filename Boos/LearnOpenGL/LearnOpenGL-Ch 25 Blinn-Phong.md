@@ -1,3 +1,8 @@
+---
+created: 2021-12-20
+updated: 2021-12-20
+cssclass: [table-border]
+---
 # Phone 镜面反射效果
 
 在  [Ch 11 Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中介绍的都是 `Phone`式光照模型， `Phone`式光照模型在镜面反射时会存在一些不合理的情况，如下所示：
@@ -51,7 +56,12 @@ spec = pow(max(dot(normal, halfwayDir),0.0), exponent);
 
 下图左侧为 `Phone` 模型效果，右图为 `Blinn-Phone` 效果：
 
-|     |     |
-| --- | --- |
-![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%204.png)     |    ![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%205.png)      |
- 
+|                                                                |                                                                |
+| -------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%204.png) | ![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%205.png) |
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/23.Blinn-Phong/main.cpp)
+
+[blinn-phone.vs](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/23.Blinn-Phong/blinn-phone.vs)
+
+[blinn-phone.fs](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/23.Blinn-Phong/blinn-phone.fs)
