@@ -138,3 +138,7 @@ scene.postRender = []() {
 带后处理的MSAA
 
 ![|500](assets/LearnOpenGL-Ch%2024%20Anti%20Aliasing/Untitled%208.png)
+
+[main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/22.AntiAliasing/main.cpp)
+
+[Framebuffer.frag](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/22.AntiAliasing/Framebuffer.frag)
