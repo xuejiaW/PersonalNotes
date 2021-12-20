@@ -128,6 +128,82 @@ gl_PointSize = gl_Position.z;
 
 ## gl_FragCoord
 
-在 [LearnOpenGL-Ch 15 Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中已经接触了 `gl_FragCoord` ，可以利用 [gl_FragCoord.z](https://www.notion.so/Depth-Testing-bf9abf89048c4d72bdceee5ca5ab059c) 绘制出片段的深度信息。
+在 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中已经接触了 `gl_FragCoord` ，可以利用 `gl_FragCoord.z` 绘制出片段的深度信息。
 
 而同样可以利用 `gl_FragCoord.x` 和 `gl_FragCoord.y` 实现一些效果，注意这两者都是针对于屏幕空间的，如屏幕的尺寸是 $800 \times 600$，则 `gl_FragCoord.x < 400` 就表示屏幕的左半边。
+
+```glsl
+if(gl_FragCoord.x <400)
+    FragColor= vec4(1,0,0,1);
+else
+    FragColor = vec4(0,1,0,1);
+```
+
+![|500](assets/LearnOpenGL-Ch%2021%20Advanced%20Data,%20GLSL/half.gif)
+
+## gl_FrontFacing
+
+`gl_FrontFacing` 是一个布尔值，可以分辨在 [Face Culling](LearnOpenGL-Ch%2018%20Face%20Culling.md) 中讨论的前向面和后向面。
+
+可以利用 `gl_FrontFacing` 让物体在前向面和后向面分别渲染不同的贴图
+
+```glsl
+if(gl_FrontFacing)
+    FragColor = texture(frontTexture,texcoord);
+else
+    FragColor = texture(backTexture,texcoord);
+```
+
+![|500](assets/LearnOpenGL-Ch%2021%20Advanced%20Data,%20GLSL/GIF.gif)
+
+## gl_FragDepth
+
+之前提到的 [gl_FragCoord](https://www.notion.so/Advanced-Data-GlSL-f4b535afd6214117a2c67de570820008) 是一个只读变量。但这里的 `gl_FragDepth` 可以改写一个像素的深度值，可写的范围是 $0 \sim 1$。
+
+```glsl
+gl_FragDepth = 0.0; // this fragment now has a depth value of 0.0
+```
+
+但如果对 `gl_FragDepth` 进行了写入，在 [Depth Testing](https://www.notion.so/Depth-Testing-bf9abf89048c4d72bdceee5ca5ab059c) 中提及的[提前深度测试](https://www.notion.so/Depth-Testing-bf9abf89048c4d72bdceee5ca5ab059c) 就无法进行，因为OpenGL在进行片段着色器前不再能保证每个像素的深度值。这可能会引发巨大的性能问题。
+
+但在OpenGL版本 4.2 之后，引入了 `深度条件（Depth Condition）` 概念，指可以在片段着色器中，指明对于深度值的改写一定会满足一定的条件，如大于或小于片元原先的深度（`gl_FragCoord.z`）。
+
+```glsl
+layout (depth_<condition>) out float gl_FragDepth;
+```
+
+其中 `condition` 可选项如下：
+
+| Condition | Descripton                                   |
+| --------- | -------------------------------------------- |
+| any       | 填写值与原片元深度无关系，提前深度测试被关闭 |
+| greater   | 填写值一定大于原片元深度                     |
+| less      | 填写值一定小于原片元深度                     |
+| unchanged | 填写值与原片元深度相同                                             |
+
+示例代码如：
+```glsl
+#version 420 core // note the GLSL version!
+out vec4 FragColor;
+layout (depth_greater) out float gl_FragDepth;
+
+void main()
+{             
+    FragColor = vec4(1.0);
+    gl_FragDepth = gl_FragCoord.z + 0.1;
+}
+```
+
+# 接口块（Interface Block）
+
+接口块（Interface Block）与在 [Materials](https://www.notion.so/Materials-930c6844a30a42cea025650076650443) 使用的 [Struct](https://www.notion.so/Materials-930c6844a30a42cea025650076650443) 有点类似，但它是为了让着色器之间传递的变量（即通过 `in` 和 `out` 传递的变量）可以组合在一起，因此必须通过 `in` 和 `out` 修饰，而不能在uniform使用。
+
+如在顶点着色器中：
+
+```glsl
+out VS_OUT
+{
+    vec2 texcoord;
+    vec3 normal;
+} vs_out;
+```
