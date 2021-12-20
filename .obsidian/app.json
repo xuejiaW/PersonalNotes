@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 20 Cubemaps",
+  "attachmentFolderPath": "./assets/LearnOpenGL-Ch 21 Advanced Data, GLSL",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
