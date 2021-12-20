@@ -7,8 +7,11 @@
         "id": "ef96f50dadeb442c",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Tutorials/Mesh Basics/Procedural Grid.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md"
+              }
             }
           },
           {
@@ -85,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -144,6 +151,7 @@
   },
   "active": "ef96f50dadeb442c",
   "lastOpenFiles": [
+    "Tutorials/Mesh Basics/Procedural Grid.md",
     "Boos/Untitled.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Map.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
@@ -152,7 +160,6 @@
     "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 24 Anti Aliasing.md",
     "Boos/LearnOpenGL/LearnOpenGL.md",
-    "Notes/Obsidian/Obsidian-CSS Snippets.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 21 Advanced Data, GLSL.md"
+    "Notes/Obsidian/Obsidian-CSS Snippets.md"
   ]
 }
