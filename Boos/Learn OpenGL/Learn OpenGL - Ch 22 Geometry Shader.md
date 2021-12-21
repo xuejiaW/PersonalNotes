@@ -44,13 +44,13 @@ layout (line_strip, max_vertices = 2) out;
 对于输出而言，只能使用 points ， line_strip 和 triangle_strip 三种图元类型。输出图元还需要指定最大的顶点数 max_vertices，当输出的顶点数大于这个数目时，OpenGL 将不会绘制额外的顶点。
 
 💡 `line_strip` 是一系列由当前点和上一个点给构成的线段，如定义了五个顶点，则会构成如下的图：
-![|500](assets/LearnOpenGL-Ch%2022%20Geometry%20Shader/Untitled.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader/Untitled.png)
 
 💡 triangle_strip 则是由当前点和前两个构成的三角形，即四个点可以构成 2 个三角形，5个点可以构成 3 个三角形，如下图所示：
 
 |                                                                                                                                                |     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| ![](assets/LearnOpenGL-Ch%2022%20Geometry%20Shader/Untitled%201%201.png) | ![](assets/LearnOpenGL-Ch%2022%20Geometry%20Shader/Untitled%202.png)      |
+| ![](assets/Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader/Untitled%201%201.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader/Untitled%202.png)      |
 
 ```ad-warning
 `triangle_strip` 可保证生成的三角形有相同的定义方向

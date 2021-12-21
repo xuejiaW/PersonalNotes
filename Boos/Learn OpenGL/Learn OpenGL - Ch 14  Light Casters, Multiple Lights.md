@@ -1,6 +1,6 @@
 ---
 created: 2021-12-16
-updated: 2021-12-17
+updated: 2021-12-21
 ---
 ```ad-warning
 多光源章节相对于投光物章节实际并没有新内容的增加，因此将两章节合并
@@ -31,7 +31,7 @@ vec3 GetSpecularValue(vec3 normal,vec3 lightDir,vec3 viewDir, vec3 lightSpecular
 # 平行光（Direction Light）
 
 在[Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中，光的方向是由光源的位置减去每个片元的位置来获得的。如果假设光源处在无限远处，那么光的方向就固定为一个平行线。太阳光就是典型的平行光，如下图所示：
-![|400](assets/LearnOpenGL-Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled.png)
 
 平行光作为全局光照，不太需要考虑光亮度的衰减，因为光源处在无限远处，在考虑的世界范围内，实际上衰减非常的小。
 
@@ -63,7 +63,7 @@ vec3 CalculateDirLight(DirLight light,vec3 normal,vec3 viewDir)
 # 点光源（Point Light）
 
 点光源就是处在世界中某个点的光源，它几乎是均匀的像各个方向发射光，且光会随着距离而逐渐衰减，所以点光源仅会照亮场景中的一部分。点光源示意图如下所示：
-![|400](assets/LearnOpenGL-Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%201.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%201.png)
 
 在 [Lighting Maps](Learn%20OpenGL%20-%20Ch%2013%20Lighting%20Maps.md) 等章节中的光源计算，与点光源的计算十分类似，只不过之前的章节中并没有引入光源的衰减。
 
@@ -85,7 +85,7 @@ $$
 ```
 
 为了让光覆盖不同的范围，需要为 $K_{c}$，$K_{l}$，$K_{q}$ 选取不同的值。根据 [Ogre3D](http://wiki.ogre3d.org/tiki-index.php?page=-Point+Light+Attenuation) 的实验，不同距离的三值参考值如下：
-![|200](assets/LearnOpenGL-Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%202.png)
+![|200](assets/Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%202.png)
 
 ## 衰减计算
 
@@ -123,7 +123,7 @@ vec3 specularComponent=GetSpecularValue(normal,lightDir,viewDir,light.specular) 
 
 聚光是位于环境中某个位置的光源，且只朝一个特定的方向照射光线，所以只有在聚光方向特定半径内的物体才会被照亮，其余部分保持黑暗。如下所示：
 
-![|350](assets/LearnOpenGL-Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%203.png)
+![|350](assets/Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/Untitled%203.png)
 
 其中：
 $LightDir$：黑线，光线方向
@@ -185,7 +185,7 @@ color = vec4(result,1);
 ```
 
 # 结果与源码
-![|500](assets/LearnOpenGL-Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/LightCasters.gif)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights/LightCasters.gif)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/12.LightCasters%26%26MultipleLights/main.cpp)
 

@@ -1,6 +1,6 @@
 ---
 created: 2021-12-16
-updated: 2021-12-17
+updated: 2021-12-21
 ---
 # 模板缓冲
 
@@ -139,4 +139,4 @@ redCube_2->GetMeshRender()->SetPostRenderHandle([]() {
 ```
 
 # 结果与源码
-![|500](assets/LearnOpenGL-Ch%2016%20%20Stencil%20Testing/Stencil.gif)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2016%20%20Stencil%20Testing/Stencil.gif)

@@ -6,14 +6,14 @@ cssclass: [table-border]
 # Phone 镜面反射效果
 
 在  [Ch 11 Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中介绍的都是 `Phone`式光照模型， `Phone`式光照模型在镜面反射时会存在一些不合理的情况，如下所示：
-![|500](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled.png)
 
 ```ad-warning
 这里为了更清晰的说明现象，进计算镜面反射，且为了让反射效果更分散，将镜面反射的次幂等级选为0.5。
 ```
 
 上图中可以看到在镜面反射光到达边界后会迅速的变为0，在超过了边界点的情况下，视线方向与光线反射方向的夹角大于了90°。如下图右部分所示：
-![|500](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%201.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled%201.png)
 
 在 `Phone`模型中，是用点乘来计算镜面反射光的贡献，当两个方向的角度大于等于90°时，贡献为0。
 
@@ -28,7 +28,7 @@ spec = pow(max(dot(viewDir, reflectDir),0.0), exponent);
 `Blinn-Phone` 模型是由 `James F.Blinn` 提出的 `Phone` 模型的改善。这两个模型的区别就在于对与镜面反射光的计算。
 
 在 `Blinn-Phone` 模型中，会计算得到视线方向与光源方向两者的中线，再用这个中线（Halfway）与表面的法线进行比较，两者夹角越小，说明镜面反射光贡献越大，如下所示：
-![|500](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%202.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled%202.png)
 
 因为在计算过程中，视线方向和光源方向都是从表面向外的，所以 $\overline{H}$ 的计算方法如下表示：
 
@@ -44,7 +44,7 @@ spec = pow(max(dot(normal, halfwayDir),0.0), exponent);
 ```
 
 当采用了 `Blinn-Phone` 模型后，镜面反射的效果如下：
-![|500](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%203.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled%203.png)
 
 # 幂次系数调整
 
@@ -58,7 +58,7 @@ spec = pow(max(dot(normal, halfwayDir),0.0), exponent);
 
 |                                                                |                                                                |
 | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| ![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%204.png) | ![](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled%205.png) |
+| ![](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled%204.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong/Untitled%205.png) |
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/23.Blinn-Phong/main.cpp)
 

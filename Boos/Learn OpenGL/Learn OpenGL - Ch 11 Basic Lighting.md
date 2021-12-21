@@ -1,6 +1,6 @@
 ---
 created: 2021-12-15
-updated: 2021-12-16
+updated: 2021-12-21
 ---
 
 # 概述
@@ -35,7 +35,7 @@ vec3 ambientComponent = ambientStrength * lightColor;
 
 漫反射光的原理是与光线方向越接近的地方可以从光源处获得更多的光亮。如下图所示，当光的方向与表面法线平行时（垂直于物体表面），漫反射分量最大。当光的方向与表面法线夹角 $\geq 90^{\circ}$时，漫反射分量为0。因此可以通过求光线方向与物体表面法线的夹角大小来判断漫反射分量的大小。
 
-![300](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000202500.png)
+![300](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/image-20211216000202500.png)
 
 因此为了计算漫反射，需要额外获取两个信息，一个是表面的法线方向，一个是光线的方向。前者可以通过传递顶点的法线，并由顶点法线自动插值得到表面的法线。后者可以传递光源的位置，并计算出表面上每个点的位置，两者相减就能获得光线的方向。
 
@@ -62,7 +62,7 @@ glEnableVertexAttribArray(2);
 
 1.  方向是没有位移概念的，因此物体的模型变换中的位置信息需要去除，在原模型变换矩阵中取不含位置信息的左上$3\times3$子矩阵即可。
 2.  如果模型包含了非等比例的缩放，模型矩阵与法线直接相乘会导致法线不再垂直于物体表面，如下图所示，为了处理非等比例的缩放，正确的变换矩阵为 原模型矩阵的逆矩阵的转置。证明见 //TODO
-     ![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000246152.png)
+     ![|400](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/image-20211216000246152.png)
 
 因此最后片段着色器中，对法线的处理为：
 
@@ -118,7 +118,7 @@ vec3 diffuseComponent=diff*lightColor;
 
 镜面反射光取决于光的反射方向和人眼注视方向的夹角。如下图所示，想象有一面镜子，人的注视方向正好对着光反射的反向，此时人看到的就是一个巨大的光斑。因此人眼注释的方向与光反射方向的夹角越小，镜面反射光越大。
 
-![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000345055.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/image-20211216000345055.png)
 
 ## 光的反射方向
 
@@ -164,7 +164,7 @@ vec3 specularComponent=spec*lightColor*specularStrength;
 ```
 
 在计算物体镜面反射光时，在取得了了视线方向和光反射方向的点乘后，还做了一个次幂运算。这里的次幂运算表示高光的反射度。次幂越高表示一个物体反射度越高，反射能力越强，散射越少，高光点越小。如下所示：
-![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000433025.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/image-20211216000433025.png)
 
 # Phong Shading / Gouraud Shading
 
@@ -174,7 +174,7 @@ vec3 specularComponent=spec*lightColor*specularStrength;
 
 用 `Phone Shading` 指代在片段着色器中计算光照效果，用 `Gouraud Shading` 指代在顶点着色器中计算光照效果。两者对比如下所示：
 
-![|400](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/image-20211216000452574.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/image-20211216000452574.png)
 
 # 结果与源码
 
@@ -185,7 +185,7 @@ vec3 light=ambientComponent + diffuseComponent + specularComponent;
 color = vec4(light*objectColor,1);
 ```
 
-![|500](assets/LearnOpenGL-Ch%2011%20Basic%20Lighting/Basic_Lighting.gif)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting/Basic_Lighting.gif)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/9.BacisLighting/main.cpp)
 

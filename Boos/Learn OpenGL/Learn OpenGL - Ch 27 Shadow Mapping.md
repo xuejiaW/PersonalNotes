@@ -8,10 +8,10 @@ updated: 2021-12-21
 # 阴影贴图（Shadow Mapping）
 
 阴影贴图的思路为从光源的位置作为观察方向，记录下所有能看到的点（即从光源出发的每条射线与各平面相交的最近点），那些看不到的点就必然在这个光源产生的阴影之中。如下所示，其中蓝色的线段为所能看到的点，黑色的线段表示在阴影中的部分。
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled.png)
 
 为了达到记录离光源最近点的效果，可以将摄像机移至光源的位置进行渲染，渲染得到的深度缓冲即为离光源所能看到的所有点的深度值。将这个深度缓冲称为 深度贴图（Depth Map） 或 阴影贴图（Shadow Map），如下图的左半部分所示：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%201.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%201.png)
 
 之后再从正常的视角方向渲染界面，得到每个点的深度值，如得到上右图中的 $P$ 点深度值。但目前得到的深度值是从摄像机出发渲染得到的，而在 ` 深度贴图 ` 中的深度值则是从光源位置出发得到的。
 
@@ -142,7 +142,7 @@ screenQuadRender->DrawMesh();
 
 ## 结果与源码
 
-![|500](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%202.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%202.png)
 
 [main.cpp](https://www.notion.so/main-cpp-927c29f38c744b26b0fec711353f30af)
 
@@ -260,7 +260,7 @@ return currentDepth > closetDepth ? 1.0 : 0.0;
 
 ## 结果与源码：
 
-![|500](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%203.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%203.png)
 
 ```ad-note
 可以看到阴影确实被生成出来，但也出现了许多错误的阴影（黑色条状），这种错误的阴影称为 `shadow acne`
@@ -275,7 +275,7 @@ return currentDepth > closetDepth ? 1.0 : 0.0;
 # 解决 Shadow Acne
 
 上述结果中产生的错误条状阴影可以由下图解释：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%204.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%204.png)
 
 对于深度贴图而言，它已经是一个离散的结果（由深度贴图中的像素表示），而要渲染的平面仍然还是连续的。因此当用一个离散的结果（上图中的紫色线条）与连续对象（上图中黑色的平面）比较时就可能产生问题。
 
@@ -290,7 +290,7 @@ return currentDepth > closetDepth ? 1.0 : 0.0;
 ## Bias
 
 一个最直接的解决方法就是将从深度贴图中读到的深度加上一个偏移量，如下图所示：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%205.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%205.png)
 
 代码实现如下：
 
@@ -300,7 +300,7 @@ float shadow = currentDepth > closestDepth + bias ? 1.0 : 0.0;
 ```
 
 加上 `bias` 后的运行结果如下，可以看到 `shadow acne` 都消除了：
-![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%206.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%206.png)
 
 但是一个固定值的偏移量必然无法满足所有的情况。可以发现，当光源与平面的法线夹角越大，则需要的偏移量越多。可以想象，如果光线方向几乎与平面平行，那么上述示意图中的黄色折线则会几乎垂直于平面，因此需要更多的偏移量。加上根据光线方向调整偏移量的代码如下：
 
@@ -314,10 +314,10 @@ float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.01);
 
 但 `Bias` 法存在一个问题，当 `Bias` 的数值选择不准确（过大），它会让阴影与物体产生一种分离的感觉，这种失真称为 `Peter panning` 。如上例中，将 `Bias` 调整为 $0.3$ ，结果如下图所示，可以看到阴影与物体的距离过远。
 
-![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/image-20211220191908042.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/image-20211220191908042.png)
 
 该现象可由下图解释，原先因为蓝色点的深度值比红色点大，因此蓝色点必然会处在阴影中。而加上 Bias 的过程，相当于是让红点的深度更大，如果增加的 Bias 值大于了红蓝两点本来的深度差，那么蓝色点就会被误认为不处于阴影中。即 Bias 会导致阴影的偏移。
-![|400](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%208.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%208.png)
 
 因此在使用 `Bias` 法绘制阴影时，需要选择合适的偏移值。
 
@@ -328,17 +328,17 @@ float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.01);
 `Front Face Culling` 的流程为，在渲染深度贴图时，裁剪掉前向面（渲染后向面）。在正常渲染场景时，再正常的裁剪掉后向面（渲染前向面）。
 
 如下图所示，在渲染深度贴图时，渲染的是红色的边，在渲染场景时，渲染的是灰色的边。
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%209.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%209.png)
 
 因此在渲染灰色边时，它的深度必然比红色边的深度小不少，因此即使存在因离散而造成的采样误差，也不会出现 `shadow acne` 。
 
 而对于地板而言，因为它只有一边，即不存在后向面，因此地板并不会出现在深度贴图中，也就不会产生 `shadow acne` 。如下所示：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2010.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2010.png)
 
 对于被物体遮挡的地板而言，也不会有引入 `Bias` 而造成的阴影偏移，也就没了 `Peter Panning` 。
 
 使用 `Front Face Culling` 方法的渲染结果如下：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2011.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2011.png)
 
 [main.cpp](https://www.notion.so/main-cpp-b46211259c274e39a18fdba2906bf073)
 
@@ -369,7 +369,7 @@ floorObj->GetTransform()->SetScale(vec3(20, 20, 5));
 lamp->GetTransform()->SetPosition(vec3(3, 5, 2));
 ```
 
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2012.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2012.png)
 
 解决方法为，将 `warpmode` 改为 `Clamp to border` 并将 `border color` 设为1，这样视锥体外的深度信息就永远为深度的最大值1，即视锥体外的像素不会被认为在阴影中。
 
@@ -381,7 +381,7 @@ glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 ```
 
 修改后的运行结果如下：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2013.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2013.png)
 
 可以看到，因为深度贴图重复而产生的错误阴影消失，但是仍然有一大块区域仍然错误的在阴影中。
 
@@ -400,7 +400,7 @@ if (projCoords.z > 1.0)
 ```
 
 调整后，运行结果如下，可正确渲染阴影：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2014.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2014.png)
 
 [main.cpp](https://www.notion.so/main-cpp-1e3f54d9a56e441faee09767edf8063f)
 
@@ -409,14 +409,14 @@ if (projCoords.z > 1.0)
 # 减少阴影锯齿
 
 如果仔细观察上述渲染出的阴影，可以看到再阴影的边缘存在比较明显的锯齿，如当窗口的分辨率为 `1024*1024` ，而深度贴图的分辨率为 `256*256` 时，阴影的锯齿如下：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2015.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2015.png)
 
 产生锯齿的原因是，深度贴图的分辨率较小，因此当渲染场景时，会有多个像素采样原深度贴图中的同一个像素点，即会产生较大的锯齿。
 
 ## 提高阴影贴图分辨率
 
 在上例中，如果将深度贴图的分辨率调整为 `1024*1024` 则效果如下，可以看到锯齿明显的减少：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2016.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2016.png)
 
 ## PCF
 
@@ -452,7 +452,7 @@ float ShaderCalculation(vec4 FragPosLightSpace, vec3 normal, vec3 lightDir)
 其中的 `textureSize` 函数会返回图片的分辨率，可利用这个函数算出一个像素的大小。
 
 使用了 `PCF` 绘制阴影的结果如下：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2017.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2017.png)
 
 # 正交投影与透视投影
 
@@ -461,7 +461,7 @@ float ShaderCalculation(vec4 FragPosLightSpace, vec3 normal, vec3 lightDir)
 而在使用 `透视投影` 时，光线则会表现的如同在一个点像各个方向发射出去，因此 `透视投影` 更适合于作为 `点光源` 和 `聚光灯` 的投影矩阵。
 
 `正交投影` 和 `透视投影` 两者差别的示意图如下：
-![](assets/LearnOpenGL-Ch%2027%20Shadow%20Map/Untitled%2018.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Map/Untitled%2018.png)
 
 还有一定需要注意的是，在使用 `正交投影` 时，生成的深度贴图，其深度变化是线性。而当使用 `透视投影` 时，深度变化则是非线性的。
 

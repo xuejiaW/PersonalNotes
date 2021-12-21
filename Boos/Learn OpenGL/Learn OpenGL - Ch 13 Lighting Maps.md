@@ -11,13 +11,13 @@ updated: 2021-12-21
 
 # 漫反射贴图
 
-![|300](assets/LearnOpenGL-CH%2013%20Lighting%20Maps/Untitled.png)
+![|300](assets/Learn%20OpenGL%20-%20Ch%2013%20Lighting%20Maps/Untitled.png)
 
 漫反射贴图主要提供物体不同区域的颜色。
 
 # 镜面反射贴图
 
-![|300](assets/LearnOpenGL-CH%2013%20Lighting%20Maps/image-20211216082651605.png)
+![|300](assets/Learn%20OpenGL%20-%20Ch%2013%20Lighting%20Maps/image-20211216082651605.png)
 
 镜面反射贴图中的黑色部分对应漫反射贴图中的木头部分，在现实中木头几乎不会产生镜面反射，因此图中用黑色表示，及为 `vec3(0 ,0, 0)`，这样计算出的镜面反射强度与木头部分贴图值相乘后为0，即没有镜面反射。
 
@@ -56,7 +56,7 @@ vec3 specularComponent=spec*material.specular*light.specular;
 
 # 结果与源码
 
-![|500](assets/LearnOpenGL-CH%2013%20Lighting%20Maps/LightingMaps.gif)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2013%20Lighting%20Maps/LightingMaps.gif)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/11.LightingMaps/main.cpp)
 

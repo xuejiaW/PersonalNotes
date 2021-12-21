@@ -64,7 +64,7 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 天空盒是立方体贴图的一个最常见的应用。
 
 立方体贴图的六面纹理如下所示，通过这六个面，可以折叠出一个立方体：
-![](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled.png)
 
 ## 片段着色器
 
@@ -89,7 +89,7 @@ void main()
 ```
 
 当方向向量的起点处在立方体的中心时，这个方向向量的值就等于与立方体相交点的值，即片元的位置。如下所示：
-![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%201.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%201.png)
 
 因此对于使用了立方体贴图的模型而言，可直接使用模型的片元位置表示Texcoords，但需要注意这里的片元位置是本地坐标系下的，并不需要进行位移旋转等操作：
 
@@ -173,7 +173,7 @@ scene.AddGameObject(skybox); // Render Skybox in the end
 
 如下图所示，观察者的视线会在物体表面进行反射，而反射向量将击中的天空盒的某个位置，这个位置的颜色即是观察者在这个片元上应当看到的颜色。
 
-![](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%202.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%202.png)
 
 计算实现的反射方向的方法，如在 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中计算镜面光反射时，求光的反射方向一样。即先通过摄像机位置和片元位置求得实现方向，再利用 `reflect` 函数求得反射方向。
 
@@ -192,13 +192,13 @@ vec3 reflection = reflect(viewDirection, normalize(normal));
 FragColor = vec4(texture(skybox, reflection).rgb, 1.0);
 ```
 
-![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%203.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%203.png)
 
 ## 折射
 
 折射是光线由于传播介质的改变而产生的方向变化，如下图所示：
 
-![|400](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%204.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%204.png)
 
 因此，对于折射物体而言，其背后的物体仍然可以被看到，但是看到它的视线路线发生了偏转。典型的折射物体如装了水的玻璃杯。
 
@@ -221,10 +221,10 @@ vec3 refraction = refract(viewDirection, normalize(normal),ratio);
 FragColor = vec4(texture(skybox, refraction).rgb, 1.0);
 ```
 
-![|500](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%205.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%205.png)
 
 # 结果与源码
-![|500](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%206.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2020%20Cubemaps/Untitled%206.png)
 
 左侧立方体为反射立方体，右侧立方体为折射立方体
 
