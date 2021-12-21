@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/3D Math Primer - Ch 08 Rotation in Three Dimensions",
+  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 30 Parallax Mapping",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

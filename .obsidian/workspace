@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
-    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 28 Point Shadows.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 27 Shadow Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 02 Hello Triangle.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 01 Hello Window.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
     "Boos/Learn OpenGL/Learn OpenGL.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md"
   ]
 }
