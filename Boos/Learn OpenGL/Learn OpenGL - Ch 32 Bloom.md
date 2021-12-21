@@ -84,6 +84,134 @@ FragColor = vec4(lighting, 1.0);
 
 # Gaussian Blur
 
-在 [OpenGL - Default Frambuffer](../../Notes/OpenGL/OpenGL%20-%20Default%20Frambuffer.md)  的后处理部分中说明了对生成图像进行 [模糊处理](https://www.notion.so/Framebuffers-41a4ca8551614d0abb16b01268a7b370) 的办法，该方法是对一个像素和它周围的8个像素，一共9个像素进行加权平均，并将平均值作为该像素新的颜色。
+在 [Framebuffers](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md)  的后处理部分中说明了对生成图像进行 [模糊处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理) 的办法，该方法是对一个像素和它周围的8个像素，一共9个像素进行加权平均，并将平均值作为该像素新的颜色。
 
 这里介绍一个更高级的模糊处理方法，称为 `Gaussian 模糊` ，其主要思路是使用一个 `Gaussian 曲线` 对像素进行模糊处理。 `Gaussian 曲线` 通常形状是一个钟形曲线，如下图所示，该曲线表示越接近中心的点，其权重越大：
+![|400](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%204.png)
+
+```ad-tip
+`Bloom` 效果的好坏主要取决于 `Blur` 效果的好坏。
+```
+
+因为最终需要应用 `Gaussian 曲线` 的是二维的图片，所以对单一像素一共需要进行两次 `Gaussian 模糊` 处理，即一次水平方向的模糊处理，一次垂直方向的模糊处理，如下所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%205.png)
+
+因此应用 `Gaussian 模糊` 需要两个 Framebuffer，下称为 `FboA` 和 `FboB` 。主要实现思路为，先将需要进行模糊处理的图（本例中为 $a$ 图）作为 `FboA` 的输入，对 $a$ 图进行水平方向的模糊，再将水平模糊后的输出作为 `FboB` 的输入，对水平模糊后的图再进行垂直方向的模糊，至此就得到经过了 `Gaussian 模糊` 的图。创建 `FboA` 和 `FboB` 并实现 `Gaussian 模糊` 的代码如下：
+
+```cpp
+// Generate Framebuffer
+glGenFramebuffers(2, pingpongFBO);
+glGenTextures(2, pingpongColorBuffers);
+for (int i = 0; i != 2; ++i)
+{
+    glBindTexture(GL_TEXTURE_2D, pingpongColorBuffers[i]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, scene.GetWidth(), scene.GetHeight(), 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE); // Clamp to the edge as the blur filter would otherwise sample repeated texture values!
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, pingpongFBO[i]);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, pingpongColorBuffers[i], 0);
+
+    // There is no depth and stencil buffer bound, and the frame buffer is still complete
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+        std::cout << "ERROR:: Pingpong Framebuffer is not complete!" << std::endl;
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+}
+
+// ...
+
+// Using two framebuffers to apply Gaussian Blur
+bool horizontal = true;
+for (unsigned int i = 0; i != 10; ++i)
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, pingpongFBO[horizontal]);
+
+    blurMeshRender->GetMaterial()->GetShader()->SetInt("horizontal", horizontal);
+    if (i == 0)
+        blurMeshRender->GetMaterial()->SetTexture(0, brightColor);
+    else
+        blurMeshRender->GetMaterial()->SetTexture(0, pingpongColor[!horizontal]);
+    blurMeshRender->DrawMesh();
+
+    horizontal = !horizontal;
+}
+```
+
+```ad-note
+上示代码中，为了得到更好的模糊效果，使用 for 循环对图像进行了多次 `Gaussian 模糊` 。
+```
+
+应用 `Gaussian 模糊` 的片段着色器如下所示，其中通过 `horizontal` 标志区分当前渲染是进行水平方向的模糊，还是垂直方向的模糊：
+
+```glsl
+uniform bool horizontal;
+uniform float weight[5] = float[] (0.2270270270, 0.1945945946, 0.1216216216, 0.0540540541, 0.0162162162);
+
+void main()
+{
+    vec2 texelSize = 1.0 / textureSize(brightColor, 0); // gets size of single texel
+     vec3 result = texture(brightColor, TexCoords).rgb * weight[0];
+     if(horizontal)
+     {
+         for(int i = 1; i < 5; ++i)
+         {
+            result += texture(brightColor, TexCoords + vec2(texelSize.x * i, 0.0)).rgb * weight[i]; // Right part
+            result += texture(brightColor, TexCoords - vec2(texelSize.x * i, 0.0)).rgb * weight[i]; // Left part
+         }
+     }
+     else
+     {
+         for(int i = 1; i < 5; ++i)
+         {
+             result += texture(brightColor, TexCoords + vec2(0.0, texelSize.y * i)).rgb * weight[i]; // Up part
+             result += texture(brightColor, TexCoords - vec2(0.0, texelSize.y * i)).rgb * weight[i]; // Down Part
+         }
+     }
+
+     FragColor = vec4(result, 1.0);
+}
+```
+
+图 $a$ 经过 `Gaussian 模糊` 的得到的图 $c$ 如下所示：
+![(c)](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%206.png)
+
+## Blending both Textures
+
+最终将目标 Framebuffer 切换为 Default Framebuffer，并在片段着色器中将 $c$ 图 和 $b$ 图进行叠加（并非是 [Blending](Learn%20OpenGL%20-%20Ch%2017%20Blending.md) ） ，Shader 中叠加的代码如下：
+
+```glsl
+
+vec3 hdrColor = texture(screenTexture, TexCoords).rgb;
+if(usingBloom)
+{
+   vec3 bloomColor = texture(blurredBrightColor,TexCoords).rgb;
+   hdrColor += bloomColor;
+}
+```
+
+最后叠加得到的图，如下所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%207.png)
+
+
+# 源码：
+
+[main.cpp](https://www.notion.so/main-cpp-3566af2a887443b2892e1e49749aa950)
+
+渲染得到图 $a$ 和图 $b$：
+
+[object.vs](https://www.notion.so/object-vs-1d763a0fc7fd44acbfed3b302c4d8f4a)
+
+[object.fs](https://www.notion.so/object-fs-e71bfc4195664cb5ad80e060d2d761fa)
+
+对图 $a$ 进行模糊操作得到图 $c$：
+
+[postProcessing.vs](https://www.notion.so/postProcessing-vs-19d3be31053d461e8409e9c23fed42b7)
+
+[blur.fs](https://www.notion.so/blur-fs-7403576398c04be68bfba9f99fa4396c)
+
+将图 $a$ 和图 $c$ 进行叠加：
+
+[finalOutput.fs](https://www.notion.so/finalOutput-fs-537715e97d8b4b11aab28cdfbbe86c4c)
