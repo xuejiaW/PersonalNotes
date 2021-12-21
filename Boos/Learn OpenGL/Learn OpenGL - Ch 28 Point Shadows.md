@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2021-12-21
+updated: 2021-12-22
 ---
 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中计算的是光源向一个方向照射时（方向光或聚光灯）产生的阴影，如下图所示：
 

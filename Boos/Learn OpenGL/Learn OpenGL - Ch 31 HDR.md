@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-21
-updated: 2021-12-21
+updated: 2021-12-22
 ---
 默认在 Framebuffer 中，亮度和颜色都会被 Clamp 到 $0.0 \sim 1.0$ 的范围中，这就会导致当多个光源的亮度叠加，且总亮度大于 $1.0$ 时，都会被 Clamp 到 $1.0$ ，即都显示为白色，这样就丢失了大量的信息。
 

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp - nameof Expression.md",
-            "mode": "preview"
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp - nameof Expression.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp - nameof Expression.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp - nameof Expression.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,15 +152,15 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
-    "Notes/CSharp/CSharp - nameof Expression.md",
-    "Notes/CSharp/CSharp - Escape Sequences.md",
-    "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp - $ String Interpolation.md",
-    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 31 HDR.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
-    "Notes/OpenGL/OpenGL - Default Frambuffer.md"
+    "TO-DO.md",
+    "Notes/OpenGL/OpenGL - Default Frambuffer.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 28 Point Shadows.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 27 Shadow Mapping.md"
   ]
 }

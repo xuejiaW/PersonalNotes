@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2021-12-09
-updated: 2021-12-21
+updated: 2021-12-22
 ---
 
 # $ Character
