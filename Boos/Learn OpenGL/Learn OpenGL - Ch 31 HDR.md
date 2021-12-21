@@ -138,9 +138,11 @@ FragColor = vec4(mapped, 1.0);
 ```
 
 该算法的运行结果如下所示，从左至右分别为 `Exposure` 为 $0.3$，$1$ 和 $5$ 的情况：
+
 |                                                                 |                                                                 |                                                                 |
 | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Exposure = 0.3](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%202.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%203.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%204.png) |
+| ![Exposure = 0.3](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%202.png) | ![Exposure = 1](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%203.png) | ![Exposure = 5](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%204.png) |
+
 
 # 源码：
 
