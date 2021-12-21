@@ -274,3 +274,16 @@ vs_out.TangentFragPos = inverseTBN * vs_out.FragPos;
 ```
 
 之后在片段着色器中，不需要转换从法线贴图中读出的法线（已经在 Tangent 空间中），全都使用 `TangentLightPos, TangentViewPos, TangentFragPos` 运算即可。
+
+## 效果与源码：
+
+使用了 Tangent Space 纠正的效果及源码如下：
+![](assets/LearnOpenGL-Ch%2029%20Normal%20Mapping/Untitled%207.png)
+
+[main.cpp](https://www.notion.so/main-cpp-70d33a2c636349c19a6899808c4d062b)
+
+[Mesh_Quad_TBN.cpp](https://www.notion.so/Mesh_Quad_TBN-cpp-e4abf17d2c0148b5b7b744a4923d0a2c)
+
+[NormalMapping.vs](https://www.notion.so/NormalMapping-vs-1faf71c04a444806ae957aa8a900e724)
+
+[NormalMapping.fs](https://www.notion.so/NormalMapping-fs-dc4535d4037d40979ee4dd2a4ff83abf)
