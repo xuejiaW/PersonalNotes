@@ -1,4 +1,5 @@
 ---
+cssclass: [table-border]
 created: 2021-12-21
 updated: 2021-12-21
 ---
@@ -116,3 +117,39 @@ FragColor = vec4(mapped, 1.0);
 
 该算法的运行的结果如下，可以看到最亮处有了更多的信息：
 ![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%201.png)
+
+## Exposure Tone Mapping
+
+可以利用 `Tone Mapping` 实现类似调整曝光度的效果，称为 `Exposure Tone Mapping` 实现如下：
+
+```glsl
+const float gamma = 2.2;
+const float exposure = 1.0;
+
+vec3 hdrColor = texture(screenTexture, TexCoords).rgb;
+
+// Exposure Tone Mapping
+vec3 mapped = vec3(1.0) - exp(-hdrColor * exposure);
+
+// Gamma Correction 
+mapped = pow(mapped, vec3(1.0 / gamma));
+  
+FragColor = vec4(mapped, 1.0);
+```
+
+该算法的运行结果如下所示，从左至右分别为 `Exposure` 为 $0.3$，$1$ 和 $5$ 的情况：
+|                                                                 |                                                                 |                                                                 |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Exposure = 0.3](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%202.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%203.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%204.png) |
+
+# 源码：
+
+[main.cpp](https://www.notion.so/main-cpp-15e78baf25fc4c8a97fbbab6adab91c6)
+
+[tunnel.vs](https://www.notion.so/tunnel-vs-a40e0d18dc2e4ab690363f84dbd8a602)
+
+[tunnel.fs](https://www.notion.so/tunnel-fs-9a4889aa95c346808a170b2e4668963d)
+
+[hdr.vs](https://www.notion.so/hdr-vs-6e0a6f37d8f345468806c7470be413c5)
+
+[hdr.fs](https://www.notion.so/hdr-fs-a05d1e522ae246929341d4a88c5d97d6)
