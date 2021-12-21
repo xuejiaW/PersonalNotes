@@ -11,9 +11,25 @@ tags:
 `nameof` 是C# 6.0 支持的特性
 ```
 
-可以通过 `nameof` 表达式得到变量，类型，类成员的名称，如下所示：
+可以通过 `nameof` 表达式得到命名空间，变量，类型，类成员的名称，如下所示：
 
 ```csharp
-abc
+Debug.Log(nameof(System.Collections.Generic)); // Generic
+Debug.Log(nameof(List<int>)); // List
+Debug.Log(nameof(List<int>.Count)); // Count
+Debug.Log(nameof(List<int>.Add)); // Add
+
+var values = new List<int> { 1, 2, 3 };
+Debug.Log(nameof(values)); // values
+Debug.Log(nameof(values.Add)); // Add
+Debug.Log(nameof(values.Count)); // Count
+
+var @new =5;
+Debug.Log(nameof(@new));
 ```
+
+根据上述示例，可以发现：
+1. `nameof` 并不会输出完整的命名空间
+2. 3. `nameof` 并不会输出具体的泛型
+3. 使用 `nameof` 时，调用类成员时不一定依赖类实例
 
