@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
             "mode": "source"
           }
         }
@@ -80,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md"
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+                "file": "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,17 +160,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "986750e81ac0940f",
+  "active": "e63b104f446f7680",
   "lastOpenFiles": [
-    "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 29 Normal Mapping.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 08 Rotation in Three Dimensions.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 03 Multiple Coordinate Spaces.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 25 Blinn-Phong.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 26 Gamma Correction.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 27 Shadow Mapping.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 28 Point Shadows.md",
     "Boos/LearnOpenGL/LearnOpenGL-Ch 22 Geometry Shader.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md",
-    "Boos/LearnOpenGL/LearnOpenGL-Ch 24 Anti Aliasing.md",
-    "Boos/LearnOpenGL/LearnOpenGL.md"
+    "Boos/LearnOpenGL/LearnOpenGL-Ch 23 Instancing.md"
   ]
 }
