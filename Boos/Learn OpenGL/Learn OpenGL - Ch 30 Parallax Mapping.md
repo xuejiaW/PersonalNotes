@@ -82,6 +82,146 @@ vec3 color = texture(diffuseTexture, texCoords).rgb;
 vec3 normal = texture(normalMap, texCoords).rgb;
 ```
 
-|     |     |
-| --- | --- |
-|![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%204.png)     |     |
+|                                                                                |                                                                                |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| ![未使用 Parallex Mapping](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%204.png) | ![使用 Parallax Mapping](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%205.png) |
+
+可以看到右侧使用了 Parallax Mapping 时，在 Mesh 的边缘存在一些错误，这是因为 Texcoord 的偏移，导致了边缘的 Texcoord 数值已经超过了数值 $[0,1]$。对于这些超过范围的像素，直接丢弃即可，即：
+
+```glsl
+vec2 texCoords = ParallaxMapping(fs_in.TexCoords,viewDir);
+if(texCoords.x > 1.0 || texCoords.y > 1.0 || texCoords.x < 0.0 || texCoords.y < 0.0)
+    discard;
+```
+
+丢弃错误像素后的结果如下：
+![|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%206.png)
+
+# Steep Parallax Mapping
+
+如前所述， `Parallax Mapping` 方法仅是一个模拟近似的方法，因此在平面高度陡峭变化的情况下，可能无法得到理想的结果，如下图所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%207.png)
+
+图中，最终的采样点（棕色）与理想的采样点（蓝色）存在较大的高度误差，因此在后续纹理上采样到的结果可能也与理想中的情况，有较大的差距。
+
+在上述的实现中，当以某些角度观察砖块的接缝处（高度陡峭变化处）就会看到错误的现象，如下所示：
+![砖块的接缝处存在错误|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%208.png)
+
+解决该问题的方法是 陡峭视差映射（Steep Parallax Mapping），该方法用多次采样逼近得到更接近理想采样点的 Texcoord 偏移量，而不是直接用 \mathrm{H(A)} 求得偏移量，示意图如下：
+![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%209.png)
+
+```ad-tip
+陡峭视差映射使用的是逼近求值思想
+```
+
+陡峭视差映射中，将整个深度空间划分为多层（示意图中用黄线表示），视线方向与黄线的交点（图中紫色点）的 $xy$ 方向分量即表示该层的 Texcoord 的偏移，紫色点的 $z$ 方向分量值即为该层的深度。用此偏移在 Displacement Map 中采样，得到该层的偏移量在 Displacement Map 中所表示的深度（图中蓝色点）。
+
+```ad-note
+当层划分的足够密时，就会存在某一层它所得到的紫色点和蓝色点重合，即该层的深度（紫色点的 $z$ 分量），与用该层的偏移量在 Displacement Map 中读出的深度相同。 这一层的 Texcoord 偏移量就是理想中的偏移量。
+```
+
+最终需要的 Texcoord 偏移量，来自于第一个紫点在蓝点之下或重合的层。即第一个满足以下条件的层：层的 Texcoord 偏移从 Displacement Map 中读取的值小于等于该层的深度。在上图中，需要的偏移量来自 $\mathbf{T}_{3}$ 层。
+
+陡峭视差映射的代码视线如下：
+
+```glsl
+vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
+{
+    const float layersCount = 10; // 层数，越大效果越好，但性能消耗越多
+    float layerDepthStep = 1.0 / layersCount; // 每一层所表示的深度
+    float currentLayerDepth = 0.0; // 紫色点
+
+    vec2 P = viewDir.xy * depth_scale;
+    vec2 texCoordsBiasStep = P / layersCount; // 每一层的 Texcoord 偏移量
+
+    vec2 currentTexCoords = originTexCoords;
+    float currentDisplaymentValue = texture(displacementMap,currentTexCoords).r; // 蓝色点
+
+    while(currentLayerDepth < currentDisplaymentValue)
+    {
+        currentTexCoords -= texCoordsBiasStep;
+        currentDisplaymentValue = texture(displacementMap,currentTexCoords).r;
+        currentLayerDepth += layerDepthStep;
+    }
+
+    return currentTexCoords;
+}
+```
+
+使用该方法得到的效果如下，可以看到在砖块的接缝处已经没有了之前的错误显示效果：
+![|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2010.png)
+
+根据陡峭视差映射的示意图中，可以看到，视线越平行与平面，则每层表示的 Texcoord 偏移量就越大。因此可以用如下代码根据视线与平面的关系调整需要用到的层数：
+
+```glsl
+// // Hard Code layers count
+// const float layersCount = 10;
+
+// Adjust layers count according to the view direction
+const float minLayersCount = 10.0;
+const float maxLayersCount = 32.0;
+float layersCount = mix(maxLayersCount, minLayersCount, max(dot(vec3(0,0,1),viewDir),0.0));
+```
+
+其中的 `mix` 函数为 Shader 中支持的插值函数，其含义如下：
+
+$$mix(x,y,a) = x(1-a)+ya$$
+
+# Parallax Occlusion Mapping
+
+`陡峭视差映射`可以解决高度陡峭变化引发的失真问题，但因为是选取不同的层来决定 Texcoord 的偏移量，而不同层的偏移量又是离散的，这就会导致在高度陡峭变化的部分出现分层的现象，如下所示：
+![|300](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2011.png)
+
+这一问题最简单的解决方式就是增加层数，层数越多，分层的效果就越不明显。但这种解决方法会消耗非常多的性能。
+
+还有一种解决思路，就是避免直接使用某一层的 Texcoord 偏移量进行采样，而是用相邻层的 Texcoord 偏移量进行插值，并用插值得到的偏移量进行采样。有两种方法使用了这种思路， `浮雕视差映射（Relief Parallax Mapping）` 和 `视差遮蔽映射（Parallax Occlusion Mapping）` 。因为前者消耗的性能更多，而相对于后者效果提升并不明显，因此 `视差遮蔽映射（Parallax Occlusion Mapping）` 被使用的更多。
+
+```ad-note
+这里仅说明视差遮蔽映射
+```
+
+视差遮蔽映射的示意图如下：
+![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2012.png)
+
+图中 $\mathrm{T_3}$ 为陡峭视差映射中使用的层，$\mathrm{T_{2}}$ 为上一层。对于这两层，都用从 Displacement Map 中读取的深度值，减去层的深度值，即用蓝色点的深度值减去紫色点的深度值，该差值表示理想深度与实际层深度的差距。对于 $\mathrm{T_3}$ 层，该差值用 $below$ 表示，对于 $\mathrm{T_{2}}$ 层，该插值用 $beyond$ 表示。
+
+```ad-note
+$below$ 为负数， $beyond$ 为正数。
+```
+
+当 $below =0$ 时，应当用 $\mathrm{T_3}$ 层 Texcoord 偏移量，当 $below = \infty$ 时，应当用 $\mathrm{T_{2}}$ 层 Texcoord 的偏移量。因此定义插值的表达式为：
+
+$$\begin{array}{l} &weight = \frac{below}{below-beyond} \\\\ &texcoord = texcoord_{T_2}_weight + texcoord_{T_3}_(1-weight) \end{array}$$
+
+代码实现如下：
+
+```glsl
+vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
+{
+		// Same part in Steep Parallax Mapping
+		// ...
+
+    vec2 prevTexCoord = currentTexCoords + texCoordsBiasStep;
+    float previousLayerDepth = currentLayerDepth - layerDepthStep;
+
+    float belowSurfaceDepth = currentDisplaymentValue - currentLayerDepth; // Negative value
+    float beyondSurfaceDepth = texture(displacementMap,prevTexCoord).r - previousLayerDepth;
+
+    float weight = belowSurfaceDepth / (belowSurfaceDepth - beyondSurfaceDepth);
+
+    vec2 finalTexCoords = prevTexCoord * weight + currentTexCoords*(1.0 - weight);
+
+    return finalTexCoords;
+}
+```
+
+使用视差遮蔽映射的效果如下：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2013.png)
+
+<aside> 💡 陡峭视差映射和视差遮蔽映射解决的是当要表现的高度陡峭变化时引发的失真问题。
+
+</aside>
+
+## View Direction Issue
+
+使用了视差映射的平面，在视线与平面夹角过小时会产生错误的现象，如下所示：
