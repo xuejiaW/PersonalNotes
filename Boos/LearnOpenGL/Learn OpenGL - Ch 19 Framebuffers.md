@@ -30,7 +30,7 @@ glBindFramebuffer(GL_FRAMEBUFFER, fbo);
 1.  依附至少一个缓冲（颜色，深度，模板缓冲）
 2.  至少有一个颜色附件（color attachment）
 3.  所有的附件都是完整的（分配了内存）
-4.  4.  所有的缓冲都有相同的采样数（见 [Anti Aliasing](LearnOpenGL-Ch%2024%20Anti%20Aliasing.md)）
+4.  4.  所有的缓冲都有相同的采样数（见 [Anti Aliasing](Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing.md)）
 
 ```ad-note
 由上述条件1和2可知，只有颜色附件的帧缓冲，仍然是一个完整的帧缓冲

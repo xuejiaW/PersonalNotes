@@ -27,7 +27,7 @@ glEnable(GL_STENCIL_TEST);
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 ```
 
-在 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中我们可以通过 `glDepthMask`来控制ZWrite，在模版中则可以使用 `glStencilMas`来设置。 这个函数需要我们提供一个掩码（BitMask），它会与将要写入模版缓冲的值进行位运算。掩码默认设置为 `1`，这样就不会造成任何改变。如果我们想要关闭Stencil写入，则可以将其设置为0x00，这样所有写入的Stencil都为0，此时就等同于 `glDepthMask(GL_False)` 。
+在 [Depth Testing](Learn%20OpenGL%20-%20Ch%2015%20Depth%20Testing.md) 中我们可以通过 `glDepthMask`来控制ZWrite，在模版中则可以使用 `glStencilMas`来设置。 这个函数需要我们提供一个掩码（BitMask），它会与将要写入模版缓冲的值进行位运算。掩码默认设置为 `1`，这样就不会造成任何改变。如果我们想要关闭Stencil写入，则可以将其设置为0x00，这样所有写入的Stencil都为0，此时就等同于 `glDepthMask(GL_False)` 。
 
 # 模板函数
 

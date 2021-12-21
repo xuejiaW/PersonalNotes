@@ -5,7 +5,7 @@ cssclass: [table-border]
 ---
 # Phone 镜面反射效果
 
-在  [Ch 11 Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中介绍的都是 `Phone`式光照模型， `Phone`式光照模型在镜面反射时会存在一些不合理的情况，如下所示：
+在  [Ch 11 Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中介绍的都是 `Phone`式光照模型， `Phone`式光照模型在镜面反射时会存在一些不合理的情况，如下所示：
 ![|500](assets/LearnOpenGL-Ch%2025%20Blinn-Phong/Untitled.png)
 
 ```ad-warning

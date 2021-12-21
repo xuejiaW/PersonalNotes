@@ -1,11 +1,11 @@
 ---
 created: 2021-12-16
-updated: 2021-12-16
+updated: 2021-12-21
 ---
 
-这一章实际上只是 [Materials](LearnOpenGL-Ch%2012%20Materials.md)和 [Textures](LearnOpenGL-Ch%2004%20Textures.md) 两章内容的结合。
+这一章实际上只是 [Materials](Learn%20OpenGL%20-%20Ch%2012%20Materials.md)和 [Textures](Learn%20OpenGL%20-%20Ch%2004%20Textures.md) 两章内容的结合。
 
-[Materials](LearnOpenGL-Ch%2012%20Materials.md) 中，在片段着色器里定义了 `Material` 来表示物体对于光照的吸收性。但这样的做法下，一个物体所有的地方都是相同的 `Material` 属性，这肯定是与现实世界不符合的。
+[Materials](Learn%20OpenGL%20-%20Ch%2012%20Materials.md) 中，在片段着色器里定义了 `Material` 来表示物体对于光照的吸收性。但这样的做法下，一个物体所有的地方都是相同的 `Material` 属性，这肯定是与现实世界不符合的。
 
 因此这一章中使用贴图的颜色信息来取代 `Material` 中的 `vec3` 属性，这样就能做到物体不同的地方有不同的属性（对应贴图上不同点的颜色）。
 
@@ -38,7 +38,7 @@ uniform Material material;
 
 因为物体反射漫反射光与环境光表现的颜色基本是一样的，所以这里仅用漫反射光贴图。
 
-计算时用漫反射贴图和镜面反射贴图采样后的颜色取代 [LearnOpenGL-Ch 11 Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中材质的颜色分量。
+计算时用漫反射贴图和镜面反射贴图采样后的颜色取代 [Learn OpenGL - Ch 11 Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中材质的颜色分量。
 
 ```glsl
 vec3 ambientComponent = light.ambient * vec3(texture(material.diffuse,texcoord));
@@ -46,7 +46,7 @@ vec3 diffuseComponent=diff*light.diffuse*vec3(texture(material.diffuse,texcoord)
 vec3 specularComponent=spec*light.specular* vec3(texture(material.specular,texcoord));
 ```
 
-[Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中的计算如下：
+[Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中的计算如下：
 
 ```glsl
 vec3 ambientComponent = light.ambient * material.ambient;

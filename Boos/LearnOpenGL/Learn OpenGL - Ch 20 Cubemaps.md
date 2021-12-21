@@ -1,6 +1,6 @@
 ---
 created: 2021-12-17
-updated: 2021-12-18
+updated: 2021-12-21
 ---
 简单来说，立方体贴图就是一个包含了6个2D纹理的纹理，每个2D纹理都组成立方体的一个面。
 
@@ -145,14 +145,14 @@ scene.AddGameObject(sthElse);
 
 这里同样需要解决天空盒尺寸很小的问题，解决思路是将天空盒的深度信息改为1，即天空盒的深度信息值最大，此时只要深度缓冲被其他的任何模型进行过写入，那么天空盒的深度缓冲就不会通过。
 
-在 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中了解到一个片元的深度信息存储在它的 `z` 分量中，又从 [Coordinate System](LearnOpenGL-CH%2006%20Coordinate%20System.md) 中了解到对于一个片元而言，在投影变换时，需要进行 `z = z/w` 的操作，因此为了将最终片元的深度信息变为1，只要让 `w = z` 即可。
+在 [Depth Testing](Learn%20OpenGL%20-%20Ch%2015%20Depth%20Testing.md) 中了解到一个片元的深度信息存储在它的 `z` 分量中，又从 [Coordinate System](Learn%20OpenGL%20-%20Ch%2006%20Coordinate%20System.md) 中了解到对于一个片元而言，在投影变换时，需要进行 `z = z/w` 的操作，因此为了将最终片元的深度信息变为1，只要让 `w = z` 即可。
 
 ```glsl
 vec4 pos = projection * view *vec4(aPos, 1.0);
 gl_Position = pos.xyww;
 ```
 
-但还要考虑到那些没有被任何模型写入过的深度缓冲，它们的默认值也为1，而这些缓冲需要让天空盒的深度测试通过，因此在渲染天空盒前，需要将深度测试的通过条件由默认的 $<$改为 $\leq$，即通过 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中介绍的 `glDepthFunc` 函数。
+但还要考虑到那些没有被任何模型写入过的深度缓冲，它们的默认值也为1，而这些缓冲需要让天空盒的深度测试通过，因此在渲染天空盒前，需要将深度测试的通过条件由默认的 $<$改为 $\leq$，即通过 [Depth Testing](Learn%20OpenGL%20-%20Ch%2015%20Depth%20Testing.md) 中介绍的 `glDepthFunc` 函数。
 
 ```cpp
 scene.AddGameObject(sthElse);
@@ -175,7 +175,7 @@ scene.AddGameObject(skybox); // Render Skybox in the end
 
 ![](assets/LearnOpenGL-Ch%2020%20Cubemaps/Untitled%202.png)
 
-计算实现的反射方向的方法，如在 [Basic Lighting](LearnOpenGL-Ch%2011%20Basic%20Lighting.md) 中计算镜面光反射时，求光的反射方向一样。即先通过摄像机位置和片元位置求得实现方向，再利用 `reflect` 函数求得反射方向。
+计算实现的反射方向的方法，如在 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中计算镜面光反射时，求光的反射方向一样。即先通过摄像机位置和片元位置求得实现方向，再利用 `reflect` 函数求得反射方向。
 
 ```glsl
 vec3 viewDirection = normalize(position - cameraPos);

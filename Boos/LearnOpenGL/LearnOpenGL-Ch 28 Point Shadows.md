@@ -27,13 +27,13 @@ for(unsigned int i = 0; i < 6; i++)
 }
 ```
 
-还有一种方法是利用 [Geometry Shader](LearnOpenGL-Ch%2022%20Geometry%20Shader.md) ，通过一次绘制命令就能直接将深度信息写入到Cubemap 的六个面中。该方法将六个不同的 `LookAt` 方向（对应 Cubemap 的每个面）传入到 Geometry Shader 中，并将输入的三角形与这六个 `LookAt` 方向相乘，得到六个新的三角形。即可以理解为，使用这六个不同的 `LookAt` 方向将一个三角形转换到以 Cubemap 的每一个面作为屏幕坐标的坐标系中。
+还有一种方法是利用 [Geometry Shader](Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader.md) ，通过一次绘制命令就能直接将深度信息写入到Cubemap 的六个面中。该方法将六个不同的 `LookAt` 方向（对应 Cubemap 的每个面）传入到 Geometry Shader 中，并将输入的三角形与这六个 `LookAt` 方向相乘，得到六个新的三角形。即可以理解为，使用这六个不同的 `LookAt` 方向将一个三角形转换到以 Cubemap 的每一个面作为屏幕坐标的坐标系中。
 
-以下是使用 [Geometry Shader](LearnOpenGL-Ch%2022%20Geometry%20Shader.md) 方法渲染 `Depth Cubemap` 的具体步骤：
+以下是使用 [Geometry Shader](Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader.md) 方法渲染 `Depth Cubemap` 的具体步骤：
 
 ## Generate cubemap
 
-第一步是如创建一个 Cubemap，步骤与在 [Cubemaps](LearnOpenGL-Ch%2020%20Cubemaps.md) 中描述的类似：
+第一步是如创建一个 Cubemap，步骤与在 [Cubemaps](Learn%20OpenGL%20-%20Ch%2020%20Cubemaps.md) 中描述的类似：
 
 ```cpp
 glGenTextures(1, &depthCubemap);
@@ -162,7 +162,7 @@ void main()
 
 这里的顶点着色器与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中的基本相同。只不过在  [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，需要计算出 `FragPosLightSpace` 值，表示以光源为摄像机的摄像机坐标系下的坐标。在片段着色器中，会进一步利用该坐标采样二维的深度贴图。
 
-而这里生成得到的深度贴图是 Cubemap，如在 [Cubemaps](LearnOpenGL-Ch%2020%20Cubemaps.md) 中的描述，采样 Cubemap 使用的是方向，在这里需要用的就是从光源指向片元的方向，即不需要在顶点着色器中做额外计算，所以顶点着色器如下所示：
+而这里生成得到的深度贴图是 Cubemap，如在 [Cubemaps](Learn%20OpenGL%20-%20Ch%2020%20Cubemaps.md) 中的描述，采样 Cubemap 使用的是方向，在这里需要用的就是从光源指向片元的方向，即不需要在顶点着色器中做额外计算，所以顶点着色器如下所示：
 ```glsl
 #version 330 core
 
