@@ -8,7 +8,7 @@ updated: 2021-12-21
 [Normal Mapping](../Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md) 调整了表面的法线，让表面在光照的计算中能有更真实的表现。
 
 但一个真正的有凹凸变化的平面，即使在不考虑光照效果的情况下，也会与高度无变化的平面效果上存在区别。如以一定的角度去观察平面，如果平面存在凸出，则该凸出点会遮挡住后面的平面。如下所示，$V$ 为视线方向，如果平面是如黑线所示一样无高度变化，则视线会看到 $A$ 点，而如果平面如红线般存在高度变化，则实现会看到 $B$ 点。
-![](assets/3D%20Math%20Primer%20-%20Ch%2008%20Rotation%20in%20Three%20Dimensions/Untitled%203.png)
+![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled.png)
 
 为了让一个无凹凸变化的平面能展现出满足凹凸变化的平面效果，一个最直观的方法就是去调整平面的 Mesh。 Displacement Mapping 技术就是该思路。在 Displacement Mapping 中，会通过如下的一张 Height Map 去调整表面顶点的高度，即根据纹理去调整原先的 Mesh，得到一个新的有凹凸变化的 Mesh。
 ![|400](assets/3D%20Math%20Primer%20-%20Ch%2008%20Rotation%20in%20Three%20Dimensions/Untitled%201.png)
@@ -218,10 +218,21 @@ vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
 使用视差遮蔽映射的效果如下：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2013.png)
 
-<aside> 💡 陡峭视差映射和视差遮蔽映射解决的是当要表现的高度陡峭变化时引发的失真问题。
+```ad-note
+陡峭视差映射和视差遮蔽映射解决的是当要表现的高度陡峭变化时引发的失真问题。
+```
 
-</aside>
-
-## View Direction Issue
+# View Direction Issue
 
 使用了视差映射的平面，在视线与平面夹角过小时会产生错误的现象，如下所示：
+![|300](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2014.png)
+
+这种错误现象是视差映射的缺陷，无法被解决。也因此视差映射通常被用在地面或墙体这样不太会被平行观察的平面。
+
+# 源码：
+
+[main.cpp](https://www.notion.so/main-cpp-616f9835d1bb410288b22cdadb6a85c3)
+
+[parallaxMapping.vs](https://www.notion.so/parallaxMapping-vs-2b2e3c366d1342d189da007de83669a3)
+
+[parallaxMapping.fs](https://www.notion.so/parallaxMapping-fs-d1123bcab8d840fbbe168331c489d76d)
