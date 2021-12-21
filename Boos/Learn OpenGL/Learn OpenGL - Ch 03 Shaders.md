@@ -151,7 +151,7 @@ glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
 
 ## 结果与源码
 
-![|500](assets/LearnOpenGL-Ch%2003%20Shaders/GIF.gif)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2003%20Shaders/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/3.Shaders/main.cpp)
 

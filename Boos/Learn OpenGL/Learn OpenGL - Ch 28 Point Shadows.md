@@ -2,7 +2,7 @@
 created: 2021-12-20
 updated: 2021-12-21
 ---
-[Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中计算的是光源向一个方向照射时（方向光或聚光灯）产生的阴影，如下图所示：
+[Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中计算的是光源向一个方向照射时（方向光或聚光灯）产生的阴影，如下图所示：
 
 ![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%202.png)
 
@@ -11,7 +11,7 @@ updated: 2021-12-21
 对于点光源而言，它的照射方向是朝四面八方的，因此渲染深度贴图时无法使用单一的 `LookAt` 方向，如下图所示：
 ![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%201.png)
 
-这种情况下的阴影被称为 `Point Shadow` 。 `Point Shadow` 的计算过程与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中计算阴影的方式基本相同，只不过需要用 Cubemap 替代 Texture2D 作为阴影贴图，该阴影贴图被称为 `Depth Cubemap` 或 `Omonidirectional shadow mapping` 。
+这种情况下的阴影被称为 `Point Shadow` 。 `Point Shadow` 的计算过程与 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中计算阴影的方式基本相同，只不过需要用 Cubemap 替代 Texture2D 作为阴影贴图，该阴影贴图被称为 `Depth Cubemap` 或 `Omonidirectional shadow mapping` 。
 
 # Generating the depth cubemap
 
@@ -49,7 +49,7 @@ glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_BORDER);
 ```
 
-然后将其绑定到 Framebuffer 上，需要注意的是，因为这里要绑定的对象是 Cubemap 而不是 Texture2D，因此应当使用函数 `glFramebufferTexture` 而不是 `glFramebufferTexture2D` 。另外如同在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中提到的，因为绑定的 Framebuffer 没有颜色缓冲 ，即绑定的 Framebuffer是不完整的，因此需要将 `DrawBuffer` 和 `ReadBuffer` 设定为 `GL_NONE` ：
+然后将其绑定到 Framebuffer 上，需要注意的是，因为这里要绑定的对象是 Cubemap 而不是 Texture2D，因此应当使用函数 `glFramebufferTexture` 而不是 `glFramebufferTexture2D` 。另外如同在 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中提到的，因为绑定的 Framebuffer 没有颜色缓冲 ，即绑定的 Framebuffer是不完整的，因此需要将 `DrawBuffer` 和 `ReadBuffer` 设定为 `GL_NONE` ：
 
 ```cpp
 glGenFramebuffers(1, &depthMapFBO);
@@ -62,7 +62,7 @@ glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 ## Light Space transform
 
-如在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 的最后所述，点光源的深度贴图渲染需要用到透视投影，因此需要首先求得透视投影的 Projection 矩阵：
+如在 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 的最后所述，点光源的深度贴图渲染需要用到透视投影，因此需要首先求得透视投影的 Projection 矩阵：
 ```cpp
 float near = 1.0f;
 float far = 25.0f;
@@ -133,7 +133,7 @@ void main()
 }
 ```
 
-在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中使用的是平行光，所以用的是正交投影，也因此得到的深度信息是线性的。所以在得到平行光需要使用的深度贴图的过程中，片段着色器不需要做任何处理，渲染管线就会将线性的深度信息写入到绑定的 Framebuffer中。
+在 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中使用的是平行光，所以用的是正交投影，也因此得到的深度信息是线性的。所以在得到平行光需要使用的深度贴图的过程中，片段着色器不需要做任何处理，渲染管线就会将线性的深度信息写入到绑定的 Framebuffer中。
 
 而在这里，因为使用的是透视投影，而透视投影产生的深度信息是非线性的，所以这里的片段着色器需要手动的计算出线性的深度信息：
 
@@ -160,7 +160,7 @@ void main()
 
 ## Vertex Shader
 
-这里的顶点着色器与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中的基本相同。只不过在  [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，需要计算出 `FragPosLightSpace` 值，表示以光源为摄像机的摄像机坐标系下的坐标。在片段着色器中，会进一步利用该坐标采样二维的深度贴图。
+这里的顶点着色器与 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中的基本相同。只不过在  [Shadow Mapping](https://www.notion.so/Shadow-Mapping-b996d273749f4a72a82ee88fd72f73ed) 中，需要计算出 `FragPosLightSpace` 值，表示以光源为摄像机的摄像机坐标系下的坐标。在片段着色器中，会进一步利用该坐标采样二维的深度贴图。
 
 而这里生成得到的深度贴图是 Cubemap，如在 [Cubemaps](Learn%20OpenGL%20-%20Ch%2020%20Cubemaps.md) 中的描述，采样 Cubemap 使用的是方向，在这里需要用的就是从光源指向片元的方向，即不需要在顶点着色器中做额外计算，所以顶点着色器如下所示：
 ```glsl
@@ -231,10 +231,10 @@ float ShaderCalculation(vec3 fragPos, vec3 normal, vec3 lightDir)
 }
 ```
 
-片段着色器的其他部分与 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md) 中类似，结果如下，其中红色方块表示光源位置：
+片段着色器的其他部分与 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md) 中类似，结果如下，其中红色方块表示光源位置：
 ![](assets/LearnOpenGL-Ch%2028%20Point%20Shadows/Untitled%202%201.png)
 
-在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md)  中，为了产生软阴影，使用的 PCF 方法，在点光源的计算中同样可以运用。只不过在 [Shadow Mapping](LearnOpenGL-Ch%2027%20Shadow%20Mapping.md)中 PCF 的计算是通过一个二维的嵌套循分别在 $x,y$ 方向上取采样点，而这里因为用的是 Depth Cubemap，所以需要额外的 $z$ 方向，即需要使用三维的嵌套循环：
+在 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md)  中，为了产生软阴影，使用的 PCF 方法，在点光源的计算中同样可以运用。只不过在 [Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md)中 PCF 的计算是通过一个二维的嵌套循分别在 $x,y$ 方向上取采样点，而这里因为用的是 Depth Cubemap，所以需要额外的 $z$ 方向，即需要使用三维的嵌套循环：
 
 ```glsl
 float bias = max(0.05 * (1 - dot(normal, lightDir)), 0.01);

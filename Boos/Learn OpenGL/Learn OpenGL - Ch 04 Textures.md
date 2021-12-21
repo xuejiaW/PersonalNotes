@@ -8,7 +8,7 @@ updated: 2021-12-16
 
 如需要给一个三角形贴上砖块的纹理，可以如下设置，其中将三角形的左下角对应纹理的 $(0,0)$ 点。只需要为图形的各个顶点设置纹理坐标，其余部分会自动根据顶点的纹理坐标自动采样。
 
-![|300](assets/LearnOpenGL-Ch%2004%20Textures/Untitled.png)
+![|300](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled.png)
 
 # 纹理映射
 
@@ -21,7 +21,7 @@ updated: 2021-12-16
 - `GL_CLAMP_TO_EDGE`：边界拉伸
 - `GL_CLAMP_TO_BORDER` ：边界填充（需要设定填充颜色）
 
-![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%201.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%201.png)
 
 纹理映射可以分别对图片的三个轴进行设置，图片的三个轴称为 `S, T, R` ，并通过函数 `glTexParameter*` 设置，其中 `*` 表示要设置的参数的类型，如 `i` 表示int。设置代码如下：
 
@@ -38,15 +38,15 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
 
 纹理会用实际渲染的分辨率进行渲染，因此纹理会进行相应的拉伸或缩小。因为纹理和实际的像素并没有一一对应，所以实际的像素颜色要经过纹理的插值计算。插值方式有 `线性插值（GL_NEAREST）`和 `邻近插值（GL_LINEAR）`，如下所示：
 
-![临近插值|200](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%202.png)
+![临近插值|200](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%202.png)
 
-![线性插值|200](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%203.png)
+![线性插值|200](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%203.png)
 
 其中黑十字出现的地方是真实像素的位置，其他的大格表示纹理像素。临近插值的结果由距离最近的像素的颜色决定，线性插值的结果由附近多个像素的颜色平均值决定。
 
 临近插值的画面会导致颗粒感，线性插值的画面虽然更加平滑，但会显得模糊。
 
-![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%204%201.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%204%201.png)
 
 纹理过滤同样使用 `glTexParameter*` 设置，如下所示：
 
@@ -61,7 +61,7 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 OpenGL采用一个叫多级渐远纹理（Mipmap）的方法来解决这一问题，即有一系列纹理图像，后一个纹理图像的宽高是前一个纹理图像宽高的1/2。如下所示：
 
-![|300](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%205.png)
+![|300](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%205.png)
 
 可以通过调用函数 `glGenerateMipmaps` 生成Mipmap。
 
@@ -199,7 +199,7 @@ FragColor = texture(ourTexture, TexCoord);
 
 # 结果与源码
 
-![|400](assets/LearnOpenGL-Ch%2004%20Textures/Untitled%206.png)
+![|400](assets/Learn%20OpenGL%20-%20Ch%2004%20Textures/Untitled%206.png)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/4.Textures/main.cpp)
 
