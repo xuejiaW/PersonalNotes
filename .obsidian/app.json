@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 30 Parallax Mapping",
+  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 31 HDR",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
