@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "19196227a06a9f97",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b041534059858a0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6c2f54e41c69beb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "190a276a7261373e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c606169a612c3f56",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "783ab55e1e1aa886",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 419,
+    "collapsed": true
+  },
+  "right": {
+    "id": "086a6696003cb579",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9ec0dddb66d9d6b",
+        "type": "tabs",
+        "dimension": 43.48534201954398,
+        "children": [
+          {
+            "id": "a7e39143692349f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
+              }
+            }
+          },
+          {
+            "id": "4026a1071cb6fc93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ca729b6cf3c92769",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "37bd8f4e58a99db8",
+        "type": "tabs",
+        "dimension": 56.51465798045603,
+        "children": [
+          {
+            "id": "62ec0e0b8b0fa885",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.0078125,
+                  "close": false
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 335.5
+  },
+  "active": "8b041534059858a0",
+  "lastOpenFiles": [
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Notes/Unity/Unity - Gizmo.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
+    "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
+    "Notes/Unity/Unity - VSCode.md",
+    "Notes/Unity/Unity - Editor Windows.md",
+    "Notes/Unity/Unit - Mipmap Bias.md",
+    "Notes/Unity/Unity - Attributes.md"
+  ]
+}

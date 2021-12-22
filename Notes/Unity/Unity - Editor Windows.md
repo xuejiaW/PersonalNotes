@@ -2,7 +2,7 @@
 tags:
     - Unity
 created: 2021-12-13
-updated: 2021-12-14
+updated: 2021-12-22
 ---
 
 # Overview
@@ -49,7 +49,7 @@ class MyWindow : EditorWindow
 通过 `EditorWindow.GetWindow` 函数唤起窗口，该函数的泛型类型是定义需要唤起的窗口的类，并形参用来表示窗口的名称：
 
 上例的效果如下所示：
-![|400](assets/Unity-Editor%20Windows/GIF%2012-13-2021%2011-28-15%20AM.gif)
+![|400](assets/Unity%20-%20Editor%20Windows/GIF%2012-13-2021%2011-28-15%20AM.gif)
 
 # Implement Custom Window's GUI
 
@@ -64,4 +64,4 @@ void OnGUI()
 ```
 
 效果如下：
-![|400](assets/Unity-Editor%20Windows/image-20211213113234806.png)
+![|400](assets/Unity%20-%20Editor%20Windows/image-20211213113234806.png)

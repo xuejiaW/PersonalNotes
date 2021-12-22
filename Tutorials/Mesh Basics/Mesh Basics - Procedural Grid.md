@@ -19,3 +19,35 @@ Unity 场景内的每个物体本质上都是通过 `Mesh` 进行的渲染。
 
 # Creating a Grid of Vertices
 
+可通过如下代码，生成一系列 Grid 的顶点，并利用 [Gizmo](../../Notes/Unity/Unity%20-%20Gizmo.md) 绘制：
+```csharp
+[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+public class Grid : MonoBehaviour
+{
+    private Vector3[] vertices;
+    public int xSize, ySize;
+
+    private void Awake() { Generate(); }
+
+    private void Generate()
+    {
+        vertices = new Vector3[(xSize + 1) * (ySize + 1)];
+        for (int i = 0, y = 0; y <= ySize; y++)
+            for (int x = 0; x <= xSize; x++, i++)
+                vertices[i] = new Vector3(x, y);
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (vertices == null) return;
+        Gizmos.color = Color.black;
+        for (int i = 0; i != vertices.Length; ++i)
+            Gizmos.DrawSphere(vertices[i], 0.1f);
+    }
+}
+
+```
+
+此时效果如下：
+![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211222094813954.png)
+
