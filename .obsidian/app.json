@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 32 Bloom",
+  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 01 Hello Window",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

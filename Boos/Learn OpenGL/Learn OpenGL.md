@@ -1,6 +1,8 @@
 ---
 created: 2021-12-15
-updated: 2021-12-21
+updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 # Getting Started
 
@@ -48,3 +50,14 @@ updated: 2021-12-21
 [Ch 22 Geometry Shader](Learn%20OpenGL%20-%20Ch%2022%20Geometry%20Shader.md)
 [Ch 23 Instancing](Learn%20OpenGL%20-%20Ch%2023%20Instancing.md)
 [Ch 24 Anti Aliasing](Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing.md)
+
+# Advanced Lighting
+
+[Ch 25 Blinn-Phong](Learn%20OpenGL%20-%20Ch%2025%20Blinn-Phong.md)
+[Ch 26 Gamma Correction](Learn%20OpenGL%20-%20Ch%2026%20Gamma%20Correction.md)
+[Ch 27 Shadow Mapping](Learn%20OpenGL%20-%20Ch%2027%20Shadow%20Mapping.md)
+[Ch 28 Point Shadows](Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows.md)
+[Ch 29 Normal Mapping](Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md)
+[Ch 30 Parallax Mapping](Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping.md)
+[Ch 31 HDR](Learn%20OpenGL%20-%20Ch%2031%20HDR.md)
+[Ch 32 Bloom](Learn%20OpenGL%20-%20Ch%2032%20Bloom.md)

@@ -1,6 +1,8 @@
 ---
 created: 2021-12-14
 updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 # 渲染管线
 

@@ -1,6 +1,8 @@
 ---
 created: 2021-12-14
 updated: 2021-12-15
+tags:
+    - OpenGL
 ---
 # 引入相关库
 
