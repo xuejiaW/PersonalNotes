@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "28508de93b4d7c15",
+        "id": "6c7df9ad777388b7",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Unity/Unity - Attributes.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Unity/Unity - Attributes.md"
+              }
             }
           },
           {
@@ -85,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Unity/Unity - Attributes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Unity/Unity - Attributes.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -143,8 +150,9 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "28508de93b4d7c15",
+  "active": "6c7df9ad777388b7",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Attributes.md",
     "Notes/Unity/Unity - Attributes.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
@@ -153,7 +161,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 28 Point Shadows.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 27 Shadow Mapping.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 25 Blinn-Phong.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md"
   ]
 }
