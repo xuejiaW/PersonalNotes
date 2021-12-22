@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 01 Hello Window",
+  "attachmentFolderPath": "./assets/Procedural Grid",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
