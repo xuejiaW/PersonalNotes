@@ -1,7 +1,7 @@
 ---
 Alias: adb
 created: 2021-12-13
-updated: 2021-12-22
+updated: 2021-12-23
 ---
 
 # Shell 命令
@@ -43,7 +43,15 @@ adb shell am broadcast -a <action> -e<x> <Key> <Value>
 
 可支持的额外数据类型如下：
 ```text
-
+--ez  - boolean  
+--ei  - integer  
+--el  - long  
+--ef  - float  
+--eu  - uri  
+--eia - int array (separated by ',')  
+--ela - long array (separated by ',')  
+--efa - float array (separated by ',')  
+--esa - string array (separated by ',')
 ```
 
 ## Wifi 连接 ADB
