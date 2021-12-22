@@ -53,5 +53,25 @@ public class Grid : MonoBehaviour
 
 可以通过`Coroutine`，当顶点每隔 `0.05` 秒生成一个，代码如下所示：
 ```csharp
+private void Awake()
+{
+    StartCoroutine(Generate());
+}
 
+private IEnumerator Generate()
+{
+    WaitForSecondsRealtime wait = new WaitForSecondsRealtime(0.05f);
+    vertices = new Vector3[(xSize + 1) * (ySize + 1)];
+    for (int i = 0, y = 0; y <= ySize; y++)
+    {
+        for (int x = 0; x <= xSize; x++, i++)
+        {
+            vertices[i] = new Vector3(x, y);
+            yield return wait;
+        }
+    }
+}
 ```
+
+效果为：
+![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/GIF%2012-23-2021%207-51-34%20AM.gif)
