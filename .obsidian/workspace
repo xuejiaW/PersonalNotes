@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 16  Stencil Testing.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 15 Depth Testing.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 13 Lighting Maps.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 12 Materials.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 11 Basic Lighting.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 10 Color.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 09 Model  Loading.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 08 Framework.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 31 HDR.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 28 Point Shadows.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 27 Shadow Mapping.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 25 Blinn-Phong.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 23 Instancing.md"
   ]
 }
