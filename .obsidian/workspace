@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Attributes.md",
-            "mode": "source"
+            "file": "Notes/CSharp/CSharp - $ String Interpolation.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Attributes.md"
+                "file": "Notes/CSharp/CSharp - $ String Interpolation.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Attributes.md",
+                "file": "Notes/CSharp/CSharp - $ String Interpolation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Attributes.md",
+                "file": "Notes/CSharp/CSharp - $ String Interpolation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +137,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.0078125,
+                  "scale": 0.8854989543150409,
                   "close": false
                 }
               }
@@ -151,13 +151,13 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - $ String Interpolation.md",
+    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
+    "Notes/CSharp/CSharp - Escape Sequences.md",
     "Notes/Unity/Unity - Attributes.md",
     "Notes/Android Debug Bridge.md",
     "Notes/CSharp/CSharp - nameof Expression.md",
-    "Notes/CSharp/CSharp - Escape Sequences.md",
     "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp - $ String Interpolation.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 31 HDR.md"
