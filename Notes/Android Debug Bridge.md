@@ -32,11 +32,17 @@ wlan0     Link encap:UNSPEC    Driver cnss_pci
 通过 `am boradcast` 发送广播，如下所示：
 ```shell
 adb shell am broadcast -a <action>
-// adb shell am broadcast -a Com.ABC
+// adb shell am broadcast -a com.ABC
 ```
 
-后可以跟着 `-e<x> <key> <value>` 的格式传递额外数据，如
+后可以跟着 `-e<x> <key> <value>` 的格式传递额外数据，如下所示：
 ```shell
+adb shell am broadcast -a <action> -e<x> <Key> <Value>
+// adb shell am broadcast -a com.ABC --es foo "bar"
+```
+
+可支持的额外数据类型如下：
+```text
 
 ```
 
