@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+            "file": "Tutorials/Mesh Basics/Procedural Grid.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md"
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md"
               }
             }
           },
@@ -91,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+                "file": "Tutorials/Mesh Basics/Procedural Grid.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +152,7 @@
   },
   "active": "986750e81ac0940f",
   "lastOpenFiles": [
+    "Tutorials/Mesh Basics/Procedural Grid.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 31 HDR.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 30 Parallax Mapping.md",
@@ -161,7 +161,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 27 Shadow Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 25 Blinn-Phong.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 23 Instancing.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md"
   ]
 }
