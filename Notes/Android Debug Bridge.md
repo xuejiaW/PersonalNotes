@@ -1,7 +1,7 @@
 ---
 Alias: adb
 created: 2021-12-13
-updated: 2021-12-15
+updated: 2021-12-22
 ---
 
 # Shell 命令
@@ -26,6 +26,19 @@ wlan0     Link encap:UNSPEC    Driver cnss_pci
 ```
 
 其中 `inet addr` 后跟着的即为 IP 地址，示例中为 `192.168.2.11`。
+
+## 发送广播
+
+通过 `am boradcast` 发送广播，如下所示：
+```shell
+adb shell am broadcast -a <action>
+// adb shell am broadcast -a Com.ABC
+```
+
+后可以跟着 `-e<x> <key> <value>` 的格式传递额外数据，如
+```shell
+
+```
 
 ## Wifi 连接 ADB
 

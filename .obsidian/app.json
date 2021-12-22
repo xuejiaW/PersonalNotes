@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity - Attributes",
+  "attachmentFolderPath": "./assets/Android Debug Bridge",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
