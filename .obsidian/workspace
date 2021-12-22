@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "986750e81ac0940f",
+        "id": "8b041534059858a0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android Debug Bridge.md",
+            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android Debug Bridge.md"
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -137,7 +138,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8854989543150409,
+                  "scale": 0.0078125,
                   "close": false
                 }
               }
@@ -149,17 +150,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "986750e81ac0940f",
+  "active": "8b041534059858a0",
   "lastOpenFiles": [
-    "Notes/Android Debug Bridge.md",
-    "Notes/CSharp/CSharp - $ String Interpolation.md",
-    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp - Escape Sequences.md",
-    "Notes/Unity/Unity - Attributes.md",
-    "Notes/CSharp/CSharp - nameof Expression.md",
-    "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-    "TO-DO.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 31 HDR.md"
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Notes/Unity/Unity - Gizmo.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
+    "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
+    "Notes/Unity/Unity - VSCode.md",
+    "Notes/Unity/Unity - Editor Windows.md",
+    "Notes/Unity/Unit - Mipmap Bias.md",
+    "Notes/Unity/Unity - Attributes.md"
   ]
 }

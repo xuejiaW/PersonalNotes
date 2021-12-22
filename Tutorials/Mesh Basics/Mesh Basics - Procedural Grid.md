@@ -51,3 +51,7 @@ public class Grid : MonoBehaviour
 此时效果如下：
 ![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211222094813954.png)
 
+可以通过`Coroutine`，当顶点每隔 `0.05` 秒生成一个，代码如下所示：
+```csharp
+
+```
