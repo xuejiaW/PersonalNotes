@@ -1,6 +1,8 @@
 ---
 created: 2021-12-15
 updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 # 坐标系统
 

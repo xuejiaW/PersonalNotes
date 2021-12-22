@@ -2,6 +2,8 @@
 created: 2021-12-15
 updated: 2021-12-22
 cssclass: [table-border]
+tags:
+    - OpenGL
 ---
 
 # Assimp 编译

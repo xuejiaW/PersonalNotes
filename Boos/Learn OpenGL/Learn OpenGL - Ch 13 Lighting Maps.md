@@ -1,6 +1,8 @@
 ---
 created: 2021-12-16
 updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 
 这一章实际上只是 [Materials](Learn%20OpenGL%20-%20Ch%2012%20Materials.md)和 [Textures](Learn%20OpenGL%20-%20Ch%2004%20Textures.md) 两章内容的结合。

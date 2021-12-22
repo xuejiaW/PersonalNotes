@@ -1,6 +1,8 @@
 ---
 created: 2021-12-16
 updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 # 深度缓冲
 

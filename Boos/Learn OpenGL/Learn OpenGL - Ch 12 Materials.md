@@ -1,6 +1,8 @@
 ---
 created: 2021-12-16
 updated: 2021-12-22
+tags:
+    - OpenGL
 ---
 
 这一章与 [Color](Learn%20OpenGL%20-%20Ch%2010%20Color.md) 及 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 内容实际一致，但进行了进一步的封装。
