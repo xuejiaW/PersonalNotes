@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       },
@@ -63,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -80,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md"
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
               }
             }
           },
@@ -101,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,10 +161,10 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "027a3e63e9642c6e",
+  "active": "3743ece98be08fe9",
   "lastOpenFiles": [
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Notes/Unity/Unity - VSCode.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 05 Transformations.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",

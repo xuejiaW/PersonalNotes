@@ -69,7 +69,7 @@ void main()
 
 `Tangent Space` 是一个以法线贴图中所表示的每个表面作为本地坐标系的坐标系，因此在 Tangent Space 中法线都大约在 $(0,0,1)$ 附近。
 
-将三角形从 Tangent Space 转换到其他坐标系下的矩阵称为 `TBN 矩阵（Tangent, Bitangent,Normal）` ，其中 `Tangent` ， `Bittangent` 和 `Normal` 分别为三个互相垂直的单位向量， `Tangent` 与纹理定义的 `U` 方向平行， `Bitangent` 与纹理定义的 `V` 方向平行， `Normal` 即为从纹理中读出的法线方向。
+将三角形从 Tangent Space 转换到其他坐标系下的矩阵称为 `TBN 矩阵（Tangent, Bitangent,Normal）` ，其中 `Tangent` ， `Bitangent` 和 `Normal` 分别为三个互相垂直的单位向量， `Tangent` 与纹理定义的 `U` 方向平行， `Bitangent` 与纹理定义的 `V` 方向平行， `Normal` 即为从纹理中读出的法线方向。
 
 ```ad-note
 如在 [Camera](Learn%20OpenGL%20-%20Ch%2007%20Camera.md)  中定义 View 矩阵相似，使用三个互相垂直的单位向量，就能定义出一个转换到以该三个单位向量组成的坐标系的矩阵。

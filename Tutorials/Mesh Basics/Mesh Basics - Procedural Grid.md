@@ -160,3 +160,8 @@ private void Generate()
 
 ![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223094537578.png)
 
+但因为 Normal Map 中的法线是定义在 [Tangent Space](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md#Tangent%20Space) 中，因此为了让法线贴图能正常的被解析，还需要为其指定 `Tangent` 及 `Bitangent` 方向。
+
+在 Unity 中仅需要为顶点指明 `Tangent` 方向，`Bitangent` 方向可以通过 `Tangent` 方向与 `Normal` 方向叉乘得到。
+
+在 Unity 中，`Tangent` 方向用一个 `Vector4` 表示，其中第四个分量必然是 $1$ 或 $-1$
