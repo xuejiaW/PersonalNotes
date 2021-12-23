@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -153,14 +152,14 @@
   "active": "3743ece98be08fe9",
   "lastOpenFiles": [
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Notes/Unity/Unity - VSCode.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 05 Transformations.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Tutorials/Mesh Basics/assets/Mesh Basics - Procedural Grid/GIF 12-23-2021 7-51-34 AM.gif",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Notes/Unity/Unity - Gizmo.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
-    "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
-    "Notes/Unity/Unity - VSCode.md",
-    "Notes/Unity/Unity - Editor Windows.md"
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md"
   ]
 }

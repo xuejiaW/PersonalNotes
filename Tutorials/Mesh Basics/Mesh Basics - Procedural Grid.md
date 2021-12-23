@@ -1,6 +1,7 @@
 ---
 created: 2021-12-20
 updated: 2021-12-23
+cssclass: [table-border]
 tags:
     - Unity
     - Catlike
@@ -145,4 +146,17 @@ private void Generate()
 此时效果如下所示：
 ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223090352014.png)
 
-因为此时生成的 Mesh 的 `xSize` 和 `ySize` 分别为 `10` 和 `5` ，即长宽比例为 $2:1$可以看到因为
+因为此时生成的 Mesh 的 `xSize` 和 `ySize` 分别为 `10` 和 `5` ，即长宽比例为 $2:1$，因此可以看到图形存在一部分的拉伸。
+
+为了解决这个问题，可以修改材质中的 `Tiling` ，将其由 $(1,1)$ 修改为 $(2,1)$，此时效果如下所示：
+
+|                                                                               |                                                                               |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223094251492.png) | ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223094402735.png) |
+
+## Normal Map
+
+为了增加细节还可以使用 [Normal Mapping](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md)
+
+![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223094537578.png)
+
