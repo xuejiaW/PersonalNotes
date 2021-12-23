@@ -145,3 +145,4 @@ private void Generate()
 此时效果如下所示：
 ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223090352014.png)
 
+因为此时生成的 Mesh 的 `xSize` 和 `ySize` 分别为 `10` 和 `5` ，即长宽比例为 $2:1$可以看到因为
