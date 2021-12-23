@@ -92,4 +92,12 @@ private void Generate()
 }
 ```
 
-Unity 中默认的正向 [Face Culling](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling.md) 
+在生成 Triangles 的嵌套循环中，每一次循环生成一个 Grid 的两个 Triangle，且[Face Culling](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling.md) 的顺序是顺时针，此为 Unity 对正向面的顺序要求。
+
+# Generating Additional Vertex Data
+
+```ad-note
+Unity 默认的顶点法线方向为 $(0,0,1)$
+```
+
+在现实生活中，法线是针对一个平面而言的，但在
