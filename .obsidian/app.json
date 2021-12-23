@@ -10,5 +10,7 @@
   "useTab": false,
   "vimMode": true,
   "strictLineBreaks": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "legacyEditor": false,
+  "livePreview": true
 }
