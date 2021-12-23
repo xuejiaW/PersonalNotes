@@ -164,4 +164,29 @@ private void Generate()
 
 在 Unity 中仅需要为顶点指明 `Tangent` 方向，`Bitangent` 方向可以通过 `Tangent` 方向与 `Normal` 方向叉乘得到。
 
-在 Unity 中，`Tangent` 方向用一个 `Vector4` 表示，其中第四个分量必然是 $1$ 或 $-1$
+在 Unity 中，`Tangent` 方向用一个 `Vector4` 表示，其中第四个分量必然是 $1$ 或 $-1$，该分量主要用来决定 `Bitangent` 方向是否需要进行取反操作，该值通常为 $-1$。
+
+在示例中，因为定义的是一个平面，因此可以直接设定 `Tangent` 为 $(1,0,0,-1)$。指定 `Tangent` 的代码如下：
+```csharp
+private void Generate()
+{
+    //...
+    Vector4[] tangents = new Vector4[vertices.Length];
+    Vector4 tangent = new Vector4(1f, 0f, 0f, -1f);
+
+    for (int i = 0, y = 0; y <= ySize; y++)
+    {
+        for (int x = 0; x <= xSize; x++, i++)
+        {
+            vertices[i] = new Vector3(x, y);
+            uv[i] = new Vector2((float)x / xSize, (float)y / ySize);
+            tangents[i] = tangent;
+        }
+    }
+
+    // ...
+    mesh.tangents = tangents;
+    // ...
+}
+
+```
