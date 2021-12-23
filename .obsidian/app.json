@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Mesh Basics - Procedural Grid",
+  "attachmentFolderPath": "./assets/C++ - Mutex",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
@@ -10,7 +10,5 @@
   "useTab": false,
   "vimMode": true,
   "strictLineBreaks": false,
-  "showLineNumber": true,
-  "legacyEditor": true,
-  "livePreview": true
+  "showLineNumber": true
 }
