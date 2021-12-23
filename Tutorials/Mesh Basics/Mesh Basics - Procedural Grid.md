@@ -51,30 +51,11 @@ public class Grid : MonoBehaviour
 此时效果如下：
 ![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211222094813954.png)
 
-可以通过`Coroutine`，当顶点每隔 `0.05` 秒生成一个，代码如下所示：
-```csharp
-private void Awake()
-{
-    StartCoroutine(Generate());
-}
+# Creating the Mesh
 
-private IEnumerator Generate()
-{
-    WaitForSecondsRealtime wait = new WaitForSecondsRealtime(0.05f);
-    vertices = new Vector3[(xSize + 1) * (ySize + 1)];
-    for (int i = 0, y = 0; y <= ySize; y++)
-    {
-        for (int x = 0; x <= xSize; x++, i++)
-        {
-            vertices[i] = new Vector3(x, y);
-            yield return wait;
-        }
-    }
-}
+上部分已经生成了 Mesh 需要的顶点，但需要将这些顶点传递给 Unity 的 `MeshFilter` 中的 Mesh，同时需要为其创建三角形，如下所示：
+```csharp
+
 ```
 
-效果为：
-![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/GIF%2012-23-2021%207-51-34%20AM.gif)
-
-# Creating the Mesh
 
