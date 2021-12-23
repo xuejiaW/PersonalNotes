@@ -15,6 +15,9 @@ Unity 场景内的每个物体本质上都是通过 `Mesh` 进行的渲染。
 在 Unity 中如果渲染一个 Mesh，最少需要两个组件 `Mesh Filter` 和 `Mesh Renderer`，前者会包含对 Mesh 的引用，后者会负责 Mesh 的真正渲染。
 ![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211222083208337.png)
 
+在 `Mesh Renderer` 中可以为需要渲染的 Mesh 设置材质，本部分使用 Unity 默认的 `Standard` 材质，并使用如下贴图作为 `Albedo` 分量：
+![|300](assets/Mesh%20Basics%20-%20Procedural%20Grid/01-uv-texture.png)
+
 # Creating a Grid of Vertices 
 可通过如下代码，生成一系列 Grid 的顶点，并利用 [Gizmo](../../Notes/Unity/Unity%20-%20Gizmo.md) 绘制：
 ```csharp
@@ -99,6 +102,8 @@ private void Generate()
 
 # Generating Additional Vertex Data
 
+## Normal
+
 ```ad-note
 Unity 默认的顶点法线方向为 $(0,0,1)$
 ```
@@ -107,3 +112,11 @@ Unity 默认的顶点法线方向为 $(0,0,1)$
 在现实生活中，法线是针对一个平面而言的，但在图形学中往往为顶点中添加法线信息。在由法线构成的平面中，平面上的法线会由顶点中的法线插值决定。
 在有光照计算时，当构成平面的两个顶点有不同的法线值时，这样的插值做法就可以让平面 “看起来” 有弧度，相对于通过顶点细分构成的全面更节省性能。
 ```
+
+在 Unity 中可以调用函数 `RecalculateNormals` 自动为顶点生成 Normal 数据，如下所示：
+```csharp
+mesh.RecalculateNormals();
+```
+
+## UV
+
