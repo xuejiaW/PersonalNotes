@@ -120,3 +120,17 @@ mesh.RecalculateNormals();
 
 ## UV
 
+可以在生成顶点时同时计算顶点的 UV 值。通常而言，为一个平面设定的 UV 值会覆盖 $0 \sim 1$ 的范围。生成 `UV` 部分代码如下所示：
+```csharp
+        for (int i = 0, y = 0; y <= ySize; y++)
+        {
+            for (int x = 0; x <= xSize; x++, i++)
+            {
+                vertices[i] = new Vector3(x, y);
+                uv[i] = new Vector2((float)x/xSize, (float)y / ySize);
+            }
+        }
+
+
+```
+
