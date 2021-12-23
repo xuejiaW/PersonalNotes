@@ -72,7 +72,7 @@ void main()
 将三角形从 Tangent Space 转换到其他坐标系下的矩阵称为 `TBN 矩阵（Tangent, Bitangent,Normal）` ，其中 `Tangent` ， `Bittangent` 和 `Normal` 分别为三个互相垂直的单位向量， `Tangent` 与纹理定义的 `U` 方向平行， `Bitangent` 与纹理定义的 `V` 方向平行， `Normal` 即为从纹理中读出的法线方向。
 
 ```ad-note
-如在 [[Camera](LearnOpenGL-Ch%2007%20Camera.md) 中定义 View 矩阵相似，使用三个互相垂直的单位向量，就能定义出一个转换到以该三个单位向量组成的坐标系的矩阵。
+如在 [Camera](Learn%20OpenGL%20-%20Ch%2007%20Camera.md)  中定义 View 矩阵相似，使用三个互相垂直的单位向量，就能定义出一个转换到以该三个单位向量组成的坐标系的矩阵。
 ```
 
 由 `TBN` 三个轴形成的 Tangent Space 的示意图如下所示， $T$ 轴即通常在纹理表示时用的 $U$ 轴， $B$ 轴即通常在纹理表示时用的 $V$ 轴：
