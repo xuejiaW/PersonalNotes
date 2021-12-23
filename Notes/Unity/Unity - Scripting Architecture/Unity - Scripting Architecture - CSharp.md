@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2021-12-13
-updated: 2021-12-23
+updated: 2021-12-24
 ---
 
 # C# Version
