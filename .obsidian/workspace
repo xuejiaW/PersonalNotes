@@ -153,6 +153,7 @@
   "active": "8b041534059858a0",
   "lastOpenFiles": [
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Notes/Obsidian/Obsidian-CSS Snippets.md",
     "Notes/Unity/Unity - Gizmo.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
@@ -160,7 +161,6 @@
     "Notes/Unity/Unity-Scripting Architecture/Unity-Scripting Architecture-Overview.md",
     "Notes/Unity/Unity - VSCode.md",
     "Notes/Unity/Unity - Editor Windows.md",
-    "Notes/Unity/Unit - Mipmap Bias.md",
-    "Notes/Unity/Unity - Attributes.md"
+    "Notes/Unity/Unit - Mipmap Bias.md"
   ]
 }
