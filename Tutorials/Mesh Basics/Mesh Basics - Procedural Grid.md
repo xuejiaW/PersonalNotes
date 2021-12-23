@@ -94,10 +94,15 @@ private void Generate()
 
 在生成 Triangles 的嵌套循环中，每一次循环生成一个 Grid 的两个 Triangle，且[Face Culling](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling.md) 的顺序是顺时针，此为 Unity 对正向面的顺序要求。
 
+此时的效果如下所示：
+![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223084615932.png)
+
 # Generating Additional Vertex Data
 
 ```ad-note
 Unity 默认的顶点法线方向为 $(0,0,1)$
 ```
 
-在现实生活中，法线是针对一个平面而言的，但在
+```ad-note
+在现实生活中，法线是针对一个平面而言的，但在图形学中往往为顶点中添加法线信息。在由法线构成的平面中，平面上的法线会由顶点中的法线插值决定。在有光照计算时，这样的插值做法就可以让一个本是平面的面，“看起来” 有弧度，相对于通过顶点细分构成的全面更节省性能。
+```
