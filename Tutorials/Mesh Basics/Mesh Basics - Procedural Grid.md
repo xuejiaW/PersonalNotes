@@ -166,7 +166,9 @@ private void Generate()
 
 在 Unity 中，`Tangent` 方向用一个 `Vector4` 表示，其中第四个分量必然是 $1$ 或 $-1$，该分量主要用来决定 `Bitangent` 方向是否需要进行取反操作，该值通常为 $-1$。
 
-在示例中，因为定义的是一个平面，因此可以直接设定 `Tangent` 为 $(1,0,0,-1)$。指定 `Tangent` 的代码如下：
+在示例中，因为定义的是一个平面，因此可以直接设定 `Tangent` 为 $(1,0,0,-1)$。
+
+指定 `Tangent` 的代码如下：
 ```csharp
 private void Generate()
 {
@@ -190,3 +192,13 @@ private void Generate()
 }
 
 ```
+
+此时的效果如下所示：
+
+|     |     |
+| --- | --- |
+|  ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211224080244159.png)   |   ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211224080254193.png) | 
+
+
+
+
