@@ -24,3 +24,6 @@ updated: 2021-12-24
         [Unity JSON performance comparison (LitJson, NewtonsoftJson, SimpleJSON) - Programmer Sought](https://programmersought.com/article/96576253892/)
 - [ ] C# IEqualityComparer
         [Write And Use IEqualityComparer in C# | Khalid Abuhakmeh](https://khalidabuhakmeh.com/write-and-use-iequalitycomparer)
+- [ ] C# Initialize Auto Property
+        [Auto-Implemented Properties - C# Programming Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
+        [constructor - What is the best way to give a C# auto-property an initial value? - Stack Overflow](https://stackoverflow.com/questions/40730/what-is-the-best-way-to-give-a-c-sharp-auto-property-an-initial-value)
