@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-            "mode": "source"
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
+            "mode": "preview"
           }
         }
       },
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,6 +164,8 @@
   },
   "active": "3743ece98be08fe9",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 01 Hello Window.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Notes/Unity/Unity - VSCode.md",
@@ -171,8 +173,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Tutorials/Mesh Basics/assets/Mesh Basics - Procedural Grid/GIF 12-23-2021 7-51-34 AM.gif",
     "Notes/Obsidian/Obsidian-CSS Snippets.md",
-    "Notes/Unity/Unity - Gizmo.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md"
+    "Notes/Unity/Unity - Gizmo.md"
   ]
 }
