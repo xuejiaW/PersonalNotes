@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2021-12-22
+updated: 2021-12-24
 ---
 - [x] 图片并行显示
 - [x] Projection 笔记移植
@@ -22,3 +22,5 @@ updated: 2021-12-22
 - [ ]   整理 Default Framebuffer 笔记，[OpenGL - Default Frambuffer](Notes/OpenGL/OpenGL%20-%20Default%20Frambuffer.md)
 - [ ]   Simple Json 笔记
         [Unity JSON performance comparison (LitJson, NewtonsoftJson, SimpleJSON) - Programmer Sought](https://programmersought.com/article/96576253892/)
+- [ ] C# IEqualityComparer
+        [Write And Use IEqualityComparer in C# | Khalid Abuhakmeh](https://khalidabuhakmeh.com/write-and-use-iequalitycomparer)

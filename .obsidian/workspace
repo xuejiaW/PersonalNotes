@@ -4,24 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "3743ece98be08fe9",
+        "id": "4ab98a03009a0d0a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
-            "mode": "preview"
-          }
-        }
-      },
-      {
-        "id": "027a3e63e9642c6e",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
-            "mode": "preview"
+            "file": "TO-DO.md",
+            "mode": "source"
           }
         }
       }
@@ -50,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Tangent",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,13 +48,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -82,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -103,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -150,8 +137,8 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7478537827650177,
-                  "close": true
+                  "scale": 0.8854989543150409,
+                  "close": false
                 }
               }
             }
@@ -162,17 +149,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "3743ece98be08fe9",
+  "active": "4ab98a03009a0d0a",
   "lastOpenFiles": [
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 01 Hello Window.md",
-    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
-    "Notes/Unity/Unity - VSCode.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 05 Transformations.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
-    "Tutorials/Mesh Basics/assets/Mesh Basics - Procedural Grid/GIF 12-23-2021 7-51-34 AM.gif",
-    "Notes/Obsidian/Obsidian-CSS Snippets.md",
-    "Notes/Unity/Unity - Gizmo.md"
+    "TO-DO.md",
+    "Notes/C++/C++ - Mutex.md",
+    "Notes/Untitled.md",
+    "Notes/Android Debug Bridge.md",
+    "Notes/CSharp/CSharp - $ String Interpolation.md",
+    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
+    "Notes/CSharp/CSharp - Escape Sequences.md",
+    "Notes/Unity/Unity - Attributes.md",
+    "Notes/CSharp/CSharp - nameof Expression.md",
+    "Notes/CSharp/CSharp - Partial Classes And Methods.md"
   ]
 }
