@@ -22,8 +22,9 @@ updated: 2021-12-24
 - [ ]   整理 Default Framebuffer 笔记，[OpenGL - Default Frambuffer](Notes/OpenGL/OpenGL%20-%20Default%20Frambuffer.md)
 - [ ]   Simple Json 笔记
         [Unity JSON performance comparison (LitJson, NewtonsoftJson, SimpleJSON) - Programmer Sought](https://programmersought.com/article/96576253892/)
-- [ ] C# IEqualityComparer
+- [ ] C# IEqualityComparer / IEquatable
         [Write And Use IEqualityComparer in C# | Khalid Abuhakmeh](https://khalidabuhakmeh.com/write-and-use-iequalitycomparer)
+        当 Dictionary 未指定 EqualityComparer 时，让每个 Element 继承 IEquatable 可以修改 Dictionary 判断元素相等的逻辑。
 - [ ] C# Initialize Auto Property
         [Auto-Implemented Properties - C# Programming Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
         [constructor - What is the best way to give a C# auto-property an initial value? - Stack Overflow](https://stackoverflow.com/questions/40730/what-is-the-best-way-to-give-a-c-sharp-auto-property-an-initial-value)
