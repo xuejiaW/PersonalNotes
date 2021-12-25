@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "19196227a06a9f97",
+    "type": "split",
+    "children": [
+      {
+        "id": "3743ece98be08fe9",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "TO-DO.md",
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "027a3e63e9642c6e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6c2f54e41c69beb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "190a276a7261373e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c606169a612c3f56",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "783ab55e1e1aa886",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "Tangent",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 419,
+    "collapsed": true
+  },
+  "right": {
+    "id": "086a6696003cb579",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9ec0dddb66d9d6b",
+        "type": "tabs",
+        "dimension": 43.48534201954398,
+        "children": [
+          {
+            "id": "a7e39143692349f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TO-DO.md"
+              }
+            }
+          },
+          {
+            "id": "4026a1071cb6fc93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ca729b6cf3c92769",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TO-DO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "37bd8f4e58a99db8",
+        "type": "tabs",
+        "dimension": 56.51465798045603,
+        "children": [
+          {
+            "id": "62ec0e0b8b0fa885",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "TO-DO.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.7478537827650177,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 335.5
+  },
+  "active": "3743ece98be08fe9",
+  "lastOpenFiles": [
+    "TO-DO.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 09 Model  Loading.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 01 Hello Window.md",
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+    "Notes/Unity/Unity - VSCode.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 05 Transformations.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+    "Tutorials/Mesh Basics/assets/Mesh Basics - Procedural Grid/GIF 12-23-2021 7-51-34 AM.gif"
+  ]
+}
