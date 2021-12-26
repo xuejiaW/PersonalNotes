@@ -374,7 +374,7 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 ## Word Splitting for Simplified Chinese in Edit Mode[^14]
 
-该插件解决 Obsidian 中双击选中中文分词时错误效果的问题，在 Obsidian 默认的实现中会将一个中文短句作为一个中文词语被选中
+该插件解决 Obsidian 中双击选中中文分词时错误效果的问题，在 Obsidian 默认的实现中会错误的将一整个中文短语作为单词被
 
 # Reference
 
