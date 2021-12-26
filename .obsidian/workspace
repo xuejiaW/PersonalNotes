@@ -9,18 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian-Plugins.md",
-            "mode": "preview"
-          }
-        }
-      },
-      {
-        "id": "2c441d22d47a0e49",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/CSharp/assets/CSharp - Properties.md",
+            "file": "Notes/CSharp/CSharp - Properties.md",
             "mode": "source"
           }
         }
@@ -80,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/assets/CSharp - Properties.md"
+                "file": "Notes/CSharp/CSharp - Properties.md"
               }
             }
           },
@@ -101,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/assets/CSharp - Properties.md",
+                "file": "Notes/CSharp/CSharp - Properties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/assets/CSharp - Properties.md",
+                "file": "Notes/CSharp/CSharp - Properties.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,17 +149,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "2c441d22d47a0e49",
+  "active": "873657bfc351fd9a",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - Properties.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/CSharp/assets/CSharp - Properties.md",
     "Notes/C++/C++ - Mutex.md",
     "TO-DO.md",
-    "Notes/Obsidian/Obsidian-Plugins.md",
     "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-25).md",
     "Notes/Untitled.md",
     "Notes/Android Debug Bridge.md",
     "Notes/CSharp/CSharp - $ String Interpolation.md",
-    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp - Escape Sequences.md"
+    "Notes/CSharp/CSharp - @ Verbatim Identifier.md"
   ]
 }
