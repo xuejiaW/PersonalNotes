@@ -28,3 +28,5 @@ updated: 2021-12-25
 - [ ] C# Initialize Auto Property
         [Auto-Implemented Properties - C# Programming Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
         [constructor - What is the best way to give a C# auto-property an initial value? - Stack Overflow](https://stackoverflow.com/questions/40730/what-is-the-best-way-to-give-a-c-sharp-auto-property-an-initial-value)
+- [ ] Power shell 编译 Makefile
+    [How to generate a Makefile with source in sub-directories using just one makefile - Stack Overflow](https://stackoverflow.com/questions/231229/how-to-generate-a-makefile-with-source-in-sub-directories-using-just-one-makefil)
