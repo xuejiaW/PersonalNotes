@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2021-12-12
+updated: 2021-12-26
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -369,8 +369,11 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 该插件不支持同时显示绝对行号和相对行号
 ```
 
-##  盘古
+##  盘古[^13]
 
+自动在中文与英文以及中文与数字见添加空格。
+
+安装
 
 # Reference
 
@@ -386,3 +389,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^10]: [obsidian-git](https://github.com/denolehov/obsidian-git)
 [^11]: [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
 [^12]: [obsidian-relative-line-numbers](https://github.com/nadavspi/obsidian-relative-line-numbers)
+[^13]: [Obsidian-Pangu](https://github.com/Natumsol/obsidian-pangu)

@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/Obsidian/Obsidian-Plugins.md"
               }
             }
           },
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,10 +161,10 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "2c441d22d47a0e49",
+  "active": "873657bfc351fd9a",
   "lastOpenFiles": [
-    "TO-DO.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
+    "TO-DO.md",
     "Notes/C++/C++ - Mutex.md",
     "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-25).md",
     "Notes/Untitled.md",
