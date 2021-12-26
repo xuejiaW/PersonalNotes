@@ -15,5 +15,6 @@
   "obsidian-emoji-toolbar",
   "obsidian-relative-line-numbers",
   "obsidian-pangu",
-  "dataview"
+  "dataview",
+  "cm-chs-patch"
 ]

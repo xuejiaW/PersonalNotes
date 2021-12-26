@@ -370,7 +370,11 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 自动在中文与英文以及中文与数字见添加空格。
 
-安装插件后，可以为 ` 盘古：为中英文字符间自动加入空格 ` 设置快捷键，并在
+安装插件后，可以为 ` 盘古：为中英文字符间自动加入空格 ` 设置快捷键，并在文本输入后通过快捷键进行格式化。
+
+## Word Splitting for Simplified Chinese in Edit Mode[^14]
+
+该插件解决 Obsidian 中双击选中中文分词时错误效果的问题，在 Obsidian 默认的实现中会将一个中文短句作为一个中文词语被选中
 
 # Reference
 
@@ -387,3 +391,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^11]: [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
 [^12]: [obsidian-relative-line-numbers](https://github.com/nadavspi/obsidian-relative-line-numbers)
 [^13]: [Obsidian-Pangu](https://github.com/Natumsol/obsidian-pangu)
+[^14]: [Obsidian-Word Splitting for Simplified Chinese in Edit Mode](https://github.com/aidenlx/cm-chs-patch)
