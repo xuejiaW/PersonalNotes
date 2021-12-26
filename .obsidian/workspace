@@ -9,7 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/C++/C++ - Mutex.md",
+            "file": "Notes/Obsidian/Obsidian-Plugins.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "2c441d22d47a0e49",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "TO-DO.md",
             "mode": "source"
           }
         }
@@ -52,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -90,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,8 +113,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -115,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -150,17 +161,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "873657bfc351fd9a",
+  "active": "2c441d22d47a0e49",
   "lastOpenFiles": [
-    "Notes/C++/C++ - Mutex.md",
     "TO-DO.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
+    "Notes/C++/C++ - Mutex.md",
     "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-25).md",
     "Notes/Untitled.md",
     "Notes/Android Debug Bridge.md",
     "Notes/CSharp/CSharp - $ String Interpolation.md",
     "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
     "Notes/CSharp/CSharp - Escape Sequences.md",
-    "Notes/Unity/Unity - Attributes.md",
-    "Notes/CSharp/CSharp - nameof Expression.md"
+    "Notes/Unity/Unity - Attributes.md"
   ]
 }
