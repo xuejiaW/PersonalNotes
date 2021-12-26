@@ -37,7 +37,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 ```</code></pre>
 
 效果为：
-
 ```ad-note
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 ```
@@ -376,10 +375,9 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 该插件解决 Obsidian 中双击选中中文分词时错误效果的问题，在 Obsidian 默认的实现中会错误的将一整个中文短语作为单词被选中，安装插件前后的效果如下所示：
 
-|                                                                                                                                               |     |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| ![](assets/Obsidian-Plugins/68747470733a2f2f696d672e616964656e6c782e746f702f696d672f6f622d64656661756c742d73706c697474696e672e676966%203.gif) |     |
-
+| Obsidian 默认中文分词                                    | 插件中文分词                                            |
+| -------------------------------------------------------- | ------------------------------------------------------- |
+| ![](assets/Obsidian-Plugins/DefaultChineseSplitting.gif) | ![](assets/Obsidian-Plugins/PluginChineseSplitting.gif) |
 
 # Reference
 
