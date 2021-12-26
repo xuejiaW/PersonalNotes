@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2021-12-26
+updated: 2021-12-27
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
