@@ -16,7 +16,6 @@ updated: 2021-12-26
 - [ ]  Obsidian VimRC 配置插件
 - [ ]  Obsidian Vim Input Method 切换插件
 - [ ] Unity 内存泄露，如 Mesh，Texture 等。
-- [ ] Vim-盘古 自动为中英文加空格
 - [ ]  __VA_ARGS__ 和 ##__VA_ARGS__ 的区别
 - [ ]   __android_log_vprint 和 __android_log_print 区别
 - [ ]   整理 Default Framebuffer 笔记，[OpenGL - Default Frambuffer](Notes/OpenGL/OpenGL%20-%20Default%20Frambuffer.md)

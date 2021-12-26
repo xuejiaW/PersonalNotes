@@ -20,7 +20,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/CSharp/assets/CSharp - Properties.md",
             "mode": "source"
           }
         }
@@ -80,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md"
+                "file": "Notes/CSharp/assets/CSharp - Properties.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md",
+                "file": "Notes/CSharp/assets/CSharp - Properties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian-Plugins.md",
+                "file": "Notes/CSharp/assets/CSharp - Properties.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,17 +160,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "873657bfc351fd9a",
+  "active": "2c441d22d47a0e49",
   "lastOpenFiles": [
-    "Notes/Obsidian/Obsidian-Plugins.md",
-    "TO-DO.md",
+    "Notes/CSharp/assets/CSharp - Properties.md",
     "Notes/C++/C++ - Mutex.md",
+    "TO-DO.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
     "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-25).md",
     "Notes/Untitled.md",
     "Notes/Android Debug Bridge.md",
     "Notes/CSharp/CSharp - $ String Interpolation.md",
     "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/CSharp/CSharp - Escape Sequences.md",
-    "Notes/Unity/Unity - Attributes.md"
+    "Notes/CSharp/CSharp - Escape Sequences.md"
   ]
 }
