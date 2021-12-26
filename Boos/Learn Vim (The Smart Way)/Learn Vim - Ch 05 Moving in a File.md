@@ -2,6 +2,7 @@
 created: 2021-12-09
 updated: 2021-12-10
 ---
+
 ```ad-note
 这一章不会阐述 Vim 支持的所有移动方式。更多的移动相关信息，可见 `:h motion.txt`
 ```
@@ -21,7 +22,7 @@ k   Up
 l   Right
 ```
 
-在这些名词前可以加上数字表示要跳转的行数或字符数，如 `10j` 表示向下移动10行。
+在这些名词前可以加上数字表示要跳转的行数或字符数，如 `10j` 表示向下移动 10 行。
 
 可以通过如下在 `init.vim` 中的设置，让普通的上下左右按键失效，强迫使用 `hjkl`：
 
@@ -45,9 +46,11 @@ noremap <Right> <NOP>
 ## relativenumber Settings
 
 搭配和效果如下：
+
 ```powershell
 set relativenumber number
 ```
+
 ![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224338436.png)
 
 ```powershell
@@ -55,7 +58,7 @@ set norelativenumber number
 ```
 
 ![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224353686.png)
-    
+
 ```powershell
 set norelativenumber nonumber
 ```
@@ -67,7 +70,6 @@ set relativenumber nonumber
 ```
 
 ![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224446276.png)
-
 
 在 VSCode 中通过 [editor lineNumbers](../../Notes/VSCode/VSCode-Settings.md#editor%20lineNumbers) 设置行号的显示方式。
 但如果要同时显示行号和相对行号，需要使用插件 [Relative Line Numbers 5](../../Notes/VSCode/VSCode-Extensions.md#Relative%20Line%20Numbers%205)
@@ -242,7 +244,6 @@ g#    Search for word under cursor backward
 ```ad-tip
 Marks 类似于书签一样的作用。
 ```
-
 
 想要回到标记的地方，可以通过 \` 或 \' ，其中 \` 表示回到记录的确切位置，包括行号和在所在行的位置。\' 表示回到记录的行号。
 
