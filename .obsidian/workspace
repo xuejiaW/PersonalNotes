@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
