@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/OpenGL - Default Frambuffer",
+  "attachmentFolderPath": "./assets/OpenGL - Swap Chain",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
