@@ -13,3 +13,9 @@ tags:
 延迟渲染主要被拆分为两部分：
 1. Geometry Pass：渲染一次场景并将所有得到的关于场景内物体的几何信息存储到一系列称为 `G-buffer` 的纹理中，比如位置，法线，颜色，高光等等。
 2. Lighting Pass：渲染一个铺满屏幕的 Quad，在这次渲染中使用上 `Geometry Pass `生成的 `G-Buffer`
+
+整体的流程如下所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211227082817485.png)
+
+
+延迟xu'a
