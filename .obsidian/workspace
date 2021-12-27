@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-            "mode": "source"
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+            "mode": "preview"
           }
         }
       }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "9db2d6bd9d3cfb0c",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
@@ -159,7 +160,6 @@
     "Notes/CSharp/CSharp - Properties.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid (DESKTOP-3T7SLMG's conflicted copy 2021-12-23).md",
     "TO-DO.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Notes/OpenGL/OpenGL - Swap Chain.md",
     "TO-DO.md"
   ]
