@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Untitled.md",
+            "file": "Notes/Unity/Unity - PlayerSettings.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Untitled.md"
+                "file": "Notes/Unity/Unity - PlayerSettings.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Untitled.md",
+                "file": "Notes/Unity/Unity - PlayerSettings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Untitled.md",
+                "file": "Notes/Unity/Unity - PlayerSettings.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,7 +151,7 @@
   },
   "active": "9db2d6bd9d3cfb0c",
   "lastOpenFiles": [
-    "Notes/Unity/Untitled.md",
+    "Notes/Unity/Unity - PlayerSettings.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 09 Model  Loading.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
