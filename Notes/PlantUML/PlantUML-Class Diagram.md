@@ -1,3 +1,7 @@
+---
+created: 2021-12-27
+updated: 2021-12-27
+---
 # 类元素的定义
 
 可通过如下的关键字定义类的元素：`abstract class`, `class`, `enum`, `interface`。
@@ -120,7 +124,7 @@ Car o-- Wheel
 
 如身体和动作是一种组合关系，因为没有了身体的存在，动作也就没有了意义。
 
-PlantUML 中通过 `*--*` 表示组合关系，其中 `*` 靠近的一方表示整体，如下所示：
+PlantUML 中通过 `*--` 表示组合关系，其中 `*` 靠近的一方表示整体，如下所示：
 ```plantuml
 @startuml
 class Body

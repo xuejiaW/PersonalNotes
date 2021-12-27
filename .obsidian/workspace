@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android Debug Bridge.md",
+            "file": "Notes/PlantUML/PlantUML-Class Diagram.md",
             "mode": "preview"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android Debug Bridge.md"
+                "file": "Notes/PlantUML/PlantUML-Class Diagram.md"
               }
             }
           },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Notes/PlantUML/PlantUML-Class Diagram.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Notes/PlantUML/PlantUML-Class Diagram.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,6 +151,7 @@
   },
   "active": "4ab98a03009a0d0a",
   "lastOpenFiles": [
+    "Notes/PlantUML/PlantUML-Class Diagram.md",
     "Notes/Android Debug Bridge.md",
     "Notes/C++/C++ - Mutex.md",
     "TO-DO.md",
@@ -159,7 +160,6 @@
     "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
     "Notes/CSharp/CSharp - Escape Sequences.md",
     "Notes/Unity/Unity - Attributes.md",
-    "Notes/CSharp/CSharp - nameof Expression.md",
-    "Notes/CSharp/CSharp - Partial Classes And Methods.md"
+    "Notes/CSharp/CSharp - nameof Expression.md"
   ]
 }
