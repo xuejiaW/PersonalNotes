@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "54c5644aff4bb4f5",
+        "id": "e8bdddb3ffb90c95",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -66,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md"
+              }
             }
           },
           {
@@ -86,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -143,8 +150,9 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "54c5644aff4bb4f5",
+  "active": "e8bdddb3ffb90c95",
   "lastOpenFiles": [
+    "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md",
     "TO-DO.md",
     "Notes/OpenGL/OpenGL - Default Frambuffer.md",
     "Notes/OpenGL/OpenGL - Swap Chain.md",
@@ -153,7 +161,6 @@
     "Notes/CSharp/CSharp - Properties.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/CSharp/assets/CSharp - Properties.md",
-    "Notes/C++/C++ - Mutex.md",
-    "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-25).md"
+    "Notes/C++/C++ - Mutex.md"
   ]
 }
