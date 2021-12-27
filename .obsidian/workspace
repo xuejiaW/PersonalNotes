@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/PlantUML/PlantUML-Class Diagram.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
