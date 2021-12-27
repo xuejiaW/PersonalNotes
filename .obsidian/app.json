@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSharp - Properties",
+  "attachmentFolderPath": "./assets/OpenGL - Default Frambuffer",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

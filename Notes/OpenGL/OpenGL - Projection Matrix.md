@@ -3,7 +3,7 @@ tags:
     - OpenGL
 cssclass: [table-border]
 created: 2021-12-13
-updated: 2021-12-15
+updated: 2021-12-27
 ---
 
 # Perspective Projection
@@ -36,7 +36,7 @@ OpenGL 中的 Eye Coordinate 定义在右手坐标系中（与 OpenGL 原始坐�
 
 |                                                                       |                                                                        |
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![Top View](assets/OpenGL-Projection%20Matrix/image-20211208082200757.png) | ![Side View](assets/OpenGL-Projection%20Matrix/image-20211208082210356.png) |
+| ![Top View](assets/OpenGL%20-%20Projection%20Matrix/image-20211208082200757.png) | ![Side View](assets/OpenGL%20-%20Projection%20Matrix/image-20211208082210356.png) |
 
 ```ad-warning
 $P_{p}$ 并非在 Clip Coordinate 或 NDC Coordinate。它的值等于 Clip Coordinate 的值除以了 $w$ （完成了投影效果），但并未归一化到 $-1 \sim 1$ 的范围内（因此不是 NDC 空间）。
@@ -58,7 +58,7 @@ $$\left(\begin{array}{c}x_{c} \\y_{c} \\z_{c} \\w_{c}\end{array}\right)=\left(\b
 
 |                                                               |                                                |
 | ------------------------------------------------------------- | ---------------------------------------------- |
-| ![](assets/OpenGL-Projection%20Matrix/image-20211208082926058.png) | $$x_{n}=\frac{1-(-1)}{r-l} \cdot x_{p}+\beta$$ |
+| ![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208082926058.png) | $$x_{n}=\frac{1-(-1)}{r-l} \cdot x_{p}+\beta$$ |
 
 其中取特殊点 $(r,1)$ 代入上式，可得：
 
@@ -68,7 +68,7 @@ $$\begin{aligned}1 &=\frac{2 r}{r-l}+\beta \quad\left(\text { substitute }(r, 1)
 
 |                                                               |                                                |
 | ------------------------------------------------------------- | ---------------------------------------------- |
-| ![](assets/OpenGL-Projection%20Matrix/image-20211208083122264.png) | $$y_{n}=\frac{1-(-1)}{t-b} \cdot y_{p}+\beta$$ |
+| ![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208083122264.png) | $$y_{n}=\frac{1-(-1)}{t-b} \cdot y_{p}+\beta$$ |
 
 同样的将特殊点 $(t,1)$ 代入上式，可得：
 
@@ -131,15 +131,15 @@ $$\left(\begin{array}{cccc}\frac{n}{r} & 0 & 0 & 0 \\0 & \frac{n}{t} & 0 & 0 \\0
 # Orthographic Projection
 
 正交投影示意图如下所示，可以看到并没有 Perspective 投影中的投影关系：
-![](assets/OpenGL-Projection%20Matrix/image-20211208083636280.png)
+![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208083636280.png)
 
 因此在 Orthographic 中对于 x_e 和 y_e 而言，可以直接通过线性关系将它们转换到 NDC 的 -1 \sim 1 中，方法与在求 Perspective 投影时相同，如下所示：
 
 |                                                               |                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/OpenGL-Projection%20Matrix/image-20211208083659558.png) | $$\begin{aligned} x_{n} &=\frac{1-(-1)}{r-l} \cdot x_{e}+\beta \\ 1 &=\frac{2 r}{r-l}+\beta \quad({ substitute (r,1) })\\ \beta &=1-\frac{2 r}{r-l}=-\frac{r+l}{r-l} \\ \therefore x_{n} &=\frac{2}{r-l} \cdot x_{e}-\frac{r+l}{r-l} \end{aligned}$$   |
-| ![](assets/OpenGL-Projection%20Matrix/image-20211208083718922.png) | $$\begin{aligned} y_{n} &=\frac{1-(-1)}{t-b} \cdot y_{e}+\beta \\ 1 &=\frac{2 t}{t-b}+\beta \quad({substitute(t,1)})\\ \beta &=1-\frac{2 t}{t-b}=-\frac{t+b}{t-b} \\ \therefore y_{n} &=\frac{2}{t-b} \cdot y_{e}-\frac{t+b}{t-b} \end{aligned}$$      |
-| ![](assets/OpenGL-Projection%20Matrix/image-20211208083739997.png) | $$\begin{aligned}z_{n} &=\frac{1-(-1)}{-f-(-n)} \cdot z_{e}+\beta \\1 &=\frac{2 f}{f-n}+\beta \quad( { substitute(-f,1) }) \\\beta &=1-\frac{2 f}{f-n}=-\frac{f+n}{f-n} \\\therefore z_{n} &=\frac{-2}{f-n} \cdot z_{e}-\frac{f+n}{f-n}\end{aligned}$$ |
+| ![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208083659558.png) | $$\begin{aligned} x_{n} &=\frac{1-(-1)}{r-l} \cdot x_{e}+\beta \\ 1 &=\frac{2 r}{r-l}+\beta \quad({ substitute (r,1) })\\ \beta &=1-\frac{2 r}{r-l}=-\frac{r+l}{r-l} \\ \therefore x_{n} &=\frac{2}{r-l} \cdot x_{e}-\frac{r+l}{r-l} \end{aligned}$$   |
+| ![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208083718922.png) | $$\begin{aligned} y_{n} &=\frac{1-(-1)}{t-b} \cdot y_{e}+\beta \\ 1 &=\frac{2 t}{t-b}+\beta \quad({substitute(t,1)})\\ \beta &=1-\frac{2 t}{t-b}=-\frac{t+b}{t-b} \\ \therefore y_{n} &=\frac{2}{t-b} \cdot y_{e}-\frac{t+b}{t-b} \end{aligned}$$      |
+| ![](assets/OpenGL%20-%20Projection%20Matrix/image-20211208083739997.png) | $$\begin{aligned}z_{n} &=\frac{1-(-1)}{-f-(-n)} \cdot z_{e}+\beta \\1 &=\frac{2 f}{f-n}+\beta \quad( { substitute(-f,1) }) \\\beta &=1-\frac{2 f}{f-n}=-\frac{f+n}{f-n} \\\therefore z_{n} &=\frac{-2}{f-n} \cdot z_{e}-\frac{f+n}{f-n}\end{aligned}$$ |
 
 因此可得 Orthogaphic 投影矩阵的表达式为：
 

@@ -21,6 +21,6 @@ void glViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
 因此 `glViewport` 的作用是将 NDC Space 的横坐标的 $-1 \sim 1$ 范围转换到屏幕空间的 $x \sim x+width$ 范围内，同理将纵坐标的 $-1 \sim 1$ 转换到屏幕空间的 $y \sim y+height$ 范围内。
 
-如在 [OpenGL-Projection Matrix](OpenGL-Projection%20Matrix.md) 中阐述，因为 [Frustum Clipping](OpenGL-Projection%20Matrix.md#^1150b2) 的存在，绘制的顶点数据不会超过 NDC Space， 也因此不会超过目标屏幕空间范围
+如在 [OpenGL - Projection Matrix](OpenGL%20-%20Projection%20Matrix.md) 中阐述，因为 [Frustum Clipping](OpenGL%20-%20Projection%20Matrix.md#^1150b2) 的存在，绘制的顶点数据不会超过 NDC Space， 也因此不会超过目标屏幕空间范围
 
 但是对于非顶点数据，如 `glClear` 则影响的像素仍然可能超过 Viewport 指定的屏幕空间。为了限制像素影响的范围，则需要通过 `Scissor Test` 。
