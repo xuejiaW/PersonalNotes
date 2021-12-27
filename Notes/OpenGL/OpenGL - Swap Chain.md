@@ -1,3 +1,7 @@
+---
+created: 2021-12-27
+updated: 2021-12-27
+---
 `Swap Chain` 是一系列（大于等于2）用来渲染的缓冲，每次渲染内容刷新时 `Swap Chain` 中的第一个缓冲与当前渲染的缓冲会进行交换，这个过程称为 `Swapping` 或 `Flipping` 。
 
 显示器内容的更新是逐像素的，利用一个叫做 `light pin` 的东西移动来进行像素更新。且通常是从显示器的最左上角像素开始，逐渐向右，向下进行更新，最后在显示器的右下角结束，当结束后 `light pin` 从右下角移动到左上角准备下一次的更新。
@@ -12,4 +16,4 @@
 
 OpenGL 和 DX 都提供了相应的接口进行 `Swap Buffer` ，API 通常会使用队列存储交换缓冲的请求，在 `VSync` 时对两块缓冲进行实际的交换。
 
-OpenGL 中对于 `Swap Buffer` 的操作逻辑，见 [Default Framebuffer](https://www.notion.so/Default-Framebuffer-67987f4758d74b9ab4548a819800f2c9) 中的 [Swap Buffer](https://www.notion.so/Default-Framebuffer-67987f4758d74b9ab4548a819800f2c9) 部分。
+OpenGL 中对于 `Swap Buffer` 的操作逻辑，见 [Swap Buffer](OpenGL%20-%20Default%20Frambuffer.md#Swap%20Buffer)  部分。

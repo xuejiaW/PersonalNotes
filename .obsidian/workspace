@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/OpenGL/OpenGL - Swap Chain.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/OpenGL/OpenGL - Swap Chain.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
               }
             }
           },
@@ -91,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/OpenGL/OpenGL - Swap Chain.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/OpenGL/OpenGL - Swap Chain.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +151,15 @@
   },
   "active": "e8bdddb3ffb90c95",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+    "TO-DO.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Notes/OpenGL/OpenGL - Swap Chain.md",
-    "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2021-12-27).md",
     "TO-DO.md",
     "Notes/OpenGL/OpenGL - Default Frambuffer.md",
     "Notes/OpenGL/OpenGL - Viewport.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Notes/CSharp/CSharp - Properties.md",
-    "Notes/Obsidian/Obsidian-Plugins.md",
-    "Notes/CSharp/assets/CSharp - Properties.md",
-    "Notes/C++/C++ - Mutex.md"
+    "Notes/Obsidian/Obsidian-Plugins.md"
   ]
 }
