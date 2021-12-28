@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "layout ()",
+                "query": "\"layout (location = 0) out\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "9db2d6bd9d3cfb0c",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 25 Blinn-Phong.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md",
@@ -159,7 +160,6 @@
     "Notes/Unity/Unity - PlayerSettings.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 09 Model  Loading.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
   ]
