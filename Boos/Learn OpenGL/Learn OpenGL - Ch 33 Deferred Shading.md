@@ -114,7 +114,34 @@ void GenerateFramebuffer()
 
 可以看到 `FragPos`，`Normal`，`AlbedoSpec` 被分别绑定到了 `GL_COLOR_ATTACHMENT0`，`GL_COLOR_ATTACHMENT1` 和 `GL_COLOR_ATTACHMENT2` 上，并使用了 `glDrawBuffers` 制定了 MRT。
 
-渲染 `G-buffer` 时，使用的 Vertex Shader 
+渲染 `G-buffer` 时，使用的 Vertex Shader 如下所示：
+```glsl
+#version 330 core
+
+layout(location = 0) in vec3 pos;
+layout(location = 1) in vec2 tex;
+layout(location = 2) in vec3 norm;
+
+out vec2 Texcoord;
+out vec3 Normal;
+out vec3 FragPos;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+    Texcoord = tex;
+
+    vec4 worldPos = model * vec4(pos, 1.0);
+    FragPos = worldPos.xyz;
+
+    Normal = normalize(mat3(transpose(inverse(model))) * norm);
+
+    gl_Position = projection * view * worldPos;
+}
+```
 
 Fragment Shader 如下所示：
 ```glsl
@@ -139,3 +166,17 @@ void main()
     gAlbedoSpec.a = texture(texture_specular0, Texcoord).r;
 }
 ```
+
+在 Vertex Shader 中，将 `FragPos` 和 `Normal` 都变换到了世界空间，以保证光照计算时空间的统一。
+
+在 Fragment Shader 中定义了三个输出，分别表示 `FragPos`，`Normal`，`AlbedoSpec`纹理。
+
+此时 `FragPos`，`Normal`，`AlbedoSpec` 的 `RGB` 通道及 `A` 通道的渲染结果如下所示：
+
+|                                                                                           |                                                                                           |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
+|    ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083606892.png)
+
+                                                                                       |                                                   u                                        |
+|                                                                                           |                                                                                           |
