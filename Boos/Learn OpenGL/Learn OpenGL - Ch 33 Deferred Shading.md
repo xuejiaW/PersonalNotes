@@ -49,4 +49,4 @@ while (...) // render loop
 
 # The G-buffer
 
-
+`G-buffer` 是一系列存储了与最终光照计算相关的数据的纹理。
