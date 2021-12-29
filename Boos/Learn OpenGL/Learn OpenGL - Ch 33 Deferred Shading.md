@@ -62,5 +62,56 @@ while (...) // render loop
 
 为了节约开销，可以将 `Albedo` 和 `Specular` 信息使用一张贴图表示，称为 `AlbedoSpec`，其中贴图的 `RGB` 通道表示 `Albedo`，`a` 通道表示 `Specular`。
 
-为了提高计算的精准性，为 `FragPos` 和 `Normal` 申请每个通道 16 bit的贴图，`AlbedoSpec` 贴图的每个通道仍为 8 bit。
+为了提高计算的精准性，为 `FragPos` 和 `Normal` 申请每个通道 16 bit 的贴图，`AlbedoSpec` 贴图的每个通道仍为 8 bit。
 
+生成渲染 `G-buffer` 的  Framebuffer，以及申请 `FragPos`，`Normal`，`AlbedoSpec` 贴图的过程如下：
+```cpp
+void GenerateFramebuffer()
+{
+    glGenFramebuffers(1, &gFramebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, gFramebuffer);
+
+    unsigned int gPosition, gNormal, gAlbedospec;
+    unsigned int depthStencilRBO;
+
+    glGenTextures(1, &gPosition);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, screen_width, screen_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
+
+    glGenTextures(1, &gNormal);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, screen_width, screen_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, gNormal, 0);
+
+    glGenTextures(1, &gAlbedospec);
+    glBindTexture(GL_TEXTURE_2D, gAlbedospec);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, screen_width, screen_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedospec, 0);
+
+    unsigned int attachments[3] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2};
+    glDrawBuffers(3, attachments);
+
+    glGenRenderbuffers(1, &depthStencilRBO);
+    glBindRenderbuffer(GL_RENDERBUFFER, depthStencilRBO);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, scene.GetWidth(), scene.GetHeight());
+    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthStencilRBO);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    gPositionTexture = new Texture(gPosition, screen_width, screen_height);
+    gNormalTexture = new Texture(gNormal, screen_width, screen_height);
+    gAlbedoTexture = new Texture(gAlbedospec, screen_width, screen_height);
+}
+```
+
+可以看到 `FragPos`，`Normal`，`AlbedoSpec` 被分别绑定到了 `GL_COLOR_ATTACHMENT0`，`GL_COLOR_ATTACHMENT1` 和 `GL_COLOR_ATTACHMENT2` 上，并使用了 `glDrawBuffers` 制定了 MRT。
+
+在 Fragment Shader 中
