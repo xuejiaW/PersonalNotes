@@ -1,4 +1,5 @@
 ---
+cssclass: [table-border]
 created: 2021-12-27
 updated: 2021-12-29
 tags:
@@ -175,8 +176,5 @@ void main()
 
 |                                                                                           |                                                                                           |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
-|    ![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083606892.png)
-
-                                                                                       |                                                   u                                        |
-|                                                                                           |                                                                                           |
+| ![FragPos](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![Normal](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
+| ![AlbedoSepc.rgb](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083606892.png) | ![AlbedoSpec.aaa](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083702196.png) |
