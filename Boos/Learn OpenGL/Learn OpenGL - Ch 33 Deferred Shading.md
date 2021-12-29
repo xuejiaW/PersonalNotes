@@ -58,3 +58,9 @@ while (...) // render loop
 
 在延迟渲染时，也都需要上述的数据。其中光源的位置，颜色，摄像机的位置都可以通过 `Uniform` 进行传递。而剩余的部分就需要渲染进 `G-buffer` 中。
 
+即在 `G-buffer` 中理论上需要四张贴图，`FragPos`，`Normal`，`Albedo`，`Specular`。
+
+为了节约开销，可以将 `Albedo` 和 `Specular` 信息使用一张贴图表示，称为 `AlbedoSpec`，其中贴图的 `RGB` 通道表示 `Albedo`，`a` 通道表示 `Specular`。
+
+为了提高计算的精准性，为 `FragPos` 和 `Normal` 申请每个通道 16 bit的贴图，`AlbedoSpec` 贴图的每个通道仍为 8 bit。
+
