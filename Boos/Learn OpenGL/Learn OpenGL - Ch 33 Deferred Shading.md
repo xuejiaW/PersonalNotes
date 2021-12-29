@@ -114,4 +114,28 @@ void GenerateFramebuffer()
 
 可以看到 `FragPos`，`Normal`，`AlbedoSpec` 被分别绑定到了 `GL_COLOR_ATTACHMENT0`，`GL_COLOR_ATTACHMENT1` 和 `GL_COLOR_ATTACHMENT2` 上，并使用了 `glDrawBuffers` 制定了 MRT。
 
-在 Fragment Shader 中
+渲染 `G-buffer` 时，使用的 Vertex Shader 
+
+Fragment Shader 如下所示：
+```glsl
+#version 330 core
+
+layout(location = 0) out vec3 gPoisition;
+layout(location = 1) out vec3 gNormal;
+layout(location = 2) out vec4 gAlbedoSpec;
+
+in vec2 Texcoord;
+in vec3 FragPos;
+in vec3 Normal;
+
+uniform sampler2D texture_diffuse0;
+uniform sampler2D texture_specular0;
+
+void main()
+{
+    gPoisition = FragPos;
+    gNormal = normalize(Normal);
+    gAlbedoSpec.rgb = texture(texture_diffuse0, Texcoord).rgb;
+    gAlbedoSpec.a = texture(texture_specular0, Texcoord).r;
+}
+```
