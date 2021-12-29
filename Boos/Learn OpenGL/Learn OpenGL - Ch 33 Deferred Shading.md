@@ -1,6 +1,6 @@
 ---
 created: 2021-12-27
-updated: 2021-12-28
+updated: 2021-12-29
 tags:
     - OpenGL
 ---
@@ -46,3 +46,7 @@ while (...) // render loop
 延迟渲染的缺点在于， `G-Buffer` 的引入会导致需要额外存储一系列问题，即需要耗费大量的内存。但对于渲染 `G-Buffer` 的开销并不会太大，因为使用 `Multiple render targets（MRT）` 可以同时产生出多张想要的纹理。
 
 同时延迟渲染也不再支持混合以及 MSAA。
+
+# The G-buffer
+
+
