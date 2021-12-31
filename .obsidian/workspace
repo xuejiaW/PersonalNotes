@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
+            "file": "Notes/Computer Graphics/Untitled.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md"
+                "file": "Notes/Computer Graphics/Untitled.md"
               }
             }
           },
@@ -91,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
+                "file": "Notes/Computer Graphics/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
+                "file": "Notes/Computer Graphics/Untitled.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +151,7 @@
   },
   "active": "8721ade5de873beb",
   "lastOpenFiles": [
+    "Notes/Computer Graphics/Untitled.md",
     "Notes/Unity/Unity - fixed, half, fixed Difference.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Unity/Unity - GL.md",
@@ -160,7 +160,6 @@
     "Notes/Pandoc.md",
     "Notes/Android Debug Bridge.md",
     "Notes/Misc/Misc-.Net Standard and Implementation.md",
-    "Notes/Unity/Unity - UniRx.md",
-    "Notes/GPU  Performance.md"
+    "Notes/Unity/Unity - UniRx.md"
   ]
 }
