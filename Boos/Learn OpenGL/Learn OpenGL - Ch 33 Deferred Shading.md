@@ -307,3 +307,6 @@ scene.postRender = []()
 2. 所有的被渲染物体都必须使用相同的光照模型和参数，这是因为所有被渲染的物体都是统一在 Lighting Pass 阶段被上色。
 
 第二个问题可以通过在 Lighting Pass 中添加更多的数据来一定程度规避。第一个问题则需要通过通过结合 `Deferred Rendering` 及 `Forward Rendering` 实现。即将场景中大部分物体通过延迟渲染的前提下，将一些不适合延迟渲染的物体（如例子中的光源 Cube）通过前向渲染绘制。
+
+# Combining deferred rendering with forward rendering
+

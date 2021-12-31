@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+            "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Notes/Unity/Unity - fixed, half, fixed Difference.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "8721ade5de873beb",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - fixed, half, fixed Difference.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Unity/Unity - GL.md",
     "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md",
@@ -160,7 +161,6 @@
     "Notes/Android Debug Bridge.md",
     "Notes/Misc/Misc-.Net Standard and Implementation.md",
     "Notes/Unity/Unity - UniRx.md",
-    "Notes/GPU  Performance.md",
-    "Notes/Untitled.md"
+    "Notes/GPU  Performance.md"
   ]
 }
