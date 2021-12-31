@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "8721ade5de873beb",
+        "id": "ef46c788cfaf23d1",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -149,17 +149,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "8721ade5de873beb",
+  "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png",
     "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 4.png",
     "Notes/Unity/Unity - fixed, half, fixed Difference.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Unity/Unity - GL.md",
     "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Notes/Pandoc.md",
-    "Notes/Android Debug Bridge.md",
-    "Notes/Misc/Misc-.Net Standard and Implementation.md"
+    "Notes/Android Debug Bridge.md"
   ]
 }
