@@ -271,7 +271,7 @@ for (unsigned int i = 0; i != NR_LIGHTS; ++i)
     float xPos = ((rand() % 100 / 100.0f) * 6.0 - 3.0);
     float yPos = ((rand() % 100 / 100.0f) * 6.0 - 4.0);
     float zPos = ((rand() % 100 / 100.0f) * 6.0 - 3.0);
-    lightPosition.push_back(vec3(xPos, yPos, zPos));
+    lightPosition.push_back(bagPosBias + vec3(xPos, yPos, zPos));
 
     float rColor = (rand() % 100 / 200.0f) + 0.5f;
     float gColor = (rand() % 100 / 200.0f) + 0.5f;
@@ -280,14 +280,11 @@ for (unsigned int i = 0; i != NR_LIGHTS; ++i)
 }
 ```
 
-在绘制 Light Pass Quad 前，将这些数据传递给 Shader：
+在绘制 Light Pass Quad 前，将这些数据传递给 Shader，同时也需要将摄像机的位置作为光照的 `viewPos` 传入：
 ```cpp
 scene.postRender = []()
 {
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    screenMeshRender->GetMaterial()->AddTexture("gPosition", gPositionTexture);
-    screenMeshRender->GetMaterial()->AddTexture("gNormal", gNormalTexture);
-    screenMeshRender->GetMaterial()->AddTexture("gAlbedoSpec", gAlbedoTexture);
+    // ...
 
     for (unsigned int i = 0; i != lightPosition.size(); ++i)
     {
@@ -301,3 +298,7 @@ scene.postRender = []()
 };
 
 ```
+
+此时的渲染结果如下所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
+
