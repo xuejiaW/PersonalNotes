@@ -302,4 +302,6 @@ scene.postRender = []()
 此时的渲染结果如下所示，可以看到所有的模型被正常的点亮：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
 
-在 Deferred Lighting 渲染中，所有需要显示的物体需要首先被绘制在 `G-Buffer ` 中，然后ton
+在 Deferred Lighting 渲染中，所有需要显示的物体需要首先被绘制在 `G-Buffer ` 中，再通过 Lighting Pass 添加光照效果。但这会引起两个问题：
+1. 无法绘制不被光照效果影响的物体，如无法绘制表示光源的 Cube。如果将 Cube 放置在 `G-Buffer` 中，即变为了光源本身被光照影响，显然不合理。
+2. suo'y
