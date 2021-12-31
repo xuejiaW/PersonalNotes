@@ -181,7 +181,21 @@ void main()
 
 # The deferred lighting pass
 
-在获取了 `G-buffer` 后，
-在光照计算部分中，会使用 G-Buffer 的一系列纹理作为光照计算的输入。
+在 `Lighting Pass` 中，会使用 G-Buffer 的一系列纹理作为光照计算的输入。
 
-使用的 Fragment Shader 如下所示
+绘制全屏 Quad 时，使用的 Fragment Shader 中需要定义三个 `sampler2D` 分别作为之前 `FragPos`，`Normal`，`AlbedoSpec`的输出。
+
+```glsl
+uniform sampler2D gPosition;
+uniform sampler2D gNormal;
+uniform sampler2D gAlbedoSpec;
+
+void main()
+{
+    vec3 FragPos = texture(gPosition, TexCoords).rgb;
+    vec3 Normal = texture(gNormal, TexCoords).rgb;
+    vec3 Diffuse = texture(gAlbedoSpec, TexCoords).rgb;
+    float Specular = texture(gAlbedoSpec, TexCoords).a;
+    // ...
+}
+```

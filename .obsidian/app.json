@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity - GL",
+  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 33 Deferred Shading",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
