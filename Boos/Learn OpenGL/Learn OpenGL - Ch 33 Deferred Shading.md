@@ -248,4 +248,20 @@ void main()
 }
 ```
 
-在 C++ 部分，需要添加一系列biao
+在 C++ 部分，需要在绘制 Lighting Pass 的 Quad 前激活三张纹理：
+```cpp
+scene.postRender = []()
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    screenMeshRender->GetMaterial()->AddTexture("gPosition", gPositionTexture);
+    screenMeshRender->GetMaterial()->AddTexture("gNormal", gNormalTexture);
+    screenMeshRender->GetMaterial()->AddTexture("gAlbedoSpec", gAlbedoTexture);
+    
+    // ...
+};
+```
+
+在定义场景时需要添加一系列表示点光源的定义：
+```cpp
+
+```
