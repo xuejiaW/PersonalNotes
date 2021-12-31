@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-27
-updated: 2021-12-29
+updated: 2021-12-31
 tags:
     - OpenGL
 ---
@@ -91,7 +91,7 @@ void GenerateFramebuffer()
 
     glGenTextures(1, &gAlbedospec);
     glBindTexture(GL_TEXTURE_2D, gAlbedospec);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, screen_width, screen_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, screen_width, screen_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedospec, 0);
@@ -178,3 +178,7 @@ void main()
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | ![FragPos](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![Normal](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
 | ![AlbedoSepc.rgb](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083606892.png) | ![AlbedoSpec.aaa](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083702196.png) |
+
+# The deferred lighting pass
+
+在光照计算部分中，会使用 G-Buffer 的一系列纹理作为光照计算的输入。

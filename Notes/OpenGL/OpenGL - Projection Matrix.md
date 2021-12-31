@@ -1,9 +1,10 @@
 ---
 tags:
     - OpenGL
+    - ComputerGraphics
 cssclass: [table-border]
 created: 2021-12-13
-updated: 2021-12-27
+updated: 2021-12-31
 ---
 
 # Perspective Projection
