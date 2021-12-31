@@ -23,6 +23,6 @@ updated: 2021-12-31
 
 当考虑纹理被渲染的颜色时，Pixel 和 Texel 之间半像素的偏移就会导致采样颜色的不准确，如下左为用来渲染的 $4 \times 4$ 纹理，下中为实际渲染得到的颜色，下右为屏幕像素与纹理像素的对应关系：
 
-|                                                                            |                                                                            |                     |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --- |
-| ![](assets/Computer%20Graphics%20-%20Half-Pixel%20Offset/Untitled%204.png) | ![](assets/Computer%20Graphics%20-%20Half-Pixel%20Offset/Untitled%205.png) |     |![](assets/Computer%20Graphics%20-%20Half-Pixel%20Offset/Untitled%205%201.png)
+|     |     |     |
+| --- | --- | --- |
+|     |     |     |
