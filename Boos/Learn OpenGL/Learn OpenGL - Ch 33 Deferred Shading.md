@@ -181,6 +181,7 @@ void main()
 
 # The deferred lighting pass
 
+在获取了 `G-buffer` 后，
 在光照计算部分中，会使用 G-Buffer 的一系列纹理作为光照计算的输入。
 
-使用的 
+使用的 Fragment Shader 如下所示
