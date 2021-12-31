@@ -304,4 +304,6 @@ scene.postRender = []()
 
 在 Deferred Lighting 渲染中，所有需要显示的物体需要首先被绘制在 `G-Buffer ` 中，再通过 Lighting Pass 添加光照效果。但这会引起两个问题：
 1. 无法绘制不被光照效果影响的物体，如无法绘制表示光源的 Cube。如果将 Cube 放置在 `G-Buffer` 中，即变为了光源本身被光照影响，显然不合理。
-2. suo'y
+2. 所有的被渲染物体都必须使用相同的光照模型和参数，这是因为所有被渲染的物体都是统一在 Lighting Pass 阶段被上色。
+
+第二个问题可以通过在 Lighting Pass 中添加更多的数据来一定程度规避。第一个问题则需要通过通过结合 `Deferred Rendering` 及 `Forward Rendering` 实现。即将场景中大部分物体通过延迟渲染的前提下，将一些不适合延迟渲染的物体（如例子中的光源 Cube）通过前向渲染绘制。
