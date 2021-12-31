@@ -183,7 +183,7 @@ void main()
 
 在 `Lighting Pass` 中，会使用 G-Buffer 的一系列纹理作为光照计算的输入。
 
-绘制全屏 Quad 时，使用的 Fragment Shader 中需要定义三个 `sampler2D` 分别作为之前 `FragPos`，`Normal`，`AlbedoSpec`的输出。
+绘制全屏 Quad 时，使用的 Fragment Shader 中需要定义三个 `sampler2D` 分别作为之前 `FragPos`，`Normal`，`AlbedoSpec`的输入，并通过采样这三个纹理获取计算光照时需要的数据，如下所示：
 
 ```glsl
 uniform sampler2D gPosition;
@@ -199,3 +199,53 @@ void main()
     // ...
 }
 ```
+
+另外，在 Fragment Shader 中，还定义了一个 Lights 数组，表示一系列点光源的输出：
+```glsl
+struct Light
+{
+    vec3 Position;
+    vec3 Color;
+
+    float Linear;
+    float Quadratic;
+};
+
+const int NR_LIGHTS = 32;
+uniform Light lights[NR_LIGHTS];
+uniform vec3 viewPos;
+
+void main()
+{
+    vec3 FragPos = texture(gPosition, TexCoords).rgb;
+    vec3 Normal = texture(gNormal, TexCoords).rgb;
+    vec3 Diffuse = texture(gAlbedoSpec, TexCoords).rgb;
+    float Specular = texture(gAlbedoSpec, TexCoords).a;
+
+    vec3 lighting = Diffuse * 0.1;
+    vec3 viewDir = normalize(viewPos - FragPos);
+
+    for (int i = 0; i != NR_LIGHTS; ++i)
+    {
+        // diffuse
+        vec3 lightDir = normalize(lights[i].Position - FragPos);
+        vec3 diffuse = max(dot(Normal, lightDir), 0.0) * Diffuse * lights[i].Color;
+
+        // specular
+        vec3 halfwayDir = normalize(lightDir + viewDir);
+        float spec = pow(max(dot(Normal, halfwayDir), 0.0), 16.0);
+        vec3 specular = spec * Specular * lights[i].Color;
+
+        float distance = length(lights[i].Position - FragPos);
+        float attenuation = 1.0 / (1.0 + lights[i].Linear * distance + lights[i].Quadratic * distance * distance);
+        diffuse *= attenuation;
+        specular *= attenuation;
+
+        lighting += diffuse + specular;
+    }
+
+    FragColor = vec4(lighting, 1.0);
+}
+```
+
+在 C++ 部分，需要添加一系列biao
