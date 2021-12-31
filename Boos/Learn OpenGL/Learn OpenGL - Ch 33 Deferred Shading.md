@@ -299,6 +299,7 @@ scene.postRender = []()
 
 ```
 
-此时的渲染结果如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
+此时的渲染结果如下所示，可以看到所有的模型被正常的点亮：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
 
+在 Deferred Lighting 渲染中，所有需要显示的物体需要首先被绘制在 `G-Buffer ` 中，然后ton
