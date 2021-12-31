@@ -261,7 +261,43 @@ scene.postRender = []()
 };
 ```
 
-在定义场景时需要添加一系列表示点光源的定义：
+在定义场景时需要随机生成一系列表示点光源的数据：
 ```cpp
+const unsigned int NR_LIGHTS = 32;
+srand(13);
+for (unsigned int i = 0; i != NR_LIGHTS; ++i)
+{
+    // calculate slightly random offsets
+    float xPos = ((rand() % 100 / 100.0f) * 6.0 - 3.0);
+    float yPos = ((rand() % 100 / 100.0f) * 6.0 - 4.0);
+    float zPos = ((rand() % 100 / 100.0f) * 6.0 - 3.0);
+    lightPosition.push_back(vec3(xPos, yPos, zPos));
+
+    float rColor = (rand() % 100 / 200.0f) + 0.5f;
+    float gColor = (rand() % 100 / 200.0f) + 0.5f;
+    float bColor = (rand() % 100 / 200.0f) + 0.5f;
+    lightColors.push_back(vec3(rColor, gColor, bColor));
+}
+```
+
+在绘制 Light Pass Quad 前，将这些数据传递给 Shader：
+```cpp
+scene.postRender = []()
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    screenMeshRender->GetMaterial()->AddTexture("gPosition", gPositionTexture);
+    screenMeshRender->GetMaterial()->AddTexture("gNormal", gNormalTexture);
+    screenMeshRender->GetMaterial()->AddTexture("gAlbedoSpec", gAlbedoTexture);
+
+    for (unsigned int i = 0; i != lightPosition.size(); ++i)
+    {
+        screenMeshRender->GetMaterial()->GetShader()->SetVec3("lights[" + std::to_string(i) + "].Position", lightPosition[i]);
+        screenMeshRender->GetMaterial()->GetShader()->SetVec3("lights[" + std::to_string(i) + "].Color", lightColors[i]);
+        screenMeshRender->GetMaterial()->GetShader()->SetFloat("lights[" + std::to_string(i) + "].Linear", 0.7);
+        screenMeshRender->GetMaterial()->GetShader()->SetFloat("lights[" + std::to_string(i) + "].Quadratic", 1.8);
+    }
+    screenMeshRender->GetMaterial()->GetShader()->SetVec3("viewPos", camera->GetTransform()->GetPosition());
+    screenMeshRender->DrawMesh();
+};
 
 ```
