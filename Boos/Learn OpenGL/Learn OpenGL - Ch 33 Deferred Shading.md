@@ -310,3 +310,4 @@ scene.postRender = []()
 
 # Combining deferred rendering with forward rendering
 
+结合 Forward Rendering 
