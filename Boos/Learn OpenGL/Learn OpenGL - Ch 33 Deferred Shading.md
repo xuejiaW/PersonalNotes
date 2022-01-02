@@ -321,6 +321,9 @@ scene.postRender = []()
     
     // ...
     screenMeshRender->DrawMesh();
+    
+   glEnable(GL_DEPTH_TEST);
+
 
     for (unsigned int i = 0; i != lightGOs.size(); ++i)
     {
@@ -331,4 +334,6 @@ scene.postRender = []()
 
 ```
 
-需要注意的是，此时在 `PostRender` 中需要首先关闭深度检测。因为如果开启了深度检测，na
+需要注意的是，此时在 `PostRender` 中需要首先关闭深度检测。否则的话，在绘制了全屏的 Quad 后，之后表示 Lighting 的 Cube 就会因为深度测试不够而失败。
+
+此时的结果如下所示，可以看到
