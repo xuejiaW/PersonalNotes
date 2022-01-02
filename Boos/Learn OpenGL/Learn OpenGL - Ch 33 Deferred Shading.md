@@ -252,7 +252,6 @@ void main()
 ```cpp
 scene.postRender = []()
 {
-    glDisable(GL_DEPTH_TEST);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     screenMeshRender->GetMaterial()->AddTexture("gPosition", gPositionTexture);
     screenMeshRender->GetMaterial()->AddTexture("gNormal", gNormalTexture);
@@ -312,3 +311,24 @@ scene.postRender = []()
 # Combining deferred rendering with forward rendering
 
 结合 `Forward Rendering` 和 `Deferred Rendering` 的最简单的方法，就是在渲染完使用 G-Buffer 的整个屏幕的 Quad 后再使用 Forward Rendering。
+
+示例代码如下所示：
+```cpp
+scene.postRender = []()
+{
+    glDisable(GL_DEPTH_TEST);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    
+    // ...
+    screenMeshRender->DrawMesh();
+
+    for (unsigned int i = 0; i != lightGOs.size(); ++i)
+    {
+        colorShader->SetVec3("baseColor", lightColors[i]);
+        lightGOs[i]->GetMeshRender()->Update();
+    }
+};
+
+```
+
+需要注意的是，此时在 `PostRender` 中需要首先关闭深度检测。因为如果开启了深度检测，na
