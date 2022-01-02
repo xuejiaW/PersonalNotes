@@ -336,4 +336,6 @@ scene.postRender = []()
 
 需要注意的是，此时在 `PostRender` 中需要首先关闭深度检测。否则的话，在绘制了全屏的 Quad 后，之后表示 Lighting 的 Cube 就会因为深度测试不够而失败。
 
-此时的结果如下所示，可以看到
+此时的结果如下所示，可以看到所有的 Cube 都显示在了模型之上，并没有正确的正当关系： 
+![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
+
