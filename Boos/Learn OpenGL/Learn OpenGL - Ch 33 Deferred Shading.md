@@ -339,3 +339,4 @@ scene.postRender = []()
 此时的结果如下所示，可以看到所有的 Cube 都显示在了模型之上，并没有正确的正当关系： 
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
 
+为了解决这个问题，需要将 `GBuffer` 中的深度缓冲kao'bei'dao
