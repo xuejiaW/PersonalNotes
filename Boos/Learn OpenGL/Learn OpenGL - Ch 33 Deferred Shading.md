@@ -252,6 +252,7 @@ void main()
 ```cpp
 scene.postRender = []()
 {
+    glDisable(GL_DEPTH_TEST);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     screenMeshRender->GetMaterial()->AddTexture("gPosition", gPositionTexture);
     screenMeshRender->GetMaterial()->AddTexture("gNormal", gNormalTexture);

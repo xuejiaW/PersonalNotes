@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Computer Graphics - Half-Pixel Offset",
+  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 33 Deferred Shading",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
