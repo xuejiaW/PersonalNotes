@@ -3,7 +3,7 @@ tags:
     - Unity
     - Shader
 created: 2021-12-31
-updated: 2022-01-01
+updated: 2022-01-02
 ---
 
 这三者都是 Unity 的 ShaderLab 中定义的针对 HLSL 的数据类型拓展，拓展的目的主要是为了移动端的 GPU 。

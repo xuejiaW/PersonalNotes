@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-31
-updated: 2022-01-01
+updated: 2022-01-02
 ---
 
 # Texels to Pixels
