@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -69,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
               }
             }
           },
@@ -90,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,8 +152,8 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+    "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
     "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png",
     "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 4.png",
     "Notes/Unity/Unity - fixed, half, fixed Difference.md",
