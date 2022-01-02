@@ -310,4 +310,4 @@ scene.postRender = []()
 
 # Combining deferred rendering with forward rendering
 
-结合 Forward Rendering 
+结合 `Forward Rendering` 和 `Deferred Rendering` 的最简单的方法，就是在渲染完使用 G-Buffer 的整个屏幕的 Quad 后再使用 Forward Rendering。
