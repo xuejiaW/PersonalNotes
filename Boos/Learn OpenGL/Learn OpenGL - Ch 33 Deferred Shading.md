@@ -422,21 +422,18 @@ void main()
 {
     for (int i = 0; i != NR_LIGHTS; ++i)
     {
-        // ...
-        float attenuation = 0.0;
-
+        float distance = length(lights[i].Position - FragPos);
         if (distance < lights[i].Radius)
         {
-            attenuation = 1.0 / (1.0 + lights[i].Linear * distance + lights[i].Quadratic * distance * distance);
+            // lighting calculation
         }
-        // ...
     }
-
+    
+    FragColor = vec4(lighting, 1.0);
 }
 
 ```
 
 ## How we really use light Volums
 
-但在
-
+在 GPU 中，Shader 中的语句都是并行执行的，且 GPU 要求所有的运行 Shader 代码的核需要执行相同的代码。因此在 Shader 中 If 语句的每个 Case 都会被执行，只不过
