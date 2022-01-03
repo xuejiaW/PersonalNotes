@@ -370,3 +370,6 @@ scene.postRender = []()
 
 # A larget number of lights
 
+对于有大量的光源的情况下，使用 `Deferred Rendering` 虽然能一定程度的节约性能，但还是很可能出现卡顿。
+
+因为在 `Defrred Rendering` 使用的 Shader 中，仍然会计算所有光源对光照的贡献
