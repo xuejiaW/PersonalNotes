@@ -381,7 +381,7 @@ scene.postRender = []()
 计算光源体积光的方法就是求解光源 [衰减](Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md#衰减) 为 0 时的距离，即衰减公式为：
 
 $$
-F_{a t t}=\frac{1.0}{K_{c}+K_{l} * d+K_{q} * d^{2}}
+F_{a t t}=\frac{I_{max}}{K_{c}+K_{l} * d+K_{q} * d^{2}}
 $$
 
 这个表达式无法求得一个值让表达式正好等于 0 ，因此只需要让表达式等于一个接近 0 的数，此时光源的贡献也近乎于 0 ，即人无法感知到光源的贡献。 在下述例子中，将该接近 0 的数设为 $\frac{5}{256}$。
@@ -393,8 +393,12 @@ $$
 求解的过程如下所示：
 $$
 \begin{aligned}
-&\frac{5}{256}=\frac{1}{k_{c}+k_{1} \cdot d+k_{q} \cdot d^{2}} \\
-&k_{q} \cdot d^{2}+k_{1} \cdot d+k_{c}-\frac{256}{5}=0 \\
-&d=\frac{-k_{1}+\sqrt{k_{1}^{2}-4 k_{q}\left(k_{c}-\frac{256}{5}\right)}}{2 * k_{q}}
+&\frac{5}{256}=\frac{I_{max}}{k_{c}+k_{1} \cdot d+k_{q} \cdot d^{2}} \\
+&k_{q} \cdot d^{2}+k_{1} \cdot d+k_{c}-\frac{256}{5} * I_{max}*=0 \\
+&d=\frac{-k_{1}+\sqrt{k_{1}^{2}-4 k_{q}\left(k_{c}- I_{max}* \frac{256}{5}\right)}}{2 * k_{q}}
 \end{aligned}
 $$
+
+上述过程转换为计算代码即为：
+```cpp
+```
