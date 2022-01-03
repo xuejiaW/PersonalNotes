@@ -377,3 +377,8 @@ scene.postRender = []()
 为了解决这个问题，引入了 `体积光（Light Volume）` 的概念，即每个光源都有一个自己的一个体积范围。对于 Fragment 而言，仅当它处在某个光源的体积范围内，才需要计算这个光源的贡献。  
 
 ## Calculating a light's volume 
+
+计算光源体积光的方法就是求解光源 [衰减](Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md#衰减) 为 0 时的距离，即衰减公式为：
+$$
+F_{a t t}=\frac{1.0}{K_{c}+K_{l} * d+K_{q} * d^{2}}
+$$
