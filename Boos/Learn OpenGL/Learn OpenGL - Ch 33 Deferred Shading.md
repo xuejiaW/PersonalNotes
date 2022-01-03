@@ -379,6 +379,14 @@ scene.postRender = []()
 ## Calculating a light's volume 
 
 计算光源体积光的方法就是求解光源 [衰减](Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md#衰减) 为 0 时的距离，即衰减公式为：
+
 $$
 F_{a t t}=\frac{1.0}{K_{c}+K_{l} * d+K_{q} * d^{2}}
 $$
+
+这个表达式无法求得一个值让表达式正好等于 0 ，因此只需要让表达式等于一个接近 0 的数，此时光源的贡献也近乎于 0 ，即人无法感知到光源的贡献。
+
+```ad-note
+在下述例子中，将该接近 0 的数设为 
+```
+
