@@ -374,4 +374,6 @@ scene.postRender = []()
 
 因为在 `Defrred Rendering` 使用的 Shader 中，仍然会计算所有光源对光照的贡献。但实际上，有许多的光源离 Fragment 太远，并不会对最后的效果产生任何的贡献。
 
-为了解决这个问题，引入了 `体积光（Light Volume）` 的概念，即每个光源都有一个自己的一个体积范围。
+为了解决这个问题，引入了 `体积光（Light Volume）` 的概念，即每个光源都有一个自己的一个体积范围。对于 Fragment 而言，仅当它处在某个光源的体积范围内，才需要计算这个光源的贡献。  
+
+## Calculating a light's volume 
