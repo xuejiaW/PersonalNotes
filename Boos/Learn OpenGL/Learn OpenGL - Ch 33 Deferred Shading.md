@@ -418,4 +418,23 @@ struct Light
     float Radius;
 };
 
+void main()
+{
+    for (int i = 0; i != NR_LIGHTS; ++i)
+    {
+        // ...
+        float attenuation = 0.0;
+
+        if (distance < lights[i].Radius)
+        {
+            attenuation = 1.0 / (1.0 + lights[i].Linear * distance + lights[i].Quadratic * distance * distance);
+        }
+        // ...
+    }
+
+}
+
 ```
+
+
+但因为
