@@ -452,4 +452,7 @@ void main()
 
 # Deferred rendering vs Forward Rendering
 
-`Deferred Rendering` 让屏幕上的每一个像素都只会运行一次关于光照的计算，相对于 `Forward Rendering` 中让每个 Fragment Shader 都需要计算光照，
+`Deferred Rendering` 让屏幕上的每一个像素都运行一次关于光照的计算，相对于 `Forward Rendering` 中让每个 Fragment Shader 都需要计算光照，节省了较多德军i算。但同时 `Deferred Rendering` 耗费了更多的内存，无法使用 MSAA 和 Blending。
+
+当在一个简单场景且没有太多光源的情况下，`Deferred Rendering` 并不能提升很多的性能，有时甚至会降低效率。但在负责场景下，`Deferred Rendering` 则会带来巨大的优化，且在使用其他后处理计算时也可以依赖 `G-Buffer` 带来更多的性能提升。
+
