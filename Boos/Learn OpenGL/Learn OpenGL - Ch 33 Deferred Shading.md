@@ -339,4 +339,4 @@ scene.postRender = []()
 此时的结果如下所示，可以看到所有的 Cube 都显示在了模型之上，并没有正确的正当关系，因为： 
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
 
-为了解决这个问题，需要将 `GBuffer` 中的深度缓冲拷贝到 Default Framebuffer 中再进一步绘制，这样所有被绘制的 Cube 都能正常的进行深度检测
+为了解决这个问题，需要将 `GBuffer` 中的深度缓冲拷贝到 Default Framebuffer 中再进一步绘制，这样所有被绘制的 Cube 都能正常的进行深度检测。
