@@ -452,3 +452,4 @@ void main()
 
 # Deferred rendering vs Forward Rendering
 
+`Deferred Rendering` 让屏幕上的每一个像素都只会运行一次关于光照的计算，相对于 `Forward Rendering` 中让每个 Fragment Shader 都虚啊
