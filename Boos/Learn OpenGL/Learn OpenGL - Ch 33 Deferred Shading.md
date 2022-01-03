@@ -390,4 +390,11 @@ $$
 求解的数，越接近 0，求得的 Distance 也就越大，耗费更多的性能。但如果取值太大，求得的 Distance 过小，就能看到明显的光照边界。
 ```
 
-求解的过程在于：
+求解的过程如下所示：
+$$
+\begin{aligned}
+&\frac{5}{256}=\frac{1}{k_{c}+k_{1} \cdot d+k_{q} \cdot d^{2}} \\
+&k_{q} \cdot d^{2}+k_{1} \cdot d+k_{c}-\frac{256}{5}=0 \\
+&d=\frac{-k_{1}+\sqrt{k_{1}^{2}-4 k_{q}\left(k_{c}-\frac{256}{5}\right)}}{2 * k_{q}}
+\end{aligned}
+$$
