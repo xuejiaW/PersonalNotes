@@ -368,3 +368,5 @@ scene.postRender = []()
 此时的效果如下，可以看到 Cube 与 模型间的遮挡关系正常：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220103140503675.png)
 
+# A larget number of lights
+
