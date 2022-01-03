@@ -440,4 +440,15 @@ void main()
 
 因此在 Shader 中 If 语句的每个 Case 都会被执行，只不过不符合条件的 Case 的结果会被舍弃，也因此上述通过 If 语句的代码优化很可能效果有限。
 
-另一种更高效的解决方法是在 `Lighting Pass` 阶段不再绘制铺满屏幕的 Quad，而是绘制一系列以光源位置为中心，以求得的 Attenuation Radius 作为半径的球。绘制球的 Shader 统一使用 `GBuffer` 作为输入，且在
+另一种更高效的解决方法是在 `Lighting Pass` 阶段不再绘制铺满屏幕的 Quad，而是绘制一系列以光源位置为中心，以求得的 Attenuation Radius 作为半径的球。
+
+绘制球的 Shader 统一使用 `GBuffer` 作为输入，但在光照中仅计算该球所表示的光源的贡献。将一系列球绘制的结果叠加在一起即为最终的结果。示意图如下所示：
+
+![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220103212954596.png)
+
+```ad-note
+使用这种方法绘制时，需要开启 Face Culling，否则的话所有的像素会被重复计算两次。开启 Face Culling 后应当绘制球的 Back face，否则的话当进入某个球的内部时，该球的色彩贡献就不会被正常绘制。
+```
+
+# Deferred rendering vs Forward Rendering
+
