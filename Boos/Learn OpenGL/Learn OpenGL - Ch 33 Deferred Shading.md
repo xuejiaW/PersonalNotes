@@ -372,4 +372,6 @@ scene.postRender = []()
 
 对于有大量的光源的情况下，使用 `Deferred Rendering` 虽然能一定程度的节约性能，但还是很可能出现卡顿。
 
-因为在 `Defrred Rendering` 使用的 Shader 中，仍然会计算所有光源对光照的贡献
+因为在 `Defrred Rendering` 使用的 Shader 中，仍然会计算所有光源对光照的贡献。但实际上，有许多的光源离 Fragment 太远，并不会对最后的效果产生任何的贡献。
+
+为了解决这个问题，引入了 `体积光（Light Volume）` 的概念，即每个光源都有一个自己的一个体积范围。
