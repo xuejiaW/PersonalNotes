@@ -340,3 +340,31 @@ scene.postRender = []()
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
 
 为了解决这个问题，需要将 `GBuffer` 中的深度缓冲拷贝到 Default Framebuffer 中再进一步绘制，这样所有被绘制的 Cube 都能正常的进行深度检测。
+
+```cpp
+scene.postRender = []()
+{
+    glDisable(GL_DEPTH_TEST);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    
+    // ...
+    screenMeshRender->DrawMesh();
+
+    glEnable(GL_DEPTH_TEST);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, gFramebuffer);
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    glBlitFramebuffer(0, 0, screen_width, screen_height, 0, 0, screen_width, screen_height, GL_DEPTH_BUFFER_BIT, GL_NEAREST);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    for (unsigned int i = 0; i != lightGOs.size(); ++i)
+    {
+        colorShader->SetVec3("baseColor", lightColors[i]);
+        lightGOs[i]->GetMeshRender()->Update();  // Directly draw light pos
+    }
+};
+
+```
+
+此时的效果如下，可以看到 Cube 与 模型间的遮挡关系正常：
+![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220103140503675.png)
+
