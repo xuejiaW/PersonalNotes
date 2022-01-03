@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-            "mode": "source"
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
+            "mode": "preview"
           }
         }
       }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
     "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
@@ -161,7 +162,6 @@
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md",
     "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png",
-    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 4.png",
-    "Notes/Unity/Unity - fixed, half, fixed Difference.md"
+    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 4.png"
   ]
 }
