@@ -409,3 +409,13 @@ float lightMax = std::fmaxf(std::fmaxf(color.r, color.g), color.b);
 float radius = (-lightLinear + std::sqrtf(lightLinear * lightLinear - 4 * lightQuadratic * (lightConstant - (256.0f / 5.0f) * lightMax))) /
                        2 * lightQuadratic;
 ```
+
+对 Shader 的改动如下所示：
+```glsl
+struct Light
+{
+    // ...
+    float Radius;
+};
+
+```
