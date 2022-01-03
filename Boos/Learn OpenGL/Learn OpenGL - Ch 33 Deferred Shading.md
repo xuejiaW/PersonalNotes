@@ -401,4 +401,11 @@ $$
 
 上述过程转换为计算代码即为：
 ```cpp
+float lightConstant = 1.0;
+float lightLinear = 0.7f;
+float lightQuadratic = 1.8f;
+
+float lightMax = std::fmaxf(std::fmaxf(color.r, color.g), color.b);
+float radius = (-lightLinear + std::sqrtf(lightLinear * lightLinear - 4 * lightQuadratic * (lightConstant - (256.0f / 5.0f) * lightMax))) /
+                       2 * lightQuadratic;
 ```
