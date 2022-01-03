@@ -436,4 +436,8 @@ void main()
 
 ## How we really use light Volums
 
-在 GPU 中，Shader 中的语句都是并行执行的，且 GPU 要求所有的运行 Shader 代码的核需要执行相同的代码。因此在 Shader 中 If 语句的每个 Case 都会被执行，只不过
+在 GPU 中，Shader 中的语句都是并行执行的，且 GPU 要求所有的运行 Shader 代码的核需要执行相同的代码。
+
+因此在 Shader 中 If 语句的每个 Case 都会被执行，只不过不符合条件的 Case 的结果会被舍弃，也因此上述通过 If 语句的代码优化很可能效果有限。
+
+另一种更高效的解决方法是在 `Lighting Pass` 阶段不再绘制铺满屏幕的 Quad，而是绘制一系列以光源位置为中心，以求得的 Attenuation Radius 作为半径的球。绘制球的 Shader 统一
