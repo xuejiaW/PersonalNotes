@@ -1,5 +1,7 @@
-nmap j gj
-nmap k gk
+noremap j gj
+noremap k gk
+
+noremap H ^
+noremap L $
 
 set clipboard=unnamed
-set clipboard+=unnamedplus
