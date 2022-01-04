@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+            "file": "TO-DO.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "TO-DO.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/C++/C++ - Mutex.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
-    "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
-    "Boos/Render Hell/Render Hell - Book 3 Problems.md",
-    "Boos/Render Hell/Render Hell - Book 4 Solutions.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md"
+    "Boos/Render Hell/Render Hell - Book 2 Pipeline.md"
   ]
 }

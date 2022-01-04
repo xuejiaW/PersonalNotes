@@ -24,6 +24,10 @@ updated: 2021-12-27
 
 可在 `Settings/Quick switcher / Quick Switcher / Show attachments` 中选择跳转文件时，是否要展示附件文件。
 
+## Random Note
+
+该插件开启后，可以通过 `Random note: Open random note` 随机开启一个笔记
+
 # Community Plugins
 
 ## Admonition[^1]

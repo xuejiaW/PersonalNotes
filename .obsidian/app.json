@@ -11,5 +11,6 @@
   "vimMode": true,
   "strictLineBreaks": false,
   "showLineNumber": true,
-  "legacyEditor": false
+  "legacyEditor": false,
+  "livePreview": false
 }
