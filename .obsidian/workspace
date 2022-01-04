@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian - Commands.md",
+            "file": "Notes/Obsidian/Obsidian-Plugins.md",
             "mode": "source",
             "source": true
           }
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -71,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Commands.md"
+                "file": "Notes/Obsidian/Obsidian-Plugins.md"
               }
             }
           },
@@ -92,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Commands.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +117,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Commands.md",
+                "file": "Notes/Obsidian/Obsidian-Plugins.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,9 +154,9 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/Obsidian/Obsidian - Commands.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "TO-DO.md",
+    "Notes/Obsidian/Obsidian - Commands.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/C++/C++ - Mutex.md",

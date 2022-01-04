@@ -383,6 +383,24 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 | -------------------------------------------------------- | ------------------------------------------------------- |
 | ![](assets/Obsidian-Plugins/DefaultChineseSplitting.gif) | ![](assets/Obsidian-Plugins/PluginChineseSplitting.gif) |
 
+
+## Vimrc Support
+
+该插件让 Obsidian 支持 Vim 配置文件，该文件需要命名为 `.obsidian.vimrc`，且放在 Vault 根目录（并非 `.obsidian` 文件夹）。
+
+配置的示例如下所示：
+```text
+noremap j gj
+noremap k gk
+
+noremap H ^
+noremap L $
+
+set clipboard=unnamed
+```
+
+
+
 # Reference
 
 [^1]: [Admonition](https://github.com/valentine195/obsidian-admonition)
@@ -399,3 +417,4 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 [^12]: [obsidian-relative-line-numbers](https://github.com/nadavspi/obsidian-relative-line-numbers)
 [^13]: [Obsidian-Pangu](https://github.com/Natumsol/obsidian-pangu)
 [^14]: [Obsidian-Word Splitting for Simplified Chinese in Edit Mode](https://github.com/aidenlx/cm-chs-patch)
+[^15]: [obsidian-vimrc-support (github.com)](https://github.com/esm7/obsidian-vimrc-support)
