@@ -10,7 +10,8 @@
           "type": "markdown",
           "state": {
             "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-            "mode": "preview"
+            "mode": "source",
+            "source": false
           }
         }
       }
