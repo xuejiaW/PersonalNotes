@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/Obsidian/Untitled.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/Obsidian/Untitled.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Obsidian/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Obsidian/Untitled.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Obsidian/Untitled.md",
     "TO-DO.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
@@ -160,7 +161,6 @@
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-    "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md",
-    "Boos/Render Hell/Render Hell - Book 2 Pipeline.md"
+    "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md"
   ]
 }

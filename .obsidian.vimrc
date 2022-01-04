@@ -5,3 +5,4 @@ noremap H ^
 noremap L $
 
 set clipboard=unnamed
+
