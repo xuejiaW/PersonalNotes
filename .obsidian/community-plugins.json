@@ -16,5 +16,6 @@
   "obsidian-relative-line-numbers",
   "obsidian-pangu",
   "dataview",
-  "cm-chs-patch"
+  "cm-chs-patch",
+  "obsidian-vimrc-support"
 ]
