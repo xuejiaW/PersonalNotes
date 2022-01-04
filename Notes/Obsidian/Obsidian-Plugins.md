@@ -399,6 +399,15 @@ noremap L $
 set clipboard=unnamed
 ```
 
+也可以使用如下的方法，配置 [Obsidian - Commands](Obsidian%20-%20Commands.md)：
+```text
+exmap back obcommand app:go-back
+nmap <C-o> :back
+```
+
+```ad-fail
+该插件目前不支持设置 Leader 来触发命令
+```
 
 
 # Reference
