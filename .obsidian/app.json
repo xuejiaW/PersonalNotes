@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 33 Deferred Shading",
+  "attachmentFolderPath": "./assets/Render Hell - Book 1 Overview",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
