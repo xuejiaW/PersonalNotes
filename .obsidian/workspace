@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+            "file": "Notes/C++/C++ - Mutex.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md"
+                "file": "Notes/C++/C++ - Mutex.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+                "file": "Notes/C++/C++ - Mutex.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+                "file": "Notes/C++/C++ - Mutex.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/C++/C++ - Mutex.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
@@ -160,7 +161,6 @@
     "Boos/Render Hell/Render Hell - Book 3 Problems.md",
     "Boos/Render Hell/Render Hell - Book 4 Solutions.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md",
-    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png",
-    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 4.png"
+    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png"
   ]
 }
