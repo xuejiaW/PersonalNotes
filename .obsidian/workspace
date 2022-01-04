@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/C++/C++ - Mutex.md",
-            "mode": "source"
+            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md"
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
               }
             }
           },
@@ -91,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/C++/C++ - Mutex.md",
+                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +151,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/C++/C++ - Mutex.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
@@ -160,7 +160,6 @@
     "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
     "Boos/Render Hell/Render Hell - Book 3 Problems.md",
     "Boos/Render Hell/Render Hell - Book 4 Solutions.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md",
-    "Notes/Computer Graphics/assets/Computer Graphics - Half-Pixel Offset/Untitled 5 1.png"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 14  Light Casters, Multiple Lights.md"
   ]
 }
