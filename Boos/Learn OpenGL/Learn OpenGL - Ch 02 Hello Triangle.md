@@ -1,6 +1,6 @@
 ---
 created: 2021-12-14
-updated: 2021-12-24
+updated: 2022-01-05
 tags:
     - OpenGL
 ---
@@ -69,7 +69,7 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(vertices),vertices, GL_STATIC_DRAW);
 
 vertices 数据是定义在内存中的， glBufferData 操作是将内存中的 vertices 数据拷贝到显存中由 VBO 表示的地址中去。 
 
-虽然是拷贝，但在调用 glBufferData 后仍然不建议修改 vertices ，因为可能会造成 [管线堵塞 （Pipeline stall）](../../Notes/GPU%20%20Performance.md#管线堵塞%20（Pipeline%20stall）)的问题
+虽然是拷贝，但在调用 glBufferData 后仍然不建议修改 vertices ，因为可能会造成 [管线堵塞 （Pipeline stall）](../../Notes/GPU/GPU%20-%20GPU%20%20Performance.md#管线堵塞%20（Pipeline%20stall）)的问题
 
 # 索引缓冲对象
 

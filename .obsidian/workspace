@@ -154,14 +154,14 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
+    "Notes/GPU/GPU - GPU  Performance.md",
+    "Notes/GPU/GPU - Thread block.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Obsidian/Obsidian - Commands.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-    "Notes/C++/C++ - Mutex.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+    "Notes/C++/C++ - Mutex.md"
   ]
 }
