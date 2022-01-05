@@ -40,11 +40,21 @@ public static void OnTexMgrTaskComplete(IntPtr taskPtr, int errorCode)
 }
 ```
 
-会新产生如下错误，表明需要添加 `NotSupportedException: To marshal a managed method, please add an attribute
-named 'MonoPInvokeCallback' to the method definition.`：
+会新产生如下错误，表明需要添加 `MonoPInvokeCallback` Attribute：
 ```text
 NotSupportedException: To marshal a managed method, please add an attribute
 named 'MonoPInvokeCallback' to the method definition.
+```
+
+该 Attribute 位于 `AOT` 命名空间下，且需要接纳一个表示回调类型的形参，使用方法如下所示：
+```csharp
+using AOT;
+
+[MonoPInvokeCallback(typeof(Action<IntPtr, int>))]
+public static void OnTexMgrTaskComplete(IntPtr taskPtr, int errorCode)
+{
+    Debug.Log("sss callback in OnTexMgrTaskComplete");
+}
 ```
 
 # Reference
