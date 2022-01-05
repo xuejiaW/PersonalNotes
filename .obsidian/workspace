@@ -9,8 +9,20 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/C++/C++ - Template Class.md",
-            "mode": "preview",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 44.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      },
+      {
+        "id": "fad8e3f3b3acfd27",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Obsidian/Obsidian - Plugins.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -70,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/C++/C++ - Template Class.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 44.md"
               }
             }
           },
@@ -91,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/C++/C++ - Template Class.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 44.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/C++/C++ - Template Class.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 44.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,15 +165,15 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/C++/C++ - Template Class.md",
-    "Notes/C++/C++ - Mutex.md",
-    "Notes/Android Debug Bridge.md",
-    "TO-DO.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
-    "Notes/Unity/Unity - Color vs Color32.md",
-    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 44.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
+    "Notes/Obsidian/Obsidian - Tag.md",
+    "Notes/Obsidian/Obsidian - Plugins.md",
+    "Notes/Obsidian/Obsidian - MetaData.md",
+    "Notes/Obsidian/Obsidian - CSS Snippets.md",
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+    "Notes/Obsidian/Obsidian - Commands.md",
+    "Notes/GPU/GPU - Thread block.md",
+    "Boos/Render Hell/Render Hell - Book 4 Solutions.md"
   ]
 }
