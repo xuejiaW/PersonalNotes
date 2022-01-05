@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +152,15 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "TO-DO.md",
     "Notes/Unity/Unity - Color vs Color32.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
-    "Notes/Unity/Unity - Gizmo.md",
-    "Notes/Unity/Unity - Editor Windows.md",
-    "Notes/Unity/Unity - fixed vs  half  vs fixed.md",
-    "Notes/Unity/Unity - VSCode.md",
-    "Notes/Unity/Unity - UniRx.md"
+    "Notes/Unity/Unity - Gizmo.md"
   ]
 }

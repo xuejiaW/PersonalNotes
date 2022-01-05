@@ -1,9 +1,12 @@
 ---
 tags:
     - C#
+    - Unity
 created: 2021-12-12
-updated: 2021-12-24
+updated: 2022-01-05
 ---
+
+# Overview
 
 在 `Edit->Project Settings->Api Compatiability Level` 设置中可以切换 `.Net Standard 2.0` 和 `.Net 4x` 两种配置。
 ![|400](assets/Unity%20-%20Scripting%20Architecture%20-%20.Net%20Profile%20Support/image-20211212232835295.png)
