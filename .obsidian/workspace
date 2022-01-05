@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android Debug Bridge.md",
-            "mode": "preview",
+            "file": "Notes/C++/C++ - Template Class.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android Debug Bridge.md"
+                "file": "Notes/C++/C++ - Template Class.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Notes/C++/C++ - Template Class.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -115,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Notes/C++/C++ - Template Class.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +153,8 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/C++/C++ - Template Class.md",
+    "Notes/C++/C++ - Mutex.md",
     "Notes/Android Debug Bridge.md",
     "TO-DO.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
@@ -159,8 +162,6 @@
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - .Net Profile Support.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Notes/Unity/Unity - Color vs Color32.md",
-    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
-    "Notes/Unity/Unit - Mipmap Bias.md"
+    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md"
   ]
 }
