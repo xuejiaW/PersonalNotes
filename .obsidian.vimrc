@@ -6,3 +6,5 @@ noremap L $
 
 set clipboard=unnamed
 
+unmap <Space>
+
