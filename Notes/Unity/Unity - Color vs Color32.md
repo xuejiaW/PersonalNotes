@@ -11,7 +11,11 @@ updated: 2022-01-05
 
 # Difference
 
-`Color32` 占据的内存更小，所有通道使用 `4 bytes`，`Color` 每个通道使用 `4 bytes`。
+`Color32` 占据的内存更小，每个通道使用 `1 bytes`，一共使用 `4 bytes`。`Color` 每个通道使用 `4 bytes`，一共使用 `16 bytes`。
+
+```ad-note
+因此 `Color` 可以提供更精确的色彩控制，如可以存储一个通道的值为 $0.2346128$，转换为 $0 \sim 255$ 范围中为 $59.82626$，该精度使用 `Color32` 就无法实现。
+```
 
 `Color` 提供了许多 `Static Properties` 用来表示特定的颜色，如 `Color.clear` 表示 $(0,0,0,0)$。
 
