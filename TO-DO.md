@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2022-01-04
+updated: 2022-01-05
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
@@ -18,3 +18,6 @@ updated: 2022-01-04
 - [ ] Power shell 编译 Makefile
  [How to generate a Makefile with source in sub-directories using just one makefile - Stack Overflow](https://stackoverflow.com/questions/231229/how-to-generate-a-makefile-with-source-in-sub-directories-using-just-one-makefil)
 - [x] Unity Strip Engine Code
+- [ ] IL2Cpp Marshall problem
+    [IL2CPP does not support marshaling delegates that point to instance methods to native code. - Unity Answers](https://answers.unity.com/questions/1590830/il2cpp-does-not-support-marshaling-delegates-that.html)
+    [MonoPInvokeCallback in unity? - Unity Forum](https://forum.unity.com/threads/monopinvokecallback-in-unity.132510/)

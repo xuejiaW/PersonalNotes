@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Color vs Color32.md",
+            "file": "TO-DO.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Color vs Color32.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Color vs Color32.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Color vs Color32.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "TO-DO.md",
     "Notes/Unity/Unity - Color vs Color32.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
@@ -160,7 +161,6 @@
     "Notes/Unity/Unity - Editor Windows.md",
     "Notes/Unity/Unity - fixed vs  half  vs fixed.md",
     "Notes/Unity/Unity - VSCode.md",
-    "Notes/Unity/Unity - UniRx.md",
-    "Notes/Unity/Unity - PlayerSettings.md"
+    "Notes/Unity/Unity - UniRx.md"
   ]
 }
