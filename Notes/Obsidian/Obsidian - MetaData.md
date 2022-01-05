@@ -2,7 +2,7 @@
 tags: 
     - Obsidian
 created: 2022-01-05
-updated: 2022-01-05
+updated: 2022-01-06
 ---
 
 在 `.md` 文件的最上方，可以通过 `---` 记录 metedata 数据，格式如下：

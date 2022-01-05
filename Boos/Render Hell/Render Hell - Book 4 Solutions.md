@@ -1,6 +1,6 @@
 ---
 created: 2022-01-05
-updated: 2022-01-05
+updated: 2022-01-06
 tags:
     - GPU
 ---

@@ -2,7 +2,7 @@
 tags: 
     - Obsidian
 created: 2021-12-20
-updated: 2022-01-05
+updated: 2022-01-06
 ---
 
 
