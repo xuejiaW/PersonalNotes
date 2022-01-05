@@ -1,6 +1,8 @@
 ---
 tags:
     - Obsidian
+created: 2022-01-05
+updated: 2022-01-05
 ---
 
 
@@ -9,7 +11,7 @@ Obsidian 中所有设置都是基于 `Valut（库）`的。所有的设置信息
 快捷键的更改时全局的改动
 ```
 
-[Obsidian-Tag](Obsidian-Tag.md)：说明 Obsidian 中 Tag 的使用
-[Obsidian-Plugins](Obsidian/Obsidian-Plugins.md)：Obsidian 中核心插件的说明
-[Obsidian-Settings](Obsidian/Obsidian-Settings.md)：Obsidian 中设置相关的说明
-[Obsidian-MetaData](Obsidian/Obsidian-MetaData.md)：Obsidian 中关于 Metadata 的说明
+[Obsidian - Tag](Obsidian%20-%20Tag.md)：说明 Obsidian 中 Tag 的使用
+[Obsidian - Plugins](Obsidian%20-%20Plugins.md)：Obsidian 中核心插件的说明
+[Obsidian - Settings](Obsidian%20-%20Settings.md)：Obsidian 中设置相关的说明
+[Obsidian - MetaData](Obsidian%20-%20MetaData.md)：Obsidian 中关于 Metadata 的说明

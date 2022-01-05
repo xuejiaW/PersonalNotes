@@ -16,7 +16,7 @@ updated: 2022-01-04
 ## Tag Pane
 
 该插件开启后，可以通过 `Tag pane: Show tag pane` 开启 Tab Pane，在其中会展示 Vault 中所有表示的 Tag。如下所示：
-![](assets/Obsidian-Plugins/image-20211121231038137.png)
+![](assets/Obsidian%20-%20Plugins/image-20211121231038137.png)
 
 ## Quick Switcher
 
@@ -313,7 +313,7 @@ A --> B
 
 该插件支持更好的展示脚注。在下载打开该插件后，当光标移动到文中的脚注部分，会在 PopOver 窗口中显示对应的脚注，如下所示：
 
-![|200](assets/Obsidian-Plugins/GIF%2011-27-2021%2010-41-46%20PM.gif)
+![|200](assets/Obsidian%20-%20Plugins/GIF%2011-27-2021%2010-41-46%20PM.gif)
 
 默认安装插件后，脚注的内容就不会在文章中显示，可以通过 `Settings/Better footnote\Show reference` 重新打开显示。
 
@@ -321,18 +321,18 @@ A --> B
 
 该插件实现了文件夹目录的快速访问如下所示：
 
-![](assets/Obsidian-Plugins/GIF%2011-28-2021%2011-05-12%20PM.gif)
+![](assets/Obsidian%20-%20Plugins/GIF%2011-28-2021%2011-05-12%20PM.gif)
 
 ## Tag Wrangler[^6]
 
-该插件增强了 [Tag Pane](Obsidian-Plugins.md#Tag%20Pane) 的功能，主要提供了为 [Obsidian-Tag](Obsidian-Tag.md) 重命名的功能。
+该插件增强了 [Tag Pane](Obsidian%20-%20Plugins.md#Tag%20Pane) 的功能，主要提供了为 [Obsidian - Tag](Obsidian%20-%20Tag.md) 重命名的功能。
 
 当安装插件后，在 Tag Panel 中右键 Tag 会展现出重命名的选项。
 
 ## Sliding Panes[^7]
 
 Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该插件实现了自动在新页面打开并将多个页面折叠滑动的效果，如下所示：
-![](assets/Obsidian-Plugins/screenshot.gif)
+![](assets/Obsidian%20-%20Plugins/screenshot.gif)
 
 可以在快捷键中设置 `Focus on Pane to the left` 和 `Focus on Pane to the right` 命令向左或向右切换 Pane。
 
@@ -343,7 +343,7 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 ## File Explorer Note Count[^9]
 
 该插件实现在文件夹侧面显示该文件夹中笔记的数量，如下所示：
-![|300](assets/Obsidian-Plugins/image-20211208001137254.png)
+![|300](assets/Obsidian%20-%20Plugins/image-20211208001137254.png)
 
 ## Obsidian Git[^10]
 
@@ -354,12 +354,12 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 通过 `Settings/Obsidian Git` 可以为插件进行配置，如每隔多少分钟进行一次备份，备份时是否需要将 Commit 推送至远端等。
 
 该插件也提供了一系列快捷键选项，如下所示：
-![|500](assets/Obsidian-Plugins/image-20211209082916125.png)
+![|500](assets/Obsidian%20-%20Plugins/image-20211209082916125.png)
 
 ## Emoji Toolbar[^11]
 
 该插件用来支持插入 Emoji，安装插件后可为命令 `Emoji Toolbar: Open emoji picker` 设定快捷键（此设为 `Ctrl+;`），当使用快捷键时打开插入 Emoji 的界面，如下所示：
-![|400](assets/Obsidian-Plugins/GIF%2012-11-2021%202-26-19%20PM.gif)
+![|400](assets/Obsidian%20-%20Plugins/GIF%2012-11-2021%202-26-19%20PM.gif)
 
 ## Relative-line-numbers[^12]
 
@@ -381,7 +381,7 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 
 | Obsidian 默认中文分词                                    | 插件中文分词                                            |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| ![](assets/Obsidian-Plugins/DefaultChineseSplitting.gif) | ![](assets/Obsidian-Plugins/PluginChineseSplitting.gif) |
+| ![](assets/Obsidian%20-%20Plugins/DefaultChineseSplitting.gif) | ![](assets/Obsidian%20-%20Plugins/PluginChineseSplitting.gif) |
 
 
 ## Vimrc Support[^15]

@@ -2,7 +2,7 @@
 tags: 
     - Obsidian
 created: 2021-12-20
-updated: 2021-12-24
+updated: 2022-01-05
 ---
 
 
@@ -133,7 +133,7 @@ cssclass: [table-border]
 ```
 
 如下所示：
-![Obsidian Logo | 200](assets/Obsidian-CSS%20Snippets/image-20211207085006908.png)
+![Obsidian Logo | 200](assets/Obsidian%20-%20CSS%20Snippets/image-20211207085006908.png)
 
 ## Image Centered
 
