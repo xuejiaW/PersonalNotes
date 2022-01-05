@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian - Tag.md",
+            "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
             "mode": "source",
             "source": true
           }
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md"
+                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md",
+                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md",
+                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -165,6 +165,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - Partial Classes And Methods.md",
     "Notes/Obsidian/Obsidian - Tag.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Obsidian/Obsidian - MetaData.md",
@@ -173,7 +174,6 @@
     "Notes/Obsidian/Obsidian - Commands.md",
     "Notes/GPU/GPU - Thread block.md",
     "Boos/Render Hell/Render Hell - Book 4 Solutions.md",
-    "Boos/Render Hell/Render Hell - Book 3 Problems.md",
-    "Boos/Render Hell/Render Hell - Book 2 Pipeline.md"
+    "Boos/Render Hell/Render Hell - Book 3 Problems.md"
   ]
 }
