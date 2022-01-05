@@ -1,6 +1,8 @@
 ---
 created: 2022-01-04
 updated: 2022-01-05
+tags:
+    - Obsidian
 ---
 # 获取命令列表
 

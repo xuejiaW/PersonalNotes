@@ -1,6 +1,8 @@
 ---
 created: 2022-01-04
 updated: 2022-01-05
+tags:
+    - GPU
 ---
 ```ad-note
 这一部分简单介绍了一些 GPU 的涉及的概念。

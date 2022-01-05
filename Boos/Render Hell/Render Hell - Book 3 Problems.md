@@ -1,6 +1,8 @@
 ---
 created: 2022-01-05
 updated: 2022-01-05
+tags:
+    - GPU
 ---
 # Many Draw Calls / Many Commands
 

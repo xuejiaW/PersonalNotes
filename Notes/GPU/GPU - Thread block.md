@@ -1,6 +1,8 @@
 ---
 created: 2022-01-05
 updated: 2022-01-05
+tags:
+    - GPU
 ---
 在 GPU 中，会将 Computer Shader 的函数拆分成多进多个 Groups 中，这些组都会并行的运算。每个 Group 中都有固定数量的线程，这些线程都会运行相同的计算，但这些线程有着不同的输入。
 
