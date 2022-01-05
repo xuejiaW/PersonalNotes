@@ -9,19 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-            "mode": "preview",
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "fad8e3f3b3acfd27",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Obsidian/Obsidian - Plugins.md",
+            "file": "Notes/Unity/Unity - Color vs Color32.md",
             "mode": "source",
             "source": true
           }
@@ -65,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -83,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md"
+                "file": "Notes/Unity/Unity - Color vs Color32.md"
               }
             }
           },
@@ -104,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
+                "file": "Notes/Unity/Unity - Color vs Color32.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
+                "file": "Notes/Unity/Unity - Color vs Color32.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -165,15 +152,15 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-    "Notes/Obsidian/Obsidian - Tag.md",
+    "Notes/Unity/Unity - Color vs Color32.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
-    "Notes/Obsidian/Obsidian - MetaData.md",
-    "Notes/Obsidian/Obsidian - CSS Snippets.md",
-    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-    "Notes/Obsidian/Obsidian - Commands.md",
-    "Notes/GPU/GPU - Thread block.md",
-    "Boos/Render Hell/Render Hell - Book 4 Solutions.md",
-    "Boos/Render Hell/Render Hell - Book 3 Problems.md"
+    "Notes/Unity/Unit - Mipmap Bias.md",
+    "Notes/Unity/Unity - Gizmo.md",
+    "Notes/Unity/Unity - Editor Windows.md",
+    "Notes/Unity/Unity - fixed vs  half  vs fixed.md",
+    "Notes/Unity/Unity - VSCode.md",
+    "Notes/Unity/Unity - UniRx.md",
+    "Notes/Unity/Unity - PlayerSettings.md",
+    "Notes/CSharp/CSharp - Partial Classes And Methods.md"
   ]
 }
