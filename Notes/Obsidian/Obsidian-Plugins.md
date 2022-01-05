@@ -384,7 +384,7 @@ Obsidian 中默认打开一个页面时，会覆盖当前 Pane 的内容，该�
 | ![](assets/Obsidian-Plugins/DefaultChineseSplitting.gif) | ![](assets/Obsidian-Plugins/PluginChineseSplitting.gif) |
 
 
-## Vimrc Support
+## Vimrc Support[^15]
 
 该插件让 Obsidian 支持 Vim 配置文件，该文件需要命名为 `.obsidian.vimrc`，且放在 Vault 根目录（并非 `.obsidian` 文件夹）。
 
@@ -405,8 +405,12 @@ exmap back obcommand app:go-back
 nmap <C-o> :back
 ```
 
-```ad-fail
-该插件目前不支持设置 Leader 来触发命令
+该插件目前不支持设置 Leader 来触发命令，但可以使用 `<Space>`，但使用前必须先指明 `unmap <Space>`，使用示例如下所示：
+```text
+unmap <Space> " Require by <Space>
+
+exmap search obcommand editor:open-search
+nmap <Space>ff :search
 ```
 
 

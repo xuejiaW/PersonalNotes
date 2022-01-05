@@ -13,6 +13,7 @@ exmap globalSearch obcommand global-search:open
 exmap searchReplace obcommand editor:open-search-replace
 
 nmap <Space>ff :search
+nmap <Space>FF :globalSearch
 nmap <Space>hh :searchReplace
 
 
