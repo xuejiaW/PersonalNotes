@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+            "file": "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
             "mode": "source",
             "source": true
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md"
+                "file": "Boos/Render Hell/Render Hell - Book 2 Pipeline.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+                "file": "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Render Hell/Render Hell - Book 1 Overview.md",
+                "file": "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
     "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Obsidian/Obsidian - Commands.md",
@@ -160,7 +162,6 @@
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/C++/C++ - Mutex.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 29 Normal Mapping.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-    "Notes/Computer Graphics/Computer Graphics - Half-Pixel Offset.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
   ]
 }
