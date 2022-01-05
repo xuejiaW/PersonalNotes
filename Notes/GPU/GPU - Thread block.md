@@ -1,3 +1,7 @@
+---
+created: 2022-01-05
+updated: 2022-01-05
+---
 在 GPU 中，会将 Computer Shader 的函数拆分成多进多个 Groups 中，这些组都会并行的运算。每个 Group 中都有固定数量的线程，这些线程都会运行相同的计算，但这些线程有着不同的输入。
 
 对于每个 Group 中的线程数是由 `numthreads` 进行控制， `numthreads` 是一个三维的 Attribute，即所有的线程以三维的方式进行管理。如设置 `numthreads(10,8,3)` 则表示这个 Group 一共有 240 个线程，且是以 $10*8*3$ 的三维模式展现。
