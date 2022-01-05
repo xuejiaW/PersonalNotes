@@ -153,6 +153,7 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Notes/Unity/Unity - Color vs Color32.md",
+    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
     "Notes/Unity/Unity - Gizmo.md",
@@ -160,7 +161,6 @@
     "Notes/Unity/Unity - fixed vs  half  vs fixed.md",
     "Notes/Unity/Unity - VSCode.md",
     "Notes/Unity/Unity - UniRx.md",
-    "Notes/Unity/Unity - PlayerSettings.md",
-    "Notes/CSharp/CSharp - Partial Classes And Methods.md"
+    "Notes/Unity/Unity - PlayerSettings.md"
   ]
 }

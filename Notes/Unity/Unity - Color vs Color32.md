@@ -21,9 +21,12 @@ updated: 2022-01-05
 ## 接口丰富度
 `Color` 提供了许多 `Static Properties` 用来表示特定的颜色，如 `Color.clear` 表示 $(0,0,0,0)$。
 
-## 兼容性
+## 数学合理性
 
+对于数学计算而言，`Color` 有更高的合理性。
 
+如在使用 `一个 Red 通道值为 $0.7$，Alpha 通道值为 $0.5$，则对应的 [Premultiplied Alpha](../Computer%20Graphics/Computer%20Graphics%20-%20Premultiplied%20Alpha.md) 为 $0.7*0.5=0.35$。
+如果使用 `Color`
 
 # Reference
 
