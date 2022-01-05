@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/CSharp/CSharp - Partial Classes And Methods.md",
-            "mode": "source",
+            "mode": "preview",
             "source": true
           }
         }
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -114,8 +115,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
