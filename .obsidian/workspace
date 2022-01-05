@@ -14,6 +14,18 @@
             "source": true
           }
         }
+      },
+      {
+        "id": "fad8e3f3b3acfd27",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Obsidian/Obsidian-Plugins.md",
+            "mode": "source",
+            "source": true
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -154,10 +166,10 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Boos/Render Hell/Render Hell - Book 2 Pipeline.md",
+    "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/GPU/GPU - GPU  Performance.md",
     "Notes/GPU/GPU - Thread block.md",
     "Boos/Render Hell/Render Hell - Book 1 Overview.md",
-    "Notes/Obsidian/Obsidian-Plugins.md",
     "Notes/Obsidian/Obsidian - Commands.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 17 Blending.md",

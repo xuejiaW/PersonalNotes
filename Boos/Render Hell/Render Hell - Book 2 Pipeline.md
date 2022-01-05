@@ -184,12 +184,39 @@ Domain Shader 会根据 Hell Shader 的输出（ Patch 顶点）以及 Tessellat
 
 ![|500](assets/Render%20Hell%20-%20Book%202%20Pipeline/pipeline_triangle_journey01_(1).gif)
 
-<aside> 💡
-
-</aside>
-
 ```ad-note
  如果一个三角形足够的大，覆盖了屏幕中的很大一部分，那么可能会同时有多个光栅器为其进行光栅化。
 ```
 
 当光栅器接收到一个三角形数据后，它会首先快速的检查该三角形的朝向`（Face Culling）` 。如果三角形通过了 Face Culling，则光栅器会根据三角形的边，确定它覆盖了那些 Pixels Quad （ $2\times2$ Piexls，或称为 `pre-pixels` / `pre-fragment`），示意图如下所示：
+![|500](assets/Render%20Hell%20-%20Book%202%20Pipeline/pipeline_rasterizing02.gif)
+
+之所以以 `pre-piexles/fragments` 作为一个单位，而非单一的 Pixel 作为单位，是因为这样可以计算一些后续操作需要用到的数据（如采样 Mipmap 时需要的导数[^1]。
+
+<aside> 💡 一些 Tile-Based 硬件 ，在 `pre-pixels/fragments` 创建后，可能会有一些硬件层面上的可见性检测。它们会将整个 Tile 发送给一个称为 `Z-Cull` 的模块，该模块会将 Tile 中的每个像素的深度与 FrameBuffer 中的像素深度进行比较，如果一整个 Tile 的测试都未通过，则该 Tile 会被丢弃。
+
+</aside>
+
+## Pixel Shader
+
+对于每个 `pre-pixels/fragments` ，它们会被 Pixel Shaders 进行填色处理。同样的， Pixel Shader 也是运行在 Warp 的一个线程上。
+
+<aside> 💡 一个 `pre-pixels/fragments` 实际上是 4 个像素（$2*2$），因此一个 32 线程的 Warp，实际上运行 8 个 `pre-pixels/fragments` 。
+
+</aside>
+
+当核心工作完成后，它们会将得到的数据写入 L2 Cache。
+
+## Raster Output
+
+在管线的最后，会有称为 `Raster Output(ROP)` 的硬件模块将 L2 Cache 中存储的 Pixel Shader 运算得到的像素数据写入 VRAM 中的 Frambuffer。
+
+除了单纯的拷贝像素数据， ROPs 还会进行如 Pixel Blending， 抗锯齿时依赖的 Coverage Information 计算等工作。
+
+# Reference
+
+[Render Hell – Book II | Simon schreibt.](http://simonschreibt.de/gat/renderhell-book2/)
+
+[^1]: [Life of a triangler](https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline)
+
+[^-1]: [Admonition](https://github.com/valentine195/obsidian-admonition)
