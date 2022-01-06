@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
+            "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
             "mode": "source",
             "source": true
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md"
+                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
+                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
+                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +153,8 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
+    "Notes/Computer Graphics/assets/Computer Graphics - Tiled-Baed Rendering/tech_GPUFramebuffer_14.gif",
     "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
     "Notes/Unity/Unity - Editor/Unity - Editor - Editor Windows.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
@@ -159,8 +162,6 @@
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/Android Debug Bridge.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md"
   ]
 }
