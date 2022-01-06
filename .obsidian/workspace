@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
@@ -161,7 +162,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
-    "Notes/Obsidian/Obsidian - Tag.md",
-    "Notes/Obsidian/Obsidian - MetaData.md"
+    "Notes/Obsidian/Obsidian - Tag.md"
   ]
 }
