@@ -14,12 +14,12 @@ updated: 2022-01-06
 `SSAO` 技术用 `Srceen-Space` 的深度缓冲来决定一块区域是否被周围物体所遮挡，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
 
 ```ad-note
-`SSAO` 所有的计算都基于 `Screen-Space`，即它所计算的 Frgament 是指 [后处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理) 中绘制整屏的 Quad 的 Fragment。该 Fragment 中应当保存了
+`SSAO` 所有的计算都基于 `Screen-Space`，即它所计算的 Frgament 是指 [后处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理) 中绘制整屏的 Quad 的 Fragment。该 Fragment 中实际表现的是 3D 空间中的几何，只不过将数据转换到了 `Screen-Space `。
 ```
 
 `SSAO` 会为 Full-Screen Quad 的每个 Fragment 生成一个 `Occlusion Factor`，该数值基于周围 Fragments 的深度值计算，周围每有一个 Fragment 的深度大于当前 Fragment 的深度，值 +1，示意图如下所示。该数值越大，当前 Fragment 的 Ambient Light 系数就越低。
 
-![曲线表示深度值，黑色为当前 Fragment，灰色为深度更大的 Fragments | 500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082121010.png)
+![曲线表示几何表面，黑色为当前 Fragment，灰色为深度更大的 Fragments | 500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082121010.png)
 
 对于一个 Fragment 而言，如果采样的周围 Fragment 处于当前 Fragment 下方，则它的深度必然会低于当前 Fragment，也就会造成 `Occlusion Factor` 过大。为了解决这个问题，应当只采样当前 Fragment 上半侧的其他 Fragments，通过法线方向决定上半侧的朝向。如下图所示，可以看到获取周围采样点的范围由之前的球变成了半球：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106083942529.png)
