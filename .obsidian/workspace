@@ -14,18 +14,6 @@
             "source": true
           }
         }
-      },
-      {
-        "id": "fad8e3f3b3acfd27",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Obsidian/Obsidian - Plugins.md",
-            "mode": "source",
-            "source": true
-          }
-        }
       }
     ],
     "direction": "vertical"
@@ -167,12 +155,12 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "Notes/Obsidian/Obsidian - Plugins.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Obsidian/Obsidian - Tag.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Obsidian/Obsidian - MetaData.md",
     "Notes/Obsidian/Obsidian - CSS Snippets.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
