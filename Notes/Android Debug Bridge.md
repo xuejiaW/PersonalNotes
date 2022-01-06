@@ -165,7 +165,57 @@ adb shell dumpsys meminfo com.yvr.yframework
 
 此时有针对该包名应用/服务更详细的输出，如下所示：
 ```text
+Applications Memory Usage (in Kilobytes):
+Uptime: 17261012 Realtime: 17261012
 
+** MEMINFO in pid 4821 [com.yvr.yframework] **
+                   Pss  Private  Private     Swap     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    35291    35184        0        0    48864    43899     4964
+  Dalvik Heap     1535     1448        0        0     2724     1188     1536
+ Dalvik Other      460      452        0        0
+        Stack       36       36        0        0
+       Ashmem        7        0        0        0
+      Gfx dev     4212     4212        0        0
+    Other dev       44        0       44        0
+     .so mmap    39677     2256    30840        0
+    .jar mmap     1109        0        0        0
+    .apk mmap      923        0        0        0
+    .dex mmap     1789        4     1728        0
+    .oat mmap      899        0        0        0
+    .art mmap     1698     1072       32        0
+   Other mmap     4770       16     4724        0
+   EGL mtrack    60336    60336        0        0
+    GL mtrack     7900     7900        0        0
+      Unknown    92437    92356        0        0
+        TOTAL   253123   205272    37368        0    51588    45087     6500
+
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     2552
+         Native Heap:    35184
+                Code:    34828
+               Stack:       36
+            Graphics:    72448
+       Private Other:    97592
+              System:    10483
+
+               TOTAL:   253123      TOTAL SWAP (KB):        0
+
+ Objects
+               Views:        6         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+              Assets:        6        AssetManagers:        0
+       Local Binders:       15        Proxy Binders:       35
+       Parcel memory:        6         Parcel count:       24
+    Death Recipients:        2      OpenSSL Sockets:        0
+            WebViews:        0
+
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
 ```
 
 # 错误处理
