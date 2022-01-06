@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
+            "file": "Notes/Unity/Unity - Material Property Blocks.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md"
+                "file": "Notes/Unity/Unity - Material Property Blocks.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
+                "file": "Notes/Unity/Unity - Material Property Blocks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
+                "file": "Notes/Unity/Unity - Material Property Blocks.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Material Property Blocks.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Computer Graphics/assets/Computer Graphics - Tiled-Baed Rendering/tech_GPUFramebuffer_14.gif",
     "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
@@ -161,7 +162,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
-    "Notes/Android Debug Bridge.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md"
+    "Notes/Android Debug Bridge.md"
   ]
 }
