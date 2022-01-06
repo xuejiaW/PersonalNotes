@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
-            "mode": "preview",
+            "file": "TO-DO.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/Android Debug Bridge.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
@@ -161,7 +162,6 @@
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md"
   ]
 }
