@@ -21,4 +21,6 @@ updated: 2022-01-06
 
 为了在采样 Fragments 数量尽量小的情况下（为节约性能）取得更好的效果，可以为采样的周围 Fragments 引入随机值。即对每个 Full Screen Quad 上的 Fragment，在采样它周围的 Fragments 时，随机将这些 Fragments 旋转一定角度，保证采样点并不会仅计算某个特定方向。但随机值的引入会导致噪声的产生，为了解决噪声问题，可以再对结果进行一个模糊化处理。
 
-下图为采样值过少时的 `Banding` 现象，当引入sui'ji'zhi
+下图为采样值过少时的 `Banding` 现象，当引入随机值后的噪声表现，以及对噪声进行模糊处理后的结果：
+![](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082927518.png)
+
