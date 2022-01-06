@@ -13,4 +13,10 @@ updated: 2022-01-06
 
 `SSAO` 技术用深度缓冲来决定一块区域是否被周围物体所遮挡，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
 
-`SSAO` 同样依赖于 [后处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理)。在渲染全屏的 Quad 时，SSAO 会为每个 Fragment 生成一个 `Occlusion Factor`，该参数基于周围 Fragments 的深度值计算，周围每有一个 Fragment 的深度大于当前 Fragment 的深度，值 +1。
+`SSAO` 同样依赖于 [后处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理)。在渲染全屏的 Quad 时，SSAO 会为每个 Fragment 生成一个 `Occlusion Factor`，该数值基于周围 Fragments 的深度值计算，周围每有一个 Fragment 的深度大于当前 Fragment 的深度，值 +1，示意图如下所示。该数值越大，当前 Fragment 的 Ambient Light 系数就越低。
+
+![曲线表示深度值，黑色为当前 Fragment，灰色为深度更大的 Fragments | 500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082121010.png)
+
+可以看出， `SSAO` 的精度取决于计算每个 Fragment 时取的周围 Fragments 的数量，数量太低则精度不够，但数量太高则会引发性能问题。
+
+为了在采样 Fragme
