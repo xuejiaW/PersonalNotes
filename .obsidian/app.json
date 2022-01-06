@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL - Ch 34 SSAO",
+  "attachmentFolderPath": "./assets/Android Debug Bridge",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
@@ -12,5 +12,6 @@
   "strictLineBreaks": false,
   "showLineNumber": true,
   "legacyEditor": false,
-  "livePreview": false
+  "livePreview": false,
+  "defaultViewMode": "preview"
 }

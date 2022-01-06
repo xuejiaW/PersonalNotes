@@ -1,7 +1,7 @@
 ---
 Alias: adb
 created: 2021-12-13
-updated: 2021-12-24
+updated: 2022-01-06
 ---
 
 # Shell 命令
@@ -137,35 +137,9 @@ adb shell input keyevent KEYCODE_HOME
 
 ## 查看内存
 
-通过 `dumpsys meminfo` 查看当前所有应用/服务各自占据的内存总数：
+通过 `dumpsys meminfo` cha
 ```shell
 adb shell dumpsys meminfo
-```
-
-输出如下所示：
-```text
-Applications Memory Usage (in Kilobytes):
-Uptime: 17118754 Realtime: 17118754
-
-Total PSS by process:
-    252,825K: com.yvr.yframework (pid 4821 / activities)
-    246,296K: com.yvr.vrruntimeservice (pid 1800)
-    227,613K: system (pid 1112)
-    212,824K: surfaceflinger (pid 905)
-    175,685K: controllerservice (pid 1191)
-    144,699K: com.yvr.guardianservice (pid 2415)
-     86,310K: com.android.systemui (pid 1683)
-     82,887K: android.hardware.camera.provider@2.4
-```
-
-如果仅关心特定的应用/服务，可以在 `dumpsys meminfo` 后跟包名，如：
-```shell
-adb shell dumpsys meminfo com.yvr.yframework
-```
-
-此时有针对该包名应用/服务更详细的输出，如下所示：
-```text
-
 ```
 
 # 错误处理
