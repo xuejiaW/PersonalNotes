@@ -37,6 +37,54 @@ GetComponent<Renderer>().material.color = color;
 
 针对上述例子中，多个物体使用同一个材质，但是每个物体需要对材质有各自的修改的情况，Unity 实现了 `MaterialPropertyBlock` 变量，该变量并不会造成多个材质的拷贝，且减少了 CPU 向 GPU 传输数据的时间。如下为使用 `MaterialPropertyBlock` 修改颜色时的内存与耗时情况，可以看到使用的材质数并没有增加，且耗时减少到 1.48 毫秒：
 
-|     |     |
-| --- | --- |
-|  ![内存消耗](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%203.png)   |   ![CPU 耗时](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%204.png)  |
+|                                                                               |                                                                               |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![内存消耗](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%203.png) | ![CPU 耗时](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%204.png) | 
+
+对于需要通过 `MaterialPropertyBlock` 设置的 Shader 变量，可以在前面加上 `[PerRenderData]` ，让该变量在 Inspector 窗口中不被显示，如下所示：
+
+```glsl
+Properties
+{ 
+    [PerRendererData] _Color ("Color", Color) = (1,1,1,1)
+    // ...
+}
+```
+
+![无颜色信息](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%205.png)
+
+```ad-note
+即使不添加 `[PerRenderData]` ，也可以使用 `MaterialPropertyBlock` 进行设置。
+```
+
+使用 `MaterialPropertyBlock` 时调用 renderer 的 `SetPropertyBlock` 接口即可，如下所示：
+
+```csharp
+private MaterialPropertyBlock propertyBlock = null;
+
+private void Start()
+{
+    meshRenderer = GetComponent<MeshRenderer>();
+    propertyBlock = new MaterialPropertyBlock();
+}
+
+private Update()
+{
+		Color color = new Color(Mathf.Sin(Time.time), Mathf.Cos(Time.time), 0, 1);
+		propertyBlock.SetColor("_Color", color);
+		meshRenderer.SetPropertyBlock(propertyBlock);
+}
+
+```
+
+使用 `MaterialPropertyBlock` 可以保证每个物体在不拷贝 Material 的情况下在渲染前对材质进行修改，即所有物体实际上使用的是一个材质。
+
+<aside> 🚫
+
+</aside>
+
+```ad-error
+ 虽然所有的物体使用的一个材质，但它们仍然无法被 Dynamic batching。 但如果修改的对象是 `INSTANCED_PROP` ，则可以通过 GPU Instancing 被合并在一起绘制，具体可参考 [Object Variety](https://www.notion.so/Object-Variety-5a6cde8bed2b4640a308aab60c2e7bff) 最后绘制多个不同颜色 Shape 时使用的 Shader。
+```
+
+#
