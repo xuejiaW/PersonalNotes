@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ef46c788cfaf23d1",
+        "id": "29f2e3370b88d31f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Material Property Blocks.md",
+            "file": "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
             "mode": "source",
             "source": true
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "post processing",
+                "query": "alias",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -71,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Material Property Blocks.md"
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md"
               }
             }
           },
@@ -92,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Material Property Blocks.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +117,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Material Property Blocks.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,17 +152,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "ef46c788cfaf23d1",
+  "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
+    "Notes/Android Debug Bridge.md",
+    "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
+    "Notes/Android Debug Bridge (DESKTOP-9KPUHB6's conflicted copy 2022-01-06).md",
     "Notes/Unity/Unity - Material Property Blocks.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
     "Notes/Unity/Unity - Editor/Unity - Editor - Editor Windows.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
-    "Notes/Computer Graphics/assets/Computer Graphics - Tiled-Baed Rendering/tech_GPUFramebuffer_14.gif",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
-    "TO-DO.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
-    "Notes/Android Debug Bridge.md"
+    "Notes/Computer Graphics/assets/Computer Graphics - Tiled-Baed Rendering/tech_GPUFramebuffer_14.gif"
   ]
 }
