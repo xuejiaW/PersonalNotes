@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/Android Debug Bridge.md",
@@ -161,7 +162,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md"
   ]
 }
