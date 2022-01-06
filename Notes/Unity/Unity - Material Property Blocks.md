@@ -79,12 +79,12 @@ private Update()
 
 使用 `MaterialPropertyBlock` 可以保证每个物体在不拷贝 Material 的情况下在渲染前对材质进行修改，即所有物体实际上使用的是一个材质。
 
-<aside> 🚫
-
-</aside>
-
 ```ad-error
  虽然所有的物体使用的一个材质，但它们仍然无法被 Dynamic batching。 但如果修改的对象是 `INSTANCED_PROP` ，则可以通过 GPU Instancing 被合并在一起绘制，具体可参考 [Object Variety](https://www.notion.so/Object-Variety-5a6cde8bed2b4640a308aab60c2e7bff) 最后绘制多个不同颜色 Shape 时使用的 Shader。
 ```
 
-#
+# Reference
+
+[The magic of Material Property Blocks – Thomas Mountainborn](http://thomasmountainborn.com/2016/05/25/materialpropertyblocks/)
+
+[Unity - Scripting API: MaterialPropertyBlock (unity3d.com)](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html)
