@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
+            "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
             "mode": "source",
             "source": true
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md"
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +152,7 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "TO-DO.md",
@@ -161,7 +161,6 @@
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md"
+    "Notes/Obsidian/Obsidian - Plugins.md"
   ]
 }

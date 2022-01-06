@@ -245,11 +245,7 @@ $$ Result = Blend(A,Blend(D,Blend(C,B))) $$
     
     可以看到式子中所有的项都只存在一次项，即 `Premultiplicated Alpha Blending` 是线性变化，不会造成最终结果的不同。
 
-<aside> 💥 
-
-</aside>
-
-```ad-note
+```ad-important
 当多图层混叠时需要引入中间图层时，纹理应当保证是 `Alpha Premultiplicated` 的
 ```
 
@@ -259,6 +255,39 @@ $$ Result = Blend(A,Blend(D,Blend(C,B))) $$
 
 $$ \begin{array}{l}0.5 \cdot\left[\begin{array}{c} 0.5 \\0.5 \\0.5 \end{array}\right]+(1-0.5) \cdot\left[\begin{array}{c}1 \\1 \\1 \end{array} \right] \\ \\= \left[\begin{array}{c} 0.75 \\ 0.75 \\ 0.75 \end{array}\right] \end{array} $$
 
+如果流程变为，先将半透明灰色纹理渲染到Clear Color为 $[0 \;\;0 \;\;0\;\;0]$ 的RenderTexture上，再将RT渲染到白色纹理上。
+
+-   当使用 `传统Alpha Blending`时，当渲染到RT后，颜色为 $[0.25 \;\; 0.25 \;\; 0.25 \;\; 0.25]$：
+    
+    $$ \begin{array}{l}0.5 \cdot\left[\begin{array}{c} 0.5 \\0.5 \\0.5 \\0.5 \end{array}\right]+(1-0.5) \cdot\left[\begin{array}{c}0 \\0 \\0 \\ 0\end{array} \right] \\ \\= \left[\begin{array}{c} 0.25 \\ 0.25 \\ 0.25 \\ 0.25 \end{array}\right] \end{array} $$
+    
+    再将RT渲染到白色背景上，得到的RGB结果为 $[0.8125 \;\; 0.8125 \;\; 0.8125]$，得到的结果与预期不符
+    
+    $$ \begin{array}{l}0.25 \cdot\left[\begin{array}{c} 0.25 \\0.25 \\0.25 \\0.25 \end{array}\right]+(1-0.25) \cdot\left[\begin{array}{c}1 \\1 \\1 \\ 1\end{array} \right] \\ \\= \left[\begin{array}{c} 0.8125 \\ 0.8125 \\ 0.8125 \\ 0.8125 \end{array}\right] \end{array} $$
+
+-   当使用 `Premultiplicated Alpha Blending` 时，首先需要将 RGB通道与A通道相乘，即得到 $[0.25 \;\; 0.25 \;\; 0.25 \;\;0.5]$，渲染到RT后，结果仍然为 $[0.25 \;\; 0.25 \;\; 0.25 \;\;0.5]$：
+    
+    $$ \begin{array}{l}\left[\begin{array}{c} 0.25 \\0.25 \\0.25 \\0.5 \end{array}\right]+(1-0.25) \cdot\left[\begin{array}{c}0 \\0 \\0 \\ 0\end{array} \right] \\ \\= \left[\begin{array}{c} 0.25 \\ 0.25 \\ 0.25 \\ 0.5 \end{array}\right] \end{array} $$
+    
+    再将RT渲染到白色背景上，得到的RGB结果为 $[0.5 \;\; 0.5 \;\; 0.5]$，得到的结果与预期相符：
+    
+    $$ \begin{array}{l}\left[\begin{array}{c} 0.25 \\0.25 \\0.25 \end{array}\right]+(1-0.5) \cdot\left[\begin{array}{c}1 \\1 \\1 \end{array} \right] \\ \\= \left[\begin{array}{c} 0.75 \\ 0.75 \\ 0.75 \end{array}\right] \end{array} $$
+
 # Reference
+
+[Beware of Transparent Pixels - Adrian Courrèges (adriancourreges.com)](http://www.adriancourreges.com/blog/2017/05/09/beware-of-transparent-pixels/)
+
+[Shawn Hargreaves Blog Index](https://shawnhargreaves.com/blogindex.html#premultipliedalpha)
+
+[Real-Time Rendering · GPUs prefer premultiplication (realtimerendering.com)](http://www.realtimerendering.com/blog/gpus-prefer-premultiplication/)
+
+[TomF's Tech Blog - It's only pretending to be a wiki. (tomforsyth1000.github.io)](https://tomforsyth1000.github.io/blog.wiki.html#%5B%5BPremultiplied%20alpha%5D%5D)
+
+[TomF's Tech Blog - It's only pretending to be a wiki. (tomforsyth1000.github.io)](https://tomforsyth1000.github.io/blog.wiki.html#%5B%5BPremultiplied%20alpha%20part%202%5D%5D)
+
+[Alpha Blending: To Pre or Not To Pre | NVIDIA Developer](https://developer.nvidia.com/content/alpha-blending-pre-or-not-pre)
+
+[Pre-multiply alpha channel when importing Unity textures (github.com)](https://gist.github.com/MrJul/1042aa75493a58ceeb6d2fa7d7d039c3)
+
 [^1]:  [纹理压缩](https://tomforsyth1000.github.io/blog.wiki.html#%5B%5BPremultiplied%20alpha%5D%5D) 
 
