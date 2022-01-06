@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity - Material Property Blocks",
+  "attachmentFolderPath": "./assets/Unity - Editor - Immediate Mode GUI",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
