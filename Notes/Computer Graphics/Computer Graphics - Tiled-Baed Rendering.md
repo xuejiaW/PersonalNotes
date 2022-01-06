@@ -1,3 +1,7 @@
+---
+created: 2022-01-06
+updated: 2022-01-06
+---
 # Immediate Mode Rendering
 
 在PC和游戏主机端，通常使用 `Immediate Mode Rendering（IMR）`，在该模式下渲染管线按照流程，依次渲染每个图元，对每个图元依次调用各着色器。渲染流程伪代码如下：
@@ -36,4 +40,33 @@ TBR的思路是先将整个屏幕拆分为多个小的Tile，对每个Tile进行
 
 计算每个Tile中包含的图元的过程，称为 `Binning` ，示意图如下所示：
 
-![](assets/Computer%20Graphics%20-%20Tiled-Baed%20Rendering/tech_GPUFramebuffer_12.gif)
+![|500](assets/Computer%20Graphics%20-%20Tiled-Baed%20Rendering/tech_GPUFramebuffer_12.gif)
+
+整个TBR流程及示意图如下所示：
+![](assets/Computer%20Graphics%20-%20Tiled-Baed%20Rendering/Untitled%201.png)
+
+```python
+# Pass one
+for draw in renderPass:
+    for primitive in draw:
+        for vertex in primitive:
+            execute_vertex_shader(vertex)
+        if primitive not culled:
+            append_tile_list(primitive)
+
+# Pass two
+for tile in renderPass:
+    for primitive in tile:
+        for fragment in primitive:
+            execute_fragment_shader(fragment)
+```
+
+```ad-warning
+TBR虽然很大程度的减少了绘制过程中对外部内存的频繁读取进而节省了带宽，但因为在绘制前要计算出所有Tile中包含的图元，所以这个过程在有大量顶点数据的情况下可能会引起性能下降。 另外，计算出的每个Tile中的图元信息也需要存储在内存中，所以TBR虽然减少了带宽，却使用了更多的内存。
+```
+
+#  Reference
+
+[Documentation – Arm Developer](https://developer.arm.com/documentation/102662/latest/)
+
+[GPU Framebuffer Memory: Understanding Tiling | Samsung Developers](https://developer.samsung.com/galaxy-gamedev/resources/articles/gpu-framebuffer.html)
