@@ -222,9 +222,10 @@ Uptime: 17261012 Realtime: 17261012
 
 可以通过如下格式重复执行特定操作：
 ```shell
-
+adb shell "while true; do <operation>; sleep <gapTime>; done"
 ```
 
+如下命令可以实现“间隔1秒，执行查看 `com.yvr.yframework` 应用的内存
 
 # 错误处理
 
