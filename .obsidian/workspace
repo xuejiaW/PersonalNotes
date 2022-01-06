@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "post processing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -151,7 +152,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8854989543150409,
+                  "scale": 1.469948523980995,
                   "close": false
                 }
               }
@@ -166,14 +167,14 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 24 Anti Aliasing.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Obsidian/Obsidian - Tag.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Obsidian/Obsidian - MetaData.md",
     "Notes/Obsidian/Obsidian - CSS Snippets.md",
-    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-    "Notes/Obsidian/Obsidian - Commands.md",
-    "Notes/GPU/GPU - Thread block.md",
-    "Boos/Render Hell/Render Hell - Book 4 Solutions.md"
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
   ]
 }
