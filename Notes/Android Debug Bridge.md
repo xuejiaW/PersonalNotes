@@ -225,7 +225,10 @@ Uptime: 17261012 Realtime: 17261012
 adb shell "while true; do <operation>; sleep <gapTime>; done"
 ```
 
-如下命令可以实现“间隔1秒，执行查看 `com.yvr.yframework` 应用的内存
+如下命令可以实现”间隔1秒，执行查看 `com.yvr.yframework` 应用的内存“ 的操作：
+```shell
+adb shell "while true; do dumpsys meminfo <com.yvr.vrruntimeservice>; sleep 1; done"
+```
 
 # 错误处理
 

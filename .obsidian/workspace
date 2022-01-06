@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android Debug Bridge.md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android Debug Bridge.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android Debug Bridge.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,8 +153,8 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/Android Debug Bridge.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+    "Notes/Android Debug Bridge.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
