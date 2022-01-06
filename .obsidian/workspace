@@ -103,7 +103,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -154,6 +155,7 @@
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/Android Debug Bridge.md",
@@ -161,7 +163,6 @@
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 26 Gamma Correction.md"
   ]
 }
