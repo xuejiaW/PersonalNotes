@@ -1,8 +1,9 @@
 ---
 created: 2022-01-06
-updated: 2022-01-06
+updated: 2022-01-07
 tags:
     - Unity
+cssclass: [table-border]
 ---
 
 # 概述
@@ -34,7 +35,7 @@ public class TestIMGUI : MonoBehaviour
 }
 ```
 
-![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled.png)
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled.png)
 
 示例2：
 
@@ -57,7 +58,7 @@ private void OnGUI()
 }
 ```
 
-![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%201.png)
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%201.png)
 
 # 控件解析
 
@@ -75,6 +76,67 @@ GUI.Button(new Rect(20, 40, 80, 20), "Level 1"
 
 空间的类型定义在Unity的 `GUI` 类或 `GUILayout` 类中。
 
-[GUILayout 与 GUI 区别](https://www.notion.so/Immediate-Mode-GUI-IMGUI-0fe7b8a74d634738b5e134204e2666f5) 在之后的部分有解释。
-
 如 `GUI.Button` 和 `GUI.Box` 都表示控件的类型。
+
+## 位置（Position）
+
+对于 `GUI` 类中的所有控件函数，第一个参数都是通过一个 `Rect` 来指定控件的位置。 `Rect` 的原点从左上角开始，构造函数的前两个值表示位置，后两个值表示大小。
+
+```csharp
+Rect(x, y, width, height)
+
+// start at (10,20), end at (310,210)
+Rect(10, 20, 300, 100) 
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%202.png)
+
+所有 `GUI` 组件的位置都是在屏幕空间，且单位是像素。可以通过 `Screen.width` 和 `Screen.height` 获取屏幕的总宽高，如下代码分别在屏幕的四个角各画一个 `Box` 。
+
+```csharp
+GUI.Box(new Rect(0, 0, 100, 50), "Top-left");
+GUI.Box(new Rect(Screen.width - 100, 0, 100, 50), "Top-right");
+GUI.Box(new Rect(0, Screen.height - 50, 100, 50), "Bottom-left");
+GUI.Box(new Rect(Screen.width - 100, Screen.height - 50, 100, 50), "Bottom-right");
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%203.png)
+
+## 内容（Content）
+
+### Simple
+
+空间的内容可以是文字或图片：
+
+```csharp
+GUI.Label(new Rect(0, 0, 100, 50), "This is the text string for a Label Control");
+GUI.Label(new Rect(0, 50, 100, 50), icon); // icon is Texture2D
+
+if (GUI.Button(new Rect(10, 110, 100, 50), icon)) print("you clicked the icon");
+if (GUI.Button(new Rect(10, 170, 100, 20), "This is text")) print("you clicked the text button");
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%204.png)
+
+### GUIContent
+
+可以是通过 `GUIContent` ，将文字和图片打包在一起作为一个控件的内容：
+
+```csharp
+GUI.Box (new Rect (10,10,100,50), new GUIContent("This is text", icon));
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%205.png)
+
+### Tooltip
+
+`GUIContent` 中还可以加入 `Tooltip` ，作为鼠标移动到特定控件上后显示的内容。 `Tooltip` 必须是字符串，且还需要另一个控件作为显示内容的载体。
+
+```csharp
+GUI.Button(new Rect(10, 10, 100, 20), new GUIContent("Click me", icon, "This is the tooltip"));
+GUI.Label(new Rect(10, 40, 100, 20), GUI.tooltip);
+```
+
+|                                                                              |                                                                              |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![鼠标未移动到Button上](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%206.png) | ![鼠标移动到Button上](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%207.png) |

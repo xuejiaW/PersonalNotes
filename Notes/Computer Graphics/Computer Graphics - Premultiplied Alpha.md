@@ -3,7 +3,7 @@ cssclass: [table-border]
 tags:
     - ComputerGraphics
 created: 2022-01-06
-updated: 2022-01-06
+updated: 2022-01-07
 ---
 
 # 透明像素造成的失真

@@ -1,6 +1,6 @@
 ---
 created: 2022-01-06
-updated: 2022-01-06
+updated: 2022-01-07
 tags:
     - ComputerGraphics
 ---

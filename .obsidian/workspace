@@ -104,8 +104,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -156,14 +155,14 @@
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
     "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
-    "Notes/Android Debug Bridge.md",
+    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
+    "Notes/Android Debug Bridge.md",
     "Notes/Android Debug Bridge (DESKTOP-9KPUHB6's conflicted copy 2022-01-06).md",
     "Notes/Unity/Unity - Material Property Blocks.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
     "Notes/Unity/Unity - Editor/Unity - Editor - Editor Windows.md",
-    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Notes/Computer Graphics/assets/Computer Graphics - Tiled-Baed Rendering/tech_GPUFramebuffer_14.gif"
   ]
 }
