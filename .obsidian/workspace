@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
+            "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md"
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,7 +152,8 @@
   },
   "active": "ef46c788cfaf23d1",
   "lastOpenFiles": [
-    "Notes/Unity/Unity - Editor/Unity - Editor Windows.md",
+    "Notes/Unity/Unity - Editor/Unity - Editor - Gizmo.md",
+    "Notes/Unity/Unity - Editor/Unity - Editor - Editor Windows.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 32 Bloom.md",
     "TO-DO.md",
@@ -160,7 +161,6 @@
     "Notes/Android Debug Bridge.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - CSharp.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Scripting Architecture - UnityEngin.Object.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
-    "Notes/Obsidian/Obsidian - Plugins.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
   ]
 }

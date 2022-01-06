@@ -6,7 +6,7 @@ updated: 2022-01-06
 ---
 
 Gizmo 是 Unity 提供的在 Editor 中调试的工具。默认情况下，它只会在 Scene 场景中显示，但在 Game 场景中可以通过按钮 `Giamos` 打开显示：
-![](assets/Unity%20-%20Gizmo/GIF%2012-22-2021%209-43-23%20AM.gif)
+![](assets/Unity%20-%20Editor%20-%20Gizmo/GIF%2012-22-2021%209-43-23%20AM.gif)
 
 Gizmos 可以在函数 `OnDrawGizmos` 中定义，该函数会在 `Editor` 中被自动触发。
 
