@@ -1,7 +1,7 @@
 ---
 Alias: adb
 created: 2021-12-13
-updated: 2021-12-24
+updated: 2022-01-06
 ---
 
 # Shell 命令
@@ -217,6 +217,14 @@ Uptime: 17261012 Realtime: 17261012
          MEMORY_USED:        0
   PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
 ```
+
+## 重复执行操作
+
+可以通过如下格式重复执行特定操作：
+```shell
+
+```
+
 
 # 错误处理
 
