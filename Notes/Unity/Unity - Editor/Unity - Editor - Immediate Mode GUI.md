@@ -3,6 +3,7 @@ created: 2022-01-06
 updated: 2022-01-07
 tags:
     - Unity
+    - IMGUI
 cssclass: [table-border]
 ---
 
@@ -587,3 +588,85 @@ GUILayout.Button("I am completely inside an Area");
 GUILayout.EndArea();
 GUILayout.Button("I am not inside an Area too");
 ```
+
+![|500](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2014.png)
+
+### Automatic Layout - Horizontal and Vertical Groups
+
+```ad-note
+用于控制 自动排列 控件的位置
+```
+
+对于 `自动排列` 模式，多个控件都是自上而下一个个的排列。
+
+如果想要修改这种排列方式，就需要用到 `Horizontal Groups` 和 `Vertical Groups` 。这两种 `Groups` 通常会嵌套在一起使用。
+
+`Horizontal Groups` 需要用 `GUILayout.BeginHorizontal` 和 `GUILayout.EndHorizontal` 控制管理范围。
+
+`Vertical Groups` 需要用 `GUILayout.BeginVertical` 和 `GUILayout.EndVertical`控制管理范围 。
+
+如下例子中，就先用了 `Horizontal Groups` ，再将 `Vertical Groups` 嵌套在其中。
+
+```csharp
+GUILayout.BeginHorizontal();
+// Place a Button normally
+if (GUILayout.RepeatButton("Increase max \\n Slider Value"))
+    sliderValue += 3.0f * Time.deltaTime;
+GUILayout.BeginVertical();
+GUILayout.Box("Slider Value: " + Mathf.Round(sliderValue));
+sliderValue = GUILayout.HorizontalSlider(sliderValue, 0.0f, 10.0f);
+GUILayout.EndVertical();
+GUILayout.EndHorizontal();
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_7-21-57_PM.gif)
+
+## GUILayoutOptions
+
+```ad-note
+用于控制 自动排列 控件的大小
+```
+
+`GUILayout` 中的控件大小会自动调整，如定义在 `Area` 中的控件，其宽度会自动调整为 `Area` 的大小。
+
+但每个 `GUILayout` 中的控件最后都有一个 `params GUILayoutOption[]` 的参数，因此每个 `GUILayout` 中的控件都可以接纳0个或多个 `GUILayoutOption` ：
+
+```csharp
+public static bool Button(string text, params GUILayoutOption[] options);
+```
+
+但是 `GUILayoutOption` 并非是开发者自定义的，必须用 `GUILayout` 中的对应函数，如 `GUILayoutOption.Width(float width)` 可指定控件的宽度：
+
+```csharp
+GUILayout.BeginArea(new Rect(100, 100, 300, 50));
+GUILayout.Button("ABC");
+GUILayout.Button("ABC", GUILayout.Width(50));
+GUILayout.EndArea();
+GUILayout.Button("ABCD");
+```
+
+![|400](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2015.png)
+
+`GUILayout` 中所有返回 `GUILayoutOption` 的函数如下：
+- `GUILayout.Width` : 强制设置控件的宽度
+- `GUILayout.Height` : 强制设置控件的高度
+- `GUILayout.MinWidth` : 设置控件在自动调整宽高时的最小宽度
+- `GUILayout.MaxWidth` : 设置控件在自动调整宽高时的最大宽度
+- `GUILayout.MinHeight` : 设置控件在自动调整宽高时的最小高度
+- `GUILayout.MaxHeight` : 设置控件在自动调整宽高时的最大高度
+- `GUILayout.ExpandWidth` : 允许自动扩张宽度（ `GUILayout` 会自动将较窄的控件宽度调整至与较宽控件宽度相同）
+- `GUILayout.ExpandHeight` : 允许自动扩张高度
+
+```ad-warning
+ `GUILayoutOption` 并没法去控制 `GUILayout` 组件中的间隔。如果要调整组件中的间隔，需要用到 `GUILayout.Space`
+```
+
+# Reference
+
+[Unity - Manual: Immediate Mode GUI (IMGUI) (unity3d.com)](https://docs.unity3d.com/Manual/GUIScriptingGuide.html)
+
+[Unity - Manual: IMGUI Basics (unity3d.com)](https://docs.unity3d.com/Manual/gui-Basics.html)
+
+[Unity - Manual: Controls (unity3d.com)](https://docs.unity3d.com/Manual/gui-Controls.html)
+
+[Unity - Manual: Customization (unity3d.com)](https://docs.unity3d.com/Manual/gui-Customization.html)
