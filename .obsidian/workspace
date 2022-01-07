@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/VSCode/VSCode - GLSL.md",
+            "file": "Notes/VSCode/VSCode - Cpp.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/VSCode/VSCode - GLSL.md"
+                "file": "Notes/VSCode/VSCode - Cpp.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/VSCode/VSCode - GLSL.md",
+                "file": "Notes/VSCode/VSCode - Cpp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/VSCode/VSCode - GLSL.md",
+                "file": "Notes/VSCode/VSCode - Cpp.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,10 +153,10 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/VSCode/VSCode - Cpp.md",
     "Notes/VSCode/VSCode - GLSL.md",
     "Notes/VSCode/VSCode - Settings.md",
     "Notes/VSCode/VSCode - Extensions.md",
-    "Notes/VSCode/VSCode - Cpp.md",
     "Notes/Tools/Tools - Windows Terminal.md",
     "Notes/Tools/Tools - Chocolatey.md",
     "Notes/Tools/Tools - Pandoc.md",

@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/VSCode - GLSL",
+  "attachmentFolderPath": "./assets/VSCode - Cpp",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
