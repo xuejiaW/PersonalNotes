@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/VSCode/VSCode - Cpp.md",
+            "file": "Notes/OpenGL/OpenGL - Projection Matrix.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/VSCode/VSCode - Cpp.md"
+                "file": "Notes/OpenGL/OpenGL - Projection Matrix.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/VSCode/VSCode - Cpp.md",
+                "file": "Notes/OpenGL/OpenGL - Projection Matrix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/VSCode/VSCode - Cpp.md",
+                "file": "Notes/OpenGL/OpenGL - Projection Matrix.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Notes/VSCode/VSCode - Cpp.md",
     "Notes/VSCode/VSCode - GLSL.md",
     "Notes/VSCode/VSCode - Settings.md",
@@ -161,7 +162,6 @@
     "Notes/Tools/Tools - Chocolatey.md",
     "Notes/Tools/Tools - Pandoc.md",
     "Notes/GPU/GPU - GPU  Performance.md",
-    "Notes/Tools/Tools  - Clang-Format.md",
-    "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md"
+    "Notes/Tools/Tools  - Clang-Format.md"
   ]
 }
