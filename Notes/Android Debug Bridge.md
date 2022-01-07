@@ -1,7 +1,7 @@
 ---
 Alias: adb
 created: 2021-12-13
-updated: 2022-01-06
+updated: 2022-01-07
 ---
 
 # Shell 命令
