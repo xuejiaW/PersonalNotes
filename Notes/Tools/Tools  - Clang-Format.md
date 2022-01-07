@@ -1,6 +1,10 @@
+---
+created: 2022-01-07
+updated: 2022-01-07
+---
 # 安装
 
-在 Windows 中可以使用 [Chocolatey](Chocolatey.md) 安装 Clang-Format：
+在 Windows 中可以使用 [Tools - Chocolatey](Tools%20-%20Chocolatey.md) 安装 Clang-Format：
 ```
 choco install --yes llvm
 ```

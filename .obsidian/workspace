@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Tools  - Clang-Format.md",
+            "file": "Notes/VSCode/VSCode - GLSL.md",
             "mode": "source",
             "source": true
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Tools  - Clang-Format.md"
+                "file": "Notes/VSCode/VSCode - GLSL.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Tools  - Clang-Format.md",
+                "file": "Notes/VSCode/VSCode - GLSL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Tools  - Clang-Format.md",
+                "file": "Notes/VSCode/VSCode - GLSL.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,15 +153,15 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/VSCode/VSCode - GLSL.md",
+    "Notes/VSCode/VSCode - Settings.md",
+    "Notes/VSCode/VSCode - Extensions.md",
+    "Notes/VSCode/VSCode - Cpp.md",
+    "Notes/Tools/Tools - Windows Terminal.md",
+    "Notes/Tools/Tools - Chocolatey.md",
+    "Notes/Tools/Tools - Pandoc.md",
+    "Notes/GPU/GPU - GPU  Performance.md",
     "Notes/Tools/Tools  - Clang-Format.md",
-    "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 09 Model  Loading.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 00 Creating a Window.md",
-    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
-    "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
-    "Notes/Android Debug Bridge.md",
-    "Notes/Android Debug Bridge (DESKTOP-9KPUHB6's conflicted copy 2022-01-06).md",
-    "Notes/Unity/Unity - Material Property Blocks.md"
+    "Notes/Unity/Unity - Editor/Unity - Editor - Immediate Mode GUI.md"
   ]
 }

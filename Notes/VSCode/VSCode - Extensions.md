@@ -2,7 +2,7 @@
 tags: 
     - VSCode
 created: 2021-11-18
-updated: 2021-12-09
+updated: 2022-01-07
 ---
 
 > 本部分说明在 [[VSCode](VSCode.md) 中部分插件的说明。
@@ -27,7 +27,7 @@ updated: 2021-12-09
 
 # Windows Terminal Integration[^2]
 
-该实现自动在当前工作区或当前文件夹打开 [Windows Terminal](Windows%20Terminal.md) 。
+该实现自动在当前工作区或当前文件夹打开 [Tools - Windows Terminal](../Tools/Tools%20-%20Windows%20Terminal.md) 。
 
 在当前工作区打开 Windows Terminal 的命令为：`Windows Terminal: Open`，对应的 Command ID 为 `windows-terminal.open`。
 
@@ -53,7 +53,7 @@ updated: 2021-12-09
 # Relative Line Numbers[^5]
 
 该插件实现了在 VSCode 中同时显示行号和相对行号，效果如下：
-![](assets/VSCode-Extensions/image-20211129225048235.png)
+![](assets/VSCode%20-%20Extensions/image-20211129225048235.png)
 
 
 # Reference
