@@ -338,3 +338,114 @@ vScrollBarValue = GUI.VerticalScrollbar(new Rect(200, 25, 25, 200), vScrollBarVa
 ```ad-error
 `Scroller` 对于 `Rect` 中宽高的处理与 `Slider` 类似，即不表示显示的范围，只表示可交互的范围。但是 `Scroller` 中对于交互的处理存在抖动，不知道是否是Bug。
 ```
+
+![Horonzontal Scroller with Height 50](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_1-40-54_PM.gif)
+
+### ScrollView
+
+`ScrollerView` 表示一个滚动区域，以 `GUI.BeginScrollView` 开始，以 `GUI.EndScrollView` 结束，这两句语句中间的控件都会被包含在滚动区域内。
+
+`BeginScrollView` 中表示位置的 `Rect` 代表区域显示范围，后续的内容部分需要提供两个参数，第一个参数是一个 `Vector2` ，分别表示在水平方向和垂直方向的滚动位置，第二个参数是另一个 `Rect` ，表示滚动区域整个容纳的范围。
+
+```csharp
+public Texture2D icon;
+private Vector2 scrollViewVector = Vector2.zero;
+private string innerText = "I am inside the scrollView";
+
+// ...
+
+scrollViewVector = GUI.BeginScrollView(new Rect(25, 505, 200, 200), scrollViewVector, new Rect(0, 0, 400, 400));
+innerText = GUI.TextArea(new Rect(0, 0, 400, 300), innerText);
+GUI.Label(new Rect(0, 300, 400, 100), icon);
+GUI.EndScrollView();
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_2-14-11_PM.gif)
+
+### Window
+
+`Window` 是一个比较特殊的控件，
+
+第一个参数是 `int`，而是 `Window` 的ID。
+
+第二个参数是 `Rect` ，表示 `Window` 的位置。
+
+第三个参数是一个函数，函数原型为 `void WindowFunction(int id)`
+
+第四个参数为 `string` ，表示窗口的标题。
+
+传递给 `Window` 的函数会被每帧调用，在该函数中应当定义需要绘制的控件，其中的控件绘制会以 `Window` 的左上角作为 $[ 0,0]$ 。
+
+```csharp
+private Rect windowRect = new Rect(250, 20, 200, 200);
+// ...
+windowRect = GUI.Window(0, windowRect, WindowFunction, "A Window");
+
+// ...
+
+private void WindowFunction(int windowID)
+{
+    Debug.Log("window ID" + windowID);
+    GUI.Label(new Rect(25, 25, 100, 30), "Label");
+
+    if (GUI.Button(new Rect(25, 60, 100, 30), "Button")) { Debug.Log("Click button"); }
+    if (GUI.RepeatButton(new Rect(25, 95, 100, 30), "RepeatButton")) { Debug.Log("Click repeatButton"); }
+}
+```
+
+![|200](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2012.png)
+
+## GUI.changed
+
+当某一帧对控件做出了任意操作后（如点击了 `Button`，或拖动了 `Slider`等）， `GUI.changed` 会在这一帧被置为 `true` 。
+
+```csharp
+private int toolbarInt = 1;
+
+// ..
+
+toolbarInt = GUI.Toolbar(new Rect(20, 20, 250, 50), toolbarInt, toolbarStrings);
+if (GUI.changed)
+{
+    Debug.Log(toolbarInt);
+}
+```
+
+![|500](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_2-54-14_PM.gif)
+
+# 自定义控件样式
+
+Unity的 IMGUI支持自定义控件样式，每个控件都由 `GUIStyles` 控制它的样式。
+
+所有的 `GUI` 控件函数都有一个重载函数，该重载最后有一个额外参数表示它的 `GUIStyles` 。当没有指定 `GUIStyles` 时就会Unity会使用默认的样式：
+
+```csharp
+public static void Label(Rect position, string text);
+public static void Label(Rect position, string text, GUIStyle style);
+```
+
+## string 到 GUIStyle 的切换
+
+在 `GUIStyle` 类中定义了一个隐式的转换， `string` 可转换为 `GUIStyle` 。
+
+```csharp
+public static implicit operator GUIStyle(string str);
+```
+
+当指定了一个 `string` 时，Unity 会从当前使用的 `GUISkins` 中找寻该 `string` 与哪个 `GUIStyle` 的 `name` 相匹配，找到后便将该 `string` 转换为 `GUIStyle` 。
+
+如下例子中，最后的参数传递的是一个 `string` ，但会自动的转换为对应控件的类型。该例子中用 `box` 的样式渲染 `Label` ，用 `toggle` 的样式渲染 `Button`：
+
+```csharp
+GUI.Label(new Rect(0, 0, 200, 100), "Hi - I'm a label looking like a box", "box");
+GUI.Button(new Rect(10, 140, 180, 20), "This is a button", "toggle");
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%208%202.png)
+
+## GUISkin
+
+一系列的 `GUIStyles` 可以被封装进一个 `GUISkin` 中。 `GUISkin` 是 Unity管理的一个资源文件，可通过 `Assets / 右键` → `Create` → `GUI Skin` 进行创建。
+
+`GUISkin` 资源文件中包含各控件的 `GUIStyles` ，也可以自定义其他的 `GUIStyles` 。
+
