@@ -35,9 +35,9 @@ updated: 2021-12-09
 
 # Clang-Format[^3]
 
-该插件实现调用本机的 [Clang-Format](../Clang-Format.md) 格式化 VSCode 中的文件。
+该插件实现调用本机的 [Tools  - Clang-Format](../Tools/Tools%20%20-%20Clang-Format.md) 格式化 VSCode 中的文件。
 
-在使用插件前，首先需要在 `settings.json` 中设置 [Clang-Format](../Clang-Format.md) 的路径，如下所示：
+在使用插件前，首先需要在 `settings.json` 中设置 [Tools  - Clang-Format](../Tools/Tools%20%20-%20Clang-Format.md) 的路径，如下所示：
 ```json
 "clang-format.executable": "C:/Program Files/LLVM/bin/clang-format.exe"
 ```
