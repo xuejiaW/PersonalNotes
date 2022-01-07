@@ -141,12 +141,109 @@ GUI.Label(new Rect(10, 40, 100, 20), GUI.tooltip);
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | ![鼠标未移动到Button上](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%206.png) | ![鼠标移动到Button上](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%207.png) |
 
-<aside> ⚠️ 当鼠标移动到定义了 `Tooltip` 的控件上时， `GUI.tooltip` 会自动改为定义的 `Tooltip` 字符串。 因此在鼠标未移动到Button上时，Label其实也被绘制了，只不过绘制的字符串为空。
+```ad-warning
+当鼠标移动到定义了 `Tooltip` 的控件上时， `GUI.tooltip` 会自动改为定义的 `Tooltip` 字符串。 因此在鼠标未移动到Button上时，Label其实也被绘制了，只不过绘制的字符串为空。
 
 如果将 `GUI.Tooltip` 作为 `GUI.Button` 的形参，可以发现 `GUI.Button` 的背景无论鼠标有没有移动到上面，都会绘制了出来，但仅当鼠标移动到 `GUI.Button` 上时，上面的文字才会被显示
-
-</aside>
+```
 
 # 控件
 
 ## 控件类型
+
+### Label
+
+`Label` 是不可交互的，仅用来展示的。
+
+`Label` 只会展示定义的内容，如定义的内容是 `string` ，则该 `string` 后不会有任何的背景。而其他大部分的控件都有默认的背景。
+
+```csharp
+GUI.Label(new Rect(25, 25, 100, 30), "Label");
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%208.png)
+
+### Button
+
+`Button` 在被完成了一整个点击操作后（点击下，释放），会返回 `true` （一帧）。
+
+```csharp
+if (GUI.Button(new Rect(25, 60, 100, 30), "Button"))
+{
+    Debug.Log("Click button");
+}
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%201%201.png)
+
+### RepeatButton
+
+`Button` 在鼠标按下后就一直会返回 `true` （多帧）。
+
+```csharp
+if (GUI.RepeatButton(new Rect(25, 95, 100, 30), "RepeatButton"))
+{
+    Debug.Log("Click repeatButton");
+}
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%202%201.png)
+
+### TextField
+
+`TextField` 是用来展示 `string` ，因此必须给 `TextField` 提供一个 `string` 作为控件的内容。
+
+每当在 `TextField` 中输入字符（不需要按回车），该控件就会返回当前 `TextField` 中的字符。
+
+在 `TextField` 如果输入了超过控件宽度的字符串，字符串会自动向后延申而不会换行，即使控件的高度大于多行字符的高度，即使按下回车。
+
+```csharp
+private string textFieldString = "text field";
+// ...
+textFieldString = GUI.TextField(new Rect(25, 130, 100, 50), textFieldString);
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%203%201.png)
+
+### TextArea
+
+`TextArea` 是用来展示 `string` ，因此必须给 `TextArea` 提供一个 `string` 作为控件的内容。
+
+每当在 `TextArea` 中输入字符（不需要按回车），该控件就会返回当前 `TextArea` 中的字符。
+
+在 `TextField` 如果输入了超过控件宽度的字符串，字符串会自动换行。
+
+```csharp
+private string textAreaString = "text area";
+// ...
+textAreaString = GUI.TextArea(new Rect(25, 185, 100, 50), textAreaString);
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%204%201.png)
+
+### Toggle
+
+`Toggle` 需要提供一个 `bool` 类型作为当前的状态，还需要提供一个 `string` 作为展示的内容。
+
+```csharp
+toggleBool = GUI.Toggle(new Rect(25, 240, 100, 50), toggleBool, "Toggle");
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%205%201.png)
+
+### ToolBar
+
+`ToolBar` 是一系列按钮的集合。该控件的内容部分需要提供两个参数，第一个是 `int` 类型，表示第几个按钮（从0开始）被选中，第二个是 `string[]` ，表示一系列按钮上需要显示的字符串，且该参数表示了一共有多少个按钮。
+
+点击其中的一个按钮后，会返回被点击的按钮的 `Index` ，且该按钮被选中。在同一时间只会有一个按钮被选中。
+
+```csharp
+private int toolbarInt = 1;
+private string[] toolbarStrings = { "ToolBar1", "Toolbar2", "Toolbar3" };
+
+// ...
+
+toolbarInt = GUI.Toolbar(new Rect(25, 295, 250, 50), toolbarInt, toolbarStrings);
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%206%201.png)
