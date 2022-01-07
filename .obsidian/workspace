@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+            "file": "TO-DO.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md"
+                "file": "TO-DO.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/VSCode/VSCode - Cpp.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
@@ -161,7 +162,6 @@
     "Notes/VSCode/VSCode - Extensions.md",
     "Notes/Tools/Tools - Windows Terminal.md",
     "Notes/Tools/Tools - Chocolatey.md",
-    "Notes/Tools/Tools - Pandoc.md",
-    "Notes/GPU/GPU - GPU  Performance.md"
+    "Notes/Tools/Tools - Pandoc.md"
   ]
 }
