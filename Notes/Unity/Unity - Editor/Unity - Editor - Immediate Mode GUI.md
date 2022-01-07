@@ -449,3 +449,141 @@ GUI.Button(new Rect(10, 140, 180, 20), "This is a button", "toggle");
 
 `GUISkin` 资源文件中包含各控件的 `GUIStyles` ，也可以自定义其他的 `GUIStyles` 。
 
+![|400](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%209%201.png)
+
+在 `OnGUI` 中可以使用 `GUI.skin` 切换当前要使用的 `GUISkins` ，当 `GUI.Skin` 赋值为 `null` 时则使用的是Unity默认的 `GUISkin`：
+
+```csharp
+GUI.skin = customSkin;
+GUI.Button(new Rect(10, 10, 150, 20), "Custom skinned button");
+GUI.skin = null;
+GUI.Button(new Rect(10, 40, 150, 20), "Default skinned button");
+```
+
+|                                                                                   |     |                                                                                          |
+| --------------------------------------------------------------------------------- | --- | ---------------------------------------------------------------------------------------- |
+| ![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2010%201.png) |     | ![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_4-25-34_PM.gif) |
+
+## GUIStyle
+
+当在脚本中定义了一个 public 的 `GUIStyle` ，则在 `Inspector` 中会展现出一个 `GUIStyle` 的可设置项：
+
+```ad-error
+Unity中没有对应的 `GUIStyle` 的资源文件
+```
+
+```csharp
+public GUIStyle customButtonStyle;
+// ...
+
+GUI.Button(new Rect(20, 20, 200, 100), "Custom Button",customButtonStyle);
+```
+
+|                                                                                   |                                                                                          |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| ![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2011%201.png) | ![](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_3-55-51_PM.gif) | 
+
+## 动态修改 GUIStyle
+
+`GUIStyle` 中的参数可以在运行时被动态修改，如下代码在运行时动态的修改 `label` 的 `GUIStyle` 中 `fontSize` 属性：
+
+```csharp
+GUI.skin = customSkin;
+GUIStyle style = GUI.skin.GetStyle("label");
+style.fontSize = (int)(20.0f + 10.0f * Mathf.Sin(Time.time));
+GUI.Label(new Rect(10, 10, 200, 80), "Hello World!");
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_4-33-23_PM.gif)
+
+# GUI VS GUILayout
+
+`IMGUI` 中有两种排列方式， `固定排列（Fixed Layout）` 和 `自动排列（Automatic Layout）` 。在 `固定排列`中，每个控件都需要指定它的位置和大小，在 `自动排列` 中控件的位置和大小则会自动调节。
+
+`GUI` 类对应的就是 `固定排列` ，因此 `GUI` 类中的每个控件都需要传递 `Rect` 表示它的位置和大小。
+
+`GUILayout` 类对应的就是 `自动排列` ，因此 `GUILayout` 类中的每个控件都不要求传递 `Rect` 表示位置和大小。
+
+## GUILayout
+```csharp
+GUILayout.Box("Loader Menu");
+
+if (GUILayout.Button("Level 1"))
+{
+    Debug.Log("Level 1");
+}
+
+if (GUILayout.Button("Level 2"))
+{
+    Debug.Log("Level 2");
+}
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2012%201.png)
+
+## GUI
+
+```csharp
+GUI.Box(new Rect(0, 0, 100, 20), "Loader Menu");
+
+if (GUI.Button(new Rect(0, 25, 100, 20), "Level 1"))
+{
+    Debug.Log("Level 1");
+}
+
+if (GUI.Button(new Rect(0, 50, 100, 20), "Level 2"))
+{
+    Debug.Log("Level 2");
+}
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2013.png)
+
+## 排列控件
+
+排列控件可以控制其他的控件的显示范围或多个控件之间该如何分组。
+
+不同的排列方式需要用不同的排列控件：
+
+对于 `固定排列` 需要用 `Groups`
+
+对于 `自动排列` 需要用 `Areas` 或 `Horizontal Groups` 或 `Vertical Groups`
+
+### Fixed Layout - Groups
+
+`Groups` 可以定义一系列控件要显示的范围，定义在 `BeginGroup` 和 `EndGroup` 中的组件都属于该 `Group` 。
+
+定义在 `Group` 中的各组件位置都是依赖于 `Group` 的左上角计算的，而非屏幕的左上角。因此当移动 `Group` 时，里面的各控件相对位置并不会发生变化。
+
+```csharp
+GUI.BeginGroup(new Rect(Screen.width / 2 + 50 * Mathf.Sin(Time.time), Screen.height / 2 - 50, 100, 100));
+GUI.Box(new Rect(0, 0, 100, 100), "Group is here");
+GUI.Button(new Rect(10, 40, 80, 30), "Click me");
+GUI.EndGroup();
+```
+
+![|500](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_6-02-03_PM.gif)
+
+对于超过了 `Group` 范围的控件，会被裁剪掉。如果直接调整一个控件的大小，实现的是缩放效果，因此如果要实现裁剪效果必须需要用到 `Group`。
+
+```csharp
+GUI.BeginGroup(new Rect(20, 20, (Mathf.Sin(Time.time) + 1) / 2.0f * 256, 32));
+GUI.Box(new Rect(0, 0, 256, 32), icon);
+GUI.EndGroup();
+```
+
+![|300](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_6-10-54_PM.gif)
+
+### Automatic Layout - Areas
+
+`自动排列` 中的 `Area` 功能与 `固定排列` 中的 `Groups` 类似。
+
+当未定义在 `Area` 中的 `GUILayout` 控件，会在屏幕控件的左上角排列并绘制。而定义了在 `Area` 中的 `GUILayout` 控件，则会从 `Area` 的左上角排列并绘制。
+
+```csharp
+GUILayout.Button("I am not inside an Area");
+GUILayout.BeginArea(new Rect(Screen.width / 2, Screen.height / 2, 300, 300));
+GUILayout.Button("I am completely inside an Area");
+GUILayout.EndArea();
+GUILayout.Button("I am not inside an Area too");
+```
