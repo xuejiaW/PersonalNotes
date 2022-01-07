@@ -247,3 +247,94 @@ toolbarInt = GUI.Toolbar(new Rect(25, 295, 250, 50), toolbarInt, toolbarStrings)
 ```
 
 ![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%206%201.png)
+
+### SelectionGrid
+
+`SelectionGrid` 是一系列按钮的集合且以多行展示。
+
+该控件的内容部分需要提供三个参数，第一个是 `int` 类型，表示第几个按钮被选中（从0开始），第二个是 `string[]` ，表示一系列按钮上需要显示的字符串，且该参数表示了一共有多少个按钮。第三个是 `int` 表示一行中要显示多少个按钮。
+
+点击其中的一个按钮后，会返回被点击的按钮的 `Index` ，且该按钮被选中。在同一时间只会有一个按钮被选中。
+
+```csharp
+private int selectionGridInt = 2;
+private string[] selectionStrings = { "Grid 1", "Grid 2", "Grid 3", "Grid 4" };
+
+// ...
+
+selectionGridInt = GUI.SelectionGrid(new Rect(25, 350, 250, 100), selectionGridInt, selectionStrings, 3);
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%207%201.png)
+
+### Horizontal / Vertical Slider
+
+`HorizontalSlider` 是一个水平方向的滑条， `VerticalSlider` 是一个垂直方向的滑条。
+
+该控件在内容部分需要提供3个参数，这三个参数都是 `float` 类型，第一个参数则是在最小值和最大值之间的某个中间值，该参数会决定滑动条的初始位置，第二和第三个参数表示滑动条的最小值和最大值，
+
+在滑动过程中，该控件会根据滑动的位置，返回一个最小值和最大值之间的某个中间值。
+
+如最小值和最大值为 $[1,10]$，则在滑动过程中，返回值会在 $[1,10]$ 中变化。
+
+```csharp
+// HorizontalSlider
+private float hSliderValue = 3.0f;
+// ...
+hSliderValue = GUI.HorizontalSlider(new Rect(25, 455, 250, 100), hSliderValue, 0, 10);
+
+// VerticalSLider
+private float vSliderValue = 3.0f;
+// ...
+vSliderValue = GUI.VerticalSlider(new Rect(200, 25, 100, 250), vSliderValue, 0, 10);
+```
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%208%201.png)
+
+![|100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%209.png)
+
+```ad-warning
+ `HorizontalSlider` 中表示位置的 `Rect` 中的`height` 并不会改变 `Slider` 的显示高度，它只表示 `HorizontalSldier` 可交互范围的高度。 在这个占据的高度内，拖动鼠标都会造成滑动条的变化，即使鼠标下并没有被绘制的UI。 如果其他的控件在被 `HorizontalSlider` 占据的空间中，则这些控件并不会有交互反应。
+```
+
+|                                                                                                                            |                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| ![Vertical Slider with Height : 100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_11-57-24_AM.gif) | ![Vertical Slider with Height : 100](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/GIF_1-11-2021_11-56-21_AM.gif) |
+
+### Horizontal / Vertical Scrollbar
+
+```ad-note
+`Scrollerbar` 与 `Slider` 类似，差别在于 `ScrollerBar` 多了一个参数去调整滑动条的滑块大小。
+```
+
+`HorizontalScrollbar` 是一个水平的滚动条。
+
+该控件在内容部分需要提供4个参数，这四个参数都是 `float` 类型。第一个参数则是在最小值和最大值之间的某个中间值，该参数会决定滑动条的初始位置。第二个参数决定滑块的大小，其中第三和第四个参数表示滑动条的最小值和最大值，
+
+```csharp
+// Horizontal Scrollbar
+private float hScrollBarValue = 3.0f;
+// ...
+hScrollBarValue = GUI.HorizontalScrollbar(new Rect(25, 475, 250, 25), hScrollBarValue, 1, 0, 10);
+
+// Vertical Scrollbar
+private float vScrollBarValue = 3.0f;
+// ...
+vScrollBarValue = GUI.VerticalScrollbar(new Rect(200, 25, 25, 200), vScrollBarValue, 1, 0, 10);
+```
+
+|                                                                                                  |                                                                                                |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| ![Horizontal Scroller](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2010.png) | ![Vertical Scroller](assets/Unity%20-%20Editor%20-%20Immediate%20Mode%20GUI/Untitled%2011.png) |
+
+```ad-warning
+滑块在滚动条中的位置是由滑块最左侧表现得。即如果 `hScrollBarValue` 的值是在最大值和最小值的中间值，则滑块的最左侧会在整个滚动条的中间。
+
+也因此，滑块的Size也决定了滑块的取值范围。如整个范围是 $0 \sim 10$，且滑块的大小是 1，则最终滑块的取值范围是 $0 \sim 9$。
+
+当滑块的大小设为0，则表现的如同 `Slider`
+```
+
+```ad-error
+`Scroller` 对于 `Rect` 中宽高的处理与 `Slider` 类似，即不表示显示的范围，只表示可交互的范围。但是 `Scroller` 中对于交互的处理存在抖动，不知道是否是Bug。
+```
