@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/VSCode - Cpp",
+  "attachmentFolderPath": "./assets/TO-DO",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
