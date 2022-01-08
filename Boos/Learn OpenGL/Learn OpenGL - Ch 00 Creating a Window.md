@@ -1,6 +1,6 @@
 ---
 created: 2021-12-14
-updated: 2022-01-07
+updated: 2022-01-08
 tags:
     - OpenGL
 ---

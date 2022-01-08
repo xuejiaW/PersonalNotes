@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "TO-DO.md",
-            "mode": "preview",
+            "mode": "source",
             "source": true
           }
         }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -154,9 +153,9 @@
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
     "TO-DO.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
-    "Notes/VSCode/VSCode - Cpp.md",
+    "Notes/Unity/Unity - Material Property Blocks.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
+    "Notes/VSCode/VSCode - Cpp.md",
     "Notes/VSCode/VSCode - GLSL.md",
     "Notes/VSCode/VSCode - Settings.md",
     "Notes/VSCode/VSCode - Extensions.md",

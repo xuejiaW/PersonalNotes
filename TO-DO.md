@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2022-01-07
+updated: 2022-01-08
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
@@ -23,3 +23,12 @@ updated: 2022-01-07
 
 - [ ] Native
 [Unity Graphics Emulator for Native Plugin Development - CodeProject](https://www.codeproject.com/Articles/1216876/Unity-Graphics-Emulator-for-Native-Plugin-Developm)
+
+- [ ] Unity Memory
+    [Memory Management in Unity - Unity Learn](https://learn.unity.com/tutorial/memory-management-in-unity#)
+    [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html)
+
+- [ ] EGL Context
+    [c++ - Deleting EGL Opengles 2.0 properly - Stack Overflow](https://stackoverflow.com/questions/29284904/deleting-egl-opengles-2-0-properly)
+    [multithreading - egl - Can context be shared between threads - Stack Overflow](https://stackoverflow.com/questions/11726650/egl-can-context-be-shared-between-threads)
+    [OpenGL ES calls across multiple threads - OpenGL - Khronos Forums](https://community.khronos.org/t/opengl-es-calls-across-multiple-threads/1107)
