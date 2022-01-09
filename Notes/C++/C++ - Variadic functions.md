@@ -45,7 +45,16 @@ void simple_printf(const char* fmt...)  // C-style "const char* fmt, ..." is als
 }
 ```
 
+# Variadic Parameters in Macro
 
+```ad-note
+该功能在 C99 编译器标准中定义
+```
+
+在 Macro 中，可以使用 `__VA_ARGS` 表示 `...`，如下代码：
+```cpp
+#define debug(...) printf(__VA_ARGS__)
+```
 
 
 # Referecne
