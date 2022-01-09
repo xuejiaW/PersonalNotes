@@ -15,12 +15,22 @@ EGL 是 OpenGL ES 和 操作系统间的一个中间层，其只要包含 `Displ
 
 ## Context
 
-`Context` 是一个容器，存储 OpenGLES 相关的数据，主要包括：
-- 
+`Context` 是一个容器，用来存储 OpenGL ES 相关的输入，主要包括：
+- 状态信息：Viewport，Depth Range，Clear Color，VBO.....
+- 命令缓冲
+
+## Surface 
+
+Surface 用来存储 OpenGL ES 相关的输出数据，其中包含 `Color Buffer`，`Depth Buffer`，`Stencil Buffer`。
+
 
 # EGL Context Shared
 
 EGL 的 Context 是线程相关的，因此在一个线程中创建的资源需要在另一个线程中使用就需要进行 `Context Share`。
+
+```ad-note
+Context Shared 仅能共享 Context 中状态信息，命令缓冲无法被共享，也因此在
+```
 
 如有 `Thread A` 和 `Thread B` 两个线程，`Thread A` 为已经创建了的 EGL Context 的线程，需要将 EGL Context 共享给 `Thread B`，过程如下：
 
@@ -63,3 +73,5 @@ EGL Context 的共享是双向的，当 `Thread A` 和 `Thread B` 共享后， `
 # Reference
 
 [multithreading - egl - Can context be shared between threads - Stack Overflow](https://stackoverflow.com/questions/11726650/egl-can-context-be-shared-between-threads)
+
+[談談eglMakeCurrent、eglSwapBuffers、glFlush和glFinish | 程式前沿 (codertw.com)](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/747105/)
