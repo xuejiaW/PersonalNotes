@@ -1,6 +1,8 @@
 ---
 created: 2022-01-09
 updated: 2022-01-09
+tags:
+    - C++
 ---
 
 类似于 `int printf( const char* format, ... )` 的函数称为 `可变函数（Variadic functions）`
@@ -51,7 +53,7 @@ void simple_printf(const char* fmt...)  // C-style "const char* fmt, ..." is als
 该功能在 C99 编译器标准中定义
 ```
 
-## __VA_ARGS
+## __VA_ARGS__
 
 在 Macro 中，可以使用 `__VA_ARGS` 替代 `...`，如下代码：
 ```cpp
@@ -69,7 +71,7 @@ printf("Y = %d\n", y);
 ```
 
 
-## ##__VA_ARGS
+## ##__VA_ARGS__
 
  `__VA_ARGS` 在如下使用方法中，当参数的个数为 0 时会产生错误：
  
@@ -89,7 +91,13 @@ printf(fmt,);
 
 可以看到存在一个多余的 `,`，该 `,` 会造成编译错误。
 
-为了解决这个问题，需要使用 `##__VA_ARGS` 
+为了解决这个问题，需要使用 `##__VA_ARGS__` 取代 `__VA_ARGS__` ，当不定参数的实际参数数为 0 时，多余的 `,` 会被编译器删除。即上述代码分别会变为：
+
+```cpp
+#define Debug(fmt,...)     printf(fmt, ##__VA_ARGS__)
+Debug("Y ABC");
+printf(fmt);
+```
 
 # Referecne
 

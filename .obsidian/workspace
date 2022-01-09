@@ -102,7 +102,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -153,6 +154,7 @@
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
     "Notes/C++/C++ - Variadic functions.md",
+    "Notes/C++/C++ - Template Class.md",
     "Notes/Android/Android - Logging.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android/Android - EGL.md",
@@ -160,7 +162,6 @@
     "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - Code Snippets.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
-    "Notes/Android.md",
-    "Notes/Unity/Unity - UniRx.md"
+    "Notes/Android.md"
   ]
 }
