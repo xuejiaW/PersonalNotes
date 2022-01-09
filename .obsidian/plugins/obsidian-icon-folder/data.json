@@ -20,7 +20,7 @@
   "TO-DO.md": "RiListOrdered",
   "Notes/Unity": "FaUnityBrands",
   "Notes/Android": "RiAndroidLine",
-  "Notes/C++": "FaPlusFill",
+  "Notes/C++": "RiAddFill",
   "Notes/CSharp": "RiHashtag",
   "Notes/Computer Graphics": "RiPaletteLine",
   "Notes/VSCode": "RiCodeSSlashLine",
