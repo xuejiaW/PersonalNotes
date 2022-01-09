@@ -60,7 +60,11 @@ public class App
 | Weak                  | 此句柄类型用于跟踪对象，但允许回收该对象。 当回收某个对象时，GCHand 的内容归零。 在终结器运行之前，`Weak` 引用归零，因此即使终结器使该对象复活，`Weak` 引用仍然是归零的。                                             |
 | WeakTrackResurrection | 该句柄类型类似于 Weak，但如果对象在终结过程中复活，此句柄不归零。                                                                                                                                                     |
 
-其中 `Normal` 和 `Pinned` 都保证了对象不会被 GC 释放，但 `Pinnned` 可以保证对象在 GC 时也不会被移动，而  `Normal`
+其中 `Normal` 和 `Pinned` 都保证了对象不会被 GC 释放，但 `Pinnned` 可以保证对象在 GC 时也不会被移动，而  `Normal` 不行。
+
+通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。返回的是对象的绝对地址，后者是将对象封装在一个 Table 中并返回表中的 Index。
+
+因此 `Pinned` 的对象可以通过 `GCHandle.AddrOfPinnedObject` 函数返回，而 `Normal` 仅能通过 `To`
 
 # Reference
 
