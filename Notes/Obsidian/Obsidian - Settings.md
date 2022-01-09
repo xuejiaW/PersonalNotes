@@ -1,6 +1,8 @@
 ---
 tags:
     - Obsidian
+created: 2022-01-09
+updated: 2022-01-09
 ---
 
 # Folding

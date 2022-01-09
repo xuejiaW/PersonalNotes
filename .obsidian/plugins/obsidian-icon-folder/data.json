@@ -22,5 +22,7 @@
   "Notes/Android": "RiAndroidLine",
   "Notes/C++": "FaPlusFill",
   "Notes/CSharp": "RiHashtag",
-  "Notes/Computer Graphics": "FaPaintBrushFill"
+  "Notes/Computer Graphics": "RiPaletteLine",
+  "Notes/VSCode": "RiCodeSSlashLine",
+  "Notes/Tools": "RiToolsFill"
 }
