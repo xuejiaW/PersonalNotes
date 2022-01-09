@@ -1,9 +1,9 @@
 ---
 cssclass: [table-border]
 tags:
-    - ComputerGraphics
+    - Computer-Graphics
 created: 2022-01-06
-updated: 2022-01-07
+updated: 2022-01-09
 ---
 
 # 透明像素造成的失真

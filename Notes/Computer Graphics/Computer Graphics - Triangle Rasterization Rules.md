@@ -1,6 +1,6 @@
 ---
 tags:
-    ComputerGraphics
+    Computer-Graphics
 created: 2021-12-30
 updated: 2021-12-31
 ---
