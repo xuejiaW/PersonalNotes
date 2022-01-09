@@ -424,9 +424,8 @@ nmap <Space>ff :search
 
 可以右键选择 `Inherit Icon`，当选择了 `Inherit Icon` 后所有该文件夹下的文件都会自动添加按钮。
 
-在 `Change Icon` 和 `Inherit Icon` 的页面中，也可以按下 `Windows+;` 打开自带的 Emoji 库，
-
-
+在 `Change Icon` 和 `Inherit Icon` 的页面中，也可以按下 `Windows + ;` 打开 Windows 自带的 Emoji 库。当选择好 `emoji` 后，选择 `Use twemoji emoji` 技能输入，如下所示：
+![|500](assets/Obsidian%20-%20Plugins/image-20220109155040206.png)
 
 
 # Reference
