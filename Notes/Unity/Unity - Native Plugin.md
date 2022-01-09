@@ -71,18 +71,41 @@ void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventTyp
 
 # Plug-in callbacks on the rendering thread
 
-可以在 Native 中定义函数作为渲染线程的触发，如下所示：
+可以在 Native 中定义函数作为渲染线程的触发，该触发回调支持一个 `int` 形参作为需要执行的 `Event` 的 Index 值，如下所示：
 ```csharp
 extern "C" UnityRenderingEvent UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventFunc()
 {
     return OnRenderEvent;
 }
 
-static void UNITY_INTERFACE_API OnRenderEvent(int eventID);
+static void UNITY_INTERFACE_API OnRenderEvent(int eventID)
+{
+    switch(eventID)
+    {
+        // ...
+    }
+}
 ```
 
 在 C# 中，可以通过 `GL.IssuePluginEvent` 触发 ：
-``````
+```csharp
+public class UseRenderingPlugin : MonoBehaviour
+{
+    [DllImport("GhostCubePlugin")]
+    private static extern IntPtr GetRenderEventFunc();
+
+    void OnRenderObject()
+    {
+        GL.IssuePluginEvent(GetRenderEventFunc(), 1);
+    }
+}
+```
+
+还可以通过如下的方法，在传递 `EventID` 的同时传递数据：
+```csharp
+extern "C" UnityRenderingEventAndData GetRenderEventAndDataFunc() { return plugin.renderMgr->OnUnityRenderEventWithData; }
+
+```
 
 # Reference
 
