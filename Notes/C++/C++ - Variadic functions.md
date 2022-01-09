@@ -9,14 +9,44 @@ updated: 2022-01-09
 
 可变函数中的 `...` 表示可变形参，该形参可以接纳任意数量，任意类型的形参。
 
-为了解析 `...` 形参，在 `<cstarg>` 头文件中定义了一系列函数：
+为了解析 `...` 形参，在 `<cstarg>` 头文件中定义了一系列 Macros：
 
-|          |                                               |
-| -------- | --------------------------------------------- |
-| va_start | enables access to variadic function arguments |
-| va_arg   | accesses the next variadic function argument  |
-| va_copy  | accesses the next variadic function argument  |
-| va         |                                               |
+| Macros    | 说明                                                                      |
+| -------- | --------------------------------------------------------------------- |
+| va_start | enables access to variadic function arguments                         |
+| va_arg   | accesses the next variadic function argument                          |
+| va_copy  | makes a copy of the variadic function arguments                          |
+| va_end   | ends traversal of the variadic function arguments                     |
+| va_list  | holds the information needed by va_start, va_arg, va_end, and va_copy |
+
+如下为使用上述的 `Macros` 实现一个简易的 `printf` 函数的示例：
+```cpp
+void simple_printf(const char* fmt...)  // C-style "const char* fmt, ..." is also valid
+{
+    va_list args;
+    va_start(args, fmt);
+
+    while (*fmt != '\0')
+    {
+        if (*fmt == 'd')
+        {
+            int i = va_arg(args, int);
+            std::cout << i << '\n';
+        }
+        else if (*fmt == 'f')
+        {
+            double d = va_arg(args, double);
+            std::cout << d << '\n';
+        }
+        ++fmt;
+    }
+
+    va_end(args);
+}
+```
+
+
+
 
 # Referecne
 
