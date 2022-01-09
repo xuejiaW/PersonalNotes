@@ -22,8 +22,46 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API  UnityPluginUnload();
 
 # Access to the graphics device
 
-可以通过 `IUnityInterfaces` 注册 Unity 图形系统被jia'zai'shi
+可以通过 `IUnityInterfaces` 和 `RegisterDeviceEventCallback` 注册 Unity 图形系统的回调：
 
+```cpp
+UnityRendererPlugin unityRendererPlugin;
+
+extern "C"
+{
+    void UNITY_INTERFACE_API UNITY_INTERFACE_API UnityPluginLoad(IUnityInterfaces* unityInterfaces)
+    {
+        unityRendererPlugin.graphics = unityInterfaces->Get<IUnityGraphics>();
+        unityRendererPlugin.graphics->RegisterDeviceEventCallback([](UnityGfxDeviceEventType eventType){ unityRendererPlugin.OnGraphicsDeviceEvent(eventType); });
+    }
+}
+
+void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventType)
+{
+    switch (eventType)
+    {
+        case kUnityGfxDeviceEventInitialize:
+            renderer = graphics->GetRenderer();
+            if (renderer == UnityGfxRenderer::kUnityGfxRendererNull || texMgr) return;
+
+            texMgr = new TexMgr();
+            texMgr->Initialize();
+            break;
+        case kUnityGfxDeviceEventShutdown:
+            renderer = kUnityGfxRendererNull;
+            if (texMgr) delete texMgr;
+        default:
+            break;
+    }
+}
+
+```
+
+在被注册的回调函数中，会传递一系列 `eventType`，主要需要监听 `kUnityGfxDeviceEventInitialize` 和 `kUnityGfxDeviceEventShutdown` 事件。
+
+```ad-note
+`OnGraphicsDeviceEvent` 还会传递 `kUnityGfxDeviceEventBeforeReset` 和 `kUnityGfxDeviceEventAfterReset` 事件。但该两个事件仅会在 `Direct 9` 中被触发。
+```
 
 
 # Reference
