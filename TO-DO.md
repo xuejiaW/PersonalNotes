@@ -4,7 +4,6 @@ updated: 2022-01-09
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
-- [ ] Unity 内存泄露，如 Mesh，Texture 等。
 - [ ]   Simple Json 笔记
  [Unity JSON performance comparison (LitJson, NewtonsoftJson, SimpleJSON) - Programmer Sought](https://programmersought.com/article/96576253892/)
 - [ ] C# IEqualityComparer / IEquatable
@@ -13,9 +12,7 @@ updated: 2022-01-09
 - [ ] Power shell 编译 Makefile
  [How to generate a Makefile with source in sub-directories using just one makefile - Stack Overflow](https://stackoverflow.com/questions/231229/how-to-generate-a-makefile-with-source-in-sub-directories-using-just-one-makefil)
 
-- [ ] Native
-[Unity Graphics Emulator for Native Plugin Development - CodeProject](https://www.codeproject.com/Articles/1216876/Unity-Graphics-Emulator-for-Native-Plugin-Developm)
-
-- [ ] Unity Memory
+- [ ] Unity Memory,
+    - Unity 内存泄露，如 Mesh，Texture 等
     [Memory Management in Unity - Unity Learn](https://learn.unity.com/tutorial/memory-management-in-unity#)
     [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html)

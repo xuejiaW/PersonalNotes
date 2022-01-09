@@ -151,6 +151,8 @@ public void IssueDataEvent(EventDataType eventType, IntPtr data)
 
 # Reference
 
+[DiligentGraphics/DiligentEngine: A modern cross-platform low-level graphics library and rendering framework (github.com)](https://github.com/DiligentGraphics/DiligentEngine)
+
 [Unity Graphics Emulator for Native Plugin Development - CodeProject](https://www.codeproject.com/Articles/1216876/Unity-Graphics-Emulator-for-Native-Plugin-Developm)
 
 [Unity - Manual: Low-level native plug-in interface (unity3d.com)](https://docs.unity3d.com/Manual/NativePluginInterface.html)
