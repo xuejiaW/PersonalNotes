@@ -53,18 +53,20 @@ public class App
 
 所有的 `GCHandleType` 类型[^2]如下：
 
-| 字段   | 说明                                                                                                                                                                                                                |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Normal | 此句柄类型表示不透明句柄，这意味着无法通过此句柄解析固定对象的地址。 可以使用此类型跟踪对象，并防止它被垃圾回收器回收。<br>当非托管客户端持有对托管对象的唯一引用（从垃圾回收器检测不到该引用）时，此枚举成员很有用。 |
-| Pinned |                                                                                                                                                                                                                     |
+| 字段                  | 说明                                                                                                                                                                                                                  |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Normal                | 此句柄类型表示不透明句柄，这意味着无法通过此句柄解析固定对象的地址。 可以使用此类型跟踪对象，并防止它被垃圾回收器回收。<br>当非托管客户端持有对托管对象的唯一引用（从垃圾回收器检测不到该引用）时，此枚举成员很有用。 |
+| Pinned                | 此句柄类型类似于 Normal ，但允许使用固定对象的地址。 这将防止垃圾回收器移动对象，因此将降低垃圾回收器的效率。 使用 Free 方法可尽快释放已分配的句柄。                                                                  |
+| Weak                  | 此句柄类型用于跟踪对象，但允许回收该对象。 当回收某个对象时，GCHand 的内容归零。 在终结器运行之前，`Weak` 引用归零，因此即使终结器使该对象复活，`Weak` 引用仍然是归零的。                                             |
+| WeakTrackResurrection | 该句柄类型类似于 Weak，但如果对象在终结过程中复活，此句柄不归零。                                                                                                                                                     |
 
+其中 `Normal` 和 `Pinned` 都保证了对象不会被 GC 释放，但 `Pinnned` 可以保证对象在 GC 时也不会被移动，而  `Normal`
 
 # Reference
 
-[^1]: [GCHandle - C# in a Nutshell [Book] (oreilly.com)](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
+[^1]: [GCHandle - C# in a Nutshell [Book](oreilly.com) ](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
 [^2]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
 
-[GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
+ [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
 
-[GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
-
+ [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
