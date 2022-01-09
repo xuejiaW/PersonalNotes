@@ -2,12 +2,32 @@
 tags:
     - C#
 created: 2022-01-08
-updated: 2022-01-08
+updated: 2022-01-09
 ---
 
 # Overview
 
-`GCHandle` 是用在需要将托管内存中的对象传递给非托管内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。
+`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。
+
+如有以下代码：
+```csharp
+
+
+public class Task
+{
+    // ...
+}
+
+public class App
+{
+[DllImport("texmgr")]
+private static extern void LoadTexture2D(IntPtr taskPtr);
+}
+
+
+```
+
+当对一个托管内存中的对象使用 `Alloc` 函数时，CLR 会保证该对象不会被 GC 释放。
 
 
 # Reference
