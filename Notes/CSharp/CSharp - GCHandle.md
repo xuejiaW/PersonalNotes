@@ -7,12 +7,12 @@ updated: 2022-01-09
 
 # Overview
 
-`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中[^1]。
+`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的[^1]。
 
-因为对于托管内存的 GC 而言，它是不知晓一个对象是否仍然被非托管程序使用的。因此如果一个对象从托管程序被传递给了非托管程序，当 GC 发生时该对象可能会被托管程序释放，导致非托管程序意外访问了空地址。
+对于托管内存的 GC 而言，它无法感知一个对象是否仍然被非托管程序使用的。因此如果一个对象从托管程序被传递给了非托管程序，当 GC 发生时该对象可能会被托管程序释放，导致非托管程序意外访问了空地址。
 
 ```ad-note
-因为 GC 会挂起当前运行的托管程序，因此即使托管程序和非托管程序运作在同一线程中，上述问题仍可能发生。
+GC 会挂起当前运行的托管程序，因此即使托管程序和非托管程序运作在同一线程中，上述问题仍可能发生。
 ```
 
 `GCHandle.Alloc(instance)` 函数为 `instance` 对象创建了 `GCHandle` 结构体且保证了 `instance` 对象不会被 GC 回收，直到对返回的 `GCHandle` 调用 `Free` 函数为止。
@@ -51,18 +51,24 @@ public class App
 
 当为一个对象分配 GCHandle 时，会在 `Handle-Table` 中为该对象创建让一个 `entry`，GCHandle 中会存储该 `entry` 的 Handle。
 
-GCHandle 的原理会造成 GCHandle 的拷贝可能会引发错误的释放，如下代码所示：
-```csharp
+GCHandle 的原理造成对 GCHandle 的拷贝可能会引发错误的释放[^2]，如下代码所示：
 
+```csharp
+Object obj = new Object();  
+GCHandle gch = GCHandle.Alloc(obj, GCHandleType.Normal);  
+GCHandle gch2 = gch;
 ```
+
 GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会被拷贝。此时两个 GCHandle 中的 Handle 会指向同一个 entry。
+
+所以当上例中的 `gch2` 调用了 `free` 函数，`gch` 管理的对象同样也被 `free` 了。如果再次为 `gch` 调用 `free` 则会产生 `double-free` 的错误。
 
 
 # GCHandle Type
 
 当调用 `GCHandle.Alloc` 时可以设置 `GCHandleType`，默认类型为 `GCHandleType.Normal`。
 
-所有的 `GCHandleType` 类型[^2]如下：
+所有的 `GCHandleType` 类型[^3]如下：
 
 | 字段                  | 说明                                                                                                                                                                                                                  |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +87,7 @@ GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会�
 
 通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。
 
-`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 是将对象封装在一个 `Handle-Table` 中并返回表中的 Index，因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效[^3]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 重新转换为 `GCHandle`。
+`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 则是返回 `Handle-Table` 中的 entry。因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效，仍然可以通过该 `Intptr` 找到原来的对象[^4]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 重新转换为 `GCHandle`。
 
 
 
