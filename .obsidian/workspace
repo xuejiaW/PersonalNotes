@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
+            "file": "Notes/Obsidian/Obsidian - Plugins.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md"
+                "file": "Notes/Obsidian/Obsidian - Plugins.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
+                "file": "Notes/Obsidian/Obsidian - Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
+                "file": "Notes/Obsidian/Obsidian - Plugins.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,10 +153,10 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
+    "Notes/Obsidian/Obsidian - Plugins.md",
     "Notes/Tools/Tools - PlantUML - Class Diagram.md",
     "Notes/Tools/Tools - Pandoc.md",
     "Notes/PlantUML/PlantUML.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
     "TO-DO.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md",

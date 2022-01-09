@@ -415,7 +415,19 @@ nmap <Space>ff :search
 
 ## Icon Folder [^16]
 
-该插件可以为文件和文件夹前添加 Icon。安装插件后，可以
+该插件可以为文件和文件夹前添加 Icon。
+
+安装插件后，可以在文件夹/文件右键选择 `Change Icon` 为文件夹/文件添加 Icon。
+
+在 `Settings/Icon Folder` 中选择支持的 Icon 库，如下所示：
+![|500](assets/Obsidian%20-%20Plugins/image-20220109154615750.png)
+
+可以右键选择 `Inherit Icon`，当选择了 `Inherit Icon` 后所有该文件夹下的文件都会自动添加按钮。
+
+在 `Change Icon` 和 `Inherit Icon` 的页面中，也可以按下 `Windows+;` 打开自带的 Emoji 库，
+
+
+
 
 # Reference
 
