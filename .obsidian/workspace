@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp - Blittable Type.md",
+            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp - Blittable Type.md"
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp - Blittable Type.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp - Blittable Type.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
     "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - GCHandle.md",
     "TO-DO.md",
@@ -160,7 +161,6 @@
     "Notes/VSCode/VSCode - Cpp.md",
     "Notes/VSCode/VSCode - GLSL.md",
     "Notes/VSCode/VSCode - Settings.md",
-    "Notes/VSCode/VSCode - Extensions.md",
-    "Notes/Tools/Tools - Windows Terminal.md"
+    "Notes/VSCode/VSCode - Extensions.md"
   ]
 }
