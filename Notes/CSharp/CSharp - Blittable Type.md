@@ -26,7 +26,7 @@ updated: 2022-01-09
 - 由上述类型构成的一维数组
 - 由第一种构成的值类型
 
-如果一个
+Reference 并不是 Blittable 的，即使 Reference 的对象是 Blittable 的。如 `int` 是 `blittable`，`int[]` 同样是 `blittable`，但包含 `int[]` 结构体并非是 `Blittable`。
 
 # Reference
 

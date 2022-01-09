@@ -16,11 +16,6 @@ updated: 2022-01-09
 - [ ] Power shell 编译 Makefile
  [How to generate a Makefile with source in sub-directories using just one makefile - Stack Overflow](https://stackoverflow.com/questions/231229/how-to-generate-a-makefile-with-source-in-sub-directories-using-just-one-makefil)
 
- - [ ] GCHandle
-     [GCHandle.Equals(Object) Method (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle.equals?view=net-6.0)
-     [.net - Should I free the handle returned from GCHandle::FromIntPtr? - Stack Overflow](https://stackoverflow.com/questions/22091437/should-i-free-the-handle-returned-from-gchandlefromintptr)
-    [The Truth About GCHandles | Microsoft Docs](https://docs.microsoft.com/en-us/archive/blogs/clyon/the-truth-about-gchandles)
-
 - [ ] Native
 [Unity Graphics Emulator for Native Plugin Development - CodeProject](https://www.codeproject.com/Articles/1216876/Unity-Graphics-Emulator-for-Native-Plugin-Developm)
 
