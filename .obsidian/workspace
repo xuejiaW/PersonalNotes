@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+            "file": "Notes/Obsidian/Obsidian.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md"
+                "file": "Notes/Obsidian/Obsidian.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+                "file": "Notes/Obsidian/Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+                "file": "Notes/Obsidian/Obsidian.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "25bbd5243770ce30",
   "lastOpenFiles": [
+    "Notes/Obsidian/Obsidian.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Virtual Reality/VR - Audio Localization.md",
@@ -168,7 +169,6 @@
     "Notes/Unity/Unity - Native Plugin.md",
     "Notes/Android/Android - EGL.md",
     "Notes/Obsidian/Obsidian - Plugins.md",
-    "Notes/Tools/Tools - PlantUML - Class Diagram.md",
-    "Notes/Tools/Tools - Pandoc.md"
+    "Notes/Tools/Tools - PlantUML - Class Diagram.md"
   ]
 }

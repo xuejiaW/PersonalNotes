@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2022-01-05
-updated: 2022-01-06
+updated: 2022-01-09
 ---
 
 
@@ -15,3 +15,7 @@ Obsidian 中所有设置都是基于 `Valut（库）`的。所有的设置信息
 [Obsidian - Plugins](Obsidian%20-%20Plugins.md)：Obsidian 中核心插件的说明
 [Obsidian - Settings](Obsidian%20-%20Settings.md)：Obsidian 中设置相关的说明
 [Obsidian - MetaData](Obsidian%20-%20MetaData.md)：Obsidian 中关于 Metadata 的说明
+
+# 教程资源
+
+[2021年新教程 - Obsidian中文教程 - Obsidian Publish](https://publish.obsidian.md/chinesehelp/01+2021%E6%96%B0%E6%95%99%E7%A8%8B/2021%E5%B9%B4%E6%96%B0%E6%95%99%E7%A8%8B)
