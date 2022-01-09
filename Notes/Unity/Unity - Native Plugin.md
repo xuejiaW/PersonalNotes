@@ -103,7 +103,27 @@ public class UseRenderingPlugin : MonoBehaviour
 
 还可以通过如下的方法，在传递 `EventID` 的同时传递数据：
 ```csharp
-extern "C" UnityRenderingEventAndData GetRenderEventAndDataFunc() { return plugin.renderMgr->OnUnityRenderEventWithData; }
+extern "C" UnityRenderingEventAndData UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventAndDataFunc() { return OnUnityRenderEventWithData; }
+
+
+void OnUnityRenderEventWithData(int eventID, void *data)
+{
+    switch (eventID)
+    {
+        // ...
+    }
+}
+
+```
+
+对于传递数据的 RenderEvent 函数，必须通过 `CommandBuffer`：
+```csharp
+private CommandBuffer triggerEventCommand = new CommandBuffer();
+
+void 
+triggerEventCommand.Clear();
+triggerEventCommand.IssuePluginEventAndData(GetRenderEventAndDataFunc(), (int)eventType, data);
+UnityEngine.Graphics.ExecuteCommandBuffer(triggerEventCommand);
 
 ```
 
