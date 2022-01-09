@@ -47,6 +47,12 @@ public class App
 }
 ```
 
+# Truth About GCHandle
+
+GCHandle 是 Struct 类型，它其中包含了管理的对象的 Handle，因此保证了该对象无法被释放。 Handle 会被存储在一个 `Handle-Table` 中
+
+当
+
 # GCHandle Type
 
 当调用 `GCHandle.Alloc` 时可以设置 `GCHandleType`，默认类型为 `GCHandleType.Normal`。
@@ -66,17 +72,19 @@ public class App
 `Pinned` 的对象会比较明显的影响性能，因为 GC 时该对象无法移动，所以会造成较严重的内存碎片化。
 ```
 
-### AddrOfPinnedObject vs ToIntPtr
+## AddrOfPinnedObject vs ToIntPtr
 
 通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。
 
-`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 是将对象封装在一个 `Handle-Table` 中并返回表中的 Index，因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效[^3]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 
+`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 是将对象封装在一个 `Handle-Table` 中并返回表中的 Index，因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效[^3]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 重新转换为 `GCHandle`。
+
 
 
 # Reference
+
+ [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
 
 [^1]: [GCHandle - C# in a Nutshell [Book](oreilly.com) ](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
 [^2]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
 [^3]: [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
 
- [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
