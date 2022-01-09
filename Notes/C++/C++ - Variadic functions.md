@@ -53,7 +53,17 @@ void simple_printf(const char* fmt...)  // C-style "const char* fmt, ..." is als
 
 在 Macro 中，可以使用 `__VA_ARGS` 表示 `...`，如下代码：
 ```cpp
-#define debug(...) printf(__VA_ARGS__)
+#define Debug(...) printf(__VA_ARGS__)
+```
+
+对 Macro 的调用者，如下代码:
+```cpp
+Debug("Y = %d\n", y);
+```
+
+编译器会将其转换为如下代码：
+```cpp
+printf("Y = %d\n", y);
 ```
 
 
