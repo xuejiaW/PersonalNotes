@@ -71,7 +71,11 @@ void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventTyp
 
 # Plug-in callbacks on the rendering thread
 
-可以在 Native 中定义函数作为渲染线程的触发，该触发回调支持一个 `int` 形参作为需要执行的 `Event` 的 Index 值，如下所示：
+可以在 Native 中定义函数作为渲染线程的触发。
+
+## GetRenderEventFunc
+
+`GetRenderEventFunc` 触发回调支持一个 `int` 形参作为需要执行的 `Event` 的 Index 值，如下所示：
 ```csharp
 extern "C" UnityRenderingEvent UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventFunc()
 {
@@ -87,7 +91,7 @@ static void UNITY_INTERFACE_API OnRenderEvent(int eventID)
 }
 ```
 
-在 C# 中，可以通过 `GL.IssuePluginEvent` 触发 ：
+在 C# 中，可以通过 `GL.IssuePluginEvent` 或 `CommandBuffer.IssuePluginEvent` 触发 ：
 ```csharp
 public class UseRenderingPlugin : MonoBehaviour
 {
@@ -97,11 +101,18 @@ public class UseRenderingPlugin : MonoBehaviour
     void OnRenderObject()
     {
         GL.IssuePluginEvent(GetRenderEventFunc(), 1);
+
+        // Using Command Buffer
+        CommandBuffer triggerEventCommand = new CommandBuffer();
+        triggerEventCommand.IssuePluginEvent(GetRenderEventFunc(), 1);
+        UnityEngine.Graphics.ExecuteCommandBuffer(triggerEventCommand);
     }
 }
 ```
 
-还可以通过如下的方法，在传递 `EventID` 的同时传递数据：
+## 
+
+可以通过如下的方法，在传递 `EventID` 的同时传递数据：
 ```csharp
 extern "C" UnityRenderingEventAndData UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventAndDataFunc() { return OnUnityRenderEventWithData; }
 
@@ -120,11 +131,16 @@ void OnUnityRenderEventWithData(int eventID, void *data)
 ```csharp
 private CommandBuffer triggerEventCommand = new CommandBuffer();
 
-void 
-triggerEventCommand.Clear();
-triggerEventCommand.IssuePluginEventAndData(GetRenderEventAndDataFunc(), (int)eventType, data);
-UnityEngine.Graphics.ExecuteCommandBuffer(triggerEventCommand);
+public void IssueDataEvent(EventDataType eventType, IntPtr data)
+{
+    triggerEventCommand.Clear();
+    triggerEventCommand.IssuePluginEventAndData(GetRenderEventAndDataFunc(), (int)eventType, data);
+    UnityEngine.Graphics.ExecuteCommandBuffer(triggerEventCommand);
+}
+```
 
+```ad-note
+当 Unity 中开启了 multi-threading 后，Unity 会在多个不同线程中创建不同的 `GL Conntext`。因此
 ```
 
 # Reference
