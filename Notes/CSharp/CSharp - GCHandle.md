@@ -9,9 +9,9 @@ updated: 2022-01-09
 
 `GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。
 
-`GCHandle.Alloc` 函数返回一个 `GCHandle` 结构体且保证了托管内存中的对象不会被 GC 回收，直到对该对象调用 `GCHandle.Free`
+`GCHandle.Alloc(instance)` 函数为 `instance` 对象创建了 `GCHandle` 结构体且保证了 `instance` 对象不会被 GC 回收，直到对返回的 `GCHandle` 调用 `Free` 函数为止。
 
-如下实例代码所示：
+如下实例代码保证了 `TextWriter tw` 对象在调用 Native 函数 `EnumWindows` 函数时不会被意外释放：
 ```csharp
 public delegate bool CallBack(int handle, IntPtr param);
 
@@ -41,7 +41,6 @@ public class App
 }
 ```
 
-可以看到 Native 函数 `EnumWindows` 需要接纳一个 `IntPtr` 的形参。`TextWriter` 对象通过 `GCHandle.Alloc` 和  `GCHandle.ToIntPtr` 转换成了 `IntPtr` 并传递给了 Native 函数
 
 # Reference
 
