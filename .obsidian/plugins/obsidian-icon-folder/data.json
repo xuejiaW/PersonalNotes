@@ -1,10 +1,10 @@
 {
   "settings": {
     "enableRemixiconsLine": true,
-    "enableRemixiconsFill": false,
-    "enableFontawesomeFill": false,
-    "enableFontawesomeLine": false,
-    "enableFontawesomeBrands": false,
+    "enableRemixiconsFill": true,
+    "enableFontawesomeFill": true,
+    "enableFontawesomeLine": true,
+    "enableFontawesomeBrands": true,
     "fontSize": 16,
     "iconColor": null,
     "extraPadding": {
@@ -17,5 +17,8 @@
   "Notes": "RiBookMarkLine",
   "Boos": "RiBook3Line",
   "Tutorials": "RiTodoLine",
-  "TO-DO.md": "RiListOrdered"
+  "TO-DO.md": "RiListOrdered",
+  "Notes/Unity": "FaUnityBrands",
+  "Notes/Android": "RiAndroidLine",
+  "Notes/C++": "FaPlusFill"
 }

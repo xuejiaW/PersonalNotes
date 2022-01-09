@@ -413,6 +413,9 @@ exmap search obcommand editor:open-search
 nmap <Space>ff :search
 ```
 
+## Icon Folder [^16]
+
+该插件可以为文件和文件夹前添加 Icon。安装插件后，可以
 
 # Reference
 
@@ -431,3 +434,4 @@ nmap <Space>ff :search
 [^13]: [Obsidian-Pangu](https://github.com/Natumsol/obsidian-pangu)
 [^14]: [Obsidian-Word Splitting for Simplified Chinese in Edit Mode](https://github.com/aidenlx/cm-chs-patch)
 [^15]: [obsidian-vimrc-support (github.com)](https://github.com/esm7/obsidian-vimrc-support)
+[^16]: [FlorianWoelki/obsidian-icon-folder:](https://github.com/FlorianWoelki/obsidian-icon-folder)
