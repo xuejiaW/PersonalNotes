@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian - Tag.md",
-            "mode": "source",
+            "file": "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md"
+                "file": "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian - Tag.md",
+                "file": "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +153,7 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
+    "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md",
     "Notes/Obsidian/Obsidian - Tag.md",
     "Notes/C++/C++ - Variadic functions.md",
     "Notes/Android/Android - Logging.md",
@@ -161,7 +162,6 @@
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android/Android - EGL.md",
     "Notes/CSharp/CSharp - Blittable Type.md",
-    "Notes/CSharp/CSharp - Code Snippets.md",
-    "Notes/CSharp/CSharp - .Net Standard and Implementation.md"
+    "Notes/CSharp/CSharp - Code Snippets.md"
   ]
 }

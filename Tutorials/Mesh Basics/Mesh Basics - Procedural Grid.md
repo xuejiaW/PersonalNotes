@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2022-01-07
+updated: 2022-01-09
 cssclass: [table-border]
 tags:
     - Unity
@@ -20,7 +20,7 @@ Unity 场景内的每个物体本质上都是通过 `Mesh` 进行的渲染。
 ![|300](assets/Mesh%20Basics%20-%20Procedural%20Grid/01-uv-texture.png)
 
 # Creating a Grid of Vertices 
-可通过如下代码，生成一系列 Grid 的顶点，并利用 [Gizmo](../../Notes/Unity/Unity%20-%20Editor/Unity%20-%20Editor%20-%20Gizmo.md) 绘制：
+可通过如下代码，生成一系列 Grid 的顶点，并利用 [Gizmo](../../Notes/Unity/Unity%20-%20Editor/Unity%20-%20Gizmo.md) 绘制：
 ```csharp
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class Grid : MonoBehaviour
