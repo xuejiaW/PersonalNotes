@@ -5,6 +5,12 @@ created: 2022-01-09
 updated: 2022-01-09
 ---
 
+# Overview
+
+EGL 是 OpenGL ES 和 操作系统间的一个中间层，其只要包含 `Display`，`Surface`，`Context` 概念。
+
+## Display
+
 # EGL Context Shared
 
 EGL 的 Context 是线程相关的，因此在一个线程中创建的资源需要在另一个线程中使用就需要进行 `Context Share`。
