@@ -7,7 +7,13 @@ updated: 2022-01-09
 
 # Overview
 
-`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。因为对于托管内存的 GC 而言，它是bu
+`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。
+
+因为对于托管内存的 GC 而言，它是不知晓一个对象是否仍然被非托管程序使用的。因此如果一个对象从托管程序被传递给了非托管程序，当 GC 发生时该对象可能会被托管程序释放，导致非托管程序意外访问了空地址。
+
+```ad-note
+因为 GC 会挂起当前运行的托管程序，因此即使托管程序和非托管程序运作在同一线程中，上述问题仍可能发生。
+```
 
 `GCHandle.Alloc(instance)` 函数为 `instance` 对象创建了 `GCHandle` 结构体且保证了 `instance` 对象不会被 GC 回收，直到对返回的 `GCHandle` 调用 `Free` 函数为止。
 
@@ -41,9 +47,9 @@ public class App
 }
 ```
 
-```ad-note
-因为 GC 可能随时挂起 C# 中执行的代码，因此即使Native `EnumWindows` 函数和 C# 运行在同一线程上，如果没有 GCHandle 的存在，当
-```
+# GCHandle Type
+
+当调用 `GCHandle.Alloc` 时可以设置 `GCHandleType`，默认类型为 `GCHandleType.Normal`。
 
 # Reference
 
