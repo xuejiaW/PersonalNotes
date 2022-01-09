@@ -154,6 +154,7 @@
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
     "Notes/Android/Android - EGL.md",
+    "Notes/CSharp/CSharp - Blittable Type.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp - Code Snippets.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
@@ -161,7 +162,6 @@
     "Notes/Android.md",
     "Notes/Unity/Unity - UniRx.md",
     "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md",
-    "Notes/OpenGL/OpenGL - Projection Matrix.md",
-    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md"
+    "Notes/OpenGL/OpenGL - Projection Matrix.md"
   ]
 }

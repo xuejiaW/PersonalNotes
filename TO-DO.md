@@ -23,7 +23,7 @@ updated: 2022-01-09
     [Memory Management in Unity - Unity Learn](https://learn.unity.com/tutorial/memory-management-in-unity#)
     [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html)
 
-- [ ] EGL Context
+- [x] EGL Context
     [c++ - Deleting EGL Opengles 2.0 properly - Stack Overflow](https://stackoverflow.com/questions/29284904/deleting-egl-opengles-2-0-properly)
     [multithreading - egl - Can context be shared between threads - Stack Overflow](https://stackoverflow.com/questions/11726650/egl-can-context-be-shared-between-threads)
     [OpenGL ES calls across multiple threads - OpenGL - Khronos Forums](https://community.khronos.org/t/opengl-es-calls-across-multiple-threads/1107)

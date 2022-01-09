@@ -38,7 +38,15 @@ EGL 的 Context 是线程相关的，因此在一个线程中创建的资源需�
 
 3. 在 `Thread B` 中根据新的 Context 切换上下文：
     ```CPP
-    eglMakeCurrent(threadBDisplay, EGL_NO_SURFACE,EGL)
+    eglMakeCurrent(threadBDisplay, EGL_NO_SURFACE,EGL_NO_SURFACE, threadBContext);
     ```
 
+    ```ad-tip
+    如果在 `Thread B` 中不需要进行绘制和读取 Framebuffer 0 的操作，则将 Read/Write Surface 设为 EGL_NO_SURFACE 即可
+    ```
 
+EGL Context 的共享是双向的，当 `Thread A` 和 `Thread B` 共享后， `A` 中创建的资源 `B` 可以用，`B` 中创建的资源在 `A` 中也可以用。
+
+# Reference
+
+[multithreading - egl - Can context be shared between threads - Stack Overflow](https://stackoverflow.com/questions/11726650/egl-can-context-be-shared-between-threads)
