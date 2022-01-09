@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
+            "file": "Notes/Android/Android - EGL.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp-.Net Standard and Implementation.md"
+                "file": "Notes/Android/Android - EGL.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
+                "file": "Notes/Android/Android - EGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
+                "file": "Notes/Android/Android - EGL.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,15 +153,15 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
-    "Notes/CSharp/CSharp-.Net Standard and Implementation.md",
-    "TO-DO.md",
     "Notes/Android/Android - EGL.md",
+    "TO-DO.md",
+    "Notes/CSharp/CSharp - Code Snippets.md",
+    "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android.md",
     "Notes/Unity/Unity - UniRx.md",
     "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
-    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
-    "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md"
+    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md"
   ]
 }
