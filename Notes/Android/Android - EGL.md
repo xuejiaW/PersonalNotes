@@ -7,9 +7,16 @@ updated: 2022-01-09
 
 # Overview
 
-EGL 是 OpenGL ES 和 操作系统间的一个中间层，其只要包含 `Display`，`Surface`，`Context` 概念。
+EGL 是 OpenGL ES 和 操作系统间的一个中间层，其只要包含 `Display`，`Context`，`Surface` 概念。
 
 ## Display
+
+`Display` 用来连接操作系统的窗口系统。
+
+## Context
+
+`Context` 是一个容器，存储 OpenGLES 相关的数据，主要包括：
+- 
 
 # EGL Context Shared
 
