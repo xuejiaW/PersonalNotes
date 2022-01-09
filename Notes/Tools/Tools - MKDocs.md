@@ -101,7 +101,6 @@ theme: readthedocs
 该插件是 `PyMdown` 插件中的一部分，且 `PyMdown` 在安装 `MKDocs` 时已自动被安装了，因此仅需要开启 `Arthmatex` 插件即可。
 
 在 `mkdocs.yml` 的 `markdown_extensions` 中开启插件：
-
 ```yaml
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -109,7 +108,6 @@ markdown_extensions:
 ```
 
 该插件还依赖于额外的组件，在 `mkdocs.yml` 的 `extra_javascript` 中进行配置：
-
 ```yaml
 extra_javascript:
   - js/config.js
@@ -118,7 +116,6 @@ extra_javascript:
 ```
 
 其中 `js/config.js` 为本地文件，需要添加到 `docs_dir` 目录下，该文件中的内容如下：
-
 ```yaml
 window.MathJax = {
   tex: {
@@ -132,6 +129,10 @@ window.MathJax = {
     processHtmlClass: "arithmatex"
   }
 };
+```
+
+```ad-fail
+在 `extra_javascript` 中增加的本地文件，必须在 `docs_dir` 中。即无法通过类似于 `../../` 的方法访问外部的文件
 ```
 
 # Reference

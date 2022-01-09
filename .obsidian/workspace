@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Tools - MKDocs.md",
-            "mode": "preview",
+            "file": "Notes/Audio Localization.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Tools - MKDocs.md"
+                "file": "Notes/Audio Localization.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Tools - MKDocs.md",
+                "file": "Notes/Audio Localization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Tools - MKDocs.md",
+                "file": "Notes/Audio Localization.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,6 +160,7 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
+    "Notes/Audio Localization.md",
     "Notes/Tools/Tools - MKDocs.md",
     "TO-DO.md",
     "Notes/Unity/Unity - Native Plugin.md",
@@ -169,7 +169,6 @@
     "Notes/Tools/Tools - PlantUML - Class Diagram.md",
     "Notes/Tools/Tools - Pandoc.md",
     "Notes/PlantUML/PlantUML.md",
-    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-    "Notes/Unity/Unity - Editor/Unity - Immediate Mode GUI.md"
+    "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
   ]
 }
