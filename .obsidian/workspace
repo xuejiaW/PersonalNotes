@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
-            "mode": "source",
+            "file": "Notes/Android/Android - Logging.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/Android/Android - Logging.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Android/Android - Logging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/Android/Android - Logging.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,8 +152,8 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
-    "TO-DO.md",
     "Notes/Android/Android - Logging.md",
+    "TO-DO.md",
     "Notes/Android/Android - EGL.md",
     "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - Code Snippets.md",
