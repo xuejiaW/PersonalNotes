@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android/Android - Logging.md",
+            "file": "Notes/C++/C++ - Variadic functions.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android/Android - Logging.md"
+                "file": "Notes/C++/C++ - Variadic functions.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android/Android - Logging.md",
+                "file": "Notes/C++/C++ - Variadic functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android/Android - Logging.md",
+                "file": "Notes/C++/C++ - Variadic functions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,6 +152,7 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
+    "Notes/C++/C++ - Variadic functions.md",
     "Notes/Android/Android - Logging.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android/Android - EGL.md",
@@ -160,7 +161,6 @@
     "Notes/CSharp/CSharp - Code Snippets.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
     "Notes/Android.md",
-    "Notes/Unity/Unity - UniRx.md",
-    "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md"
+    "Notes/Unity/Unity - UniRx.md"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Android - Logging",
+  "attachmentFolderPath": "./assets/C++ - Variadic functions",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
