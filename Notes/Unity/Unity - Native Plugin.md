@@ -25,14 +25,16 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API  UnityPluginUnload();
 可以通过 `IUnityInterfaces` 和 `RegisterDeviceEventCallback` 注册 Unity 图形系统的回调：
 
 ```cpp
-UnityRendererPlugin unityRendererPlugin;
+
+IUnityGraphics *graphics
+UnityGfxRenderer renderer;
 
 extern "C"
 {
     void UNITY_INTERFACE_API UNITY_INTERFACE_API UnityPluginLoad(IUnityInterfaces* unityInterfaces)
     {
-        unityRendererPlugin.graphics = unityInterfaces->Get<IUnityGraphics>();
-        unityRendererPlugin.graphics->RegisterDeviceEventCallback([](UnityGfxDeviceEventType eventType){ unityRendererPlugin.OnGraphicsDeviceEvent(eventType); });
+        graphics = unityInterfaces->Get<IUnityGraphics>();
+        graphics->RegisterDeviceEventCallback([](UnityGfxDeviceEventType eventType){ unityRendererPlugin.OnGraphicsDeviceEvent(eventType); });
     }
 }
 
@@ -63,6 +65,9 @@ void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventTyp
 `OnGraphicsDeviceEvent` 还会传递 `kUnityGfxDeviceEventBeforeReset` 和 `kUnityGfxDeviceEventAfterReset` 事件。但该两个事件仅会在 `Direct 9` 中被触发。
 ```
 
+在 `kUnityGfxDeviceEventInitialize` 的事件回调中，可以通过 `IUnityGraphics::GetRenderer` 获取 `UnityGfxRenderer`，该类型表示渲染使用的 API 类型。
+
+需要注意的是当 `kUnityGfxDeviceEventInitialize` 被触发时，很可能图形 API 尚未被初始完毕，此时得到的 `UnityGfxRenderer` 类型为 `UnityGfxRenderer::kUnityGfxRendererNull`
 
 # Reference
 
