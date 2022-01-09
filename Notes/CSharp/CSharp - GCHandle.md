@@ -62,15 +62,21 @@ public class App
 
 其中 `Normal` 和 `Pinned` 都保证了对象不会被 GC 释放，但 `Pinnned` 可以保证对象在 GC 时也不会被移动，而  `Normal` 不行。
 
-通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。返回的是对象的绝对地址，后者是将对象封装在一个 Table 中并返回表中的 Index。
+```ad-note
+`Pinned` 的对象会比较明显的影响性能，因为 GC 时该对象无法移动，所以会造成较严重的内存碎片化。
+```
 
-因此 `Pinned` 的对象可以通过 `GCHandle.AddrOfPinnedObject` 函数返回，而 `Normal` 仅能通过 `To`
+### AddrOfPinnedObject vs ToIntPtr
+
+通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。
+
+`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 是将对象封装在一个 `Handle-Table` 中并返回表中的 Index，因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效[^3]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 
+
 
 # Reference
 
 [^1]: [GCHandle - C# in a Nutshell [Book](oreilly.com) ](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
 [^2]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
-
- [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
+[^3]: [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
 
  [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
