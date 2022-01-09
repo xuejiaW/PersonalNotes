@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSharp - GCHandle",
+  "attachmentFolderPath": "./assets/CSharp - Blittable Type",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
