@@ -67,7 +67,22 @@ void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventTyp
 
 在 `kUnityGfxDeviceEventInitialize` 的事件回调中，可以通过 `IUnityGraphics::GetRenderer` 获取 `UnityGfxRenderer`，该类型表示渲染使用的 API 类型。
 
-需要注意的是当 `kUnityGfxDeviceEventInitialize` 被触发时，很可能图形 API 尚未被初始完毕，此时得到的 `UnityGfxRenderer` 类型为 `UnityGfxRenderer::kUnityGfxRendererNull`
+需要注意的是当 `kUnityGfxDeviceEventInitialize` 被触发时，很可能图形 API 尚未被初始完毕，此时得到的 `UnityGfxRenderer` 类型为 `UnityGfxRenderer::kUnityGfxRendererNull`。
+
+# Plug-in callbacks on the rendering thread
+
+可以在 Native 中定义函数作为渲染线程的触发，如下所示：
+```csharp
+extern "C" UnityRenderingEvent UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventFunc()
+{
+    return OnRenderEvent;
+}
+
+static void UNITY_INTERFACE_API OnRenderEvent(int eventID);
+```
+
+在 C# 中，可以通过 `GL.IssuePluginEvent` 触发 ：
+``````
 
 # Reference
 
