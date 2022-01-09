@@ -14,14 +14,16 @@ tags:
 __android_log_print(int prio, const char *tag, const char *fmt, ...)
 ```
 
-第一个形参表示 Log 的优先级，第二个形参表示输出 Log 时的 Tag。如有以下的 Log 输出：
+第一个形参表示 Log 的优先级，第二个形参表示输出 Log 时的 Tag。
+
+如有以下的 Log 输出：
 ```text
 01-09 08:55:39.127  5626  5651 I Unity   : fps is 91 90
 ```
 
 其中 `I` 表示该 Log 的优先级为 `ANDROID_LOG_INFO`，`Unity` 即为设定的 Tag。
 
-后两个形参表示输出的内容，`fmt` 表示格式化的 string，`...` 为不定形参为需要被格式化的数据，如语句：
+后两个形参表示输出的内容，`fmt` 表示格式化的 string，`...` 为 [Variadic Parameters](../C++/C++%20-%20Variadic%20functions.md#Variadic%20Parameters) 为需要被格式化的数据，如语句：
 ```cpp
 __android_log_print(ANDROID_LOG_ERROR, "TexMgr", "fps is %d %d", 91, 90);
 ```
@@ -31,7 +33,6 @@ __android_log_print(ANDROID_LOG_ERROR, "TexMgr", "fps is %d %d", 91, 90);
 # Macro 封装
 
 可使用 `Macro` 简化 Log 的输出，如下：
-
 ```cpp
 #define LOG_TAG "TexMgr"
 #define LOGD(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
@@ -44,7 +45,15 @@ LOGD("Called %s", __FUNCTION__);
 
 # 函数封装
 
-对于上述
+如果要将 android log 通过函数封装，则不能使用 `__android_log_print` 而需要使用 `__android_log_vprint`。 `__android_log_vprint` 的原型如下所示：
+```cpp
+__android_log_vprint(int prio, const char *tag, const char *fmt, va_list ap)
+```
+
+其与 `__android_log_print` 的差别在于最后一个形参从 `...` 变为了 `va_list`。
+
+封装函数的实例如下所示：
+
 
 # Reference
 [Logging  |  Android NDK  |  Android Developers](https://developer.android.com/ndk/reference/group/logging)

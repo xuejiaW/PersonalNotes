@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/C++/C++ - Variadic functions.md",
+            "file": "Notes/Android/Android - Logging.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/C++/C++ - Variadic functions.md"
+                "file": "Notes/Android/Android - Logging.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/C++/C++ - Variadic functions.md",
+                "file": "Notes/Android/Android - Logging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/C++/C++ - Variadic functions.md",
+                "file": "Notes/Android/Android - Logging.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,9 +153,9 @@
   },
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
+    "Notes/Android/Android - Logging.md",
     "Notes/C++/C++ - Variadic functions.md",
     "Notes/C++/C++ - Template Class.md",
-    "Notes/Android/Android - Logging.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android/Android - EGL.md",
     "TO-DO.md",
