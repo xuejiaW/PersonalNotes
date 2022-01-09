@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp - GCHandle.md",
-            "mode": "preview",
+            "file": "Notes/CSharp/CSharp - Blittable Type.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp - GCHandle.md"
+                "file": "Notes/CSharp/CSharp - Blittable Type.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp - GCHandle.md",
+                "file": "Notes/CSharp/CSharp - Blittable Type.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp - GCHandle.md",
+                "file": "Notes/CSharp/CSharp - Blittable Type.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,6 +152,7 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - GCHandle.md",
     "TO-DO.md",
     "Notes/CSharp/CSharp - nameof Expression.md",
@@ -161,7 +161,6 @@
     "Notes/VSCode/VSCode - Cpp.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Notes/VSCode/VSCode - GLSL.md",
-    "Notes/VSCode/VSCode - Settings.md",
-    "Notes/VSCode/VSCode - Extensions.md"
+    "Notes/VSCode/VSCode - Settings.md"
   ]
 }

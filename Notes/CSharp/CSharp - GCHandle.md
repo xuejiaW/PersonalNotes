@@ -59,10 +59,9 @@ GCHandle gch = GCHandle.Alloc(obj, GCHandleType.Normal);
 GCHandle gch2 = gch;
 ```
 
-GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会被拷贝。此时两个 GCHandle 中的 Handle 会指向同一个 entry。
+GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会被拷贝。
 
-所以当上例中的 `gch2` 调用了 `free` 函数，`gch` 管理的对象同样也被 `free` 了。如果再次为 `gch` 调用 `free` 则会产生 `double-free` 的错误。
-
+上例中两个 GCHandle 中的 Handle 会指向同一个 entry。所以当上例中的 `gch2` 调用了 `free` 函数，`gch` 管理的对象同样也被 `free` 了。如果再次为 `gch` 调用 `free` 则会产生 `double-free` 的错误。
 
 # GCHandle Type
 
@@ -83,13 +82,16 @@ GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会�
 `Pinned` 的对象会比较明显的影响性能，因为 GC 时该对象无法移动，所以会造成较严重的内存碎片化。
 ```
 
+
 ## AddrOfPinnedObject vs ToIntPtr
 
-通过`Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。
+通过 `Pinned` 和 `Normal` 类型分配的 GCHandle 可以分别通过 `AddrOfPinnedObject` 和 `ToIntPtr` 返回 `IntPtr` 指针。
 
-`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 则是返回 `Handle-Table` 中的 entry。因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效，仍然可以通过该 `Intptr` 找到原来的对象[^4]。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 重新转换为 `GCHandle`。
+`AddrOfPinnedObject` 返回的是对象的绝对地址。 `ToIntPtr` 则是返回 `Handle-Table` 中的 entry。`ToIntPtr` 返回的 `IntPtr` 可以通过 `FromIntPtr` 重新转换为 `GCHandle`
 
+因此即使 Normal 的对象被移动了，返回的 `IntPtr` 也不会失效，仍然可以通过该 `Intptr` 找到原来的对象[^4]。
 
+也因此只有通过 `AddrOfPinnedObject` 返回的 `IntPtr` 可以被非托管内存解析。
 
 # Reference
 
@@ -99,4 +101,3 @@ GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会�
 [^2]: [The Truth About GCHandles | Microsoft Docs](https://docs.microsoft.com/en-us/archive/blogs/clyon/the-truth-about-gchandles)
 [^3]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
 [^4]: [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
-
