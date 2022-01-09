@@ -59,11 +59,15 @@ void UnityRendererPlugin::OnGraphicsDeviceEvent(UnityGfxDeviceEventType eventTyp
 
 ```
 
+## UnityGfxDeviceEventType
+
 在被注册的回调函数中，会传递一系列 `eventType`，主要需要监听 `kUnityGfxDeviceEventInitialize` 和 `kUnityGfxDeviceEventShutdown` 事件。
 
 ```ad-note
 `OnGraphicsDeviceEvent` 还会传递 `kUnityGfxDeviceEventBeforeReset` 和 `kUnityGfxDeviceEventAfterReset` 事件。但该两个事件仅会在 `Direct 9` 中被触发。
 ```
+
+## UnityGfxRenderer
 
 在 `kUnityGfxDeviceEventInitialize` 的事件回调中，可以通过 `IUnityGraphics::GetRenderer` 获取 `UnityGfxRenderer`，该类型表示渲染使用的 API 类型。
 
@@ -110,9 +114,9 @@ public class UseRenderingPlugin : MonoBehaviour
 }
 ```
 
-## 
+## GetRenderEventAndDataFunc
 
-可以通过如下的方法，在传递 `EventID` 的同时传递数据：
+可以通过 `GetRenderEventAndDataFunc` 函数在传递 `EventID` 的同时传递数据：
 ```csharp
 extern "C" UnityRenderingEventAndData UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API GetRenderEventAndDataFunc() { return OnUnityRenderEventWithData; }
 
@@ -140,7 +144,9 @@ public void IssueDataEvent(EventDataType eventType, IntPtr data)
 ```
 
 ```ad-note
-当 Unity 中开启了 multi-threading 后，Unity 会在多个不同线程中创建不同的 `GL Conntext`。因此
+当 Unity 中开启了 multi-threading 后，Unity 会在多个不同线程中创建不同的 `GL Conntext`。
+
+因此 `OnGraphicsDeviceEvent` 和 `OnRenderEvent` 可能在不同线程被调用
 ```
 
 # Reference
