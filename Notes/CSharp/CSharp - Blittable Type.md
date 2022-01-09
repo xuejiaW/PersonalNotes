@@ -24,7 +24,9 @@ updated: 2022-01-09
     -   [System.Single](https://docs.microsoft.com/en-us/dotnet/api/system.single)
     -   [System.Double](https://docs.microsoft.com/en-us/dotnet/api/system.double)
 - 由上述类型构成的一维数组
-- 由上两种类型构成的值类型
+- 由第一种构成的值类型
+
+如果一个
 
 # Reference
 
