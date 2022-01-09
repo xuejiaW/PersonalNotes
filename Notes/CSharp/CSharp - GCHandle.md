@@ -7,7 +7,7 @@ updated: 2022-01-09
 
 # Overview
 
-`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中。
+`GCHandle` 是用在需要将托管（Managed）内存中的对象传递给非托管（UnManaged）内存时使用的，如需要将一个对象从 C# 中传递到 C++ 中[^1]。
 
 因为对于托管内存的 GC 而言，它是不知晓一个对象是否仍然被非托管程序使用的。因此如果一个对象从托管程序被传递给了非托管程序，当 GC 发生时该对象可能会被托管程序释放，导致非托管程序意外访问了空地址。
 
@@ -51,10 +51,20 @@ public class App
 
 当调用 `GCHandle.Alloc` 时可以设置 `GCHandleType`，默认类型为 `GCHandleType.Normal`。
 
+所有的 `GCHandleType` 类型[^2]如下：
+
+| 字段   | 说明                                                                                                                                                                                                                |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Normal | 此句柄类型表示不透明句柄，这意味着无法通过此句柄解析固定对象的地址。 可以使用此类型跟踪对象，并防止它被垃圾回收器回收。<br>当非托管客户端持有对托管对象的唯一引用（从垃圾回收器检测不到该引用）时，此枚举成员很有用。 |
+| Pinned |                                                                                                                                                                                                                     |
+
+
 # Reference
+
+[^1]: [GCHandle - C# in a Nutshell [Book] (oreilly.com)](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
+[^2]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
 
 [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
 
 [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
 
-[GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
