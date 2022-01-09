@@ -51,7 +51,9 @@ void simple_printf(const char* fmt...)  // C-style "const char* fmt, ..." is als
 该功能在 C99 编译器标准中定义
 ```
 
-在 Macro 中，可以使用 `__VA_ARGS` 表示 `...`，如下代码：
+## __VA_ARGS
+
+在 Macro 中，可以使用 `__VA_ARGS` 替代 `...`，如下代码：
 ```cpp
 #define Debug(...) printf(__VA_ARGS__)
 ```
@@ -66,6 +68,12 @@ Debug("Y = %d\n", y);
 printf("Y = %d\n", y);
 ```
 
+
+## ##__VA_ARGS
+
+ `__VA_ARGS` 在如下使用方法中，当参数的个数为 0 时会产生错误：
+ ```cpp
+ ```
 
 # Referecne
 
