@@ -72,8 +72,24 @@ printf("Y = %d\n", y);
 ## ##__VA_ARGS
 
  `__VA_ARGS` 在如下使用方法中，当参数的个数为 0 时会产生错误：
+ 
  ```cpp
+#define Debug(fmt, ...)     printf(fmt, __VA_ARGS__)
  ```
+
+ 如果调用者代码如下所示：
+ ```cpp
+Debug("Y ABC");
+ ```
+
+ 即实际上 `...` 没有任何的表示，编译器会将上述调用转换为：
+ ```cpp
+printf(fmt,);
+ ```
+
+可以看到存在一个多余的 `,`，该 `,` 会造成编译错误。
+
+为了解决这个问题，需要使用 `##__VA_ARGS` 
 
 # Referecne
 
