@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/Tools/Tools - MKDocs.md",
-            "mode": "source",
+            "mode": "preview",
             "source": true
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -100,6 +101,14 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
               }
+            }
+          },
+          {
+            "id": "3e5be8bbf98a0b2a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ]

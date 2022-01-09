@@ -90,5 +90,50 @@ nav:
 theme: readthedocs
 ```
 
-![](assets/Tools%20-%20MKDocs/image-20220109164936100.png)
+![|500](assets/Tools%20-%20MKDocs/image-20220109164936100.png)
 
+# 插件
+
+## Arithmatex
+
+若需要让 `MKDocs` 支持 `MathJax` ，则需要 `Arithmatex` 插件的支持。
+
+该插件是 `PyMdown` 插件中的一部分，且 `PyMdown` 在安装 `MKDocs` 时已自动被安装了，因此仅需要开启 `Arthmatex` 插件即可。
+
+在 `mkdocs.yml` 的 `markdown_extensions` 中开启插件：
+
+```yaml
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+```
+
+该插件还依赖于额外的组件，在 `mkdocs.yml` 的 `extra_javascript` 中进行配置：
+
+```yaml
+extra_javascript:
+  - js/config.js
+  - <https://polyfill.io/v3/polyfill.min.js?features=es6>
+  - <https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js>
+```
+
+其中 `js/config.js` 为本地文件，需要添加到 `docs_dir` 目录下，该文件中的内容如下：
+
+```yaml
+window.MathJax = {
+  tex: {
+    inlineMath: [["\\\\(", "\\\\)"]],
+    displayMath: [["\\\\[", "\\\\]"]],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
+  }
+};
+```
+
+# Reference
+
+[MkDocs](https://www.mkdocs.org/)
