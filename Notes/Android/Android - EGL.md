@@ -29,7 +29,9 @@ Surface 用来存储 OpenGL ES 相关的输出数据，其中包含 `Color Buffe
 EGL 的 Context 是线程相关的，因此在一个线程中创建的资源需要在另一个线程中使用就需要进行 `Context Share`。
 
 ```ad-note
-Context Shared 仅能共享 Context 中状态信息，命令缓冲无法被共享，也因此在
+Context Shared 仅能共享 Context 中状态信息，命令缓冲无法被共享。
+
+因此使用共享 Context 的线程中操作完成后需要推荐调用 `glflush` 操作。
 ```
 
 如有 `Thread A` 和 `Thread B` 两个线程，`Thread A` 为已经创建了的 EGL Context 的线程，需要将 EGL Context 共享给 `Thread B`，过程如下：
