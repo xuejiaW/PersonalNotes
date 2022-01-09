@@ -49,9 +49,14 @@ public class App
 
 # Truth About GCHandle
 
-GCHandle 是 Struct 类型，它其中包含了管理的对象的 Handle，因此保证了该对象无法被释放。 Handle 会被存储在一个 `Handle-Table` 中
+当为一个对象分配 GCHandle 时，会在 `Handle-Table` 中为该对象创建让一个 `entry`，GCHandle 中会存储该 `entry` 的 Handle。
 
-当
+GCHandle 的原理会造成 GCHandle 的拷贝可能会引发错误的释放，如下代码所示：
+```csharp
+
+```
+GCHandle 是 struct，因此当 GCHandle 拷贝后，其中的 Handle 同样会被拷贝。此时两个 GCHandle 中的 Handle 会指向同一个 entry。
+
 
 # GCHandle Type
 
@@ -85,6 +90,7 @@ GCHandle 是 Struct 类型，它其中包含了管理的对象的 Handle，因�
  [GCHandle Struct (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandle?view=net-6.0)
 
 [^1]: [GCHandle - C# in a Nutshell [Book](oreilly.com) ](https://www.oreilly.com/library/view/c-in-a/0596001819/re525.html)
-[^2]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
-[^3]: [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
+[^2]: [The Truth About GCHandles | Microsoft Docs](https://docs.microsoft.com/en-us/archive/blogs/clyon/the-truth-about-gchandles)
+[^3]: [GCHandleType Enum (System.Runtime.InteropServices) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.gchandletype?view=net-6.0)
+[^4]: [GCHandle.ToIntPtr vs. GCHandle.AddrOfPinnedObject | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/jmstall/gchandle-tointptr-vs-gchandle-addrofpinnedobject)
 
