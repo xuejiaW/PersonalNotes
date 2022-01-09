@@ -1,6 +1,8 @@
 ---
 tags:
     - Documentation
+created: 2022-01-09
+updated: 2022-01-09
 ---
 
 # Overview
@@ -84,3 +86,9 @@ nav:
 ### 修改样式
 
 可以通过 `mkdocs.yml` 中的 `theme` 字段设置文档样式：
+```yaml
+theme: readthedocs
+```
+
+![](assets/Tools%20-%20MKDocs/image-20220109164936100.png)
+
