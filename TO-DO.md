@@ -5,8 +5,6 @@ updated: 2022-01-09
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
 - [ ] Unity 内存泄露，如 Mesh，Texture 等。
-- [ ]  __VA_ARGS__ 和 ##__VA_ARGS__ 的区别
-- [ ]   __android_log_vprint 和 __android_log_print 区别
 - [ ]   Simple Json 笔记
  [Unity JSON performance comparison (LitJson, NewtonsoftJson, SimpleJSON) - Programmer Sought](https://programmersought.com/article/96576253892/)
 - [ ] C# IEqualityComparer / IEquatable

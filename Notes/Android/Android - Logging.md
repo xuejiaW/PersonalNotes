@@ -53,7 +53,15 @@ __android_log_vprint(int prio, const char *tag, const char *fmt, va_list ap)
 其与 `__android_log_print` 的差别在于最后一个形参从 `...` 变为了 `va_list`。
 
 封装函数的实例如下所示：
-
+```cpp
+void YVRLog::StdInfo(const char *format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    __android_log_vprint(priority, tag, format, args);
+    va_end(args);
+}
+```
 
 # Reference
-[Logging  |  Android NDK  |  Android Developers](https://developer.android.com/ndk/reference/group/logging)
+ [Logging  |  Android NDK  |  Android Developers](https://developer.android.com/ndk/reference/group/logging)
