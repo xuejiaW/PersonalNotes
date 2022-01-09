@@ -153,12 +153,12 @@
   "active": "cdf93f43cd75e76c",
   "lastOpenFiles": [
     "Notes/Android/Android - Logging.md",
-    "TO-DO.md",
+    "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android/Android - EGL.md",
+    "TO-DO.md",
     "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - Code Snippets.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
-    "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Android.md",
     "Notes/Unity/Unity - UniRx.md",
     "Notes/Computer Graphics/Computer Graphics - Triangle Rasterization Rules.md"

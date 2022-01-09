@@ -1,8 +1,9 @@
 ---
 created: 2022-01-09
 updated: 2022-01-09
+tags:
+    - Android
 ---
-# Overview
 
 在使用 NDK 的 Android Native 开发中，可使用 `__android_log_print` 进行 Log 输出。
 
@@ -27,10 +28,23 @@ __android_log_print(ANDROID_LOG_ERROR, "TexMgr", "fps is %d %d", 91, 90);
 
 其中 `fps is %d %d` 即为 `fmd`，后续的 `91` 和 `90` 即为不定形参。
 
-# Macro
+# Macro 封装
 
+可使用 `Macro` 简化 Log 的输出，如下：
 
+```cpp
+#define LOG_TAG "TexMgr"
+#define LOGD(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+```
 
+对于外部调用者而言，直接使用 `LOGD` 即可，如：
+```cpp
+LOGD("Called %s", __FUNCTION__);
+```
+
+# 函数封装
+
+对于上述
 
 # Reference
 [Logging  |  Android NDK  |  Android Developers](https://developer.android.com/ndk/reference/group/logging)
