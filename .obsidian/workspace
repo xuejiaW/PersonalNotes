@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
+            "file": "Notes/CSharp/CSharp - GCHandle.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md"
+                "file": "Notes/CSharp/CSharp - GCHandle.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
+                "file": "Notes/CSharp/CSharp - GCHandle.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
+                "file": "Notes/CSharp/CSharp - GCHandle.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -152,13 +152,13 @@
   },
   "active": "29f2e3370b88d31f",
   "lastOpenFiles": [
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md",
-    "Notes/CSharp/CSharp - Blittable Type.md",
     "Notes/CSharp/CSharp - GCHandle.md",
+    "Notes/CSharp/CSharp - nameof Expression.md",
+    "Notes/CSharp/CSharp - Partial Classes And Methods.md",
     "TO-DO.md",
-    "Notes/Unity/Unity - Material Property Blocks.md",
-    "Notes/OpenGL/OpenGL - Projection Matrix.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "Notes/VSCode/VSCode - Cpp.md",
+    "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Notes/VSCode/VSCode - GLSL.md",
     "Notes/VSCode/VSCode - Settings.md",
     "Notes/VSCode/VSCode - Extensions.md"
