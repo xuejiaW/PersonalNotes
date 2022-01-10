@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/CSharp - Properties.md",
+            "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
             "mode": "preview",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/CSharp - Properties.md"
+                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/CSharp - Properties.md",
+                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/CSharp - Properties.md",
+                "file": "Notes/Tools/Tools - PlantUML - Class Diagram.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "25bbd5243770ce30",
   "lastOpenFiles": [
+    "Notes/Tools/Tools - PlantUML - Class Diagram.md",
     "Notes/CSharp/CSharp - Properties.md",
     "Notes/Obsidian/Obsidian.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
@@ -168,7 +169,6 @@
     "Notes/Tools/Tools - MKDocs.md",
     "TO-DO.md",
     "Notes/Unity/Unity - Native Plugin.md",
-    "Notes/Android/Android - EGL.md",
-    "Notes/Obsidian/Obsidian - Plugins.md"
+    "Notes/Android/Android - EGL.md"
   ]
 }
