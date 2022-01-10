@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c3b43d818f166ccc",
+        "id": "25bbd5243770ce30",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Virtual Reality/VR - Lens Distortion.md",
+            "file": "Notes/Obsidian/Obsidian.md",
             "mode": "source",
             "source": true
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Lens Distortion.md"
+                "file": "Notes/Obsidian/Obsidian.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Lens Distortion.md",
+                "file": "Notes/Obsidian/Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,9 +102,16 @@
                 "unlinkedCollapsed": false
               }
             }
+          },
+          {
+            "id": "3e5be8bbf98a0b2a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -117,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Lens Distortion.md",
+                "file": "Notes/Obsidian/Obsidian.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +147,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.469948523980995,
+                  "scale": 0.7478537827650195,
                   "close": false
                 }
               }
@@ -152,17 +159,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "c3b43d818f166ccc",
+  "active": "25bbd5243770ce30",
   "lastOpenFiles": [
-    "Notes/Virtual Reality/VR - Lens Distortion.md",
-    "Notes/Virtual Reality/assets/VR - Lens Distortion/Untitled 3 1.png",
+    "Notes/Obsidian/Obsidian.md",
+    "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Virtual Reality/VR - Audio Localization.md",
-    "Notes/CSharp/CSharp - GCHandle.md",
-    "TO-DO (DESKTOP-9KPUHB6's conflicted copy 2022-01-10).md",
+    "Notes/Tools/Tools - MKDocs.md",
     "TO-DO.md",
-    "Notes/CSharp/CSharp - GCHandle (DESKTOP-9KPUHB6's conflicted copy 2022-01-10).md",
-    "Notes/CSharp/CSharp - Blittable Type.md",
-    "Notes/CSharp/CSharp - Blittable Type (DESKTOP-9KPUHB6's conflicted copy 2022-01-10).md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Scirpting Architecture - IL2CPP.md"
+    "Notes/Unity/Unity - Native Plugin.md",
+    "Notes/Android/Android - EGL.md",
+    "Notes/Obsidian/Obsidian - Plugins.md",
+    "Notes/Tools/Tools - PlantUML - Class Diagram.md"
   ]
 }
