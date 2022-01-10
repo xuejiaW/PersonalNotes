@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Obsidian.md",
-            "mode": "source",
+            "file": "Notes/CSharp/CSharp - Properties.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419,
-    "collapsed": true
+    "width": 419
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Obsidian.md"
+                "file": "Notes/CSharp/CSharp - Properties.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Obsidian.md",
+                "file": "Notes/CSharp/CSharp - Properties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Obsidian.md",
+                "file": "Notes/CSharp/CSharp - Properties.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,6 +160,7 @@
   },
   "active": "25bbd5243770ce30",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - Properties.md",
     "Notes/Obsidian/Obsidian.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
@@ -169,7 +169,6 @@
     "TO-DO.md",
     "Notes/Unity/Unity - Native Plugin.md",
     "Notes/Android/Android - EGL.md",
-    "Notes/Obsidian/Obsidian - Plugins.md",
-    "Notes/Tools/Tools - PlantUML - Class Diagram.md"
+    "Notes/Obsidian/Obsidian - Plugins.md"
   ]
 }
