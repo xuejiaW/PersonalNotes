@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2022-01-08
-updated: 2022-01-11
+updated: 2022-01-12
 ---
 
 # Blittable Type

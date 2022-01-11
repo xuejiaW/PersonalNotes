@@ -3,7 +3,7 @@ Alias: FFR
 tags:
     - Virtual-Reality
 created: 2022-01-09
-updated: 2022-01-11
+updated: 2022-01-12
 ---
 
 # 像素密度问题
