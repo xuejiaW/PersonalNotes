@@ -4,7 +4,7 @@ tags:
     - Computer-Graphics
 cssclass: [table-border]
 created: 2021-12-13
-updated: 2022-01-10
+updated: 2022-01-11
 ---
 
 # Perspective Projection
