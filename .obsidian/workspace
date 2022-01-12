@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "25bbd5243770ce30",
+        "id": "d92402f6958f7710",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
-            "mode": "source",
+            "mode": "preview",
             "source": true
           }
         }
@@ -158,9 +158,10 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "25bbd5243770ce30",
+  "active": "d92402f6958f7710",
   "lastOpenFiles": [
     "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping (DESKTOP-9KPUHB6's conflicted copy 2022-01-12).md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - CSharp.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - .Net Profile Support.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - IL2CPP.md",
@@ -168,7 +169,6 @@
     "Notes/Virtual Reality/VR - Single Pass Steoro Rendering.md",
     "TO-DO.md",
     "Notes/Android/Android - Android Debug Bridge.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md",
-    "Notes/Tools/Tools - PlantUML - Class Diagram.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md"
   ]
 }
