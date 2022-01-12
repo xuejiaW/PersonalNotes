@@ -16,5 +16,10 @@ updated: 2022-01-12
     - Unity 内存泄露，如 Mesh，Texture 等
     [Memory Management in Unity - Unity Learn](https://learn.unity.com/tutorial/memory-management-in-unity#)
     [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html)
+    
 - [ ] Uniform Layout
     [Uniform (GLSL)/Explicit Uniform Location - OpenGL Wiki (khronos.org)](https://www.khronos.org/opengl/wiki/Uniform_(GLSL)/Explicit_Uniform_Location) 
+
+- [ ] Managed code stripping
+    [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
+    [不要忽视Managed code stripping的副作用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/96651807)
