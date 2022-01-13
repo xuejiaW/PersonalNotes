@@ -2,7 +2,7 @@
 tags:
     Computer-Graphics
 created: 2021-12-30
-updated: 2022-01-13
+updated: 2022-01-14
 ---
 
 # Triangle Rasterization Rules
