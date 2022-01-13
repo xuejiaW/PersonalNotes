@@ -23,3 +23,5 @@ updated: 2022-01-13
 - [ ] Managed code stripping
     [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
     [不要忽视Managed code stripping的副作用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/96651807)
+
+- [ ] C++ wait
