@@ -20,6 +20,9 @@ updated: 2022-01-14
 - [ ] Uniform Layout
     [Uniform (GLSL)/Explicit Uniform Location - OpenGL Wiki (khronos.org)](https://www.khronos.org/opengl/wiki/Uniform_(GLSL)/Explicit_Uniform_Location) 
 
+    获取 Activie Uniform 数量不对的问题
+    [java - glGetProgramiv returns a lower number of active uniforms, why? - Stack Overflow](https://stackoverflow.com/questions/29018766/glgetprogramiv-returns-a-lower-number-of-active-uniforms-why)
+
 - [ ] Managed code stripping
     [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
     [不要忽视Managed code stripping的副作用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/96651807)
