@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GL_TEXTURE_MIN_FILTER",
+                "query": "alu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
