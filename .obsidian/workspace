@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+            "file": "Notes/Unity/Unit - Mipmap Bias.md",
             "mode": "source",
             "source": true
           }
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md"
+                "file": "Notes/Unity/Unit - Mipmap Bias.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "Notes/Unity/Unit - Mipmap Bias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
+                "file": "Notes/Unity/Unit - Mipmap Bias.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -172,6 +172,7 @@
   },
   "active": "d92402f6958f7710",
   "lastOpenFiles": [
+    "Notes/Unity/Unit - Mipmap Bias.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md",
@@ -180,7 +181,6 @@
     "Notes/C++/C++ - Mutex.md",
     "Notes/OpenGL/OpenGL - Uniform Layout.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping (DESKTOP-9KPUHB6's conflicted copy 2022-01-12).md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - CSharp.md"
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping (DESKTOP-9KPUHB6's conflicted copy 2022-01-12).md"
   ]
 }
