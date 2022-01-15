@@ -11,13 +11,23 @@ updated: 2022-01-15
 如下为使用了 `SSAO` 与否的对比，可以看到右侧开启了 `SSAO` 的图像在墙角，电话亭背面处因为被遮挡的关系显得更暗，更符合现实情况：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106080946026.png)
 
-`SSAO` 技术用 `Srceen-Space` 的深度缓冲来决定一块区域是否被周围物体所遮挡，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
+因为 `SSAO` 是基于屏幕空间的计算，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
 
-在计算 `SSAO` 的过程中，会依赖于 `Screen-Space` 的 Position 信息，即也需要生成 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer)。在屏幕空间中，`SSAO` 会为每个像素生成一个 `Occlusion Factor`，该数值越大，之后计算光照时该像素使用的 `Ambient Light` 系数就越低。
+`SSAO` 会在屏幕空间中为每个像素生成一个 `Occlusion Factor`，该数值越大，之后计算光照时该像素使用的 `Ambient Light` 系数就越低 ，以此体现几何的遮挡关系。
+
+`Occlusion Factor` 的计算依赖于 `Screen-Space` 的 3D 位置信息及深度信息，后者可以使用深度缓冲，前者则需要通过 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 获得。
 
 ```ad-note
-因为 `SSAO` 是基于屏幕空间的计算，因此 `SSAO` 通常与 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 一起使用。
+因为 `SSAO` 同样需要  [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) ，因此 `SSAO` 通常与 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 一起使用。
 ```
+
+`SSAO` 技术用 `Srceen-Space` 的深度缓冲来决定一块区域是否被周围物体所遮挡，
+
+
+
+在计算 `SSAO` 的过程中，会依赖于 `Screen-Space` 的 Position 信息，即也需要生成 
+
+
 
 屏幕空间中每个像素的 `Occlusion Factor` 计算依赖于深度缓冲
 
