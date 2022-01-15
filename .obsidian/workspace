@@ -9,20 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unit - Mipmap Bias.md",
-            "mode": "source",
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "e215ba9b2e9f56fb",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "TO-DO.md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -65,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -82,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unit - Mipmap Bias.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
               }
             }
           },
@@ -103,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unit - Mipmap Bias.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unit - Mipmap Bias.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -172,15 +161,15 @@
   },
   "active": "d92402f6958f7710",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "TO-DO.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
-    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md",
     "Notes/C++/C++ - Variadic functions.md",
     "Notes/C++/C++ - Template Class.md",
     "Notes/C++/C++ - Mutex.md",
     "Notes/OpenGL/OpenGL - Uniform Layout.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping (DESKTOP-9KPUHB6's conflicted copy 2022-01-12).md"
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md"
   ]
 }
