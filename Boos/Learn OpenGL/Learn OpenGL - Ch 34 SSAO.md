@@ -15,14 +15,14 @@ updated: 2022-01-15
 
 `SSAO` 会在屏幕空间中为每个像素生成一个 `Occlusion Factor`，该数值越大，之后计算光照时该像素使用的 `Ambient Light` 系数就越低 ，以此体现几何的遮挡关系。
 
-`Occlusion Factor` 的计算依赖于 `Screen-Space` 的 3D 位置信息及深度信息，后者可以使用深度缓冲，前者则需要通过 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 获得。
+`Occlusion Factor` 的计算依赖于 `Screen-Space` 的 3D 位置信息，该信息可以通过 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 获得。
 
 ```ad-note
 因为 `SSAO` 同样需要  [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) ，因此 `SSAO` 通常与 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 一起使用。
 ```
 
 ```ad-note
-因为深度缓冲是基于 `View-Space` 的，因此此处 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 存储的位置也是 `View-Space` 而非 `World-Space`。
+此处 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 存储的位置是基于 `View-Space` 而非 `World-Space`，因为物体的遮挡关系会随着视线的变化而产生变化。
 ```
 
 对于屏幕空间的每个像素而言，会为其生成一系列的采样点，每个采样点表示表示该像素在 `ViewSpace` 中的周围位置。通过比较采样点与该采样点在同屏幕空间中深度缓冲的值，就能知晓该采样点是否会被几何遮挡。  
