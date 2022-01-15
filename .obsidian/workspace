@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
             "mode": "source",
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,8 +161,8 @@
   },
   "active": "d92402f6958f7710",
   "lastOpenFiles": [
-    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 15 Depth Testing.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
