@@ -57,4 +57,4 @@ updated: 2022-01-15
 
 # Sample buffers
 
-首先需要通过 `G-Buffer` 生成 `SSAO` 贴图，生成 `SSAO` 贴图需要依赖到 `G-Buffer` 中的 Position 及 Normal tie'tu
+首先需要通过 `G-Buffer` 生成 `SSAO` 贴图，生成 `SSAO` 贴图需要依赖到 `G-Buffer` 中的 `Position` 及 `Normal` 贴图。与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中不同时，此处生成的 `Position` 和 `Normal`是在 `View - Space` 空间而非 `World-Space` 空间。
