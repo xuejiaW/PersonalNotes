@@ -25,7 +25,7 @@ updated: 2022-01-15
 因为深度缓冲是基于 `View-Space` 的，因此此处 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 存储的位置也是 `View-Space` 而非 `World-Space`。
 ```
 
-对于屏幕空间的每个像素而言，会为其生成一系列的采样点，每个采样点表示表示该像素在 `ViewSpace` 中
+对于屏幕空间的每个像素而言，会为其生成一系列的采样点，每个采样点表示表示该像素在 `ViewSpace` 中的周围位置。如一个像素在 `View-Space`
 
 `SSAO` 会为 Full-Screen Quad 的每个 Fragment 生成一个 `Occlusion Factor`。对于一个 Fragment 而言，会在其周围取一系列的采样点，值 +1，示意图如下所示。该数值越大，当前 Fragment 的 Ambient Light 系数就越低。
 
