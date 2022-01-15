@@ -162,6 +162,7 @@
   "active": "d92402f6958f7710",
   "lastOpenFiles": [
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "TO-DO.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
@@ -169,7 +170,6 @@
     "Notes/C++/C++ - Variadic functions.md",
     "Notes/C++/C++ - Template Class.md",
     "Notes/C++/C++ - Mutex.md",
-    "Notes/OpenGL/OpenGL - Uniform Layout.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md"
+    "Notes/OpenGL/OpenGL - Uniform Layout.md"
   ]
 }

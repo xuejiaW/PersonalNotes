@@ -13,11 +13,14 @@ updated: 2022-01-15
 
 `SSAO` 技术用 `Srceen-Space` 的深度缓冲来决定一块区域是否被周围物体所遮挡，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
 
-在计算 `SSAO` 的过程中，会依赖于 `Screen-Space` 的 Position 信息，即也需要使用 [Deferred Shading](Learn%2
+在计算 `SSAO` 的过程中，会依赖于 `Screen-Space` 的 Position 信息，即也需要生成 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer)。在屏幕空间中，`SSAO` 会为每个像素生成一个 `Occlusion Factor`，该数值越大，之后计算光照时该像素使用的 `Ambient Light` 系数就越低。
 
 ```ad-note
-`SSAO` 所有的计算都基于 `Screen-Space`，即它所计算的 Frgament 是指 [后处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理) 中绘制整屏的 Quad 的 Fragment。该 Fragment 中实际表现的是 3D 空间中的几何，只不过将数据转换到了 `Screen-Space `。
+因为 `SSAO` 是基于屏幕空间的计算，因此 `SSAO` 通常与 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 一起使用。
 ```
+
+屏幕空间中每个像素的 `Occlusion Factor` 计算依赖于深度缓冲
+
 
 `SSAO` 会为 Full-Screen Quad 的每个 Fragment 生成一个 `Occlusion Factor`。对于一个 Fragment 而言，会在其周围取一系列的采样点，值 +1，示意图如下所示。该数值越大，当前 Fragment 的 Ambient Light 系数就越低。
 
