@@ -57,6 +57,8 @@ updated: 2022-01-16
 
 # Sample buffers
 
+## G-Buffer
+
 首先需要通过 `G-Buffer` 生成 `SSAO` 贴图，生成 `SSAO` 贴图需要依赖到 `G-Buffer` 中的 `Position` 及 `Normal` 贴图。
 
 与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中不
@@ -80,5 +82,16 @@ void main()
 
 `G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的相同。
 
+因为需要为 `gPosition` 中的每个像素生成多个偏移的采样点，而采样点很可能会超出 `gPosition` 的范围。为了保证结果的准确性，需要将纹理的 Warp 模式设置为 `GL_CLAMP_TO_EDGE`，如下所示：
+```cpp
+glGenTextures(1, &gPosition);
+glBindTexture(GL_TEXTURE_2D, gPosition);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, screen_width, screen_height, 0, GL_RGBA, GL_FLOAT, nullptr);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
+```
 
-因为需要为 `gPosition` 中的每个像素生成多个采样点，采样点很可能会超出 
+## 
