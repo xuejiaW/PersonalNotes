@@ -155,3 +155,24 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 ```
+
+## The SSAO shader
+
+这一部分是为了生成 `SSAO` 贴图，为了生成 `SSAO` 贴图同样需要一个单独的 Framebuffer，示例如下：
+```cpp
+glGenFramebuffers(1, &ssaoFBO);
+glBindFramebuffer(GL_FRAMEBUFFER, ssaoFBO);
+
+unsigned int ssaoColorBuffer;
+glGenTextures(1, &ssaoColorBuffer);
+glBindTexture(GL_TEXTURE_2D, ssaoColorBuffer);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, screen_width, screen_height, 0, GL_RED, GL_FLOAT, NULL);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ssaoColorBuffer, 0);
+
+ssaoTexture = new Texture(ssaoColorBuffer, screen_width, screen_height);
+```
+
+因为
