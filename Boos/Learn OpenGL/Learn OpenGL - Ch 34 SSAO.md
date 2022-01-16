@@ -1,6 +1,8 @@
 ---
 created: 2022-01-06
 updated: 2022-01-16
+tags:
+    - OpenGL
 ---
 # Overview
 
@@ -175,4 +177,6 @@ glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ssao
 ssaoTexture = new Texture(ssaoColorBuffer, screen_width, screen_height);
 ```
 
-因为
+因为 `SSAO` 只需要关系每个像素的 `Ambient Occlusion` 数据，所以每个像素返回一个数值即可，所以上述创建 Color Buffer 时的格式为 `GL_RED`。
+
+所以生成 `SSAO` 贴图的整个流程如下所示：
