@@ -123,4 +123,6 @@ scale = lerp(0.1f, 1.0f, scale * scale);
 sample *= scale;
 ```
 
-通过 `lerp(0.1f, 1.0f, scale*scale)` 
+通过 `lerp(0.1f, 1.0f, scale*scale)` 让采样点如下左曲线分配，最后采样点的分布点如下右所示：
+![](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116140442070.png)
+
