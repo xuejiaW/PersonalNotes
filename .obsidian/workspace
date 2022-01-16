@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/C++/C++ - Random Number.md",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
             "mode": "source",
             "source": true
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/C++/C++ - Random Number.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/C++/C++ - Random Number.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/C++/C++ - Random Number.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,8 +161,8 @@
   },
   "active": "d92402f6958f7710",
   "lastOpenFiles": [
-    "Notes/C++/C++ - Random Number.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "Notes/C++/C++ - Random Number.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
     "TO-DO.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 15 Depth Testing.md",

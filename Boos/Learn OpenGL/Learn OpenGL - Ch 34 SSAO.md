@@ -99,4 +99,16 @@ glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPos
 这一部分会生成如下所示的基于法线的半球 Samples 点：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116134443972.png)
 
-r
+依赖 [Random Number](../../Notes/C++/C++%20-%20Random%20Number.md) 生成 64 个 Simple 采样点。每个采样点的 $x,y$ 范围在 $[-1,1]$ 之间，$z$ 的范围在 $[0,1]$ 之间：
+```cpp
+std::uniform_real_distribution<float> randomFloats(0.0, 1.0);
+std::default_random_engine generator;
+std::vector<glm::vec3> ssaoKenels;
+for (unsigned int i = 0; i != 64; ++i)
+{
+    glm::vec3 sample(randomFloats(generator) * 2.0 - 1.0, randomFloats(generator) * 2.0 - 1.0, randomFloats(generator));
+    sample = glm::normalize(sample);
+    sample *= randomFloats(generator);
+    ssaoKenels.push_back(sample);
+}
+```
