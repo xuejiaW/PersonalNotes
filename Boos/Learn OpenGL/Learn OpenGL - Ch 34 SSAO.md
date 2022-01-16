@@ -180,3 +180,28 @@ ssaoTexture = new Texture(ssaoColorBuffer, screen_width, screen_height);
 因为 `SSAO` 只需要关系每个像素的 `Ambient Occlusion` 数据，所以每个像素返回一个数值即可，所以上述创建 Color Buffer 时的格式为 `GL_RED`。
 
 所以生成 `SSAO` 贴图的整个流程如下所示：
+```cpp
+glBindFramebuffer(GL_FRAMEBUFFER, gBuffer);
+
+[Draw scene]
+
+//Use G-Buffer to render ssao texture
+glBindFramebuffer(GL_FRAMEBUFFER, ssaoFBO);
+glClear(GL_COLOR_BUFFER_BIT);
+    // Bind G-Buffer position texture
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+    // Bind G-Buffer normal texture
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+    // Bind Noist texture
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, noiseTexture);
+    shaderSSAO.use();
+    // Set Samples to shader
+    SendKernelSamplesToShader();
+    // Set projection matrix
+    shaderSSAO.setMat4("projection", projection);
+    RenderQuad();
+glBindFramebuffer(GL_FRAMEBUFFER, 0);
+```
