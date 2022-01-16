@@ -79,3 +79,6 @@ void main()
 ```
 
 `G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的相同。
+
+
+因为需要为 `gPosition` 中的每个像素生成多个采样点，采样点很可能会超出 
