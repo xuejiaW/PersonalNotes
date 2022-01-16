@@ -226,3 +226,16 @@ uniform mat4 projection;
 
 const vec2 noiseScale = vec2(1024 / 4.0, 1024.0 / 4.0);
 ```
+
+在 Shader 中首先会使用 `View-Space` 的 Normal 向量，以及噪声向量生成从 `Local-Space` 转换到 `View-Space` 的 `TBN` 矩阵：
+```glsl
+vec3 FragPos = texture(gPosition, TexCoords).rgb;
+vec3 normal = texture(gNormal, TexCoords).rgb;
+vec3 randomVec = texture(texNoise, TexCoords * noiseScale).xyz;
+
+vec3 tangent = normalize(randomVec - normal * dot(randomVec, normal));
+vec3 bitangent = cross(normal, tangent);
+mat3 TBN = mat3(tangent, bitangent, normal);
+```
+
+其中生成 `tangent` 向量时使用了 `格拉姆-施密特正交化 Gramm-Schmidt process`，即 
