@@ -112,3 +112,15 @@ for (unsigned int i = 0; i != 64; ++i)
     ssaoKenels.push_back(sample);
 }
 ```
+
+上述的代码让在半球内随机的分配采样点，但采样点应该在接近原点的地方更密集，如下所示：
+```cpp
+float lerp(float a, float b, float f) { return a + f * (b - a); }
+
+
+float scale = (float)i / 64.0;
+scale = lerp(0.1f, 1.0f, scale * scale);
+sample *= scale;
+```
+
+通过 `lerp(0.1f, 1.0f, scale*scale)` 
