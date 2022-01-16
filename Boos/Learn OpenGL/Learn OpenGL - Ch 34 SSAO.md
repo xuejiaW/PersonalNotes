@@ -262,6 +262,7 @@ offset.xyz = offset.xyz * 0.5 + 0.5;
 可以用该处于 `screen-space` 的 `offset` 采样 `gPosition` 贴图，并用贴图中的数据（作为场景中几何的位置）与 `samplePos`（采样点）做比较。如果贴图中的 $z$ 值大于采样点的 $z$ 值，那么即说明该采样点会被遮挡，此时 `occlusion` 值 $+1$。
 
 ```glsl
-
+occlusion += sampleDepth >= sample.z + bias ? 1.0 :0.0;
 ```
 
+但此时还存在一个问题，对于一个采样点是否被遮挡，遮挡采样点的几何应当仅是靠近采样点的部分。如有存在在巨大房间中的 Cube，该 Cube如果与采样点比较的几何与采样点的 $Z$ 值差距较大，则说明遮挡采样点的
