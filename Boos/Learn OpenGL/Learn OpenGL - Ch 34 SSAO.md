@@ -124,5 +124,8 @@ sample *= scale;
 ```
 
 通过 `lerp(0.1f, 1.0f, scale*scale)` 让采样点如下左曲线分配，最后采样点的分布点如下右所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116140442070.png)
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116140944091.png)
 
+## Random kernel rotations
+
+如果所有的像素使用的一系列采样点都相同，那么很可能测试出来的遮挡关系并不准确。如场景中有一系列垂直和水平的强，如果cai'yang'dian
