@@ -205,3 +205,5 @@ glClear(GL_COLOR_BUFFER_BIT);
     RenderQuad();
 glBindFramebuffer(GL_FRAMEBUFFER, 0);
 ```
+
+在生成 `SSAO` 的 Shader 中首先需要
