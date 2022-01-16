@@ -129,3 +129,15 @@ sample *= scale;
 ## Random kernel rotations
 
 如果所有的像素使用的一系列采样点都相同，那么很可能测试出来的遮挡关系并不准确。如场景中有一系列垂直和水平的墙，如果采样点是固定的，那么对垂直墙有良好效果的采样点就会对水平墙有较差的效果。
+
+因此需要生成随机向量用来旋转采样点，生成随机向量的过程如下所示：
+```cpp
+std::vector<glm::vec3> ssaoNoise;
+for (unsigned int i = 0; i != 16; ++i)
+{
+    glm::vec3 noise(randomFloats(generator) * 2.0 - 1.0, randomFloats(generator) * 2.0 - 1.0, 0.0f);
+    ssaoNoise.push_back(noise);
+}
+```
+
+因为所有的采样点都是基于 `Z` 轴zhen'f
