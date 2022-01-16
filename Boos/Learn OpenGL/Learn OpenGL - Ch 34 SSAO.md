@@ -94,4 +94,9 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
 ```
 
-## 
+## Normal-oriented hemisphere
+
+这一部分会生成如下所示的基于法线的半球 Samples 点：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116134443972.png)
+
+r
