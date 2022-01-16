@@ -62,4 +62,20 @@ updated: 2022-01-16
 与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中不
 同时，此处生成的 `Position` 和 `Normal`是在 `View - Space` 空间而非 `World-Space` 空间。
 
-即
+生成 `View-Space` 的 `Position` 和 `Normal` 的 `G-Buffer` 顶点着色器如下所示：
+```glsl
+void main()
+{
+    Texcoord = tex;
+
+    vec4 viewPos = view * model * vec4(pos, 1.0);
+    FragPos = viewPos.xyz; // FragPos in view space
+
+    mat3 normalMatrix = transpose(inverse(mat3(view * model)));
+    Normal = normalMatrix * norm;
+
+    gl_Position = projection * viewPos;
+}
+```
+
+`G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的相同。
