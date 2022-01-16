@@ -206,4 +206,4 @@ glClear(GL_COLOR_BUFFER_BIT);
 glBindFramebuffer(GL_FRAMEBUFFER, 0);
 ```
 
-在生成 `SSAO` 的 Shader 中首先需要
+在生成 `SSAO` 的 Shader 中首先需要将 `G-Buffer` 和采样点zuo'we
