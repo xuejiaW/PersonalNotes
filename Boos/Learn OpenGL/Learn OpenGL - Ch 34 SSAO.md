@@ -206,7 +206,23 @@ glClear(GL_COLOR_BUFFER_BIT);
 glBindFramebuffer(GL_FRAMEBUFFER, 0);
 ```
 
-在生成 `SSAO` 的 Shader 中首先需要将 `G-Buffer` ，随机值构成的纹理（噪声纹理），采样点及投影矩阵（用来将采样点从 `View-Space` 转换到 `Screen-Space`）作为输入，同时因为 `SSA`：
+在生成 `SSAO` 的 Shader 中首先需要将 `G-Buffer` ，随机值构成的纹理（噪声纹理），采样点及投影矩阵（用来将采样点从 `View-Space` 转换到 `Screen-Space`）作为输入，同时因为生成 `SSAO` 的 Framebuffer 的 Color Buffer 仅需要是 `GL_RGB` 类型，所以 Fragment Shader 的输出也不再是 `vec4` 而是 `float`：
 ```glsl
+out float FragColor;
 
+in vec2 TexCoords;
+
+uniform sampler2D gPosition;
+uniform sampler2D gNormal;
+uniform sampler2D texNoise;
+
+uniform vec3 samples[64];
+
+int kernalSize = 64;
+float radius = 0.5;
+float bias = 0.025;
+
+uniform mat4 projection;
+
+const vec2 noiseScale = vec2(1024 / 4.0, 1024.0 / 4.0);
 ```
