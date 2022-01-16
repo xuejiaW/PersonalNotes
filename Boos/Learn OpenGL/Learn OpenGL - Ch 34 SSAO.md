@@ -242,12 +242,17 @@ mat3 TBN = mat3(tangent, bitangent, normal);
 
 之后用 TBN 向量讲过所有 sample 变换到 `View-Space` 并将其添加到 `FragPos` 上，此时便得到了在 `View-Space` 的采样点坐标：
 ```glsl
-vec3 samplePos = TBN * samples[i];
-samplePos = FragPos + samplePos * radius;
+float occlusion = 0.0;
+for(int i = 0; i != kernelSize; ++i)
+{
+    vec3 samplePos = TBN * samples[i];
+    samplePos = FragPos + samplePos * radius;
+    // ...
+}
 ```
 
 可以通过 `projection` 矩阵将采样点从 `view-space` 转换到 `clipping-space`，通过将 $xyz$ 除以 $w$ 将其转换到 `NDC-space`，最后将其转换到 $0 \sim 1$ 的 `screen-space`：
-```
+```glsl
 vec4 offset = vec4(samplePos, 1.0);
 offset = projection * offset;
 offset.xyz /= offset.w;
@@ -255,4 +260,8 @@ offset.xyz = offset.xyz * 0.5 + 0.5;
 ```
 
 可以用该处于 `screen-space` 的 `offset` 采样 `gPosition` 贴图，并用贴图中的数据（作为场景中几何的位置）与 `samplePos`（采样点）做比较。如果贴图中的 $z$ 值大于采样点的 $z$ 值，那么即说明该采样点会被遮挡，此时 `occlusion` 值 $+1$。
+
+```glsl
+
+```
 
