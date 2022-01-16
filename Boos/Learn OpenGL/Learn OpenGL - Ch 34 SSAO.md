@@ -140,4 +140,18 @@ for (unsigned int i = 0; i != 16; ++i)
 }
 ```
 
-因为所有的采样点都是基于 `Z` 轴zhen'f
+```ad-note
+之前所有的采样点的生成都是在基于 $z$ 轴正方向的半球分布的，因此随机向量的生成是绕着 $Z$ 轴旋转的，所以生成随机向量时 $z$ 分量为 0。
+```
+
+可以用生成的 $4\times4$ 个随机向量作为像素的颜色，生成一张 $4\times4$的贴图，代码如下所示，注意此时贴图的 `Warp` 方式为 `Repeat`：
+```cpp
+unsigned int noiseTexID;
+glGenTextures(1, &noiseTexID);
+glBindTexture(GL_TEXTURE_2D, noiseTexID);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, 4, 4, 0, GL_RGB, GL_FLOAT, &ssaoNoise[0]);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+```
