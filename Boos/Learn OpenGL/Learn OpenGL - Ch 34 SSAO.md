@@ -206,4 +206,7 @@ glClear(GL_COLOR_BUFFER_BIT);
 glBindFramebuffer(GL_FRAMEBUFFER, 0);
 ```
 
-在生成 `SSAO` 的 Shader 中首先需要将 `G-Buffer` 和采样点zuo'we
+在生成 `SSAO` 的 Shader 中首先需要将 `G-Buffer` ，随机值构成的纹理（噪声纹理），采样点及投影矩阵（用来将采样点从 `View-Space` 转换到 `Screen-Space`）作为输入，同时因为 `SSA`：
+```glsl
+
+```
