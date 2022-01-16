@@ -162,6 +162,7 @@
   "active": "4195bd38dbe47106",
   "lastOpenFiles": [
     "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+    "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Boos/Learn OpenGL/assets/Learn OpenGL - Ch 34 SSAO/image-20220116140442070.png",
     "Notes/C++/C++ - Random Number.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 04 Textures.md",
@@ -169,7 +170,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 15 Depth Testing.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 33 Deferred Shading.md",
     "Notes/Unity/Unit - Mipmap Bias.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md",
-    "Notes/C++/C++ - Variadic functions.md"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 21 Advanced Data, GLSL.md"
   ]
 }

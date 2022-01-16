@@ -238,4 +238,17 @@ vec3 bitangent = cross(normal, tangent);
 mat3 TBN = mat3(tangent, bitangent, normal);
 ```
 
-其中生成 `tangent` 向量时使用了 `格拉姆-施密特正交化 Gramm-Schmidt process`，即 
+其中生成 `tangent` 向量时使用了 `格拉姆-施密特正交化 Gramm-Schmidt process`，即用 `randomVec` 向量减去 `randomVec` 在 `normal` 的分量就能到垂直于 `normal` 的 `tangent` 向量。
+
+之后用 TBN 向量讲过所有 sample 变换到 `View-Space` 并将其添加到 `FragPos` 上，此时便得到了在 `View-Space` 的采样点坐标：
+```glsl
+vec3 samplePos = TBN * samples[i];
+samplePos = FragPos + samplePos * radius;
+```
+
+可以通过 `projection` 矩阵将采样点从 `view-space` 转换到 `clipping`：
+```
+vec4 offset = vec4(samplePos, 1.0);
+offset = projection * offset;
+offset.xyz /= offset.w;
+```
