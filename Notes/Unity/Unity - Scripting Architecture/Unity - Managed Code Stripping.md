@@ -42,3 +42,16 @@ Unity 编译过程中使用了一个称为 `UnityLinker` 的工具来剥离无�
 ```ad-note
 `UnityLinker` 会将使用了 `Preserve attribute` 的元素以及定义在 `link.xml` 中的元素都作为 `Top-Level` 类型。
 ```
+
+## Preserve Attribute
+
+可以使用 `UnityEngine.Scripting.Preserve` Attribute 标识某个元素不应该被剔除，如下所示：
+```cpp
+[UnityEngine.Scripting.Preserve]
+public class TextureManagerTest : MonoBehaviour {}
+```
+
+该 Attribute 可以为不同的类型声明，不同类型的效果如下所示：
+1. `Type`：保护这个类型与默认构造函数
+2. `Method`：保护这个函数，定义它的类型，返回类型和所有参数的类型
+3. `Property`：保护这个 Prop
