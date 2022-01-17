@@ -15,5 +15,5 @@ tags:
 
 # Managed stripping levels
 
-该选项用来选择 [Managed Code Stripping](Unity%20-%20Scripting%20Architecture/Unity%20-%20Managed%20Code%20Stripping.md) 的过滤等级，其中分为 `Disabled`，`Low`，`Medium`，`High` 四个等级。
+该选项用来选择 [Managed Code Stripping](Unity%20-%20Scripting%20Architecture/Unity%20-%20Managed%20Code%20Stripping.md) 的过滤等级，其中分为 `Disabled`，`Low`，`Medium`，`High` 四个等级，随着 `Managed stripping levels` 的等级越高，过滤的策略越激进，`Disabled`  情况下不会删除任何的代码。
 
