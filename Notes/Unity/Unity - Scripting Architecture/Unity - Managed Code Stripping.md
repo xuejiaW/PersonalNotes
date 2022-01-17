@@ -27,6 +27,10 @@ Unity 编译过程中使用了一个称为 `UnityLinker` 的工具来剥离无�
 
 ### How the UnityLinker works
 
-`UnityLinker`  会分析工程中所有的 `assemblies`，它会首先标记 `Top-Level` 的类型，方法，属性等。
+`UnityLinker`  会分析工程中所有的 `assemblies`，它会首先标记 `Top-Level` 的类型，方法，属性等。  如一个派生自 `Monobehavior` 的自定义类，被添加在 Unity 的场景中，该自定义类就会被标记为 `Top-Level` 的类型。
 
-如一个派生自 `Monobehavior` de
+`UnityLinker` 会基于标记的 `Top-Level` 数据，进一步查询并标记这些数据依赖的其他数据，依次类推。当整个流程结束后，未被标记的数据即会被认为无用的数据。
+
+### Reflection and code stripping
+
+`UnityLinker` 有时会无法正确的标记通过反射访问的数据，并错误的认为这些数据无用。
