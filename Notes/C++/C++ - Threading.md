@@ -21,7 +21,25 @@ void MultiThreadFunction()
 
 # condition_variable
 
-可以使用 `std::condition_variable` 阻塞某一个线程：
+可以使用 `std::condition_variable` 阻塞/唤醒某一个线程 ，示例如下所示：
+```cpp
+std::unique_lock<std::mutex> lock;
+std::condition_variable condition;
+
+void Push(const T& data)
+{
+    queue.push(data);
+    condition.notify_all();
+}
+
+void BlockPop(T& data)
+{
+    if (queue.empty()) condition.wait(lock);
+
+    data = queue.front();
+    queue.pop();
+}
+```
 
 
 # Reference

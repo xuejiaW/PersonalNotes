@@ -4,7 +4,7 @@ tags:
     - Computer-Graphics
 cssclass: [table-border]
 created: 2021-12-13
-updated: 2022-01-14
+updated: 2022-01-17
 ---
 
 # Perspective Projection
@@ -29,7 +29,7 @@ $$\left(\begin{array}{c}x_{\text {clip }} \\y_{\text {clip }} \\z_{c l i p} \\w_
 ```ad-note
 OpenGL 中的 Eye Coordinate 定义在右手坐标系中（与 OpenGL 原始坐标系相同），但 NDC 空间定义在左手坐标系中。
 如下所示，左为 Eye Coordinate，右为 NDC Space：
-![](assets/OpenGL-Projection%20Matrix/image-20211204110519486.png)
+![](assets/OpenGL%20-%20Projection%20Matrix/image-20211204110519486.png)
 ```
 
 
