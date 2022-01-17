@@ -161,6 +161,7 @@
   "active": "4195bd38dbe47106",
   "lastOpenFiles": [
     "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+    "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
     "Notes/Unity/Unity - PlayerSettings.md",
     "TO-DO.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
@@ -168,7 +169,6 @@
     "Notes/C++/C++ - Random Number.md",
     "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md",
     "Notes/C++/C++ - Threading.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
-    "Boos/Learn OpenGL/assets/Learn OpenGL - Ch 34 SSAO/image-20220116140442070.png"
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
   ]
 }

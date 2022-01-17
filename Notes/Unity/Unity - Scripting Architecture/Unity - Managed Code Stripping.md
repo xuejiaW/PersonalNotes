@@ -17,4 +17,6 @@ tags:
 
 # Understanding managed code stripping
 
+当编译 Unity 工程时，C# 代码会先被编译为 `.Net` 的字节码，称为 `Common Intermediate Language（CIL）`，`CIL` 会进一步被编为 `assemblies`， 在 Unity 中所有使用的 .Net framework 库和 Package 都已经被预先编译为了 `assemblies` 。默认而言，编译过程会包含 assembly 中的所有文件。
 
+`Managed code` stripping 就是在编译时分析 `assemblies` 找到并删除没有使用的代码。
