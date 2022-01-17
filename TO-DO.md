@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2022-01-14
+updated: 2022-01-17
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
@@ -28,3 +28,6 @@ updated: 2022-01-14
     [不要忽视Managed code stripping的副作用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/96651807)
 
 - [ ] C++ wait
+
+- [ ] Unity Pool
+    [Object Pooling in Unity 2021+ | TheGamedev.Guru](https://thegamedev.guru/unity-cpu-performance/object-pooling/) 
