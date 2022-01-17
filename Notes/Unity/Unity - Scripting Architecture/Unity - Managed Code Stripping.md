@@ -13,4 +13,8 @@ tags:
 `Managed code stripping` 的应用对象不仅仅是工程中自定义的代码，还包括 Package 或 plugins 中的代码，但不包括 Unity 引擎源码。
 ```
 
-## Managed stripping levels
+可以在 [Managed stripping levels](../Unity%20-%20PlayerSettings.md#Managed%20stripping%20levels) 中设置 `Managed code stripping` 的等级。
+
+# Understanding managed code stripping
+
+
