@@ -40,5 +40,5 @@ Unity 编译过程中使用了一个称为 `UnityLinker` 的工具来剥离无�
 因为 `Managed code stripping` 无法保证删除的脚本都是无用的，所以提供了 `Preserve attribute` 和 `link.xml` 两种方式来处理意外删除有用代码的情况。
 
 ```ad-note
-`UnityLinker` 会将使用了 `Preserve attribute` 的元素以及定义在
+`UnityLinker` 会将使用了 `Preserve attribute` 的元素以及定义在 `link.xml` 中的元素都作为 `Top-Level` 类型。
 ```
