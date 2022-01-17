@@ -1,11 +1,11 @@
 ---
 created: 2021-12-23
-updated: 2021-12-27
+updated: 2022-01-17
 tags:
     - C++
 ---
 
-# Mutex
+# mutex
 
 在 C++ 11 中可以通过 `std::mutex` 对线程进行加解锁操作，示例如下所示：
 ```cpp
@@ -18,6 +18,11 @@ void MultiThreadFunction()
     m.unlock();
 }
 ```
+
+# condition_variable
+
+可以使用 `std::condition_variable` 阻塞某一个线程：
+
 
 # Reference
 [c++ - Mutex example / tutorial? - Stack Overflow](https://stackoverflow.com/questions/4989451/mutex-example-tutorial)
