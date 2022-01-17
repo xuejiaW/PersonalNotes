@@ -54,4 +54,17 @@ public class TextureManagerTest : MonoBehaviour {}
 该 Attribute 可以为不同的类型声明，不同类型的效果如下所示：
 1. `Type`：保护这个类型与默认构造函数
 2. `Method`：保护这个函数，定义它的类型，返回类型和所有参数的类型
-3. `Property`：保护这个 Prop
+3. `Property`：保护这个属性，定义它的类型，Getter 和 Setter 的函数
+4. `Field`：保护这个字段，定义它的类型，以及该字段的类型
+5. `Event`：保护这个事件，定义它的类型，添加的函数以及删除的函数
+6. `Delegate`：保护这个回调，以及所有它使用的函数
+7. `Assembly`：保护该程序集下的所有数据，可使用如下的方式为 `Assembly` 添加 `perserve 字段`：
+    ```csharp
+    [assembly: UnityEngine.Scripting.Preserve]
+
+    namespace YFramework.ResourceManager
+    {
+    // ...
+    }
+    ```
+    该代码片段可以加在属于该 `Assembly` 中任何文件中，且需要在命名空间外。
