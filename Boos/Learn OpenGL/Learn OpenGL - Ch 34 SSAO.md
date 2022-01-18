@@ -270,8 +270,13 @@ occlusion += sampleDepth >= sample.z + bias ? 1.0 :0.0;
 
 为了解决这个问题，需要引入一个 `range check` 的机制，只有在遮挡采样点的几何深度与采样点的深度值差距小于半径的情况下，才认为该遮挡是有效的。使用的代码如下：
 ```glsl
-float rangeCheck = smoothstep(0.0, 1.0, radius / abs(FragPos.z - sampleDepth
+float rangeCheck = smoothstep(0.0, 1.0, radius / abs(FragPos.z - sampleDepth));
 occlusion += (sampleDepth >= samplePos.z + bias ? 1.0 : 0.0) * rangeCheck;
 ```
 
-在上述代码中使用 `smoothstep` 获取 `rangeCheck`。如果 `FragPos.z` 与 `sampleDepth` 的差距过大，na'me
+在上述代码中使用 `smoothstep` 获取 `rangeCheck`。如果 `FragPos.z` 与 `sampleDepth` 的差距越大，那么 `radius / abs(FragPos.z - sampleDepth))` 的值就会越接近 $0$，仅当差距小于等于 `radius` 时，返回值才会等于 $1$。
+
+如下为使用 `range check`与否的对比，左侧为未使用，右侧为使用：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085147269.png)
+
+最后求得被遮挡的采样点比例，该比例越高，环境光的贡献值就应该越低
