@@ -27,9 +27,9 @@ Unity 编译过程中使用了一个称为 `UnityLinker` 的工具来剥离无�
 
 ### How the UnityLinker works
 
-工程中所有的 `assemblies` 都是 `UnityLinker`   的分析目标，它会首先标记 `Top-Level` 的类型，方法，属性等。  如一个派生自 `Monobehavior` 的自定义类，被添加在 Unity 的场景中，该自定义类就会被标记为 `Top-Level` 的类型。
+工程中所有的 `assemblies` 都是 `UnityLinker`   的分析目标，它会首先标记 `Top-Level` 的类型，方法，属性等，这些被标记的数据称为 `Root`。  如一个派生自 `Monobehavior` 的自定义类，被添加在 Unity 的场景中，该自定义类就会被标记为 `Top-Level` 的类型，即被认为是 `Root`。
 
-`UnityLinker` 会基于标记的 `Top-Level` 数据，进一步查询并标记这些数据依赖的其他数据，依次类推。当整个流程结束后，未被标记的数据即会被认为无用的数据。
+`UnityLinker` 会基于 `Root` 数据，进一步查询并标记这些数据依赖的其他数据，依次类推。当整个流程结束后，未被标记的数据即会被认为无用的数据。
 
 ### Reflection and code stripping
 
@@ -72,7 +72,9 @@ public class TextureManagerTest : MonoBehaviour {}
 
 ## AlwaysLinkAssembly
 
-被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制 `UnityLinker` 在编译过程中会处理。
+被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制被 `UnityLinker` 在编译过程中处理。
+
+该 Attribute 仅时告知 `UnityLinker` 去检查 Target Assembly 是否是 `Root` 数据
 
 ## Link XML
 
