@@ -84,6 +84,7 @@ public class TextureManagerTest : MonoBehaviour {}
 
 `Link XML` 的方式相较于 `Preserve` Attribute 有更高的自由度，如对一个类使用 `Preserve` 会保护该类的类型以及它的默认构造函数，但通过 `Link XML` 可以设置为仅保存该类的类型。
 
+要使用 Link XML，在项目的 `Assets` 文件夹或其中的任何子文件夹中添加 `link.xml` 即可。一个工程中可以存在多份 `link.xml`，因此各模块都可以定义自身的 `link.xml`
 
 # Reference
 
