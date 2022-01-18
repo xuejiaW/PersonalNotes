@@ -1,6 +1,6 @@
 ---
 created: 2022-01-06
-updated: 2022-01-17
+updated: 2022-01-18
 tags:
     - OpenGL
 ---
@@ -268,5 +268,10 @@ occlusion += sampleDepth >= sample.z + bias ? 1.0 :0.0;
 但此时还存在一个问题，对于平行于模型表面的采样点，会被认为被表面本身的深度遮挡，如下部分：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220117000532915.png)
 
-为了解决这个问题，需要引入一个 `range check` 的机制，只有在遮挡采样点的几何深度与采样点的深度值差距小于半径的情况下，才认为该遮挡是有效的，。
+为了解决这个问题，需要引入一个 `range check` 的机制，只有在遮挡采样点的几何深度与采样点的深度值差距小于半径的情况下，才认为该遮挡是有效的。使用的代码如下：
+```glsl
+float rangeCheck = smoothstep(0.0, 1.0, radius / abs(FragPos.z - sampleDepth
+occlusion += (sampleDepth >= samplePos.z + bias ? 1.0 : 0.0) * rangeCheck;
+```
 
+在上述代码中使用 `smoothstep` 获取 `rangeCheck`。如果 `FragPos.z` 与 `sampleDepth` 的差距过大，na'me
