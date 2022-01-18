@@ -279,4 +279,13 @@ occlusion += (sampleDepth >= samplePos.z + bias ? 1.0 : 0.0) * rangeCheck;
 如下为使用 `range check`与否的对比，左侧为未使用，右侧为使用：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085147269.png)
 
-最后求得被遮挡的采样点比例，该比例越高，环境光的贡献值就应该越低
+最后求得被遮挡的采样点比例，该比例越高，环境光的贡献值就应该越低：
+```glsl
+occlusion = 1.0 - (occlusion / kernalSize);
+
+FragColor = occlusion;
+```
+
+此时的渲染结果如下所示：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085719515.png)
+
