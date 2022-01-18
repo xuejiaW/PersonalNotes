@@ -337,3 +337,5 @@ void main()
 进行模糊后的 `SSAO` 图如下所示：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092428821.png)
 
+## Applying ambient occlusion
+
