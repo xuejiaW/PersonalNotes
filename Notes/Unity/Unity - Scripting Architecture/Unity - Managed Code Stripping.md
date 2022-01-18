@@ -72,6 +72,8 @@ public class TextureManagerTest : MonoBehaviour {}
 
 ## AlwaysLinkAssembly
 
+被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制 `UnityLinker` 在编译过程中会处理
+
 ## Link XML
 
 `Link XML` 的方式相较于 `Preserve` Attribute 有更高的自由度，如对一个类使用 `Preserve` 会保护该类的类型以及它的默认构造函数，但通过 `Link XML` 可以设置为仅保存该类的类型。
