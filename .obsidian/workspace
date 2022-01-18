@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md"
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,6 +161,7 @@
   },
   "active": "4195bd38dbe47106",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
     "Notes/Unity/Unity - PlayerSettings.md",
@@ -169,7 +170,6 @@
     "Boos/Learn OpenGL/Learn OpenGL - Ch 16  Stencil Testing.md",
     "Notes/C++/C++ - Random Number.md",
     "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md",
-    "Notes/C++/C++ - Threading.md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
+    "Notes/C++/C++ - Threading.md"
   ]
 }
