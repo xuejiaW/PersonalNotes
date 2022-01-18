@@ -74,7 +74,7 @@ public class TextureManagerTest : MonoBehaviour {}
 
 被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制被 `UnityLinker` 在编译过程中处理。
 
-该 Attribute 仅时告知 `UnityLinker` 去检查 Target Assembly 是否是 `Root` 数据
+该 Attribute 仅时告知 `UnityLinker` 去检查 Target Assembly 是否是 `Root` 数据。如果 Target Assembly 中的数据都没有被任何地方引用，那么 Target Assembly 仍然会被剔除。
 
 ## Link XML
 
