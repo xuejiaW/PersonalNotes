@@ -291,4 +291,49 @@ FragColor = occlusion;
 
 ## Ambient occlusion blur
 
-如之前所述，现在得到的 `SSAO` 贴图存在着较明显的噪声，为了解决噪声问题，需要将 `SSAO` 进行模糊操作。同样使用一个 Framebuffer 在后处理时进行模糊操作：
+如之前所述，现在得到的 `SSAO` 贴图存在着较明显的噪声，如下部分所示：
+![|200](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092206841.png)
+
+
+为了解决噪声问题，需要将 `SSAO` 进行模糊操作。同样使用一个 Framebuffer 在后处理时进行模糊操作：
+```cpp
+void GenerateBlurFramebuffer()
+{
+    glGenFramebuffers(1, &ssaoBlurFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, ssaoBlurFBO);
+
+    unsigned int ssaoBlurColorBuffer;
+    glGenTextures(1, &ssaoBlurColorBuffer);
+    glBindTexture(GL_TEXTURE_2D, ssaoBlurColorBuffer);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, screen_width, screen_height, 0, GL_RED, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ssaoBlurColorBuffer, 0);
+
+    ssaoBlurTexture = new Texture(ssaoBlurColorBuffer, screen_width, screen_height);
+}
+```
+
+进行模糊操作的 Shader 主体如下：
+```glsl
+void main()
+{
+    vec2 texelSize = 1.0 / vec2(textureSize(ssaoInput, 0));
+    float result = 0.0;
+    for (int x = -2; x != 2; ++x)
+    {
+        for (int y = -2; y != 2; ++y)
+        {
+            vec2 offset = vec2(float(x), float(y)) * texelSize;
+            result += texture(ssaoInput, TexCoords + offset).r;
+        }
+    }
+
+    FragColor = result / (4 * 4);
+}
+```
+
+进行模糊后的 `SSAO` 图如下所示：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092428821.png)
+
