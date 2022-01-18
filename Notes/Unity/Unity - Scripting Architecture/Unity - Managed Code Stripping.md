@@ -77,7 +77,7 @@ public class TextureManagerTest : MonoBehaviour {}
 该 Attribute 仅时告知 `UnityLinker` 去**检查** Target Assembly 是否是 `Root` 数据。如果 Target Assembly 中的数据都没有被任何地方引用，那么 Target Assembly 仍然会被剔除。
 
 ```ad-note
-如果一个 Assembly 没有被标识为 `AlwaysLinkAssembly` 且没有任何地方引用该 Assembly 中的内容，则该 Assembly 不会被 UnityLinker 检测到，h
+如果一个 Assembly 没有被标识为 `AlwaysLinkAssembly` 且没有任何地方引用该 Assembly 中的内容，则该 Assembly 不会被 UnityLinker 检测到，在最后会被剔除。
 ```
 
 ## Link XML
