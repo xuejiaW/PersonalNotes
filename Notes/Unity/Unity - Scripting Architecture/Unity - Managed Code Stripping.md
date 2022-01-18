@@ -72,7 +72,7 @@ public class TextureManagerTest : MonoBehaviour {}
 
 ## AlwaysLinkAssembly
 
-被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制 `UnityLinker` 在编译过程中会处理
+被`AlwaysLinkAssemly` Attribute 标识的 Assembly 会强制 `UnityLinker` 在编译过程中会处理。
 
 ## Link XML
 
