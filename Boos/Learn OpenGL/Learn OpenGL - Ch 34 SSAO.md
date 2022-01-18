@@ -289,3 +289,6 @@ FragColor = occlusion;
 此时的渲染结果如下所示：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085719515.png)
 
+## Ambient occlusion blur
+
+如之前所述，现在得到的 `SSAO` 贴图存在着较明显的噪声，为了解决噪声问题，需要将 `SSAO` 进行模糊操作。同样使用一个 Framebuffer 在后处理时进行模糊操作：
