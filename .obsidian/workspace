@@ -7,12 +7,8 @@
         "id": "b15673f330d6cf33",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Tutorials/Unity Learn.md",
-            "mode": "source",
-            "source": true
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,9 +65,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tutorials/Unity Learn.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Learn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +116,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Learn.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
