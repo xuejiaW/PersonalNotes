@@ -19,5 +19,6 @@
   "cm-chs-patch",
   "obsidian-vimrc-support",
   "obsidian-icon-folder",
-  "folder-note-plugin"
+  "folder-note-core",
+  "alx-folder-note"
 ]
