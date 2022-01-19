@@ -125,7 +125,7 @@
               "state": {
                 "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
@@ -136,7 +136,7 @@
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
                   "colorGroups": [],
-                  "collapse-display": true,
+                  "collapse-display": false,
                   "showArrow": false,
                   "textFadeMultiplier": 0,
                   "nodeSizeMultiplier": 1,
@@ -147,7 +147,7 @@
                   "linkStrength": 1,
                   "linkDistance": 250,
                   "scale": 0.7478537827650188,
-                  "close": false
+                  "close": true
                 }
               }
             }
