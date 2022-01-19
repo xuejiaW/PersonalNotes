@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "19196227a06a9f97",
+    "type": "split",
+    "children": [
+      {
+        "id": "4195bd38dbe47106",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "TO-DO.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6c2f54e41c69beb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "190a276a7261373e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c606169a612c3f56",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "783ab55e1e1aa886",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "alu",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 419
+  },
+  "right": {
+    "id": "086a6696003cb579",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9ec0dddb66d9d6b",
+        "type": "tabs",
+        "dimension": 43.48534201954398,
+        "children": [
+          {
+            "id": "a7e39143692349f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TO-DO.md"
+              }
+            }
+          },
+          {
+            "id": "4026a1071cb6fc93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ca729b6cf3c92769",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TO-DO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "3e5be8bbf98a0b2a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "37bd8f4e58a99db8",
+        "type": "tabs",
+        "dimension": 56.51465798045603,
+        "children": [
+          {
+            "id": "62ec0e0b8b0fa885",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "TO-DO.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.7478537827650195,
+                  "close": false
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 335.5
+  },
+  "active": "4195bd38dbe47106",
+  "lastOpenFiles": [
+    "TO-DO.md",
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+    "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
+    "Notes/Unity/Unity - PlayerSettings.md",
+    "Notes/OpenGL/OpenGL - Projection Matrix.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 16  Stencil Testing.md",
+    "Notes/C++/C++ - Random Number.md",
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md",
+    "Notes/C++/C++ - Threading.md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
+  ]
+}

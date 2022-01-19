@@ -1,0 +1,18 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./assets/TO-DO",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "foldIndent": true,
+  "foldHeading": true,
+  "newFileLocation": "root",
+  "useTab": false,
+  "vimMode": true,
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "legacyEditor": false,
+  "livePreview": false,
+  "defaultViewMode": "preview",
+  "readableLineLength": true
+}
