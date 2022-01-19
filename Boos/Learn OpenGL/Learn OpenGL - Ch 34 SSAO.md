@@ -64,7 +64,7 @@ tags:
 首先需要通过 `G-Buffer` 生成 `SSAO` 贴图，生成 `SSAO` 贴图需要依赖到 `G-Buffer` 中的 `Position` 及 `Normal` 贴图。
 
 与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中不
-同时，此处生成的 `Position` 和 `Normal`是在 `View - Space` 空间而非 `World-Space` 空间。
+同的是，此处生成的 `Position` 和 `Normal`是在 `View - Space` 空间而非 `World-Space` 空间。
 
 生成 `View-Space` 的 `Position` 和 `Normal` 的 `G-Buffer` 顶点着色器如下所示：
 ```glsl
@@ -82,7 +82,15 @@ void main()
 }
 ```
 
-`G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的相同。
+`G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的几乎相同。只不过此处为了方便，不再采样模型的 Diffuse 和 Specular 纹理，直接将固定值赋值给 `albedo` 贴图：
+```glsl
+void main()
+{
+    gPoisition = FragPos;
+    gNormal = normalize(Normal);
+    gAlbedoSpec.rgb = vec3(0.95);
+}
+```
 
 因为需要为 `gPosition` 中的每个像素生成多个偏移的采样点，而采样点很可能会超出 `gPosition` 的范围。为了保证结果的准确性，需要将纹理的 Warp 模式设置为 `GL_CLAMP_TO_EDGE`，如下所示：
 ```cpp
@@ -289,7 +297,7 @@ FragColor = occlusion;
 此时的渲染结果如下所示：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085719515.png)
 
-## Ambient occlusion blur
+# Ambient occlusion blur
 
 如之前所述，现在得到的 `SSAO` 贴图存在着较明显的噪声，如下部分所示：
 ![|200](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092206841.png)
@@ -337,5 +345,8 @@ void main()
 进行模糊后的 `SSAO` 图如下所示：
 ![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092428821.png)
 
-## Applying ambient occlusion
+# Applying ambient occlusion
+
+在最后的渲染贴图中，相较于 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中使用 `G-Buffer` 计算光照的方式。此处需要使用 `SSAO` 贴图作为 Ambient 光照的输出系数：
+``
 
