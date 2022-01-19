@@ -29,3 +29,6 @@ updated: 2022-01-19
 
 - [ ] Unity Pool
     [Object Pooling in Unity 2021+ | TheGamedev.Guru](https://thegamedev.guru/unity-cpu-performance/object-pooling/) 
+
+    - [ ] Exception
+    [Best Practices for exceptions - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions)

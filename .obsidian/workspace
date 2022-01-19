@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "4195bd38dbe47106",
+        "id": "58657cbe62775ba8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+            "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
             "mode": "source",
             "source": true
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 315
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md"
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
+                "file": "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,17 +158,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "4195bd38dbe47106",
+  "active": "58657cbe62775ba8",
   "lastOpenFiles": [
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
     "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
+    "TO-DO.md",
+    "TO-DO (DESKTOP-98TEV03's conflicted copy 2022-01-19).md",
+    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
     "Notes/CSharp/CSharp - .Net Standard and Implementation.md",
     "Notes/Unity/Unity - PlayerSettings.md",
-    "TO-DO.md",
     "Notes/OpenGL/OpenGL - Projection Matrix.md",
     "Boos/Learn OpenGL/Learn OpenGL - Ch 16  Stencil Testing.md",
     "Notes/C++/C++ - Random Number.md",
-    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md",
-    "Notes/C++/C++ - Threading.md"
+    "Boos/3D Math Primer For Graphics and Game Development/3D Math Primer - Ch 06 More on Matrices.md"
   ]
 }
