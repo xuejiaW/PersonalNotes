@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity - PlayerSettings",
+  "attachmentFolderPath": "./assets/Mesh Basics",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
