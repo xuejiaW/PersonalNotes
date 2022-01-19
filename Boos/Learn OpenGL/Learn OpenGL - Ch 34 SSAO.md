@@ -348,5 +348,30 @@ void main()
 # Applying ambient occlusion
 
 在最后的渲染贴图中，相较于 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中使用 `G-Buffer` 计算光照的方式。此处需要使用 `SSAO` 贴图作为 Ambient 光照的输出系数：
-``
+```glsl
+// ...
+float ambientOcclusion = texture(ssao, TexCoords).r;
+vec3 ambient = vec3(0.1 * Diffuse * ambientOcclusion);
+```
+
+C++ 传输的数据与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中也类似，只不过此处需要传输 `ssao` 贴图，且只传输一盏灯的信息：
+```cpp
+glBindFramebuffer(GL_FRAMEBUFFER, 0);
+screenMeshRender->GetMaterial()->AddTexture("gPosition", geoPosTexture);
+screenMeshRender->GetMaterial()->AddTexture("gNormal", geoNormalTexture);
+screenMeshRender->GetMaterial()->AddTexture("gAlbedoSpec", geoAlbedoTexture);
+screenMeshRender->GetMaterial()->AddTexture("ssao", ssaoBlurTexture);
+
+screenMeshRender->GetMaterial()->GetShader()->SetVec3("light.Position", vec3(1, 1, 0));
+screenMeshRender->GetMaterial()->GetShader()->SetVec3("light.Color", vec3(1, 1, 0));
+screenMeshRender->GetMaterial()->GetShader()->SetFloat("light.Linear", 0.7f);
+screenMeshRender->GetMaterial()->GetShader()->SetFloat("light.Quadratic", 0.9f);
+
+screenMeshRender->GetMaterial()->GetShader()->SetVec3("viewPos", camera->GetTransform()->GetPosition());
+
+screenMeshRender->DrawMesh();
+```
+
+此时的渲染结果如下所示：
+![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220119093003493.png)
 
