@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b15673f330d6cf33",
+        "id": "0974b1b0cafc5988",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Boos/Render Hell/00 Render Hel.md",
+            "mode": "source",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Boos/Render Hell/00 Render Hel.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Boos/Render Hell/00 Render Hel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Boos/Render Hell/00 Render Hel.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -150,17 +158,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "b15673f330d6cf33",
+  "active": "0974b1b0cafc5988",
   "lastOpenFiles": [
+    "Boos/Render Hell/00 Render Hel.md",
     "Tutorials/Unity Learn.md",
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
     "Tutorials/Unity Learn/DEF.md",
     "Tutorials/Unity Learn/ABC.md",
-    "Tutorials/Unity Learn/Unity Learn - Introduction to Asset Bundles.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/Unity/Unity.md",
     "Notes/Tools/Tools - Chocolatey.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
-    "TO-DO.md",
-    "Notes/Unity/Unity - PlayerSettings.md"
+    "TO-DO.md"
   ]
 }
