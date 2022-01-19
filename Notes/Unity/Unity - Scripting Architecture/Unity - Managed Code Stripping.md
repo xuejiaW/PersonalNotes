@@ -86,6 +86,10 @@ public class TextureManagerTest : MonoBehaviour {}
 
 要使用 Link XML，在项目的 `Assets` 文件夹或其中的任何子文件夹中添加 `link.xml` 即可。一个工程中可以存在多份 `link.xml`，因此各模块都可以定义自身的 `link.xml`
 
+`link.xml` 定义的格式如下所示：
+```xml
+```
+
 # Reference
 
 [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)

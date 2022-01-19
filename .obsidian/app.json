@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/TO-DO",
+  "attachmentFolderPath": "./assets/Unity - Managed Code Stripping",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
