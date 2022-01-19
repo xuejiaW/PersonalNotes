@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Unity - Managed Code Stripping",
+  "attachmentFolderPath": "./assets/Unity - PlayerSettings",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

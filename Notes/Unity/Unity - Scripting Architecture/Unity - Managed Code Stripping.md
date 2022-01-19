@@ -202,8 +202,6 @@ public class TextureManagerTest : MonoBehaviour {}
 </linker>
 ```
 
-# How the UnityLinker strips assemblies
-
 # Reference
 
 [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
