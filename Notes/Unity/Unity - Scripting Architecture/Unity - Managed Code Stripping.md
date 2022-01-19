@@ -202,6 +202,19 @@ public class TextureManagerTest : MonoBehaviour {}
 </linker>
 ```
 
+### Special Assembly XML attribute
+
+#### ignoreIfMissing
+如果一个 Attribute 在编译时不存在，可以在 `link.xml` 指定 `IgnoreIfMissing` 
+     ```xml
+<linker>
+    <assembly fullname="Foo" ignoreIfMissing="1">
+        <type name="Type1" />
+    </assembly>
+</linker>
+
+     ```
+
 # Reference
 
 [Unity - Manual: Managed code stripping (unity3d.com)](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
