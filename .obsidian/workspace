@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
-            "mode": "preview",
+            "file": "Tutorials/Unity Learn/ABC.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md"
+                "file": "Tutorials/Unity Learn/ABC.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "Tutorials/Unity Learn/ABC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
+                "file": "Tutorials/Unity Learn/ABC.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +160,15 @@
   },
   "active": "b15673f330d6cf33",
   "lastOpenFiles": [
+    "Tutorials/Unity Learn/ABC.md",
+    "Tutorials/Unity Learn/Unity Learn.md",
+    "Tutorials/Unity Learn/Unity Learn - Introduction to Asset Bundles.md",
     "Tutorials/Mesh Basics/Mesh Basics - Procedural Grid.md",
     "Notes/Unity/Unity.md",
     "Notes/Tools/Tools - Chocolatey.md",
     "Notes/Computer Graphics/Computer Graphics - Premultiplied Alpha.md",
     "TO-DO.md",
     "Notes/Unity/Unity - PlayerSettings.md",
-    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md",
-    "TO-DO (DESKTOP-98TEV03's conflicted copy 2022-01-19).md",
-    "Boos/Learn OpenGL/Learn OpenGL - Ch 34 SSAO.md",
-    "Notes/CSharp/CSharp - .Net Standard and Implementation.md"
+    "Notes/Unity/Unity - Scripting Architecture/Unity - Managed Code Stripping.md"
   ]
 }
