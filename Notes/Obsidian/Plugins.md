@@ -2,10 +2,10 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-01-14
+updated: 2022-01-20
 ---
 
-在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
+在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
 
 # Core Plugins
 
@@ -325,7 +325,7 @@ A --> B
 
 ## Tag Wrangler[^6]
 
-该插件增强了 [Tag Pane](Obsidian%20-%20Plugins.md#Tag%20Pane) 的功能，主要提供了为 [Obsidian - Tag](Obsidian%20-%20Tag.md) 重命名的功能。
+该插件增强了 [Tag Pane](Plugins.md#Tag%20Pane) 的功能，主要提供了为 [Tag](Tag.md) 重命名的功能。
 
 当安装插件后，在 Tag Panel 中右键 Tag 会展现出重命名的选项。
 
@@ -399,7 +399,7 @@ noremap L $
 set clipboard=unnamed
 ```
 
-也可以使用如下的方法，配置 [Obsidian - Commands](Obsidian%20-%20Commands.md)：
+也可以使用如下的方法，配置 [Commands](Commands.md)：
 ```text
 exmap back obcommand app:go-back
 nmap <C-o> :back

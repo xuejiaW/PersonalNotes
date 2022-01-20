@@ -18,7 +18,7 @@ key4:
 ---
 ```
 
-[Obsidian - Plugins](Obsidian%20-%20Plugins.md)
+[Plugins](Plugins.md)
 
 # Alias
 

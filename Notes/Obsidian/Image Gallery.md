@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2022-01-05
-updated: 2022-01-14
+updated: 2022-01-20
 ---
 
 
@@ -19,7 +19,7 @@ updated: 2022-01-14
 
 # 表格线条
 
-通过自定义的[Table Border](Obsidian%20-%20CSS%20Snippets.md#Table%20Border) 代码块可以删除表格的线条。
+通过自定义的[Table Border](CSS%20Snippets.md#Table%20Border) 代码块可以删除表格的线条。
 
 
 # Reference
