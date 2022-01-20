@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Learn.md",
+            "file": "Boos/Learn Vim (The Smart Way).md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Learn.md"
+                "file": "Boos/Learn Vim (The Smart Way).md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Learn.md",
+                "file": "Boos/Learn Vim (The Smart Way).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Learn.md",
+                "file": "Boos/Learn Vim (The Smart Way).md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn Vim (The Smart Way).md",
+    "Boos/Render Hell.md",
+    "Boos/Render Hell/Book 1 Overview.md",
+    "Boos/Render Hell/Book 4 Solutions.md",
+    "Boos/Render Hell/Book 3 Problems.md",
+    "Boos/Render Hell/Book 2 Pipeline.md",
     "Tutorials/Unity Learn.md",
     "Tutorials/Mesh Basics/Mesh Basics.md",
     "Tutorials/Mesh Basics/Procedural Grid.md",
-    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
-    "Boos/Render Hell/- Render Hel.md",
-    "Tutorials/Unity Learn.md",
-    "Tutorials/Unity Learn/DEF.md",
-    "Tutorials/Unity Learn/ABC.md",
-    "Notes/Unity/Unity.md",
-    "Notes/Tools/Tools - Chocolatey.md"
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md"
   ]
 }

@@ -1,6 +1,6 @@
 ---
 created: 2022-01-05
-updated: 2022-01-06
+updated: 2022-01-20
 tags:
     - GPU
 ---
@@ -27,12 +27,12 @@ tags:
 # Meshes and Multi-Materials
 
 如果一个 Mesh 被赋予了多个材质，则该 Mesh 会被切分成多份再被送入 Command Buffer 中，这无疑也会造成多个 Drawcall 的产生，如下示意图所示：
-![|500](assets/Render%20Hell%20-%20Book%203%20Problems/copy_data_from_hdd_to_ram_vram_01_multimaterial.gif)
+![|500](assets/Book%203%20Problems/copy_data_from_hdd_to_ram_vram_01_multimaterial.gif)
 
 # Thin Triangles
 
-如在 Book 2 的 [Rasterizing](Render%20Hell%20-%20Book%202%20Pipeline.md#Rasterizing) 中所属，光栅化后的单位是 `pre-pixles` ，Warp 中的四个线程会被分给一个 `pre-pixels` 。对于一些没有真正覆盖三角形的 Pixels 而言，它们的颜色并无意义，因此虽然它们在 pre-pixels 中但并不会有线程去计算它们的颜色，这也就造成了 Warp 中线程的浪费。这种性能浪费会比较常见的出现在狭长的三角形中，如下示意图所示：
-![|500](assets/Render%20Hell%20-%20Book%203%20Problems/pipeline_rasterizing03_(1).gif)
+如在 Book 2 的 [Rasterizing](Book%202%20Pipeline.md#Rasterizing) 中所属，光栅化后的单位是 `pre-pixles` ，Warp 中的四个线程会被分给一个 `pre-pixels` 。对于一些没有真正覆盖三角形的 Pixels 而言，它们的颜色并无意义，因此虽然它们在 pre-pixels 中但并不会有线程去计算它们的颜色，这也就造成了 Warp 中线程的浪费。这种性能浪费会比较常见的出现在狭长的三角形中，如下示意图所示：
+![|500](assets/Book%203%20Problems/pipeline_rasterizing03_(1).gif)
 
 # Reference
 
