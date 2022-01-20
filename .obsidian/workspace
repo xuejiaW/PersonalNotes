@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Android/Android - Android Debug Bridge.md",
+            "mode": "preview",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Android/Android - Android Debug Bridge.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Android/Android - Android Debug Bridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Android/Android - Android Debug Bridge.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -153,6 +161,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/Material Property Blocks.md",
     "Notes/Unity/Editor.md",
     "Notes/Unity.md",
@@ -161,7 +170,6 @@
     "Notes/Obsidian/Image Gallery.md",
     "Notes/Obsidian/Commands.md",
     "Notes/Obsidian/CSS Snippets.md",
-    "Tutorials/Unity Learn.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md"
+    "Tutorials/Unity Learn.md"
   ]
 }
