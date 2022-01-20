@@ -17,7 +17,7 @@ tags:
 
 `SSAO` 会在屏幕空间中为每个像素生成一个 `Occlusion Factor`，该数值越大，之后计算光照时该像素使用的 `Ambient Light` 系数就越低 ，以此体现几何的遮挡关系。
 
-`Occlusion Factor` 的计算依赖于 `Screen-Space` 的 3D 位置信息，该信息可以通过 [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 获得。
+`Occlusion Factor` 的计算依赖于 `Screen-Space` 的 3D 位置信息，该信息可以通过 [G-buffer](Ch%2033%20Deferred%20Shading.md#The%20G-buffer) 获得。
 
 ```ad-note
 因为 `SSAO` 同样需要  [G-buffer](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md#The%20G-buffer) ，因此 `SSAO` 通常与 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 一起使用。
@@ -63,7 +63,7 @@ tags:
 
 首先需要通过 `G-Buffer` 生成 `SSAO` 贴图，生成 `SSAO` 贴图需要依赖到 `G-Buffer` 中的 `Position` 及 `Normal` 贴图。
 
-与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中不
+与在 [Deferred Shading](Ch%2033%20Deferred%20Shading.md) 中不
 同的是，此处生成的 `Position` 和 `Normal`是在 `View - Space` 空间而非 `World-Space` 空间。
 
 生成 `View-Space` 的 `Position` 和 `Normal` 的 `G-Buffer` 顶点着色器如下所示：
@@ -82,7 +82,7 @@ void main()
 }
 ```
 
-`G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 使用的几乎相同。只不过此处为了方便，不再采样模型的 Diffuse 和 Specular 纹理，直接将固定值赋值给 `albedo` 贴图：
+`G-Buffer` 的片段着色器与在 [Ch 33 Deferred Shading](Ch%2033%20Deferred%20Shading.md) 使用的几乎相同。只不过此处为了方便，不再采样模型的 Diffuse 和 Specular 纹理，直接将固定值赋值给 `albedo` 贴图：
 ```glsl
 void main()
 {
@@ -347,14 +347,14 @@ void main()
 
 # Applying ambient occlusion
 
-在最后的渲染贴图中，相较于 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中使用 `G-Buffer` 计算光照的方式。此处需要使用 `SSAO` 贴图作为 Ambient 光照的输出系数：
+在最后的渲染贴图中，相较于 [Deferred Shading](Ch%2033%20Deferred%20Shading.md) 中使用 `G-Buffer` 计算光照的方式。此处需要使用 `SSAO` 贴图作为 Ambient 光照的输出系数：
 ```glsl
 // ...
 float ambientOcclusion = texture(ssao, TexCoords).r;
 vec3 ambient = vec3(0.1 * Diffuse * ambientOcclusion);
 ```
 
-C++ 传输的数据与在 [Deferred Shading](Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading.md) 中也类似，只不过此处需要传输 `ssao` 贴图，且只传输一盏灯的信息：
+C++ 传输的数据与在 [Deferred Shading](Ch%2033%20Deferred%20Shading.md) 中也类似，只不过此处需要传输 `ssao` 贴图，且只传输一盏灯的信息：
 ```cpp
 glBindFramebuffer(GL_FRAMEBUFFER, 0);
 screenMeshRender->GetMaterial()->AddTexture("gPosition", geoPosTexture);

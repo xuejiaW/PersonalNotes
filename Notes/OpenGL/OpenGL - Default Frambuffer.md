@@ -61,7 +61,7 @@ Sterero Rendering 时仅有一块 Stencil Buffer，在对 Left Buffer 和 Right 
 
 Default Framebuffer 也可以开启 MSAA，但这同样要求在创建 OpenGL 上下文时就指定 MSAA 的等级。
 
-因此在 [Anti Aliasing](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing.md) 中，如果是对于 `Framebuffer 0` 开启 MSAA，就需要在 [GLFW 初始化窗口时指定 MSAA](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing.md#MSAA%20in%20GLFW) 。
+因此在 [Anti Aliasing](../../Boos/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md) 中，如果是对于 `Framebuffer 0` 开启 MSAA，就需要在 [GLFW 初始化窗口时指定 MSAA](../../Boos/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md#MSAA%20in%20GLFW) 。
 
 # Reference
 

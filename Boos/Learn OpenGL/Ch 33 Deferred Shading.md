@@ -1,13 +1,13 @@
 ---
 cssclass: [table-border]
 created: 2021-12-27
-updated: 2022-01-04
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
 # Overview
 
-之前进行的渲染都称为 ` 前向渲染（Forward Rendering / Forward Shading）。在前向渲染中对于场景内的每个物体，在它们的着色器中都需要对场景内的每个光照都进行计算，如 [Light Casters, Multiple Lights](Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md) 即为典型的前向渲染计算。
+之前进行的渲染都称为 ` 前向渲染（Forward Rendering / Forward Shading）。在前向渲染中对于场景内的每个物体，在它们的着色器中都需要对场景内的每个光照都进行计算，如 [Light Casters, Multiple Lights](Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md) 即为典型的前向渲染计算。
 
 延迟渲染（Deferred Rendering / Deferred Shading）技术的主要目的就是为了优化场景内存在大量光照时的性能。
 
@@ -378,7 +378,7 @@ scene.postRender = []()
 
 ## Calculating a light's volume 
 
-计算光源体积光的方法就是求解光源 [衰减](Learn%20OpenGL%20-%20Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md#衰减) 为 0 时的距离，即衰减公式为：
+计算光源体积光的方法就是求解光源 [衰减](Ch%2014%20%20Light%20Casters,%20Multiple%20Lights.md#衰减) 为 0 时的距离，即衰减公式为：
 
 $$
 F_{a t t}=\frac{I_{max}}{K_{c}+K_{l} * d+K_{q} * d^{2}}

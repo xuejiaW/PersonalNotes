@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -352,7 +352,7 @@ float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.01);
 
 因为深度贴图是通过一个从光源出发的摄像机渲染得到的，因此如果在这个摄像机的视锥体外的部分就无法被采样到深度贴图中。
 
-之前在生成深度贴图时，为 [Texture](Learn%20OpenGL%20-%20Ch%2004%20Textures.md) 设置的 `warpmode`为 `repeat` ，如下：
+之前在生成深度贴图时，为 [Texture](Ch%2004%20Textures.md) 设置的 `warpmode`为 `repeat` ，如下：
 
 ```cpp
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -467,7 +467,7 @@ float ShaderCalculation(vec4 FragPosLightSpace, vec3 normal, vec3 lightDir)
 
 还有一定需要注意的是，在使用 `正交投影` 时，生成的深度贴图，其深度变化是线性。而当使用 `透视投影` 时，深度变化则是非线性的。
 
-因此在调试两者的深度贴图时，会看到 `透视投影` 时生成的深度贴图几乎是全白的，如同在 [Depth Testing](Learn%20OpenGL%20-%20Ch%2015%20Depth%20Testing.md) 中看到的。如果想要在使用 `透视投影` 的情况下，调试深度贴图，则首先需要将深度信息转换到线性空间中，可以使用如下的代码：
+因此在调试两者的深度贴图时，会看到 `透视投影` 时生成的深度贴图几乎是全白的，如同在 [Depth Testing](Ch%2015%20Depth%20Testing.md) 中看到的。如果想要在使用 `透视投影` 的情况下，调试深度贴图，则首先需要将深度信息转换到线性空间中，可以使用如下的代码：
 
 ```glsl
 float LinearizeDepth(float depth)

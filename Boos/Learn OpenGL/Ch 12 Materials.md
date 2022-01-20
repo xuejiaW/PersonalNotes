@@ -5,9 +5,9 @@ tags:
     - OpenGL
 ---
 
-这一章与 [Color](Learn%20OpenGL%20-%20Ch%2010%20Color.md) 及 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 内容实际一致，但进行了进一步的封装。
+这一章与 [Color](Ch%2010%20Color.md) 及 [Basic Lighting](Ch%2011%20Basic%20Lighting.md) 内容实际一致，但进行了进一步的封装。
 
-在 [Color](Learn%20OpenGL%20-%20Ch%2010%20Color.md) 中通过片段着色器中的 `objectColor` 表示物体的颜色，在 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md)中计算的到的 环境光，漫反射光，镜面反射光在相加后的结果，会与 `objectColor` 相乘得到最终的像素颜色。且在 [Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中通过 `ambientStrength` 和 `specularStrength` 两个参数来调整环境光和镜面反射光的强度。
+在 [Color](Ch%2010%20Color.md) 中通过片段着色器中的 `objectColor` 表示物体的颜色，在 [Basic Lighting](Ch%2011%20Basic%20Lighting.md)中计算的到的 环境光，漫反射光，镜面反射光在相加后的结果，会与 `objectColor` 相乘得到最终的像素颜色。且在 [Basic Lighting](Ch%2011%20Basic%20Lighting.md) 中通过 `ambientStrength` 和 `specularStrength` 两个参数来调整环境光和镜面反射光的强度。
 
 # 物体材质
 
@@ -70,7 +70,7 @@ cubeShader->SetVec3("light.position", lamp->GetTransform()->GetPosition());
 
 # 光照信息计算
 
-新光照信息的计算，只要将 [Learn OpenGL - Ch 11 Basic Lighting](Learn%20OpenGL%20-%20Ch%2011%20Basic%20Lighting.md) 中计算光照信息时的参数换成相应材质和光源属性中的参数即可。
+新光照信息的计算，只要将 [Ch 11 Basic Lighting](Ch%2011%20Basic%20Lighting.md) 中计算光照信息时的参数换成相应材质和光源属性中的参数即可。
 
 ```glsl
 vec3 ambientComponent = light.ambient * material.ambient;

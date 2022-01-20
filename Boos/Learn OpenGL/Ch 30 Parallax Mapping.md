@@ -7,7 +7,7 @@ tags:
 ---
 # Parallax Mapping
 
-[Normal Mapping](../Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md) 调整了表面的法线，让表面在光照的计算中能有更真实的表现。
+[Normal Mapping](Ch%2029%20Normal%20Mapping.md) 调整了表面的法线，让表面在光照的计算中能有更真实的表现。
 
 但一个真正的有凹凸变化的平面，即使在不考虑光照效果的情况下，也会与高度无变化的平面效果上存在区别。如以一定的角度去观察平面，如果平面存在凸出，则该凸出点会遮挡住后面的平面。如下所示，$V$ 为视线方向，如果平面是如黑线所示一样无高度变化，则视线会看到 $A$ 点，而如果平面如红线般存在高度变化，则实现会看到 $B$ 点。
 ![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled.png)
@@ -57,7 +57,7 @@ $$\mathbf{Texcoord}_{\mathrm{new}}=\mathbf{Texcoord}_{\mathrm{origin}}-\frac{h \
 
 ## Vertex Shader
 
-使用 Parallax Mapping 时与在 [Normal Mapping](Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md) 中一样，需要进行 Tangent Space 的坐标转换，因此顶点着色器与在 [Normal Mapping](Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping.md) 中使用的顶点着色器相同。
+使用 Parallax Mapping 时与在 [Normal Mapping](Ch%2029%20Normal%20Mapping.md) 中一样，需要进行 Tangent Space 的坐标转换，因此顶点着色器与在 [Normal Mapping](Ch%2029%20Normal%20Mapping.md) 中使用的顶点着色器相同。
 
 ## Fragment Shader
 

@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-22
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -86,7 +86,7 @@ FragColor = vec4(lighting, 1.0);
 
 # Gaussian Blur
 
-在 [Framebuffers](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md)  的后处理部分中说明了对生成图像进行 [模糊处理](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md#后处理) 的办法，该方法是对一个像素和它周围的8个像素，一共9个像素进行加权平均，并将平均值作为该像素新的颜色。
+在 [Framebuffers](Ch%2019%20Framebuffers.md)  的后处理部分中说明了对生成图像进行 [模糊处理](Ch%2019%20Framebuffers.md#后处理) 的办法，该方法是对一个像素和它周围的8个像素，一共9个像素进行加权平均，并将平均值作为该像素新的颜色。
 
 这里介绍一个更高级的模糊处理方法，称为 `Gaussian 模糊` ，其主要思路是使用一个 `Gaussian 曲线` 对像素进行模糊处理。 `Gaussian 曲线` 通常形状是一个钟形曲线，如下图所示，该曲线表示越接近中心的点，其权重越大：
 ![|400](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%204.png)
@@ -182,7 +182,7 @@ void main()
 
 ## Blending both Textures
 
-最终将目标 Framebuffer 切换为 Default Framebuffer，并在片段着色器中将 $c$ 图 和 $b$ 图进行叠加（并非是 [Blending](Learn%20OpenGL%20-%20Ch%2017%20Blending.md) ） ，Shader 中叠加的代码如下：
+最终将目标 Framebuffer 切换为 Default Framebuffer，并在片段着色器中将 $c$ 图 和 $b$ 图进行叠加（并非是 [Blending](Ch%2017%20Blending.md) ） ，Shader 中叠加的代码如下：
 
 ```glsl
 

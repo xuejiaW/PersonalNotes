@@ -57,7 +57,7 @@ tags:
 glEnable(GL_MULTISAMPLE);
 ```
 
-由于MSAA影响的颜色/深度/模板缓冲都是由 [Framebuffers](Learn%20OpenGL%20-%20Ch%2019%20Framebuffers.md)  控制的，而如果不自定义帧缓冲，默认的帧缓冲由 `GLFW` 创建的窗口控制。因此在使用默认帧缓冲时，需要通过GLFW开启 `MSAA` ，在GLFW中开启 `MSAA` 只需要一条语句：
+由于MSAA影响的颜色/深度/模板缓冲都是由 [Framebuffers](Ch%2019%20Framebuffers.md)  控制的，而如果不自定义帧缓冲，默认的帧缓冲由 `GLFW` 创建的窗口控制。因此在使用默认帧缓冲时，需要通过GLFW开启 `MSAA` ，在GLFW中开启 `MSAA` 只需要一条语句：
 
 ```cpp
 glfwWindowHint(GLFW_SAMPLES, 4);

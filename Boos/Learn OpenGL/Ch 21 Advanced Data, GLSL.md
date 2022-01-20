@@ -130,7 +130,7 @@ gl_PointSize = gl_Position.z;
 
 ## gl_FragCoord
 
-在 [Depth Testing](Learn%20OpenGL%20-%20Ch%2015%20Depth%20Testing.md) 中已经接触了 `gl_FragCoord` ，可以利用 `gl_FragCoord.z` 绘制出片段的深度信息。
+在 [Depth Testing](Ch%2015%20Depth%20Testing.md) 中已经接触了 `gl_FragCoord` ，可以利用 `gl_FragCoord.z` 绘制出片段的深度信息。
 
 而同样可以利用 `gl_FragCoord.x` 和 `gl_FragCoord.y` 实现一些效果，注意这两者都是针对于屏幕空间的，如屏幕的尺寸是 $800 \times 600$，则 `gl_FragCoord.x < 400` 就表示屏幕的左半边。
 
@@ -145,7 +145,7 @@ else
 
 ## gl_FrontFacing
 
-`gl_FrontFacing` 是一个布尔值，可以分辨在 [Face Culling](Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling.md) 中讨论的前向面和后向面。
+`gl_FrontFacing` 是一个布尔值，可以分辨在 [Face Culling](Ch%2018%20Face%20Culling.md) 中讨论的前向面和后向面。
 
 可以利用 `gl_FrontFacing` 让物体在前向面和后向面分别渲染不同的贴图
 
@@ -198,7 +198,7 @@ void main()
 
 # 接口块（Interface Block）
 
-接口块（Interface Block）与在 [Learn OpenGL - Ch 12 Materials](Learn%20OpenGL%20-%20Ch%2012%20Materials.md) 使用的 `Struct` 有点类似，但它是为了让着色器之间传递的变量（即通过 `in` 和 `out` 传递的变量）可以组合在一起，因此必须通过 `in` 和 `out` 修饰，而不能在uniform使用。
+接口块（Interface Block）与在 [Ch 12 Materials](Ch%2012%20Materials.md) 使用的 `Struct` 有点类似，但它是为了让着色器之间传递的变量（即通过 `in` 和 `out` 传递的变量）可以组合在一起，因此必须通过 `in` 和 `out` 修饰，而不能在uniform使用。
 
 如在顶点着色器中：
 ```glsl
