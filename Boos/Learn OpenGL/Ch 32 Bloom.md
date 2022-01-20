@@ -8,7 +8,7 @@ tags:
 # Overview
 
 对光源增加光辉（Glow）的效果，增加光辉效果的后处理称为 `Bloom` ，下图为增加了和未增加 `Bloom` 效果的对比：
-![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled.png)
+![](assets/Ch%2032%20Bloom/Untitled.png)
 
 实现 `Bloom` 的算法主要分为三步：
 
@@ -17,7 +17,7 @@ tags:
 3.  将模糊后的高亮部分渲染图，与原完整场景的渲染图进行混合，得到最终图（记为 $d$ 图）
 
 整个流程的示意图如下：
-![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%201.png)
+![](assets/Ch%2032%20Bloom/Untitled%201.png)
 
 ```ad-note
 通常 `Bloom` 效果需要与 HDR 配合使用。因为对于高亮部分的区分，通常需要通过阈值的判断，即最终亮度大于某个值时，则认为是高亮部分。
@@ -82,21 +82,21 @@ FragColor = vec4(lighting, 1.0);
 
 |                                                                   |                                                                   |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![(a)](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%202.png) | ![(b)](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%203.png) |
+| ![(a)](assets/Ch%2032%20Bloom/Untitled%202.png) | ![(b)](assets/Ch%2032%20Bloom/Untitled%203.png) |
 
 # Gaussian Blur
 
 在 [Framebuffers](Ch%2019%20Framebuffers.md)  的后处理部分中说明了对生成图像进行 [模糊处理](Ch%2019%20Framebuffers.md#后处理) 的办法，该方法是对一个像素和它周围的8个像素，一共9个像素进行加权平均，并将平均值作为该像素新的颜色。
 
 这里介绍一个更高级的模糊处理方法，称为 `Gaussian 模糊` ，其主要思路是使用一个 `Gaussian 曲线` 对像素进行模糊处理。 `Gaussian 曲线` 通常形状是一个钟形曲线，如下图所示，该曲线表示越接近中心的点，其权重越大：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%204.png)
+![|400](assets/Ch%2032%20Bloom/Untitled%204.png)
 
 ```ad-tip
 `Bloom` 效果的好坏主要取决于 `Blur` 效果的好坏。
 ```
 
 因为最终需要应用 `Gaussian 曲线` 的是二维的图片，所以对单一像素一共需要进行两次 `Gaussian 模糊` 处理，即一次水平方向的模糊处理，一次垂直方向的模糊处理，如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%205.png)
+![](assets/Ch%2032%20Bloom/Untitled%205.png)
 
 因此应用 `Gaussian 模糊` 需要两个 Framebuffer，下称为 `FboA` 和 `FboB` 。主要实现思路为，先将需要进行模糊处理的图（本例中为 $a$ 图）作为 `FboA` 的输入，对 $a$ 图进行水平方向的模糊，再将水平模糊后的输出作为 `FboB` 的输入，对水平模糊后的图再进行垂直方向的模糊，至此就得到经过了 `Gaussian 模糊` 的图。创建 `FboA` 和 `FboB` 并实现 `Gaussian 模糊` 的代码如下：
 
@@ -178,7 +178,7 @@ void main()
 ```
 
 图 $a$ 经过 `Gaussian 模糊` 的得到的图 $c$ 如下所示：
-![(c)](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%206.png)
+![(c)](assets/Ch%2032%20Bloom/Untitled%206.png)
 
 ## Blending both Textures
 
@@ -195,7 +195,7 @@ if(usingBloom)
 ```
 
 最后叠加得到的图，如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2032%20Bloom/Untitled%207.png)
+![](assets/Ch%2032%20Bloom/Untitled%207.png)
 
 
 # 源码：

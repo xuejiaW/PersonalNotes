@@ -6,12 +6,12 @@ tags:
 ---
 [Shadow Mapping](Ch%2027%20Shadow%20Mapping.md) 中计算的是光源向一个方向照射时（方向光或聚光灯）产生的阴影，如下图所示：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows/Untitled%202.png)
+![](assets/Ch%2028%20Point%20Shadows/Untitled%202.png)
 
 在这种情况下，阴影贴图可以通过一个位置与光源位置相同， `LookAt` 方向为光源方向的摄像机渲染得到，且阴影贴图是一张 `Texture 2D` 且称为 `Directional Shadow mapping` 。
 
 对于点光源而言，它的照射方向是朝四面八方的，因此渲染深度贴图时无法使用单一的 `LookAt` 方向，如下图所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows/Untitled%201.png)
+![](assets/Ch%2028%20Point%20Shadows/Untitled%201.png)
 
 这种情况下的阴影被称为 `Point Shadow` 。 `Point Shadow` 的计算过程与 [Shadow Mapping](Ch%2027%20Shadow%20Mapping.md) 中计算阴影的方式基本相同，只不过需要用 Cubemap 替代 Texture2D 作为阴影贴图，该阴影贴图被称为 `Depth Cubemap` 或 `Omonidirectional shadow mapping` 。
 
@@ -234,7 +234,7 @@ float ShaderCalculation(vec3 fragPos, vec3 normal, vec3 lightDir)
 ```
 
 片段着色器的其他部分与 [Shadow Mapping](Ch%2027%20Shadow%20Mapping.md) 中类似，结果如下，其中红色方块表示光源位置：
-![](assets/Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows/Untitled%202%201.png)
+![](assets/Ch%2028%20Point%20Shadows/Untitled%202%201.png)
 
 在 [Shadow Mapping](Ch%2027%20Shadow%20Mapping.md)  中，为了产生软阴影，使用的 PCF 方法，在点光源的计算中同样可以运用。只不过在 [Shadow Mapping](Ch%2027%20Shadow%20Mapping.md)中 PCF 的计算是通过一个二维的嵌套循分别在 $x,y$ 方向上取采样点，而这里因为用的是 Depth Cubemap，所以需要额外的 $z$ 方向，即需要使用三维的嵌套循环：
 
@@ -260,7 +260,7 @@ shadow /= (samples * samples *samples);
 ```
 
 使用上述的方法计算阴影，可以得到如下的软阴影结果：
-![](assets/Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows/Untitled%203.png)
+![](assets/Ch%2028%20Point%20Shadows/Untitled%203.png)
 
 但是这个方法存在的问题是，它需要采样过多的点。如在上例中，实际上采样了 $4_4_4=64$ 个点，且这些点朝向很可能是非常接近的，因此可能有大量的性能消耗在了提升并不明显的采样方向上。
 
@@ -290,7 +290,7 @@ shadow /= 20;
 ```
 
 结果如下所示，可以看到同样产生了软阴影，但是阴影的显示效果并不如完全的 PCF 好：
-![](assets/Learn%20OpenGL%20-%20Ch%2028%20Point%20Shadows/Untitled%204.png)
+![](assets/Ch%2028%20Point%20Shadows/Untitled%204.png)
 
 ## 源码：
 

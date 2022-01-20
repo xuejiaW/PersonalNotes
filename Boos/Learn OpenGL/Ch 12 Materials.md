@@ -1,6 +1,6 @@
 ---
 created: 2021-12-16
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -12,7 +12,7 @@ tags:
 # 物体材质
 
 现实世界中，不同物体对于光的反射是不同的。比如钢材会比陶瓷玻璃更闪闪发光，木头箱子不会像钢制箱子那样对光有很强的反射等等。不同材质物体的模拟光照效果如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2012%20Materials/Untitled.png)
+![|500](assets/Ch%2012%20Materials/Untitled.png)
 
 并且有时对于一个物体，镜面反射的光看起来的颜色与漫反射光的颜色会不一样，这就导致了之前单纯通过 `objectColor` 表示整个物体颜色的方法不再适用。
 
@@ -90,7 +90,7 @@ color = vec4(light,1);
 ```
 
 # 结果与源码：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2012%20Materials/Material.gif)
+![|500](assets/Ch%2012%20Materials/Material.gif)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/10.Materials/main.cpp)
 

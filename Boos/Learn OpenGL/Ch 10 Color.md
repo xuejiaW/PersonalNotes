@@ -1,6 +1,6 @@
 ---
 created: 2021-12-15
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -10,7 +10,7 @@ tags:
 
 太阳光是白光（所有颜色的总和），当看到一个玩具是蓝色的，并非因为这个玩具本身是蓝的，是因为玩具吸收了除了蓝光之外所有的光，仅有蓝光反射到了我们的眼睛里，所以我们认为玩具是“蓝色的”
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2010%20Color/Untitled%201.png)
+![|500](assets/Ch%2010%20Color/Untitled%201.png)
 
 # 代码表示
 
@@ -60,7 +60,7 @@ void main()
 # 结果与源码：
 
 在光颜色为 $(1.0,1.0,1.0)$，物体颜色为 $(0.2,0,0)$ 的情况下，结果如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2010%20Color/Untitled%201%201.png)
+![](assets/Ch%2010%20Color/Untitled%201%201.png)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/8.Colors/main.cpp)
 

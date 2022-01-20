@@ -1,6 +1,6 @@
 ---
 created: 2021-12-15
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -67,14 +67,14 @@ void processInput(GLFWwindow *window)
 # 鼠标控制摄像机角度
 
 首先需要了解摄像机角度的定义，对于摄像机有三个术语 `pitch, yaw, roll`分别描述绕着$x,y,z$三个轴的旋转：
-![|700](assets/Learn%20OpenGL%20-%20Ch%2007%20Camera/Untitled.png)
+![|700](assets/Ch%2007%20Camera/Untitled.png)
 
 通量来说，只需要修改pitch角和yaw角度即可。可使用鼠标的水平平移来修改yaw角度，鼠标的前进后退来修改pitch角度。
 
 通过pitch和yaw角度，可以计算出摄像机的前方向。根据前方向，和世界坐标的上方向$(0,1,0)$，可以计算出摄像机的右方向。再根据摄像机的前方向，摄像机的右方向，可求得摄像机的上方向。
 
 首先只考虑yaw角度，根据示意图，可以很快的计算出yaw角度对于摄像机前方向的贡献：
-![|300](assets/Learn%20OpenGL%20-%20Ch%2007%20Camera/Untitled%201.png)
+![|300](assets/Ch%2007%20Camera/Untitled%201.png)
 
 ```cpp
 glm::vec3 direction;
@@ -84,7 +84,7 @@ direction.z = sin(glm::radians(yaw));
 
 然后计算pitch角度。想想物体躺在X轴上，pitch角度为$\theta$，y轴上分量为 $\sin\theta$，x轴上分量为$\cos\theta$。同理，当物体躺在Z轴上时，y轴上分量为 $\sin\theta$，z轴上分量为$\cos\theta$。示意图代码如下：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2007%20Camera/Untitled%202.png)
+![](assets/Ch%2007%20Camera/Untitled%202.png)
 
 ```cpp
 direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
@@ -183,7 +183,7 @@ void mouse_button_Callback(GLFWwindow *window, int key, int action, int mode)
 在上述代码中变量 `firstMouse` 是为了避免程序一开始因为 `lastX, lastY` 初始值为0导致的跳变。同时为了避免颠倒情况，将 `pitch` 的范围限制在 $-89 \sim 89$的范围内。
 
 ## 结果与源码
-![|400](assets/Learn%20OpenGL%20-%20Ch%2007%20Camera/GIF.gif)
+![|400](assets/Ch%2007%20Camera/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/7.Camera/main.cpp)
 

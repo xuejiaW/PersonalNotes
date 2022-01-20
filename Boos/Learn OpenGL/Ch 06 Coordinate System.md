@@ -1,6 +1,6 @@
 ---
 created: 2021-12-15
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -10,7 +10,7 @@ tags:
 
 将物体的坐标变换拆成几个过度坐标系的好处在于，在某些特定的坐标系统中，某些运算将更加方便。
 
-![|700](assets/Learn%20OpenGL%20-%20Ch%2006%20Coordinate%20System/Untitled.png)
+![|700](assets/Ch%2006%20Coordinate%20System/Untitled.png)
 
 ## 本地坐标系
 
@@ -32,9 +32,9 @@ tags:
 
 只有在透视投影下，才会有近大远小的效果，所以一般来说使用的都是透视投影。
 
-![正射投影|400](assets/Learn%20OpenGL%20-%20Ch%2006%20Coordinate%20System/Untitled%201.png)  
+![正射投影|400](assets/Ch%2006%20Coordinate%20System/Untitled%201.png)  
 
-![透视投影|400](assets/Learn%20OpenGL%20-%20Ch%2006%20Coordinate%20System/Untitled%202.png)
+![透视投影|400](assets/Ch%2006%20Coordinate%20System/Untitled%202.png)
 
 ## 屏幕坐标
 
@@ -189,7 +189,7 @@ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 # 结果与源码
 
-![|400](assets/Learn%20OpenGL%20-%20Ch%2006%20Coordinate%20System/GIF.gif)
+![|400](assets/Ch%2006%20Coordinate%20System/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/6.CoordinateSystems/main.cpp)
 

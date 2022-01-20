@@ -1,6 +1,6 @@
 ---
 created: 2021-12-14
-updated: 2022-01-06
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -10,7 +10,7 @@ tags:
 
 在渲染管线的每一步上，都可能会有一些在GPU上运行的小程序，这些小程序被称为 `shaders`。 `shaders` 是通过GLSL（OpenGL Shading Language）语言进行编写。下图展示了渲染管线的基本流程，其中蓝色的部分是可以通过 `shader`进行控制的。
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle/image-20211214232921673.png)
+![|500](assets/Ch%2002%20Hello%20Triangle/image-20211214232921673.png)
 
 其中步骤包括：
 
@@ -42,7 +42,7 @@ float vertices[] = {
 
 顶点的位置定义是放在 `标准化设备坐标系（Normalized Device Coordinates, NDC）` 下的，该坐标系是一个从$-1.0\sim 1.0$的坐标系，其中$(0,0)$点处于屏幕的中心。而屏幕坐标系下，坐标系的数值是 $0\sim 1$，其中$(0,0)$出现在屏幕的左上角。标准化设备坐标系如下图所示：
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle/image-20211214233002415.png)
+![|500](assets/Ch%2002%20Hello%20Triangle/image-20211214233002415.png)
 
 从标准化设备坐标系转换到屏幕坐标系是依赖 `glViewport` 函数。
 
@@ -135,7 +135,7 @@ glEnableVertexAttribArray(0);
 
 因此关于顶点数据的整个流程如下图所示，VAO管理了一系列顶点数据的链接过程，而每个数据的链接又与当前绑定的VBO相关。同时，VAO也可以管理索引缓冲对象。
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle/image-20211214233259386.png)
+![|500](assets/Ch%2002%20Hello%20Triangle/image-20211214233259386.png)
 
 VAO创建代码如下：
 
@@ -307,7 +307,7 @@ glDrawArrays(GL_TRIANGLES, 0, 3);
 
 # 结果与源码
 
-![](assets/Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle/image-20211214233511740.png)
+![](assets/Ch%2002%20Hello%20Triangle/image-20211214233511740.png)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/2.HelloTriangle/main.cpp)
 

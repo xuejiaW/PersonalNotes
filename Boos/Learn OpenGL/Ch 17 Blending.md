@@ -1,6 +1,6 @@
 ---
 created: 2021-12-17
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -25,7 +25,7 @@ glTexImage2D(GL_TEXTURE_2D, 0, nrChannels == 3 ? GL_RGB : GL_RGBA, width, height
 ```
 
 因为 OpenGL 默认不知道如何处理 alpha 值的，因此直接渲染带有 Alpha 通道的物体，其透明部分会显示为白色。
-![|300](assets/Learn%20OpenGL%20-%20Ch%2017%20Blending/Untitled.png)
+![|300](assets/Ch%2017%20Blending/Untitled.png)
 
 在片段着色器中可使用 `discard` 命令丢弃某一个片元，可以通过设置当 alpha 值小于某个阈值时，认为该像素是完全透明的，对该像素进行丢弃，代码如下：
 
@@ -40,7 +40,7 @@ void main()
 ```
 
 结果为：
-![|300](assets/Learn%20OpenGL%20-%20Ch%2017%20Blending/Untitled%201.png)
+![|300](assets/Ch%2017%20Blending/Untitled%201.png)
 
 # 混合
 
@@ -62,8 +62,8 @@ $$C_{result}= C_{source}F_{source}+C_{destination}F_{destination}$$
 - $F_{destination}$： 指定的 alpha 对 destination 颜色的影响
 
 着色器运行后，在所有的测试都通过后，这个混合方程才会被执行。如有红色和绿色两个平面，透明度分别为 1 和 0.6，两者示意图如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2017%20Blending/Untitled%202.png)
-![|400](assets/Learn%20OpenGL%20-%20Ch%2017%20Blending/Untitled%203.png)
+![|400](assets/Ch%2017%20Blending/Untitled%202.png)
+![|400](assets/Ch%2017%20Blending/Untitled%203.png)
 
 ```ad-warning
 Alpha通道同样需要进行混合，上述例子中计算后alpha通道值为0.76，表示计算后的像素为半透明。但这并不意味着例子中红色面板背后的颜色会透出来，因为渲染顺序是从红色面板后逐渐向前，即先红色面板背后物体，再是红色面板，再是绿色面板。因此这里得到的新半透明颜色只会影响后续盖在它上面的其他像素。
@@ -151,7 +151,7 @@ glBlendEquation(GLnum mode)
     - 先渲染离得较远的透明物体
 
 # 结果与源码
-![|500](assets/Learn%20OpenGL%20-%20Ch%2017%20Blending/Untitled%204.png)
+![|500](assets/Ch%2017%20Blending/Untitled%204.png)
 
  [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/15.Blending/main.cpp)
 

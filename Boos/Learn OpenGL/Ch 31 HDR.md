@@ -95,7 +95,7 @@ tunnel->GetMeshRender()->GetMaterial()->AddTexture("diffuseTexture", woodTex);
 ```
 
 当未引入 `Tone Mapping` 时，即使使用了 `Floating Point` ，最终片段着色器的输出颜色还是会被 `Clamp` 到 $0.0 ~\sim 1.0$ 的范围中。效果如下所示，可以看到远处的光亮处几乎是白色一片，信息丢失的很严重：
-![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled.png)
+![](assets/Ch%2031%20HDR/Untitled.png)
 
 # Tone Mapping
 
@@ -118,7 +118,7 @@ FragColor = vec4(mapped, 1.0);
 ```
 
 该算法的运行的结果如下，可以看到最亮处有了更多的信息：
-![](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%201.png)
+![](assets/Ch%2031%20HDR/Untitled%201.png)
 
 ## Exposure Tone Mapping
 
@@ -143,7 +143,7 @@ FragColor = vec4(mapped, 1.0);
 
 |                                                                 |                                                                 |                                                                 |
 | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Exposure = 0.3](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%202.png) | ![Exposure = 1](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%203.png) | ![Exposure = 5](assets/Learn%20OpenGL%20-%20Ch%2031%20HDR/Untitled%204.png) |
+| ![Exposure = 0.3](assets/Ch%2031%20HDR/Untitled%202.png) | ![Exposure = 1](assets/Ch%2031%20HDR/Untitled%203.png) | ![Exposure = 5](assets/Ch%2031%20HDR/Untitled%204.png) |
 
 
 # 源码：

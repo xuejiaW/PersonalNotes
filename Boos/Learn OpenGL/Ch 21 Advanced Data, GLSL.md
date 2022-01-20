@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -118,7 +118,7 @@ gl_PointSize = gl_Position.z;
 ```
 
 例子中，将 `gl_PointSize` 设置为 `gl_Position.z` ，这也随着顶点的深度越大（距离摄像机越远），绘制的点的尺寸也会越大。
-![|500](assets/Learn%20OpenGL%20-%20Ch%2021%20Advanced%20Data,%20GLSL/GIF_11-16-2020_11-53-19_AM.gif)
+![|500](assets/Ch%2021%20Advanced%20Data,%20GLSL/GIF_11-16-2020_11-53-19_AM.gif)
 
 ## gl_VertexID
 
@@ -141,7 +141,7 @@ else
     FragColor = vec4(0,1,0,1);
 ```
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2021%20Advanced%20Data,%20GLSL/half.gif)
+![|500](assets/Ch%2021%20Advanced%20Data,%20GLSL/half.gif)
 
 ## gl_FrontFacing
 
@@ -156,7 +156,7 @@ else
     FragColor = texture(backTexture,texcoord);
 ```
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2021%20Advanced%20Data,%20GLSL/GIF.gif)
+![|500](assets/Ch%2021%20Advanced%20Data,%20GLSL/GIF.gif)
 
 ## gl_FragDepth
 
@@ -308,7 +308,7 @@ layout (std140) uniform ExampleBlock
 
 在C++端创建的Uniform缓冲对象内存与Shader中定义的Uniform块需要通过 `绑定点（Binding points）` 结合在一起。多个Shader可以绑定至同一个 `绑定点`，这也就达到了 Uniform缓冲对象复用的作用。如下图所示：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2021%20Advanced%20Data,%20GLSL/Untitled.png)
+![](assets/Ch%2021%20Advanced%20Data,%20GLSL/Untitled.png)
 
 因此整个使用Uniform缓冲对象的流程如下：
 
@@ -413,7 +413,7 @@ GO_Cube *frontFacingCube = new GO_Cube(new MeshRender(frontFacingShader, true));
 ```
 
 # 结果与源码：
-![](assets/Learn%20OpenGL%20-%20Ch%2021%20Advanced%20Data,%20GLSL/AdvancedDataGLSL.gif)
+![](assets/Ch%2021%20Advanced%20Data,%20GLSL/AdvancedDataGLSL.gif)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/19.AdvancedData%26%26AdvancedGLSL/main.cpp)
 

@@ -16,7 +16,7 @@ tags:
 
 首先从 Assimp Github 页面上下载最新代码，然后在工程文件夹中通过 CMake 编译出需要的 MinGW 源文件：
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2008%20Model%20%20Loading/Untitled.png)
+![|500](assets/Ch%2008%20Model%20%20Loading/Untitled.png)
 
 ```ad-tip
 测试时使用的 Github 仓库最新 Commit ID 为 96d0524fab2173a4198f12cd
@@ -28,7 +28,7 @@ tags:
 
 |                                                                       |                                                                       |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| ![](assets/Learn%20OpenGL%20-%20Ch%2008%20Model%20%20Loading/Untitled%201.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2008%20Model%20%20Loading/Untitled%202.png) |
+| ![](assets/Ch%2008%20Model%20%20Loading/Untitled%201.png) | ![](assets/Ch%2008%20Model%20%20Loading/Untitled%202.png) |
 
 在编译的 Makefile 中的 `LIBRARIES` 加上新的 assimp ，即：
 
@@ -39,7 +39,7 @@ LIBRARIES    := -lglad -lglfw3dll -lassimp # Add Lib file
 # Assimp 数据结构
 
 Assimp 将不同的模型数据（如 `fbx` , `obj` ）都加载为 Assimp 定义的数据结构，如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2008%20Model%20%20Loading/Untitled%203.png)
+![](assets/Ch%2008%20Model%20%20Loading/Untitled%203.png)
 
 - `aiScene` 中包含了一个 `RootNode` ，一个 `aiMesh` 数据的数组，一个 `aiMaterial` 数据的数组。
 - 每个 `aiNode` 数据中包含了一个子 `aiNode` 的数组，和一个 `aiMesh` 数据的 Index 的数组（即 `int` 数组）。
@@ -196,7 +196,7 @@ else
 
 # 结果与源码：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2008%20Model%20%20Loading/Untitled%204.png)
+![](assets/Ch%2008%20Model%20%20Loading/Untitled%204.png)
 
 [main.cpp](https://www.notion.so/main-cpp-f28de83f9c3b4bb09805de058326acef)
 [Model.cpp](https://www.notion.so/Model-cpp-4953a69e304f44f8a6b6d0c0116e58d7)

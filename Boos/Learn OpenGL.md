@@ -61,3 +61,5 @@ tags:
 [Ch 30 Parallax Mapping](Learn%20OpenGL/Ch%2030%20Parallax%20Mapping.md)
 [Ch 31 HDR](Learn%20OpenGL/Ch%2031%20HDR.md)
 [Ch 32 Bloom](Learn%20OpenGL/Ch%2032%20Bloom.md)
+[Ch 33 Deferred Shading](Learn%20OpenGL/Ch%2033%20Deferred%20Shading.md)
+[Ch 34 SSAO](Learn%20OpenGL/Ch%2034%20SSAO.md)

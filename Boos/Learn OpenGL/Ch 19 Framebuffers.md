@@ -142,7 +142,7 @@ scene.postRender = []() {
 ```
 
 渲染的结果如下，深度缓冲，模板缓冲都能正常计算：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2019%20Framebuffers/Untitled.png)
+![|500](assets/Ch%2019%20Framebuffers/Untitled.png)
 
 # 后处理
 
@@ -206,7 +206,7 @@ FragColor = vec4(col, 1.0);
 # 结果与源码：
 
 模糊效果：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2019%20Framebuffers/Untitled%201.png)
+![|500](assets/Ch%2019%20Framebuffers/Untitled%201.png)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/17.Framebuffers/main.cpp)
 

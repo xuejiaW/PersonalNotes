@@ -1,6 +1,6 @@
 ---
 created: 2021-12-17
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -10,14 +10,14 @@ tags:
 图像的采样最小单位是像素，这是一个不连续的采样，像素的密集程度即是采样频率。如果图像的某一块频率很高（例如有颜色的跳变），而采样频率不够（未达到奈奎斯特采样频率），那么就会引起失真。
 
 在光栅化时，会以每个像素的中点是否被图形覆盖来决定该物体是否要对这个像素的颜色做出贡献，该计算过程被称为 `Coverage` ，示意图如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled.png)
+![|400](assets/Ch%2024%20Anti%20Aliasing/Untitled.png)
 
 ```ad-warning
 `Coverage` 和 [Depth Testing](LearnOpenGL-Ch%2015%20Depth%20Testing.md) 中介绍的 `Occlusion` 共同决定了像素的可见性。
 ```
 
 图中每个方块表示一个像素，方块中的点表示中心，点为红色表示像素中点在图形内，点为白色表示像素中心在图形外，采样的结果如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%201.png)
+![|400](assets/Ch%2024%20Anti%20Aliasing/Untitled%201.png)
 
 # SSAA
 
@@ -32,22 +32,22 @@ tags:
 `MSAA（Multisamplaing Anti-Aliasing）` 的核心思想与 `SSAA` 类似，都是通过采样点的增加来减少锯齿。
 
 但与 `SSAA` 不同的是，在 `MSAA` 中像素的数量仍然是不变的，但是每个像素会存在多个采样点，这些采样点被称为 `subsamples` ，如下所示：图中蓝色的是通过 `Coverage` 测试的 `subsamples` ，灰色的则是未通过的。MSAA的等级表示每个像素中 `subsamples` 的个数，如 `4X MSAA` 表示每个像素中有四个 `subsamples`。
-![|400](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%202.png)
+![|400](assets/Ch%2024%20Anti%20Aliasing/Untitled%202.png)
 
 对于所有的 `subsamples` 都需要进行深度测试和模版测试，因此如果开启了 `4x MSAA`，则深度缓冲和模板缓冲的大小会变为四倍。
 
 但并不是每个通过了 `Coverage` 的 `subsamples` 都需要通过片元着色器计算颜色。对于属于同一个像素的 `subsamples` ，最多需要计算一次颜色即可，且这个颜色的计算是基于像素的中心计算的，而不是 `subsamples` 的位置。但是每个 `subsamples` 还是需要存储颜色来区分它是否通过了 `Coverage` ，如下图所示，因此如果开启了 `4X MSAA`，则颜色缓冲的大小也会变为四倍。
-![|500](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%203.png)
+![|500](assets/Ch%2024%20Anti%20Aliasing/Untitled%203.png)
 
 ## MSAA Resolve
 
 在得到 `subsamples` 的颜色后，会根据像素的各 `subsamples` 计算出该像素最后的颜色，这个过程被称为 `Resolve`。
 
 通常而言， `Resolve` 采用的是一像素宽的 `盒滤波（Box Filter）` ，即会平均一个像素内所有 `subsamples` 的颜色。例，如果在四个 `subsamples` 中通过了两个，则这个像素的颜色为 50% 颜色缓冲中的颜色，与 50%片元计算得到的颜色的混合。如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%204.png)
+![|500](assets/Ch%2024%20Anti%20Aliasing/Untitled%204.png)
 
 因为每个像素都会根据其中 subsamples 通过的数目得到一个混合的颜色，所以得到的物体的边缘会更平滑，如下所示：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%205.png)
+![|400](assets/Ch%2024%20Anti%20Aliasing/Untitled%205.png)
 
 ## MSAA in GLFW
 
@@ -132,14 +132,14 @@ scene.postRender = []() {
 # 结果与源码
 
 未启用MSAA
-![|500](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%206.png)
+![|500](assets/Ch%2024%20Anti%20Aliasing/Untitled%206.png)
 
 启用MSAA
-![|500](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%207.png)
+![|500](assets/Ch%2024%20Anti%20Aliasing/Untitled%207.png)
 
 带后处理的MSAA
 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2024%20Anti%20Aliasing/Untitled%208.png)
+![|500](assets/Ch%2024%20Anti%20Aliasing/Untitled%208.png)
 
 [main.cpp](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/22.AntiAliasing/main.cpp)
 

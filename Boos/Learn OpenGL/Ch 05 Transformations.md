@@ -1,6 +1,6 @@
 ---
 created: 2021-12-15
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -49,7 +49,7 @@ glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
 ## 结果与源码
 
-![|400](assets/Learn%20OpenGL%20-%20Ch%2005%20Transformations/GIF.gif)
+![|400](assets/Ch%2005%20Transformations/GIF.gif)
 
 [CPP](https://raw.githubusercontent.com/xuejiaW/Study-Notes/master/LearnOpenGL_VSCode/src/5.Transformations/main.cpp)
 

@@ -10,7 +10,7 @@ tags:
 [Normal Mapping](Ch%2029%20Normal%20Mapping.md) 调整了表面的法线，让表面在光照的计算中能有更真实的表现。
 
 但一个真正的有凹凸变化的平面，即使在不考虑光照效果的情况下，也会与高度无变化的平面效果上存在区别。如以一定的角度去观察平面，如果平面存在凸出，则该凸出点会遮挡住后面的平面。如下所示，$V$ 为视线方向，如果平面是如黑线所示一样无高度变化，则视线会看到 $A$ 点，而如果平面如红线般存在高度变化，则实现会看到 $B$ 点。
-![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled.png)
 
 为了让一个无凹凸变化的平面能展现出满足凹凸变化的平面效果，一个最直观的方法就是去调整平面的 Mesh。 Displacement Mapping 技术就是该思路。在 Displacement Mapping 中，会通过如下的一张 Height Map 去调整表面顶点的高度，即根据纹理去调整原先的 Mesh，得到一个新的有凹凸变化的 Mesh。
 ![|400](assets/3D%20Math%20Primer%20-%20Ch%2008%20Rotation%20in%20Three%20Dimensions/Untitled%201.png)
@@ -40,12 +40,12 @@ $$\mathbf{Texcoord}_{\mathrm{new}}=\mathbf{Texcoord}_{\mathrm{origin}}+\frac{h \
 
 |                                                                                   |                                                                                     |
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| ![Height Map](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/BrickHeight%201.jpg) | ![Displace Map](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/BrickDisplacement.jpg) |
+| ![Height Map](assets/Ch%2030%20Parallax%20Mapping/BrickHeight%201.jpg) | ![Displace Map](assets/Ch%2030%20Parallax%20Mapping/BrickDisplacement.jpg) |
 
 可以看到两者几乎是反色的关系，在 `Height Map` 中黑色表示平面的位置，白色表示突起的位置。在 `Displacement Map` 中黑色同样表示平面的位置，但白色表示凹陷的部分。
 
 当使用的是 Displacement Map 时，Parallax Mapping 的示意图变成如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%203.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled%203.png)
 
 其中 $\mathrm{A,B}$ 以及棕色点仍然分别表示 `未作处理时平面采样的点`， `理想中看到的点` 和 `使用 Parallax Mapping` 采样的点。且同样是用 $\mathrm{H(A)}$ 的长度在视线 $\overline{\mathrm{V}}$ 上截取一段 $\overline{\mathrm{P}}$ ，并将其在 $uv$ 方向上的分量作为 Texcoord的偏移量。
 
@@ -86,7 +86,7 @@ vec3 normal = texture(normalMap, texCoords).rgb;
 
 |                                                                                |                                                                                |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| ![未使用 Parallex Mapping](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%204.png) | ![使用 Parallax Mapping](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%205.png) |
+| ![未使用 Parallex Mapping](assets/Ch%2030%20Parallax%20Mapping/Untitled%204.png) | ![使用 Parallax Mapping](assets/Ch%2030%20Parallax%20Mapping/Untitled%205.png) |
 
 可以看到右侧使用了 Parallax Mapping 时，在 Mesh 的边缘存在一些错误，这是因为 Texcoord 的偏移，导致了边缘的 Texcoord 数值已经超过了数值 $[0,1]$。对于这些超过范围的像素，直接丢弃即可，即：
 
@@ -97,20 +97,20 @@ if(texCoords.x > 1.0 || texCoords.y > 1.0 || texCoords.x < 0.0 || texCoords.y < 
 ```
 
 丢弃错误像素后的结果如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%206.png)
+![|400](assets/Ch%2030%20Parallax%20Mapping/Untitled%206.png)
 
 # Steep Parallax Mapping
 
 如前所述， `Parallax Mapping` 方法仅是一个模拟近似的方法，因此在平面高度陡峭变化的情况下，可能无法得到理想的结果，如下图所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%207.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled%207.png)
 
 图中，最终的采样点（棕色）与理想的采样点（蓝色）存在较大的高度误差，因此在后续纹理上采样到的结果可能也与理想中的情况，有较大的差距。
 
 在上述的实现中，当以某些角度观察砖块的接缝处（高度陡峭变化处）就会看到错误的现象，如下所示：
-![砖块的接缝处存在错误|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%208.png)
+![砖块的接缝处存在错误|400](assets/Ch%2030%20Parallax%20Mapping/Untitled%208.png)
 
 解决该问题的方法是 陡峭视差映射（Steep Parallax Mapping），该方法用多次采样逼近得到更接近理想采样点的 Texcoord 偏移量，而不是直接用 \mathrm{H(A)} 求得偏移量，示意图如下：
-![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%209.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled%209.png)
 
 ```ad-tip
 陡峭视差映射使用的是逼近求值思想
@@ -151,7 +151,7 @@ vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
 ```
 
 使用该方法得到的效果如下，可以看到在砖块的接缝处已经没有了之前的错误显示效果：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2010.png)
+![|400](assets/Ch%2030%20Parallax%20Mapping/Untitled%2010.png)
 
 根据陡峭视差映射的示意图中，可以看到，视线越平行与平面，则每层表示的 Texcoord 偏移量就越大。因此可以用如下代码根据视线与平面的关系调整需要用到的层数：
 
@@ -172,7 +172,7 @@ $$mix(x,y,a) = x(1-a)+ya$$
 # Parallax Occlusion Mapping
 
 `陡峭视差映射`可以解决高度陡峭变化引发的失真问题，但因为是选取不同的层来决定 Texcoord 的偏移量，而不同层的偏移量又是离散的，这就会导致在高度陡峭变化的部分出现分层的现象，如下所示：
-![|300](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2011.png)
+![|300](assets/Ch%2030%20Parallax%20Mapping/Untitled%2011.png)
 
 这一问题最简单的解决方式就是增加层数，层数越多，分层的效果就越不明显。但这种解决方法会消耗非常多的性能。
 
@@ -183,7 +183,7 @@ $$mix(x,y,a) = x(1-a)+ya$$
 ```
 
 视差遮蔽映射的示意图如下：
-![](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2012.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled%2012.png)
 
 图中 $\mathrm{T_3}$ 为陡峭视差映射中使用的层，$\mathrm{T_{2}}$ 为上一层。对于这两层，都用从 Displacement Map 中读取的深度值，减去层的深度值，即用蓝色点的深度值减去紫色点的深度值，该差值表示理想深度与实际层深度的差距。对于 $\mathrm{T_3}$ 层，该差值用 $below$ 表示，对于 $\mathrm{T_{2}}$ 层，该插值用 $beyond$ 表示。
 
@@ -218,7 +218,7 @@ vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
 ```
 
 使用视差遮蔽映射的效果如下：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2013.png)
+![|500](assets/Ch%2030%20Parallax%20Mapping/Untitled%2013.png)
 
 ```ad-note
 陡峭视差映射和视差遮蔽映射解决的是当要表现的高度陡峭变化时引发的失真问题。
@@ -227,7 +227,7 @@ vec2 ParallaxMapping(vec2 originTexCoords, vec3 viewDir)
 # View Direction Issue
 
 使用了视差映射的平面，在视线与平面夹角过小时会产生错误的现象，如下所示：
-![|300](assets/Learn%20OpenGL%20-%20Ch%2030%20Parallax%20Mapping/Untitled%2014.png)
+![|300](assets/Ch%2030%20Parallax%20Mapping/Untitled%2014.png)
 
 这种错误现象是视差映射的缺陷，无法被解决。也因此视差映射通常被用在地面或墙体这样不太会被平行观察的平面。
 

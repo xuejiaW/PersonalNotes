@@ -9,7 +9,7 @@ tags:
 对于一个表面而言，其细节程度与建模的精度相关，如一面墙，可以使用一个简单的平面表示，也可以通过非常精细的建模表示墙上的砖块突起等。
 
 但是精细的模型往往需要消耗大量的资源，因此还有一种方法就是用 `法线贴图（Normal Mapping / Bump Mapping）` 来为模型增加细节。因为对于光照计算而言，一个表面是通过它的法线来表示的（漫反射，镜面反射等都是个光纤与法线的计算）。如下图中，红色的线为真实的表面，黑色的箭头表示法线，绿色的虚线则表示光照计算时，假定的表面的方向：
-![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled.png)
+![](assets/Ch%2029%20Normal%20Mapping/Untitled.png)
 
 # Normal Mapping
 
@@ -23,7 +23,7 @@ vec3 rgb_normal = normal * 0.5 + 0.5; // transforms from [-1,1] to [0,1]
 
 |                                                                         |                                                                     |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%201%201.png) | ![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%202.png) |
+| ![](assets/Ch%2029%20Normal%20Mapping/Untitled%201%201.png) | ![](assets/Ch%2029%20Normal%20Mapping/Untitled%202.png) |
 
 可以发现法线贴图整体是蓝色，因为对于面朝屏幕的平面而言，其法线是指向屏幕的，即为 $(0,0,1)$ 方向，即在 RGB 空间中表现为蓝色。
 
@@ -56,7 +56,7 @@ void main()
 
 |                                                                                   |                                                                                  |
 | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| ![未使用法线贴图](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%203.png) | ![ 使用法线贴图](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%204.png) |
+| ![未使用法线贴图](assets/Ch%2029%20Normal%20Mapping/Untitled%203.png) | ![ 使用法线贴图](assets/Ch%2029%20Normal%20Mapping/Untitled%204.png) |
 |                                                                                   |                                                                                  |
 
 但上例存在一个问题，因为法线贴图提供的法线始终大约分布在 $(0,0,1)$ 附近，且并没有根据模型的 Model 矩阵做任何的调整，所以仅当表面是朝向屏幕时（法线为 $(0,0,1)$）时，使用法线贴图才会产生正确的效果。
@@ -76,14 +76,14 @@ void main()
 ```
 
 由 `TBN` 三个轴形成的 Tangent Space 的示意图如下所示， $T$ 轴即通常在纹理表示时用的 $U$ 轴， $B$ 轴即通常在纹理表示时用的 $V$ 轴：
-![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%205.png)
+![](assets/Ch%2029%20Normal%20Mapping/Untitled%205.png)
 
 因为向量 `Normal` 的值可以直接从法线贴图中读到，因此剩下要解决的问题就是如何求得 `Tangent` 和 `Bitangent` 向量的值。
 
 ## 数学实现
 
 在 Tangent Space 中任意选取一个三角形，如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%206.png)
+![](assets/Ch%2029%20Normal%20Mapping/Untitled%206.png)
 
 上图中 $E_1$ 和边 $E_{2}$ 可分别用如下的式子表示，其中 $E_1$ 为边在世界坐标系中的表示，$(\Delta U_1, \Delta V_1)$为边 $E_1$ 在纹理的 UV 坐标系下的表示， $E_2$ 和 $(\Delta U_1, \Delta V_1)$ 的含义类似。
 
@@ -280,7 +280,7 @@ vs_out.TangentFragPos = inverseTBN * vs_out.FragPos;
 ## 效果与源码：
 
 使用了 Tangent Space 纠正的效果及源码如下：
-![](assets/Learn%20OpenGL%20-%20Ch%2029%20Normal%20Mapping/Untitled%207.png)
+![](assets/Ch%2029%20Normal%20Mapping/Untitled%207.png)
 
 [main.cpp](https://www.notion.so/main-cpp-70d33a2c636349c19a6899808c4d062b)
 

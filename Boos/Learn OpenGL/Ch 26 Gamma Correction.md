@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -10,7 +10,7 @@ tags:
 
 人眼对于光线性变化的感知和光真实的线性变化的感知是不同的。如下所示，上半部分是人眼感知的线性变化，下半部分是真实的线性变化。
 
-![](assets/Learn%20OpenGL%20-%20Ch%2026%20Gamma%20Correction/Untitled.png)
+![](assets/Ch%2026%20Gamma%20Correction/Untitled.png)
 
 人感知到的光的变化和实际的光的变换，转换关系大致可以表示为 $Perceived = {Physical}^{2.2}$，数值范围为 $0.0 \sim 1.0$。
 
@@ -31,7 +31,7 @@ tags:
 # Gamma 矫正
 
 为了在显示设备上展现出真实物理世界应当有的颜色就必须进行 `Gamma矫正`，消除显示器对最终显示色彩的影响。因为显示器会对输出图像进行次幂为 2.2 的指数变换，因此 Gamma矫正的实际工作就是做次幂为 $\frac{1}{2.2}$ 的指数变换，如下图所示：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2026%20Gamma%20Correction/Untitled%201.png)
+![|400](assets/Ch%2026%20Gamma%20Correction/Untitled%201.png)
 
 如想准确的输出 $(0.5,0,0)$，先进行Gamma矫正，$(0.5,0,0)^{0.45}= (0.73,0,0)$，当显示器进行输出时会进行Gamma变换，即 $(0.73,0,0)^{2.2}=(0.5,0,0)$
 
@@ -78,7 +78,7 @@ FragColor.rgb = pow(FragColor.rgb,vec3(1.0 / 2.2));
 ## sRGB Textures
 
 在使用了上述 Gamma矫正后，会发现纹理会变得过于亮。如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2026%20Gamma%20Correction/Untitled%202.png)
+![|500](assets/Ch%2026%20Gamma%20Correction/Untitled%202.png)
 
 这是因为在开启Gamma矫正后，纹理实际上经过了两次矫正。如果一张纹理是由设计师制作的，设计师必然是通过显示器去创作这张纹理的，即这个纹理实际上是在 `SRGB` 空间上有设计师理想的显示效果。
 
@@ -104,7 +104,7 @@ glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB, width, height, 0, GL_RGB, GL_UNSIGNED_BY
 并非所有的纹理都是 sRGB 纹理，通常只有依靠人眼视觉效果产出的纹理是 sRGB纹理。如漫反射贴图通常表示物体看起来的样子，因此通常是sRGB纹理。而镜面反射系数贴图或法线贴图则通常是线性纹理。
 ```
 当修复了 sRGB 两次Gamma矫正后，效果如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2026%20Gamma%20Correction/Untitled%203.png)
+![|400](assets/Ch%2026%20Gamma%20Correction/Untitled%203.png)
 
 # 光线衰减
 

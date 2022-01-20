@@ -1,6 +1,6 @@
 ---
 created: 2021-12-20
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -81,7 +81,7 @@ else
 ```
 
 结果如下：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2023%20Instancing/Untitled.png)
+![|500](assets/Ch%2023%20Instancing/Untitled.png)
 
 # Instanced arrays
 
@@ -119,7 +119,7 @@ glVertexAttribDivisor(3, 1);
 第二个参数为1，表示在画每个Instance时从设置的 `translations` 数组中去一次参数。如果设为2，表示每画两个Instance时取一次参数。该参数的默认值为0，表示画每个顶点时去一次参数。
 
 运行结果为：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2023%20Instancing/Untitled%201.png)
+![|500](assets/Ch%2023%20Instancing/Untitled%201.png)
 
 # 源码：
 

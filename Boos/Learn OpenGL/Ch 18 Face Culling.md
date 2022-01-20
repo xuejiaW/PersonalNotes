@@ -1,6 +1,6 @@
 ---
 created: 2021-12-17
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -11,7 +11,7 @@ tags:
 OpenGL能检查所有面向观察者的面并渲染他们，并丢弃那些背对观察者的面。但仍然要告诉OpenGL哪些面是正向的，哪些是背向的。OpenGL通过计算顶点数据的环绕顺序来判断正向面与反向面：
 
 当定义一组三角形顶点时，可能是正向的，也可能是逆时针的：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling/Untitled.png)
+![|500](assets/Ch%2018%20Face%20Culling/Untitled.png)
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9cf03fdd-4d6e-4914-a1ce-f684ba7facc9/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9cf03fdd-4d6e-4914-a1ce-f684ba7facc9/Untitled.png)
 
@@ -29,12 +29,12 @@ float vertices[] = {
 ```
 
 默认情况下，OpenGL会将逆时针顶点定义的三角形处理为正向三角形。当定义三角形时，应想象当前被定义的三角形是面向自己的，从自己的方向看过去它是逆时针的。
-![|500](assets/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling/Untitled%201.png)
+![|500](assets/Ch%2018%20Face%20Culling/Untitled%201.png)
 
 # 面剔除
 
 OpenGL默认是关闭面剔除的，即一个面的两面都会被渲染。当移动摄像机进入一个立方体后，仍然能看到每个面的渲染：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling/Untitled%202.png)
+![|400](assets/Ch%2018%20Face%20Culling/Untitled%202.png)
 
 打开面剔除的方法为，当打开后进入立方体就不再能从内部看到面的渲染：
 
@@ -51,7 +51,7 @@ glCullFace(GL_FRONT_AND_BACK);
 ```
 
 剔除正向面的效果如下：
-![|400](assets/Learn%20OpenGL%20-%20Ch%2018%20Face%20Culling/Untitled%203.png)
+![|400](assets/Ch%2018%20Face%20Culling/Untitled%203.png)
 
 可以通过 `glFrontFace` 设置是用顺时针（ `GL_CW`）还是逆时针（ `GL_CCW`）表示正向面：
 

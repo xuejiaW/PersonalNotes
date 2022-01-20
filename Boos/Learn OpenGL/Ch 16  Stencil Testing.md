@@ -1,6 +1,6 @@
 ---
 created: 2021-12-16
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
@@ -141,4 +141,4 @@ redCube_2->GetMeshRender()->SetPostRenderHandle([]() {
 ```
 
 # 结果与源码
-![|500](assets/Learn%20OpenGL%20-%20Ch%2016%20%20Stencil%20Testing/Stencil.gif)
+![|500](assets/Ch%2016%20%20Stencil%20Testing/Stencil.gif)
