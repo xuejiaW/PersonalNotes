@@ -11,7 +11,10 @@ Obsidian 中所有设置都是基于 `Valut（库）`的。所有的设置信息
 快捷键的更改时全局的改动
 ```
 
-[Tag](Obsidian/Tag.md)：说明 Obsidian 中 Tag 的使用
+[Commands](Obsidian/Commands.md)：Obsidian 中的指令
+[CSS Snippets](Obsidian/CSS%20Snippets.md)：Obsidian 中自定义 CSS 代码块
+[Image Gallery](Obsidian/Image%20Gallery.md)：Obsidian 中实现无缝的并排图片的方法
+[Tag](Obsidian/Tag.md)：Obsidian 中 Tag 的使用
 [Plugins](Obsidian/Plugins.md)：Obsidian 中核心插件的说明
 [Settings](Obsidian/Settings.md)：Obsidian 中设置相关的说明
 [MetaData](Obsidian/MetaData.md)：Obsidian 中关于 Metadata 的说明
