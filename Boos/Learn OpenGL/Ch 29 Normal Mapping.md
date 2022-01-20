@@ -87,7 +87,7 @@ void main()
 
 上图中 $E_1$ 和边 $E_{2}$ 可分别用如下的式子表示，其中 $E_1$ 为边在世界坐标系中的表示，$(\Delta U_1, \Delta V_1)$为边 $E_1$ 在纹理的 UV 坐标系下的表示， $E_2$ 和 $(\Delta U_1, \Delta V_1)$ 的含义类似。
 
-根据在  [Multiple Coordinate Spaces](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/3D%20Math%20Primer%20-%20Ch%2003%20Multiple%20Coordinate%20Spaces.md) 中关于 坐标转换 的定义 ，可得：
+根据在  [Multiple Coordinate Spaces](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2003%20Multiple%20Coordinate%20Spaces.md) 中关于 坐标转换 的定义 ，可得：
 
 $$\begin{array}{l}E_{1}=\Delta U_{1} T+\Delta V_{1} B \\E_{2}=\Delta U_{2} T+\Delta V_{2} B\end{array}$$
 
@@ -103,7 +103,7 @@ $$\left[\begin{array}{lll}E_{1 \mathrm{x}} & E_{1 \mathrm{y}} & E_{1 \mathrm{z}}
 
 $$\left[\begin{array}{ll}\Delta U_{1} & \Delta V_{1} \\\Delta U_{2} & \Delta V_{2}\end{array}\right]^{-1}\left[\begin{array}{lll}E_{1 \mathrm{x}} & E_{1 \mathrm{y}} & E_{1 \mathrm{z}} \\E_{2 \mathrm{x}} & E_{2 \mathrm{y}} & E_{2 \mathrm{z}}\end{array}\right]=\left[\begin{array}{ccc}T_{\mathrm{x}} & T_{\mathrm{y}} & T_{\mathrm{z}} \\B_{\mathrm{X}} & B_{\mathrm{y}} & B_{\mathrm{z}}\end{array}\right]$$
 
-根据 [3D Math Primer - Ch 06 More on Matrices](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/3D%20Math%20Primer%20-%20Ch%2006%20More%20on%20Matrices.md) 中对于矩阵求逆的描述，可知：
+根据 [Ch 06 More on Matrices](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2006%20More%20on%20Matrices.md) 中对于矩阵求逆的描述，可知：
 
 $$\mathbf{M}^{-1}=\frac{\operatorname{adj} \mathbf{M}}{|\mathbf{M}|}$$
 
@@ -229,7 +229,7 @@ void main()
 }
 ```
 
-上述计算从数学上是可行的，但是因为浮点数精度的问题，可能当传入的 $T,B,N$ 矩阵与 `normalMatrix` 相乘后，就变得不再相互垂直，该问题称为[矩阵蠕变](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/3D%20Math%20Primer%20-%20Ch%2008%20Rotation%20in%20Three%20Dimensions.md) ，可以通过 [矩阵正交化](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/3D%20Math%20Primer%20-%20Ch%2006%20More%20on%20Matrices.md) 解决，如通过如下的代码解决 TBN 矩阵可能存在的蠕变：
+上述计算从数学上是可行的，但是因为浮点数精度的问题，可能当传入的 $T,B,N$ 矩阵与 `normalMatrix` 相乘后，就变得不再相互垂直，该问题称为[矩阵蠕变](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2008%20Rotation%20in%20Three%20Dimensions.md) ，可以通过 [矩阵正交化](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2006%20More%20on%20Matrices.md) 解决，如通过如下的代码解决 TBN 矩阵可能存在的蠕变：
 
 ```glsl
 vec3 T = normalize(normalMatrix* aTangent);

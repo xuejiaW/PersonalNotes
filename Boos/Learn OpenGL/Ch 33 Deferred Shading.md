@@ -16,7 +16,7 @@ tags:
 2.  Lighting Pass：渲染一个铺满屏幕的 Quad，在这次渲染中使用上 `Geometry Pass ` 生成的 `G-Buffer`
 
 整体的流程如下所示：
-![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211227082817485.png)
+![](assets/Ch%2033%20Deferred%20Shading/image-20211227082817485.png)
 
 整个流程的伪代码如下：
 ```cpp
@@ -176,8 +176,8 @@ void main()
 
 |                                                                                           |                                                                                           |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![FragPos](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![Normal](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
-| ![AlbedoSepc.rgb](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083606892.png) | ![AlbedoSpec.aaa](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211229083702196.png) |
+| ![FragPos](assets/Ch%2033%20Deferred%20Shading/image-20211229083438725.png) | ![Normal](assets/Ch%2033%20Deferred%20Shading/image-20211229083507958.png) |
+| ![AlbedoSepc.rgb](assets/Ch%2033%20Deferred%20Shading/image-20211229083606892.png) | ![AlbedoSpec.aaa](assets/Ch%2033%20Deferred%20Shading/image-20211229083702196.png) |
 
 # The deferred lighting pass
 
@@ -300,7 +300,7 @@ scene.postRender = []()
 ```
 
 此时的渲染结果如下所示，可以看到所有的模型被正常的点亮：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
+![|500](assets/Ch%2033%20Deferred%20Shading/image-20211231083201155.png)
 
 在 Deferred Lighting 渲染中，所有需要显示的物体需要首先被绘制在 `G-Buffer ` 中，再通过 Lighting Pass 添加光照效果。但这会引起两个问题：
 1. 无法绘制不被光照效果影响的物体，如无法绘制表示光源的 Cube。如果将 Cube 放置在 `G-Buffer` 中，即变为了光源本身被光照影响，显然不合理。
@@ -337,7 +337,7 @@ scene.postRender = []()
 需要注意的是，此时在 `PostRender` 中需要首先关闭深度检测。否则的话，在绘制了全屏的 Quad 后，之后表示 Lighting 的 Cube 就会因为深度测试不够而失败。
 
 此时的结果如下所示，可以看到所有的 Cube 都显示在了模型之上，并没有正确的正当关系，因为： 
-![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
+![|500](assets/Ch%2033%20Deferred%20Shading/image-20220102182816556.png)
 
 为了解决这个问题，需要将 `GBuffer` 中的深度缓冲拷贝到 Default Framebuffer 中再进一步绘制，这样所有被绘制的 Cube 都能正常的进行深度检测。
 
@@ -366,7 +366,7 @@ scene.postRender = []()
 ```
 
 此时的效果如下，可以看到 Cube 与 模型间的遮挡关系正常：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220103140503675.png)
+![|500](assets/Ch%2033%20Deferred%20Shading/image-20220103140503675.png)
 
 # A larget number of lights
 
@@ -444,7 +444,7 @@ void main()
 
 绘制球的 Shader 统一使用 `GBuffer` 作为输入，但在光照中仅计算该球所表示的光源的贡献。将一系列球绘制的结果叠加在一起即为最终的结果。示意图如下所示：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2033%20Deferred%20Shading/image-20220103212954596.png)
+![](assets/Ch%2033%20Deferred%20Shading/image-20220103212954596.png)
 
 ```ad-note
 使用这种方法绘制时，需要开启 Face Culling，否则的话所有的像素会被重复计算两次。开启 Face Culling 后应当绘制球的 Back face，否则的话当进入某个球的内部时，该球的色彩贡献就不会被正常绘制。

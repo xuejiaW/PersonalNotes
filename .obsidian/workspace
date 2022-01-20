@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/3D Math Primer For Graphics and Game Development.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
     "Boos/Learn OpenGL.md",
     "Boos/Learn Vim (The Smart Way).md",
     "Boos/Learn Vim (The Smart Way)/Ch 09 Macros.md",
@@ -167,8 +169,6 @@
     "Boos/Learn Vim (The Smart Way)/Ch 07 The Dot Command.md",
     "Boos/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
     "Boos/Learn Vim (The Smart Way)/Ch 06 Insert Mode.md",
-    "Boos/Learn Vim (The Smart Way)/Ch 04 Vim Grammar.md",
-    "Boos/Learn Vim (The Smart Way)/Ch 03 Searching Files.md",
-    "Boos/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md"
+    "Boos/Learn Vim (The Smart Way)/Ch 04 Vim Grammar.md"
   ]
 }

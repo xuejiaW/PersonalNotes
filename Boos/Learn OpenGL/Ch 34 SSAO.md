@@ -11,7 +11,7 @@ tags:
 `Screen-Space Ambient Occulsion（SSAO）` 就是模拟这种因遮挡关系导致不同全局光效果的技术。
 
 如下为使用了 `SSAO` 与否的对比，可以看到右侧开启了 `SSAO` 的图像在墙角，电话亭背面处因为被遮挡的关系显得更暗，更符合现实情况：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106080946026.png)
+![|500](assets/Ch%2034%20SSAO/image-20220106080946026.png)
 
 因为 `SSAO` 是基于屏幕空间的计算，相较于真实的计算所有几何的遮挡关系虽然准确度存在差异，但能节省大量性能。
 
@@ -36,10 +36,10 @@ tags:
 ```
 
 整个流程的示意图如下所示：
-![曲线表示 G-Buffer 中的位置，黑色为当前点，灰色为被遮挡的采样点 | 500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082121010.png)
+![曲线表示 G-Buffer 中的位置，黑色为当前点，灰色为被遮挡的采样点 | 500](assets/Ch%2034%20SSAO/image-20220106082121010.png)
 
 对于一个 Fragment 而言，如果采样的周围 Fragment 处于当前 Fragment 下方，则它必然会被遮挡，也就会造成 `Occlusion Factor` 过大。为了解决这个问题，应当只采样当前 Fragment 上半侧的其他 Fragments，通过法线方向决定上半侧的朝向。如下图所示，可以看到获取周围采样点的范围由之前的球变成了半球：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106083942529.png)
+![|500](assets/Ch%2034%20SSAO/image-20220106083942529.png)
 
 ```ad-note
 对于一个 Fragment 而言，在基于该 Fragment 法线的 TBN 空间中，Z 值正数即表示在该 `Fragment `的上半侧。
@@ -50,11 +50,11 @@ tags:
 为了在采样 Fragments 数量尽量小的情况下（为节约性能）取得更好的效果，可以为采样的周围 Fragments 引入随机值。即对每个 Fragment，在采样它周围的 Fragments 时，随机将这些 Fragments 旋转一定角度，保证采样点并不会仅计算某个特定方向。但随机值的引入会导致噪声的产生，为了解决噪声问题，可以再对结果进行一个模糊化处理。
 
 下图为采样值过少时的 `Banding` 现象，当引入随机值后的噪声表现，以及对噪声进行模糊处理后的结果：
-![](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220106082927518.png)
+![](assets/Ch%2034%20SSAO/image-20220106082927518.png)
 
 因此整个计算 `SSAO` 的流程如下所示：
 
-![](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220115232055258.png)
+![](assets/Ch%2034%20SSAO/image-20220115232055258.png)
 
 
 # Sample buffers
@@ -107,7 +107,7 @@ glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPos
 ## Normal-oriented hemisphere
 
 这一部分会生成如下所示的基于法线的半球 Samples 点：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116134443972.png)
+![|500](assets/Ch%2034%20SSAO/image-20220116134443972.png)
 
 依赖 [Random Number](../../Notes/C++/C++%20-%20Random%20Number.md) 生成 64 个 Simple 采样点。每个采样点的 $x,y$ 范围在 $[-1,1]$ 之间，$z$ 的范围在 $[0,1]$ 之间：
 ```cpp
@@ -134,7 +134,7 @@ sample *= scale;
 ```
 
 通过 `lerp(0.1f, 1.0f, scale*scale)` 让采样点如下左曲线分配，最后采样点的分布点如下右所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220116140944091.png)
+![|500](assets/Ch%2034%20SSAO/image-20220116140944091.png)
 
 ## Random kernel rotations
 
@@ -274,7 +274,7 @@ occlusion += sampleDepth >= sample.z + bias ? 1.0 :0.0;
 ```
 
 但此时还存在一个问题，对于平行于模型表面的采样点，会被认为被表面本身的深度遮挡，如下部分：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220117000532915.png)
+![|500](assets/Ch%2034%20SSAO/image-20220117000532915.png)
 
 为了解决这个问题，需要引入一个 `range check` 的机制，只有在遮挡采样点的几何深度与采样点的深度值差距小于半径的情况下，才认为该遮挡是有效的。使用的代码如下：
 ```glsl
@@ -285,7 +285,7 @@ occlusion += (sampleDepth >= samplePos.z + bias ? 1.0 : 0.0) * rangeCheck;
 在上述代码中使用 `smoothstep` 获取 `rangeCheck`。如果 `FragPos.z` 与 `sampleDepth` 的差距越大，那么 `radius / abs(FragPos.z - sampleDepth))` 的值就会越接近 $0$，仅当差距小于等于 `radius` 时，返回值才会等于 $1$。
 
 如下为使用 `range check`与否的对比，左侧为未使用，右侧为使用：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085147269.png)
+![|500](assets/Ch%2034%20SSAO/image-20220118085147269.png)
 
 最后求得被遮挡的采样点比例，该比例越高，环境光的贡献值就应该越低：
 ```glsl
@@ -295,12 +295,12 @@ FragColor = occlusion;
 ```
 
 此时的渲染结果如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118085719515.png)
+![|500](assets/Ch%2034%20SSAO/image-20220118085719515.png)
 
 # Ambient occlusion blur
 
 如之前所述，现在得到的 `SSAO` 贴图存在着较明显的噪声，如下部分所示：
-![|200](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092206841.png)
+![|200](assets/Ch%2034%20SSAO/image-20220118092206841.png)
 
 
 为了解决噪声问题，需要将 `SSAO` 进行模糊操作。同样使用一个 Framebuffer 在后处理时进行模糊操作：
@@ -343,7 +343,7 @@ void main()
 ```
 
 进行模糊后的 `SSAO` 图如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220118092428821.png)
+![|500](assets/Ch%2034%20SSAO/image-20220118092428821.png)
 
 # Applying ambient occlusion
 
@@ -373,5 +373,5 @@ screenMeshRender->DrawMesh();
 ```
 
 此时的渲染结果如下所示：
-![|500](assets/Learn%20OpenGL%20-%20Ch%2034%20SSAO/image-20220119093003493.png)
+![|500](assets/Ch%2034%20SSAO/image-20220119093003493.png)
 
