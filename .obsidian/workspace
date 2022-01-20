@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android/Android - Android Debug Bridge.md",
+            "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
             "mode": "preview",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android/Android - Android Debug Bridge.md"
+                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android/Android - Android Debug Bridge.md",
+                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android/Android - Android Debug Bridge.md",
+                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/Material Property Blocks.md",
     "Notes/Unity/Editor.md",
@@ -167,8 +169,6 @@
     "Notes/Unity/Attributes.md",
     "Notes/Obsidian.md",
     "Notes/Obsidian/Image Gallery.md",
-    "Notes/Obsidian/Commands.md",
-    "Notes/Obsidian/CSS Snippets.md",
-    "Tutorials/Unity Learn.md"
+    "Notes/Obsidian/Commands.md"
   ]
 }
