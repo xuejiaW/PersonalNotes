@@ -1,3 +1,7 @@
+---
+created: 2022-01-20
+updated: 2022-01-20
+---
 在绝大部分的编辑器和 IDE 中都有 `Windows` 和 `Tabs` 概念，而在 Vim 中则通过三个抽象来实现对应的功能： `Buffer` ，`Windows` 和 `Tabs` 。
 
 ```ad-note
@@ -13,15 +17,15 @@ nvim .\\Text1.txt .\\Text2.txt .\\Text3.txt
 ```
 
 但可以通过 `:buffers` 显示目前所有打开的 Buffer，如下所示：
-![](assets/Learn%20Vim%20-%20Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093852731.png)
+![](assets/Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093852731.png)
 
 可以通过命令 `:bnext` 切换到下一个 Buffer 文件，或通过 `:bprevious` 切换到上一个 Buffer 文件。
 
-![](assets/Learn%20Vim%20-%20Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093902523.png)
+![](assets/Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093902523.png)
 
 也可以通过 `:buffer <file>` 直接切换到特定的文件，或通过 `:buffer <index>` 直接切换到特定 Index 的文件，如下所示：
     
-![](assets/Learn%20Vim%20-%20Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093912812.png)
+![](assets/Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129093912812.png)
 
 当 Vim 为文件创建一个 Buffer 后，它会保持在你的 Buffer List 中。如果要移除这个 Buffer，需要使用命令 `:bdelete <index>` 或 `:bdelete <file>` 。
     
@@ -61,7 +65,7 @@ Ctrl-W K    移向上边的窗口
 Ctrl-W L    移向右边的窗口
 ```
 
-![](assets/Learn%20Vim%20-%20Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129094106805.png)
+![](assets/Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129094106805.png)
 
 ```ad-tip
 更多内容见 `:h window
@@ -70,7 +74,7 @@ Ctrl-W L    移向右边的窗口
 # Tabs
 
 Tabs 是一系列窗口的集合，可以通过命令 `:tabnew` 创建新的 Tab，或通过 `:tabnew <file>` 在创建新 Tab 的同时打开文件， 效果如下所示：
-![](assets/Learn%20Vim%20-%20Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129094358792.png)
+![](assets/Ch%2002%20Buffers,%20Window,%20and%20Tabs/image-20211129094358792.png)
 
 可以看到切分好的窗口属于一个 Tab，当打开新 Tab 时，新 Tab 中是完整未切割的窗口。
 

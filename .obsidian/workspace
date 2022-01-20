@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn Vim (The Smart Way).md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn Vim (The Smart Way).md"
+                "file": "Boos/Learn OpenGL.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn Vim (The Smart Way).md",
+                "file": "Boos/Learn OpenGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn Vim (The Smart Way).md",
+                "file": "Boos/Learn OpenGL.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL.md",
     "Boos/Learn Vim (The Smart Way).md",
-    "Boos/Render Hell.md",
-    "Boos/Render Hell/Book 1 Overview.md",
-    "Boos/Render Hell/Book 4 Solutions.md",
-    "Boos/Render Hell/Book 3 Problems.md",
-    "Boos/Render Hell/Book 2 Pipeline.md",
-    "Tutorials/Unity Learn.md",
-    "Tutorials/Mesh Basics/Mesh Basics.md",
-    "Tutorials/Mesh Basics/Procedural Grid.md",
-    "Tutorials/Unity Learn/Introduction to Asset Bundles.md"
+    "Boos/Learn Vim (The Smart Way)/Ch 09 Macros.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 08 Registers.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 07 The Dot Command.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 06 Insert Mode.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 04 Vim Grammar.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 03 Searching Files.md",
+    "Boos/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md"
   ]
 }

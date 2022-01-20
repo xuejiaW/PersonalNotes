@@ -1,3 +1,7 @@
+---
+created: 2022-01-20
+updated: 2022-01-20
+---
 可以在命令行中通过 `nvim` 打开 Neovim
 
 # Saving a File
@@ -16,7 +20,7 @@
 
 在打开的 Neovim 中可以通过 `:help` 或 `:h` 打开帮助文档。在命令后可以加上需要查找的部分，如 `:h write-quit` ，此时的效果如下：
 
-![](assets/Learn%20Vim%20-%20Ch%201%20Starting%20Vim/image-20211129093429994.png)
+![](assets/Ch%201%20Starting%20Vim/image-20211129093429994.png)
 
 ```ad-fail
 在 VSCode 的 Neovim 插件中，通过 `:help` 命令只能打开帮助文件，但并不会跳转到对应的部分。
@@ -50,7 +54,7 @@ nvim +%s/abc/def/g +%s/def/ghi/g vim.txt
 在 `nvim` 命令后，可以加上 `o` 或 `O` 分别表示水平和垂直方向的切割：
 
 如通过命令 `nvim -o5` 打开五个水平切割的窗口，效果如下：
-![](assets/Learn%20Vim%20-%20Ch%201%20Starting%20Vim/image-20211129093632484.png)
+![](assets/Ch%201%20Starting%20Vim/image-20211129093632484.png)
 
 
 此时运行 `:q!` 会自上而下的关闭窗口，如果要一次性关闭所有的窗口，可通过 `:qall!` 。
@@ -74,4 +78,4 @@ ls | nvim
 ```
 
 此时的效果如下：
-![](assets/Learn%20Vim%20-%20Ch%201%20Starting%20Vim/image-20211129093712000.png)
+![](assets/Ch%201%20Starting%20Vim/image-20211129093712000.png)

@@ -61,7 +61,7 @@ vec4 otherVec = someVec.xxxx + anotherVec.yxzy;
 
 GLSL定义了 `in`和 `out`关键字，当输出变量与下一个着色器阶段的输入变量名字匹配他们就会传递下去。但顶点着色器和片段着色器作为整个管线的开头与结尾，有较为特殊的处理。
 
-顶点着色器中需要特殊的输入， `layout (location = 0)` 。这种输入需要在C++代码中通过 `glVertexAttribPointer` 进行传递，并在传递后通过 `glEnableVertexAttribArray`激活。 例子可见 [Hello Triangle](Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle.md)。
+顶点着色器中需要特殊的输入， `layout (location = 0)` 。这种输入需要在C++代码中通过 `glVertexAttribPointer` 进行传递，并在传递后通过 `glEnableVertexAttribArray`激活。 例子可见 [Hello Triangle](Ch%2002%20Hello%20Triangle.md)。
 
 顶点的数据可以不仅仅包含位置信息，因此 `layout` 也可以存在多个，每个单独处理一种数据。如顶点数据定义为如下形式，同时包含顶点的位置和顶点的颜色：
 

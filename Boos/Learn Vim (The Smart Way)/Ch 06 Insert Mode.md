@@ -1,3 +1,7 @@
+---
+created: 2022-01-20
+updated: 2022-01-20
+---
 # Ways to GO to Insert Mode
 
 有以下方式从 Normal Mode 变为 Insert Mode：
@@ -75,7 +79,7 @@ Ctrl-U    Delete the entire line
 
 # Scrolling
 
-可以在输入模式中按下 `Ctrl-x` ，Vim 会进入 Sub-Mode。之后使用 Normal 模式下的 [Scrolling](Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File.md#Scrolling) 进行滚动。如：
+可以在输入模式中按下 `Ctrl-x` ，Vim 会进入 Sub-Mode。之后使用 Normal 模式下的 [Scrolling](Ch%2005%20Moving%20in%20a%20File.md#Scrolling) 进行滚动。如：
 
 ```json
 Ctrl-X Ctrl-Y    Scroll up

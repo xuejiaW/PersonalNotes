@@ -1,18 +1,18 @@
 ---
 created: 2021-12-15
-updated: 2021-12-24
+updated: 2022-01-20
 tags:
     - OpenGL
 ---
 # Getting Started
 
-[Ch 00 Creating a Window](Learn%20OpenGL%20-%20Ch%2000%20Creating%20a%20Window.md)
+[Ch 00 Creating a Window](Learn%20OpenGL/Ch%2000%20Creating%20a%20Window.md)
 
-[Ch 01 Hello Window](Learn%20OpenGL%20-%20Ch%2001%20Hello%20Window.md)
+[Ch 01 Hello Window](Learn%20OpenGL/Ch%2001%20Hello%20Window.md)
 
-[Ch 02 Hello Triangle](Learn%20OpenGL%20-%20Ch%2002%20Hello%20Triangle.md)
+[Ch 02 Hello Triangle](Learn%20OpenGL/Ch%2002%20Hello%20Triangle.md)
 
-[Ch 03 Shaders](Learn%20OpenGL%20-%20Ch%2003%20Shaders.md)
+[Ch 03 Shaders](Learn%20OpenGL/Ch%2003%20Shaders.md)
 
 [Ch 04 Textures](Learn%20OpenGL%20-%20Ch%2004%20Textures.md)
 

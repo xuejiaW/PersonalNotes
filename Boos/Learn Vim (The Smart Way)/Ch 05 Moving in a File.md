@@ -1,6 +1,6 @@
 ---
 created: 2021-12-09
-updated: 2022-01-14
+updated: 2022-01-20
 ---
 
 ```ad-note
@@ -51,25 +51,25 @@ noremap <Right> <NOP>
 set relativenumber number
 ```
 
-![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224338436.png)
+![|300](assets/Ch%2005%20Moving%20in%20a%20File/image-20211129224338436.png)
 
 ```powershell
 set norelativenumber number
 ```
 
-![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224353686.png)
+![|300](assets/Ch%2005%20Moving%20in%20a%20File/image-20211129224353686.png)
 
 ```powershell
 set norelativenumber nonumber
 ```
 
-![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224429641.png)
+![|300](assets/Ch%2005%20Moving%20in%20a%20File/image-20211129224429641.png)
 
 ```powershell
 set relativenumber nonumber
 ```
 
-![|300](assets/Learn%20Vim%20-%20Ch%2005%20Moving%20in%20a%20File/image-20211129224446276.png)
+![|300](assets/Ch%2005%20Moving%20in%20a%20File/image-20211129224446276.png)
 
 在 VSCode 中通过 [editor lineNumbers](../../Notes/VSCode/VSCode%20-%20Settings.md#editor%20lineNumbers) 设置行号的显示方式。
 但如果要同时显示行号和相对行号，需要使用插件 [Relative Line Numbers 5](../../Notes/VSCode/VSCode%20-%20Extensions.md#Relative%20Line%20Numbers%205)

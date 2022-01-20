@@ -137,7 +137,7 @@ d. plain donut
 
 # Appending a Macro
 
-在 [Learn Vim - Ch 08 Registers](Learn%20Vim%20-%20Ch%2008%20Registers.md) 中可以通过 `A-Z` 对 `a-z` Register 中的内容进行增加，而非覆盖。在使用 Macro 时有一样的逻辑。
+在 [Ch 08 Registers](Ch%2008%20Registers.md) 中可以通过 `A-Z` 对 `a-z` Register 中的内容进行增加，而非覆盖。在使用 Macro 时有一样的逻辑。
 
 如先通过以下指令在 a Register 中存储一段宏 `qa0W~q` 。之后想在该 Macro 中加入跳转到行最后，并插入 `.` 的操作，可以使用命令 `qAA.<Esc>q` ，该拆分来看：
 

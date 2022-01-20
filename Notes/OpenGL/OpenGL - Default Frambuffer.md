@@ -1,12 +1,12 @@
 ---
 created: 2021-12-26
-updated: 2021-12-27
+updated: 2022-01-20
 ---
 # Creation
 
 `Default Framebuffer` 就是 `Framebuffer 0`，当 OpenGL 的上下文被建立后，会自动被创建。
 
-因为 OpenGL 的上下文建立是平台相关的，所以通常 `Default Framebuffer` 的建立也与平台相关，如 [GLFW](../../Boos/Learn%20OpenGL/Learn%20OpenGL%20-%20Ch%2001%20Hello%20Window.md#初始化GLFW)  库中在创建 Window 时就自动创建了 `Default Framebuffer` 。
+因为 OpenGL 的上下文建立是平台相关的，所以通常 `Default Framebuffer` 的建立也与平台相关，如 [GLFW](../../Boos/Learn%20OpenGL/Ch%2001%20Hello%20Window.md#初始化GLFW)  库中在创建 Window 时就自动创建了 `Default Framebuffer` 。
 
 # Color buffers
 
