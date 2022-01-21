@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+            "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
             "mode": "preview",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md"
+                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
+                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
     "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
     "Notes/Android/Android - Android Debug Bridge.md",
@@ -168,7 +169,6 @@
     "Notes/Unity.md",
     "Notes/Unity/Attributes.md",
     "Notes/Obsidian.md",
-    "Notes/Obsidian/Image Gallery.md",
-    "Notes/Obsidian/Commands.md"
+    "Notes/Obsidian/Image Gallery.md"
   ]
 }
