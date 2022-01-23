@@ -161,14 +161,14 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Notes/Unity/Scripting Architecture.md",
+    "Notes/Unity/Scripting Architecture/IL2CPP.md",
+    "Notes/Unity/Scripting Architecture/Managed Code Stripping.md",
+    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
     "Notes/Unity/Scripting Architecture/CSharp.md",
     "Notes/Unity.md",
     "Notes/Unity/Scripting Architecture/Unity.md",
     "Notes/Unity/assets/Unity - GL/Untitled.md",
     "Notes/Unity/Editor.md",
-    "Notes/Obsidian/Plugins.md",
-    "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
-    "Boos/Learn OpenGL/Ch 23 Instancing.md",
-    "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md"
+    "Notes/Obsidian/Plugins.md"
   ]
 }
