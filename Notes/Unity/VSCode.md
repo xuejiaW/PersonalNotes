@@ -1,6 +1,9 @@
 ---
 created: 2021-12-22
 updated: 2022-01-23
+tags:
+    - Unity
+    - VSCode
 ---
 # Debugger
 
