@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
+            "mode": "preview",
+            "source": true
+          }
         }
       }
     ],
@@ -66,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/CSharp/CSharp - @ Verbatim Identifier.md"
+              }
             }
           },
           {
@@ -86,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -154,6 +162,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
     "Notes/Unity/Color vs Color32.md",
     "Notes/Unity/VSCode.md",
     "Notes/Unity/Attributes.md",
@@ -162,7 +171,6 @@
     "Notes/Unity/Scripting Architecture.md",
     "Notes/Unity/Scripting Architecture/IL2CPP.md",
     "Notes/Unity/Scripting Architecture/Managed Code Stripping.md",
-    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
-    "Notes/Unity/Scripting Architecture/CSharp.md"
+    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md"
   ]
 }
