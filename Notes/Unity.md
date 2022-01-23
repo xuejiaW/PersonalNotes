@@ -1,7 +1,10 @@
 ---
 created: 2022-01-20
-updated: 2022-01-20
+updated: 2022-01-23
+tags:
+    - Unity
 ---
+
 [GL](Unity/GL.md)：Unity 中使用 GL 的方式
 [Mipmap Bias](Unity/Mipmap%20Bias.md)：Unity 中实现 Mipmap Bias 的方法
 [Attributes](Unity/Attributes.md)：Unity 中自带的一些 Attributes 说明
@@ -13,4 +16,5 @@ updated: 2022-01-20
 [UniRx](Unity/UniRx.md)：Unity 第三方插件 UniRx 的说明
 [VSCode](Unity/VSCode.md)：Unity 使用 VSCode 作为 IDE 开发的说明
 
-[Editor](Unity/Editor.md)
+[Editor](Unity/Editor.md)：Unity Editor 相关内容
+    - 

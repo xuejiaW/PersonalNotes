@@ -27,6 +27,13 @@
         "a": 1,
         "rgb": 11657298
       }
+    },
+    {
+      "query": "tag:#Unity",
+      "color": {
+        "a": 1,
+        "rgb": 2970798
+      }
     }
   ],
   "collapse-display": false,
@@ -40,5 +47,5 @@
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 0.844556370304808,
-  "close": true
+  "close": false
 }
