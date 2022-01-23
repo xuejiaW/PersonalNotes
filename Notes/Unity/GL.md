@@ -3,7 +3,7 @@ tags:
     - Unity
     - OpenGL
 created: 2021-12-30
-updated: 2021-12-31
+updated: 2022-01-23
 ---
 
 # Overview
@@ -123,7 +123,7 @@ Shader "GL/UnlitColor"
 
 此时的效果如下：
 
-![|500](assets/Unity%20-%20GL/image-20211230232006099.png)
+![|500](assets/GL/image-20211230232006099.png)
 
 # Reference
 

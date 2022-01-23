@@ -11,7 +11,7 @@ tags:
 
 当开启该选项时，可以得到更小的包体，但有可能会引发 Bug。
 
-![|500](assets/Unity%20-%20PlayerSettings/image-20211227225119615.png)
+![|500](assets/PlayerSettings/image-20211227225119615.png)
 
 # Managed stripping levels
 

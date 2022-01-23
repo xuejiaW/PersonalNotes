@@ -2,7 +2,7 @@
 tags:
     - Unity
 created: 2022-01-06
-updated: 2022-01-07
+updated: 2022-01-23
 cssclass: [table-border]
 ---
 
@@ -10,7 +10,7 @@ cssclass: [table-border]
 
 对于如下的使用场景：有 2500 个小球，在每帧会相应的改变颜色：
 
-![|500](assets/Unity%20-%20Material%20Property%20Blocks/animated-spheres.gif)
+![|500](assets/Material%20Property%20Blocks/animated-spheres.gif)
 
 最直观的实现方式是通过修改 `material.color` ，如下所示：
 
@@ -24,10 +24,10 @@ GetComponent<Renderer>().material.color = color;
 
 |                                                                                       |                                                                                           |
 | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![调用前的材质数和内存](assets/Unity%20-%20Material%20Property%20Blocks/Untitled.png) | ![调用后的材质数和内存](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%201.png) |
+| ![调用前的材质数和内存](assets/Material%20Property%20Blocks/Untitled.png) | ![调用后的材质数和内存](assets/Material%20Property%20Blocks/Untitled%201.png) |
 
 同时因为材质数的增加，每一次材质的数据修改后，需要用更多的时间将材质数据从 CPU 传递给 GPU。如下所示，一共消耗了 5.46 毫秒：
-![](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%202.png)
+![](assets/Material%20Property%20Blocks/Untitled%202.png)
 
 ```ad-note
 上述使用例子中使用的 Shader 为 Unity 内建的 `Standard Surface Shader` 。
@@ -39,7 +39,7 @@ GetComponent<Renderer>().material.color = color;
 
 |                                                                               |                                                                               |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![内存消耗](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%203.png) | ![CPU 耗时](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%204.png) | 
+| ![内存消耗](assets/Material%20Property%20Blocks/Untitled%203.png) | ![CPU 耗时](assets/Material%20Property%20Blocks/Untitled%204.png) | 
 
 对于需要通过 `MaterialPropertyBlock` 设置的 Shader 变量，可以在前面加上 `[PerRenderData]` ，让该变量在 Inspector 窗口中不被显示，如下所示：
 
@@ -51,7 +51,7 @@ Properties
 }
 ```
 
-![无颜色信息](assets/Unity%20-%20Material%20Property%20Blocks/Untitled%205.png)
+![无颜色信息](assets/Material%20Property%20Blocks/Untitled%205.png)
 
 ```ad-note
 即使不添加 `[PerRenderData]` ，也可以使用 `MaterialPropertyBlock` 进行设置。

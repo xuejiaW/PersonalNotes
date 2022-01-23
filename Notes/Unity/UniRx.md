@@ -3,7 +3,7 @@ tags:
     - Unity
     - Reactive-Programming
 created: 2021-12-30
-updated: 2022-01-14
+updated: 2022-01-23
 ---
 # Overview
 
@@ -11,7 +11,7 @@ updated: 2022-01-14
 
 对于异步数据流，本质上就是在时间线上一系列有序的事件。对于“事件”，可以是三种类型：数值（Value），错误（Error），完成信号（ Completed Singnal）。如下为一个点击事件流：
 
-![](assets/Unity%20-%20UniRx/Untitled.png)
+![](assets/UniRx/Untitled.png)
 
 对于上述的事件流，也可以以如下的字符表示：
 
@@ -45,7 +45,7 @@ counterStream: ---1----2--3----4------5-->
 ```
 
 如下为使用这种思路创建一个多次点击的事件流的图解：
-![|400](assets/Unity%20-%20UniRx/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67.png)
+![|400](assets/UniRx/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67.png)
 
 其中，先使用 `buffer(stream.throttle(250ms))` 将点击流根据 250ms 结合在一起，再通过 `map` 将结合后的点击流转换为点击次数，最后通过 `filter` 筛选出点击此时大于等于 2 的双击流。
 
