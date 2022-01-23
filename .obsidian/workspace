@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Unity.md",
+            "mode": "source",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Unity.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Unity.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -152,9 +160,9 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity.md",
     "Notes/Unity/Scripting Architecture/Unity.md",
     "Notes/Unity/assets/Unity - GL/Untitled.md",
-    "Notes/Unity/- Unity.md",
     "Notes/Unity/Editor.md",
     "Notes/Obsidian/Plugins.md",
     "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
