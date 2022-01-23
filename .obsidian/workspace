@@ -7,12 +7,8 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
-            "mode": "preview",
-            "source": true
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,9 +65,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +116,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +152,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Obsidian/Plugins.md",
+    "Notes/Unity.md",
     "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
     "Boos/Learn OpenGL/Ch 23 Instancing.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
@@ -167,8 +161,6 @@
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/Material Property Blocks.md",
     "Notes/Unity/Editor.md",
-    "Notes/Unity.md",
-    "Notes/Unity/Attributes.md",
-    "Notes/Obsidian.md"
+    "Notes/Unity/Attributes.md"
   ]
 }
