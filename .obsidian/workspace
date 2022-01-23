@@ -161,6 +161,7 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Notes/Unity.md",
+    "Notes/Unity/Scripting Architecture.md",
     "Notes/Unity/Scripting Architecture/Unity.md",
     "Notes/Unity/assets/Unity - GL/Untitled.md",
     "Notes/Unity/Editor.md",
@@ -168,7 +169,6 @@
     "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
     "Boos/Learn OpenGL/Ch 23 Instancing.md",
     "Notes/Virtual Reality/VR - Fixed Foveated Rendering.md",
-    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md",
-    "Notes/Android/Android - Android Debug Bridge.md"
+    "Notes/Computer Graphics/Computer Graphics - Tiled-Baed Rendering.md"
   ]
 }
