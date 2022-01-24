@@ -637,11 +637,11 @@ UI 的 Render Mode 为 `Screen Space - Camera` ，因此会无视 Camera 的 Cul
 ```csharp
 private void Setup()
 {
-		// ...
+        // ...
     CameraClearFlags flags = camera.clearFlags;
     buffer.ClearRenderTarget(flags <= CameraClearFlags.Depth, flags == CameraClearFlags.Color,
                 flags == CameraClearFlags.Color ? camera.backgroundColor.linear : Color.clear);
-		// ...
+        // ...
 }
 ```
 
@@ -665,7 +665,18 @@ private void Setup()
 
 当 `Main Camera` Clear Flags 为 `Skybox` ， `Second Camera` 的 Clear Flags 分别为 `Skybox` , `Color` , `Depth` , `Nothing` 的结果如下：
 
-|                                                              |                                                          |
-| ------------------------------------------------------------ | -------------------------------------------------------- |
-| ![](assets/Custom%20Render%20Pipeline/Untitled%2027%201.png) | ![](assets/Custom%20Render%20Pipeline/Untitled%2030.png) |
-|                                                              |                                                          |
+|                                                                    |                                                                     |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| ![Skybox](assets/Custom%20Render%20Pipeline/Untitled%2027%201.png) | ![Color](assets/Custom%20Render%20Pipeline/Untitled%2030.png)       |
+| ![Depth Only](assets/Custom%20Render%20Pipeline/Untitled%2029.png) | ![Don't Clear](assets/Custom%20Render%20Pipeline/Untitled%2031.png) |
+
+还可以通过调整摄像机的 `Viewport` 决定摄像机渲染结果的输出范围，如下为 `Second Camera` 的 Clear Flag 为 `Color` 且 Viewport 为 `(0.75, 0.75, 0.25, 0.25)` 时的结果：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2032.png)
+
+```ad-note
+Unity 使用 `Hidden/InternalClear` shader 来进行 Clear 操作。该 Shader 中会通过 Stencil Buffer 来实现 Camera Viewport 的效果。
+```
+
+```ad-tip
+当有多个摄像机时，每帧每个摄像机都需要进行 `Culling`, `Setup` , `Sorting` 等操作。因此增加摄像机数量会增大对性能的消耗。
+```
