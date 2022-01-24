@@ -644,3 +644,28 @@ private void Setup()
 		// ...
 }
 ```
+
+其中 `CameraClearFlags` 是 Unity 定义的一个枚举值，有四个参数，参数数值从 1 到 4，分别为 `Skybox` , `Color` , `Depth` , `Nothing` 。
+
+上述代码中，除了 `Nothing` 的情况，都会将 Depth Buffer 清除，而仅在为 `Color` 的时候会对 Color Buffer 进行清除。在清除时，仅当为 `Color` 时使用 `camera.backgroundColor` 其余时候都用 `Color.clear` 。
+
+```ad-note
+使用 `camera.backgroundColor.linear` 是因为项目建立时，将颜色空间设置为了 `Linear` 。
+```
+
+```ad-note
+理论上，在 `CameraClearFlags` 为 `Skybox` 时也应当清除 `Color Buffer` ，但因为 `Skybox` 时擦除了 Depth Buffer，又会在渲染的最后绘制 Skybox，所以上一帧的颜色内容即使不清除，也会被这一帧渲染的 Skybox 覆盖，因此不会造成显示的错误。
+```
+
+`Main Camera` 作为第一个渲染的摄像机，为了保证渲染的正确性，必须使用 `Skybox` 或 `Color` 作为 Clear Flags。 `Second Camera` 为了不 Clear 掉 `Main Camera` 渲染的内容，则必须使用 `Depth` 或 `Nothing` 保证 `Main Camear` 渲染的 Color Buffer 被保持。
+
+当 `Second Camera` 选择 `Depth` 时， `Main Camera` 渲染的 Depth Buffer 会被 Clear，此时 `Second Camera` 渲染的内容就都会叠加到 `Main Camera` 的内容上。
+
+当 `Second Camera` 选择 `Nothing` 时， `Main Camera` 渲染的 Depth Buffer 会被保留，此时 `Second Camera` 渲染的内容就仍要与 `Main Camera` 渲染的内容进行深度检测。
+
+当 `Main Camera` Clear Flags 为 `Skybox` ， `Second Camera` 的 Clear Flags 分别为 `Skybox` , `Color` , `Depth` , `Nothing` 的结果如下：
+
+|                                                              |                                                          |
+| ------------------------------------------------------------ | -------------------------------------------------------- |
+| ![](assets/Custom%20Render%20Pipeline/Untitled%2027%201.png) | ![](assets/Custom%20Render%20Pipeline/Untitled%2030.png) |
+|                                                              |                                                          |
