@@ -7,12 +7,8 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/VSCode/VSCode - Extensions.md",
-            "mode": "preview",
-            "source": true
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -49,8 +45,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -70,9 +65,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/VSCode/VSCode - Extensions.md"
-              }
+              "state": {}
             }
           },
           {
@@ -92,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/VSCode/VSCode - Extensions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +117,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/VSCode/VSCode - Extensions.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -162,6 +153,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Obsidian/Plugins.md",
+    "Notes/Unity/Scripting Architecture/CSharp.md",
     "Notes/VSCode/VSCode - Extensions.md",
     "CSharp-$ String Interpolation.md",
     "Notes/Unity.md",
@@ -169,8 +162,6 @@
     "Notes/Unity/Scripting Architecture.md",
     "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
     "Notes/Unity/Color vs Color32.md",
-    "Notes/Unity/VSCode.md",
-    "Notes/Unity/Attributes.md",
-    "Notes/Unity/GL.md"
+    "Notes/Unity/VSCode.md"
   ]
 }

@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-01-20
+updated: 2022-01-24
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -284,7 +284,7 @@ Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中
 
 ## PlantUML[^3]
 
-该插件实现在 Obsidian 中插入 [PlantUML](../PlantUML/PlantUML.md) 的功能。
+该插件实现在 Obsidian 中插入 [PlantUML](../Tools/PlantUML%20-%20Class%20Diagram.md) 的功能。
 
 其中将 PlantUML 的代码定义在 `plnatuml` 代码块中，如下所示：
 <pre><code> ````plantuml

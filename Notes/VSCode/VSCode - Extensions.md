@@ -2,7 +2,7 @@
 tags: 
     - VSCode
 created: 2021-11-18
-updated: 2022-01-14
+updated: 2022-01-24
 ---
 
 > 本部分说明在 [[VSCode](VSCode.md) 中部分插件的说明。
@@ -27,7 +27,7 @@ updated: 2022-01-14
 
 # Windows Terminal Integration[^2]
 
-该实现自动在当前工作区或当前文件夹打开 [Tools - Windows Terminal](../Tools/Tools%20-%20Windows%20Terminal.md) 。
+该实现自动在当前工作区或当前文件夹打开 [Windows Terminal](../Tools/Windows%20Terminal.md) 。
 
 在当前工作区打开 Windows Terminal 的命令为：`Windows Terminal: Open`，对应的 Command ID 为 `windows-terminal.open`。
 
@@ -35,16 +35,16 @@ updated: 2022-01-14
 
 # Clang-Format[^3]
 
-该插件实现调用本机的 [Tools  - Clang-Format](../Tools/Tools%20%20-%20Clang-Format.md) 格式化 VSCode 中的文件。
+该插件实现调用本机的 [Clang-Format](../Tools/Clang-Format.md) 格式化 VSCode 中的文件。
 
-在使用插件前，首先需要在 `settings.json` 中设置 [Tools  - Clang-Format](../Tools/Tools%20%20-%20Clang-Format.md) 的路径，如下所示：
+在使用插件前，首先需要在 `settings.json` 中设置 [Clang-Format](../Tools/Clang-Format.md) 的路径，如下所示：
 ```json
 "clang-format.executable": "C:/Program Files/LLVM/bin/clang-format.exe"
 ```
 
 # PlantUML[^4]
 
-该插件支持在 Markdown 中预览 [PlantUML](../PlantUML/PlantUML.md) 绘图。在安装插件后，需要在 `settings.json` 中设置渲染 PlantUML 的 renderer 为 Server，并设定渲染的 Server 地址：
+该插件支持在 Markdown 中预览 [PlantUML - Class Diagram](../Tools/PlantUML%20-%20Class%20Diagram.md)  绘图。在安装插件后，需要在 `settings.json` 中设置渲染 PlantUML 的 renderer 为 Server，并设定渲染的 Server 地址：
 ```json
 "plantuml.render": "PlantUMLServer",
 "plantuml.server": "http://www.plantuml.com/plantuml",
