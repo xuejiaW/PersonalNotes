@@ -1,6 +1,6 @@
 ---
 created: 2022-01-05
-updated: 2022-01-20
+updated: 2022-01-24
 tags:
     - GPU
 ---
@@ -47,7 +47,7 @@ tags:
 
 一些 Command 包含数据的拷贝。GPU 通常会有一个单独的模块处理从 RAM 拷贝数据到 VRAM 的过程，反之亦然。这些需要拷贝的数据可以是 Vertex Buffer，纹理或其他 Shader 的参数。通常渲染一帧会从传递 Camera 相关的数据开始。
 
-当所有数据准备完成后，GPU 中会有一个模块（Gigathread Engine）负责处理任务的分发。它为每一个要处理的顶点或像素创建一个线程，并将多个线程打包成一个 Package，NVIDIA 将这个 Package 称为 [Thread block](../../Notes/GPU/GPU%20-%20Thread%20block.md) 。 Thread Block 会被分发给 SM，如下图所示：
+当所有数据准备完成后，GPU 中会有一个模块（Gigathread Engine）负责处理任务的分发。它为每一个要处理的顶点或像素创建一个线程，并将多个线程打包成一个 Package，NVIDIA 将这个 Package 称为 [Thread block](../../Notes/GPU/Thread%20block.md) 。 Thread Block 会被分发给 SM，如下图所示：
 ![|500](assets/Book%202%20Pipeline/GIF_9-15-2021_8-58-59_AM.gif)
 
 ## Vertex Fetch

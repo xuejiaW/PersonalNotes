@@ -1,6 +1,6 @@
 ---
 created: 2022-01-05
-updated: 2022-01-06
+updated: 2022-01-24
 tags:
     - GPU
 ---
@@ -12,7 +12,7 @@ tags:
 
 示例图如下所示，图中展现了 $5*3*2$ 个 Groups，图的上半部分中每个小方格即表示一个 Group。图的下半部分中每个小方格即表示一个 Thread，每个 Group 中有 $10*8*3$ 个 Threads。
 
-![](assets/GPU%20-%20Thread%20block/image-20220105083052542.png)
+![](assets/Thread%20block/image-20220105083052542.png)
 
 对于每个 Computer Shader 的函数而言，能接受一系列的 Syntax 表示在 Thread Blocks 中的状态。
 

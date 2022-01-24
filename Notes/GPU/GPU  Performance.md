@@ -2,14 +2,14 @@
 tags:
     - GPU
 created: 2021-12-14
-updated: 2021-12-15
+updated: 2022-01-24
 ---
 
 # CPU/GPU 工作模型
 
 在每一帧中，当调用了GPU相关的命令，CPU并不会把这些命令立即传递给GPU，而是会先保存到一个缓存中，当缓存满了或遇到 `Present` 命令（在例如VSync等情况触发）时才会将相应的命令发送给GPU进行绘制（发送的过程称为 `Marshalling` ）。且CPU和GPU是并行工作的。理想状态下CPU与GPU工作情况如下：
 
-![|300](assets/GPU%20%20Performance/Untitled.png)
+![|300](assets/Performance/Untitled.png)
 
 可以看到在第一帧时，GPU并没有进行工作。这是因为此时GPU并没有收到来自于CPU的任何数据，当第一帧的末尾CPU将绘制命令发送给GPU后，GPU才开始绘制，因此CPU处理第二帧数据时，GPU才真正的并行绘制第一帧内容。
 
@@ -17,11 +17,11 @@ updated: 2021-12-15
 
 当GPU完成绘制后，CPU还没有准备好下一帧需要的绘制命令时，两者的工作情况如下所示，这种情况被称为 `CPU Bound` 。在这种情况下，帧率的下降是由CPU造成，所以去优化GPU的工作并不会改善帧率，且在一定程度上增加GPU的工作（保证在空闲事件内能完成），也并不会造成帧率的进一步下降。
 
-![|300](assets/GPU%20%20Performance/Untitled%201.png)
+![|300](assets/Performance/Untitled%201.png)
 
 当CPU需要传递当前帧需要的绘制命令时，GPU却还没有完成上一帧的绘制，因此CPU必须等待GPU完成绘制后，才能把命令给GPU，此时两者的工作情况如下，这种情况被称为 `GPU Bound` 。在这种情况下，帧率的下降是由GPU造成，因此优化CPU的工作并不会改善帧率，且一定程度上增加CPU的工作（保证在空闲事件内能完成），也并不会造成帧率的进一步下降。
 
-![|300](assets/GPU%20%20Performance/Untitled%202.png)
+![|300](assets/Performance/Untitled%202.png)
  
 ## Draw
 
