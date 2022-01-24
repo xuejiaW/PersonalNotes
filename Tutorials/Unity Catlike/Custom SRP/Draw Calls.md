@@ -124,3 +124,41 @@ HLSL 和 C++ 的 `include` 逻辑类似，即直接将被 include 的文件的�
 ```
 
 此时通过该 Shader 并不能渲染出任何物体，因为在顶点着色器中直接返回了 `0.0` 表示，即所有物体渲染的结果都会集中在屏幕正中间的一个像素上，所以不可见。
+
+## Space Transformation
+
+为了让物体可以正常的被渲染，需要将传入的顶点数据通过顶点着色器进行 `MVP` 矩阵的转换，如下所示:
+
+```glsl
+float4 UnlitPassVertex(float3 positionOS: POSITION) : SV_POSITION
+{
+    float3 positionWS = TransformObjectToWorld(positionOS.xyz);
+    return TransformWorldToHClip(positionWS);
+}
+```
+
+```ad-note
+传入的 `positionOS` 参数后的 `POSITION` 也是 semantics，表示传入的数据是表示位置的。
+```
+<aside> 💡 
+
+</aside>
+
+<aside> 💡 `POSITION` 和 `SV_POSITION` 的差异可见 [Half-Pixel Offset](https://www.notion.so/Half-Pixel-Offset-5d87e122d0944a32a9f75c90998c5ea7)
+
+</aside>
+
+其中的 `TransformObjectToWorld` 和 `TransformWorldToHClip` 为自定义的坐标系转换的函数，如下所示：
+
+```glsl
+// In ShaderLibrary/Common.hlsl 
+float3 TransformObjectToWorld(float3 positionOS)
+{
+    return mul(unity_ObjectToWorld,float4(positionOS,1.0)).xyz;
+}
+
+float4 TransformWorldToHClip(float3 positionWS)
+{
+    return mul(unity_MatrixVP,float4(positionWS,1.0));
+}
+```
