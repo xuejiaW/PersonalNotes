@@ -3,6 +3,7 @@ tags:
     - Unity
 created: 2022-01-24
 updated: 2022-01-24
+cssclass: [table-border]
 ---
 
 # A new Render Pileline
@@ -33,6 +34,33 @@ Unity 工程的默认色彩空间 Gamma，而为了保证后续光照等计算�
 
 所使用的材质设置如下图所示：
 
-|     |     |     |
-| --- | --- | --- |
-|![](assets/Custom%20Render%20Pipeline/Untitled%201.png)     |  ![](assets/Custom%20Render%20Pipeline/Untitled%202.png)   |  ![](assets/Custom%20Render%20Pipeline/Untitled%203.png)   |
+|                                                         |                                                         |                                                         |
+| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| ![](assets/Custom%20Render%20Pipeline/Untitled%201.png) | ![](assets/Custom%20Render%20Pipeline/Untitled%202.png) | ![](assets/Custom%20Render%20Pipeline/image-20220124092928056.png)
+
+# Pipeline Asset
+
+```ad-tip
+`SRP` 的脚本基本都在 `UnityEngine.Rendering` 命名空间下。
+```
+
+当使用 `SRP` 时，Unity 引擎需要通过 `RenderPipe Asset(RP Asset)` 来获取渲染管线的实例，同时也会从 `RP Asset` 中读取关于渲染管线的设置。
+
+为了创建 `RP Asset` ，首先需要创建对应的 ScriptableObject 。可以通过继承 `RenderPipelineAsset` 基类创建出可以构建 `RP Asset` 的 ScriptableObject 。如下所示：
+
+```csharp
+using UnityEngine;
+using UnityEngine.Rendering;
+
+[CreateAssetMenu(menuName = "Rendering/Custom Render Pipeline")]
+public class CustomRenderPipelineAsset : RenderPipelineAsset
+{
+    protected override RenderPipeline CreatePipeline() { return null; }
+}
+```
+
+```ad-note
+所有派生自 `RenderPipelineAsset` 的类都必须实现 `CreatePipeline` 函数，Unity 使用该函数获取渲染管线的实例。
+```
+
+之后可以通过 `Assets -> Create -> Rendering -> Custom Render Pipeline` 创造出 `RP Asset` ，结果如下所示：
