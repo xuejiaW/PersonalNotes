@@ -319,11 +319,8 @@ private void DrawVisibleGeometry()
 其中 `DrawingSettings` 的第一个形参决定了需要执行的 Shader Pass， 这里传递的`SRPDefaultUnlit` 为 Unity 内置的 Tag，因为目前场景中的许多游戏物体选用的是 `Unlit` 中的 Shader，所以使用该 Tag。
 
 ```ad-note
+关于 [Shader Tag](https://docs.unity3d.com/Manual/SL-PassTags.html) 的内容，查看文档 [Built-In Shader Tag](https://docs.unity3d.com/Manual/shader-predefined-pass-tags-built-in.html) 与 [SRP Shader Tag](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/urp-shaders/urp-shaderlab-pass-tags.html#urp-pass-tags-lightmode)
 ```
-
-<aside> 💡 
-
-</aside>
 
 `DrawSettings` 第二个形参是物体排序相关的设置 `SortingSettings`，该变量的构造函数依赖 `camera` 变量，会根据 [`camera.transparencySortMode`](https://docs.unity3d.com/ScriptReference/Camera-transparencySortMode.html) 决定以什么规则来计算排序的数值大小：
 
@@ -331,3 +328,201 @@ private void DrawVisibleGeometry()
 2.  Orthographic：根据沿着摄像机 View 方向的距离
 
 另外 `SortingSettings` 中的 `criteria` 制定了排序的标准，如这里的 `CommonOpaque` 表示使用通常渲染不透明物体时的排序规则，该规则会综合考虑 RenderQueue，材质，距离等相关信息。
+
+此时在 Frame Debugger 中查看渲染的顺序与结果，如下所示，可以看到基本是先渲染一个特定的材质，然后再渲染下一个：
+![|500](assets/Custom%20Render%20Pipeline/GIF_2021-5-11_23-51-01.gif)
+
+如果将 `SortingSettings` 中的 `criteria` 去除，即：
+```csharp
+private void DrawVisibleGeometry()
+{
+    SortingSettings sortingSettings = new SortingSettings(camera);
+    DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
+    FilteringSettings filteringSettings = new FilteringSettings(RenderQueueRange.all);
+
+    renderContext.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+    renderContext.DrawSkybox(camera);
+}
+```
+
+则渲染的结果如下所示，几乎是一个无规律的状态在渲染：
+![|500](assets/Custom%20Render%20Pipeline/GIF_2021-5-11_23-54-57.gif)
+
+## Drawing Opaque and Transparent Geometry Separately
+
+在之前的最终渲染结果中，天空盒将半透明物体的一部分遮挡掉了，如下所示：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2010.png)
+
+这是因为天空盒在半透明物体的之后进行渲染，而在 `Unlit/Transparent` 的Shader 中，设置了 `ZWrite Off` ，即半透明物体不会写入深度缓冲，因此在绘制了半透明物体的部分，天空盒仍然能通过深度检测，即覆盖半透明物体。
+
+解决这个问题的方式，就是调整渲染顺序为 `不透明物体 -> 天空盒 -> 半透明物体` 。实现方法如下所示：
+
+```csharp
+private void DrawVisibleGeometry()
+{
+    // Render Opaque objects
+    SortingSettings sortingSettings = new SortingSettings(camera) { criteria = SortingCriteria.CommonOpaque };
+    DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
+    FilteringSettings filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
+    renderContext.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+
+    renderContext.DrawSkybox(camera);
+
+    // Render Transparent objects
+    sortingSettings.criteria = SortingCriteria.CommonTransparent;
+    drawingSettings.sortingSettings = sortingSettings;
+    filteringSettings.renderQueueRange = RenderQueueRange.transparent;
+    renderContext.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+}
+```
+
+渲染结果如下：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2011.png)
+
+# Editor Rendering
+
+## Drawing Legacy Shaders
+
+之前通过在初始化 `DrawingSettings` 时，设置的 Shader Tag 为 `SRPDefaultUnlit` 的 Shader，因此仅会渲染 Unlit Shader 的物体。
+
+而其余的物体，如使用了 `Standard` Shader 的物体，可以通过 Built-in 的 Shader Tag 找到并渲染，如下所示：
+
+```csharp
+private static ShaderTagId[] legacyShaderTagIds =
+{
+    new ShaderTagId("Always"),
+    new ShaderTagId("ForwardBase"),
+    new ShaderTagId("PrepassBase"),
+    new ShaderTagId("Vertex"),
+    new ShaderTagId("VertexLMRGBM"),
+    new ShaderTagId("VertexLM")
+ };
+
+public void Render(ScriptableRenderContext renderContext, Camera camera)
+{
+		//...
+    Setup();
+    DrawVisibleGeometry();
+    DrawUnSupportedShadersGeometry();
+    Submit();
+}
+
+private void DrawUnSupportedShadersGeometry()
+{
+    DrawingSettings drawingSettings = new DrawingSettings();
+    drawingSettings.sortingSettings = new SortingSettings(camera);
+    for (int i = 0; i != legacyShaderTagIds.Length; ++i)
+        drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
+
+    FilteringSettings filteringSettings = FilteringSettings.defaultValue;
+
+    renderContext.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+}
+```
+
+其中的 `legacyShaderTagIds` 中指定了常用的 Built-in 的 Shader Tag，即会尝试渲染 Built-in Shader 的物体。结果如下所示：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2012.png)
+
+虽然用了 `Standard` Shader 的物体被渲染了出来，但显示的是黑色。这是因为 `SRP` 并没有设置这些 Built-in Shader 所需要的参数。
+
+## Error Material
+
+上节中黑色的纹理实际上是因为其中包含了 `SRP` 无法设置的参数而导致渲染错误，可以使用 Unity 内置的表示 Shader 错误的特殊 Shader 来渲染这些物体，只需要修改 `DrawingSettings` 中的 `overrideMaterial` 即可，如下所示：
+
+```csharp
+private static Material errorMaterial = null;
+
+private void DrawUnSupportedShadersGeometry()
+{
+    if (errorMaterial == null)
+        errorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
+
+    DrawingSettings drawingSettings = new DrawingSettings();
+    drawingSettings.sortingSettings = new SortingSettings(camera);
+    drawingSettings.overrideMaterial = errorMaterial;
+
+		// ...
+}
+```
+
+此时结果如下：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2013.png)
+
+## Partial Class
+
+可以 Scripting Smbols 让不支持的 Shader 部分仅在 Editor 和 Development Build 才被显示，即将相关代码定义放到如下的代码块中：
+
+```csharp
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+//...
+#endif
+```
+
+同时为了更好的管理代码，可以将 Editor 部分放到 `CameraRenderer.Editor` 中，如下所示：
+
+```csharp
+// In CameraRenderer.Editor.cs
+public partial class CameraRenderer
+{
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    private static ShaderTagId[] legacyShaderTagIds =
+    {
+				// ...
+    };
+
+    private static Material errorMaterial = null;
+
+    partial void DrawUnSupportedShadersGeometry()
+    {
+        // ...
+    }
+#endif
+}
+
+// in CameraRenderer.cs
+partial void DrawUnSupportedShadersGeometry();
+
+```
+
+这里使用了 Partial Class 拆分 `CameraRenderer` 类，方便代码管理。并将 `DrawUnSupportedShaderGeometry` 函数定义为 Partial Method，保证在非 Editor 和 Development Build 时，即使 `DrawUnSupportedShaderGeometry` 未被定义实现，代码仍然能正常编译。
+
+```ad-note
+因为在 `CameraRenderer.Editor` 中定义了 `#if UNITY_EDITOR` ，因此其中的代码都仅在 Editor 下运行。
+```
+
+## Drawing Gizmos
+
+目前在 Scene 场景中并没有绘制 `Gizmo` ，如场景中并没有摄像机的显示，也没有摄像机的视锥体的展示。
+
+可以通过 `Handles.ShouldRenderGizmos` 判断当前帧是否需要渲染 `Gizmos` ，如需要的话可通过函数 `context.DrawGizmos` 进行绘制。 `Gizmos` 的绘制应当在整个流程的最后。
+
+最终绘制 `Gizmos` 的代码如下：
+```csharp
+// In CameraRenderer
+partial void DrawGizmos();
+
+public void Render(ScriptableRenderContext renderContext, Camera camera)
+{
+		// ...
+		Setup();
+    DrawVisibleGeometry();
+    DrawUnSupportedShadersGeometry();
+    DrawGizmos();
+    Submit();
+}
+
+// In CameraRenderer.Editor
+partial void DrawGizmos()
+{
+    if (Handles.ShouldRenderGizmos())
+    {
+        renderContext.DrawGizmos(camera, GizmoSubset.PreImageEffects);
+        renderContext.DrawGizmos(camera, GizmoSubset.PostImageEffects);
+    }
+}
+```
+
+其中 `context.DrawGizmos` 需要两个参数，第一个是表示当前 View 的Camera， 第二个表示哪种 `Gizmos` 需要被绘制， `GizmoSubset.PreImageEffects` 表示受后处理影响的 `Gizmos` ， `GizmoSubset.PostImageEffects` 表示不受后处理影响的部分。这里选择渲染所有种类的 `Gizmos` 。渲染的结果如下：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2014.png)
+
