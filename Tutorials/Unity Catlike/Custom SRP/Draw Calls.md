@@ -179,3 +179,115 @@ float4x4 unity_MatrixVP;
 
 像上述的 `TransformObjectToWorld` 和 `TransformWorldToHClip` 是非常同样的函数，Unity 提供了 包 `Core RP Pipeline` 封装了这些函数的实现。
 ![|200](assets/Draw%20Calls/Untitled%205.png)
+
+```ad-note
+当导入了 `Core RP Pipeline` 后，相关的源码可以在 `<ProjectPath>Library\\PackageCache\\com.unity.render-pipelines.core@<version>\\` 中查看
+```
+
+因此可以使用 `Core RP Pipeline` 的 `SpaceTransform.hlsl` 中 的内容替代自己实现的版本。
+
+```glsl
+// In Common.hlsl
+
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/SpaceTransforms.hlsl"
+
+// float3 TransformObjectToWorld(float3 positionOS)
+// {
+//     return mul(unity_ObjectToWorld,float4(positionOS,1.0)).xyz;
+// }
+
+// float4 TransformWorldToHClip(float3 positionWS)
+// {
+//     return mul(unity_MatrixVP,float4(positionWS,1.0));
+// }
+```
+
+因为 `Core RP Pipeline` 中定义的变量与 Unity 传递的 Shader 参数命名不相同，因此需要通过 `define` 将两者进行转换。如 `unity_ObjectToWorld` 变量，在 `SpaceTransform.hlsl` 中对应的变量为 `Unity_MATRIX_M` ，因此转换语句为：
+
+```csharp
+#define UNITY_MATRIX_M unity_ObjectToWorld
+```
+
+`SpaceTransform.hlsl` 中有许多变量，如上述 `Unity_MATRIX_M` 只有使用，而未进行定义。因此当引入了 `SpaceTransform.hlsl` 后，这些未定义的变量会导致编译失败。如下的代码将所有这些代码与 Unity 内置的 Shader 参数命名对应在一起：
+
+```glsl
+#define UNITY_MATRIX_M unity_ObjectToWorld
+#define UNITY_MATRIX_I_M unity_WorldToObject
+#define UNITY_MATRIX_V unity_MatrixV
+#define UNITY_MATRIX_VP unity_MatrixVP
+#define UNITY_MATRIX_P glstate_matrix_projection
+```
+
+所有需要用到的参数，都需要在 `UnityInput.hlsl` 中定义，即如下所示：
+
+```glsl
+float4x4 unity_ObjectToWorld;
+float4x4 unity_WorldToObject;
+real4 unity_WorldTransformParams;
+
+float4x4 unity_MatrixVP;
+float4x4 unity_MatrixV;
+float4x4 glstate_matrix_projection;
+```
+
+其中的 `real4` 是一个根据平台定义的参数，根据不同的平台，它可能被定义为 `half4` 或 `float4` 。 `real4` 的定义在 `Core RP Pipeline` 的 `Common.hlsl` 中。
+
+因此，最终自定义的 `Common.hlsl` 如下所示：
+
+```glsl
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+#include "UnityInput.hlsl"
+
+#define UNITY_MATRIX_M unity_ObjectToWorld
+#define UNITY_MATRIX_I_M unity_WorldToObject
+#define UNITY_MATRIX_V unity_MatrixV
+#define UNITY_MATRIX_VP unity_MatrixVP
+#define UNITY_MATRIX_P glstate_matrix_projection
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/SpaceTransforms.hlsl"
+```
+
+上述引入的相互依赖关系如下：
+
+1.  先引入 `Core RP Pipeline` 的 `Common.hlsl` 文件，保证 `real4` 变量被定义。
+2.  引入自定义的 `UnityInput.hlsl` 文件，保证需要的变量被定义，且用 Unity 定义的着色器变量的名称。
+3.  使用一系列 `define` 语句，将定义的变量与 `Core RP Pipeline` 中需要用的变量联系在一起。
+4.  引入 `Core RP Pipeline` 的 `SpaceTransforms.hlsl` ，其中的 `TransformObjectToWorld` 和 `TransformWorldToHClip` 即为需要的函数。
+
+## Color
+
+在 `UnlitPass.hlsl` 中新增变量 `_BaseColor` 并将该颜色作为像素输出的颜色，如下所示：
+
+```glsl
+float4 _BaseColor;
+
+// ...
+
+float4 UnlitPassFragment(): SV_TARGET
+{
+    return _BaseColor;
+}
+```
+
+为了让该变量可以在 Unity 的 Material 面板中展现出来，需要在 `.shader` 文件的 `Properties` 中加入，如下所示：
+
+```glsl
+Properties
+{
+    _BaseColor("Color",Color) = (1.0, 1.0, 1.0, 1.0)
+}
+```
+
+其中的 `_BaseColor` 对应在 `UnlitPass.hlsl` 中定义的变量， `"Color"` 为最终在 Inspector 面板中显示的名称， `Color` 为变量的类型，`(1.0, 1.0, 1.0, 1.0)` 为变量的初始值。
+
+即在 `Properties` 中定义的变量，格式为：
+
+```glsl
+<Target Parameter>("<DisplayName>", <Type>) = <default Value>
+```
+
+# Batch
+
+使用上述着色器，生成四个颜色不同的材质，如下所示：
+![](assets/Draw%20Calls/Untitled%206.png)
+![](assets/Draw%20Calls/Untitled%207.png)
+![](assets/Draw%20Calls/Untitled%208.png)
