@@ -611,4 +611,4 @@ partial void PrepareBuffer()
 ```
 
 此时 Frame Debugger 界面如下：
-![|500](assets/Custom%20Render%20Pipeline/Untitled%2024.png)
+![|500  ](assets/Custom%20Render%20Pipeline/Untitled%2024.png)
