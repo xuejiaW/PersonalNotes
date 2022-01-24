@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
+            "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md"
+                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
+                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
+                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
     "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
     "Tutorials/Unity Catlike/Mesh Basics/Procedural Grid.md",
     "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
@@ -168,7 +169,6 @@
     "Notes/VSCode/VSCode - Extensions.md",
     "CSharp-$ String Interpolation.md",
     "Notes/Unity.md",
-    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
-    "Notes/Unity/Scripting Architecture.md"
+    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md"
   ]
 }

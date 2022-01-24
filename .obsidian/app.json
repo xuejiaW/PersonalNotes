@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Custom Render Pipeline",
+  "attachmentFolderPath": "./assets/Draw Calls",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
