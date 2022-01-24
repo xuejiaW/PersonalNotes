@@ -18,3 +18,21 @@ updated: 2022-01-24
 ```ad-tip
 <aside> 🔥 `Universal Render Pipeline` 最终会取代目前的内置渲染管线，成为 Unity 渲染的默认渲染管线。
 ```
+
+# Project Setup
+
+```ad-tip
+该笔记使用的 Unity 版本为 2019.4.10
+```
+
+Unity 工程的默认色彩空间 Gamma，而为了保证后续光照等计算的准确性，首先需要将颜色空间切换为线性空间，可通过 `Edit -> Project Setings -> Player -> Other Settings -> Rendering -> Color Space` 修改。
+
+在场景中随意放置一些 Cube 和 Sphere，并附加不同的材质，结果如下图所示：
+
+![](assets/Custom%20Render%20Pipeline/Untitled.png)
+
+所使用的材质设置如下图所示：
+
+|     |     |     |
+| --- | --- | --- |
+|![](assets/Custom%20Render%20Pipeline/Untitled%201.png)     |  ![](assets/Custom%20Render%20Pipeline/Untitled%202.png)   |  ![](assets/Custom%20Render%20Pipeline/Untitled%203.png)   |
