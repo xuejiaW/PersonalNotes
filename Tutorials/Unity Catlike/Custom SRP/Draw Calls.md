@@ -288,6 +288,57 @@ Properties
 # Batch
 
 使用上述着色器，生成四个颜色不同的材质，如下所示：
-![](assets/Draw%20Calls/Untitled%206.png)
-![](assets/Draw%20Calls/Untitled%207.png)
-![](assets/Draw%20Calls/Untitled%208.png)
+![|300](assets/Draw%20Calls/Untitled%206.png)
+![|300](assets/Draw%20Calls/Untitled%207.png)
+![|300](assets/Draw%20Calls/Untitled%208.png)
+
+在场景内添加 76 个小球，此时一共需要用到 78 个 Drawcall ，其中 76 个绘制小球，一个绘制天空盒，一个用来 Clear。如下所示：
+
+|                                           |                                            |
+| ----------------------------------------- | ------------------------------------------ |
+| ![](assets/Draw%20Calls/Untitled%209.png) | ![](assets/Draw%20Calls/Untitled%2010.png) |
+
+如果在 Game 窗口的 Statistic 界面中，只能看到 77 个 `Batches` ，这是因为 `Batches` 的计算无视了 Clear 。
+![|300](assets/Draw%20Calls/Untitled%2011.png)
+
+## SRP Batcher
+
+`Batching` 是将多个 Draw Call 结合在一起的过程。在 SRP 中最简单使用 `Batching` 的方法就是激活 `SRP Batcher` 功能，但这功能仅能在兼容的 Shader 中开启，上述自定义的 `Unlit` Shader 还不支持此功能，如下所示：
+![|500](assets/Draw%20Calls/Untitled%2012.png)
+
+`SRP Batcher` 本质上并没有减少 Draw Call 的数量，它只是将一些材质的 Uniform 数据缓存在 GPU 上，让 CPU 不需要每帧都去设置。这样同时减少了 CPU 处理数据的时间以及 CPU 向 GPU 传输的数据量。
+
+所有可以被 `SRP Batcher` 缓存在 GPU 的 Uniform 数据都必须定义在一块地址不变的内存中，在 `SRP` 中可以通过将数据包裹在 `cbuffer`(Constant buffer) 定义的数据块中，如下所示：
+
+```glsl
+cbuffer UnityPerMaterial
+{
+    float4 _BaseColor;
+}
+```
+
+```ad-note
+`SRP Batcher` 要求自定义的数据类型必须要放在名为 `UnityPerMaterial` 的数据块中，所有 Unity 内置的数据类型要放在名为 `UnityPerDraw` 的数据库中。
+```
+
+但 `cbuffer` 并不是在所有的平台下都支持，如 OpenGL ES 2.0 就不支持，所以为了保证兼容性，可以可以使用如下的方式进行替代：
+
+```glsl
+CBUFFER_START(UnityPerMaterial)
+    float4 _BaseColor;
+CBUFFER_END
+```
+
+同理，还需要将一些坐标转换的数据也放到 `cbuffer` 中，如下所示，其中的 `unity_LODFADE` 虽然没用到，但同样必须包裹在 `Cbuffer` 中：
+
+```glsl
+CBUFFER_START(UnityPerDraw)
+	float4x4 unity_ObjectToWorld;
+	float4x4 unity_WorldToObject;
+	float4 unity_LODFADE;
+	real4 unity_WorldTransformParams;
+CBUFFER_END
+```
+
+当定义完后，Shader 就变为兼容 `SRP Batcher` ，如下所示：
+![|500 ](assets/Draw%20Calls/Untitled%2013.png)
