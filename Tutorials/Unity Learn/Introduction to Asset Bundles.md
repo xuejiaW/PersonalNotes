@@ -1,3 +1,9 @@
+---
+created: 2022-01-24
+updated: 2022-01-24
+tags:
+    - Unity
+---
 # 创建 Asset Bundle 脚本准备
 
 Unity本身的界面中并没有创建Asset Bundle的按键，因此需要通过Editor脚步自定义按键。代码如下：
@@ -98,3 +104,4 @@ IEnumerator Start()
 
 # Reference
 
+[Introduction to AssetBundles - 2019.3 - Unity Learn](https://learn.unity.com/tutorial/introduction-to-assetbundles)
