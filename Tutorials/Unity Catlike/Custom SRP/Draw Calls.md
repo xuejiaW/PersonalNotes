@@ -468,15 +468,119 @@ float4 UnlitPassFragment(Varyings input):SV_TARGET
 注意上述代码中的前三行，需要 Instanced 的数据需要被 `UNITY_INSTANCING_BUFFER_START` 和 `UNITY_INSTANCING_BUFFER_END` 包裹，且通过 `UNITY_DEFINE_INSTANCED_PROP` 进行设置。
 
 ```ad-note
+通常 `UnityPerMaterial` 的数据需要被标记为 Instanced Data 。 `UnityPerDraw` 的数据，如 `unity_ObjectToWorld` 是不需要被标记为 Instanced Data。
 ```
-<aside> 💡 
+
+```ad-note
+ Instanced Data 同样兼容 SRP Batcher，两者并不是相互冲突的设置，即一个材质可以同时支持 SRP Batcher 和 GPU Instancing。
+```
+
+```ad-note
+访问 Instanced Data 中的数据，需要使用 `UNITY_DEFINE_INSTANCED_PROP` 函数
+```
+
+此时查看 Frame Debugger 可以看到，之前的22个单独 Draw Calls，已经被合并为四个 Instancing Draw Call：
+![|300](assets/Draw%20Calls/Untitled%2018.png)
+
+## Drawing Many Instanced Meshes
+
+上一节中，已经可以让场景内多个使用相同材质，但被 `MaterialPropertyBlock` 修改的物体通过 GPU Instancing 一次性被渲染。
+
+但如果要一次性生成大量的物体，如 1000 个小球，每个都需要有不同的颜色。此时通过在 Inspector 面板中逐个去修改小球是不现实的。更为普遍的做法是在代码中通过 `Graphics.DrawMeshInstanced` 绘制。如下所示：
+
+```csharp
+private void Awake()
+{
+		// Generate 1000 different matrices and colors
+    for (int i = 0; i != matrices.Length; ++i)
+    {
+        matrices[i] = Matrix4x4.TRS(Random.insideUnitSphere * 10f, Quaternion.identity, Vector3.one);
+        baseColors[i] = new Vector4(Random.value, Random.value, Random.value, 1.0f);
+    }
+}
+
+private void Update()
+{
+    if (propertyBlock == null)
+    {
+        propertyBlock = new MaterialPropertyBlock();
+        propertyBlock.SetVectorArray(baseColorID, baseColors);
+    }
+
+		// Drawing Instancing
+    Graphics.DrawMeshInstanced(mesh, 0, material, matrices, 1023, propertyBlock);
+}
+```
+
+此时可以从 Frame Debugger 中看到绘制了 1000 个小球仅用了 3 个 Drawcall：
+
+|                                            |                                            |
+| ------------------------------------------ | ------------------------------------------ |
+| ![](assets/Draw%20Calls/Untitled%2019.png) | ![](assets/Draw%20Calls/Untitled%2020.png) | 
+
+```ad-tip
+见场景 `InstancedDrawing`
+```
+
+## Dynamic Batching
+
+还有一种方法减少 Drawcall 的方法称为 `Dynamic Batching`，该方法将多个拥有相同材质小的 Mesh 动态结合为一个大的 Mesh，达到可以一次性渲染的目的。
+
+```ad-note
+当多个小 Mesh 使用了同一材质，但是用了 `MaterialProperyBlock` 修改时， `Dynamic Batching` 也不生效。
+```
+
+`Dynamic Batching` 与 `GPU Instancing` 是互斥的，因此当需要用 `Dynamic Batching` 时，需要在 `DrawSetting` 中将 `GPU Instancing` 关闭，如下所示：
+
+```csharp
+// CameraRenderer.cs
+DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings)
+{
+    enableDynamicBatching = true,
+    enableInstancing = false
+};
+```
+
+且 `SRP Batcher` 比 Dynamic Batching 也有更高的优先级，所以也需要将其关闭：
+
+```csharp
+// CustomRenderPipeline.cs
+public CustomRenderPipeline()
+{
+    GraphicsSettings.useScriptableRenderPipelineBatching = false;
+}
+```
+
+对于可以被`Dynamic Batching` 的小 Mesh，Unity 也有[一系列的限制](https://docs.unity3d.com/Manual/DrawCallBatching.html)，如：
+
+1.  顶点数必须在300以下，顶点数据（一个顶点可能有多个顶点数据）的数量必须在 900 以下
+2.  不能有镜像的大小，如一个物体的尺寸是 $1$，另一个物体的尺寸是 $-1$，这两物体不会被 Batch 在一起。
+3.  不能拥有一样的材质
+4.  带有不同烘焙贴图参数的物体不能被 Batch 在一起
+5.  不能被 `Multi-Pass` 的 Shader 打断
+
+```ad-warning
+`Dynamic Batching` 还可能造成的一些Bug，如当物体有不同的 Scale 时，较大物体的法线不能保证为 Unit Vector。
+```
+
+因为 Unity 中的默认的 Sphere 物体，顶点数是 $515$ 个，不满足上述条件1，因此无法被 `Dynamic Batching` 在一起。而默认的 Cube 物体，顶点数为 $24$ 个，满足条件，因此可使用 Cube 作为测试 `Dynamic Batching` 的物体：
+
+如下为 76 Cube，使用了四种不同的材质，当开启后 `Dynamic Batching` 后使用 7 个 Drawcall 及完成了渲染：
+
+|                                            |                                            |
+| ------------------------------------------ | ------------------------------------------ |
+| ![](assets/Draw%20Calls/Untitled%2023.png) | ![](assets/Draw%20Calls/Untitled%2024.png) | 
+
+```ad-t```
+
+<aside> 📢 
 
 </aside>
 
-<aside> 💡 Instanced Data 同样兼容 SRP Batcher，两者并不是相互冲突的设置，即一个材质可以同时支持 SRP Batcher 和 GPU Instancing。
+<aside> 🔑 见场景 `SampleCubeScene`
 
 </aside>
 
-<aside> 💡 访问 Instanced Data 中的数据，需要使用 `UNITY_DEFINE_INSTANCED_PROP` 函数
+## Configuring Batching
 
-</aside>
+上述介绍了三种减少 DrawCall 的方法， `SRP Batcher` ， `GPU Instancing` ，`Dynamic Batching` 。而 `Dynamic Batching` 与前两者互斥， 因此需要动态的根据所选择的减少 DrawCall 的方式去调整代码。
