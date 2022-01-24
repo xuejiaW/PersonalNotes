@@ -8,7 +8,7 @@ cssclass: [table-border]
 
 # A new Render Pileline
 
-早期的 Unity 仅支持 `内置渲染管线（Default Render Pipeline, DRP / Built-in Render Pipleline）`。自 Unity 2018 后，Unity 引入了 `可编程渲染管线（Scriptable Render Piplelines，SRP）` ，但在 2018 中该功能是试验预览的状态，在 Unity 2019 中该功能才成为 正式功能。
+早期的 Unity 仅支持 ` 内置渲染管线（Default Render Pipeline, DRP / Built-in Render Pipleline）`。自 Unity 2018 后，Unity 引入了 ` 可编程渲染管线（Scriptable Render Piplelines，SRP）` ，但在 2018 中该功能是试验预览的状态，在 Unity 2019 中该功能才成为 正式功能。
 
 基于 `SRP` ，Unity 官方在 2018 的版本中实现了两套管线， `Lightweight Render Pipeline` 和 `High Definition Render Pipeline` 。前者针对于移动端这样的轻量级平台，而后者针对如 PC，主机这样的高性能平台。在 Unity 2019 的版本中， `Lightweight Render Pipeline` 被拓展为 `Universal Render Pipeline` 。
 
@@ -72,13 +72,13 @@ public class CustomRenderPipelineAsset : RenderPipelineAsset
 当替换后了 `RP Asset` 后，主要有两个变化：
 
 1.  原 `Graphics` 面板中的许多设置消失了。
-    
+
     因为替换的 `RP Asset` 并没有提供相关的设置选项。
-    
+
 2.  Scene / Game / Material 界面都不再渲染。
-    
+
     因为替换的 `RP Asset` 实际上返回的是空，即 Unity 此时没有任何的渲染管线可以用。
-    
+
 
 ## Render Pipeline Instance
 
@@ -110,11 +110,11 @@ protected override RenderPipeline CreatePipeline()
 Unity 通过 RP 中的 `Render` 函数进行渲染，Render 函数有两个形参：
 
 1.  `ScriptableRenderContext` ：该形参表示 `SRP` 渲染的上下文。 RP 使用该形参与 Unity Native 的渲染部分进行通信
-    
+
 2.  `Camera[]` ，该形参表示所有激活的 Cameras
-    
+
     RP 使用该形参来控制每个摄像机的渲染与不同摄像机间的渲染顺序
-    
+
 
 ## Camera Renderer
 
@@ -130,7 +130,7 @@ public class CameraRenderer
     {
         this.renderContext = renderContext;
         this.camera = camera;
-				// ....
+                // ....
     }
 }
 ```
@@ -277,7 +277,7 @@ private bool Cull()
 }
 ```
 
-在某些情况下，无法通过`TryGetCullingParameters` 函数获取到 Culling 的参数，如摄像机的 Viewport 为空，或者近远剪切平面的设置不合法。在这种情况下，应当不渲染任何东西，如下所示：
+在某些情况下，无法通过 `TryGetCullingParameters` 函数获取到 Culling 的参数，如摄像机的 Viewport 为空，或者近远剪切平面的设置不合法。在这种情况下，应当不渲染任何东西，如下所示：
 
 ```csharp
 public void Render(ScriptableRenderContext renderContext, Camera camera)
@@ -288,7 +288,7 @@ public void Render(ScriptableRenderContext renderContext, Camera camera)
     if (!Cull()) // Get Culling parameters failed
         return;
 
-		//...
+        //...
 }
 ```
 
@@ -316,7 +316,7 @@ private void DrawVisibleGeometry()
 
 `FilteringSetting` 决定了渲染指定 RenderQueue 范围内的物体，这里填的 `RenderQueueRange.all` 表示无论 RenderQueue 设置的为多少，都将被渲染。
 
-其中 `DrawingSettings` 的第一个形参决定了需要执行的 Shader Pass， 这里传递的`SRPDefaultUnlit` 为 Unity 内置的 Tag，因为目前场景中的许多游戏物体选用的是 `Unlit` 中的 Shader，所以使用该 Tag。
+其中 `DrawingSettings` 的第一个形参决定了需要执行的 Shader Pass， 这里传递的 `SRPDefaultUnlit` 为 Unity 内置的 Tag，因为目前场景中的许多游戏物体选用的是 `Unlit` 中的 Shader，所以使用该 Tag。
 
 ```ad-note
 关于 [Shader Tag](https://docs.unity3d.com/Manual/SL-PassTags.html) 的内容，查看文档 [Built-In Shader Tag](https://docs.unity3d.com/Manual/shader-predefined-pass-tags-built-in.html) 与 [SRP Shader Tag](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/urp-shaders/urp-shaderlab-pass-tags.html#urp-pass-tags-lightmode)
@@ -353,9 +353,9 @@ private void DrawVisibleGeometry()
 在之前的最终渲染结果中，天空盒将半透明物体的一部分遮挡掉了，如下所示：
 ![|500](assets/Custom%20Render%20Pipeline/Untitled%2010.png)
 
-这是因为天空盒在半透明物体的之后进行渲染，而在 `Unlit/Transparent` 的Shader 中，设置了 `ZWrite Off` ，即半透明物体不会写入深度缓冲，因此在绘制了半透明物体的部分，天空盒仍然能通过深度检测，即覆盖半透明物体。
+这是因为天空盒在半透明物体的之后进行渲染，而在 `Unlit/Transparent` 的 Shader 中，设置了 `ZWrite Off` ，即半透明物体不会写入深度缓冲，因此在绘制了半透明物体的部分，天空盒仍然能通过深度检测，即覆盖半透明物体。
 
-解决这个问题的方式，就是调整渲染顺序为 `不透明物体 -> 天空盒 -> 半透明物体` 。实现方法如下所示：
+解决这个问题的方式，就是调整渲染顺序为 ` 不透明物体 -> 天空盒 -> 半透明物体 ` 。实现方法如下所示：
 
 ```csharp
 private void DrawVisibleGeometry()
@@ -400,7 +400,7 @@ private static ShaderTagId[] legacyShaderTagIds =
 
 public void Render(ScriptableRenderContext renderContext, Camera camera)
 {
-		//...
+        //...
     Setup();
     DrawVisibleGeometry();
     DrawUnSupportedShadersGeometry();
@@ -441,7 +441,7 @@ private void DrawUnSupportedShadersGeometry()
     drawingSettings.sortingSettings = new SortingSettings(camera);
     drawingSettings.overrideMaterial = errorMaterial;
 
-		// ...
+        // ...
 }
 ```
 
@@ -468,7 +468,7 @@ public partial class CameraRenderer
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
     private static ShaderTagId[] legacyShaderTagIds =
     {
-				// ...
+                // ...
     };
 
     private static Material errorMaterial = null;
@@ -504,8 +504,8 @@ partial void DrawGizmos();
 
 public void Render(ScriptableRenderContext renderContext, Camera camera)
 {
-		// ...
-		Setup();
+        // ...
+        Setup();
     DrawVisibleGeometry();
     DrawUnSupportedShadersGeometry();
     DrawGizmos();
@@ -523,6 +523,58 @@ partial void DrawGizmos()
 }
 ```
 
-其中 `context.DrawGizmos` 需要两个参数，第一个是表示当前 View 的Camera， 第二个表示哪种 `Gizmos` 需要被绘制， `GizmoSubset.PreImageEffects` 表示受后处理影响的 `Gizmos` ， `GizmoSubset.PostImageEffects` 表示不受后处理影响的部分。这里选择渲染所有种类的 `Gizmos` 。渲染的结果如下：
+其中 `context.DrawGizmos` 需要两个参数，第一个是表示当前 View 的 Camera， 第二个表示哪种 `Gizmos` 需要被绘制， `GizmoSubset.PreImageEffects` 表示受后处理影响的 `Gizmos` ， `GizmoSubset.PostImageEffects` 表示不受后处理影响的部分。这里选择渲染所有种类的 `Gizmos` 。渲染的结果如下：
 ![|500](assets/Custom%20Render%20Pipeline/Untitled%2014.png)
 
+## Drawing Unity UI
+
+在场景中添加了一个 UGUI 的 Button 后，可以看到按钮在 Game 界面中被正常的渲染了出来，如下所示：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2015.png)
+
+但通过 Frame Debugger 可以发现此时 UI 的渲染并没有经过自定义的 SRP 如下所示：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2016.png)
+
+而当将 `Canvas` 中的 `Render Mode` 修改为 `Screen Space - Camera` 或 `World Space` 后，UI 的渲染被放到了渲染半透明物体的部分中，如下所示，且此时因为在半透明的队列中先渲染了 UI，所以 UI 几乎被其他物体遮挡住了：
+
+|     |     |
+| --- | --- |
+| ![](assets/Custom%20Render%20Pipeline/Untitled%2017.png)    |  ![](assets/Custom%20Render%20Pipeline/Untitled%2018.png)   |
+
+但无论 `Render Mode` 是什么格式，在 Scene 界面中，UI都没有被正常的渲染出来，能看到的只有 UI 的 `Gizmo` ，如下：
+![](assets/Custom%20Render%20Pipeline/Untitled%2019.png)
+
+这是因为 UI 在 Scene 界面下，都是以 `World Space` 模式被渲染出来，而且用了不同的几何信息，且 UI 在 Scene 下的几何信息默认并没有被添加到 SRP 中。对于在 Scene 中显示的 UI 的几何信息，需要通过函数 `ScriptabEmitWorldGeometryForSceneView` 添加到 SRP 中。且需要在调用 `Cull` 函数前被添加，保证这些几何信息同样会被进行正常裁剪。
+
+整体代码如下所示：
+
+```csharp
+// In CameraRenderer
+partial void PrepareForSceneWindow();
+
+public void Render(ScriptableRenderContext renderContext, Camera camera)
+{
+		// ...
+    PrepareForSceneWindow();
+    if (!Cull()) // Get Culling parameters failed
+        return;
+		// ...
+}
+
+// In CameraRenderer.Editor
+partial void PrepareForSceneWindow()
+{
+    if (camera.cameraType == CameraType.SceneView)
+    {
+      ScriptableRenderContext.EmitWorldGeometryForSceneView(camera);
+    }
+}
+```
+
+# Multiply Cameras
+
+## Two Cameras
+
+在场景中可以将 `Main Camera` 进行拷贝，并将新的 Camera 命名为 `Second Camera` ，并将 `Second Camera` 的 `Depth` 参数设置为 0，即此时会先渲染 `Main Camera` ，然后再渲染 `Second Camera` ：
+|     |     |
+| --- | --- |
+| ![Hierarchy](assets/Custom%20Render%20Pipeline/Untitled%2020.png)    |     |
