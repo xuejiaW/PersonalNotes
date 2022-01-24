@@ -4,7 +4,7 @@ tags:
     - Unity
     - SRP
 created: 2022-01-24
-updated: 2022-01-24
+updated: 2022-01-25
 ---
 
 # Shaders
@@ -341,4 +341,66 @@ CBUFFER_END
 ```
 
 当定义完后，Shader 就变为兼容 `SRP Batcher` ，如下所示：
-![|500 ](assets/Draw%20Calls/Untitled%2013.png)
+![|300 ](assets/Draw%20Calls/Untitled%2013.png)
+
+此时在自定义的渲染管线中，开启 `SRP Batcher` 即可，如下：
+
+```glsl
+public CustomRenderPipeline()
+{
+    GraphicsSettings.useScriptableRenderPipelineBatching = true;
+}
+```
+
+此时在 Game 界面的 Statistic 窗口查看，可以看到仍然显示 77 个 Batches，而 `Saved by batching` 又是 $-76$ ，如下所示：
+![|400](assets/Draw%20Calls/Untitled%2014.png)
+
+这是因为 Unity 2019 的 Statistic 窗口对于 SRP 存在 Bug，因此更好的选择是通过 Frame Debugger 查看，如下所示可以看到仅有一个 Batch：
+![|500](assets/Draw%20Calls/Untitled%2015.png)
+
+```ad-note
+上图中 Draw Calls 仍然是76，因为 `SRP Batcher` 并未合并 Drawcall，只是在 GPU 缓存了数据，减少了数据的传输和准备时间。
+```
+
+## Many Colors
+
+SRP Batcher 的实现原理中，真正关心的是材质的 GPU 的内存的分布是否相同。因此不同的材质只要使用相同的着色器时，他们的 `UnityPerMaterial` 的内存分布都是相同的，因此可以被合并。
+
+如在上述的例子中，虽然使用了四种不同的材质来绘制小球，但最终所有的都被合并到一个 Batch 中，这是因为这四个材质实际上都是使用同一个 Shader。
+
+```ad-warning
+Unity 实际上判断的是着色器是否相同。因此如果两个不同的着色器定义了相同的 `UnityPerMaterial` 内存，仍然是没法被合并的。
+```
+
+但是在开发过程中，如果有更多的小球需要有更多不同的颜色，为每种颜色都创建一个材质是不现实的。因此需要在运行时去修改已有的材质。如下脚本可以通过 `baseColor` 去修改 `MaterialPropertyBlock`达到修改材质颜色的目标 ：
+
+```csharp
+public Color baseColor = Color.white;
+
+private static int baseColorID = Shader.PropertyToID("_BaseColor");
+
+private void Awake()
+{
+    OnValidate();
+}
+
+private void OnValidate()
+{
+		if (block == null)
+        block = new MaterialPropertyBlock();
+
+    block.SetColor(baseColorID, baseColor);
+    GetComponent<Renderer>().SetPropertyBlock(block);
+}
+```
+
+关于 `MaterialPropertyBlock.SetXXX` 和 `Material.SetXXX` 的区别见 [Material Property Blocks](../../../Notes/Unity/Material%20Property%20Blocks.md) 。概括而言 `MaterialPropertyBlock` 保证了材质不会被拷贝，虽然每个物体都设置了自己的 Material Property，但它们仍然使用的是一个材质。
+
+但当修改了已有材质时，就会打断 `SRP Batch` ，如下所示，原先的一个 Batch （包含 76 个 DrawCalls）被打成了 2个 Batch（分别有49和3个 DrawCalls） 和两组 DrawCalls（分别有22个和2个DrawCalls）：
+![|300](assets/Draw%20Calls/Untitled%2016.png)
+
+上述的两组 DrawCalls 是完整的 DrawCalls，即每个 DrawCall 都需要完整的像 GPU 传输数据，因此会耗费较多的性能。优化方式思路是通过 `GPU Instancing` 将他们合并为一个 DrawCall。
+
+## GPU Instancing
+
+对于同一个材质，但是因为使用了 `MaterialPropertyBlock` 而打断 Batch 的情况，可以使用 `GPU Instancing` 将它们合并为一个 DrawCall 进行渲染。 CPU 会将这些物体各自对于材质的修改组合成一个数组（ `Instanced Data`）并一次性送给 GPU，GPU 在渲染它们时使用 index 进行区分。
