@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+            "mode": "source",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -153,6 +161,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/Unity/Scripting Architecture/CSharp.md",
     "Notes/VSCode/VSCode - Extensions.md",
@@ -161,7 +170,6 @@
     "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
     "Notes/Unity/Scripting Architecture.md",
     "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/Unity/Color vs Color32.md",
-    "Notes/Unity/VSCode.md"
+    "Notes/Unity/Color vs Color32.md"
   ]
 }
