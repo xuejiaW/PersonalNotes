@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Introduction to Asset Bundles",
+  "attachmentFolderPath": "./assets/Custom Render Pipeline",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

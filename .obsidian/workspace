@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+            "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md"
+                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+                "file": "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,6 +161,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
+    "Tutorials/Unity Catlike/Mesh Basics/Procedural Grid.md",
     "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/Unity/Scripting Architecture/CSharp.md",
@@ -168,8 +170,6 @@
     "CSharp-$ String Interpolation.md",
     "Notes/Unity.md",
     "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
-    "Notes/Unity/Scripting Architecture.md",
-    "Notes/CSharp/CSharp - @ Verbatim Identifier.md",
-    "Notes/Unity/Color vs Color32.md"
+    "Notes/Unity/Scripting Architecture.md"
   ]
 }
