@@ -404,3 +404,79 @@ private void OnValidate()
 ## GPU Instancing
 
 对于同一个材质，但是因为使用了 `MaterialPropertyBlock` 而打断 Batch 的情况，可以使用 `GPU Instancing` 将它们合并为一个 DrawCall 进行渲染。 CPU 会将这些物体各自对于材质的修改组合成一个数组（ `Instanced Data`）并一次性送给 GPU，GPU 在渲染它们时使用 index 进行区分。
+
+OpenGL 中 GPU Instancing 的实现可见 [Instancing](../../../Boos/Learn%20OpenGL/Ch%2023%20Instancing.md)
+
+目前实现的 Shader 是不支持 GPU Instancing 的。为了让其支持 Instancing，首先需要加上 `multi_compile_instancing` 的关键字，如下所示：
+
+```glsl
+// Unlit.shader
+Pass
+{
+    HLSLPROGRAM
+    #pragma multi_compile_instancing
+    #pragma vertex UnlitPassVertex
+    #pragma fragment UnlitPassFragment
+    #include "UnlitPass.hlsl"
+    ENDHLSL
+}
+```
+
+此时可以看到使用了该 Shader 的材质面板中出现了 `Enable GPU Instancing` 关键字，如下所示，带上该关键字后，Unity 在编译时会为 Shader 生成两份代码，一份支持 Instancing，一份不支持：
+![|300](assets/Draw%20Calls/Untitled%2017.png)
+
+但勾选了选项后会发现使用了同一材质的物体并没有被合并为一个 Shader 进行渲染，这是因为 Unity 在编译时需要知道哪些数据需要被组合为 `Instanced Data`的，因此 Shader 具体的实现也需要对应的更改。
+
+首先需要引入 `Core RP Library` 中的 `UnityInstancing.hlsl` ，该 Shader 封装了一系列 Instancing 相关的函数，如通过 Instancing 的 Index 去访问 Instanced Data。
+
+Unity 中整个支持 Instancing 的 Shader 的逻辑大致为，Instancing Index 在顶点着色器中被输入，经过转换传递给片段着色器，最终在片段着色器中根据 Index 获取到对应的数值。整体代码如下所示：
+
+```glsl
+UNITY_INSTANCING_BUFFER_START(UnityPerMaterial) // Instancing buffer is also SRP Batcher compatiable
+        UNITY_DEFINE_INSTANCED_PROP(float4, _BaseColor)
+UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
+
+struct Attributes
+{
+    float3 positionOS : POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+struct Varyings
+{
+    float4 positionCS : SV_POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+Varyings UnlitPassVertex(Attributes input)
+{
+    Varyings output;
+    UNITY_SETUP_INSTANCE_ID(input); // Get Instancing Index
+    UNITY_TRANSFER_INSTANCE_ID(input, output); // Pass Instancing Index to Fragment
+    float3 positionWS = TransformObjectToWorld(input.positionOS);
+    output.positionCS = TransformWorldToHClip(positionWS);
+    return output;
+}
+
+float4 UnlitPassFragment(Varyings input):SV_TARGET
+{
+    UNITY_SETUP_INSTANCE_ID(input); // Get Instancing Index
+    return UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
+}
+```
+
+注意上述代码中的前三行，需要 Instanced 的数据需要被 `UNITY_INSTANCING_BUFFER_START` 和 `UNITY_INSTANCING_BUFFER_END` 包裹，且通过 `UNITY_DEFINE_INSTANCED_PROP` 进行设置。
+
+```ad-note
+```
+<aside> 💡 
+
+</aside>
+
+<aside> 💡 Instanced Data 同样兼容 SRP Batcher，两者并不是相互冲突的设置，即一个材质可以同时支持 SRP Batcher 和 GPU Instancing。
+
+</aside>
+
+<aside> 💡 访问 Instanced Data 中的数据，需要使用 `UNITY_DEFINE_INSTANCED_PROP` 函数
+
+</aside>
