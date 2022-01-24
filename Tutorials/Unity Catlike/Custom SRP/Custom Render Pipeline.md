@@ -578,7 +578,6 @@ partial void PrepareForSceneWindow()
 | ----------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![Hierarchy](assets/Custom%20Render%20Pipeline/Untitled%2020.png) | ![Main Camera](assets/Custom%20Render%20Pipeline/Untitled%2021.png) | ![Second Camera](assets/Custom%20Render%20Pipeline/Untitled%2022.png) |
 
-
 此时在 Frame Debugger 中可以看到两个摄像机的渲染被合并在了一起，如下所示：
 ![](assets/Custom%20Render%20Pipeline/Untitled%2023.png)
 
@@ -591,12 +590,12 @@ partial void PrepareForSceneWindow()
 partial void PrepareBuffer();
 public void Render(ScriptableRenderContext renderContext, Camera camera)
 {
-		// ...
-		PrepareBuffer();
+        // ...
+        PrepareBuffer();
     PrepareForSceneWindow();
     if (!Cull()) // Get Culling parameters failed
         return;
-		// ...
+        // ...
 }
 
 // In CameraRenderer.Editor
@@ -612,3 +611,36 @@ partial void PrepareBuffer()
 
 此时 Frame Debugger 界面如下：
 ![|500  ](assets/Custom%20Render%20Pipeline/Untitled%2024.png)
+
+## Layers
+
+可以调整物体的 `Layer` 以及摄像机的 `Culling Mask` 来控制摄像机仅渲染特定的游戏物体。
+
+如将所有使用了 `Standard` 的游戏物体的 `Layer` 调整为 `Ignore Raycast` ，并将两个摄像机的 `Culling Mask` 设置为如下：
+
+ |                                                                     |                                                                       |
+ | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
+ | ![Main Camera](assets/Custom%20Render%20Pipeline/Untitled%2025.png) | ![Second Camera](assets/Custom%20Render%20Pipeline/Untitled%2026.png) |
+
+此时的渲染结果如下，因为 Second Camera 仅渲染 `Ignore Raycast` Layer 的物体，又 Second Camera 会覆盖 Main Camera 的内容：
+
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2027.png)
+
+```ad-note
+UI 的 Render Mode 为 `Screen Space - Camera` ，因此会无视 Camera 的 Culling Mask 设置，必然会被渲染到屏幕上。
+```
+
+## Clear Flags
+
+可以通过修改两个摄像机的 Clear Flags 来合并两个摄像机的渲染内容。并根据摄像机的 Clear Flags 调整 ClearRenderTarget 的逻辑，如下所示：
+
+```csharp
+private void Setup()
+{
+		// ...
+    CameraClearFlags flags = camera.clearFlags;
+    buffer.ClearRenderTarget(flags <= CameraClearFlags.Depth, flags == CameraClearFlags.Color,
+                flags == CameraClearFlags.Color ? camera.backgroundColor.linear : Color.clear);
+		// ...
+}
+```
