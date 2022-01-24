@@ -715,3 +715,161 @@ SAMPLER(sampler_BaseMap);
 ```
 
 此时查看纹理，可以看到多了 `Texture` 的数据，除了纹理贴图的设置外，还有 `Tiling` 和 `Offset` 选项的设置，前者表示纹理 UV 的大小，后者表示 UV 的起始点。整体如下所示：
+![|300](assets/Draw%20Calls/Untitled%2028.png)
+
+`Tiling` 和 `Offset` 为 Unity 为每个纹理定义的 `Special Texture properties`，需要在着色器中定义对应的 `float4` 变量才行。该变量的命名规则为 `<TextureName>_ST` ，如上述纹理命名为 `_BaseMap` ，则需要定义 `_BaseMap_ST` ，且该变量可以作为 instanced data。因此定义如下所示：
+
+```glsl
+TEXTURE2D(_BaseMap);
+SAMPLER(sampler_BaseMap);
+
+UNITY_INSTANCING_BUFFER_START(UnityPerMaterial) // Instancing buffer is also SRP Batcher compatiable
+UNITY_DEFINE_INSTANCED_PROP(float4, _BaseMap_ST)
+UNITY_DEFINE_INSTANCED_PROP(float4, _BaseColor)
+UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
+```
+
+之后就是在顶点着色器的输入中加入 UV 信息，并在经过 `Tiling` 和 `Offset` 的调整后传入片段着色器中，片段着色器中根据调整后的 UV 通过 `SAMPLE_TEXTURE2D` 函数采样纹理。整个改动如下所示：
+
+```glsl
+struct Attributes
+{
+    float3 positionOS : POSITION;
+    float2 baseUV : TEXCOORD0;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+struct Varyings
+{
+    float4 positionCS : SV_POSITION;
+    float2 baseUV : VAR_BASE_UV;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+Varyings UnlitPassVertex(Attributes input)
+{
+    Varyings output;
+    UNITY_SETUP_INSTANCE_ID(input);
+    UNITY_TRANSFER_INSTANCE_ID(input, output);
+    float3 positionWS = TransformObjectToWorld(input.positionOS);
+    output.positionCS = TransformWorldToHClip(positionWS);
+
+    float4 baseST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
+    output.baseUV = input.baseUV * baseST.xy + baseST.zw;
+    return output;
+}
+
+float4 UnlitPassFragment(Varyings input):SV_TARGET
+{
+    UNITY_SETUP_INSTANCE_ID(input);
+    float4 baseMap = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.baseUV);
+    float4 color = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
+    return baseMap * color;
+}
+```
+
+采样半透明纹理的效果如下：
+![|400](assets/Draw%20Calls/Untitled%2029.png)
+
+## Alpha Clipping
+
+`Alpha Clipping` 是将一些不满足要求的像素直接丢弃掉避免渲染的方法，在 Unity 中也被称为 `Cutoff` 。
+
+为使用 `Alpha Clipping` ，首先需要定义它丢弃的阈值，即 `cutoff threshold` ，该变量也可以放在 `Unity Per Material` 中作为 Instanced Data。在片段着色器中通过 `clip` 函数剔除不需要的像素，该函数接受一个 float 类型的形参，当形参值小于 0 时，该像素会被丢弃。整个流程如下所示：
+
+```glsl
+// UnlitCutoff.shader
+Properties
+{
+		// ...
+		_Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
+		// ...
+}
+
+// UnlitCutoff.hlsl
+// ...
+UNITY_INSTANCING_BUFFER_START(UnityPerMaterial) // Instancing buffer is also SRP Batcher compatiable
+		UNITY_DEFINE_INSTANCED_PROP(float4, _BaseMap_ST)
+		UNITY_DEFINE_INSTANCED_PROP(float4, _BaseColor)
+		UNITY_DEFINE_INSTANCED_PROP(float, _Cutoff)
+UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
+
+// ...
+float4 UnlitPassFragment(Varyings input):SV_TARGET
+{
+    UNITY_SETUP_INSTANCE_ID(input);
+    float4 baseMap = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.baseUV);
+    float4 color = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
+    float4 base = baseMap * color;
+    clip(base.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
+    return base;
+}
+
+```
+
+此时效果如下所示：
+![|400](assets/Draw%20Calls/GIF_2021-6-10_9-00-17.gif)
+
+上示例子中，同时使用了 `Alpha Blending` 和 `Alpha Cutoff` 两个技术，但通常而言，这两个技术并不会一起使用。 `Alpha Blending` 使用时通常不会写入深度信息，而 `Alpha Cutoff` 使用时通常会写入深度信息。
+
+当关闭了 `Alpha Blending` 并只使用 `Alpha Cutoff` 时，效果如下所示：
+![|400](assets/Draw%20Calls/GIF_2021-6-10_9-04-22.gif)
+
+在现代 GPU 中， `Alpha Clipping` 可能会打断 `Early-Z` 造成性能的下降，因此最好仅在需要的时候开启 `Alpha Clipping` 功能。
+
+## Shader Features
+
+Unity 的 Shader Features 功能可以根据 Shader 中 `Toggle` 的值增加或移除特定的宏，并根据宏调整 Shader 的编译。整体流程如下所示：
+
+```glsl
+// UnlitCutoff.shader
+Properties
+{
+		// ...
+    _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
+    [Toggle(_CLIPPING)] _Clipping("Alpha Clipping",float ) =0
+		// ...
+}
+SubShader
+{
+    Pass
+    {
+				// ...
+        HLSLPROGRAM
+        #pragma shader_feature _CLIPPING
+				// ...
+        ENDHLSL
+    }
+}
+
+// UnlitCutoff.hlsl
+float4 UnlitPassFragment(Varyings input):SV_TARGET
+{
+		// ...
+    #if defined(_CLIPPING)
+        clip(base.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
+    #endif
+    return base;
+}
+```
+
+其中 `#pragma shader_feature` 会让 Unity 根据在 `Toggle` 中定义的宏，即 `_CLIPPING` ，编译出两份不同的代码，一份是定义了 `_CLIPPING` ，一份是不定义的。
+
+## Cutoff Per Object
+
+在之前的 `PerObjectMaterialProperties` 脚本中可以加入 `Cutoff` 的设置，如下所示：
+
+```csharp
+// PerObjectMaterialProperties.cs
+
+// ...
+private static int cutoffID = Shader.PropertyToID("_Cutoff");
+
+// ...
+private void OnValidate()
+{
+		// ...
+    block.SetFloat(cutoffID, cutoff);
+		// ...
+}
+```
