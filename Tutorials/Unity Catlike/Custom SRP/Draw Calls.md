@@ -140,13 +140,10 @@ float4 UnlitPassVertex(float3 positionOS: POSITION) : SV_POSITION
 ```ad-note
 传入的 `positionOS` 参数后的 `POSITION` 也是 semantics，表示传入的数据是表示位置的。
 ```
-<aside> 💡 
 
-</aside>
-
-<aside> 💡 `POSITION` 和 `SV_POSITION` 的差异可见 [Half-Pixel Offset](https://www.notion.so/Half-Pixel-Offset-5d87e122d0944a32a9f75c90998c5ea7)
-
-</aside>
+```ad-note
+`POSITION` 和 `SV_POSITION` 的差异可见 [Half-Pixel Offset](../../../Notes/Computer%20Graphics/Computer%20Graphics%20-%20Half-Pixel%20Offset.md)
+```
 
 其中的 `TransformObjectToWorld` 和 `TransformWorldToHClip` 为自定义的坐标系转换的函数，如下所示：
 
@@ -162,3 +159,23 @@ float4 TransformWorldToHClip(float3 positionWS)
     return mul(unity_MatrixVP,float4(positionWS,1.0));
 }
 ```
+
+两个函数中用到了两个矩阵 `unity_ObjectToWorld` 和 `unity_MatrixVP` ，定义如下所示：
+
+```glsl
+// In ShaderLibrary/UnityInput.hlsl
+float4x4 unity_ObjectToWorld;
+float4x4 unity_MatrixVP;
+```
+
+```ad-note
+在 HLSL 中直接定义的变量即为 `Uniform` 变量，上述两个变量的命名与 Unity 内置着色器的变量名相同，因此 Unity 可以找到这两个 `Uniform` 变量并为其赋值。
+```
+
+`UnityInput.hlsl` 和 `Common.hlsl` 为新增的 `.hlsl` 文件，并放置在 `ShaderLibrary` 文件夹中，前者是为了封装 Unity 内置 Uniform变量输入，后者是为了封装一些常用的函数。即此时文件结构为：
+![|200](assets/Draw%20Calls/Untitled%204.png)
+
+## Core Library
+
+像上述的 `TransformObjectToWorld` 和 `TransformWorldToHClip` 是非常同样的函数，Unity 提供了 包 `Core RP Pipeline` 封装了这些函数的实现。
+![|200](assets/Draw%20Calls/Untitled%205.png)

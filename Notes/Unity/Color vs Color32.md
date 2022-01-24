@@ -1,6 +1,6 @@
 ---
 created: 2022-01-05
-updated: 2022-01-23
+updated: 2022-01-24
 tags:
     - Unity
 ---
@@ -27,9 +27,9 @@ tags:
 
 对于数学计算而言，`Color` 有更高的合理性。
 
-如在使用 `Color` 格式下，一个 Red 通道值为 $0.7$，Alpha 通道值为 $0.5$，则对应的 [Premultiplied Alpha](../Computer%20Graphics/Computer%20Graphics%20-%20Premultiplied%20Alpha.md) 为 $0.7*0.5=0.35$，仍然是一个合法 `Color` 数值。
+如在使用 `Color` 格式下，一个 Red 通道值为 $0.7$，Alpha 通道值为 $0.5$，则对应的 [Premultiplied Alpha](../Computer%20Graphics/Premultiplied%20Alpha.md) 为 $0.7*0.5=0.35$，仍然是一个合法 `Color` 数值。
 
-而如果使用 `Color32`，则 Red 通道值为 $127$，Alpha 通道值为 $178$，对应的 [Premultiplied Alpha](../Computer%20Graphics/Computer%20Graphics%20-%20Premultiplied%20Alpha.md) 值为 $127*178=22606$，不再是一个合法 `Color32` 数值。
+而如果使用 `Color32`，则 Red 通道值为 $127$，Alpha 通道值为 $178$，对应的 [Premultiplied Alpha](../Computer%20Graphics/Premultiplied%20Alpha.md) 值为 $127*178=22606$，不再是一个合法 `Color32` 数值。
 
 # Reference
 

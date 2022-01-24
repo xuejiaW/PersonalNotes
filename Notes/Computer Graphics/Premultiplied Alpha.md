@@ -3,7 +3,7 @@ cssclass: [table-border]
 tags:
     - Computer-Graphics
 created: 2022-01-06
-updated: 2022-01-14
+updated: 2022-01-24
 ---
 
 # 透明像素造成的失真
@@ -14,14 +14,14 @@ updated: 2022-01-14
 
 |                                                                              |                                                                              |                                                                              |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled.png)     | ![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%202.png) | ![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%204.png) |
-| ![50](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%201.png) | ![50](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%203.png) | ![50](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%205.png) |
+| ![](assets/Premultiplied%20Alpha/Untitled.png)     | ![](assets/Premultiplied%20Alpha/Untitled%202.png) | ![](assets/Premultiplied%20Alpha/Untitled%204.png) |
+| ![50](assets/Premultiplied%20Alpha/Untitled%201.png) | ![50](assets/Premultiplied%20Alpha/Untitled%203.png) | ![50](assets/Premultiplied%20Alpha/Untitled%205.png) |
 
 在上述纹理移动的过程中，可以看到拥有不同颜色的透明像素的图，会显示出不同颜色的拖影，如下所示，最右侧的纹理的拖影是理想的状态，该纹理的不透明像素为红色：
-![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/cross_anim.gif)
+![](assets/Premultiplied%20Alpha/cross_anim.gif)
 
 不透明像素为蓝色的纹理移动过程中的具体变换如下，其中黑色线框表示纹理的边界，背后的小格子表示屏幕的像素：
-![|300](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/blue_cross_move.gif)
+![|300](assets/Premultiplied%20Alpha/blue_cross_move.gif)
 
 可以看到当纹理的像素与屏幕的像素并未完全对齐时，会出现拖影。其根本原因是纹理的双线性采样导致，当纹理渲染的屏幕上时，如果屏幕的像素中点与纹理的像素中点并不完全匹配时，GPU将会采样周围多个纹理像素的颜色，并将其混合得到最终的颜色。
 
@@ -29,19 +29,19 @@ updated: 2022-01-14
 
 $$ 0.5 \cdot\left[\begin{array}{l}1 \\0 \\0 \\1\end{array}\right]+0.5 \cdot\left[\begin{array}{l}0 \\0 \\1 \\0\end{array}\right]=\left[\begin{array}{c}0.5 \\0 \\0.5 \\0.5\end{array}\right] $$
 
-![|300](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%206.png)
+![|300](assets/Premultiplied%20Alpha/Untitled%206.png)
 
 因为得到的像素颜色是半透明的（Alpha值为0.5），因此当这个像素需要被绘制到屏幕上时，会与当前纹理缓冲中的颜色（本例中为白色）进行Alpha 混合，如下公式所示，该颜色就是最终上屏的颜色，如下右所示：
 $$ \begin{array}{l}\alpha_{\text {sprite}} \cdot R G B_{\text {sprite}}+\left(1-\alpha_{\text {sprite}}\right) \cdot R G B_{\text {Background}}\\ \\=0.5 \cdot\left[\begin{array}{c}0.5 \\0 \\0.5 \\ 0.5\end{array}\right]+(1-0.5) \cdot\left[\begin{array}{c}1 \\1 \\1 \\ 1\end{array} \right] \\ \\= \left[\begin{array}{c} 0.75 \\ 0.5 \\ 0.75 \\ 0.75 \end{array}\right] \end{array} $$
 
-![|50](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/Untitled%207.png)
+![|50](assets/Premultiplied%20Alpha/Untitled%207.png)
 
 但这个颜色显然是不对的，因为原始纹理中不透明像素的颜色为红色，所以拖影的颜色应当是红色作为主导颜色，而在上述公式中得到的颜色红色和蓝色的占比相同（都为0.75）。
 
 其根本原因就是在双线性采样时，GPU将完全透明的蓝色与完全不透明的红色进行了混合，纹理采样出的颜色变为 $[ 0.5 \quad 0 \quad 0.5 \quad 0.5]$，即此时红色和蓝色就已经有个相同的贡献比。而完全透明的蓝色像素不应该在双线性采样时对最终输出的像素颜色做出贡献。
 
 直观上来说，拖影颜色应该是由红色的不透明像素与白色底共同形成，即得到的颜色应当是 $[ 1 \;\; 0 \;\; 0 ]$ 和 $[1 \;\; 1 \;\; 1 ]$ 混合得到，即应当得到 $[1 \;\; 0.5 \;\; 0.5]$。如下所示：
-![|50](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/_20201223115730.png)
+![|50](assets/Premultiplied%20Alpha/_20201223115730.png)
 
 而例子中最右侧的红色透明像素可以处理的原因是当透明像素的颜色与不透明像素的颜色相同时，即使透明像素的颜色有了错误的贡献比，也不会对最终产生的像素颜色产生干扰。
 
@@ -120,7 +120,7 @@ $$ \begin{array}{l}\left[\begin{array}{c} 0 \\0.5 \\0 \end{array}\right]+(1-0.5)
 
 |                                                                                         |                                                                                         |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| ![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/image-20220106224248879.png) | ![](assets/Computer%20Graphics%20-%20Premultiplied%20Alpha/image-20220106224255884.png) | 
+| ![](assets/Premultiplied%20Alpha/image-20220106224248879.png) | ![](assets/Premultiplied%20Alpha/image-20220106224255884.png) | 
 
 但 `Flood-Filling` 存在两个问题：
 1. 透明像素的颜色与临近的不透明像素的颜色并不是完全相同的，而这种情况下透明像素的颜色很难定义

@@ -3,7 +3,7 @@ Alias: FFR
 tags:
     - Virtual-Reality
 created: 2022-01-09
-updated: 2022-01-14
+updated: 2022-01-24
 ---
 
 # 像素密度问题
@@ -32,7 +32,7 @@ updated: 2022-01-14
 
 传统做法是将 FrameBuffer，拆分成多个小块，对每个小块已更低的像素进行渲染，然后再将小块绘制到总的 FrameBuffer 上。如原先分辨率为 $100 \times 100$，将其拆分为四个 $25\times 25$的小块，但是每个小块实际上以 $10*10$ 的分辨率绘制，再绘制完后再将其拉伸到 $25\times25$，并拷贝到 FrameBuffer 上。
 
-更高效的做法是通过修改渲染管线，在移动端的 GPU 上，通常 [Tile-Based Rendering](../Computer%20Graphics/Computer%20Graphics%20-%20Tiled-Baed%20Rendering.md#Tile-Based%20Rendering) ，可以直接通过修改Tile绘制到Framebuffer上时的流程来实现FFR，即对每一个Tile进行更低分辨率的渲染，最后再将每个Tile进行拉伸并绘制到最终FrameBuffer上。
+更高效的做法是通过修改渲染管线，在移动端的 GPU 上，通常 [Tile-Based Rendering](../Computer%20Graphics/Tiled-Baed%20Rendering.md#Tile-Based%20Rendering) ，可以直接通过修改Tile绘制到Framebuffer上时的流程来实现FFR，即对每一个Tile进行更低分辨率的渲染，最后再将每个Tile进行拉伸并绘制到最终FrameBuffer上。
 
 ## 高通 Foveat FrameBuffer API
 

@@ -2,7 +2,7 @@
 tags:
     Computer-Graphics
 created: 2021-12-30
-updated: 2022-01-14
+updated: 2022-01-24
 ---
 
 # Triangle Rasterization Rules
@@ -19,7 +19,7 @@ updated: 2022-01-14
 
 如下是一系列像素和两个三角形，其中黑色的点属于右测的三角形的光栅化的结果，灰色的点属于左侧三角形光栅化的结果。
 
-![|400](assets/Computer%20Graphics%20-%20Triangle%20Rasterization%20Rules/Untitled.png)
+![|400](assets/Triangle%20Rasterization%20Rules/Untitled.png)
 
 ```ad-note
 对角线上的点在左侧三角形的右边缘上，在右侧三角形的左边缘上，因此属于右侧的三角形
@@ -30,7 +30,7 @@ updated: 2022-01-14
 ```
 
 如下为更多三角形光栅化的实例，其中浅灰色和深灰色的像素都表示属于三角形光栅化的结果，浅灰色和深灰色只不过为了区分这像素究竟相邻三角形的哪一个：
-![|500](assets/Computer%20Graphics%20-%20Triangle%20Rasterization%20Rules/Untitled%201.png)
+![|500](assets/Triangle%20Rasterization%20Rules/Untitled%201.png)
 
 # Reference
 
