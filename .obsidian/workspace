@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "string inte",
+                "query": "callout",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -162,11 +163,11 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
+    "Notes/Obsidian/Plugins.md",
     "TO-DO.md",
     "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
     "Tutorials/Unity Catlike/Mesh Basics/Procedural Grid.md",
     "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
-    "Notes/Obsidian/Plugins.md",
     "Notes/Unity/Scripting Architecture/CSharp.md",
     "Notes/VSCode/VSCode - Extensions.md",
     "CSharp-$ String Interpolation.md",

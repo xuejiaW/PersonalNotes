@@ -571,16 +571,147 @@ public CustomRenderPipeline()
 | ------------------------------------------ | ------------------------------------------ |
 | ![](assets/Draw%20Calls/Untitled%2023.png) | ![](assets/Draw%20Calls/Untitled%2024.png) | 
 
-```ad-t```
+```ad-tip
+通常情况下， `GPU Instancing` 是比 `Dynamic Batching` 更好的解决方法，因为少了很多限制，也不会产生 Bug。
+```
 
-<aside> 📢 
-
-</aside>
-
-<aside> 🔑 见场景 `SampleCubeScene`
-
-</aside>
+```ad-tip
+见场景 `SampleCubeScene`
+```
 
 ## Configuring Batching
 
 上述介绍了三种减少 DrawCall 的方法， `SRP Batcher` ， `GPU Instancing` ，`Dynamic Batching` 。而 `Dynamic Batching` 与前两者互斥， 因此需要动态的根据所选择的减少 DrawCall 的方式去调整代码。
+
+解决思路为创建 `CustomRenderPipeline` 时指定需要使用的特性，然后将选择一路传递给具体的 Renderer，Renderer以此去调整参数，如下所示：
+
+```csharp
+// CustomRenderPipelineAsset.cs
+[SerializeField]
+  private bool useDynamicBatching = false, useGPUInstancing = true, useSRPBatcher = true;
+  protected override RenderPipeline CreatePipeline()
+  {
+      return new CustomRenderPipeline(useDynamicBatching, useGPUInstancing, useSRPBatcher);
+  }
+
+// CustomRendererPipeline.cs
+public CustomRenderPipeline(bool useDynamicBatching, bool useGPUInstancing, bool useSRPBatcher)
+{
+    this.useDynamicBatching = useDynamicBatching;
+    this.useGPUInstancing = useGPUInstancing;
+    GraphicsSettings.useScriptableRenderPipelineBatching = useSRPBatcher;
+}
+
+protected override void Render(ScriptableRenderContext context, Camera[] cameras)
+{
+    foreach (Camera camera in cameras)
+    {
+        renderer.Render(context, camera, useDynamicBatching, useGPUInstancing);
+    }
+}
+
+// CameraRenderer.cs
+private void DrawVisibleGeometry(bool useDynamicBatching, bool useGPUInstancing)
+{
+		// ... 
+		DrawingSettings drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings)
+		{
+		    enableDynamicBatching = useDynamicBatching,
+		    enableInstancing = useGPUInstancing
+		}
+    // ...
+}
+```
+
+# Transparency
+
+在材质中的 `Render Queue` 部分，可以看到有 `Transparent` 选项，如下所示，但这里的 `Transparent` 仅是修改物体的渲染顺序，而并不会改变物体的渲染特性。即此时将 `Base Color` 调整为半透明的，最终渲染的结果仍然是完全不透明的。
+![|400](assets/Draw%20Calls/Untitled%2025.png)
+
+## Blend Modes
+
+为了真正实现半透明效果，需要开启 `Alpha Blending` ，在 Unity 中通过 `Blend [<SrcBlend>] [<DstBlend>]` 语句切换 Alpha Blending。当 `<SrcBlend>` 为 1， `<DstBlend>` 为 0 时 Alpha Blending 关闭，其余情况为打开。
+
+为了让 `Unlit` Shader 支持半透明，可将其修改为：
+
+```glsl
+Properties
+{
+    _BaseColor("Base Color",Color) = (1.0, 1.0, 1.0, 1.0)
+    [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Blend",Float) = 1
+    [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Blend",Float) = 0
+}
+
+SubShader
+{
+    Pass
+    {
+        Blend [_SrcBlend] [_DstBlend]
+				// ...
+    }
+}
+```
+
+此时调整材质就能产生半透明效果，如下所示：
+
+|                                                                   |                                                                |
+| ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![修改黄色材质的 Alpha 值](assets/Draw%20Calls/Untitled%2026.png) | ![黄色小球有半透明效果](assets/Draw%20Calls/Untitled%2027.png) |
+
+```ad-hint
+见场景 `Transparent`
+```
+
+## Not Writing Depth
+
+通常而言 `Transparent` 的物体渲染顺序为从远到近，也因此深度检测对 `Transparent` 在很多情况下是不产生效果的（从远到近渲染，新绘制的东西通常都会过深度测试）。因此可以选择在渲染 `Transparent` 时将深度缓冲的写入关闭，如下所示：
+
+```glsl
+Properties
+{
+		// ...
+		[Enum(Off,0,On,1)] _ZWrite ("Z Write", Float) = 1
+}
+
+SubShader
+{
+    Pass
+    {
+				ZWrite [_ZWrite]
+				// ...
+    }
+}
+```
+
+## Texturing
+
+为了让材质支持纹理采样，首先需要在 Shader 的 `Propertiles` 中增加：
+
+```glsl
+// UnlitTransparentTexture.shader
+Properties
+{
+    _BaseMap("Texture",2D) = "White" {}
+		// ...
+}
+```
+
+其中 `2D` 表示为一张二维的纹理， `White` 表示默认值为 Unity 定义的白色纹理，最后的 `{}` 为早期 Unity 版本中对纹理的设置选项，目前已经废弃，但仍需要定义，避免一些奇怪的错误。
+
+对纹理也需要定义特定的 Uniform 变量，变量的类型为 `TEXTURE2D` ，且需要额外增加一个 `SAMPLER` 类型的变量，作为控制纹理 Filter 和 Wrap 模式的采样器，如下所示：
+
+```glsl
+// UnlitTransparentTexturePass.hlsl
+
+// ...
+TEXTURE2D(_BaseMap);
+SAMPLER(sampler_BaseMap);
+
+// ...
+```
+
+```ad-warning
+ `SAMPLER` 变量的命名应该与 `TEXTURE2D` 相同，只不过前面添加 `sampler_` 字段。
+```
+
+此时查看纹理，可以看到多了 `Texture` 的数据，除了纹理贴图的设置外，还有 `Tiling` 和 `Offset` 选项的设置，前者表示纹理 UV 的大小，后者表示 UV 的起始点。整体如下所示：
