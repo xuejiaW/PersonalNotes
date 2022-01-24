@@ -79,7 +79,6 @@ public class CustomRenderPipelineAsset : RenderPipelineAsset
 
     因为替换的 `RP Asset` 实际上返回的是空，即 Unity 此时没有任何的渲染管线可以用。
 
-
 ## Render Pipeline Instance
 
 通过继承 `RenderPipeline` 构建自定义的渲染管线类，所有的派生自 `RenderPipeline` 的类都必须实现 `Render` 函数，Unity 在每一帧通过触发该函数进行渲染，如下所示：
@@ -114,7 +113,6 @@ Unity 通过 RP 中的 `Render` 函数进行渲染，Render 函数有两个形�
 2.  `Camera[]` ，该形参表示所有激活的 Cameras
 
     RP 使用该形参来控制每个摄像机的渲染与不同摄像机间的渲染顺序
-
 
 ## Camera Renderer
 
@@ -540,7 +538,7 @@ partial void DrawGizmos()
 | --- | --- |
 | ![](assets/Custom%20Render%20Pipeline/Untitled%2017.png)    |  ![](assets/Custom%20Render%20Pipeline/Untitled%2018.png)   |
 
-但无论 `Render Mode` 是什么格式，在 Scene 界面中，UI都没有被正常的渲染出来，能看到的只有 UI 的 `Gizmo` ，如下：
+但无论 `Render Mode` 是什么格式，在 Scene 界面中，UI 都没有被正常的渲染出来，能看到的只有 UI 的 `Gizmo` ，如下：
 ![](assets/Custom%20Render%20Pipeline/Untitled%2019.png)
 
 这是因为 UI 在 Scene 界面下，都是以 `World Space` 模式被渲染出来，而且用了不同的几何信息，且 UI 在 Scene 下的几何信息默认并没有被添加到 SRP 中。对于在 Scene 中显示的 UI 的几何信息，需要通过函数 `ScriptabEmitWorldGeometryForSceneView` 添加到 SRP 中。且需要在调用 `Cull` 函数前被添加，保证这些几何信息同样会被进行正常裁剪。
@@ -553,11 +551,11 @@ partial void PrepareForSceneWindow();
 
 public void Render(ScriptableRenderContext renderContext, Camera camera)
 {
-		// ...
+        // ...
     PrepareForSceneWindow();
     if (!Cull()) // Get Culling parameters failed
         return;
-		// ...
+        // ...
 }
 
 // In CameraRenderer.Editor
@@ -575,6 +573,42 @@ partial void PrepareForSceneWindow()
 ## Two Cameras
 
 在场景中可以将 `Main Camera` 进行拷贝，并将新的 Camera 命名为 `Second Camera` ，并将 `Second Camera` 的 `Depth` 参数设置为 0，即此时会先渲染 `Main Camera` ，然后再渲染 `Second Camera` ：
-|     |     |
-| --- | --- |
-| ![Hierarchy](assets/Custom%20Render%20Pipeline/Untitled%2020.png)    |     |
+
+|                                                                   |                                                                     |                                                                       |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![Hierarchy](assets/Custom%20Render%20Pipeline/Untitled%2020.png) | ![Main Camera](assets/Custom%20Render%20Pipeline/Untitled%2021.png) | ![Second Camera](assets/Custom%20Render%20Pipeline/Untitled%2022.png) |
+
+
+此时在 Frame Debugger 中可以看到两个摄像机的渲染被合并在了一起，如下所示：
+![](assets/Custom%20Render%20Pipeline/Untitled%2023.png)
+
+这是因为此时两个 Camera 对应的 `CameraRenderer` 中的 `Command Buffer` 命名相同，因此 Frame Debugger 将两者的信息合并在了一起。
+
+可以通过分别对两个 Command Buffer 进行命令来分开两者的渲染信息，如下所示：
+
+```csharp
+// In CameraRenderer
+partial void PrepareBuffer();
+public void Render(ScriptableRenderContext renderContext, Camera camera)
+{
+		// ...
+		PrepareBuffer();
+    PrepareForSceneWindow();
+    if (!Cull()) // Get Culling parameters failed
+        return;
+		// ...
+}
+
+// In CameraRenderer.Editor
+partial void PrepareBuffer()
+{
+    buffer.name = camera.name;
+}
+``` 
+
+```ad-note
+`camera.name` 会造成内存分配，但因为 `PrepareBuffer` 是定义在 `CameraRender.Editor` 中，因此仅在 Editor 模式下运行，不会造成运行时的性能浪费。
+```
+
+此时 Frame Debugger 界面如下：
+![|500](assets/Custom%20Render%20Pipeline/Untitled%2024.png)
