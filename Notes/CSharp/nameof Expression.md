@@ -1,6 +1,6 @@
 ---
 created: 2021-12-21
-updated: 2021-12-22
+updated: 2022-01-25
 tags:
     - C#
 ---
@@ -36,7 +36,7 @@ Debug.Log(nameof(@new));
 1. `nameof` 并不会输出完整的命名空间
 2. 3. `nameof` 并不会输出具体的泛型
 3. 使用 `nameof` 时，调用类成员时不一定依赖类实例
-4. 当使用 [ @ Verbatim Identifier](CSharp%20-%20@%20Verbatim%20Identifier.md) 时，`@` 符号并不会作为输出结果的一部分
+4. 当使用 [ @ Verbatim Identifier](@%20Verbatim%20Identifier.md) 时，`@` 符号并不会作为输出结果的一部分
 
 # Reference
 [nameof expression - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof)

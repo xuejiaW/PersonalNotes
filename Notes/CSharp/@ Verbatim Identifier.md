@@ -2,7 +2,7 @@
 tags:
    - C#
 created: 2021-12-11
-updated: 2021-12-22
+updated: 2022-01-25
 ---
 
 `@` 关键字用来作为`原义标识符（Verbatim Identifier）`，主要包含以下用处：
@@ -31,7 +31,7 @@ Here is your gift, Jamie!
 
 # 支持使用原义解释字符串
 
-当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释，即不再需要依赖于[转义序列](CSharp%20-%20Escape%20Sequences.md)。
+当使用 `@` 作为字符串前缀时，会对字符串内所有的字符用原义解释，即不再需要依赖于[转义序列](Escape%20Sequences.md)。
 
 如下所示：
 ```csharp
