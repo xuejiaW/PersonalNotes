@@ -23,7 +23,7 @@ tags:
 ![|400](assets/RectTransform/image-20220125232613417.png)
 
 当使用鼠标拖动表示 `Anchor` 点的三角形时，Unity 会显示 `Anchors` 基于父物体的比例关系：
-![](assets/RectTransform/GIF%201-25-2022%2011-32-43%20PM.gif)
+![|500](assets/RectTransform/GIF%201-25-2022%2011-32-43%20PM.gif)
 
 ```ad-note
 `Insepctor`中的值即为该比例关系的归一化数值。
@@ -35,4 +35,13 @@ tags:
 | ------------------------------------------------------------- | ------------------------------------------------------------- |
 | ![绝对布局](assets/RectTransform/image-20220125233931659.png) | ![相对布局](assets/RectTransform/image-20220125234037439.png) |
 
-绝对和相对布局可以针对单一的轴向，如下情况 
+绝对和相对布局可以针对单一的轴向，如下情况 `Anchor Max` 和 `Anchor Min` 的 X 轴值不同，Y 轴值相同，因此 X 轴为相对布局，Y 轴为绝对布局：
+![|500](assets/RectTransform/image-20220125235329968.png)
+
+## 绝对布局
+
+绝对布局的情况下，四个 `Anchors` 表示的是同一个点。 `width` 和 `height` 即为当前 UI 元素的宽和高
+
+## 相对布局
+
+# Pivot
