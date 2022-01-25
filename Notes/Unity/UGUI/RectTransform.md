@@ -46,6 +46,11 @@ tags:
 
 ## 相对布局
 
-当相对布局时，`Left / Top / Right`
+当相对布局时，`Left / Top / Right / Bottom` 分别表示 UI 元素的 `左/上/右/下` 边缘距离锚点所构成的 `左/上/右/下` 的距离。
 
+效果如下所示：
+
+|     |     |
+| --- | --- |
+|  ![](assets/RectTransform/image-20220126000437133.png)  |  ![](assets/RectTransform/image-20220126000442564.png)  | 
 # Pivot
