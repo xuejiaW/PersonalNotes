@@ -873,3 +873,36 @@ private void OnValidate()
 		// ...
 }
 ```
+
+结果如下：
+![|400](assets/Draw%20Calls/image-20220125091537317.png)
+
+## Ball of Alpha-Clipped Spheres
+
+同理在使用 Instanced Drawing 时，也可以随机设置小球的透明度，并以此触发 `Alpha Clipping` 效果，如下所示：
+
+```csharp
+// InstancedDrawingMeshBall.cs
+
+private void Awake()
+{
+    for (int i = 0; i != matrices.Length; ++i)
+    {
+        matrices[i] = Matrix4x4.TRS(Random.insideUnitSphere * 10f,
+        Quaternion.Euler(Random.value * 360f, Random.value * 360f, Random.value * 360f),
+        Vector3.one * Random.Range(0.5f, 0.1f));
+        baseColors[i] = new Vector4(Random.value, Random.value, Random.value, Random.Range(0.5f, 1f));
+    }
+}
+```
+
+结果如下：
+![|400](assets/Draw%20Calls/Untitled%2031.png)
+
+# Reference
+
+[ShaderLab: adding shader programs](https://docs.unity3d.com/Manual/shader-shaderlab-code-blocks.html)
+
+[Shader data types and precision](https://docs.unity3d.com/Manual/SL-DataTypesAndPrecision.html)
+
+[Built-in shader variables](https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html)
