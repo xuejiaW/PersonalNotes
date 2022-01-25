@@ -13,14 +13,17 @@ tags:
 ![|500](assets/RectTransform/image-20220125231029155.png)
 
 
-# Anchor
-`锚点（Anchor）`用于父子物体的对齐，其在 Inspector 面板和 Scene 界面中分别如下表达：
+# Anchors
+`Anchors` 用于父子物体的对齐，其在 Inspector 面板和 Scene 界面中分别如下表达：
 
 |                                                                |                                                            |
 | -------------------------------------------------------------- | ---------------------------------------------------------- |
 | ![Inspector](assets/RectTransform/image-20220125231146698.png) | ![Scene](assets/RectTransform/image-20220125232054760.png) | 
 
-在 Inspector 中`Anchor` 通过两个点 `Anchor Max` 及 `Anchor Min` 定义，根据这两个点可以计算出 `Scene` 中 `Anchor` 的四个点。如下所示：
+在 Inspector 中`Anchors` 通过 `Anchor Max` 及 `Anchor Min` 定义，`Anchors` 的四个点都可以根据这两个点算出。如下所示：
 ![|400](assets/RectTransform/image-20220125232613417.png)
 
-当使用鼠标拖动表示 `Anchor` 点的三角形时，Unity 会显示 `Anchor` 四个点基于父物体的比例guan'xi
+当使用鼠标拖动表示 `Anchor` 点的三角形时，Unity 会显示 `Anchors` 基于父物体的比例关系：
+![](assets/RectTransform/GIF%201-25-2022%2011-32-43%20PM.gif)
+
+`Insepctor`中的值即为该比例关系的归一化数值。当 `Anchor Max`
