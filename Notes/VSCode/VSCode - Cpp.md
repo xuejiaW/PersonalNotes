@@ -2,7 +2,7 @@
 tags:
     - VSCode
 created: 2021-11-21
-updated: 2022-01-14
+updated: 2022-01-25
 cssclass: [table-border]
 ---
 
@@ -52,4 +52,19 @@ cssclass: [table-border]
 
 
 # 调试设置
-launcher.json
+
+关于调试的设置在工作区的 `.vscode/launcher.json` 文件中。
+
+选择 `Run->Add Configuration` ，再选择需要用的调试器，如 `GDB` ，再选择 `GDB` 的路径，则可以创建 `launcher.json` 文件。
+
+|                                                          |                                                          |                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| ![增加调试的配置文件](assets/VSCode%20-%20Cpp/image-20220125094808870.png) | ![选择 GDB 调试器](assets/VSCode%20-%20Cpp/image-20220125094839848.png) | ![选择 GDB 文件路径](assets/VSCode%20-%20Cpp/image-20220125094849964.png) |
+
+# Rerference
+
+[Get Started with C++ and Mingw-w64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw)
+
+[Visual Studio Code Variables Reference](https://code.visualstudio.com/docs/editor/variables-reference)
+
+[Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks#_run-behavior)
