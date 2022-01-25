@@ -16,10 +16,12 @@ tags:
 # Anchor
 `锚点（Anchor）`在 Inspector 面板和 Scene 界面中分别如下表达：
 
-|     |     |
-| --- | --- |
-| ![](assets/RectTransform/image-20220125231146698.png)    | ![](assets/RectTransform/image-20220125232054760.png)  |
+|                                                                |                                                            |
+| -------------------------------------------------------------- | ---------------------------------------------------------- |
+| ![Inspector](assets/RectTransform/image-20220125231146698.png) | ![Scene](assets/RectTransform/image-20220125232054760.png) | 
 
+`锚点（Anchor）`用于父子物体的对齐。`Anchor` 通过两个点 `Anchor Max` 及 `Anchor Min` 定义，根据这两个点可以计算出 `Anchor` 的四个点。如下所示：
 
+![|400](assets/RectTransform/image-20220125232613417.png)
 
-`锚点（Anchor）`用于父子物体的对齐。`Anchor` 通过两个点 `Anchor Max` 及 `Anchor Min` 定义，根据这两个点可以计算出 `Anchor` 的四个点.
+当使用鼠标拖动表示 `Anchor` 点的三角形时，Unity 会显示对应的
