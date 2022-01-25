@@ -20,7 +20,7 @@ updated: 2022-01-24
 
 ## Quick Switcher
 
-该插件开启后，可通过默认为 `Ctrl+O` 的快捷键快速选择文件跳转，类似于 [VSCode](../../VSCode/VSCode.md) 中的 `Go to file (Ctrl + P)` 功能。
+该插件开启后，可通过默认为 `Ctrl+O` 的快捷键快速选择文件跳转，类似于 [VSCode](../VSCode.md) 中的 `Go to file (Ctrl + P)` 功能。
 
 可在 `Settings/Quick switcher / Quick Switcher / Show attachments` 中选择跳转文件时，是否要展示附件文件。
 

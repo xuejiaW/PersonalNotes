@@ -6,7 +6,7 @@ updated: 2022-01-25
 cssclass: [table-border]
 ---
 
-> 本部分说明在 [VSCode](VSCode.md) 中编写 C++ 项目相关的配置
+> 本部分说明在 [VSCode](../VSCode.md) 中编写 C++ 项目相关的配置
 
 # Overview
 
