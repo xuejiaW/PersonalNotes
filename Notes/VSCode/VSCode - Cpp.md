@@ -1,10 +1,10 @@
 ---
-tags: 
+tags:
     - VSCode
 created: 2021-11-21
 updated: 2022-01-14
+cssclass: [table-border]
 ---
-
 
 > 本部分说明在 [VSCode](VSCode.md) 中编写 C++ 项目相关的配置
 
@@ -38,4 +38,18 @@ updated: 2022-01-14
 
 # 编译设置
 
-关于编译的设置在工作区的 `.vscode/tasks.json` 文件中，
+关于编译的设置在工作区的 `.vscode/tasks.json` 文件中。
+
+选择 `Terminal -> Configure Default Build Task` 后，再选择编译时需要用的编译器，如 `g++` ，则可创建 `tasks.json` 文件。
+
+|                                                                         |                                                                        |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![配置 Build 任务](assets/VSCode%20-%20Cpp/image-20220125094517353.png) | ![选择目标编译器](assets/VSCode%20-%20Cpp/image-20220125094532505.png) |
+
+```ad-note
+该文件配置完成后，就可以使用 `Tasks. Run Build Task` 生成可执行文件。 但此时，仍然无法使用 F5 直接调试应用
+```
+
+
+# 调试设置
+launcher.json

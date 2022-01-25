@@ -1,3 +1,7 @@
+---
+created: 2022-01-25
+updated: 2022-01-25
+---
 # 支持隐式和显式类型转换
 
 ```csharp
@@ -31,4 +35,20 @@ propertyBlock ??= new MaterialPropertyBlock();
 
 ```ad-tip
 c# 8.0 支持
+```
+
+# Debug 输出
+
+## 以二进制输出数据
+
+```csharp
+string valueString = Convert.ToString(value, radix );
+```
+
+其中 `value` 为需要输出的数值， `radix` 为目标进制，可使用 2 / 8 / 10 / 16
+
+如以下代码的结果为 `1000` ：
+
+```csharp
+string   Str_Value = Convert.ToString(8,2)
 ```
