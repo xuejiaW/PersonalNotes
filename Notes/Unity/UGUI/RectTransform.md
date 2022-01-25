@@ -1,6 +1,6 @@
 ---
 created: 2022-01-25
-updated: 2022-01-25
+updated: 2022-01-26
 tags:
     - Unity
     - UGUI
@@ -40,8 +40,12 @@ tags:
 
 ## 绝对布局
 
-绝对布局的情况下，四个 `Anchors` 表示的是同一个点。 `width` 和 `height` 即为当前 UI 元素的宽和高
+绝对布局的情况下，四个 `Anchors` 表示的是同一个点。 `width` 和 `height` 即为当前 UI 元素的宽和高，且该宽高与父物体无关。即无论父物体的大小，当前 UI 的宽高都是不变的。
+
+`Pos X/Y/Z` 三个值表示该 UI 元素的 [Pivot](#Pivot) 距离 `Anchors` 点的距离。
 
 ## 相对布局
+
+当相对布局时，`Left / Top / Right`
 
 # Pivot
