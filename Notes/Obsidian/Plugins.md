@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-01-24
+updated: 2022-01-25
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -276,7 +276,7 @@ console.log("Hello!");
 ## Custom Attachment Location[^2] 
 
 该插件控制在
-Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中的插件 [VSCode - Extensions](../../VSCode/VSCode%20-%20Extensions.md)
+Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中的插件 [Extensions](../VSCode/Extensions.md)
 
 当安装完成后，可直接通过 `Ctrl+V` 在界面中以 markdown 格式黏贴图片，图片的源文件会被保存在 `./asset/` 目录下的与文件同名的子文件夹下。
 
