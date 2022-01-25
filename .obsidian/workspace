@@ -146,7 +146,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.0984828026686444,
+                  "scale": 0.7478537827650182,
                   "close": true
                 }
               }
@@ -161,6 +161,7 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Notes/Unity.md",
+    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
     "Notes/Unity/UGUI.md",
     "TO-DO.md",
     "Notes/VSCode.md",
@@ -168,7 +169,6 @@
     "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
     "Notes/CSharp/Misc Knowledges.md",
     "Notes/CSharp/GCHandle.md",
-    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
     "Notes/CSharp/assets/CSharp - .Net Standard Overview/Untitled.md"
   ]
 }

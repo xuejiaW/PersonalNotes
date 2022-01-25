@@ -1,6 +1,6 @@
 ---
 created: 2022-01-20
-updated: 2022-01-24
+updated: 2022-01-25
 tags:
     - Unity
 ---
@@ -19,4 +19,5 @@ tags:
 
 # Folders
 - [Editor](Unity/Editor.md)：Unity Editor 相关内容
-- [Scripting Architecture](Unity/Scripting%20Architecture.md)：
+- [Scripting Architecture](Unity/Scripting%20Architecture.md)：Unity 依赖的代码结构，包括 C#，.Net 及 IL2CPP
+- [UGUI](Unity/UGUI.md)：UGUI 相关内容
