@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Draw Calls",
+  "attachmentFolderPath": "./assets/UGUI Layout Elements or Controllers",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
