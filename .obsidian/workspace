@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
-            "mode": "preview",
+            "file": "Tutorials/Unity Catlike.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "callout",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,13 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 315,
-    "collapsed": true
+    "width": 315
   },
   "right": {
     "id": "086a6696003cb579",
@@ -72,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
+                "file": "Tutorials/Unity Catlike.md"
               }
             }
           },
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
+                "file": "Tutorials/Unity Catlike.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
+                "file": "Tutorials/Unity Catlike.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -162,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Tutorials/Unity Catlike.md",
+    "Tutorials/Unity Learn.md",
+    "Tutorials/Unity Catlike/Mesh Basics.md",
+    "Tutorials/Unity Catlike/Custom SRP.md",
     "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
     "Notes/Obsidian/Plugins.md",
     "TO-DO.md",
     "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
     "Tutorials/Unity Catlike/Mesh Basics/Procedural Grid.md",
-    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
-    "Notes/Unity/Scripting Architecture/CSharp.md",
-    "Notes/VSCode/VSCode - Extensions.md",
-    "CSharp-$ String Interpolation.md",
-    "Notes/Unity.md"
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md"
   ]
 }
