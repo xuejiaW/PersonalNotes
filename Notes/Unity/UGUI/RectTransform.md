@@ -75,4 +75,7 @@ tags:
 
 # Pivot
 
-`支点（Pivot）` 用来影响当前物体旋转，缩放及修改位置的支点。
+`支点（Pivot）` 用来影响当前物体旋转，缩放及修改位置的支点。当选择了 `Rect Tool` 和 `Pivot` 时，`Pivot` 会在 Scene 中以蓝色空心小圈显示：
+![|400](assets/RectTransform/image-20220126230525862.png)
+
+
