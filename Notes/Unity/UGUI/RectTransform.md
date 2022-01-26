@@ -82,7 +82,17 @@ tags:
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | ![](assets/RectTransform/image-20220126230525862.png) | ![](assets/RectTransform/image-20220126230722014.png) |
 
+在 `Rect Tool` 模式下，可以点击
+
 当 `Pivot` 为 $(0.5,0.5)$ 时，缩放与旋转都基于物体的中心点，如下所示：
 ![](assets/RectTransform/Pivot_02.gif)
 
 当 `Pivot` 为 $(0,1)$ 时，缩放与旋转则会基于物体的左上角，如下所示：
+![](assets/RectTransform/Pivot_03.gif)
+
+# Blur Print Mode
+
+蓝图模式通过在 `RectTransform` 的如下按钮启用：
+![|500](assets/RectTransform/image-20220126231416341.png)
+
+当蓝图模式开启后
