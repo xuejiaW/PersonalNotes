@@ -99,3 +99,11 @@ tags:
 
 当蓝图模式开启后，`Rect Tool` 模式下，帮助移动的蓝色标识点会无视物体的旋转和缩放，如下所示：
 
+![](assets/RectTransform/image-20220126234213646.png)
+
+# Raw Edit Mode
+
+通常在修改物体的 `Anchors` 和 `Pivot` 时，该物体基于父物体的位置并不会发送变化，因此物体本地的 `Pos X/Y` 值等会随着 `Anchors` 和 `Pivot` 的改变而改变，如下所示：
+![](assets/RectTransform/GIF%201-26-2022%2011-44-49%20PM.gif)
+
+当开启 `Raw Edit Mode` 后，则会保证 `Pos X/Y` 等数值不变，而变化物体相对于父物体的位置，如下所示：
