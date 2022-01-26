@@ -45,6 +45,14 @@ tags:
 
 `Pos X/Y/Z` 三个值表示该 UI 元素的 [Pivot](#Pivot) 距离 `Anchors` 点的距离。
 
+如当物体的 `Anchor Max` 与 `Anchor Min`   都为 $(0.5,0.5)$，此时它会与父物体的 $(0.5,0.5)$ 点对齐。如下所示，无论父物体如何变化，子物体与 $(0.5,0.5)$ 点的关系都不会变，子物体的尺寸也不会变化：
+![](assets/RectTransform/Anchor_08.gif)
+
+当 `Anchor Max` 与 `Anchor Min`   都为 $(0.0,1.0)$ 时，子物体与父物体的左上角对齐，如下所示：
+![](assets/RectTransform/Anchor_09.gif)
+
+
+
 ## 相对布局
 
 当相对布局时，`Left / Top / Right / Bottom` 分别表示 UI 元素的 `左/上/右/下` 边缘距离锚点所构成的 `左/上/右/下` 的距离。
@@ -55,5 +63,7 @@ tags:
 | --- | --- |
 |  ![](assets/RectTransform/image-20220126000437133.png)  |  ![](assets/RectTransform/image-20220126000442564.png)  | 
 
+
+dan
 
 # Pivot
