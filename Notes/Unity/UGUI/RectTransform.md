@@ -13,7 +13,8 @@ tags:
 ![|500](assets/RectTransform/image-20220125231029155.png)
 
 # Anchors
-`Anchors` 用于父子物体的对齐，其在 Inspector 面板和 Scene 界面中分别如下表达：
+
+`Anchors` 用于父子物体的对齐，一个物体的 `Anchors` 表示它需要与父物体的哪个区域相对齐。其在 Inspector 面板和 Scene 界面中分别如下表达：
 
 |                                                                |                                                            |
 | -------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -53,4 +54,6 @@ tags:
 |     |     |
 | --- | --- |
 |  ![](assets/RectTransform/image-20220126000437133.png)  |  ![](assets/RectTransform/image-20220126000442564.png)  | 
+
+
 # Pivot
