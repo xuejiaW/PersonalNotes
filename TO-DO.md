@@ -32,9 +32,3 @@ updated: 2022-01-26
 
 - [ ] Overdraw
     [Unity3D研究院之LWRP中计算准确overdraw（一百一十）](https://www.xuanyusong.com/archives/4674)
-
-- [ ] RectTransform
-    [Unity - Scripting API: RectTransform (unity3d.com)](https://docs.unity3d.com/ScriptReference/RectTransform.html)
-    [UGUI的核心内容：Anchor锚点, Pivot轴心、object 控件和 transform， component组件_Peter_Gao_的博客-CSDN博客](https://blog.csdn.net/qq_42672770/article/details/106219792)
-    [Unity——RectTransform详解 - 简书 (jianshu.com)](https://www.jianshu.com/p/4592bf809c8b)
-    [Unity UGUI 原理篇(三)：RectTransform | ARKAI Studio](https://www.arkaistudio.com/blog/2016/05/02/unity-ugui-%E5%8E%9F%E7%90%86%E7%AF%87%E4%B8%89%EF%BC%9Arecttransform/)

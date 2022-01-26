@@ -108,3 +108,8 @@ tags:
 
 当开启 `Raw Edit Mode` 后，则会保证 `Pos X/Y` 等数值不变，而变化物体相对于父物体的位置，如下所示：
 ![](assets/RectTransform/GIF%201-26-2022%2011-51-26%20PM.gif)
+
+
+# Reference
+
+[Unity UGUI 原理篇(三)：RectTransform | ARKAI Studio](https://www.arkaistudio.com/blog/2016/05/02/unity-ugui-%E5%8E%9F%E7%90%86%E7%AF%87%E4%B8%89%EF%BC%9Arecttransform/)
