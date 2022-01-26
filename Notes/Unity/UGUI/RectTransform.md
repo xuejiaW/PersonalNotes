@@ -1,6 +1,7 @@
 ---
 created: 2022-01-25
 updated: 2022-01-26
+cssclass: [table-border]
 tags:
     - Unity
     - UGUI
@@ -76,6 +77,12 @@ tags:
 # Pivot
 
 `支点（Pivot）` 用来影响当前物体旋转，缩放及修改位置的支点。当选择了 `Rect Tool` 和 `Pivot` 时，`Pivot` 会在 Scene 中以蓝色空心小圈显示：
-![|400](assets/RectTransform/image-20220126230525862.png)
 
+|                                                       |                                                       |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| ![](assets/RectTransform/image-20220126230525862.png) | ![](assets/RectTransform/image-20220126230722014.png) |
 
+当 `Pivot` 为 $(0.5,0.5)$ 时，缩放与旋转都基于物体的中心点，如下所示：
+![](assets/RectTransform/Pivot_02.gif)
+
+当 `Pivot` 为 $(0,1)$ 时，缩放与旋转则会基于物体的左上角，如下所示：

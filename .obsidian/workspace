@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333,
-    "collapsed": true
+    "width": 333
   },
   "right": {
     "id": "086a6696003cb579",
@@ -162,14 +161,14 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Notes/Unity/UGUI/RectTransform.md",
-    "TO-DO.md",
-    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
-    "Notes/Unity.md",
+    "Boos/Learn OpenGL/Ch 33 Deferred Shading.md",
+    "Boos/Learn OpenGL/Ch 34 SSAO.md",
     "Notes/Unity/UGUI.md",
-    "Notes/VSCode.md",
-    "Notes/VSCode/Cpp.md",
-    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
-    "Notes/CSharp/Misc Knowledges.md",
-    "Notes/CSharp/GCHandle.md"
+    "Notes/Unity/Mipmap Bias.md",
+    "Tutorials/Unity Catlike/Mesh Basics.md",
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
+    "TO-DO.md",
+    "Notes/Unity.md"
   ]
 }
