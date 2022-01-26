@@ -64,6 +64,13 @@ tags:
 |  ![](assets/RectTransform/image-20220126000437133.png)  |  ![](assets/RectTransform/image-20220126000442564.png)  | 
 
 
-dan
+当 `Anchor Min` 值为 $(0.0,0.0)$ ，`Anchor Max` 值为 $(1.0,0.0)$ 时，子物体会对齐物体的父物体的左下角和右下角，在这种情况下，如果改变父物体的宽度，子物体的宽度也会一同变化，如下所示：
+![](assets/RectTransform/Anchor_10.gif)
+
+## Anchor Presets
+
+点击 RectTransform 左上角，可以开启 `Anchor Presets` 界面，界面中列出了常用的 `Anchor`：
+![|500](assets/RectTransform/image-20220126094652557.png)
+
 
 # Pivot
