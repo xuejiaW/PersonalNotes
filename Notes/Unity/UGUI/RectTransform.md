@@ -82,6 +82,9 @@ tags:
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | ![](assets/RectTransform/image-20220126230525862.png) | ![](assets/RectTransform/image-20220126230722014.png) |
 
+在 `Rect Tool` 模式下，可以通过蓝色实心小圈调整 UI 的大小：
+![](assets/RectTransform/GIF%201-26-2022%2011-30-35%20PM.gif)
+
 当 `Pivot` 为 $(0.5,0.5)$ 时，缩放与旋转都基于物体的中心点，如下所示：
 ![](assets/RectTransform/Pivot_02.gif)
 
