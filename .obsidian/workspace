@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/UGUI/RectTransform.md",
+            "file": "Notes/Unity/UGUI.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/UGUI/RectTransform.md"
+                "file": "Notes/Unity/UGUI.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/UGUI/RectTransform.md",
+                "file": "Notes/Unity/UGUI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/UGUI/RectTransform.md",
+                "file": "Notes/Unity/UGUI.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,10 +160,10 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity/UGUI.md",
     "Notes/Unity/UGUI/RectTransform.md",
     "Boos/Learn OpenGL/Ch 33 Deferred Shading.md",
     "Boos/Learn OpenGL/Ch 34 SSAO.md",
-    "Notes/Unity/UGUI.md",
     "Notes/Unity/Mipmap Bias.md",
     "Tutorials/Unity Catlike/Mesh Basics.md",
     "Tutorials/Unity Learn/Introduction to Asset Bundles.md",

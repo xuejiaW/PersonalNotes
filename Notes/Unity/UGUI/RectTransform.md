@@ -107,3 +107,4 @@ tags:
 ![](assets/RectTransform/GIF%201-26-2022%2011-44-49%20PM.gif)
 
 当开启 `Raw Edit Mode` 后，则会保证 `Pos X/Y` 等数值不变，而变化物体相对于父物体的位置，如下所示：
+![](assets/RectTransform/GIF%201-26-2022%2011-51-26%20PM.gif)
