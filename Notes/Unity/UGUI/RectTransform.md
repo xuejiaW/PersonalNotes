@@ -82,8 +82,6 @@ tags:
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | ![](assets/RectTransform/image-20220126230525862.png) | ![](assets/RectTransform/image-20220126230722014.png) |
 
-在 `Rect Tool` 模式下，可以通过蓝色实心小圈调整 UI 的大小：
-![](assets/RectTransform/GIF%201-26-2022%2011-30-35%20PM.gif)
 
 当 `Pivot` 为 $(0.5,0.5)$ 时，缩放与旋转都基于物体的中心点，如下所示：
 ![](assets/RectTransform/Pivot_02.gif)
@@ -96,4 +94,8 @@ tags:
 蓝图模式通过在 `RectTransform` 的如下按钮启用：
 ![|500](assets/RectTransform/image-20220126231416341.png)
 
-当蓝图模式开启后
+通常来说，在 `Rect Tool` 模式下，可以通过蓝色实心小圈调整 UI 的大小：
+![](assets/RectTransform/GIF%201-26-2022%2011-30-35%20PM.gif)
+
+当蓝图模式开启后，`Rect Tool` 模式下，帮助移动的蓝色标识点会无视物体的旋转和缩放，如下所示：
+
