@@ -7,12 +7,8 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "TO-DO.md",
-            "mode": "source",
-            "source": true
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,9 +65,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "TO-DO.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +116,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +152,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
+    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
+    "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
+    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
+    "Tutorials/Unity Learn.md",
+    "Tutorials/Unity Catlike/Custom SRP.md",
     "TO-DO.md",
     "Notes/Unity/UGUI/RectTransform.md",
     "Notes/Unity/UGUI.md",
-    "Boos/Learn OpenGL/Ch 33 Deferred Shading.md",
-    "Boos/Learn OpenGL/Ch 34 SSAO.md",
-    "Notes/Unity/Mipmap Bias.md",
-    "Tutorials/Unity Catlike/Mesh Basics.md",
-    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
-    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
-    "Notes/Unity.md"
+    "Boos/Learn OpenGL/Ch 33 Deferred Shading.md"
   ]
 }
