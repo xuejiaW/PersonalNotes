@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory.md",
+            "file": "Notes/Unity/Memory/Managed Memory.md",
             "mode": "source",
             "source": true
           }
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory.md"
+                "file": "Notes/Unity/Memory/Managed Memory.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,8 +173,8 @@
   },
   "active": "54df993e9f74d3be",
   "lastOpenFiles": [
-    "Notes/Unity/Memory.md",
     "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Unity/Memory.md",
     "Notes/Unity/Scripting Architecture/Scripting backends.md",
     "Notes/Unity/Scripting Architecture.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
