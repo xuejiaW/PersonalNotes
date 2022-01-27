@@ -44,7 +44,14 @@ IL2CPP 可以在一些平台中提升运行时的性能，但因为需要将机�
 **Il2CppSetOptionAttribute.cs** 在 Windows 平台下位于 `<UnityInstallPath>\Data\il2cpp` 文件夹下。
 ```
 
-
+`Il2CpppSetOption` Attribute 可以对类型，函数和属性使用，使用示例如下所示：
+```csharp
+[Il2CppSetOption(Option.NullChecks, false)]
+public static string MethodWithNullChecksDisabled()
+{
+    var tmp = new object(); return tmp.ToString();
+}
+```
 
 # Marshall Problems
 
@@ -100,4 +107,4 @@ public static void OnTexMgrTaskComplete(IntPtr taskPtr, int errorCode)
 
 # Reference
 
- [Unity - Manual: IL2CPP Overview (unity3d.com)](https://docs.unity3d.com/Manual/IL2CPP.html)
+ [Unity - Manual: IL2CPP Overview (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/IL2CPP.html)
