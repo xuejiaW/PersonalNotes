@@ -20,6 +20,11 @@ IL2CPP 可以在一些平台中提升运行时的性能，但因为需要将机�
 4. C++ 编译器编译生成的 C++ 代码以及目标平台相关的运行时的 C++ 代码
 5. Unity 根据平台生成可执行文件
 
+# optimizing IL2CPP build times
+
+因为在使用 IL2CPP 模式下，编译时间会明显的 Mono 模式下长，可以使用如下的方式减少编译时间：
+1. 关闭如 Windows Defender 这样的杀毒软件，因为编译过程中杀毒软件可能会实时的扫描编译的结果
+2. 将 Unity 工程
 
 # Marshall Problems
 
