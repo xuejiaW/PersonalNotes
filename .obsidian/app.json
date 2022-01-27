@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Scripting backends",
+  "attachmentFolderPath": "./assets/IL2CPP",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
