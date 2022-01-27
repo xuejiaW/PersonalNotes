@@ -25,6 +25,8 @@ Managed memory 提供了自动的内存分配及释放管理，因此极大程�
 
 # C# unmanaged memory
 
-C# unmanaged memory 依赖 
+C# unmanaged memory 依赖 [Unity Collections package](https://docs.unity3d.com/Packages/com.unity.collections@latest/) 提供了在 C# 管理 Native 内存的方式，如 [NativeArray](https://docs.unity3d.com/2020.3/Documentation/ScriptReference/Unity.Collections.NativeArray_1.html)。
+
+
 
 # Native memory
