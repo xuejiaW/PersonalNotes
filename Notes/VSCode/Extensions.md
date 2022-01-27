@@ -2,7 +2,7 @@
 tags: 
     - VSCode
 created: 2021-11-18
-updated: 2022-01-26
+updated: 2022-01-27
 ---
 
 > 本部分说明在 [[VSCode](../VSCode.md) 中部分插件的说明。
