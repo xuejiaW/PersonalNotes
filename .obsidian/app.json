@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Mono",
+  "attachmentFolderPath": "./assets/Scripting backends",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

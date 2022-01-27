@@ -2,8 +2,12 @@
 tags:
     - Unity
 created: 2022-01-05
-updated: 2022-01-06
+updated: 2022-01-27
 ---
+
+# Overview
+
+使用 `IL2CPP` 作为 Scripting Backends 时，会在 Unity 工程打包阶段使用 `AOT` 将 C# 代码转换为的 `Common Intermediate Language(CIL)` 转换为 C++ 代码，并使用 C++ 代码生成不同平台需要的可执行文件，如 `.exe`，`.apk` 等
 
 # Marshall Problems
 
