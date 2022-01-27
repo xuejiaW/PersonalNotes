@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "file": "Notes/Unity/Scripting Architecture/IL2CPP.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Unity/Scripting Architecture/IL2CPP.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Scripting Architecture/IL2CPP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Scripting Architecture/IL2CPP.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,15 +161,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity/Scripting Architecture/IL2CPP.md",
+    "Notes/Unity/Scripting Architecture.md",
+    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
+    "Notes/Unity/Scripting Architecture/Managed Code Stripping.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "Tutorials/Unity Learn/Memory Management in Unity.md",
     "Tutorials/Unity Learn.md",
     "TO-DO.md",
     "Notes/Obsidian/Plugins.md",
-    "Boos/Learn OpenGL/Ch 29 Normal Mapping.md",
-    "Notes/C++/Variadic functions.md",
-    "Notes/C++/Template Class.md",
-    "Boos/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
-    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
+    "Boos/Learn OpenGL/Ch 29 Normal Mapping.md"
   ]
 }
