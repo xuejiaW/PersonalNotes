@@ -32,11 +32,19 @@ IL2CPP 可以在一些平台中提升运行时的性能，但因为需要将机�
 
 当处于 IL2CPP 编译模式下时，可以通过 `Il2CpppSetOption` Attribute 控制 `il2cpp`  如何生成 C++ 代码。该 Attribute 主要包含如下选项：
 
-| Property             | Description                                                                                                                                                                                                                    | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Null checks          | 当启用后， 生成 C++ 代码时会自动添加对空对象访问的检查。当访问空对象时，会上报 `NullReferenceException` 错误。<br> 如果关闭此选项，可能会提升项目的性能，但当出现对空对象的访问时，程序会直接 Crash                            | Enabled |
-| Array bounds checkes | 当启用后， 生成 C++ 代码时会自动添加对数组越界访问的检查。当访问越界时，会上报 `IndexOutOfRangeException`。 <br> 如果关闭此选项，可能会提升项目的性能，但当出现访问越界时，程序可能会 Crash 或访问了其他内存，造成无法预测现象 | Enabled | 
-| Divide by zero checks | 当启用后， 生成 C++ 代码时会自动添加对除0的检查。当除0发生时，会上报 `DivideByZeroException`。 <br> 如果打开该选项，可能会影响项目的性能 | Enabled | 
+| Property              | Description                                                                                                                                                                                                                    | Default  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| Null checks           | 当启用后， 生成 C++ 代码时会自动添加对空对象访问的检查。当访问空对象时，会上报 `NullReferenceException` 错误。<br> 如果关闭此选项，可能会提升项目的性能，但当出现对空对象的访问时，程序会直接 Crash                            | Enabled  |
+| Array bounds checkes  | 当启用后， 生成 C++ 代码时会自动添加对数组越界访问的检查。当访问越界时，会上报 `IndexOutOfRangeException`。 <br> 如果关闭此选项，可能会提升项目的性能，但当出现访问越界时，程序可能会 Crash 或访问了其他内存，造成无法预测现象 | Enabled  |
+| Divide by zero checks | 当启用后， 生成 C++ 代码时会自动添加对除0的检查。当除0发生时，会上报 `DivideByZeroException`。 <br> 如果打开该选项，可能会因为额外的检查影响项目的性能                                                                         | Disabled |
+
+如果要使用 `Il2CpppSetOption` Attribute，需要首先从 Unity 安装目录下将**Il2CppSetOptionAttribute.cs** 文件拷贝到工程目录中。
+
+```ad-hint
+**Il2CppSetOptionAttribute.cs** 在 Windows 平台下位于 `<UnityInstallPath>\Data\il2cpp` 文件夹下。
+```
+
+
 
 # Marshall Problems
 
