@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
+            "file": "Notes/Unity/Memory/Managed Memory.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Learn/Memory Management in Unity.md"
+                "file": "Notes/Unity/Memory/Managed Memory.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -123,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +161,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity/Memory/Managed Memory.md",
     "Tutorials/Unity Learn/Memory Management in Unity.md",
     "Tutorials/Unity Learn.md",
     "TO-DO.md",
@@ -168,7 +170,6 @@
     "Notes/C++/Variadic functions.md",
     "Notes/C++/Template Class.md",
     "Boos/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
-    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
-    "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md"
+    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
   ]
 }
