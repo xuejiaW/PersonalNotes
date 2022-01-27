@@ -174,9 +174,9 @@
   "active": "54df993e9f74d3be",
   "lastOpenFiles": [
     "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Unity/Scripting Architecture/Scripting backends.md",
     "Notes/Unity/Memory.md",
     "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends.md",
     "Notes/Unity/Scripting Architecture.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
     "TO-DO.md",

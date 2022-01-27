@@ -14,6 +14,10 @@ Managed memory system 可能会影响运行时的性能，因为 Managed Memory 
 
 # Automatic memory management
 
+当 object 被创建时，Unity 会在 Heap 中分配其需要的内存。 Heap 会被选择的 [Scripting backends](../Scripting%20Architecture/Scripting%20backends.md) 管理。
+
+## Managed heap overview
+
 
 
 # Reference
