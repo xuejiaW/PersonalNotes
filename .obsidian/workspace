@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Plugins.md",
+            "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
             "mode": "source",
             "source": true
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333,
-    "collapsed": true
+    "width": 333
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md"
+                "file": "Tutorials/Unity Learn/Memory Management in Unity.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Tutorials/Unity Learn/Memory Management in Unity.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Tutorials/Unity Learn/Memory Management in Unity.md",
+    "Tutorials/Unity Learn.md",
+    "TO-DO.md",
     "Notes/Obsidian/Plugins.md",
     "Boos/Learn OpenGL/Ch 29 Normal Mapping.md",
     "Notes/C++/Variadic functions.md",
     "Notes/C++/Template Class.md",
     "Boos/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
     "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
-    "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
-    "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
-    "Tutorials/Unity Learn.md",
-    "Tutorials/Unity Catlike/Custom SRP.md"
+    "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md"
   ]
 }
