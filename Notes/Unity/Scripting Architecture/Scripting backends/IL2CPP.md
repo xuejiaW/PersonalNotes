@@ -28,6 +28,14 @@ IL2CPP 可以在一些平台中提升运行时的性能，但因为需要将机�
 3. 更改 IL2CPP 编译模式（Unity 2021+）
     - 默认情况下，Unity 会以保证运行时效率更高的方式编译 IL2CPP。这意味着 IL2CPP 编译过程中会产生更多的机器码，也就增长了编译时间和编译后可执行文件的大小。
 
+# Enable runtime checks
+
+当处于 IL2CPP 编译模式下时，可以通过 `Il2CpppSetOption` Attribute 控制 `il2cpp`  如何生成 C++ 代码。该 Attribute 主要包含如下选项：
+
+| Property   | Description | Default |
+| ---------- | ----------- | ------- |
+| Null Check | 当启用后， 生成 C++ 代码时会自动添加对空对象访问的检查。当访问空对象时，会上报 `NullReferenceException` 错误。<br> 如果           |         |
+
 # Marshall Problems
 
 如有以下代码，希望将一个 C# 侧回调设置给 C++ 侧：
