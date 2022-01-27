@@ -14,8 +14,9 @@ IL2CPP 可以在一些平台中提升运行时的性能，但因为需要将机�
 # How Il2CPP works
 
 使用 `IL2CPP` 编译生成文件时，Unity 会自动执行如下操作：
-
-
+1. C# 编译器会将 C# 代码转换为 .Net Dlls（managed assemblies）
+2. 使用 [Managed Code Stripping](Managed%20Code%20Stripping.md) 将无用的代码剔除
+3. IL2CPP 将所有 Managed Assemblies 转换为标准 
 
 
 # Marshall Problems
