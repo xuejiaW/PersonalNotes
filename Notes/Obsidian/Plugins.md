@@ -427,6 +427,14 @@ nmap <Space>ff :search
 在 `Change Icon` 和 `Inherit Icon` 的页面中，也可以按下 `Windows + ;` 打开 Windows 自带的 Emoji 库。当选择好 `emoji` 后，选择 `Use twemoji emoji` 技能输入，如下所示：
 ![|500](assets/Obsidian%20-%20Plugins/image-20220109155040206.png)
 
+## Automatically Reveal Active File [^17]
+
+在  Obsidian 中打开文件时，文件不会在左侧的 File Explorer 中高亮。
+
+可以使用命令 `File explorer: Reveal active file in navigation` 在 File Explorer 中高亮打开的文件。
+
+该插件安装后，会在打开每个文件时自动触发上述命令，达到打开文件时在 File Explorer 自动高亮的效果。
+
 
 # Reference
 
@@ -446,3 +454,4 @@ nmap <Space>ff :search
 [^14]: [Obsidian-Word Splitting for Simplified Chinese in Edit Mode](https://github.com/aidenlx/cm-chs-patch)
 [^15]: [obsidian-vimrc-support (github.com)](https://github.com/esm7/obsidian-vimrc-support)
 [^16]: [FlorianWoelki/obsidian-icon-folder:](https://github.com/FlorianWoelki/obsidian-icon-folder)
+[^17]:[Automatically Reveal Active File](https://github.com/shichongrui/obsidian-reveal-active-file)

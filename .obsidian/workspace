@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/Obsidian/Plugins.md",
-            "mode": "preview",
+            "mode": "source",
             "source": true
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 333,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -146,7 +147,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.1634837056722049,
+                  "scale": 0.7478537827650177,
                   "close": true
                 }
               }
