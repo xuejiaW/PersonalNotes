@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Obsidian/Plugins.md",
+            "mode": "preview",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Obsidian/Plugins.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Obsidian/Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Obsidian/Plugins.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -152,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Obsidian/Plugins.md",
+    "Boos/Learn OpenGL/Ch 29 Normal Mapping.md",
+    "Notes/C++/Variadic functions.md",
+    "Notes/C++/Template Class.md",
     "Boos/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
     "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
     "Tutorials/Unity Catlike/Custom SRP/Custom Render Pipeline.md",
     "Tutorials/Unity Learn/Introduction to Asset Bundles.md",
     "Tutorials/Unity Learn.md",
-    "Tutorials/Unity Catlike/Custom SRP.md",
-    "TO-DO.md",
-    "Notes/Unity/UGUI/RectTransform.md",
-    "Notes/Unity/UGUI.md",
-    "Boos/Learn OpenGL/Ch 33 Deferred Shading.md"
+    "Tutorials/Unity Catlike/Custom SRP.md"
   ]
 }

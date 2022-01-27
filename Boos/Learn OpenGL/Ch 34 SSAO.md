@@ -1,6 +1,6 @@
 ---
 created: 2022-01-06
-updated: 2022-01-20
+updated: 2022-01-27
 tags:
     - OpenGL
 ---
@@ -109,7 +109,7 @@ glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPos
 这一部分会生成如下所示的基于法线的半球 Samples 点：
 ![|500](assets/Ch%2034%20SSAO/image-20220116134443972.png)
 
-依赖 [Random Number](../../Notes/C++/C++%20-%20Random%20Number.md) 生成 64 个 Simple 采样点。每个采样点的 $x,y$ 范围在 $[-1,1]$ 之间，$z$ 的范围在 $[0,1]$ 之间：
+依赖 [Random Number](../../Notes/C++/Random%20Number.md) 生成 64 个 Simple 采样点。每个采样点的 $x,y$ 范围在 $[-1,1]$ 之间，$z$ 的范围在 $[0,1]$ 之间：
 ```cpp
 std::uniform_real_distribution<float> randomFloats(0.0, 1.0);
 std::default_random_engine generator;

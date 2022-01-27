@@ -23,7 +23,7 @@ __android_log_print(int prio, const char *tag, const char *fmt, ...)
 
 其中 `I` 表示该 Log 的优先级为 `ANDROID_LOG_INFO`，`Unity` 即为设定的 Tag。
 
-后两个形参表示输出的内容，`fmt` 表示格式化的 string，`...` 为 [Variadic Parameters](../C++/C++%20-%20Variadic%20functions.md#Variadic%20Parameters) 为需要被格式化的数据，如语句：
+后两个形参表示输出的内容，`fmt` 表示格式化的 string，`...` 为 [Variadic Parameters](../C++/Variadic%20functions.md#Variadic%20Parameters) 为需要被格式化的数据，如语句：
 ```cpp
 __android_log_print(ANDROID_LOG_ERROR, "TexMgr", "fps is %d %d", 91, 90);
 ```

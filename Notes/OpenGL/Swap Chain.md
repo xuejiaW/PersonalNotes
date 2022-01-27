@@ -16,4 +16,4 @@ updated: 2021-12-28
 
 OpenGL 和 DX 都提供了相应的接口进行 `Swap Buffer` ，API 通常会使用队列存储交换缓冲的请求，在 `VSync` 时对两块缓冲进行实际的交换。
 
-OpenGL 中对于 `Swap Buffer` 的操作逻辑，见 [Swap Buffer](OpenGL%20-%20Default%20Frambuffer.md#Swap%20Buffer)  部分。
+OpenGL 中对于 `Swap Buffer` 的操作逻辑，见 [Swap Buffer](Default%20Frambuffer.md#Swap%20Buffer)  部分。

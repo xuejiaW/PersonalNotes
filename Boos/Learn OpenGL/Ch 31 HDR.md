@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-21
-updated: 2022-01-20
+updated: 2022-01-27
 tags:
     - OpenGL
 ---
@@ -19,7 +19,7 @@ tags:
 
 # Floating Point Framebuffers
 
-使用 `HDR` 的思路为先将整个场景渲染到自定义的 Framebuffer 上，再通过 [后处理](Ch%2019%20Framebuffers.md#后处理) 将自定义 Framebuffer 上的颜色附件绘制到默认的 [Default Frambuffer](../../Notes/OpenGL/OpenGL%20-%20Default%20Frambuffer.md) 上，在这个绘制过程中使用 `Tone Mapping` 算法将画面从 `HDR` 转换到 `LDR` 。
+使用 `HDR` 的思路为先将整个场景渲染到自定义的 Framebuffer 上，再通过 [后处理](Ch%2019%20Framebuffers.md#后处理) 将自定义 Framebuffer 上的颜色附件绘制到默认的 [Default Frambuffer](../../Notes/OpenGL/Default%20Frambuffer.md) 上，在这个绘制过程中使用 `Tone Mapping` 算法将画面从 `HDR` 转换到 `LDR` 。
 
 ```ad-note
 因为显示设备是 `LDR` 的，所以最终的输出画面需要是 `LDR` 。
