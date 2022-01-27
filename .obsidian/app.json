@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/IL2CPP",
+  "attachmentFolderPath": "./assets/Memory",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
