@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "file": "Notes/Unity/Memory.md",
             "mode": "source",
             "source": true
           }
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Unity/Memory.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -136,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,15 +173,15 @@
   },
   "active": "54df993e9f74d3be",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Memory.md",
+    "Notes/Unity/Memory/Garbage Collector.md",
+    "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Scripting Architecture/Scripting backends.md",
     "Notes/Unity/Scripting Architecture.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
     "TO-DO.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/Mono.md",
     "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/Managed Code Stripping.md",
-    "Tutorials/Unity Learn/Memory Management in Unity.md"
+    "Notes/Unity/Scripting Architecture/Scripting backends/Managed Code Stripping.md"
   ]
 }
