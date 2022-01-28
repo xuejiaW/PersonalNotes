@@ -62,8 +62,12 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 
 可以通过 [GarbageCollector.GCMode](https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Scripting.GarbageCollector.GCMode.html)来关闭运行时的 GC，该选项一共由三种模式：
 - Enable：打开 GC，该选项为默认值
-- Disabled：关闭 GC。选择该选项后，zhen
+- Disabled：关闭 GC。选择该选项后，整个 GC 线程都不会出现将程序挂起并执行 GC 的操作。即使调用 `System.GC.Collect` 也不会产生任何影响。
+- Manual：手动管理 GC。此时 GC 不会被自动的触发，但仍然可以使用 `GC.Collect` 或 `GarbageCollector.CollectIncremental` 进行 GC 操作。
 
+```ad-note
+GC 模式的更改可以通过 [GarbageCollector.GCModeChanged ](https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Scripting.GarbageCollector.GCModeChanged.html) 监听。
+```
 
 # Tracking allocations
 
@@ -80,3 +84,5 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 [Feature Preview: Incremental Garbage Collection | Unity Blog](https://blog.unity.com/technology/feature-preview-incremental-garbage-collection)
 
 [Unity - Manual: Disabling garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-disabling-garbage-collection.html)
+
+[Unity - Scripting API: Scripting.GarbageCollector.GCMode (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Scripting.GarbageCollector.GCMode.html)
