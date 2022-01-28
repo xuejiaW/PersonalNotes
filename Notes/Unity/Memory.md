@@ -5,6 +5,13 @@ tags:
     - Unity
     - Memory
 ---
+
+# Notes
+
+- [Managed Memory](Memory/Managed%20Memory.md)：主要介绍 Managed Heap
+- [Garbage Collector](Memory/Garbage%20Collector.md)： Managed Heap 进行 GC 时依赖的三种机制，[Incremental GC](Memory/Garbage%20Collector.md#Incremental%20GC)，[Non-Incremental GC](Memory/Garbage%20Collector.md#Non-Incremental%20GC) 和 [Disabling GC](Memory/Garbage%20Collector.md#Disabling%20GC)。
+- [Boehm GC algorithm](Memory/Boehm%20GC%20algorithm.md)：Unity GC 系统依赖的 GC 算法。
+
 # Overview
 
 Unity 应用一共涉及三种内存类型：
@@ -35,6 +42,8 @@ C# unmanaged memory 依赖 [Unity Collections package](https://docs.unity3d.com/
 # Native memory
 
 Unity 引擎内部使用的 `C/C++` 代码有自己的内存管理系统，这些内存称为 `native memory`。绝大部分情况下，开发者无法直接访问到这些内存。
+
+
 
 # Reference
 

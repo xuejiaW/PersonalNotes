@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Garbage Collector.md",
+            "file": "Notes/Unity/Memory.md",
             "mode": "source",
             "source": true
           }
@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md"
+                "file": "Notes/Unity/Memory.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md",
+                "file": "Notes/Unity/Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md",
+                "file": "Notes/Unity/Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,9 +172,9 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Memory.md",
+    "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Incremental Garbae.md",
     "Notes/Unity/Memory/Boehm GC algorithm.md",
     "TO-DO.md",
