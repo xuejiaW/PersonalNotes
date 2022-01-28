@@ -34,7 +34,15 @@ Managed memory system 可能会影响运行时的性能，因为 Managed Memory 
 
 这种情况下 Unity 会进行如下的操作：
 1. 触发 GC
-2. 如果 GC 完成后，仍然没有足够的连续空间为新对象分配内存。
+2. 如果 GC 完成后，仍然没有足够的连续空间为新对象分配内存，Heap 则会扩张。每次扩张会让 Heap 增大多少是平台相关的，但在绝大部分平台下每次扩张 Heap 的尺寸会扩大一倍。
+
+```ad-question
+GC 本身是否会移动内存解决碎片化
+```
+
+## Managed heap expansion considerations
+
+Unity 在 Heap 扩张后，即使 Heap 中存在大量的空闲内存
 
 # Reference
 
