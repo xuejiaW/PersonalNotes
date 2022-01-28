@@ -58,11 +58,8 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 极端情况下，如果一个应用非常高频的修改 Object 的 Reference，甚至会导致增量式 GC 永远无法执行完毕，因为始终在对 Object 进行重标记。在这种情况下，GC 会执行一次完整的，非增量式的 GC。
 
 
-
-
 ## Disabling GC
 
-[Unity - Manual: Disabling garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-disabling-garbage-collection.html)
 
 # Tracking allocations
 
@@ -77,3 +74,5 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 [Unity - Manual: Incremental garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-incremental-garbage-collection.html)
 
 [Feature Preview: Incremental Garbage Collection | Unity Blog](https://blog.unity.com/technology/feature-preview-incremental-garbage-collection)
+
+[Unity - Manual: Disabling garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-disabling-garbage-collection.html)
