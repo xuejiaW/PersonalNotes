@@ -31,6 +31,10 @@ Unity 2019+ 版本 的 GC 默认情况下以Incremental Mode 运行，该模式�
 Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成以避免由 GC 造成的 CPU 耗时峰值（GC Spike）。
 
 如下为使用增量式 GC 与不适用时的 Profiler 对比：
+![Incremental GC](assets/Garbage%20Collector/image-20220128135452597.png)
+![Non-incremental GC](assets/Garbage%20Collector/image-20220128135509359.png)
+
+
 
 
 
