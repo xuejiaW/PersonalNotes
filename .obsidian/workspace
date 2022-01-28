@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "mode": "preview",
+            "source": true
+          }
         }
       }
     ],
@@ -49,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333,
-    "collapsed": true
+    "width": 333
   },
   "right": {
     "id": "086a6696003cb579",
@@ -66,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Unity/Memory/Managed Memory.md"
+              }
             }
           },
           {
@@ -86,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -153,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity/Memory/Managed Memory.md",
     "TO-DO.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/UGUI/RectTransform.md",
@@ -161,7 +169,6 @@
     "Notes/Unity/UGUI.md",
     "Notes/VSCode.md",
     "Notes/VSCode/Cpp.md",
-    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
-    "Notes/CSharp/Misc Knowledges.md"
+    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
   ]
 }
