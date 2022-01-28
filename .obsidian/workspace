@@ -9,14 +9,14 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
-            "mode": "preview",
+            "file": "Notes/Unity/Memory/Garbage Collector.md",
+            "mode": "source",
             "source": true
           }
         }
       },
       {
-        "id": "768b3f225b554e7b",
+        "id": "94f145d0a55323d8",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -170,7 +170,7 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "768b3f225b554e7b",
+  "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Managed Memory.md",
