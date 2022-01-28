@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Managed Memory",
+  "attachmentFolderPath": "./assets/Memory Management in Unity",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

@@ -8,3 +8,6 @@ updated: 2022-01-28
 
 # Managed Memory
 
+# Reference
+
+[Memory Management in Unity - Unity Learn](https://learn.unity.com/tutorial/memory-management-in-unity#)
