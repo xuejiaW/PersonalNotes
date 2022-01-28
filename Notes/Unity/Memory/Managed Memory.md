@@ -42,7 +42,9 @@ GC 本身是否会移动内存解决碎片化
 
 ## Managed heap expansion considerations
 
-Unity 在 Heap 扩张后，即使 Heap 中存在大量的空闲内存
+扩张后的 Heap，即使在 GC后存在大量的空闲内存，Unity 也不会立即将内存返还给系统。这一行为是为了避免 Unity 在后续需要分配内存时反复的重新扩张 Heap 导致性能开销。
+
+但
 
 # Reference
 
