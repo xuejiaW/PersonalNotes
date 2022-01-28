@@ -49,7 +49,11 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 
 因为增量式 GC 会将 GC 过程拆分至多帧内执行完毕，所以对 Heap 中所有对象的扫描标记阶段也会被拆分成多帧。
 
-如果一个对象已经被标记完，但在 GC 的后几帧中发生了 Reference 变化，则 GC 需要对该物体重新进行标记。极端情况下，如果一个应用f
+如果一个 Object 已经被标记完，但在 GC 的后几帧中发生了 Reference 变化，则 GC 需要对该 Object 重新进行标记。同时，为了检测出这种 Reference 的变化，[Garbage Collector](Garbage%20Collector.md) 也会
+
+极端情况下，如果一个应用非常高频的修改 Object 的 Reference，甚至会导致增量式 GC 永远无法执行完毕，因为始终在对 Object 进行重标记。在这种情况下，GC 会执行一次完整的，非增量式的 GC。
+
+
 
 
 ## Disabling GC
