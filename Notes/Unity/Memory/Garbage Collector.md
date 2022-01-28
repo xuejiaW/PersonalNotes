@@ -16,6 +16,9 @@ Unity 中 garbage collector 有以下三种模式：
 - [Non-Incremental GC](#Non-Incremental%20GC)：非增量式 GC，当 GC 发生时会在当前帧挂起应用并直到所有 GC 工作完成。
 - [Disabling GC](#Disabling%20GC)：自动化 GC 被关闭，开发者需要手动的进行 GC 管理
 
+```ad-note
+无论使用增量式与否，Unity 的 GC 都依赖于 [Boehm GC algorithm](Boehm%20GC%20algorithm.md)
+```
 # GC Mode
 
 ## Non-Incremental GC
@@ -30,10 +33,17 @@ Unity 2019+ 版本 的 GC 默认情况下以Incremental Mode 运行，该模式�
 
 Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成以避免由 GC 造成的 CPU 耗时峰值（GC Spike）。
 
-如下为使用增量式 GC 与不适用时的 Profiler 对比：
+如下为使用增量式 GC 与非增量式 GC 的 Profiler 对比 ：
 ![Incremental GC](assets/Garbage%20Collector/image-20220128135452597.png)
 ![Non-incremental GC](assets/Garbage%20Collector/image-20220128135509359.png)
 
+可以看到使用非增量式 GC 时，发生 GC 的一帧耗时会特别的长（GC Spike），引起的下降。
+
+如果应用使用了 `VSync` 或 `Aplication.targetFrameRata`，则 Unity 会计算出每一帧计算完成后剩余的时间，并使用剩余时间来进行 GC。
+
+```ad-tip
+如果希望手动
+```
 
 
 
