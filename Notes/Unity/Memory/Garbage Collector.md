@@ -18,6 +18,13 @@ Unity 中 garbage collector 有以下三种模式：
 
 # GC Mode
 
+## Non-Incremental GC
+
+在 Unity 
+
+[Unity - Manual: Incremental garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-incremental-garbage-collection.html)
+
+
 ## Incremental GC
 
 Unity 的 GC 使用 [Boehm GC algorithm](Boehm%20GC%20algorithm.md)，且默认情况下以Incremental Mode 运行，该模式下，整个 GC 的过程会在多帧内被执行完毕。
@@ -29,9 +36,6 @@ Unity 的 GC 使用 [Boehm GC algorithm](Boehm%20GC%20algorithm.md)，且默认�
 Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成以避免由 GC 造成的 CPU 耗时峰值（GC Spike）。
 
 
-## Non-Incremental GC
-
-[Unity - Manual: Incremental garbage collection (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-incremental-garbage-collection.html)
 
 ## Disabling GC
 
