@@ -26,6 +26,11 @@ Managed memory system 可能会影响运行时的性能，因为 Managed Memory 
 
 ## Memory fragmentation and heap expansion
 
+当分配的内存被释放后，可能会造成`内存碎片化（Memory fragmentation）`，如下图所示：
+![](assets/Managed%20Memory/image-20220128091934529.png)
+
+此时如果要为新对象分配内存，可能会出现空闲内存够，但连续内存不足的情况。如下图所示，**A** 为需要分配的内存，**B** 为当前一共空闲的内存，可以看到空闲内存da'yu
+
 # Reference
 
 [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
