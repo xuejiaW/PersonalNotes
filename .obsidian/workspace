@@ -7,24 +7,8 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-            "mode": "source",
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "54df993e9f74d3be",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
-            "mode": "source",
-            "source": true
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -65,7 +49,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 333,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -81,9 +66,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
-              }
+              "state": {}
             }
           },
           {
@@ -103,7 +86,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,8 +104,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -136,7 +117,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -159,7 +139,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7478537827650177,
+                  "scale": 0.1634837056722049,
                   "close": true
                 }
               }
@@ -171,17 +151,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "54df993e9f74d3be",
+  "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Managed Memory.md",
-    "Tutorials/Unity Learn/Memory Management in Unity.md",
     "TO-DO.md",
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends.md",
-    "Notes/Unity/Memory.md",
-    "Notes/Unity/Scripting Architecture.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/Mono.md",
-    "Notes/Unity/Scripting Architecture/Dot Net Profile Support.md"
+    "Notes/Android/Android - Android Debug Bridge.md",
+    "Notes/Unity/UGUI/RectTransform.md",
+    "Notes/Unity/UGUI/Layout Elements or Controllers.md",
+    "Notes/Unity.md",
+    "Notes/Unity/UGUI.md",
+    "Notes/VSCode.md",
+    "Notes/VSCode/Cpp.md",
+    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md",
+    "Notes/CSharp/Misc Knowledges.md"
   ]
 }
