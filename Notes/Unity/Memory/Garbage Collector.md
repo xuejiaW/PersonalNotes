@@ -11,6 +11,18 @@ Alias: GC
 
 当 GC 发生时，Collector 会检查 [Managed heap](Managed%20Memory.md#Managed%20heap%20overview) 上的所有 objects。对于每个对象而言，它会被检查是否有被引用，如果有则它会被`标记（Mark）`。当完整检查结束后，未被标记的对象将会被释放。
 
+Unity 中 garbage collector 有以下三种模式：
+- [Incremental GC](#Incremental%20GC)：增量式 GC，让整个 GC 的流程分布在多帧中进行，以避免帧率的降低
+- [Non-Incremental GC](#Non-Incremental%20GC)
+- [Disabling GC](#Disabling%20GC)
+
+
+# Incremental GC
+
+# Non-Incremental GC
+
+# Disabling GC
+
 # Reference
 
 [Unity - Manual: Garbage collector overview (unity3d.com)](https://docs.unity3d.com/2020.3/Documentation/Manual/performance-garbage-collector.html)
