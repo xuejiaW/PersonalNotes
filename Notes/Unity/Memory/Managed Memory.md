@@ -49,3 +49,5 @@ Unity 最终还是会在某个时间点将 Heap 内存返还给系统，但返�
 # Reference
 
 [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
+
+[Unity - Manual: Understanding the managed heap (archive.org)](https://web.archive.org/web/20181204043411/https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html)
