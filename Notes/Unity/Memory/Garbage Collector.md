@@ -60,6 +60,10 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 
 ## Disabling GC
 
+可以通过 [GarbageCollector.GCMode](https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Scripting.GarbageCollector.GCMode.html)来关闭运行时的 GC，该选项一共由三种模式：
+- Enable：打开 GC，该选项为默认值
+- Disabled：关闭 GC。选择该选项后，zhen
+
 
 # Tracking allocations
 
