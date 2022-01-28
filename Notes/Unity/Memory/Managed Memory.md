@@ -18,8 +18,14 @@ Managed memory system 可能会影响运行时的性能，因为 Managed Memory 
 
 ## Managed heap overview
 
+`Managed heap` 是 [Scripting backends](../Scripting%20Architecture/Scripting%20backends.md) 自动管理的一部分内存。
 
+如下图展现了一系列 Unity 分配在 Managed Heap 上的内存，其中 **A** 为空闲的内存，当需要为新对象分配内存时，即会从空闲内存中分配：
+![](assets/Managed%20Memory/image-20220128091330797.png)
+
+
+## Memory fragmentation and heap expansion
 
 # Reference
 
-[Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html)
+[Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
