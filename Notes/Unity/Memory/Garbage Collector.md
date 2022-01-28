@@ -26,7 +26,7 @@ Unity 的 GC 使用 [Boehm GC algorithm](Boehm%20GC%20algorithm.md)，且默认�
 与 incremental mode 相对的是 stop-the-world Mode。此模式下，当 GC 发生时，CPU 的主线程会被挂起直到所有的 GC 工作完成。
 ```
 
-Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成，
+Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成以避免由 GC 造成的 CPU 耗时峰值（GC Spike）。
 
 
 ## Non-Incremental GC
