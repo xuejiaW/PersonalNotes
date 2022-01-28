@@ -33,7 +33,7 @@ Unity 2019+ 版本 的 GC 默认情况下以Incremental Mode 运行，该模式�
 
 Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作在多帧完成以避免由 GC 造成的 CPU 耗时峰值（GC Spike）。
 
-如下为使用增量式 GC 与非增量式 GC 的 Profiler 对比 ：
+如下为使用增量式 GC 与非增量式 GC 的 Profiler 对比，图中的深黄色即为 GC 的开销 ：
 ![Incremental GC](assets/Garbage%20Collector/image-20220128135452597.png)
 ![Non-incremental GC](assets/Garbage%20Collector/image-20220128135509359.png)
 
@@ -42,10 +42,14 @@ Incremental Mode 并不会让整个 GC 变得更快，它只是将所有工作�
 如果应用使用了 `VSync` 或 `Aplication.targetFrameRata`，则 Unity 会计算出每一帧计算完成后剩余的时间，并使用剩余时间来进行 GC。
 
 ```ad-tip
-如果希望手动
+如果希望对增量式 GC 有更多的控制而不是依赖于 `VSync` 和 `Application.targetFrameRata`，可以通过类 [Scripting.GarbageCollector](https://docs.unity3d.com/2022.1/Documentation/ScriptReference/Scripting.GarbageCollector.html)。
 ```
 
+### Referece change
 
+因为增量式 GC 会将 GC 过程拆分至多帧内执行完毕，所以对 Heap 中所有对象的扫描标记阶段也会被拆分成多帧。
+
+如果一个对象已经被标记完，但在 GC 的后几帧中发生了 Reference 变化，则 GC 需要对该物体重新进行标记。极端情况下，如果一个应用f
 
 
 ## Disabling GC
