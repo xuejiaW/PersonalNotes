@@ -25,7 +25,7 @@ Unity 中 garbage collector 有以下三种模式：
 
 Unity 2019 之前的版本尚未支持 `增量式 GC（Incremental GC）`，所有的 GC 都是非增量式的。
 
-非增量式 GC 以 `stop-the-world Mode` 运行，即当 GC 发生时，CPU 的主线程会被挂起直到所有的 GC 工作完成。
+非增量式 GC 以 `stop-the-world Mode` 运行，即当 GC 发生时，CPU 的主线程会被挂起直到所有的 GC 工作完成。挂起的时间由 GC 需要处理的内存量决定，可能低于一毫秒 ，也可能多大几百毫秒。
 
 ## Incremental GC
 

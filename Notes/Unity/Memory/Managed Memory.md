@@ -10,8 +10,11 @@ tags:
 
 Unity 的 managed memory system 依赖 [Mono](../Scripting%20Architecture/Scripting%20backends/Mono.md) 或 [IL2CPP](../Scripting%20Architecture/Scripting%20backends/IL2CPP.md) 的虚拟机。Managed memory system 的好处在于，开发者不再需要手动的申请和释放内存。
 
-但 Managed memory system 可能会影响运行时的性能，一是因为 Managed Memory 的申请需要消耗 CPU 的性能，二是因为 GC 发生时的性能开销。
+但 Managed memory system 可能会影响运行时的性能，一是因为 Managed Memory 的申请需要消耗 CPU 的性能，二是因为 GC 发生存在不确定性，因此可能会在不期望的时刻触发 GC 并带来性能开销。
 
+```ad-tip
+[Incremental GC](Garbage%20Collector.md#Incremental%20GC) 极大程度上减少了由 GC 带来的性能下降。
+```
 
 # Automatic memory management
 
