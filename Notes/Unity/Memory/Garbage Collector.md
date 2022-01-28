@@ -12,16 +12,23 @@ Alias: GC
 当 GC 发生时，Collector 会检查 [Managed heap](Managed%20Memory.md#Managed%20heap%20overview) 上的所有 objects。对于每个对象而言，它会被检查是否有被引用，如果有则它会被`标记（Mark）`。当完整检查结束后，未被标记的对象将会被释放。
 
 Unity 中 garbage collector 有以下三种模式：
-- [Incremental GC](#Incremental%20GC)：增量式 GC，让整个 GC 的流程分布在多帧中进行，以避免帧率的降低
-- [Non-Incremental GC](#Non-Incremental%20GC)
-- [Disabling GC](#Disabling%20GC)
+- [Incremental GC](#Incremental%20GC)：增量式 GC，让整个 GC 的流程分布在多帧中进行，以避免帧率的降低。（默认行为）。
+- [Non-Incremental GC](#Non-Incremental%20GC)：非增量式 GC，当 GC 发生时会在当前帧挂起应用并直到所有 GC 工作完成。
+- [Disabling GC](#Disabling%20GC)：自动化 GC 被关闭，开发者需要手动的进行 GC 管理
 
+# GC Mode
 
-# Incremental GC
+## Incremental GC
 
-# Non-Incremental GC
+## Non-Incremental GC
 
-# Disabling GC
+## Disabling GC
+
+# Tracking allocations
+
+-   [Unity Profiler’s CPU Usage module](https://docs.unity3d.com/2022.1/Documentation/Manual/ProfilerCPU.html): Provides details of the **GC Alloc** per frame
+-   [Unity Profiler’s Memory module](https://docs.unity3d.com/2022.1/Documentation/Manual/ProfilerMemory.html): Provides high-level memory usage frame by frame
+-   [The Memory Profiler package](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@latest): A separate Unity package which provides detailed information about memory usage during specific frames in your application
 
 # Reference
 
