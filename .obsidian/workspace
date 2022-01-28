@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Garbage Collector.md",
+            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "mode": "preview",
+            "source": true
+          }
+        }
+      },
+      {
+        "id": "768b3f225b554e7b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md"
+                "file": "Notes/Unity/Memory/Boehm GC algorithm.md"
               }
             }
           },
@@ -91,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md",
+                "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +122,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -123,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Garbage Collector.md",
+                "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -158,17 +171,17 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "fe6d1776fa79cc1f",
+  "active": "768b3f225b554e7b",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Garbage Collector.md",
+    "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Unity/Memory/Garbage Collector.md",
     "TO-DO.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/UGUI/RectTransform.md",
     "Notes/Unity/UGUI/Layout Elements or Controllers.md",
     "Notes/Unity.md",
     "Notes/Unity/UGUI.md",
-    "Notes/VSCode.md",
-    "Notes/VSCode/Cpp.md"
+    "Notes/VSCode.md"
   ]
 }

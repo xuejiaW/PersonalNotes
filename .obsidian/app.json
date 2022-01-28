@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Garbage Collector",
+  "attachmentFolderPath": "./assets/Boehm GC algorithm",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
