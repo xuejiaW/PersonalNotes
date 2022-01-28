@@ -9,7 +9,9 @@ Alias: Boehm–Demers–Weiser garbage collector
 
 # Overview
 
-`Boehm GC` 是一种 `non-generational`，`non-compacting` 的算法[^1]。`non-generational` 意味着当 GC 发生时 ，需要完整扫描整个 [Managed heap](Managed%20Memory.md#Managed%20heap) 。 `non-compacting` 意味着 GC 进行过程中，内存中的物体并不会被移动以解决内存的碎片化。
+`Boehm GC` 是一种 `non-generational`，`non-compacting` 的算法[^1]。
+- `non-generational` 意味着当 GC 发生时 ，需要完整扫描整个 [Managed heap](Managed%20Memory.md#Managed%20heap) 。 
+- `non-compacting` 意味着 GC 进行过程中，内存中的物体并不会被移动以解决内存的碎片化。
 
 
 # Reference

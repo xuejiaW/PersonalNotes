@@ -82,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Unity/Memory/Garbage Collector.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory/Garbage Collector.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory/Garbage Collector.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,11 +171,11 @@
     "direction": "horizontal",
     "width": 335.5
   },
-  "active": "fe6d1776fa79cc1f",
+  "active": "768b3f225b554e7b",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Boehm GC algorithm.md",
+    "Notes/Unity/Memory/Managed Memory.md",
     "TO-DO.md",
     "Notes/Android/Android - Android Debug Bridge.md",
     "Notes/Unity/UGUI/RectTransform.md",
