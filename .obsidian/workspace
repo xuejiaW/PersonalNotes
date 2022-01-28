@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
-            "mode": "preview",
+            "file": "Notes/Unity/Memory/Garbage Collector.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Unity/Memory/Garbage Collector.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory/Garbage Collector.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory/Garbage Collector.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "TO-DO.md",
     "Notes/Android/Android - Android Debug Bridge.md",
@@ -168,7 +169,6 @@
     "Notes/Unity.md",
     "Notes/Unity/UGUI.md",
     "Notes/VSCode.md",
-    "Notes/VSCode/Cpp.md",
-    "Tutorials/Unity Catlike/Custom SRP/Draw Calls.md"
+    "Notes/VSCode/Cpp.md"
   ]
 }
