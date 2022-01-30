@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Linux.md",
+            "file": "Notes/Tools/Windows Terminal.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Linux.md"
+                "file": "Notes/Tools/Windows Terminal.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Linux.md",
+                "file": "Notes/Tools/Windows Terminal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Linux.md",
+                "file": "Notes/Tools/Windows Terminal.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,15 +161,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Notes/Tools/Linux.md",
+    "Notes/Tools/Windows Terminal.md",
+    "Notes/Tools/PlantUML - Class Diagram.md",
+    "Notes/Tools/MKDocs.md",
     "Notes/Tools/Clang-Format.md",
+    "Notes/Tools/Linux.md",
     "Notes/Tools/Anki.md",
     "Notes/Tools/Chocolatey.md",
-    "Notes/Tools/MKDocs.md",
     "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
     "Notes/VSCode.md",
-    "Notes/VSCode/Settings.md",
-    "Notes/Unity.md",
-    "Notes/VSCode/Unity.md"
+    "Notes/VSCode/Settings.md"
   ]
 }
