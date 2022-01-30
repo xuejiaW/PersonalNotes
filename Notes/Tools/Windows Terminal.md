@@ -6,6 +6,26 @@ tags:
 ---
 
 
+# Command line
+
+## 运行 Window Terminal
+
+可以用 `wt` 命令打开 Windows Terminal，该命令可以接受两个可选参数：
+
+```powershell
+wt [options] [command ; ]
+```
+
+`options` 是一系列 flag 或其他参数，用来控制 `wt` 命令的行为。
+
+### Options
+
+|         |             |
+| ------- | ----------- |
+| Options | Description |
+|         |             |
+
+
 ## 以管理员权限运行Shell
 
 安装第三方软件 [gsudo](https://github.com/gerardog/gsudo) ，可通过 [Chocolatey](Chocolatey.md) 安装：
@@ -17,6 +37,9 @@ choco install --y gsudo
 之后在需要管理员权限的 shell 中直接运行 `gsudo` 即可：
 ![](assets/Windows%20Terminal/Untitled.png)
 
+
+
+`options` 是一系列 flag 或其他参数，用来控制 `wt` 命令的行为。
 # 配置 Windows Terminal
 
 通过以下步骤可打开 Windows Terminal 的配置文件 `settings.json`：
@@ -80,3 +103,24 @@ C:\Users\<username>\AppData\Local\Packages\Microsoft.WindowsTerminal_<Random>\Lo
 ```ad-note
  如果希望一个命令，不出现在命令面板中，可将该命令的 `name` 设为 `null`
 ```
+
+### 嵌套命令
+
+当使嵌套命令时，运行该命令会出现多项子命令，效果及实例代码如下所示：
+![](assets/Windows%20Terminal/GIF_6-15-2021_8-18-33_AM.gif)
+
+```json
+{
+    "name": "Change font size...",
+    "commands": [
+        { "command": { "action": "adjustFontSize", "delta": 1 } },
+        { "command": { "action": "adjustFontSize", "delta": -1 } },
+        { "command": "resetFontSize" },
+    ]
+}
+```
+
+```ad-warning
+嵌套命令不支持快捷键
+```
+
