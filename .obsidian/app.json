@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 01 Cartesian Coordinate Systems",
+  "attachmentFolderPath": "./assets/Ch 02 Vectors",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
