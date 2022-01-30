@@ -20,10 +20,17 @@ wt [options] [command ; ]
 
 ### Options
 
-|         |             |
-| ------- | ----------- |
-| Options | Description |
-|         |             |
+|                          |                                                               |
+| ------------------------ | ------------------------------------------------------------- |
+| Options                  | Description                                                   |
+| -help, -h, -?, /?        | Displays the help message.                                    |
+| `--maximized`, `-M`      | Launches the terminal maximized.                              |
+| --fullscreen, -F         | --fullscreen, -F                                              |
+| --focus, -f              | Launches the terminal in the focus mode.                      |
+| --window, -w <window-id> | Launches the terminal in a specific window (need parameters). | 
+
+### Command
+
 
 
 ## 以管理员权限运行Shell
