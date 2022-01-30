@@ -1,6 +1,8 @@
 ---
 created: 2022-01-07
-updated: 2022-01-24
+updated: 2022-01-30
+tags:
+    - Tool
 ---
 # 安装
 

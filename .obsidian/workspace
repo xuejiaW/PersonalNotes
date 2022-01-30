@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
+            "file": "Notes/Tools/Linux.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md"
+                "file": "Notes/Tools/Linux.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
+                "file": "Notes/Tools/Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
+                "file": "Notes/Tools/Linux.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,15 +161,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
+    "Notes/Tools/Linux.md",
+    "Notes/Tools/Clang-Format.md",
     "Notes/Tools/Anki.md",
+    "Notes/Tools/Chocolatey.md",
+    "Notes/Tools/MKDocs.md",
+    "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
     "Notes/VSCode.md",
     "Notes/VSCode/Settings.md",
     "Notes/Unity.md",
-    "Notes/VSCode/Unity.md",
-    "Notes/Unity/Memory.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-    "Notes/Unity/Memory/Managed Memory.md",
-    "Tutorials/Unity Learn/Memory Management in Unity.md"
+    "Notes/VSCode/Unity.md"
   ]
 }

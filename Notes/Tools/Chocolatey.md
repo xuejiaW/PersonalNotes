@@ -1,3 +1,10 @@
+---
+tags:
+    - Tool
+created: 2022-01-30
+updated: 2022-01-30
+---
+
 Chocolatey[^1] 为 Windows 平台下的包管理软件
 
 # 安装方法
