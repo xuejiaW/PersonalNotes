@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Garbage Collector",
+  "attachmentFolderPath": "./assets/VSCode",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

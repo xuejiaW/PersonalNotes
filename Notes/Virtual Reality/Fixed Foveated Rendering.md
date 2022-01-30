@@ -10,7 +10,7 @@ updated: 2022-01-24
 
 在 VR 中，渲染到平面屏幕上的内容会进一步被投射到曲面的镜片上，如下图所示。图中的半圆表示曲面镜片，中央的横线表示屏幕。在曲面上去角度相同的区域，可以看到越靠近曲面边缘的部分，在平面屏幕上需要的像素越多。
 
-![|300](assets/VR%20-%20Fixed%20Foveated%20Rendering/Untitled.png)
+![|300](assets/Fixed%20Foveated%20Rendering/Untitled.png)
 
 因此，在曲面镜片上，越靠近边缘的部分，像素密度越大，这是与实际的需要相悖的。实际需求中，越重要的内容应该有更高的像素进行渲染，而在镜片边缘的内容通常来说是不重要的。
 
@@ -20,13 +20,13 @@ updated: 2022-01-24
 
 因为一体机运行在移动平台上，而移动平台的渲染是将整个屏幕分为多个 Tile。可以给不同的 Tile 设置不同的分辨率来减少需要渲染的像素。
 
-![|500](assets/VR%20-%20Fixed%20Foveated%20Rendering/Untitled%201.png)
+![|500](assets/Fixed%20Foveated%20Rendering/Untitled%201.png)
 
 如上图所示，白色的部分为球面镜片的中心，以全分辨率渲染。红色部分以$1/2$的分辨率进行渲染，绿色部分以 $1/4$ 分辨率进行渲染，蓝色部分以 $1/8$ 分辨率渲染，紫色部分以 $1/16$ 分辨率渲染。
 
 需要注意的是 FFR 必然会导致边缘内容的模糊，而当内容是文字时，会造成较明显的影响，如下所示，从左到右，FFR 的等级逐渐变高。
 
-![|500](assets/VR%20-%20Fixed%20Foveated%20Rendering/Untitled%202.png)
+![|500](assets/Fixed%20Foveated%20Rendering/Untitled%202.png)
 
 # 实现方法
 

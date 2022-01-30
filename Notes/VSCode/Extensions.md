@@ -53,7 +53,7 @@ updated: 2022-01-30
 # Relative Line Numbers[^5]
 
 该插件实现了在 VSCode 中同时显示行号和相对行号，效果如下：
-![](assets/VSCode%20-%20Extensions/image-20211129225048235.png)
+![](assets/Extensions/image-20211129225048235.png)
 
 
 # Reference

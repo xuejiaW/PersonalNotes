@@ -1,18 +1,18 @@
 ---
 created: 2022-01-07
-updated: 2022-01-12
+updated: 2022-01-30
 ---
 # 语法高亮
 
 安装 `Shader languages support` 插件
 
-![|500](assets/VSCode%20-%20GLSL/Untitled.png)
+![|500](assets/GLSL/Untitled.png)
 
 # 格式化
 
 安装 `Clang-Format` 插件
 
-![](assets/VSCode%20-%20GLSL/Untitled%201.png)
+![](assets/GLSL/Untitled%201.png)
 
 安装完后需要运行在命令行中运行如下语句，安装依赖的 `clang-format`
 
