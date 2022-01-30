@@ -36,16 +36,16 @@ $$
 \begin{cases}
   r \geq 0 & \\
   -180^{\circ} < \theta \leq 180 ^{\circ} & 如果极轴指向左侧，则\theta=180^{\circ} \\
-  r=0 \Rightarrow \theta=0 & 
+  r=0 \Rightarrow \theta=0 &
 \end{cases}
 $$
 
 以下的方法可以将一个非正则坐标转换为正则坐标：
 
-1. 当$r=0$时，$\theta =0$
-2. 当$r<0$时，$r=-r, \theta=\theta +180^{\circ}$
-3. 当$\theta \leq -180^{\circ}$，$\theta =\theta +k360 ^{\circ}$，$k$为第一个让$\theta > -180^{\circ}$的值
-4. 当$\theta > -180^{\circ}$，$\theta =\theta -k360 ^{\circ}$，$k$为第一个让$\theta \leq -180^{\circ}$的值
+1.  当$r=0$时，$\theta =0$
+2.  当$r<0$时，$r=-r, \theta=\theta +180^{\circ}$
+3.  当$\theta \leq -180^{\circ}$，$\theta =\theta +k360 ^{\circ}$，$k$为第一个让$\theta > -180^{\circ}$的值
+4.  当$\theta > -180^{\circ}$，$\theta =\theta -k360 ^{\circ}$，$k$为第一个让$\theta \leq -180^{\circ}$的值
 
 ## Converting between Cartesian and Polar Coordinates in 2D
 
@@ -59,11 +59,11 @@ $$x=r \cos \theta \quad y=r \sin \theta$$
 
 笛卡尔坐标系转换为极坐标系表达式如下：
 
-$$ r=\sqrt{x^{2}+y^{2}} \quad  \theta=\arctan (y / x)$$
+$$r=\sqrt{x^{2}+y^{2}} \quad  \theta=\arctan (y / x)$$
 
 其中，$\theta=\arctan (y / x)$是由$\frac{y}{x}=\frac{r\sin \theta}{r \cos \theta}$化简得来。
 
-但$\arctan (y / x)$的表达式存在两个问题，第一是当$x=0$时，表达式的除法是未定义的。第二是$\arctan$的范围为$\left[-90^{\circ},+90^{\circ}\right]$。这个原因是$\frac{y}{x}$隐藏了一部分信息：$x和y$分别存在正负，所以一共有4种组合，但是$\frac{y}{x}$却只有两个结果。
+但$\arctan (y / x)$的表达式存在两个问题，第一是当$x=0$时，表达式的除法是未定义的。第二是$\arctan$的范围为$\left[-90^{\circ},+90^{\circ}\right]$。这个原因是$\frac{y}{x}$隐藏了一部分信息：$x 和 y$分别存在正负，所以一共有 4 种组合，但是$\frac{y}{x}$却只有两个结果。
 
 在书中，作者定义了函数$atan2$，其定义为：
 
@@ -80,17 +80,16 @@ $$\operatorname{atan} 2(y, x)=\left\{\begin{array}{ll}
 
 $$r=\sqrt{x^{2}+y^{2}} ; \quad \quad \theta=\operatorname{atan} 2(y, x)$$
 
-
 # Why Would Anybody Use Polar Coordinates
 
-人们本能上会觉得笛卡尔坐标系更熟悉，但是日常生活中实际上使用更多的是极坐标系，如“往西走50米”，这个描述就是极坐标系（方位+距离）。但是在电脑的计算中，使用较多的是笛卡尔坐标系。
+人们本能上会觉得笛卡尔坐标系更熟悉，但是日常生活中实际上使用更多的是极坐标系，如“往西走 50 米”，这个描述就是极坐标系（方位+距离）。但是在电脑的计算中，使用较多的是笛卡尔坐标系。
 
 在游戏和物理中，如果一个变换只关注角度和距离，那么极坐标系是比较好的选择。
 另外在球表面上的计算，也通常使用极坐标系，如经度、维度，实际上就是球坐标系下的表示。
 
 # 3D Polar Space
 
-在2D极坐标系下，两个变量分别是距离$r$和角度$\theta$，当扩展为3D极坐标时，第三个变量可以是距离$z$，此时变为了圆柱坐标系，也可以是$\phi$，此时变为了球坐标系。
+在 2D 极坐标系下，两个变量分别是距离$r$和角度$\theta$，当扩展为 3D 极坐标时，第三个变量可以是距离$z$，此时变为了圆柱坐标系，也可以是$\phi$，此时变为了球坐标系。
 
 ## Cylindrical Coordinates
 
@@ -98,7 +97,7 @@ $$r=\sqrt{x^{2}+y^{2}} ; \quad \quad \theta=\operatorname{atan} 2(y, x)$$
 
 ![圆柱坐标系](assets/Ch%2007%20Polar%20Coordinate%20Systems/2020-04-01-07-32-32.png)
 
-可以看到，第三个变量$z$是垂直于2D极坐标平面的，当$z=0$时，即为2D极坐标平面。
+可以看到，第三个变量$z$是垂直于 2D 极坐标平面的，当$z=0$时，即为 2D 极坐标平面。
 
 ## Spherical Coordinates
 
@@ -110,29 +109,29 @@ $\theta$被称为方位角（Azimuth），$\phi$被称为天顶角（Zenith）�
 
 ## Some Polar Conventions Useful in 3D Virtual Worlds
 
-之前章节描述的是数学层面上的极坐标系，但在3D游戏的使用中，数学层面的极坐标系存在以下问题：
+之前章节描述的是数学层面上的极坐标系，但在 3D 游戏的使用中，数学层面的极坐标系存在以下问题：
 
-1. $\theta =0$的位置，对应的是$+x$方向，但希望对应的方向是$+z$方向。
-2. $\phi =0$的位置，对应的是$+y$方向，但这样的话当$\phi=0$时，并不等于二维的极坐标系。而在$(r,\theta,90^{\circ})$时才等同于二维坐标系。
-3. $\theta$和$\phi$不方便记忆。
+1.  $\theta =0$的位置，对应的是$+x$方向，但希望对应的方向是$+z$方向。
+2.  $\phi =0$的位置，对应的是$+y$方向，但这样的话当$\phi=0$时，并不等于二维的极坐标系。而在$(r,\theta,90^{\circ})$时才等同于二维坐标系。
+3.  $\theta$和$\phi$不方便记忆。
 
-为此，3D游戏中的极坐标系做了如下改变
-1. 水平角$\theta$命名为$h$(heading)，且当$h=0$时指向$+z$方向。旋转正方向从Y轴正方向看为顺时针
-2. 垂直角$\phi$命名为$p$(pitch)，当$p=0$时，为水平角度，旋转正方向为向下。
-   
-3D游戏中的极坐标系如下图所示：
+为此，3D 游戏中的极坐标系做了如下改变
+1.  水平角$\theta$命名为$h$(heading)，且当$h=0$时指向$+z$方向。旋转正方向从 Y 轴正方向看为顺时针
+2.  垂直角$\phi$命名为$p$(pitch)，当$p=0$时，为水平角度，旋转正方向为向下。
 
-![3D游戏极坐标系](assets/Ch%2007%20Polar%20Coordinate%20Systems/2020-04-01-08-29-48.png)
+3D 游戏中的极坐标系如下图所示：
+
+![3D 游戏极坐标系](assets/Ch%2007%20Polar%20Coordinate%20Systems/2020-04-01-08-29-48.png)
 
 ## Aliasing of Spherical Coordinates
 
 三维坐标中同样存在别名和歧义性。
 
-1. 当r取反时，$h+k180^{\circ}$，并且$p=-p$即能获得一样的值（别名）
-2. 当$r=0$时，$h$和$p$取任意值都没有区别。（歧义性）
-3. $(h,p)$可以表示为$\left(h \pm 180^{\circ}, 180^{\circ}-p\right)$（别名）
-   如h向右转90°，p向下转45°，等同于h向左转90°，p向下转135°。
-4. 当$p=\pm 90^{\circ}$时，$h$取任意值没有区别（歧义性）（万向锁，gimbal lock）。
+1.  当 r 取反时，$h+k180^{\circ}$，并且$p=-p$即能获得一样的值（别名）
+2.  当$r=0$时，$h$和$p$取任意值都没有区别。（歧义性）
+3.  $(h,p)$可以表示为$\left(h \pm 180^{\circ}, 180^{\circ}-p\right)$（别名）
+   如 h 向右转 90°，p 向下转 45°，等同于 h 向左转 90°，p 向下转 135°。
+4.  当$p=\pm 90^{\circ}$时，$h$取任意值没有区别（歧义性）（万向锁，gimbal lock）。
 
 同样如在二维极坐标中一样，可以通过正则坐标来消除歧义和别名，三维极坐标系的正则坐标满足以下条件：
 
@@ -148,13 +147,13 @@ $$
 
 可以通过以下方法，将普通三维极坐标转换为正则坐标
 
-1. 当$r=0$,$h=p=0$
-2. 当$r <0$，$h=h+180^{\circ},p=-p$
-3. 当$p<-90^{\circ}$,$p=p+k360^{\circ}$，直到$p\geq -90^{\circ}$
-4. 当$p>270^{\circ}$,$p=p-k360^{\circ}$，直到$p\leq 270^{\circ}$
-5. 当$p>90^{\circ}$,$h=h+180^{\circ}$,$p=180^{\circ}-p$
-6. 当$h \leq -180^{\circ}$,$h=h+k360^{\circ}$，直到$h > -180^{\circ}$
-6. 当$h > 180^{\circ}$,$h=h-k360^{\circ}$，直到$h \leq 180^{\circ}$
+1.  当$r=0$,$h=p=0$
+2.  当$r <0$，$h=h+180^{\circ},p=-p$
+3.  当$p<-90^{\circ}$,$p=p+k360^{\circ}$，直到$p\geq -90^{\circ}$
+4.  当$p>270^{\circ}$,$p=p-k360^{\circ}$，直到$p\leq 270^{\circ}$
+5.  当$p>90^{\circ}$,$h=h+180^{\circ}$,$p=180^{\circ}-p$
+6.  当$h \leq -180^{\circ}$,$h=h+k360^{\circ}$，直到$h > -180^{\circ}$
+6.  当$h > 180^{\circ}$,$h=h-k360^{\circ}$，直到$h \leq 180^{\circ}$
 
 ## Converting between Spherical and Cartesian Coordinates
 
@@ -170,7 +169,7 @@ $$
 
 求解过程如下：
 
-$z=r \cos \phi$很容易从图中看出，关键是求得$x和y$的表达式。当$\phi=90^{\circ}$时，即为二维的球坐标系，有
+$z=r \cos \phi$很容易从图中看出，关键是求得$x 和 y$的表达式。当$\phi=90^{\circ}$时，即为二维的球坐标系，有
 
 $$x^{\prime}=r \cos \theta, \quad y^{\prime}=r \sin \theta$$
 
@@ -183,10 +182,10 @@ $$x / x^{\prime}=y / y^{\prime}=d / r$$
 所以可以求得
 
 $$
-x=r \sin \phi \cos \theta, \quad y=r \sin \phi \sin \theta, \quad 
+x=r \sin \phi \cos \theta, \quad y=r \sin \phi \sin \theta, \quad
 $$
 
-如果是求3D游戏转换的球坐标系，可得
+如果是求 3D 游戏转换的球坐标系，可得
 
 $$x=r \cos p \sin h, \quad y=-r \sin p, \quad z=r \cos p \cos h$$
 
