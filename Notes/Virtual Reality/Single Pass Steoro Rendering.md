@@ -63,7 +63,29 @@ float4 unity_StereoEyeIndices[2];
 
 除了矩阵 `unity_StereoEyeIndices` 和 `unity_StereoScaleOffset`，其他的 9个数组都会被用来替换 Shader 中原来使用的变量：
 
+```glsl
+#define glstate_matrix_projection unity_StereoMatrixP[unity_StereoEyeIndex]
+#define unity_MatrixV unity_StereoMatrixV[unity_StereoEyeIndex]
+#define unity_MatrixInvV unity_StereoMatrixInvV[unity_StereoEyeIndex]
+#define unity_MatrixVP unity_StereoMatrixVP[unity_StereoEyeIndex]
+#define unity_CameraProjection unity_StereoCameraProjection[unity_StereoEyeIndex]
+#define unity_CameraInvProjection unity_StereoCameraInvProjection[unity_StereoEyeIndex]
+#define unity_WorldToCamera unity_StereoWorldToCamera[unity_StereoEyeIndex]
+#define unity_CameraToWorld unity_StereoCameraToWorld[unity_StereoEyeIndex]
+#define _WorldSpaceCameraPos unity_StereoWorldSpaceCameraPos[unity_StereoEyeIndex]
+```
+
+`unity_StereoEyeIndices` 和 `unity_StereoScaleOffset` 是在 Stereo Rendering 特有的变量：
+
+-   `unity_StereoEyeIndices` 是一个 int 的数组，大小为2，用来存储当前渲染眼镜的 Index （0：左眼，1：右眼）。
+-   `unity_StereoScaleOffset` 是一个 Vector4 的数组，大小为2，用来存储当前渲染眼睛的 Texture 的 Scale 和 Offset，左眼为 $(1,1,0,0)$，右眼为 $(1,1,0.5,0)$
 
 # Reference
 
 [^1]: [OpenGL ES SDK for Android: Using multiview rendering (arm-software.github.io)](https://arm-software.github.io/opengl-es-sdk-for-android/multiview.html)
+
+[Single Pass Stereo rendering (Double-Wide rendering)](https://docs.unity3d.com/Manual/SinglePassStereoRendering.html)
+
+[OVR_Multiview](https://www.khronos.org/registry/OpenGL/extensions/OVR/OVR_multiview.txt)
+
+[OVR_Multiview2](https://www.khronos.org/registry/OpenGL/extensions/OVR/OVR_multiview2.txt)
