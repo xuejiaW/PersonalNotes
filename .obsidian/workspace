@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
     "Notes/VSCode/Extensions.md",
     "Notes/Tools/Windows Terminal.md",
@@ -168,7 +169,6 @@
     "Notes/Tools/Clang-Format.md",
     "Notes/Tools/Linux.md",
     "Notes/Tools/Anki.md",
-    "Notes/Tools/Chocolatey.md",
-    "Notes/Virtual Reality/Single Pass Steoro Rendering.md"
+    "Notes/Tools/Chocolatey.md"
   ]
 }

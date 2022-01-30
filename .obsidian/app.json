@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Extensions",
+  "attachmentFolderPath": "./assets/Ch 03 Multiple Coordinate Spaces",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
