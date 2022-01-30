@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Anki",
+  "attachmentFolderPath": "./assets/Single Pass Steoro Rendering",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
