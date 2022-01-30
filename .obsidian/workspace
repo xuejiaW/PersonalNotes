@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md",
             "mode": "source",
             "source": true
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333,
-    "collapsed": true
+    "width": 333
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,8 +110,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -125,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -162,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
     "Boos/3D Math Primer For Graphics and Game Development.md",
@@ -170,7 +169,6 @@
     "Notes/Tools/Windows Terminal.md",
     "Notes/Tools/PlantUML - Class Diagram.md",
     "Notes/Tools/MKDocs.md",
-    "Notes/Tools/Clang-Format.md",
-    "Notes/Tools/Linux.md"
+    "Notes/Tools/Clang-Format.md"
   ]
 }
