@@ -191,3 +191,73 @@ C:\Users\<username>\AppData\Local\Packages\Microsoft.WindowsTerminal_<Random>\Lo
 [BiliBili tutorial](https://www.bilibili.com/video/BV1LE411v7wM)
 
 ## 登录 SSh
+
+可通过命令 `ssh <userName>@<server address>` 来登录 SSH，如：
+
+```
+ssh wangxuejia@192.168.166.245
+```
+
+可进一步将设置某个 `Profile` 设置为一开启就自动登录 ssh：
+
+```json
+// setting.json for windows terminal
+"profiles": {
+"defaults": {
+		// ...
+},
+"list": [
+// ...
+{
+      "commandline": "ssh wangxuejia@192.168.166.245",
+      "hidden": false,
+      "icon": "ms-appx:///ProfileIcons/pwsh.png",
+      "name": "SSH",
+      "tabTitle": "SSH"
+}
+// ...
+]
+```
+
+此时的效果如下：
+![|500](assets/Windows%20Terminal/GIF_8-25-2021_10-42-27_AM.gif)
+
+可以将开启 `SSH` Profile 的操作定义为一个命令：
+```json
+"actions": 
+[
+		// ...
+		{
+		    "name": "SSH WXJ",
+		    "command": { "action": "newTab", "index": 1 }
+		},
+		// ...
+]
+```
+
+此时的效果如下：
+![|500](assets/Windows%20Terminal/GIF_8-25-2021_10-45-17_AM.gif)
+
+## 关闭 PowerShell 提示语
+
+默认打开 Power Shell 时会有如下的提示语：
+
+```shell
+PowerShell v6.0.0
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+<https://aka.ms/pscore6-docs>
+Type 'help' to get help.
+```
+
+可以在启用 Power Shell 时加入 `--nologo` 关闭该提示语。在 Windows Terminal 中，可在开启 Power Shell 的 Profile List 中做如下的修改：
+
+```json
+{
+      "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+      "hidden": false,
+      "name": "PowerShell",
+      "commandline": "pwsh.exe -nologo",
+      "source": "Windows.Terminal.PowershellCore"
+  },
+```
