@@ -24,15 +24,67 @@ wt [options] [command ; ]
 | ---------------------- | ------------------------------------------------------------- |
 | `-help`, `-h`, `-?`, `/?`      | Displays the help message.                                    | | `--maximized`, `-M`    | Launches the terminal maximized.                              |
 | `--fullscreen`,`-F`        | --fullscreen, -F                                              |
-| --focus, -f            | Launches the terminal in the focus mode.                      |
-| --window, -w window-id | Launches the terminal in a specific window (need parameters). | 
+| `--focus`, `-f`            | Launches the terminal in the focus mode.                      |
+| `--window`, `-w window-id`  | Launches the terminal in a specific window (need parameters). | 
 
 ### Command
 
-| Command         | Parameters                                                                                                                                                                                     | Description        |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `new-tab`, `nt` | --profile, -p profile-name, --startingDirectory, -d starting-directory, commandline, --title, --tabColor                                                                                       | Creates a new tab. |
-| `split-pane`, `sp`  | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline`, `-D, --duplicate` | Splits a new pane. | 
+| Command            | Parameters                                                                                                                                                                                     | Description                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `new-tab`, `nt`    | --profile, -p profile-name, --startingDirectory, -d starting-directory, commandline, --title, --tabColor                                                                                       | Creates a new tab.                                                                             |
+| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline`, `-D, --duplicate` | Splits a new pane.                                                                             |
+| `focus-tab`, `ft`  | `--target, -t tab-index`                                                                                                                                                                       | Focuses on a specific tab.                                                                     |
+| `move-focus`, `mf` | `direction`                                                                                                                                                                                    | Move focus between panes in the given direction. Accepts one of `up`, `down`, `left`, `right`. | 
+
+
+### Command Example
+
+```powershell
+wt ping docs.microsoft.com #打开新 Terminal instance，运行 ping 命令
+wt -p <profiles.name> # 打开新窗口，且指定 Profile，如 Ubuntu / Command Prompt
+wt -d <path> # 指定启动的目录，如 wt -d c:\\
+wt ; ; # 打开多个 Tab，如 wt -p "Ubuntu" ; -p "Ubuntu"
+wt ; new-tab -p "Ubuntu" ; focus-tab -target 1 # Focus the tab with index 1
+
+# Split Panel，此时虽然有 ; 但并非用来作为多 Tab，只是用来分隔 wt 的 commands
+wt -p "Command Prompt" ; split-pane -V -p "Windows PowerShell" ; split-pane -H wsl.exe
+
+# Split Panel 和多 Tab 结合
+wt -p "Command Prompt" ; split-pane -V wsl.exe ; new-tab -d c:\\ ; split-pane -H -d c:\\ wsl.exe
+
+# Set Title
+wt --title tabname1 ; new-tab -p "Ubuntu" --title tabname2
+```
+
+### 解决 wt 与 Powershell 间的冲突
+
+因为 Powershell 默认将 `;` 作为分割语句的方法，而上示例中同样需要用 `;` 分隔 wt 的 commands ，因此两者会产生冲突。
+
+以下是几种解决冲突的方法：
+
+1.  使用start 命，令并且使用单引号框住所有的 `options` 和 `commands` ，如下所示：
+    
+    ```powershell
+    start wt 'new-tab "cmd" ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.exe'
+    ```
+    
+2.  使用 start 命令，并且使用双引号框住所有的 `options` 和 `commands` 对于原先需要使用双引号的地方改为 ``"` 如下所示：
+    
+    ```powershell
+    start wt "new-tab cmd ; split-pane -p `"Windows PowerShell`" ; split-pane -H `"wsl.exe`""
+    ```
+
+3.  使用 ``;`替代`;` ，如下所示：
+    
+    ```powershell
+    wt new-tab "cmd" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe
+    ```
+    
+4.  使用 `--%` 命令，告知 Powershell 命令的剩余部分都是参数，如下所示：
+    
+    ```powershell
+    wt --% new-tab cmd ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.exe
+    ```
 
 ## 以管理员权限运行Shell
 
@@ -132,3 +184,10 @@ C:\Users\<username>\AppData\Local\Packages\Microsoft.WindowsTerminal_<Random>\Lo
 嵌套命令不支持快捷键
 ```
 
+## 保存多个 Panels
+
+[Specify Panes in a Profile · Issue #3759 · microsoft/terminal](https://github.com/microsoft/terminal/issues/3759)
+
+[BiliBili tutorial](https://www.bilibili.com/video/BV1LE411v7wM)
+
+## 登录 SSh
