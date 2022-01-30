@@ -20,18 +20,19 @@ wt [options] [command ; ]
 
 ### Options
 
-|                          |                                                               |
-| ------------------------ | ------------------------------------------------------------- |
-| Options                  | Description                                                   |
-| -help, -h, -?, /?        | Displays the help message.                                    |
-| `--maximized`, `-M`      | Launches the terminal maximized.                              |
-| --fullscreen, -F         | --fullscreen, -F                                              |
-| --focus, -f              | Launches the terminal in the focus mode.                      |
-| --window, -w <window-id> | Launches the terminal in a specific window (need parameters). | 
+|   Options                      |   Description                                                                |
+| ---------------------- | ------------------------------------------------------------- |
+| `-help`, `-h`, `-?`, `/?`      | Displays the help message.                                    | | `--maximized`, `-M`    | Launches the terminal maximized.                              |
+| `--fullscreen`,`-F`        | --fullscreen, -F                                              |
+| --focus, -f            | Launches the terminal in the focus mode.                      |
+| --window, -w window-id | Launches the terminal in a specific window (need parameters). | 
 
 ### Command
 
-
+| Command         | Parameters                                                                                                                                                                                     | Description        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `new-tab`, `nt` | --profile, -p profile-name, --startingDirectory, -d starting-directory, commandline, --title, --tabColor                                                                                       | Creates a new tab. |
+| `split-pane`, `sp`  | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline`, `-D, --duplicate` | Splits a new pane. | 
 
 ## 以管理员权限运行Shell
 
