@@ -116,7 +116,7 @@ DirectX使用行向量，OpenGL使用列向量。 当使用别人的表达式或
 ```
 
 
-## Geometric Interpretation of Matrix
+# Geometric Interpretation of Matrix
 
 从几何意义角度来说，方阵可以描述任何的`线性变化（Linear transformation）`。
 
@@ -127,3 +127,42 @@ DirectX使用行向量，OpenGL使用列向量。 当使用别人的表达式或
 3.  正交投影(Orthographic projection)
 4.  反射(Reflection)
 5.  切边（shearing）
+
+## Multiplying a Vector and a Matrix
+
+假设 $\mathbf{i}=[1,0,0],\mathbf{j}=[0,1,0],\mathbf{k}=[0,0,1]$，且矩阵 $\mathbf{M}$ 为：
+
+$$ \left[\begin{array}{lll}m_{11} & m_{12} & m_{13} \\m_{21} & m_{22} & m_{23} \\m_{31} & m_{32} & m_{33}\end{array}\right] $$
+
+则向量 $\mathbf{v}$ 可写作 $\mathbf{v}=v_x\mathbf{i}+v_y\mathbf{j}+v_z\mathbf{k}$ ，且矩阵与向量的乘法可以看作为：
+
+$$ \begin{aligned}\mathbf{v} \mathbf{M} &=\left(v_{x} \mathbf{i}+v_{y} \mathbf{j}+v_{z} \mathbf{k}\right) \mathbf{M} \\&=\left(v_{x} \mathbf{i}\right) \mathbf{M}+\left(v_{y} \mathbf{j}\right) \mathbf{M}+\left(v_{z} \mathbf{k}\right) \mathbf{M} \\&=v_{x}(\mathbf{i} \mathbf{M})+v_{y}(\mathbf{j} \mathbf{M})+v_{z}(\mathbf{k M}) \\&=v_{x}\left[\begin{array}{llll}m_{11} & m_{12} & m_{13}\end{array}\right]+v_{y}\left[\begin{array}{lll}m_{21} & m_{22} & m_{23}\end{array}\right]+v_{z}\left[\begin{array}{lll}m_{31} & m_{32} & m_{33}\end{array}\right]\end{aligned} $$
+
+
+将上述结果的每一行都看作是一个基本向量，即 $\begin{bmatrix}m_{11} & m_{12} &m_{13} \end{bmatrix}$，$\begin{bmatrix}m_{21} & m_{22} &m_{23} \end{bmatrix}$和$\begin{bmatrix}m_{31} & m_{32} &m_{33} \end{bmatrix}$都作为基本向量，并将他们分别命名为 $\mathbf{p,q,r}$，则上式结果可以改写为：
+
+$$ \mathbf{vM}=v_x\mathbf{p}+v_y\mathbf{q}+v_z\mathbf{r} $$
+
+与原式 $\mathbf{v}=v_x\mathbf{i}+v_y\mathbf{j}+v_z\mathbf{k}$ 比较，可以得出，原来的基本向量 $\mathbf{i,j,k}$ 经过了线性变化，变成了新的基本向量 $\mathbf{p,q,r}$。
+
+```ad-note
+不同的的基本向量就构成了不同的坐标系。因此可以将矩阵 $\mathbf{M}$ 看作是一个坐标系转换的矩阵，它让向量（或点）从由 $\mathbf{i,j,k}$ 构成的坐标系转换到由 $\mathbf{p,q,r}$ 构成的坐标系。
+```
+
+可以通过上述的方法来直接判断一个矩阵所代表的线性变化，方阵的每一行都是变换后的基本向量，如有方阵：
+
+$$ \mathbf{M}=\left[\begin{array}{cc}2 & 1 \\-1 & 2\end{array}\right] $$
+
+其中，$\mathbf{p}=\begin{bmatrix}2 &1 \end{bmatrix},\mathbf{q}=\begin{bmatrix}-1 &2 \end{bmatrix}$。即原坐标$(0,1)$变成了$(2,1)$，原坐标$(1,0)$变成了坐标$(-1,2)$，如下图所示：
+![|300](assets/Ch%2004%20Introduction%20to%20Matrices/Untitled%201.png)
+
+```ad-warning
+此书中，默认计算的向量都是行向量。如果是计算的向量是列向量，则结论是： 方阵的每一列都是变换后的基本向量
+```
+
+如果对一个二维图片使用该矩阵进行变化，则如下图所示：
+![|400](assets/Ch%2004%20Introduction%20to%20Matrices/Untitled%202.png)
+
+```ad-note
+对于三维空间可以同样的方式判断矩阵所表示的线性变化
+```
