@@ -242,5 +242,68 @@ $$ \begin{array}{lll} \mathbf{r}{1} \cdot \mathbf{r}{1}=1, & \mathbf{r}{1} \cdot
 其转换方法如下：
 
 $$ \begin{array}{l} \mathbf{r}{1}^{\prime} \Leftarrow \mathbf{r}{1}\\\\ \mathbf{r}{2}^{\prime} \Leftarrow \mathbf{r}{2}-\frac{\mathbf{r}{2} \cdot \mathbf{r}{1}^{\prime}}{\mathbf{r}{1}^{\prime} \cdot \mathbf{r}{1}^{\prime}} \mathbf{r}{1}^{\prime} \\\\ \mathbf{r}{3}^{\prime} \Leftarrow \mathbf{r}{3}-\frac{\mathbf{r}{3} \cdot \mathbf{r}{1}^{\prime}}{\mathbf{r}{1}^{\prime} \cdot \mathbf{r}{1}^{\prime}} \mathbf{r}{1}^{\prime}-\frac{\mathbf{r}{3} \cdot \mathbf{r}{2}^{\prime}}{\mathbf{r}{2}^{\prime} \cdot \mathbf{r}{2}^{\prime}} \mathbf{r}_{2}^{\prime} \end{array}
-
 $$
+
+```ad-note
+其中 $\mathbf{r}{2}^{\prime}$ 只所以这么定义，是为了从 $\mathbf{r2}$中减去平行于 $\mathbf{r1}$ 的部分，这样剩余部分 $\mathbf{r}{2}^{\prime}$ 即为垂直于 $\mathbf{r1}$ 的部分。
+
+[Vector Dot Product](Ch%2002%20Vectors.md#Vector%20Dot%20Product) 可求得向量的分量，因此：
+
+$$ \begin{aligned}\mathbf{r_{2}}^{\prime} &=\mathbf{r_{2}}-\left(\mathbf{r_{2}} \cdot \hat{r}_{1}\right) \cdot \hat{r}_{1} \\&=\mathbf{r_{2}}-\left(\mathbf{r_{2}} \cdot \frac{\mathbf{r_{1}}^{\prime}}{\left|\mathbf{r_{1}}\right|}\right) \cdot \frac{\mathbf{r_{1}}^{\prime}}{\left|\mathbf{r_{1}}\right|} \\&=\mathbf{r_{2}}-\frac{\mathbf{r_{2}} \cdot \mathbf{r_{1}}^{\prime}}{\left|\mathbf{r_{1}}\right|^{2}} \cdot \mathbf{r_{1}}^{\prime} \\&=\mathbf{r_{2}}-\frac{\mathbf{r_{2}} \cdot \mathbf{r_{1}}^{\prime}}{\mathbf{r_{1}}^{\prime} \cdot \mathbf{r_{1}}^{\prime}} \cdot \mathbf{r_{1}}^{\prime}\end{aligned} $$
+
+求 $\mathbf{r}_{3}^{\prime}$ 的过程同理。
+```
+
+对于 $\mathbf{r}{3}^{\prime}$ 还可以直接通过求得的 $\mathbf{r}{1}^{\prime}$ 和 $\mathbf{r}_{2}^{\prime}$ 获得，即：
+
+$$ \mathbf{r}{3}^{\prime} \Leftarrow \mathbf{r}{1}^{\prime} \times \mathbf{r}_{2}^{\prime} $$
+
+在求得相互垂直的向量 $\mathbf{r}{1}^{\prime}, \mathbf{r}{2}^{\prime}$ 和 $\mathbf{r}_{3}^{\prime}$ 后，通过归一化基本求得长度为1的矩阵，如下：
+
+$$ \begin{aligned} &r_{1}^{\prime \prime}=\frac{r_{1}^{\prime}}{\left|r_{1}^{\prime}\right|}\\ &r_{2}^{\prime \prime}=\frac{r_{2}^{\prime}}{\left|r_{2}^{\prime}\right|}\\ &r_{3}^{\prime \prime}=\frac{r_{3}^{\prime}}{\left|r_{3}^{\prime}\right|} \end{aligned} $$
+
+还有一种方法是利用迭代来求得相互垂直的向量，称为`Nonbiased incremental 正交化`。如下：
+
+$$ \begin{aligned} &\mathbf{r}{1}^{\prime} \Leftarrow \mathbf{r}{1}-k \frac{\mathbf{r}{1} \cdot \mathbf{r}{2}}{\mathbf{r}{2} \cdot \mathbf{r}{2}} \mathbf{r}{2}-k \frac{\mathbf{r}{1} \cdot \mathbf{r}{3}}{\mathbf{r}{3} \cdot \mathbf{r}{3}} \mathbf{r}{3}\\ &\mathbf{r}{2}^{\prime} \Leftarrow \mathbf{r}{2}-k \frac{\mathbf{r}{2} \cdot \mathbf{r}{1}}{\mathbf{r}{1} \cdot \mathbf{r}{1}} \mathbf{r}{1}-k \frac{\mathbf{r}{2} \cdot \mathbf{r}{3}}{\mathbf{r}{3} \cdot \mathbf{r}{3}} \mathbf{r}{3}\\ &\mathbf{r}{3}^{\prime} \Leftarrow \mathbf{r}{3}-k \frac{\mathbf{r}{3} \cdot \mathbf{r}{1}}{\mathbf{r}{1} \cdot \mathbf{r}{1}} \mathbf{r}{1}-k \frac{\mathbf{r}{3} \cdot \mathbf{r}{2}}{\mathbf{r}{2} \cdot \mathbf{r}{2}} \mathbf{r}{2} \end{aligned} $$
+
+```ad-warning
+ 该方法需要通过选取一个适当的 $k$ ，进行反复迭代获取一个很近似正交的类型
+```
+
+# $4\times 4$ Homogeneous Matrices
+
+四维矩阵也被称为 `齐次坐标（Homogeneous coordinate）` 。
+
+## 4D Homogeneous Space
+
+在四维向量中，第四个元素为 $w$。
+
+为了更好的理解物理的三维空间是如何扩展到四维空间的，可以将二维空间作为例子：
+
+想象二维空间是存在于三维齐次空间中的一个平面，且第三个元素值为1，即 $w=1$，所有在该平面上的点都可表示为 $(x,y,1)$。所有不在 $w=1$ 平面上的齐次坐标点 $(x,y,w)$，都可以通过 $(x/w,y/w,1)$转换到二维物理平面上。如下图所示：
+![](assets/Ch%2006%20More%20on%20Matrices/image-20200308224234417.png)
+
+```ad-note
+对于任何在二维平面上的点 $(x,y)$ 都有无限多个相应的在齐次坐标中的点 $(kx,ky,k)$。这些点构成一条穿越原点的直线。
+```
+
+```ad-note
+当 $w=0$ 时，除法是未定义的，所以没有相对应的在二维物理平面上的点。因此将 $w=0$ 的坐标定义为是在无限远处的点，这些点是用来表示方向而不是位置，即 $w=0$ 的坐标实际上是作为向量来进行处理，而 $w\neq 0$ 的点才是作为表示位置的点。
+```
+
+将二维空间的概念推广到三维空间中，三维空间中的点也同样可以看作是在四维齐次空间中，只不过第四个元素值 $w=1$ 。同样的，任意在四维齐次空间中的点，都可以通过 $(x/w,y/w,z/w,1)$ 转换到三维空间中。当 $w=0$ 时，坐标同样是用来表示向量而不是点。
+
+在三维空间中引入四维齐次坐标主要有两个原因：
+
+1.  为了计算上的便捷，因为位移需要用到四维矩阵，因此将其他所有的变换同样都用四维矩阵表示可以方便计算。
+2.  第四个参数 $w$ 可以用于表示 `透视投影（perspective projection）`。
+
+## $4\times 4$ Translation Matrices
+
+```ad-tip
+因为 $n$ 维零向量与任何的 $n\times n$ 矩阵相乘结果都是 $n$ 维零向量，所以通过一个 $3 \times 3$ 的矩阵是永远无法将一个点从原点移动出去的，即 $n$ 维的矩阵无法在 $n$ 维空间中表示位移。
+```
+
+可以通过一个 $4 \times 4$ 的矩阵在三维空间中表示位移。如下所示：
+
+$$ \left[\begin{array}{llll}x & y & z & 1\end{array}\right]\left[\begin{array}{cccc}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\\Delta x & \Delta y & \Delta z & 1\end{array}\right]=\left[\begin{array}{lllll}x+\Delta x & y+\Delta y & z+\Delta z & 1\end{array}\right] $$
