@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,8 +160,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
     "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
     "Boos/3D Math Primer For Graphics and Game Development/Rotate about arbitary axis.md",
     "TO-DO (DESKTOP-98TEV03's conflicted copy 2022-01-28).md",
