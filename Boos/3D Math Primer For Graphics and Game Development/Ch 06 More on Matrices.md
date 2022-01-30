@@ -307,3 +307,128 @@ $$ \begin{aligned} &\mathbf{r}{1}^{\prime} \Leftarrow \mathbf{r}{1}-k \frac{\mat
 可以通过一个 $4 \times 4$ 的矩阵在三维空间中表示位移。如下所示：
 
 $$ \left[\begin{array}{llll}x & y & z & 1\end{array}\right]\left[\begin{array}{cccc}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\\Delta x & \Delta y & \Delta z & 1\end{array}\right]=\left[\begin{array}{lllll}x+\Delta x & y+\Delta y & z+\Delta z & 1\end{array}\right] $$
+
+```ad-warning
+上示变换在四维空间中，仍然是一个线性变换（具体来说是切变），但从三维空间角度来看，就是一个仿射变换，对三维向量进行了位移。
+```
+
+三维矩阵可以扩展成四维矩阵来表示普通的三维向量的变换，如下所示：
+
+$$ \begin{aligned} &\left[\begin{array}{llll} x & y & z & 1 \end{array}\right]\left[\begin{array}{cccc} m_{11} & m_{12} & m_{13} & 0 \\ m_{21} & m_{22} & m_{23} & 0 \\ m_{31} & m_{32} & m_{33} & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]\\ &=\left[\begin{array}{llll} x m_{11}+y m_{21}+z m_{31} & x m_{12}+y m_{22}+z m_{32} & x m_{13}+y m_{23}+z m_{33} & 1 \end{array}\right] \end{aligned} $$
+
+因此，如果一个三维向量需要先进行旋转变换（变换矩阵为 $\mathbf{R}$ ），再进行位移变换（变换矩阵为 $\mathbf{T}$），则矩阵及表达式如下：
+
+$$ \mathbf{R}=\left[\begin{array}{cccc} r_{11} & r_{12} & r_{13} & 0 \\ r_{21} & r_{22} & r_{23} & 0 \\ r_{31} & r_{32} & r_{33} & 0 \\ 0 & 0 & 0 & 1 \end{array}\right], \quad \mathbf{T}=\left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \Delta x & \Delta y & \Delta z & 1 \end{array}\right] $$
+
+$$ \mathbf{v}^{\prime}=\mathbf{v R T}=\mathbf{v}(\mathbf{R T})=\mathbf{v M} $$
+
+其中 $\mathbf{M}$ 为两个变换结合的变换矩阵，表示如下：
+
+$$ \begin{aligned} \mathbf{M}=\mathbf{R} \mathbf{T} &=\left[\begin{array}{cccc} r_{11} & r_{12} & r_{13} & 0 \\ r_{21} & r_{22} & r_{23} & 0 \\ r_{31} & r_{32} & r_{33} & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]\left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \Delta x & \Delta y & \Delta z & 1 \end{array}\right] \\ &=\left[\begin{array}{cccc} r_{11} & r_{12} & r_{13} & 0 \\ r_{21} & r_{22} & r_{23} & 0 \\ r_{31} & r_{32} & r_{33} & 0 \\ \Delta x & \Delta y & \Delta z & 1 \end{array}\right] \end{aligned} $$
+
+可以看出，矩阵 $\mathbf{M}$ 是将 $\mathbf{R}$ 和 $\mathbf{T}$ 中的变换部分和在了一起，即：
+
+$$ \mathbf{M}=\left[\begin{array}{ll} \mathbf{R} & \mathbf{0} \\ \mathbf{t} & 1 \end{array}\right] $$
+
+```ad-note
+上式就是用来表示仿射变换的 $4 \times 4$ 的基本形式，即左上角的 $3 \times3$ 矩阵用来表示线性变换，最下面一行的前三个数字用来表示位移，最后一列为 $[0, 0, 0,1]$
+```
+
+另外如前所述，当一个齐次空间中的向量坐标的第四个元素 $w=0$ 时，这个坐标表示的是位置而不是位移，如下所示，取向量的坐标为 $\left[\begin{array}{llll}x & y & z & 0\end{array}\right]$，与 $\mathbf{M}$ 相乘的结果将不包含位移信息，如：
+
+$$ \left[\begin{array}{llllllll} x & y & z & 0 \end{array}\right]\left[\begin{array}{llll} r_{11} & r_{12} & r_{13} & 0 \\ r_{21} & r_{22} & r_{23} & 0 \\ r_{31} & r_{32} & r_{33} & 0 \\ \Delta x & \Delta y & \Delta z & 1 \end{array}\right] \\ =\left[\begin{array}{llll} x r_{11}+y r_{21}+z r_{31} & x r_{12}+y r_{22}+z r_{32} & x r_{13}+y r_{23}+z r_{33} & 0 \end{array}\right]
+
+$$
+
+## General Affine Transformations
+
+在四维齐次空间中，就能实现仿射变换而不仅仅是线性变换，经常使用的仿射变换包括：
+
+1.  绕着不经过原点的任意轴旋转
+2.  沿着不经过原点的任意轴缩放
+3.  沿着不经过原点的任意平面反射
+4.  投影至任意不包括原点的平面
+
+这些变换的基本思路都是，先将线性变换的中心（如旋转轴，缩放轴，投影平面等）移动到原点，再进行线性变换，最后位移回原点。将位移的矩阵命名为 $\mathbf{T}$ ，将线性变换的矩阵命名为 $\mathbf{R}$，即：
+
+$$ \mathbf{T}=\left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ -p_{x} & -p_{y} & -p_{z} & 1 \end{array}\right]=\left[\begin{array}{cc} \mathbf{I} & \mathbf{0} \\ -\mathbf{p} & 1 \end{array}\right] $$
+
+$$ \mathbf{R}{4 \times 4}=\left[\begin{array}{cccc} r{11} & r_{12} & r_{13} & 0 \\ r_{21} & r_{22} & r_{23} & 0 \\ r_{31} & r_{32} & r_{33} & 0 \\ 0 & 0 & 0 & 1 \end{array}\right]=\left[\begin{array}{cc} \mathbf{R}_{3 \times 3} & \mathbf{0} \\ \mathbf{0} & 1 \end{array}\right] $$
+
+$$ \mathbf{T}^{-1}=\left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ p_{x} & p_{y} & p_{z} & 1 \end{array}\right]=\left[\begin{array}{ll} \mathbf{I} & 0 \\ \mathbf{p} & 1 \end{array}\right] $$
+
+按上述的，先位移再线性变换再位移回去的操作方法，实际变换过程为：
+
+$$ \begin{aligned} T R_{4 \times 4} T^{-1} &=\left[\begin{array}{ll} I & 0 \\ -p & 1 \end{array}\right]\left[\begin{array}{ll} R_{3\times 3} & 0 \\ 0 & 1 \end{array}\right]\left[\begin{array}{ll} I & 0 \\ p & 1 \end{array}\right] \\ &=\left[\begin{array}{ll} R_{3\times 3} & 0 \\ -p \left(R_{3\times 3}\right) & 1 \end{array}\right]\left[\begin{array}{ll} I & 0 \\ p & 1 \end{array}\right] \\ &=\left[\begin{array}{ll} R_{3 \times 3} & 0 \\ -p\left(R_{3 \times 3}\right)+p & 1 \end{array}\right] \end{aligned} $$
+
+```ad-note
+上式是基于向量为行向量的假设
+```
+
+# $4 \times 4$ Matrices and Perspective Projection
+
+在 [Ch 05 Matrices and Linear Transformations](Ch%2005%20Matrices%20and%20Linear%20Transformations.md) 中提到了[Orthographic Projection](Ch%2005%20Matrices%20and%20Linear%20Transformations.md#Orthographic%20Projection)，正交投影是一种平行投影，每条顶点和其投影点的连线是平行的，如下图所示：
+![|400](assets/Ch%2006%20More%20on%20Matrices/image-20200309005931269.png)
+
+在3D中的 `透视投影（Perspective projection）`投影同样也是投影到二维平面上，不同的是所有的顶点与投影点的连线会相会在 `投影中心（Center of projection）`上，且在投影平面后这些连线的延伸会在投影平面上构成一个倒转的图形，如下所示：
+![|400](assets/Ch%2006%20More%20on%20Matrices/image-20200309010328675.png)
+
+```ad-note
+对于一个透视投影来说，投影平面是固定的，投影中心距离投影平面的距离也是固定的，因此物体离投影中心越近，其在投影平面上的构成的图像大小就越大，这个现象称为 `透视收缩（perspective forshortening）`。
+```
+
+## A pinhole Camera
+
+透视投影之所以在图形学中很重要，是因为它就是人类视觉系统工作的方式。人眼可以简化为是一个 `小孔成像（Pinhole Camera）`系统，如下所示：
+![](assets/Ch%2006%20More%20on%20Matrices/image-20200309010825155.png)
+
+盒子上的小孔即是投影中心，盒子的后表面就是投影平面。
+
+小孔成像可以用坐标来表示，将投影看作是原点，将物体的顶点看作是 $p$ 点，将物体在投影平面上的成像看作是 $p^{\prime}$ ，如下图所示：
+![|400](assets/Ch%2006%20More%20on%20Matrices/image-20200309011052254.png)
+
+根据三角形相似定理，可得：
+
+$$ \begin{aligned} &\frac{-p_{y}^{\prime}}{d}=\frac{p_{y}}{z} \\ &p_{y}^{\prime}=\frac{-d p_{y}}{z} \end{aligned} $$
+
+同理可得：
+
+$$ p_{x}^{\prime}=\frac{-d p_{x}}{z} $$
+
+又 $p_{z}^{\prime}$ 的值即为投影平面的值，即 $p_{z}^{\prime}=-d$
+
+综上，点 $\mathbf{p}=\left[\begin{array}{lll} x & y & z \end{array}\right]$ 经过小孔成像变换变为：
+
+$$ \mathbf{p}^{\prime}=\left[\begin{array}{lll} x^{\prime} & y^{\prime} & z^{\prime} \end{array}\right]=\left[\begin{array}{ccc} -d x / z & -d y / z & -d \end{array}\right] $$
+
+在计算机的实际运用中，上述结果中的负号是完全没意义的，因此可以等同于将投影平面移动到投影中心前面（这样的作法在真实物理世界中是不可行的），如下图：
+![|400](assets/Ch%2006%20More%20on%20Matrices/image-20200309011528877.png)
+
+因此上式进一步调整为：
+
+$$ \mathbf{p}^{\prime}=\left[\begin{array}{lll}x^{\prime} & y^{\prime} & z^{\prime}\end{array}\right]=\left[\begin{array}{lll}d x / z & d y / z & d]\end{array}\right. $$
+
+## Perspective Projection Matrices
+
+为了将上述的 $p^{\prime}$ 转换到四维齐次空间中，需要为 $xyz$ 三个分量找出一个公因数作为 $w$ ，即：
+
+$$ \mathbf{p}^{\prime}=\left[\begin{array}{lll} d x / z & d y / z & d \end{array}\right]=\left[\begin{array}{lll} d x / z & d y / z & d z / z \end{array}\right]=\frac{\left[\begin{array}{lll} x & y & z \end{array}\right]}{z / d} $$
+
+即公因数为 $z/d$ ，即 $\omega = z/d$，因此可以将 $p^{\prime}$ 转换为齐次坐标形式：
+
+$$ \left[\begin{array}{llll}x & y & z & z / d\end{array}\right] $$
+
+对于齐次向量$[x,y,z,1]$如果想要转换到上述的齐次坐标，需要用下列矩阵，该矩阵称为投影矩阵：
+
+$$ \left[\begin{array}{llll} x & y & z & 1 \end{array}\right]\left[\begin{array}{llll} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 / d \\ 0 & 0 & 0 & 0 \end{array}\right]=\left[\begin{array}{llll} x & y & z & z / d \end{array}\right] $$
+
+```ad-note
+真实的投影矩阵还需要进行两个操作：
+
+1.  对 $x,y$ 缩放到 NDC 空间满足摄像机的视野要求
+2.  在远剪切平面上，让 $\omega =1$，以保证深度数值合适的分布在整个渲染深度范围上，提高深度检测的准确度。
+```
+
+```ad-note
+ 通过矩阵，求出 $\left[\begin{array}{llll} x & y & z & z / d \end{array}\right]$ 的过程并不是透视投影，将 $\left[\begin{array}{llll}x & y & z & z / d\end{array}\right]$ 转换为 $\left[\begin{array}{llll}d x / z & d y / z & d & 1\end{array}\right]$的过程才是。
+```
