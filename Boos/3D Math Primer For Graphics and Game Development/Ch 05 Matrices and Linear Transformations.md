@@ -204,13 +204,38 @@ $$
 
 只有位移，旋转，和均匀缩放是保角变换。对于反射变换，虽然角度的绝对值不会发生改变，但是角度的方向发生了改变，因此也不能算是保角变换。
 
-```ad-```
-<aside> 💡 
+```ad-note
+所有的保角变换都是仿射变换且都是可逆的。
+```
 
-</aside>
-
-### Orthogonal Transformations
+## Orthogonal Transformations
 
 `正交变换（Orthogonal Transformation）` 保证变换前后，图像的长度，角度的绝对值，面积和体积不会发生改变。
 
 只有位移，旋转和反射是正交变换。
+
+```ad-note
+所有的正交变换都是可逆的，且是仿射变换。
+```
+
+```ad-note
+正交变换的逆矩阵即为其转置
+```
+
+## Rigid Body Transformations
+
+`刚体变换（Rigidbody Transformation，proper transformations）`只改变图像的位置和角度，但不会改变其形状。
+
+位移和旋转是唯二的刚体变换，反射变换因为改变了图形的角度方向所以不是刚体变换。
+
+```ad-note
+刚体变换几乎是最严格的变换。所有的刚体变换，都是正交的，保角的，可逆的和仿射的。
+```
+
+```ad-note
+刚体变换的行列式大小为1。
+```
+
+# Summary of Types of Transformations
+
+![](assets/Ch%2005%20Matrices%20and%20Linear%20Transformations/image-20200306141537944.png)
