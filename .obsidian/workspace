@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -123,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +161,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Boos/3D Math Primer For Graphics and Game Development/Untitled.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Rotate about arbitary axis.md",
+    "TO-DO (DESKTOP-98TEV03's conflicted copy 2022-01-28).md",
+    "TO-DO.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 04 Introduction to Matrices.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 02 Vectors.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
-    "Notes/VSCode/Extensions.md",
-    "Notes/Tools/Windows Terminal.md"
+    "Boos/3D Math Primer For Graphics and Game Development.md"
   ]
 }
