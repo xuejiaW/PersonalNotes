@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md",
-            "mode": "preview",
+            "mode": "source",
             "source": true
           }
         }
@@ -146,7 +146,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.09848280266864429,
+                  "scale": 0.059326171874999965,
                   "close": true
                 }
               }
