@@ -131,3 +131,116 @@ $$ \mathbf{M}=\left[\begin{array}{ccc}-4 & -3 & 3 \\0 & 2 & -2 \\1 & 4 & -1\end{
 要求伴随矩阵，首先要求出所有的代数余子式，即：
 
 $$ \begin{aligned}&C^{\{11\}}=+\left|\begin{array}{cc}2 & -2 \\4 & -1\end{array}\right|=6, \quad C^{\{12\}}=-\left|\begin{array}{cc}0 & -2 \\1 & -1\end{array}\right|=-2, \quad C^{\{13\}}=+\left|\begin{array}{cc}0 & 2 \\1 & 4\end{array}\right|=-2\\&C^{\{21\}}=-\left|\begin{array}{cc}-3 & 3 \\4 & -1\end{array}\right|=9, \quad C^{\{22\}}=+\left|\begin{array}{cc}-4 & 3 \\1 & -1\end{array}\right|=1, \quad C^{\{23\}}=-\left|\begin{array}{cc}-4 & -3 \\1 & 4\end{array}\right|=13\\&C^{\{31\}}=+\left|\begin{array}{cc}-3 & 3 \\2 & -2\end{array}\right|=0, \quad C^{\{32\}}=-\left|\begin{array}{cc}-4 & 3 \\0 & -2\end{array}\right|=-8, \quad C^{\{33\}}=+\left|\begin{array}{cc}-4 & -3 \\0 & 2\end{array}\right|=-8\end{aligned} $$
+
+矩阵的伴随矩阵如下：
+
+$$ \begin{aligned}\operatorname{adj} \mathbf{M} &=\left[\begin{array}{ccc}C^{\{11\}} & C^{\{12\}} & C^{\{13\}} \\C^{\{21\}} & C^{\{22\}} & C^{\{23\}} \\C^{\{31\}} & C^{\{32\}} & C^{\{33\}}\end{array}\right]^{\mathrm{T}} \\&=\left[\begin{array}{ccc}6 & -2 & -2 \\9 & 1 & 13 \\0 & -8 & -8\end{array}\right]^{\mathrm{T}}\\&=\left[\begin{array}{ccc}6 & 9 & 0 \\-2 & 1 & -8 \\-2 & 13 & -8\end{array}\right]\end{aligned} $$
+
+## Matrix Inverse-Official Linear Algebra Rules
+
+用矩阵的伴随矩阵除以矩阵的行列式，即为矩阵的逆矩阵，公式如下：
+
+$$ \mathbf{M}^{-1}=\frac{\operatorname{adj} \mathbf{M}}{|\mathbf{M}|} $$
+
+因为计算逆矩阵时要除以矩阵的行列式，所以行列式为0的矩阵是不存在逆矩阵的。
+
+除了用伴随矩阵的方法来计算逆矩阵，还有如 `高斯消除（Gaussian elimination）`等其他方法。高斯消除法的运算量会更小，但针对图形学最常用的 $3\times 3$ 和 $4 \times 4$ 大小的矩阵，用伴随矩阵的方法就已经足够。
+
+🔥 逆矩阵有如下性质：
+
+1.  逆矩阵的逆矩阵等于原矩阵
+    
+    $$ \left(\mathbf{M}^{-1}\right)^{-1}=\mathbf{M} $$
+    
+2.  单位矩阵的逆矩阵为本身。
+    
+    $$ \mathbf{I^{-1}=I} $$
+    
+    -   单位矩阵并不是唯一的逆矩阵为本身的矩阵，反射矩阵和旋转180°的矩阵通用也满足。
+3.  转置的逆矩阵等于逆矩阵的转置
+    
+    $$ \left(\mathbf{M}^{\mathrm{T}}\right)^{-1}=\left(\mathbf{M}^{-1}\right)^{\mathrm{T}} $$
+
+4.  乘积的逆矩阵等于相反顺序的逆矩阵的乘积
+    
+    $$ (\mathbf{A B})^{-1}=\mathbf{B}^{-1} \mathbf{A}^{-1} $$
+    
+5.  逆矩阵的行列式等于原矩阵行列式的倒数
+    
+    $$ \left|\mathbf{M}^{-1}\right|=1 /|\mathbf{M}| $$
+
+## Matrix Inverse-Geometric Interpretation
+
+逆矩阵的几何意义即是相反的变换，相当于一个变换的undo。
+
+$$ (\mathbf{v M}) \mathbf{M}^{-1}=\mathbf{v}\left(\mathbf{M M}^{-1}\right)=\mathbf{v} \mathbf{I}=\mathbf{v} $$
+
+# Orthogonal Matrices
+
+## Orthogonal Matrices-Official Linear Algebra Rules
+
+一个方阵当且仅当它和它的转置乘积为单位矩阵时，这个矩阵为 `正交矩阵（Orthogonal Matrix）`：
+
+$$ \mathbf{M} \text { 是正交矩阵 } \Longleftrightarrow \quad \mathbf{M M}^{\mathrm{T}}=\mathbf{I} $$
+
+同时因为 $\mathbf{M}^{-1} \mathbf{M}=\mathbf{I}$ ，所以正交矩阵还满足：
+
+$$ \mathbf{M} \text { 是正交矩阵 } \Longleftrightarrow \mathbf{M}^{\mathrm{T}}=\mathbf{M}^{-1} $$
+
+另外还有：
+
+$$ \mathbf{M} \text { 是正交矩阵 } \Longleftrightarrow{\text{每一行（列）构成的基本向量长度为1，且相互垂直}} $$
+
+### 证明：
+
+假设：
+
+$$ \mathbf{M}=\left[\begin{array}{lll} m_{11} & m_{12} & m_{13} \\ m_{21} & m_{22} & m_{23} \\ m_{31} & m_{32} & m_{33} \end{array}\right] $$
+
+且 $\mathbf{M}$ 为正交矩阵，则有：
+
+$$ \left[\begin{array}{lll} m_{11} & m_{12} & m_{13} \\ m_{21} & m_{22} & m_{23} \\ m_{31} & m_{32} & m_{33} \end{array}\right]\left[\begin{array}{lll} m_{11} & m_{21} & m_{31} \\ m_{12} & m_{22} & m_{32} \\ m_{13} & m_{23} & m_{33} \end{array}\right]=\left[\begin{array}{lll} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array}\right] $$
+
+用 $\mathbf{r_1,r_2,r_3}$ 代表矩阵 $\mathbf{M}$ 的每个基本向量（每一行），即
+
+$$ \begin{aligned} &\mathbf{r}{1}=\left[\begin{array}{lll} m{11} & m_{12} & m_{13} \end{array}\right]\\ &\mathbf{r}{2}=\left[\begin{array}{lll} m{21} & m_{22} & m_{23} \end{array}\right]\\ &\mathbf{r}{3}=\left[\begin{array}{lll} m{31} & m_{32} & m_{33} \end{array}\right] \end{aligned} $$
+
+$$ \mathbf{M}=\left[\begin{array}{l} -\mathbf{r}{1}- \\ -\mathbf{r}{2}- \\ -\mathbf{r}_{3}- \end{array}\right] $$
+
+可得：
+
+$$ \begin{array}{lll} \mathbf{r}{1} \cdot \mathbf{r}{1}=1, & \mathbf{r}{1} \cdot \mathbf{r}{2}=0, & \mathbf{r}{1} \cdot \mathbf{r}{3}=0 \\ \mathbf{r}{2} \cdot \mathbf{r}{1}=0, & \mathbf{r}{2} \cdot \mathbf{r}{2}=1, & \mathbf{r}{2} \cdot \mathbf{r}{3}=0 \\ \mathbf{r}{3} \cdot \mathbf{r}{1}=0, & \mathbf{r}{3} \cdot \mathbf{r}{2}=0, & \mathbf{r}{3} \cdot \mathbf{r}{3}=1 \end{array} $$
+
+即每个基本向量与自己的点乘值为1，与别的基本向量的点乘值为0。
+
+即表明每个基本向量的长度为1，且与其他的基本向量相互垂直，得证
+
+```ad-note
+同理可证，矩阵的每一列构成的基本向量长度为1，且相互垂直，该矩阵也为正交矩阵
+```
+
+如果知道一个矩阵是正交的（如旋转和反射变换），那么可以很快的通过求其转置矩阵来获得逆矩阵。
+
+```ad-note
+在英语中有些术语会造成困扰。 `orthogonal basis vectors` 是描述一系列相互垂直的向量，但并没有限定它们的长度。如果它们满足长度为1，则称为 `orthnormal basis verctors`。 但是 `orthogonal matrices`需要基本向量不仅相互垂直，而且长度为1。 即 `orthogonal basis vectores` 不能构成 `orthogonal matrices`，必须是 `orthonormal basis vectores` 才能构成。
+```
+
+## Orthogonal Matrices-Geometric Interpretation
+
+正交矩阵的意义在于其逆矩阵非常容易求得（转置矩阵即为逆矩阵）。
+
+如果一个变换仅包含旋转和反射，那么它为正交矩阵。
+
+## Orthogonalizing a Matrix
+
+有时遇到一些矩阵因为数据的错误或者浮点误差（Floating point error）。
+
+在这些情况下，需要通过一些变换将矩阵的基本向量变为互相垂直和长度为一。通常使用的方法为`Gram-Schmidt 正交化`。
+
+首先将矩阵的标准向量（每一行）定义为 $\mathbf{r}{1}, \mathbf{r}{2}$ 和 $\mathbf{r}{3}$*，*并将转换后的满足相互垂直的基本向量定义为 **$\mathbf{r}{1}^{\prime}, \mathbf{r}{2}^{\prime}$ **和 $\mathbf{r}{3}^{\prime}$。
+
+其转换方法如下：
+
+$$ \begin{array}{l} \mathbf{r}{1}^{\prime} \Leftarrow \mathbf{r}{1}\\\\ \mathbf{r}{2}^{\prime} \Leftarrow \mathbf{r}{2}-\frac{\mathbf{r}{2} \cdot \mathbf{r}{1}^{\prime}}{\mathbf{r}{1}^{\prime} \cdot \mathbf{r}{1}^{\prime}} \mathbf{r}{1}^{\prime} \\\\ \mathbf{r}{3}^{\prime} \Leftarrow \mathbf{r}{3}-\frac{\mathbf{r}{3} \cdot \mathbf{r}{1}^{\prime}}{\mathbf{r}{1}^{\prime} \cdot \mathbf{r}{1}^{\prime}} \mathbf{r}{1}^{\prime}-\frac{\mathbf{r}{3} \cdot \mathbf{r}{2}^{\prime}}{\mathbf{r}{2}^{\prime} \cdot \mathbf{r}{2}^{\prime}} \mathbf{r}_{2}^{\prime} \end{array}
+
+$$
