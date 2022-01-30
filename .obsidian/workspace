@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development.md",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -123,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +161,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 01 Cartesian Coordinate Systems.md",
     "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 03 Multiple Coordinate Spaces.md",
     "Notes/VSCode/Extensions.md",
@@ -168,7 +170,6 @@
     "Notes/Tools/MKDocs.md",
     "Notes/Tools/Clang-Format.md",
     "Notes/Tools/Linux.md",
-    "Notes/Tools/Anki.md",
-    "Notes/Tools/Chocolatey.md"
+    "Notes/Tools/Anki.md"
   ]
 }
