@@ -90,11 +90,31 @@ $$
 
 两倍角定理
 
-$$  
+$$
 \begin{aligned}
-\sin 2\theta = 2\sin \theta \cos \theta \\\\   \cos 2\theta = \cos ^2 \theta-\sin^2\theta=2cos^2\theta-1=1-2sin^2\theta \\\\   \tan 2 \theta=\frac{2\tan \theta}{1- \tan^2\theta} $$
+\sin 2\theta = 2\sin \theta \cos \theta \\
+\cos 2\theta = \cos ^2 \theta-\sin^2\theta=2cos^2\theta-1=1-2sin^2\theta \\
+\tan 2 \theta=\frac{2\tan \theta}{1- \tan^2\theta} \\
+\end{aligned}
+$$
 
 正弦定理
 
 对于如下三角形，有：
+![](assets/Ch%2001%20Cartesian%20Coordinate%20Systems/Untitled%202.png)
 
+$$
+\frac{\sin A}{a} = \frac{\sin B}{b}=\frac{\sin C}{c}
+$$
+
+余弦定理
+
+对上示的三角形，有：
+
+$$
+\begin{aligned}
+a^2=b^2+c^2-2bc\cos A \\\\
+b^2 = a^2 +c^2 - 2ac \cos B\\\\
+c^2 = a^2 +b^2 -2ab \cos C \\
+\end{aligned}
+$$
