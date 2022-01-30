@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Anki.md",
+            "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
             "mode": "source",
             "source": true
           }
@@ -49,12 +49,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 333,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Anki.md"
+                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Anki.md",
+                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Anki.md",
+                "file": "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -162,6 +162,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Virtual Reality/Single Pass Steoro Rendering.md",
     "Notes/Tools/Anki.md",
     "Notes/VSCode.md",
     "Notes/VSCode/Settings.md",
@@ -170,7 +171,6 @@
     "Notes/Unity/Memory.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
     "Notes/Unity/Memory/Managed Memory.md",
-    "Tutorials/Unity Learn/Memory Management in Unity.md",
-    "TO-DO.md"
+    "Tutorials/Unity Learn/Memory Management in Unity.md"
   ]
 }
