@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Untitled.md",
+            "file": "Notes/Tools/Anki.md",
             "mode": "source",
             "source": true
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "class",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Untitled.md"
+                "file": "Notes/Tools/Anki.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Untitled.md",
+                "file": "Notes/Tools/Anki.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Untitled.md",
+                "file": "Notes/Tools/Anki.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,7 +162,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Notes/Tools/Untitled.md",
+    "Notes/Tools/Anki.md",
     "Notes/VSCode.md",
     "Notes/VSCode/Settings.md",
     "Notes/Unity.md",
