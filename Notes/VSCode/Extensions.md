@@ -56,6 +56,10 @@ updated: 2022-01-30
 ![](assets/Extensions/image-20211129225048235.png)
 
 
+# C# XML Dcumentation Comments[^6]
+
+VSCode 默认并不能提供 XML Documentation 所需要的Tag的 Code Snippet，因此需要该插件提供 Code Snippet 的补全。
+
 # Reference
 
 [^1]: [Paste Image - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
@@ -63,3 +67,4 @@ updated: 2022-01-30
 [^3]: [Clang-Format - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)
 [^4]:[PlantUML - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 [^5]:[Relative Line Numbers - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=extr0py.vscode-relative-line-numbers)
+[^6]:[C# XML Documentation Comments ](https://marketplace.visualstudio.com/items?itemName=k--kato.docomment)
