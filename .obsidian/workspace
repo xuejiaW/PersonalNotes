@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
-            "mode": "source",
+            "mode": "preview",
             "source": true
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 333,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",

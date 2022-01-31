@@ -1,40 +1,12 @@
 ---
-title: 《3D数学基础：图形和游戏开发》第八章笔记
-mathjax: false
-date: 2020-04-07 14:55:42
-categories:
-  - 读书笔记
-  - 图形学
 tags:
-  - 读书笔记
-  - 3D数学
+  - Computer-Graphics
+  - Math
+created: 2022-01-31
+updated: 2022-01-31
 ---
 
-{% cq %}
-
-《3D数学基础：图形和游戏开发》第八章笔记
-
-8.1节 介绍了朝向（Orientation）的概念。
-
-8.2节 介绍了如何用矩阵表示朝向。
-
-8.3节 介绍如何使用欧拉角表示朝向。
-
-8.4节 介绍如何使用轴角法和指数映射表示朝向。
-
-8.5节 介绍如何使用四元数表示朝向
-
-8.6节 比较了各个表示方法的利弊
-
-8.7节 介绍了各个表示方法如何相互转换。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 8 Rotation in Three Dimensions
-
-## What Exactly is "Orientation"
+# What Exactly is "Orientation"
 
 `方向（direction）`只需要两个参数表示，而`朝向（orientation）`需要三个参数表示。如下图中确认飞机的朝向需要两个参数，而朝向还需要图中的绿圈方向来决定其旋转角度。
 
@@ -44,11 +16,11 @@ tags:
 
 角位移与朝向的关系与线段和点的关系有点类似，前者都是表示一个变换，后者都是表示一个状态。
 
-## Matrix Form
+# Matrix Form
 
 这一节是描述用$3 \times 3$的矩阵来描述旋转。
 
-### Which Matrix？
+## Which Matrix？
 
 矩阵很常用的操作是坐标系的转换，其中两个用的比较多的是
 
@@ -57,7 +29,7 @@ tags:
 
 在这里，每个对象都含有一个$3 \times 3$的矩阵表示朝向，进行变换的矩阵只包含旋转信息，即它是一个正交矩阵（虽然反转矩阵也是正交矩阵，但这里只包含旋转信息）。
 
-### Direction Consines Matrix
+## Direction Consines Matrix
 
 通过矩阵来进行旋转实际上是从方向余弦（Direction cosines）这个概念中得到的。一个方向预先矩阵就是一个旋转矩阵。
 
@@ -142,7 +114,7 @@ p_{z} & q_{z} & r_{z}
 
 即矩阵的每一列，是由变换后的坐标轴表示的原坐标轴。
 
-### Advantages of Matrix Form
+## Advantages of Matrix Form
 
 用矩阵表示旋转的优点如下：
 
@@ -151,7 +123,7 @@ p_{z} & q_{z} & r_{z}
 3. 多个变换矩阵可以级联，即矩阵相乘
 4. 当要进行逆操作时，矩阵取反即可
 
-### Disadvantages of Matrix Form
+## Disadvantages of Matrix Form
 
 用矩阵表示旋转的缺点如下：
 
@@ -162,7 +134,7 @@ p_{z} & q_{z} & r_{z}
    b. 可能由进度不够造成数据错误。因为旋转矩阵中的元素数值通常范围为$-1\sim 1$，当表示一些变换时，精度可能会不够。因此在变换过程中，当小数点后数据进行了舍弃，可能导致无法满足旋转矩阵的性质，这种现象称为矩阵蠕变（Matrix creep）。可以通过矩阵的正交化解决（在第六章有提到）。
 
 
-## Eular Angles
+# Eular Angles
 
 欧拉角表示旋转的基本思路是通过连续的绕着三个相互垂直的轴的角位移来表示旋转。
 
@@ -172,7 +144,7 @@ p_{z} & q_{z} & r_{z}
 
 第一张图显示的是原始状态，第二张图是绕着heading轴（直立坐标系下的y轴）旋转，第三张图是绕着pitch轴旋转（物体坐标系下的x轴），第四章图是绕着bank轴旋转（物体坐标系下的z轴）。
 
-### Other Euler Angle Conventions
+## Other Euler Angle Conventions
 
 还存在很多其他的欧拉角旋转表达方式，如很常见的`yaw-pitch-roll`。这种表达方式下，通常`roll`与`bank`的含义一模一样，但`heading`和`yaw`有细微差别，`heading`是直立坐标系的y轴，`yaw`是物体坐标系的y轴。
 
@@ -185,7 +157,7 @@ p_{z} & q_{z} & r_{z}
 * 不同定义的欧拉角进行转换过程，通常是先原始欧拉角转换为矩阵，再从矩阵
 转换为目标欧拉角
 
-### Advantages of Euler Angles
+## Advantages of Euler Angles
 
 欧拉角表达的优点在于：
 
@@ -193,7 +165,7 @@ p_{z} & q_{z} & r_{z}
 2. 欧拉角用了最少的数字来表达旋转。另外因为欧拉角中的数字是用来表达角度的，所以不会像在矩阵中的数字一样，局限在范围$-1\sim 1$之中，也因此浮点数的精度误差也不会像在矩阵中严重。
 3. 任意三个数值的组合都是合法的。
 
-### Disadvantages of Euler Angles
+## Disadvantages of Euler Angles
 
 1. 对于一个旋转角度的表达不唯一，即存在别名。
 2. 在不同角度之间的线性差值变换可能存在问题。
@@ -249,7 +221,7 @@ $$\begin{aligned}
 
 第三个问题万向锁无法被解决。只要使用了三个数值来表达旋转，那么当第二个轴旋转至90°时，第一个轴与第三个轴的旋转效果都会变得相同。
 
-## Axis-Angle and Exponential Map Representations
+# Axis-Angle and Exponential Map Representations
 
 欧拉还提出了欧拉旋转理论（Euler‘s rotation theorem）：任何的3D旋转，都可以通过绕着某一个轴的单一旋转实现。如给定了两个旋转$\mathbf{R}_1和\mathbf{R}_2$，存在一个轴$\hat{\mathbf{n}}$，使得$\mathbf{R}_1和\mathbf{R}_2$两个旋转的结合可以通过绕着$\hat{\mathbf{n}}$轴的一次旋转搞定。
 
@@ -271,11 +243,11 @@ $$\begin{aligned}
 
 指数映射法运用的相对较多。在计算角速度的时候，通常使用指数映射法。一是因为指数映射法受加减360°别名的影响，因此可以保留速度的变换。二是因为虽然指数映射法的加法无法完美结合多个变换，但是可以结合多个变换的变换角度的大小。
 
-## Quaternions
+# Quaternions
 
 从数学上可以证明为什么用欧拉角来表示三维空间旋转必然会引起万向锁，所用方法为“manifolds”，但这个论证超出了本书的范围。
 
-### Quaternion Notation
+## Quaternion Notation
 
 四元数通常包含一个标量部分（$\mathbf{w}$），和一个三维向量部分（$\mathbf{v}$），即四元数标记为：
 
@@ -298,7 +270,7 @@ z
 
 但不像向量中的横向量与纵向量会影响计算，四元数的横向与纵向表示没有任何区别，仅仅是写法的不同。
 
-### What Do Those Four Numers Mean？
+## What Do Those Four Numers Mean？
 
 之前提到了轴角法表示旋转，即通过$(\theta, \hat{\mathbf{n}})$表达旋转。可以将其表示为四元数，将其中的旋转角度和旋转轴的信息进行编码放入四个数中，如下所示：
 
@@ -315,7 +287,7 @@ w & (x & y & z
 
 这样是几何意义上的四元数，但是从复数层面或者其他学科中，四元数还有其他用处，只不过超出了本书的范围。
 
-### Quaternion Negation
+## Quaternion Negation
 
 > 从第三节到第11节都是关于四元数的操作
 
@@ -334,7 +306,7 @@ w & y & z
 
 从几何意义上来说，$\mathbf{q}$和$\mathbf{-q}$没有任何区别。因为根据上一节中四元数数据的定义，因为每个操作符都是对于$\theta/2$，给$\theta$加上360°，其数值就会取反，但是旋转的角度仍然相同。
 
-### Identity Quaternion(s)
+## Identity Quaternion(s)
 
 从几何意义角度上说，存在两个单位四元数，表示没有任何的旋转，它们为：
 
@@ -348,7 +320,7 @@ $$\left[\begin{array}{ll}
 
 但从代数角度上说，实际上只有$\left[\begin{array}{ll}1 & 0\end{array}\right]$一个四元数。
 
-### Quaternion Magnitude
+## Quaternion Magnitude
 
 对于任意的四元数，求模的公式如下：
 
@@ -374,7 +346,7 @@ $$\begin{aligned}
 
 在几何中，通常`unit quaternions`用来描述这些模为1的四元数，并且同样翻译为单位四元数。
 
-### Quaternion Conjugate and Inverse
+## Quaternion Conjugate and Inverse
 
 四元数有共轭操作，表示为$\mathbf{q}*$，计算过程如下：
 
@@ -405,7 +377,7 @@ $$
 
 从几何意义上来说，用于旋转的四元数，因为模为1，所以$\mathbf{q}^{*}=\mathbf{q}^{-1}$。它们都表示为绕着相反的轴（因为$\mathbf{v}$取反了）进行旋转。
 
-### Quaternion Multiplication
+## Quaternion Multiplication
 
 四元数的相乘和矩阵的叉乘类似，叉乘返回的是向量，四元数相乘返回的是四元数。如下所示：
 
@@ -493,7 +465,7 @@ $$\begin{aligned}
 
 * 当多个四元数表示多次相连的旋转时，其计算顺序是由内向外的（上式中先计算$\mathbf{a}$再计算$\mathbf{b}$）
 
-### Quaternion "Difference"
+## Quaternion "Difference"
 
 四元数的差值（Difference）是用来表示两个朝向的角度相互变换时差距。
 
@@ -531,7 +503,7 @@ d=\left[\begin{array}{cc}
 
 这差值也同样不是几何意义上的两个点之间的角度差。如例子中的$\mathbf{p}=[0 (\quad 1 \quad 0 \quad 0)]$和$\mathbf{p^{\prime}}=[0 (\quad 0 \quad 1 \quad 0)]$，两者实际上的角度差值是90°（绕着+z）轴。但是这里求出的$\mathbf{d}=[0 \quad(0\quad 0\quad 1)]$，如果按旋转四元数来解释$\mathbf{d}$，那么$\cos(\theta/2)=0$，$\theta=180^{\circ}$，明显与实际情况不同。
 
-### Quaternion Dot Product
+## Quaternion Dot Product
 
 四元数的点乘与矩阵的点乘类似，如下所示：
 
@@ -554,7 +526,7 @@ w_{2} & \left(x_{2}\right. & y_{2} & z_{2}
 
 而$\mathbf{d}$的形式上满足旋转四元数的定义（虽然$\theta$和$\hat{\mathbf{n}}$和真实的旋转四元数并不相等），所以其中的$\omega$也能反应差值的角度大小，因此可以通过点乘来求得差值的角度大小。
 
-### Quaternion log，exp, and Multiplication by a Scaler
+## Quaternion log，exp, and Multiplication by a Scaler
 
 为了书写方便，四元数可表示为，$\alpha=\theta / 2，\mathbf{q}=[\cos \alpha \quad \hat{\mathbf{n}} \sin \alpha]$
 
@@ -584,7 +556,7 @@ $$k \mathbf{q}=k[w \quad \mathbf{v}]=\left[\begin{array}{ll}
 k w & k \mathbf{v}
 \end{array}\right]$$
 
-### Quaternion Exponentiation
+## Quaternion Exponentiation
 
 四元数的指数形式（Exponentiation），写为$\mathbf{q}^{t}$
 
@@ -606,7 +578,7 @@ $$\mathbf{q}^{t}=\exp (t \log \mathbf{q})$$
 
 书中给出了实现四元数指数操作的代码
 
-### Quaternion Interpolation, a.k.a Slerp
+## Quaternion Interpolation, a.k.a Slerp
 
 球面线性插值（Slerp，Spherical Linera interpolation，下简称插值）是用来在两个角度间逐渐变换的方法。Slerp方法需要三个参数，$\mathbf{q}_0,\mathbf{q}_1和t$，分别表示插值的起始点，终点和目前的进度。
 
@@ -676,7 +648,7 @@ $$\operatorname{slerp}\left(\mathbf{q}_{0}, \mathbf{q}_{1}, t\right)=\frac{\sin 
 
 书中有给出关于差值的算法
 
-### Advantages and Disadvantage of Quaternions
+## Advantages and Disadvantage of Quaternions
 
 优点：
 
@@ -691,7 +663,7 @@ $$\operatorname{slerp}\left(\mathbf{q}_{0}, \mathbf{q}_{1}, t\right)=\frac{\sin 
    旋转四元数的模是1
 3. 人无法直观理解
 
-### Quaternions as Complex Number
+## Quaternions as Complex Number
 
 这一节是用从复数的角度来描述四元数，从这个角度可以解释两个问题，一是为什么从旋转角度来看，四元数代表的是$\theta/2$而不是$\theta$，二是为什么用于旋转的表达式是$\mathbf{qvq_{-1}}$
 
@@ -839,7 +811,7 @@ $$\begin{aligned}
 
 而这就是前几节中定义的用四元数来表示乘法的方法。
 
-### Summary of Quaternions
+## Summary of Quaternions
 
 这一节是总结上述描述中比较重要的概念。
 
@@ -855,7 +827,7 @@ $$\begin{aligned}
    旋转四元数常用来计算插值。
 
 
-## Comparision of Methods
+# Comparision of Methods
 
 1. 欧拉角是最适合人直接理解的方法
 2. 当需要进行空间转换时，必须是使用矩阵
@@ -865,9 +837,9 @@ $$\begin{aligned}
 6. 矩阵，指数映射，四元数都可以快速的求出逆运算
 7. 如果要求角速度，或者其他要保留额外的旋转（有几次360°的旋转），只有轴角法或者指数映射表达可以实现。
 
-## Converting between Representations
+# Converting between Representations
 
-### Converting Euler Angles to Matrix
+## Converting Euler Angles to Matrix
 
 从欧拉角表达转到矩阵表达，存在不同情况下的不同矩阵。如一个场景中有普通物体和摄像机，用于表达普通物体旋转的矩阵与摄像机是不同的，普通物体是用`物体-直立坐标系的`矩阵表达，而摄像机为`直立到物体坐标系`的矩阵。
 
@@ -925,7 +897,7 @@ $$\begin{aligned}
 \end{array}\right]
 \end{aligned}$$
 
-### Converting a Matrix to Euler angles
+## Converting a Matrix to Euler angles
 
 1. 从矩阵转换到欧拉角，首先要确认矩阵表达的是什么形式的旋转，物体-直立坐标系，还是直立-物体坐标系。
 2. 矩阵转换到到欧拉角后返回的结果是标准坐标，即heading和bank的范围为$\left(-180^{\circ},+180^{\circ}\right]$，pitch的范围是$\left[-90^{\circ},+90^{\circ}\right]$
@@ -1016,7 +988,7 @@ $$
 
 书中给出从欧拉角转换为物体-直立坐标系矩阵的代码
 
-### Converting a Quaternion to a Matrix
+## Converting a Quaternion to a Matrix
 
 因为旋转四元数表达的是绕着任意轴$\hat{n}$旋转$\theta$，而这个同样可以通过矩阵表达，即第五章中得出的：
 
@@ -1107,7 +1079,7 @@ $$\left[\begin{array}{ccc}
 2 x z+2 w y & 2 y z-2 w x & 1-2 x^{2}-2 y^{2}
 \end{array}\right]$$
 
-### Converting a Matrix to a Quaternion
+## Converting a Matrix to a Quaternion
 
 矩阵转换为四元数的主要思路是通过组合矩阵中的元素来获得四元数四个元素的表达。而矩阵中的对角线元素，不包含两个不同四元数元素的乘积，所以通过矩阵的对角线元素来计算：
 
@@ -1173,7 +1145,7 @@ $$\begin{aligned}
 
 书中给出从矩阵转换到欧拉角的代码
 
-### Converting Euler Angles to a Quaternion
+## Converting Euler Angles to a Quaternion
 
 如同欧拉角转换为矩阵一样，欧拉角转换到四元数也一样要考虑两种情况，`物体-直立四元数`和`直立-物体四元数`。因为两者相互取共轭就能转换，所以这里主要讨论`物体-直立四元数`。
 
@@ -1231,7 +1203,7 @@ $$\begin{array}{l}
 \end{array}\right]
 \end{array}$$
 
-### Converting a Quaternion to Euler Angles
+## Converting a Quaternion to Euler Angles
 
 首先讨论从物体-直立四元数转换为欧拉角的方法。
 
@@ -1309,12 +1281,3 @@ $$b=\left\{\begin{array}{ll}
 
 书中给出了四元数到欧拉角的转换的代码
 
-{% note primary %}
-
-引用：
-
-1. *3D Math Primer for Graphics and Game Development* 2nd 2011 
-
-{% endnote %}
-
-***
