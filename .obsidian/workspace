@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333,
-    "collapsed": true
+    "width": 333
   },
   "right": {
     "id": "086a6696003cb579",
@@ -162,14 +161,14 @@
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
     "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md",
     "Boos/Learn OpenGL.md",
     "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
     "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Rotate about arbitary axis.md",
-    "TO-DO (DESKTOP-98TEV03's conflicted copy 2022-01-28).md",
-    "TO-DO.md"
+    "Boos/3D Math Primer For Graphics and Game Development/Rotate about arbitary axis.md"
   ]
 }
