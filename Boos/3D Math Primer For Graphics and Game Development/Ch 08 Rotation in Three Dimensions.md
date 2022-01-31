@@ -10,7 +10,7 @@ updated: 2022-01-31
 
 `方向（direction）`只需要两个参数表示，而`朝向（orientation）`需要三个参数表示。如下图中确认飞机的朝向需要两个参数，而朝向还需要图中的绿圈方向来决定其旋转角度。
 
-![绿色的光圈](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-01-12-32-22.png)
+![绿色的光圈](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-01-12-32-22.png)
 
 `朝向（orientation）`，`旋转（rotation）`和`角位移（angular displacement）`三者的关系为，`旋转`将物体从一个`朝向`转换为另一个`朝向`，这个转换的数值为`角位移`。
 
@@ -140,7 +140,7 @@ p_{z} & q_{z} & r_{z}
 
 理论上来说，这三个相互垂直的轴可以是任意的，但通常来说，都选择一个坐标系的三个基轴（cardinal axes）。在这本书中，称为`heading-pitch-bank`，绕着这三个轴的旋转如下图所示：
 
-![heading-pitch-bank旋转](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-02-08-34-50.png)
+![heading-pitch-bank旋转](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-02-08-34-50.png)
 
 第一张图显示的是原始状态，第二张图是绕着heading轴（直立坐标系下的y轴）旋转，第三张图是绕着pitch轴旋转（物体坐标系下的x轴），第四章图是绕着bank轴旋转（物体坐标系下的z轴）。
 
@@ -196,13 +196,13 @@ $$\begin{aligned}
 
 欧拉角的插值变换问题第一种可能是由别名造成的，如下所示：
 
-![别名插值错误](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-02-09-13-03.png)
+![别名插值错误](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-02-09-13-03.png)
 
 在其中两个角度实际上相差为$45^{\circ}$，但因为用了别名表示，路径多走了将近两圈。这种可能可以通过使用标准坐标表示解决。
 
 第二个问题如下：
 
-![非别名插值错误](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-02-09-19-43.png)
+![非别名插值错误](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-02-09-19-43.png)
 
 其中$-170^{\circ}和170^{\circ}$都是在范围$(-180^{\circ},+180^{\circ}]$内，因此满足标准规范。但实际上两者相差20°，却要插值340°。
 
@@ -613,11 +613,11 @@ $$\text { slerp }\left(\mathbf{q}_{0}, \mathbf{q}_{1}, t\right)=\left(\mathbf{q}
 
 如下图所示：
 
-![球体表面插值](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-03-12-08-20.png)
+![球体表面插值](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-03-12-08-20.png)
 
 而可以进一步，将$v_t$看作是$v_0$和$v_1$的线性组合。
 
-![线性组合求插值](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-03-12-16-01.png)
+![线性组合求插值](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-03-12-16-01.png)
 
 根据下图，可以求得$k_1$
 
@@ -628,11 +628,11 @@ k_{1} &=\frac{\sin t \omega}{\sin \omega}
 
 注意因为$v_1$的模为1，所以在分母中省略了。
 
-![求k1](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-03-12-32-58.png)
+![求k1](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-03-12-32-58.png)
 
 同理，根据下图，可以求出$k_0$
 
-![求k0](3DMathPrimerForGraphicsAGameDevelopment-Chapter8-Notes/2020-04-03-12-32-37.png)
+![求k0](assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/2020-04-03-12-32-37.png)
 
 因此可得：
 
