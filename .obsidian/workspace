@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
-            "mode": "preview",
+            "file": "Boos/3D Math Primer For Graphics and Game Development.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 1.png",
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 3 1.png",
@@ -168,7 +169,6 @@
     "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md",
     "Boos/Learn OpenGL.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md"
   ]
 }
