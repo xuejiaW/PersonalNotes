@@ -3,7 +3,7 @@ tags:
   - Computer-Graphics
   - Math
 created: 2022-01-31
-updated: 2022-01-31
+updated: 2022-02-01
 ---
 
 # What Exactly is "Orientation"
