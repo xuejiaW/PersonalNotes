@@ -1,7 +1,7 @@
 ---
 cssclass: [table-border]
 created: 2021-12-21
-updated: 2022-01-20
+updated: 2022-01-31
 tags:
     - OpenGL
 ---
@@ -13,12 +13,12 @@ tags:
 ![](assets/Ch%2030%20Parallax%20Mapping/Untitled.png)
 
 为了让一个无凹凸变化的平面能展现出满足凹凸变化的平面效果，一个最直观的方法就是去调整平面的 Mesh。 Displacement Mapping 技术就是该思路。在 Displacement Mapping 中，会通过如下的一张 Height Map 去调整表面顶点的高度，即根据纹理去调整原先的 Mesh，得到一个新的有凹凸变化的 Mesh。
-![|400](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/Untitled%201.png)
+![|400](assets/Ch%2030%20Parallax%20Mapping/Untitled%201.png)
 
 但 Displacement Mapping 存在的问题在于，它要求平面存在足够多的顶点数，这样根据 Height Map 做的调整才能足够的精细。想象一个平面只通过四个顶点去表示，这四个顶点无论如何变化，也无法变成一个凹凸有致的墙面。
 
 而 `视差映射（Parallax Mapping)` 则是另一种能让平面产生凹凸导致的遮挡效果，但又不要求平面用大量顶点表示的技术。 Parallax Mapping 同样需要一张 Height Map，但此时并非去用 Height Map 调整 Mesh 的高度，而是用它去调整后续纹理（如 Diffuse Map / Normal Map）采样中需要用到的 Texcoord（假设后续使用的纹理针对平面不同的高度有不同的表现）。如下所示，
-![](../3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/assets/Ch%2008%20Rotation%20in%20Three%20Dimensions/Untitled%202.png)
+![](assets/Ch%2030%20Parallax%20Mapping/Untitled%202.png)
 
 图中点 $A$ 为平面时会看到的点，即原先的采样点。用该点在 `Height Map` 中进行采样，并用读出的数据作为在视线方向上的偏移长度。图中 $\overline{\mathrm{P}}$ 向量的长度即为 $\mathrm{H(A)}$ 的值，注意图中的 $\overline{\mathrm{P}}$ 是一个三维的向量，图上的竖直部分为 法线方向，水平部分为 $uv$ 方向。 $\overline{\mathrm{P}}_{uv}$ 即为去后续纹理中采样的 Texcoord 的偏移量。可以看到最后采样的点（图中棕色点）与理想中的采样点（蓝色点）在高度上相差并不大，因此可以得到与理想情况较为相近的结果。
 
