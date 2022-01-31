@@ -20,7 +20,7 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
 参数化表达圆的示意图如下：
 
-![参数化圆](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-07-15-50-37.png)
+![参数化圆](assets/Ch%2009%20Geometric%20Systems/2020-04-07-15-50-37.png)
 
 参数化表达可以进一步细分为一元表达（univariate）， 即只有一个参数，和二元表达（bivariate），即有两个参数。一元表达描述的是一个曲线，二元表达描述的是一个曲面。
 
@@ -86,12 +86,12 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
    如下所示：
 
-   ![隐式表达](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-07-16-27-22.png)
+   ![隐式表达](assets/Ch%2009%20Geometric%20Systems/2020-04-07-16-27-22.png)
 
 3. 垂直线等分法：
    该方法定义两个点$\mathbf{q,r}$，射线用来描述距离这两个点距离相等的点的几何。如下图所示：
 
-   ![垂直线等分法](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-07-16-31-22.png)
+   ![垂直线等分法](assets/Ch%2009%20Geometric%20Systems/2020-04-07-16-31-22.png)
 
 ## Converting between Representations
 
@@ -268,12 +268,12 @@ AABB对于球边框的优势：
 1. 计算由一系列的点构成的AABB面只需要线性时间（比较出最小的点和最大的点即可），而计算出由一系列的点构成的球相对复杂。
 2. 通常来说，对于同一个物体AABB边框会更小，最坏的情况下，AABB也只比球边框大不到两倍（当物体本身是一个球时），而最坏情况下球边框可能会比AABB大很多。
    如下所示，蓝色为球边框，红色为AABB
-   ![立方体边框与球边框比较](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-09-51-39.png)
+   ![立方体边框与球边框比较](assets/Ch%2009%20Geometric%20Systems/2020-04-09-09-51-39.png)
 
 球边框对于AABB边框的优势：
 
 1. 物体的变换不会造成球边框的变化，如下图所示：
-   ![物体变换对边框的变化](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-09-55-40.png)
+   ![物体变换对边框的变化](assets/Ch%2009%20Geometric%20Systems/2020-04-09-09-55-40.png)
 
 
 ### Transforming AABBs
@@ -284,7 +284,7 @@ AABB对于球边框的优势：
 
 第二种方法中直接将AABB变换后的结果作为新的AABB是不行的，因为可能旋转会导致原先的$\mathbf{P}_{max}$变得比$\mathbf{P}_{min}$更小。所以直接对AABB边框进行同样的变换后，根据变换后的8个顶点，得出新AABB框，如下图所示：
 
-![AABB变换](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-10-01-55.png)
+![AABB变换](assets/Ch%2009%20Geometric%20Systems/2020-04-09-10-01-55.png)
 
 上图的右半部分是旋转后的物体和ABBB，图中蓝色的部分是直接对AABB进行了旋转，此时在世界坐标系下，它已经变成了OBB。
 内部的红色边框为第一种方法，是根据旋转后的图形再次求解AABB。该方法准确但效率较低。
@@ -374,13 +374,13 @@ y^{\prime} &=m_{12} x+m_{22} y \\
 
 平面分正反面，沿着法线方向看，看到的是背面，法线指向的方向是正面，如下图所示：
 
-![平面的正反面](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-10-52-21.png)
+![平面的正反面](assets/Ch%2009%20Geometric%20Systems/2020-04-09-10-52-21.png)
 
 ## Defining a Plane by Using Three Points
 
 假设有三个在平面上的点$\mathbf{p}_{1}, \mathbf{p}_{2}$和$\mathbf{p}_{3}$，且他们按顺时针方向排列，如下图所示：
 
-![平面上三个点](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-10-54-02.png)
+![平面上三个点](assets/Ch%2009%20Geometric%20Systems/2020-04-09-10-54-02.png)
 
 可以按照下式，求出法线：
 
@@ -448,7 +448,7 @@ $$d=\frac{1}{n} \sum_{i=1}^{n}\left(\mathbf{p}_{i} \cdot \mathbf{n}\right)=\frac
 
 要求平面外点$\mathbf{q}$距离平面的距离，可找出平面上离该点最近的点$\mathbf{p}$，有向距离$\mathbf{pq}$即为距离，当$\mathbf{q}$处于平面的正方向，则距离为正数，否则为负数，如下图所示：
 
-![求点距离](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-11-21-53.png)
+![求点距离](assets/Ch%2009%20Geometric%20Systems/2020-04-09-11-21-53.png)
 
 如果$\mathbf{n}$是单位向量法线，即$\hat{\mathbf{n}}$，那么$a$即是有向距离。
 
@@ -470,7 +470,7 @@ a &=\mathbf{q} \cdot \hat{\mathbf{n}}-d
 
 三角形的边和顶点的定义如下图所示：
 
-![三角形三边和顶点](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-11-33-11.png)
+![三角形三边和顶点](assets/Ch%2009%20Geometric%20Systems/2020-04-13-11-33-11.png)
 
 $$\begin{aligned}
 &\mathbf{e}_{1}=\mathbf{v}_{3}-\mathbf{v}_{2}, \quad \mathbf{e}_{2}=\mathbf{v}_{1}-\mathbf{v}_{3}, \quad \mathbf{e}_{3}=\mathbf{v}_{2}-\mathbf{v}_{1}\\
@@ -513,7 +513,7 @@ $$A=\frac{\left\|\mathbf{e}_{1} \times \mathbf{e}_{2}\right\|}{2}$$
 
 首先三角形的三条边都与X轴形成了一个梯形，如下图所示：
 
-![三角形边构成梯形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-11-46-08.png)
+![三角形边构成梯形](assets/Ch%2009%20Geometric%20Systems/2020-04-13-11-46-08.png)
 
 对该梯形的面积定义正负，如果边的顶点是由左到右，则梯形面积为正，否则面积为负，三边构成的梯形面积如下：
 
@@ -563,7 +563,7 @@ $$b_{1}+b_{2}+b_{3}=1$$
 
 重心系统实例如下：
 
-![重心系统](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-12-11-31.png)
+![重心系统](assets/Ch%2009%20Geometric%20Systems/2020-04-13-12-11-31.png)
 
 注意其中三个顶点的数值，即
 
@@ -573,7 +573,7 @@ $$(1,0,0) \equiv \mathbf{v}_{1}, \quad(0,1,0) \equiv \mathbf{v}_{2}, \quad(0,0,1
 
 下图是重心系统的镶嵌，可以看出重心系统中值的运算规律：
 
-![重心系统](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-12-19-04.png)
+![重心系统](assets/Ch%2009%20Geometric%20Systems/2020-04-13-12-19-04.png)
 
 如第一个数值表示顶点$\mathbf{V}_1$对面的边所平行的部分，即$\mathbf{V}_2$和$\mathbf{V}_3$构成的边。因此可以看到该边上的点，值都为$(0,x,x)$，而平行于该边且经过$\mathbf{v}_1$的边上面的点都为$(1,x,x)$，$\mathbf{v}_1$点为$(1,0,0)$。同理顶点$\mathbf{v}_2$对面，由$\mathbf{v}_1$和$\mathbf{v}_3$构成的边，表示第二个参数，即$(x,0,x)$。第三个参数的数值也同理可得。
 
@@ -591,7 +591,7 @@ $$\left(b_{1}, b_{2}, b_{3}\right) \equiv b_{1} \mathbf{v}_{1}+b_{2} \mathbf{v}_
 
 已知三个点和所求点的笛卡尔坐标系，如下图所示：
 
-![顶点与所求点](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-12-33-31.png)
+![顶点与所求点](assets/Ch%2009%20Geometric%20Systems/2020-04-13-12-33-31.png)
 
 对于二维空间中的三角形，根据三角形重心的定义，可得：
 
@@ -641,7 +641,7 @@ $$\begin{aligned}
 
 整个计算如下图所示：
 
-![叉乘求重心空间](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-41-55.png)
+![叉乘求重心空间](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-41-55.png)
 
 其中：
 
@@ -671,7 +671,7 @@ $$\begin{aligned}
 2. 内心（incenter）
    内心距离三角形三条边的距离相等，也因此是三角形内切圆的圆心，如下图所示：
 
-   ![三角形内心](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-48-35.png)
+   ![三角形内心](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-48-35.png)
 
    计算方法如下：
 
@@ -689,7 +689,7 @@ $$\begin{aligned}
 3. 外心（circumcenter）
    外心是距离三角形三个顶点距离相同的点，如下图所示：
 
-   ![外心](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-53-04.png)
+   ![外心](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-53-04.png)
 
 
    计算过程如下：
@@ -728,15 +728,15 @@ $$\begin{aligned}
 
 简单多边形不存在洞，复杂多边形存在洞，如下所示：
 
-![简单复杂多边形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-57-07.png)
+![简单复杂多边形](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-57-07.png)
 
 可以通过加上一对缝合边将简单多边形转换为复杂多边形，如下所示：
 
-![简单多边形转换为复杂多边形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-57-57.png)
+![简单多边形转换为复杂多边形](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-57-57.png)
 
 还有一种自相交多边形（Self-intersecting polygon），如下所示：
 
-![自相交多边形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-58-58.png)
+![自相交多边形](assets/Ch%2009%20Geometric%20Systems/2020-04-13-17-58-58.png)
 
 ## Convex versus Concava Polygons
 
@@ -744,20 +744,20 @@ $$\begin{aligned}
 
 1. 凹多边形至少有一个凹点（concavity），如下所示：
    
-   ![凹点](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-18-04-45.png)
+   ![凹点](assets/Ch%2009%20Geometric%20Systems/2020-04-13-18-04-45.png)
 
 2. 凹多边形至少有一对顶点的连线是在多边形外的。
 3. 凹多边形沿着所有顶点走，顶点的旋转顺序会发生变化（顺逆时针）。
    这个可以通过对每两边进行叉乘来判断，如果叉乘的结果与法线方向不一致，说明顺序为逆时针，否则为顺时针。如果按顺时针顺序来取两边进行叉乘，突然出现了结果与法线相反的情况，则该两边中间为凹点。
 4. 无论是凸多边形还是凹多边形，其内角和都是$(n-2)360^{\circ}$。但是通过点积求得的是较小角的角度。如果对凸多边形的每两边都点积，则结果和为$(n-2)360^{\circ}$，而凹多边形不是。
    如下图所示：
-   ![内角判断凹凸](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-21-59-19.png)
+   ![内角判断凹凸](assets/Ch%2009%20Geometric%20Systems/2020-04-13-21-59-19.png)
 
 ## Triangulation and Fanning
 
 每一个$n$条边的凸多边形都能分为$n-2$个三角形。如下图所示：
 
-![分割三角形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-22-05-57.png)
+![分割三角形](assets/Ch%2009%20Geometric%20Systems/2020-04-13-22-05-57.png)
 
 但这样切分的问题在于，可能会切出一条非常细的三角形。
 
