@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
-            "mode": "source",
+            "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md"
+                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
+                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
+                "file": "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +160,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
+    "Boos/3D Math Primer For Graphics and Game Development/assets/Ch 08 Rotation in Three Dimensions/Untitled 1.png",
+    "Boos/3D Math Primer For Graphics and Game Development/assets/Ch 08 Rotation in Three Dimensions/Untitled 3.png",
+    "Boos/3D Math Primer For Graphics and Game Development/assets/Ch 08 Rotation in Three Dimensions/Untitled 2.png",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md",
     "Boos/Learn OpenGL.md",
     "Boos/3D Math Primer For Graphics and Game Development.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 05 Matrices and Linear Transformations.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Scale about arbitary axis.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Rotate about arbitary axis.md"
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 06 More on Matrices.md"
   ]
 }
