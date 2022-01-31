@@ -1,42 +1,12 @@
 ---
-title: 《3D数学基础：图形和游戏开发》第九章笔记
-mathjax: true
-date: 2020-04-13 22:08:54
-categories:
-  - 读书笔记
-  - 图形学
 tags:
-  - 读书笔记
-  - 3D数学
+  - Computer-Graphics
+  - Math
 created: 2022-01-31
 updated: 2022-01-31
 ---
 
-{% cq %}
-
-《3D数学基础：图形和游戏开发》第九章笔记
-
-9.1节 关于图形的表示法分类
-
-9.2节 介绍了射线
-
-9.3节 介绍了球和圆
-
-9.4节 介绍了边界盒
-
-9.5节 介绍了平面
-
-9.6节 介绍了三角形
-
-9.7节 介绍了多边形
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 9 Geometric Primitives
-
-## Representation Techniques
+# Representation Techniques
 
 这一节介绍不同的用来表达基本图形的方法：
 
@@ -56,7 +26,7 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
 第三种表达方式是直接表达，但这种表达没有统一的形式。如使用两个点来描述一条直线，用半径和圆心来描述一个圆。
 
-## Lines and Rays
+# Lines and Rays
 
 从数学角度来说，关于线条有三个定义：
 
@@ -72,7 +42,7 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
 在电子游戏中，通常只使用射线，直线和线段的概念很少出现。
 
-### Rays
+## Rays
 
 1. 如果用直接方法定义射线，直接给定终点和起点即可，$\mathbf{P}_{org}$和$\mathbf{P}_{end}$
 2. 用参数化表达射线，表达式如下
@@ -84,7 +54,7 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
    可以看出这个表达存在四个自由度，分别是$x_0$和$y_0$表示起点和$\Delta x$和$\Delta y$表示一个分量上的有向长度。
 
-### Special 2D Representation of Lines
+## Special 2D Representation of Lines
 
 这一节介绍一些二维射线的特殊表达
 
@@ -123,7 +93,7 @@ $$x(t)=\cos 2 \pi t, \quad y(t)=\sin 2 \pi t$$
 
    ![垂直线等分法](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-07-16-31-22.png)
 
-### Converting between Representations
+## Converting between Representations
 
 直接表达法：
 
@@ -221,7 +191,7 @@ $$与点\mathbf{q}和点\mathbf{r}距离相同的点的合集$$
    &=r_{x} q_{y}-q_{x} r_{y}
    \end{aligned}$$
 
-## Sphere and Circles
+# Sphere and Circles
 
 球常用来作为物体的边框，一是用球作为边框比较简单，二是因为当用球来作为边框时，物体的旋转并不会造成任何的影响，因此物体旋转后的再次计算边框。
 
@@ -249,7 +219,7 @@ $$\begin{aligned}
 5. 球的体积
    $$V=\frac{4}{3} \pi r^{3}$$
 
-## Bounding Boxes
+# Bounding Boxes
 
 `AABB（Axially aligned bounding box）`通常用来表示立方体形状的边框，而且立方体的边必须与当前坐标系下坐标轴相平行。
 
@@ -257,7 +227,7 @@ $$\begin{aligned}
 
 OBB和AABB的区别并不在于边框本身，而是在于坐标系。如果一个边框用于在世界坐标中旋转了的物体，那么这个边框从物体坐标系角度看是AABB，但是从世界坐标系角度看是OBB
 
-### Representing AABBs
+## Representing AABBs
 
 一种表达方式是限定三个坐标系的范围，即
 
@@ -285,13 +255,13 @@ $$\mathbf{r}=\mathbf{p}_{\max }-\mathbf{c}=\mathbf{s} / 2$$
 
 关于边框的值$P_{min}, P_{\max }, \mathbf{c}, \mathbf{s}, \text {和} \mathbf{r}$，除了$\mathbf{s}和\mathbf{r}$这两个值的搭配，通过其他任意搭配都可以求出边框的其他值。
 
-### Computing AABBs
+## Computing AABBs
 
 //TODO
 
 // 书中给出了关于AABB的类
 
-### AABBs versus Bounding Spheres
+## AABBs versus Bounding Spheres
 
 AABB对于球边框的优势：
 
@@ -306,7 +276,7 @@ AABB对于球边框的优势：
    ![物体变换对边框的变化](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-09-55-40.png)
 
 
-#### Transforming AABBs
+### Transforming AABBs
 
 如之前所述，AABB边框在物体变换后也会发生变化，这一节介绍如何计算变换后的AABB边框。
 
@@ -367,11 +337,11 @@ y^{\prime} &=m_{12} x+m_{22} y \\
 //TODO
 //书中有对应的求新AABB算法
 
-## Planes
+# Planes
 
 3D中的平面对应2D中的射线，其定义也与在2D中的射线类似：与给定的两个点距离相同的所有的点的集合。
 
-### The Plane Equation：An Implicit Definnition of a plane
+## The Plane Equation：An Implicit Definnition of a plane
 
 隐式表达法：
 1. 用标量
@@ -406,7 +376,7 @@ y^{\prime} &=m_{12} x+m_{22} y \\
 
 ![平面的正反面](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-09-10-52-21.png)
 
-### Defining a Plane by Using Three Points
+## Defining a Plane by Using Three Points
 
 假设有三个在平面上的点$\mathbf{p}_{1}, \mathbf{p}_{2}$和$\mathbf{p}_{3}$，且他们按顺时针方向排列，如下图所示：
 
@@ -423,7 +393,7 @@ $$\mathbf{e}_{3}=\mathbf{p}_{2}-\mathbf{p}_{1}, \quad \mathbf{e}_{1}=\mathbf{p}_
 
 $$\mathbf{P}\cdot \hat{\mathbf{n}}=\hat{\mathbf{n}}\cdot \mathbf{p}_1$$
 
-### "Best Fit" Plane for More than Three Points
+## "Best Fit" Plane for More than Three Points
 
 当给定了多个点，要根据多个点求平面时，不能简单的从多个点中任意选取出三个点，因为：
 
@@ -474,7 +444,7 @@ $$\begin{aligned}
 
 $$d=\frac{1}{n} \sum_{i=1}^{n}\left(\mathbf{p}_{i} \cdot \mathbf{n}\right)=\frac{1}{n}\left(\sum_{i=1}^{n} \mathbf{p}_{i}\right) \cdot \mathbf{n}$$
 
-### Distance from Point to Plane
+## Distance from Point to Plane
 
 要求平面外点$\mathbf{q}$距离平面的距离，可找出平面上离该点最近的点$\mathbf{p}$，有向距离$\mathbf{pq}$即为距离，当$\mathbf{q}$处于平面的正方向，则距离为正数，否则为负数，如下图所示：
 
@@ -492,9 +462,9 @@ d+a &=\mathbf{q} \cdot \hat{\mathbf{n}} \\
 a &=\mathbf{q} \cdot \hat{\mathbf{n}}-d
 \end{aligned}$$
 
-## Triangles
+# Triangles
 
-### Notation
+## Notation
 
 三角形是通过三个顶点定义的。通常在左手坐标系下，三个顶点的顺序为顺时针。
 
@@ -522,7 +492,7 @@ l_{2}^{2}=l_{1}^{2}+l_{3}^{2}-2 l_{1} l_{3} \cos \theta_{2} \\
 l_{3}^{2}=l_{1}^{2}+l_{2}^{2}-2 l_{1} l_{2} \cos \theta_{3}
 \end{array}$$
 
-### Area of a Triangle
+## Area of a Triangle
 
 最普通的求三角形面积为通过底和高，即
 
@@ -581,7 +551,7 @@ A &=\frac{y_{1}\left(x_{2}-x_{3}\right)+y_{2}\left(x_{3}-x_{1}\right)+y_{3}\left
 
 $$A=\frac{\left\|\mathbf{e}_{1} \times \mathbf{e}_{2}\right\|}{2}$$
 
-### Barycentric Space
+## Barycentric Space
 
 `重心系统（Barycentric Space）`是用三角形的三个顶点来描述三角形的位置，表达式为：
 
@@ -611,7 +581,7 @@ $$(1,0,0) \equiv \mathbf{v}_{1}, \quad(0,1,0) \equiv \mathbf{v}_{2}, \quad(0,0,1
 
 在图形学中，重心系统常应用在在计算顶点插值时，如计算片段的颜色。还被应用在计算相交问题时，一根射线可以根据与各个三角形片元的重心值判断是与哪个片元相交。
 
-### Calculating Barycentric Coordinates
+## Calculating Barycentric Coordinates
 
 如果通过重心系统计算笛卡尔坐标系，可以通过上述公式：
 
@@ -688,7 +658,7 @@ $$\begin{aligned}
 &b_{3}=A\left(T_{3}\right) / A(T)=\frac{\left(\mathbf{e}_{3} \times \mathbf{d}_{2}\right) \cdot \hat{\mathbf{n}}}{\left(\mathbf{e}_{1} \times \mathbf{e}_{2}\right) \cdot \hat{\mathbf{n}}}
 \end{aligned}$$
 
-### Special Points
+## Special Points
 
 1. 质心（center of gravity）
    质心为三角形三个顶点位置的平均值，即：
@@ -750,11 +720,11 @@ $$\begin{aligned}
 
    $$r_{\mathrm{Circ}}=\frac{\sqrt{\left(d_{1}+d_{2}\right)\left(d_{2}+d_{3}\right)\left(d_{3}+d_{1}\right) / c}}{2}$$
 
-## Polygons
+# Polygons
 
 通常来说，多边形是一个由顶点和边组成的平面图形。
 
-### Simple versus Complex Polygons
+## Simple versus Complex Polygons
 
 简单多边形不存在洞，复杂多边形存在洞，如下所示：
 
@@ -768,7 +738,7 @@ $$\begin{aligned}
 
 ![自相交多边形](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-17-58-58.png)
 
-### Convex versus Concava Polygons
+## Convex versus Concava Polygons
 
 关于凹多边形(Concave)和凸多边形(Convex)有多种区分方法：
 
@@ -783,7 +753,7 @@ $$\begin{aligned}
    如下图所示：
    ![内角判断凹凸](3DMathPrimerForGraphicsAGameDevelopment-Chapter9-Notes/2020-04-13-21-59-19.png)
 
-### Triangulation and Fanning
+## Triangulation and Fanning
 
 每一个$n$条边的凸多边形都能分为$n-2$个三角形。如下图所示：
 

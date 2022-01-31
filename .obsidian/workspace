@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
-            "mode": "preview",
+            "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 333,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md"
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
+                "file": "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,8 +161,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md",
     "Boos/Learn OpenGL.md",
