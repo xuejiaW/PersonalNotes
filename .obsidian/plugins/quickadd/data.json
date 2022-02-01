@@ -4,7 +4,7 @@
       "id": "72f28ca4-14a2-43ad-8b97-41c9ac14234f",
       "name": "Add Book",
       "type": "Template",
-      "command": false,
+      "command": true,
       "templatePath": "Templates/Book-Template.md",
       "fileNameFormat": {
         "enabled": false,
@@ -26,6 +26,32 @@
         "focus": true
       },
       "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "154108c5-7469-4a9d-932c-f29d45ac83e5",
+      "name": "Add Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
       "openFileInMode": "default"
     }
   ],
