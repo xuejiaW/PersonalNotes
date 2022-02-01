@@ -33,13 +33,13 @@
       "name": "Add Note",
       "type": "Template",
       "command": true,
-      "templatePath": "",
+      "templatePath": "Templates/Note-Template.md",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
       },
       "folder": {
-        "enabled": false,
+        "enabled": true,
         "folders": [],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
