@@ -1,30 +1,13 @@
 ---
-title: 《C++ Primer》 第八章笔记
-mathjax: false
-date: 2020-05-14 07:07:55
-categories:
-  - 读书笔记
-  - 计算机语言
 tags:
-  - 读书笔记
   - C++
+created: 2022-02-01
+updated: 2022-02-01
 ---
-
-{% cq %}
-
-《C++ Primer》 第八章笔记。
-
-<img src="CPPPrimer-Chapter8-Notes/Ch_8.png" alt="第八章内容" style="zoom:50%;" />
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 8 The IO Library
 
 IO库定义了一系列读取和写入内建类型的操作。
 
-## The IO Classes
+# The IO Classes
 
 为了处理不同的IO操作，IO库定义了一系列的IO类型，他们集中在三个头文件中：`iostream`中定义列读取和写入流（Steam）的基本类型，`fstream`定义了读取和写入文件的类型，`sstream`定义列读取和写入字符串的类型。如下所示：
 
@@ -42,11 +25,11 @@ IO库定义了一系列读取和写入内建类型的操作。
 
 从表中可以看出，每个类型都有一个`w`版本，这个版本是针对宽字符处理的。如`cin,cout,cerr`都有对应的`wcin,wcout,wcerr`。
 
-#### Relationships among the IO Types
+### Relationships among the IO Types
 
 IO库用继承来实现对于不同类型的操作，如`ifstream`和`istringstream`都是继承自`istream`，因此所有对于`istream`的操作都可以使用在`ifstream`和`istringstream`上。
 
-### No Copy or Assign for IO Objects
+## No Copy or Assign for IO Objects
 
 IO类型不支持赋值和拷贝操作，如
 
@@ -57,7 +40,7 @@ ofstream out1, out2;
 
 因此无法将IO类型作为函数的形参和返回值，通常是使用IO类型的引用来表示。读写IO类型都会改变其状态，所以通常也不会将传递的IO类型变为const reference。
 
-### Condition States
+## Condition States
 
 一旦一个问题发生，之后对于IO类型的操作就会失败，只有当IO类型处于无错误状态下才能进行流的读取和写入。因此，通常在代码中需要首先判断IO类型的状态，最简单的方法就是直接将io作为判断条件，如
 
@@ -68,7 +51,7 @@ while (cin >> word)
 }
 ```
 
-#### Interrogating the State of a Stream
+### Interrogating the State of a Stream
 
 将IO作为判断条件，只能得到IO是否是正确的，但无法确定其究竟是因为什么原因导致失败。
 
@@ -123,7 +106,7 @@ Read Content with condition is 456
 ```
 
 
-#### Managing the Condition State
+### Managing the Condition State
 
 如之前所述，可以对`iostate`类型进行位操作，如需要将`failbit`和`badbit`还原，但保留`eofbit`，可以使用以下语句：
 
@@ -131,7 +114,7 @@ Read Content with condition is 456
 cin.clear(cin.rdstate() & ~cin.failbit & ~cin.badbit);
 ```
 
-### Managing the Output Buffer
+## Managing the Output Buffer
 
 对于操作系统而言，将数据写入设备，可能是一个耗时的操作，所以通常操作系统会将数据先缓存起来，之后将多个数据合并再一起写入设备。
 
@@ -145,7 +128,7 @@ cin.clear(cin.rdstate() & ~cin.failbit & ~cin.badbit);
 4. 可以使用操作符`unitbuf`设置IO对象，让输出IO对象的每一次操作都刷新缓存。默认情况下，`cerr`是已经被设置了`unitbuf`的。
 5. 如果输出IO对象被绑定至另一个IO对象，那么另一个IO对象无论进行了读还是写操作，都会刷新输出IO对象。默认情况下，`cin`和`cerr`都绑定了`cout`，所以无论是读和写这两个对象，都会刷新`cout`的缓存。
 
-#### Flushing the Output Buffer
+### Flushing the Output Buffer
 
 操作符`endl`会刷新缓存，并在增加一个换行符。
 操作符`ends`会刷新缓存，并在增加一个空白字符。
@@ -157,7 +140,7 @@ cout << "hi!" << flush;
 cout << "hi!" << ends;
 ```
 
-#### The unitbuf Manipulator
+### The unitbuf Manipulator
 
 `unitbuf`可以理解为一个开关，当设上时，每一次的输出操作都会立刻的刷新缓存。
 
@@ -171,7 +154,7 @@ cout << unitbuf;
 cout << nounitbuf;
 ```
 
-#### Tying Input and Output Streams Together
+### Tying Input and Output Streams Together
 
 当一个输入IO对象绑定输出IO对象时，任何对于输入IO对象的读取，都会刷新输出IO对象的缓存。
 
@@ -193,7 +176,7 @@ cin.tie(old_tie);
 
 注意，每个IO对象只能绑定给一个输出对象，所以上示代码中，`cin`最终绑定给了`old_tie`。但是一个输出对象可以同时被多个IO对象绑定，如`cout`同时被`cin`和`cerr`绑定。
 
-## File Input and Output
+# File Input and Output
 
 对于文件的流操作包含有三个类型：
 1. `ifstream`：读取给定文件
@@ -212,7 +195,7 @@ cin.tie(old_tie);
 | fstrm.close()           | 关闭当前绑定的文件                                                                          |
 | fstrm.is_open()         | 检查绑定的文件是否被正确打开                                                                |
 
-### Using File Stream Objects
+## Using File Stream Objects
 
 无论是要写入还是读取一个文件，都需要定义一个文件流，然后使用该文件流打开文件。
 
@@ -220,13 +203,13 @@ cin.tie(old_tie);
 
 file为C风格的字符串，在C++11下，file还可以是string。
 
-#### Using an fstream in Place of an iostream&
+### Using an fstream in Place of an iostream&
 
 fstream作为iostream的派生类，如果一个函数的形参为`iostream&`，则也可以传递`fstream`。
 
 注意，因为IO操作不支持拷贝和赋值，所以函数的形参必然为引用。
 
-#### The open and close Members
+### The open and close Members
 
 `open`操作并不一定成功，当失败时其中的`failbit`位会被置上，所以通常来说，最好使用代码检查文件流的状态，如
 
@@ -254,11 +237,11 @@ out1.close();
 in.open("./Test.txt");
 ```
 
-#### Automatic Construction and Destruction
+### Automatic Construction and Destruction
 
 当一个文件流对象离开了作用域时，它会被销毁，在销毁时会自动的给关闭当前绑定的文件。
 
-### File Modes
+## File Modes
 
 文件流的打开模式有以下几种：
 
@@ -281,7 +264,7 @@ in.open("./Test.txt");
 4. `app`只能在`trunc`没有被置上时才能置上
 5. `ate`和`binary`可以在任何文件流类型置上，且可以与其他的类型任意搭配。
 
-#### Opening a File in out Mode Discards Existing Data
+### Opening a File in out Mode Discards Existing Data
 
 `ofstream`模式默认是以`out`模式打开，且置上`trunc`位，所以如下的几种定义方式没有区别：
 
@@ -301,7 +284,7 @@ ofstream app2("file2", ofstream::out | ofstream::app);
 
 注意`in`模式只能赋给`ifstream`和`fstream`，所以上示代码中是通过置上`app`位。
 
-#### File Mode is Determined Each Time open Is Called
+### File Mode is Determined Each Time open Is Called
 
 文件流的mode可以看作是与文件结合的，文件流的mode会在每次打开文件时重新指定。如果没有在重新打开文件时，没有显示的设置mode，则该文件会重新以默认的mode打开（不会保留打开前一个文件时指定的mode）。
 
@@ -342,7 +325,7 @@ Read Content with good is 666
 
 可以看到`out1`，在创建时设置上了`app`位，所以没有擦除文件已有内容。但当其重新打开文件时，`app`位被清空，仍然是`trunc`被置上，文件已有内容被删除。
 
-## string Streams
+# string Streams
 
 String流是把String看作一个IO流进行操作，定义在`sstream`头文件中，其中包括`istringstream`读取string，`ostringstream`写入string，`stringstream`可同时读取和写string。string流有以下特有的操作：
 
@@ -353,7 +336,7 @@ String流是把String看作一个IO流进行操作，定义在`sstream`头文件
 | strm.str()        | 返回strm绑定的string的拷贝                                         |
 | strm.str(s)       | 将s的拷贝绑定至strm，返回空                                        |
 
-### Using an istringstream
+## Using an istringstream
 
 因为sstringstream继承自iostream可以使用操作符，所以istringstream可以使用>>操作符，且如同cin中的>>一样，一次读取是以空白字符为结束的。如以下代码就是通过stringstream来从输入中读取数据：
 
@@ -374,7 +357,7 @@ while (getline(cin, line))
 }
 ```
 
-### Using ostringstreams
+## Using ostringstreams
 
 同样的，ostringstream可以使用<<操作符，对ostringstream使用<<操作符类似于对string使用+=。如：
 

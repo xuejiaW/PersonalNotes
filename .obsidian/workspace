@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/C++ Primer/Ch 07 Classes.md",
+            "file": "Boos/C++ Primer/Ch 08 The IO Library.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/C++ Primer/Ch 07 Classes.md"
+                "file": "Boos/C++ Primer/Ch 08 The IO Library.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/C++ Primer/Ch 07 Classes.md",
+                "file": "Boos/C++ Primer/Ch 08 The IO Library.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/C++ Primer/Ch 07 Classes.md",
+                "file": "Boos/C++ Primer/Ch 08 The IO Library.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,6 +161,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/C++ Primer/Ch 08 The IO Library.md",
     "Boos/C++ Primer/Ch 07 Classes.md",
     "Boos/C++ Primer/Ch 06 Functions.md",
     "Boos/C++ Primer/Ch 05 Statements.md",
@@ -169,7 +170,6 @@
     "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
     "Boos/C++ Primer/Ch 01 Getting Started.md",
     "Boos/C++ Primer/Ch 00 Perface.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md",
-    "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md"
+    "Boos/3D Math Primer For Graphics and Game Development.md"
   ]
 }
