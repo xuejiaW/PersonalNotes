@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/3D Math Primer For Graphics and Game Development.md",
+            "file": "Books/C++ Primer.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Render Hell.md",
+            "file": "Books/C++ Primer.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Render Hell.md",
+                "file": "Books/C++ Primer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Render Hell.md"
+                "file": "Books/C++ Primer.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Render Hell.md",
+                "file": "Books/C++ Primer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,17 +134,17 @@
     "width": 449.5,
     "collapsed": true
   },
-  "active": "6266e0aae2bf3f69",
+  "active": "2bab721a45acf019",
   "lastOpenFiles": [
-    "Books/Render Hell.md",
-    "Bookss.md",
+    "Books/C++ Primer.md",
     "Books/3D Math Primer For Graphics and Game Development.md",
+    "Books.md",
+    "Books/Render Hell.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "TO-DO.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201201843213.png",
     "Notes/Unity.md",
-    "Notes/VSCode/Unity.md",
-    "Books/Learn OpenGL/Ch 31 HDR.md"
+    "Notes/VSCode/Unity.md"
   ]
 }

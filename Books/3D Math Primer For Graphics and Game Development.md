@@ -5,7 +5,7 @@ Cover: https://images-na.ssl-images-amazon.com/images/I/51Dake5LWcL._SX404_BO1,2
 Author:
     - Fletcher Dunn
     - Ian Parberry
-ISBN-13: 978-1568817231
+ASIN: 978-1568817231
 tags:
     - Computer-Graphics
     - Math
