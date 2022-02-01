@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/C++ Primer.md",
+            "file": "Book.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/C++ Primer.md"
+                "file": "Book.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/C++ Primer.md",
+                "file": "Book.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/C++ Primer.md",
+                "file": "Book.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -146,7 +146,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.059326171874999965,
+                  "scale": 0.36104536502023776,
                   "close": true
                 }
               }
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Book.md",
     "Boos/C++ Primer.md",
     "Boos/C++ Primer/Untitled.md",
     "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
@@ -168,7 +169,6 @@
     "Boos/C++ Primer/assets/Ch 04 Expressions/2020-02-17-23-17-07.png",
     "Boos/C++ Primer/assets/Ch 04 Expressions/2020-02-17-23-16-54.png",
     "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-04-15-22-06-48.png",
-    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-18-04-25.png",
-    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-17-59-23.png"
+    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-18-04-25.png"
   ]
 }
