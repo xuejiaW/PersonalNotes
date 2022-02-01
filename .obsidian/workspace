@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md",
-            "mode": "source",
+            "file": "Books/Render Hell.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md"
+                "file": "Books/Render Hell.md"
               }
             }
           },
@@ -86,18 +86,28 @@
             }
           },
           {
-            "id": "2b63c7a5e340b26b",
+            "id": "238dfcc9ab96411b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e3599f6a7cdb0a51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -110,15 +120,15 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books/Render Hell.md",
+    "Books/Learn OpenGL.md",
+    "Books/3D Math Primer For Graphics and Game Development.md",
+    "Books/C++ Primer.md",
+    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md",
     "Templates/Note-Template.md",
     "Introduction to Algorithms.md",
     "Templates/Book-Template.md",
-    "Books/Intruduction to Algorithms.md",
-    "Books.md",
-    "Books/Render Hell.md",
-    "Books/Learn Vim (The Smart Way).md",
-    "Books/Learn OpenGL.md",
-    "Books/C++ Primer.md"
+    "Books/Intruduction to Algorithms.md"
   ]
 }

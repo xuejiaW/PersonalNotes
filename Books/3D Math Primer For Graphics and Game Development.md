@@ -28,5 +28,3 @@ tags:
 [Ch 08 Rotation in Three Dimensions](3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2008%20Rotation%20in%20Three%20Dimensions.md)
 
 [Ch 09 Geometric Primitives](3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2009%20Geometric%20Primitives.md)
-
-![abc](https://i.postimg.cc/sxQtpBWG/Dataview-Book-Library.png)
