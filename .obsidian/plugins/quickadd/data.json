@@ -5,13 +5,13 @@
       "name": "Add Book",
       "type": "Template",
       "command": false,
-      "templatePath": "Templates/",
+      "templatePath": "Templates/Book-Template.md",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
       },
       "folder": {
-        "enabled": false,
+        "enabled": true,
         "folders": [],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
@@ -23,7 +23,7 @@
         "direction": "vertical",
         "focus": true
       },
-      "openFile": false,
+      "openFile": true,
       "openFileInMode": "default"
     }
   ],
