@@ -1,40 +1,17 @@
 ---
 created: 2022-02-01
 updated: 2022-02-01
----
----
-title: 《C++ Primer》 第六章笔记
-mathjax: true
-date: 2020-02-22 18:10:29
-categories:
-  - 读书笔记
-  - 计算机语言
 tags:
-  - 读书笔记
-  - C++
+    - C++
 ---
 
-{% cq %}
+# Function Basics
 
-《C++ Primer》 第六章笔记。
-
-关于函数的定义，函数参数的传递方式，函数重载，函数指针。
-
-![第六章内容](assets/CPPPrimer-Chapter6-Notes/Ch_6.png)
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 6 Functions
-
-## Function Basics
-
-#### Parameters and Arguments
+### Parameters and Arguments
 
 函数的形参（Parameters）和实参（Arguments）是一一对应关系，但是编译器不能保证形参被初始化的顺序。
 
-#### Function Parameter List
+### Function Parameter List
 
 为了与C语言兼容，C++同样允许用void来作为形参的参数，如下
 
@@ -55,11 +32,11 @@ void pareNoName(int, float fval)
 pareNoName(3, 0.1f);
 ```
 
-#### Function Return Type
+### Function Return Type
 
 函数返回的类型不能是数组类型，也不能是函数类型，但可以返回函数和数组的指针，以及函数的调用（相当于返回调用的函数的结果）。
 
-### Local Objects
+## Local Objects
 
 对于一个变量而言，需要关注它的作用域以及生命周期。
 
@@ -84,11 +61,11 @@ void TestLocalObject()
 
 全局变量的生命周期是从定义到程序终止，局部变量的生命周期是当退出了作用域。
 
-#### Automatic Objects
+### Automatic Objects
 
 函数的形参就是自动物体（Automatic Objects），它们在函数开始时被分配创建， 在函数终结时被释放。
 
-#### Local static Objects
+### Local static Objects
 
 局部静态物体是在第一次被调用时创建，在程序终止时被摧毁，作用域在函数内部。如：
 
@@ -123,7 +100,7 @@ void TestStaticObjects()
 
 静态的局部变量执行的是值初始化，因此即使是内建类型，它也会默认值，不会像普通的内建局部变量一样变成未定义的。
 
-### Function Declarations
+## Function Declarations
 
 如同变量一样，函数也只能被定义一次，但可以多次声明。
 
@@ -137,15 +114,15 @@ void pareName(int, float);
 
 一个函数的类型由函数名字，返回类型以及形参类型决定，函数的类型也成为函数原型(function prototype)。
 
-#### Function Declarations Go in Header Files
+### Function Declarations Go in Header Files
 
 函数的声明应该在头文件中，函数的定义在源文件中，这样如果后续要修改函数的声明，只需要改动一处即可。
 
 在定义函数的源文件中，需要引入声明的头文件。
 
-### Separate Compilation
+## Separate Compilation
 
-#### Compiling and Linking Multiple Source Files
+### Compiling and Linking Multiple Source Files
 
 如我们将函数`GetNum`声明在头文件`GetNum.h`中，将函数的定义写在源文件`GetNum.cpp`中，将调用`GetNum`的语句写在源文件`Chapter6_Functions.cpp`中，则所有的文件内容如下：
 
@@ -187,7 +164,7 @@ g++ -c GetNum.cpp
 g++ Chapter6_Functions.cpp GetNum.o
 ```
 
-## Argument Passing
+# Argument Passing
 
 当调用函数时，实际上是用实参初始化了形参，初始化的过程与一般的参数初始化一样。而如果形参的类型是引用的话，那么会直接绑定至实参，否则的话初始化时会拷贝实参的值。
 
@@ -195,11 +172,11 @@ g++ Chapter6_Functions.cpp GetNum.o
 
 如果形参的类型不是引用，那么实参会进行拷贝，称实参是值传递（Passed by value或called by value）。
 
-### Passing Arguments by Value
+## Passing Arguments by Value
 
 当形参是值传递时，修改函数中的局部变量并不会影响实参。
 
-#### Pointer Parameters
+### Pointer Parameters
 
 指针与其他非引用的变量一样，形参会通过拷贝实参的值进行初始化。但是指针的值即是指向的对象，因此拷贝生成的形参与实参指向的是同一个变量，也因此通过形参修改对象也同样会影响实参指向的对象。
 
@@ -222,7 +199,7 @@ void Exercise6_10()
 }
 ```
 
-### Passing Argument by Reference
+## Passing Argument by Reference
 
 使用引用传递就可以在函数内部修改实参的值，如
 
@@ -243,17 +220,17 @@ void Swap(int &val1, int &val2)
 }
 ```
 
-#### Using Reference to Avoid Copies
+### Using Reference to Avoid Copies
 
 函数可以通过将形参设置为引用类型来避免拷贝的过程，进而可以提升性能。
 
 且尽量使用const reference，本章的后小节会进行说明。
 
-#### Using Reference Parameters to Return Additional Information
+### Using Reference Parameters to Return Additional Information
 
 一个函数只可以返回一个值，在需要返回多个参数的时候，也可以通过引用，将要返回的参数作为形参的一部分传递进函数，并在函数内部修改成结果的值。
 
-### const Parameters and Arguments
+## const Parameters and Arguments
 
 如普通的参数初始化一样，当使用实参来初始化形参时，top-level的const会被无视，如：
 
@@ -280,7 +257,7 @@ void func(const int i)
 
 函数func的形参类型为const int，但是可以用int的来进行初始化，因为这里是top-level的const。也因此函数`func(int)`和函数`func(const int)`是无法同时定义的，不然当使用int调用参数时，两个函数都可匹配。
 
-#### Use Reference to const When Possible
+### Use Reference to const When Possible
 
 当可能的时候尽量使用const referencce，因为
 
@@ -301,7 +278,7 @@ void funs(string &s) {}
 void funss(const string &s) {}
 ```
 
-### Array Parameters
+## Array Parameters
 
 虽然可以使用数组作为形参，但当数组作为形参的时候，是无法进行有效的值拷贝的。因为数组无法进行拷贝初始化，且当调用数组时，调用的实际上是指向数组第一个元素的指针。
 
@@ -327,7 +304,7 @@ void print(const int[10])
 
 因为即使形参使用数组，也会在编译时转换为指针，所以函数是不知道传进来的数组大小的，因此需要额外的信息来指定数组大小，以下为三种普遍的方式：
 
-#### Using a Marker to Specify the Extent of an Array
+### Using a Marker to Specify the Extent of an Array
 
 如之前所示，C风格的字符串实际上是const char[]，而C风格的字符串用来判断是否是数组结尾就是用一个空白的字符作为数组结束的标记位（Marker），如下：
 
@@ -351,7 +328,7 @@ abcd
 
 但是这种方法需要找到一个几乎不会作为正常数据的值，否则就会与正常数据产生干扰。
 
-#### Using the Standard Liberary Conventions
+### Using the Standard Liberary Conventions
 
 第二种方法是通过标准库中的`begin`和`end`方法来传递数组的开始与结束指针，如下：
 
@@ -371,7 +348,7 @@ void print(const int *beg, const int *end)
 */
 ```
 
-#### Explicitly Passing a Size Parameter
+### Explicitly Passing a Size Parameter
 
 函数中使用一个形参来指定数组的大小，如：
 
@@ -392,7 +369,7 @@ void print(const int *beg, size_t size)
 */
 ```
 
-#### Array Parameters and const
+### Array Parameters and const
 
 可以使用在形参使用数组的引用，这个方法可以限定传递的数组的大小，如下：
 
@@ -412,7 +389,7 @@ void print(int (&arr)[5])
 
 注意数组的大小也是数组类型的一部分，所以对数组进行引用限定了数组大小，例子中只有数组大小是5的数组可以传递。
 
-#### Passing a Multidimensional Array
+### Passing a Multidimensional Array
 
 对于多维数组，可以通过使用一个数组的指针进行传递，如
 
@@ -483,7 +460,7 @@ void print(int **matrix, int rowSize, int columnSize)
 */
 ```
 
-### main: Handling Command-Line Options
+## main: Handling Command-Line Options
 
 c++的main函数入口，可以是无参的，也可以是以下的格式
 
@@ -525,7 +502,7 @@ arg is 2
 arg is 3
 ```
 
-### Functions with Varying Parameters
+## Functions with Varying Parameters
 
 有的时候并不了解一个函数究竟需要多少个形参，如一个函数需要来处理错误信息，但错误信息的数量是不固定的。
 
@@ -533,14 +510,14 @@ arg is 3
 
 C++还有一种名为`elipsis`的参数类型，可以实现传递不同数量的实参，但是该方法应该仅在与C接口进行通信时使用。
 
-#### initializer_list Parameters
+### initializer_list Parameters
 
 initializer_list是一种表示数组的标准库中的类型，支持的操作如下表：
 
 | 代码                           | 含义                                                      |
 | ------------------------------ | --------------------------------------------------------- |
-| initializer_list<T> lst;       | 默认初始化                                                |
-| initializer_list<T> lst{a,b,c} | 参数初始化，元素是初始值的拷贝，且list中的元素都是const的 |
+| `initializer_list<T> lst;`       | 默认初始化                                                |
+| initializer_list<T> lst{a,b,c}` | 参数初始化，元素是初始值的拷贝，且list中的元素都是const的 |
 | lst2(lst)                      | initializer_list的拷贝或赋值                              |
 | lst2 = lst                     | 同上                                                      |
 | lst.size()                     | 返回initializer_list中的元素数量                          |
@@ -577,11 +554,11 @@ functionX abc def
 */
 ```
 
-#### Ellipsis Parameters
+### Ellipsis Parameters
 
 Elipsis是C++用来访问C中的库的，书中也未进行详细说明。但日后使用到时再进行查询。
 
-## Return Types and the return Statement
+# Return Types and the return Statement
 
 ### Functions with No Return Value
 
