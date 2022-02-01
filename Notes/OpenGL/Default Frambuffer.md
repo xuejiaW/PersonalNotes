@@ -6,7 +6,7 @@ updated: 2022-01-27
 
 `Default Framebuffer` 就是 `Framebuffer 0`，当 OpenGL 的上下文被建立后，会自动被创建。
 
-因为 OpenGL 的上下文建立是平台相关的，所以通常 `Default Framebuffer` 的建立也与平台相关，如 [GLFW](../../Boos/Learn%20OpenGL/Ch%2001%20Hello%20Window.md#初始化GLFW)  库中在创建 Window 时就自动创建了 `Default Framebuffer` 。
+因为 OpenGL 的上下文建立是平台相关的，所以通常 `Default Framebuffer` 的建立也与平台相关，如 [GLFW](../../Books/Learn%20OpenGL/Ch%2001%20Hello%20Window.md#初始化GLFW)  库中在创建 Window 时就自动创建了 `Default Framebuffer` 。
 
 # Color buffers
 
@@ -61,7 +61,7 @@ Sterero Rendering 时仅有一块 Stencil Buffer，在对 Left Buffer 和 Right 
 
 Default Framebuffer 也可以开启 MSAA，但这同样要求在创建 OpenGL 上下文时就指定 MSAA 的等级。
 
-因此在 [Anti Aliasing](../../Boos/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md) 中，如果是对于 `Framebuffer 0` 开启 MSAA，就需要在 [GLFW 初始化窗口时指定 MSAA](../../Boos/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md#MSAA%20in%20GLFW) 。
+因此在 [Anti Aliasing](../../Books/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md) 中，如果是对于 `Framebuffer 0` 开启 MSAA，就需要在 [GLFW 初始化窗口时指定 MSAA](../../Books/Learn%20OpenGL/Ch%2024%20Anti%20Aliasing.md#MSAA%20in%20GLFW) 。
 
 # Reference
 

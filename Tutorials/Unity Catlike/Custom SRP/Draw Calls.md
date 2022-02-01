@@ -405,7 +405,7 @@ private void OnValidate()
 
 对于同一个材质，但是因为使用了 `MaterialPropertyBlock` 而打断 Batch 的情况，可以使用 `GPU Instancing` 将它们合并为一个 DrawCall 进行渲染。 CPU 会将这些物体各自对于材质的修改组合成一个数组（ `Instanced Data`）并一次性送给 GPU，GPU 在渲染它们时使用 index 进行区分。
 
-OpenGL 中 GPU Instancing 的实现可见 [Instancing](../../../Boos/Learn%20OpenGL/Ch%2023%20Instancing.md)
+OpenGL 中 GPU Instancing 的实现可见 [Instancing](../../../Books/Learn%20OpenGL/Ch%2023%20Instancing.md)
 
 目前实现的 Shader 是不支持 GPU Instancing 的。为了让其支持 Instancing，首先需要加上 `multi_compile_instancing` 的关键字，如下所示：
 

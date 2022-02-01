@@ -15,7 +15,6 @@
     }
   },
   "Notes": "RiBookMarkLine",
-  "Boos": "RiBook3Line",
   "Tutorials": "RiTodoLine",
   "Notes/Unity": "FaUnityBrands",
   "Notes/Android": "RiAndroidLine",
@@ -24,5 +23,6 @@
   "Notes/Computer Graphics": "RiPaletteLine",
   "Notes/VSCode": "RiCodeSSlashLine",
   "Notes/Tools": "RiToolsFill",
-  "Notes/Virtual Reality": "FaReacteuropeBrands"
+  "Notes/Virtual Reality": "FaReacteuropeBrands",
+  "Books": "RiBook3Line"
 }

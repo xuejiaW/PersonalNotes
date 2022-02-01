@@ -1,7 +1,6 @@
 [
   "obsidian-admonition",
   "obsidian-custom-attachment-location",
-  "obsidian-minimal-settings",
   "open-vscode",
   "obsidian-plantuml",
   "better-fn",
@@ -18,5 +17,6 @@
   "cm-chs-patch",
   "obsidian-vimrc-support",
   "obsidian-icon-folder",
-  "obsidian-reveal-active-file"
+  "obsidian-reveal-active-file",
+  "obsidian-minimal-settings"
 ]

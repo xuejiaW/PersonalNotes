@@ -96,7 +96,7 @@ private void Generate()
 }
 ```
 
-在生成 Triangles 的嵌套循环中，每一次循环生成一个 Grid 的两个 Triangle，且 [Face Culling](../../../Boos/Learn%20OpenGL/Ch%2018%20Face%20Culling.md) 的顺序是顺时针，此为 Unity 对正向面的顺序要求。
+在生成 Triangles 的嵌套循环中，每一次循环生成一个 Grid 的两个 Triangle，且 [Face Culling](../../../Books/Learn%20OpenGL/Ch%2018%20Face%20Culling.md) 的顺序是顺时针，此为 Unity 对正向面的顺序要求。
 
 此时的效果如下所示：
 ![](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223084615932.png)
@@ -156,11 +156,11 @@ private void Generate()
 
 ## Normal Map
 
-为了增加细节还可以使用 [Normal Mapping](../../../Boos/Learn%20OpenGL/Ch%2029%20Normal%20Mapping.md)
+为了增加细节还可以使用 [Normal Mapping](../../../Books/Learn%20OpenGL/Ch%2029%20Normal%20Mapping.md)
 
 ![|400](assets/Mesh%20Basics%20-%20Procedural%20Grid/image-20211223094537578.png)
 
-但因为 Normal Map 中的法线是定义在 [Tangent Space](../../../Boos/Learn%20OpenGL/Ch%2029%20Normal%20Mapping.md#Tangent%20Space) 中，因此为了让法线贴图能正常的被解析，还需要为其指定 `Tangent` 及 `Bitangent` 方向。
+但因为 Normal Map 中的法线是定义在 [Tangent Space](../../../Books/Learn%20OpenGL/Ch%2029%20Normal%20Mapping.md#Tangent%20Space) 中，因此为了让法线贴图能正常的被解析，还需要为其指定 `Tangent` 及 `Bitangent` 方向。
 
 在 Unity 中仅需要为顶点指明 `Tangent` 方向，`Bitangent` 方向可以通过 `Tangent` 方向与 `Normal` 方向叉乘得到。
 

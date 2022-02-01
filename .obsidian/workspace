@@ -1,16 +1,17 @@
 {
   "main": {
-    "id": "19196227a06a9f97",
+    "id": "95c6db7d675b7c2d",
     "type": "split",
     "children": [
       {
-        "id": "fe6d1776fa79cc1f",
+        "id": "12d6838d5873c284",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books.md",
+            "file": "Books/3D Math Primer For Graphics and Game Development.md",
             "mode": "source",
+            "backlinks": true,
             "source": true
           }
         }
@@ -23,11 +24,11 @@
     "type": "split",
     "children": [
       {
-        "id": "190a276a7261373e",
+        "id": "4c65c1f1f2691803",
         "type": "tabs",
         "children": [
           {
-            "id": "c606169a612c3f56",
+            "id": "fc3fb540355bbfef",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,12 +36,12 @@
             }
           },
           {
-            "id": "783ab55e1e1aa886",
+            "id": "1337fbd73b3c4e46",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "class",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,29 +54,35 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333
+    "width": 300
   },
   "right": {
     "id": "086a6696003cb579",
     "type": "split",
     "children": [
       {
-        "id": "e9ec0dddb66d9d6b",
+        "id": "178570568ae1bd6e",
         "type": "tabs",
-        "dimension": 43.48534201954398,
         "children": [
           {
-            "id": "a7e39143692349f8",
+            "id": "eda2a0fd7cd15861",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "backlink",
               "state": {
-                "file": "Books.md"
+                "file": "Books/3D Math Primer For Graphics and Game Development.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "4026a1071cb6fc93",
+            "id": "46fe7a0854edbe6f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -86,74 +93,12 @@
             }
           },
           {
-            "id": "ca729b6cf3c92769",
+            "id": "c0eb0eddf043a05e",
             "type": "leaf",
             "state": {
-              "type": "backlink",
+              "type": "outline",
               "state": {
-                "file": "Books.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "a85768a881b7dd3a",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Books.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "37bd8f4e58a99db8",
-        "type": "tabs",
-        "dimension": 56.51465798045603,
-        "children": [
-          {
-            "id": "62ec0e0b8b0fa885",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Books.md",
-                "options": {
-                  "collapse-filter": false,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": false,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.36104536502023776,
-                  "close": true
-                }
+                "file": "Books/3D Math Primer For Graphics and Game Development.md"
               }
             }
           }
@@ -161,19 +106,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 335.5
+    "width": 449.5,
+    "collapsed": true
   },
-  "active": "fe6d1776fa79cc1f",
+  "active": "12d6838d5873c284",
   "lastOpenFiles": [
-    "Books.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md",
-    "Notes/Obsidian/Plugins.md",
-    "Boos/Learn OpenGL/Ch 31 HDR.md",
-    "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
-    "Boos/Learn OpenGL/Ch 25 Blinn-Phong.md",
+    "Books/3D Math Primer For Graphics and Game Development.md",
+    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png",
+    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201201843213.png",
+    "Bookss.md",
     "Notes/Unity.md",
-    "Boos/Learn OpenGL/Ch 19 Framebuffers.md",
-    "Boos/Learn OpenGL/Ch 24 Anti Aliasing.md",
-    "Boos/C++ Primer.md"
+    "Notes/VSCode/Unity.md",
+    "Books/Learn OpenGL/Ch 31 HDR.md",
+    "Notes/Obsidian/Image Gallery.md",
+    "Notes/Obsidian/Plugins.md",
+    "Books/Learn OpenGL/Ch 21 Advanced Data, GLSL.md"
   ]
 }
