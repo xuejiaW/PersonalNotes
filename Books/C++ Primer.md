@@ -3,7 +3,8 @@ created: 2022-02-01
 updated: 2022-02-01
 tags:
     - C++
-
+Cover: https://images-na.ssl-images-amazon.com/images/I/41Gd9xIXrUL._SX381_BO1,204,203,200_.jpg
+Author: Stanley Lippman
 ---
 [Ch 00 Perface](C++%20Primer/Ch%2000%20Perface.md)
 

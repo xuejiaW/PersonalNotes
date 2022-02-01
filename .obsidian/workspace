@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/C++ Primer.md",
+            "file": "Books/Learn OpenGL.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -22,8 +22,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/C++ Primer.md",
-            "mode": "source",
+            "file": "Books.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/C++ Primer.md",
+                "file": "Books/Learn OpenGL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/C++ Primer.md"
+                "file": "Books/Learn OpenGL.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/C++ Primer.md",
+                "file": "Books/Learn OpenGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,15 +136,15 @@
   },
   "active": "2bab721a45acf019",
   "lastOpenFiles": [
+    "Books/Learn OpenGL.md",
     "Books/C++ Primer.md",
-    "Books/3D Math Primer For Graphics and Game Development.md",
     "Books.md",
+    "Books/3D Math Primer For Graphics and Game Development.md",
     "Books/Render Hell.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "TO-DO.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201201843213.png",
-    "Notes/Unity.md",
-    "Notes/VSCode/Unity.md"
+    "Notes/Unity.md"
   ]
 }

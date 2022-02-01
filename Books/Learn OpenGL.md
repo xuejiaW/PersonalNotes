@@ -1,8 +1,11 @@
 ---
 created: 2021-12-15
-updated: 2022-01-20
+updated: 2022-02-01
 tags:
     - OpenGL
+Author: Joey de Vries
+ASIN: 978-9090332567
+Cover: 
 ---
 # Getting Started
 
