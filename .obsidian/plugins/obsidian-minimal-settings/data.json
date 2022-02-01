@@ -32,6 +32,6 @@
   "underlineExternal": true,
   "useSystemTheme": true,
   "folding": true,
-  "relationLinesPreview": false,
-  "relationLinesEdit": false
+  "relationLinesPreview": true,
+  "relationLinesEdit": true
 }

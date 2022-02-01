@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity.md",
+            "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity.md"
+                "file": "Boos/Learn OpenGL/Ch 31 HDR.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity.md",
+                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,27 +103,18 @@
             }
           },
           {
-            "id": "3e5be8bbf98a0b2a",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
             "id": "a85768a881b7dd3a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity.md",
+                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -136,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity.md",
+                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,15 +164,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/Learn OpenGL/Ch 31 HDR.md",
+    "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
+    "Boos/Learn OpenGL/Ch 25 Blinn-Phong.md",
+    "Notes/Obsidian/Plugins.md",
     "Notes/Unity.md",
     "Boos/Learn OpenGL/Ch 19 Framebuffers.md",
     "Boos/Learn OpenGL/Ch 24 Anti Aliasing.md",
-    "Boos/Learn OpenGL/Ch 31 HDR.md",
     "Book.md",
     "Boos/C++ Primer.md",
-    "Boos/C++ Primer/Untitled.md",
-    "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
-    "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
-    "Boos/C++ Primer/Ch 04 Expressions.md"
+    "Boos/C++ Primer/Untitled.md"
   ]
 }
