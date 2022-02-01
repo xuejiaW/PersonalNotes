@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Bookss.md",
+            "file": "Books/Render Hell.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bookss.md",
+                "file": "Books/Render Hell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bookss.md"
+                "file": "Books/Render Hell.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bookss.md",
+                "file": "Books/Render Hell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +136,7 @@
   },
   "active": "6266e0aae2bf3f69",
   "lastOpenFiles": [
+    "Books/Render Hell.md",
     "Bookss.md",
     "Books/3D Math Primer For Graphics and Game Development.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
@@ -144,7 +145,6 @@
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201201843213.png",
     "Notes/Unity.md",
     "Notes/VSCode/Unity.md",
-    "Books/Learn OpenGL/Ch 31 HDR.md",
-    "Notes/Obsidian/Image Gallery.md"
+    "Books/Learn OpenGL/Ch 31 HDR.md"
   ]
 }
