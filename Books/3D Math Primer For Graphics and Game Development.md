@@ -1,7 +1,7 @@
 ---
 created: 2022-01-20
 updated: 2022-02-01
-Cover: /Books/assets/3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/image-20220201202739490.png
+Cover: https://images-na.ssl-images-amazon.com/images/I/51Dake5LWcL._SX404_BO1,204,203,200_.jpg
 Author: Fletcher Dunn
 tags:
     - Computer-Graphics
