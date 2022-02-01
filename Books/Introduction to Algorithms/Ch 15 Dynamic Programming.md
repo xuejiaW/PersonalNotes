@@ -79,7 +79,7 @@ return q
 ```
 但这个运算是非常低效的，因为它存在许多的重复计算，如对于$n=4$，算法会在循环中分别以$n=0,n=1,n=2,n=3$调用CUT-ROD算法，而在以$n=3$调用时又会在循环中以$n=0,n=1,n=2$调用，这就造成了重复运算。调用时的计算如下图
 
-![递归解法图解](IA-Chapter15-Notes/2020-01-20-02-17-36.png)
+![递归解法图解](Ch%2015%20Dynamic%20Programming/2020-01-20-02-17-36.png)
 
 图中的每个结点表示一次调用，结点中的数值表示$n$的取值，可以看到有非常多重复的结点。
 
@@ -291,7 +291,7 @@ int CutRod(int* priceTable, int rodLength)
 
 子问题图如下,它可以看作是表示递归解法的图的精简版，删除了所有重复的点，也表示子问题并不会被重复的计算：
 
-![子问题图](IA-Chapter15-Notes/2019-11-19-19-33-22.png)
+![子问题图](Ch%2015%20Dynamic%20Programming/2019-11-19-19-33-22.png)
 
 子问题图可以用来获知动态规划问题的时间复杂度，因为图中的一个结点表示一个子问题，图中连接结点的边表示用来组合两个子问题答案的时间，因此用来解决整个动态规划问题的时间基本上与子问题图的顶点数+边数是呈线性关系的。
 
@@ -607,7 +607,7 @@ int matrixSizeArray[] = { 30,35,15,5,10,20,25 };
 
 则C++运算结果如下：
 
-![MatrixChainMultiplicationResult](IA-Chapter15-Notes/2019-11-22-11-25-54.png)
+![MatrixChainMultiplicationResult](Ch%2015%20Dynamic%20Programming/2019-11-22-11-25-54.png)
 
 结果中的`-842150451`是`Int`数值的默认值，在不同电脑上可能不一样。
 
@@ -617,7 +617,7 @@ int matrixSizeArray[] = { 30,35,15,5,10,20,25 };
 
 将两个矩阵结果的未定义部分删去，并进行一个旋转，让对角线变成水平，则结果如下图所示，左边是$m[i,j]$，右边是$s[i,j]$：
 
-![旋转后的运行结果](IA-Chapter15-Notes/2019-11-22-11-32-00.png)
+![旋转后的运行结果](Ch%2015%20Dynamic%20Programming/2019-11-22-11-32-00.png)
 
 算法是从最底部逐渐向上运行。
 
@@ -645,7 +645,7 @@ else
 
 这里利用了步骤三中求得的$s[i,j]$，如果输入值为$0 \sim 5$（以C++实现的数据为准，所以不是$1\sim6$），则算法的图解如下：
 
-![打印矩阵最佳解图解](IA-Chapter15-Notes/2019-11-22-12-00-59.png)
+![打印矩阵最佳解图解](Ch%2015%20Dynamic%20Programming/2019-11-22-12-00-59.png)
 
 黑色表示$(i,j)$，蓝色表示$s[i,j]$的取值，红色表示算法中的输出。
 
@@ -721,7 +721,7 @@ void PrintOptimalParens(Matrix* minMultiplicationsCut, int i, int j)
 
 但在最长路径问题下是**不存在**最佳子结构的，即$u$到$v$的最长路径上存在结点$w$，$u$到$w$和$w$到$v$不一定是各自的最长路径。以下图为例
 
-![最长路径反例](IA-Chapter15-Notes/2019-11-26-10-35-55.png)。
+![最长路径反例](Ch%2015%20Dynamic%20Programming/2019-11-26-10-35-55.png)。
 
 如果求$q$到$t$的的最长路径，那么应该是$q\rightarrow r \rightarrow t$。但是$q\rightarrow r$并不是$q$到$r$的最长路径，其最长路径为$q \rightarrow s \rightarrow t \rightarrow r$，$r$到$t$的最长路径为$r \rightarrow q \rightarrow s \rightarrow t$。而$q$到$r$和$r$到$t$不能取各自最长路径的原因是，如果这么做了就会形成闭环回路。
 
@@ -737,7 +737,7 @@ void PrintOptimalParens(Matrix* minMultiplicationsCut, int i, int j)
 
 如矩阵乘法问题中，$m[3,4]$这个子问题的求解，在求$m[2,4]$,$m[1,4]$,$m[3,5]$等中都会出现。下图展示了在求解$m[1,4]$的过程中，出现的子问题，其中深色部分为已经出现过的子问题。
 
-![重叠子问题](IA-Chapter15-Notes/2019-11-26-11-28-09.png)
+![重叠子问题](Ch%2015%20Dynamic%20Programming/2019-11-26-11-28-09.png)
 
 因为使用了自底向上法或者备忘录法来规避了子问题的重复计算时间，动态规划的时间复杂度才能是多项式级别的，否则是指数形式。
 

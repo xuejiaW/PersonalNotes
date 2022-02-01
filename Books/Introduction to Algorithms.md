@@ -33,3 +33,8 @@ ISBN: 978-0262033848
 
 [Ch 13 Red-Black Trees](Introduction%20to%20Algorithms/Ch%2013%20Red-Black%20Trees.md)
 
+# Advanced Design and Analusis Techniques
+
+[Ch 15 Dynamic Programming](Introduction%20to%20Algorithms/Ch%2015%20Dynamic%20Programming.md)
+
+[Ch 17 Amortized Analysis](Introduction%20to%20Algorithms/Ch%2017%20Amortized%20Analysis.md)
