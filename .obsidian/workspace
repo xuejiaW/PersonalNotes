@@ -11,7 +11,7 @@
           "state": {
             "file": "Books/3D Math Primer For Graphics and Game Development.md",
             "mode": "source",
-            "backlinks": true,
+            "backlinks": false,
             "source": true
           }
         }
@@ -24,11 +24,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4c65c1f1f2691803",
+        "id": "c7d4f3bb6ace5992",
         "type": "tabs",
         "children": [
           {
-            "id": "fc3fb540355bbfef",
+            "id": "4fbb5c5164376761",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -36,7 +36,7 @@
             }
           },
           {
-            "id": "1337fbd73b3c4e46",
+            "id": "6c61541ec84ad828",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,23 +54,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
     "type": "split",
     "children": [
       {
-        "id": "178570568ae1bd6e",
+        "id": "a920c0b03f312a16",
         "type": "tabs",
         "children": [
           {
-            "id": "eda2a0fd7cd15861",
+            "id": "9f2685e423d5d873",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/3D Math Primer For Graphics and Game Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,7 +82,18 @@
             }
           },
           {
-            "id": "46fe7a0854edbe6f",
+            "id": "a88227ad391a7366",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "53727ae9bab7a5a4",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -93,13 +104,11 @@
             }
           },
           {
-            "id": "c0eb0eddf043a05e",
+            "id": "abd02e0ac9aa509b",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Books/3D Math Primer For Graphics and Game Development.md"
-              }
+              "state": {}
             }
           }
         ]

@@ -4,11 +4,10 @@
   "switcher",
   "graph",
   "backlink",
+  "outgoing-link",
   "tag-pane",
   "page-preview",
-  "note-composer",
   "command-palette",
-  "random-note",
   "outline",
   "word-count",
   "workspaces"
