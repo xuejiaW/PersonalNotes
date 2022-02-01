@@ -30,7 +30,9 @@ updated: 2022-02-01
 
 ## Backlinks / Outgoing Links
 
- 开启插件后，会在每个文档右侧面板中显示该引用了该文档的其他文档（Back Links）以及该文档引用的其他文档（Outgoing Links）
+ 开启插件后，会在每个文档右侧面板中显示该引用了该文档的其他文档（Back Links）以及该文档引用的其他文档（Outgoing LinksS）
+ ![|300](assets/Plugins/image-20220201194452192.png)
+
 
 # Community Plugins
 
