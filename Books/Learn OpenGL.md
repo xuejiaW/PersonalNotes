@@ -5,7 +5,7 @@ tags:
     - OpenGL
 Author: Joey de Vries
 ASIN: 978-9090332567
-Cover: 
+Cover: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9b1b374d-9722-40c0-a966-e67d5e0d32ab/61NE7oyxeL.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220201T131704Z&X-Amz-Expires=86400&X-Amz-Signature=5a86bd6cbe0c90ea3aa27984a9a6d9b5ee5bb6ccf885524018b9b0a2010b15ab&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2261NE7o%252ByxeL.jpg%22&x-id=GetObject
 ---
 # Getting Started
 

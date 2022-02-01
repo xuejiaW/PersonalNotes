@@ -1,7 +1,9 @@
 ---
 created: 2022-01-20
-updated: 2022-01-20
+updated: 2022-02-01
+Cover: 
 ---
+
 ```ad-warning
 读这本书并不是完了完整的学习 Vim，是为了更好的在 VSCode 中使用 NeoVim 插件。 因此一些纯粹关于 Vim 的部分可能会被跳过，且部分命令会被改写为 NeoVim 的方式
 ```
