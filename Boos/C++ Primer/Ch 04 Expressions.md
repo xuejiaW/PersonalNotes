@@ -1,46 +1,23 @@
 ---
 created: 2022-02-01
 updated: 2022-02-01
----
----
-title: 《C++ Primer》 第四章笔记
-mathjax: true
-date: 2020-02-17 23:19:58
-categories:
-  - 读书笔记
-  - 计算机语言
 tags:
-  - 读书笔记
-  - C++
+    - C++
 ---
 
-{% cq %}
+# Fundamentals
 
-《C++ Primer》 第四章笔记
+# Basic Concepts
 
-主要关于对内建类型的操作。
-
-![第四章内容](assets/CPPPrimer-Chapter4-Notes/Ch4.png)
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 4 Expressions
-
-## Fundamentals
-
-### Basic Concepts
-
-#### Grouping Operators and Operands
+### Grouping Operators and Operands
 
 多个操作符的顺序是由优先级（Precedence）和结合性（associatively）有时还有求值顺序（order of evaluation）决定的。
 
-#### Overloaded Operators
+### Overloaded Operators
 
 操作符可以被重载，但是操作符接受的参数数量，优先级还有结合性是没法被改变的。
 
-#### Lvalues and Rvalues
+### Lvalues and Rvalues
 
 左参数（Lvalues）是出现在赋值左侧的参数，右参数(Rvalues)是出现在赋值右侧的参数。当使用右参数时，使用的是右参数的值，当使用左参数时，使用的是参数的地址。
 
@@ -52,7 +29,7 @@ tags:
 
 假设`p`的类型是`int *`，那么`*p`返回的是左参数，因此`decltype(*p)`结果是int&，而因为取地址符返回的是右参数，即`(&p)`结果为为右参数，所以`decltype(&p)`结果是`int* *`，而不是引用`int** &`
 
-### Precedence and Associativity
+## Precedence and Associativity
 
 优先级（Precedence）决定是操作符执行的先后顺序，结合性（Associativity）决定的是同优先级的操作符之间执行的顺序。
 
@@ -60,7 +37,7 @@ tags:
 
 可以使用括号来重新决定优先级和结合性。
 
-### Order of Evaluation
+## Order of Evaluation
 
 求值顺序决定了操作符的多个参数，哪个还会先进行求值。
 
@@ -86,7 +63,7 @@ cout << i << " " << ++i << endl;
 
 如`int*++iter`，按优先级会计算`++iter`，而改变后的`iter`本身就是`int*`表达式的对象。但是在之前的式子的`f1() * f2()`中，乘法操作符的对象是函数运行后的值，而不是函数本身。同理，对于`cout << i << " " << ++i`，前面的`i`和`i++`实际上是不相关的，即`<<`操作符并不是将它俩链接在一起，所以谁先执行也是不能保证的。
 
-#### Order of Evaluation,Precedence and Associativity
+### Order of Evaluation,Precedence and Associativity
 
 如有式子`f()+g()* h()+j()`,可以得出以下结论：
 
@@ -96,7 +73,7 @@ cout << i << " " << ++i << endl;
 
 如果这四个函数是相关的，如都会在内部对同一个全局变量进行修改或访问，那么结果将是未定义的。
 
-### Arithmetic Operators
+## Arithmetic Operators
 
 算数操作符的优先级排序如下，所有的算数操作符的结合性都是从左至右：
 
@@ -112,7 +89,7 @@ cout << i << " " << ++i << endl;
 
 算数操作符的结果都是右参数。
 
-#### Arithmetic Operation on Boolean
+### Arithmetic Operation on Boolean
 
 在对布尔值进行算数操作时需要额外的注意，如下代码：
 
@@ -128,7 +105,7 @@ b2 is 1
 
 因为对b使用了负号操作符，所以b会转换为int，因为b值为true，所以被转换为1，即b2的值为-1,因为非0，所以b2值为true。最后使用cout打印时，又转换为了int，为1。
 
-#### Overflow
+### Overflow
 
 如果对整数类型使用了算数操作符且结果超过了类型所能表达的最大值，那么结果是未定义的，如使用short表示一个数，且在某设备上short是16-bits的类型，那么它的表达范围是$-32768\sim 32767$，如有以下代码：
 
@@ -144,11 +121,11 @@ b2 is 1short value is -32768
 
 结果为-32768，是因为编译器对其进行了`wrap around`，但因为结果实际上是未定义的，并不能保证所有设备上都是这个结果。
 
-#### remainder(%) operation
+### remainder(%) operation
 
 取余符号的操作对象必须是整数类型，对于`m % n`，结果的正负与m一样。即`m%(-n)`的值与`m%n`相同，`(-m)%n`的值与`-(m%n)`相同。
 
-### Logical and Relational Operators
+## Logical and Relational Operators
 
 所有的算数值（整数和浮点数）和指针转换为布尔值的规则相同，值为0为false，值非0为true。
 
@@ -168,7 +145,7 @@ b2 is 1short value is -32768
 
 `&&`操作和`||`操作都是最短路径求值
 
-#### The Relational Operators
+### The Relational Operators
 
 因为关系运算符的返回结果是bool值，级联关系运算符的结果通常如期望的不同，如下代码：
 
@@ -189,7 +166,7 @@ if(i < j && j < k)
     cout << "enter case 1";
 ```
 
-#### Equality Tests and the bool Literals
+### Equality Tests and the bool Literals
 
 可以在condition中直接使用算数值或者指针来判断该参数是否是0，如下
 
@@ -204,9 +181,9 @@ if(val == true)  {/* ... */}
 
 在这个式子中，true会被转换为val的类型，即变为1，因此式子判断的是val的值是否为1。
 
-## Assignment Operators
+# Assignment Operators
 
-#### Assignment Is Right Associative
+### Assignment Is Right Associative
 
 赋值操作的结合性是从右至左的，且赋值的右参数必须与左参数类型相同或者可以转换到左参数的类型，如下代码所示：
 
@@ -224,7 +201,7 @@ i is 3, d is 3
 */
 ```
 
-#### Assignment Has Low Precedence
+### Assignment Has Low Precedence
 
 在C++中，可以在condition中使用赋值操作，如下两部分代码是等效的，但第二个更简洁：
 
@@ -245,7 +222,7 @@ while( (i = getValue()) != 42)
 
 注意赋值操作的优先级很低，所以需要使用括号来限定优先操作，如果不使用括号，则i的值会变成getValue返回值与42的比较结果，即只会是0或1。
 
-#### Compound Assignment Operators
+### Compound Assignment Operators
 
 以下都是复合赋值操作符：
 `+=`,`-=`,`*=`,`/=`,`%=`,`<<=`,`>>=`,`&=`,`^=`,`|=`。
@@ -259,7 +236,7 @@ a = a+1;
 
 但是从性能角度考虑，使用复合赋值操作只需要读取一次左参数，而普通的赋值方法则需要读取两次，因此复合赋值操作有更好的性能，虽然之中的差距不是很明显。
 
-## Increment and Decrement Operators
+# Increment and Decrement Operators
 
 `++`和`--`操作都有两个形式，前置(Prefix)和后置（Postfix），前置返回的是原值加1后的原对象本身，结果是左参数。后置返回的是原对象的原值，结果是右参数。如下代码所示：
 
@@ -280,11 +257,11 @@ i is 2, j is 1
 
 > 尽量使用前置操作，这样代码更简洁，且因为避免了拷贝也有更好的性能
 
-### Combining Dereference and Increment in a Single Expression
+## Combining Dereference and Increment in a Single Expression
 
 因为累加符号的优先级低于解引用符，所以`*p++`等同于`*(p++)`
 
-### Remember That Operands Can Be Evaluated in Any Order
+## Remember That Operands Can Be Evaluated in Any Order
 
 如之前所述，在同一个表达式内，子表达式的计算顺序是无法保证的（操作符的优先级决定的是子表达式的计算结果在总表达式中计算的顺序）。
 
@@ -314,17 +291,17 @@ aAAAAAA
 
 但是左侧的`*beg`和右侧的`*beg++`哪个先进行运算结果是不一定的，如果先运行了左侧，则结果对应上述第一种可能，否则对应上述第二种可能。
 
-## The Member Access Operators
+# The Member Access Operators
 
 `ptr->mem`相当于`(*ptr).mem`
 
 箭头操作需要对指针对象进行操作，且返回的是左参数，点操作返回的参数是左参数还是右参数由对象本身决定。
 
-## The Conditional Operator
+# The Conditional Operator
 
 条件操作符的形式为`cond ? expr1 : expr2`，和逻辑与和逻辑或一样，条件操作符同样也是最短求值，所以`expr1`和`expr2`中只会有一个参数被计算。
 
-### Nesting Conditional Operations
+## Nesting Conditional Operations
 
 当有多个条件操作符嵌套时，结合性是从右至左的，如下：
 
@@ -342,7 +319,7 @@ void TestConditionalOperations()
 
 结合性是从右至左的，但是计算顺序仍然是从左至右，即会先计算`grade > 90`的情况，再计算`grade <60`。
 
-### Using a Conditional Operator in an Output Expression
+## Using a Conditional Operator in an Output Expression
 
 因为条件操作符（Conditional Operator）的优先级很低，所以在输出表达式中使用条件操作符时往往都需要加上括号，如下：
 
@@ -373,7 +350,7 @@ cout << grade;
 // cout < 60 ? "fail" : "pass"; //Error, can not use < on cout
 ```
 
-## The Bitwise Operators
+# The Bitwise Operators
 
 位操作符（Bitwise Operators）使用整数类型来表示一系列的bits。如果操作的对象类型小于操作的结果类型，则会首先将操作的对象转换为结果类型，然后再进行操作。
 
@@ -388,7 +365,7 @@ cout << grade;
 | 3      | ^    | 异或   | expr1 ^ expr2    |
 | 3      | \|   | 或     | expr1 \ expr2    |
 
-### Bitwise Shift Operators
+## Bitwise Shift Operators
 
 1. `<<`和`>>`都是位移操作，右侧的参数必须是正整数，而且必须小于左侧操作对象的bit数，否则将是未定义的。
    
@@ -418,13 +395,13 @@ cout << grade;
 如果执行的函数是`bits >> 3`，即将bits右移动3位，结果为
 `000000000 00010011`，最右侧的三位移出了范围，所以被丢弃了。
 
-### Bitwise Not Operator
+## Bitwise Not Operator
 
 同样在操作前，如果操作对象的整数类型较小，需要将其提升为结果的整数类型，如结果为int（16-bits）,对象为char，且值为`10010111`，则对其进行取反操作的结果为：
 
 `11111111 01101000`
 
-### Bitwise And,Or
+## Bitwise And,Or
 
 同样在操作前，如果操作对象的整数类型较小，需要将其提升为结果的整数类型。
 
@@ -456,7 +433,7 @@ cout << grade;
 
 表达为10进制为7296,所以结果为-7296。
 
-### Using Bitwise Operators
+## Using Bitwise Operators
 
 如果有一个int值quiz1，需要将其第27位变为1，则可使用以下代码
 
@@ -476,7 +453,7 @@ quize1 &= ~(1UL << 27);
 bool status= quiz1 & (1UL << 27)
 ```
 
-### Shift Operators Are Left Associateive
+## Shift Operators Are Left Associateive
 
 位移操作符的结合性是从左至右的，而IO的操作符是继承自位移操作符的，因此IO的操作符的结合性也同样是从左至右的，因此如下代码将会无法通过编译：
 
@@ -493,7 +470,7 @@ cout < 24
 
 因此会造成编译错误。
 
-## The sizeof Operator
+# The sizeof Operator
 
 sizeof操作符返回类型的大小，单位为byte，该操作符结合性是从右至左的，结果为`type_t`类型。有以下两种表达方式：
 
@@ -530,7 +507,7 @@ int arrr[4]{};
 cout << sizeof(arrr) << endl;//16
 ```
 
-## Comma Operator
+# Comma Operator
 
 逗号操作符（Comma Operator）使用两个操作对象，求值顺序是从左至右的，即逗号操作符可以保证操作对象求值的顺序。
 
@@ -576,7 +553,7 @@ int a = --x , ++y;
 //,++y
 ```
 
-## Type Conversions
+# Type Conversions
 
 C++会自动进行隐式转换，如表达式
 
@@ -593,7 +570,7 @@ int ival = 3.541 + 3;
 3. 在初始化中，初始化值会被转换为目标类型；在赋值中，等号右手边的参数类型会转换为左手边的参数类型
 4. 在算数和关系表达式中，如果操作数的类型不同，那么会转换为一个通用的类型（在下一节解释）
 
-### The Arithmetic Conversions
+## The Arithmetic Conversions
 
 这节阐述的是算数类型的隐式转换，算数表达式中的隐式转换遵循以下规则：
 
@@ -610,7 +587,7 @@ int ival = 3.541 + 3;
    b. 如果unsigned的类型大于等于signed的类型（这里比较的是类型，不是参数值），则signed类型转换至unsigned的目标类型。
    c. 如果signed类型大于unsigned类型，则首先尝试将unsigned类型转换至signed的目标类型，如果signed目标类型无法容纳unsigned类型的参数值，则将signed类型转换至unsigned 目标类型。
 
-### Other Implicit Conversions
+## Other Implicit Conversions
 
 除了算数类型的隐式转换，C++还有其他类型的隐式转换，如
 
@@ -640,7 +617,7 @@ int ival = 3.541 + 3;
    a. `string s = "abc"`就是string类型自定义的隐式转换，将C类型的字符串字面值转换为string类型
    b. `while ( cin >> s)`也是cin类型自定义的隐式转换，将cin类型转换为布尔值
 
-### Explicit Conversions
+## Explicit Conversions
 
 可以使用cast来进行显示转换，显示转换的格式为：
 
@@ -648,7 +625,7 @@ int ival = 3.541 + 3;
 
 其中`cast-name`为显示转换的方法，一共有四种，其中`dynamic_cast`在19.2节会进行详细说明，剩下三种如下：
 
-#### static_cast
+### static_cast
 
 任何定义了的转换（除了low-level const）都可以通过静态转换（static_cast）来执行，这里的`定义`指的是可能存在的转换。如double和int之间存在转换，但vector和int之间不存在转换，因此前者可以使用静态转换，后者不行。
 
@@ -684,7 +661,7 @@ slope is 3.33333
 `void*`转换为的目标指针必须是原先的值匹配，否则结果是未定义的。
 
 
-#### const_cast
+### const_cast
 
 low-level的const只能通过`const_cast`显示转换，`const_cast`唯一能做的是也只是转换low-level的const。
 
@@ -710,7 +687,7 @@ value2 is 3
 
 * 虽然在测试中得到了期望的结果，但是极度不推荐用这样的方法。
 
-#### reinterpret_cast
+### reinterpret_cast
 
 reinterpret_cast可以在更低的层次转换类型，因此提供了更多的转换可能。
 
@@ -726,7 +703,7 @@ string str = cstr;
 
 * 尽量避免使用reinterpret_cast,该操作太危险了
 
-#### Old-Style Casts
+### Old-Style Casts
 
 在C语言中，可以通过以下两种方式进行显示转换：
 
@@ -752,7 +729,7 @@ pv = static_cast<void *>(const_cast<string *>(ps));
 pv = (void *)ps;
 ```
 
-## Operator Precedence Table
+# Operator Precedence Table
 
 下图为C++所有操作符的含义，实例代码，结合性，优先级以双横线区分：
 
