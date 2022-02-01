@@ -7,8 +7,12 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Boos/C++ Primer/Ch 01 Getting Started.md",
+            "mode": "source",
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Boos/C++ Primer/Ch 01 Getting Started.md"
+              }
             }
           },
           {
@@ -85,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Boos/C++ Primer/Ch 01 Getting Started.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Boos/C++ Primer/Ch 01 Getting Started.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -152,7 +160,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Boos/C++ Primer/Untitled.md",
+    "Boos/C++ Primer/Ch 01 Getting Started.md",
+    "Boos/C++ Primer/Ch 00 Perface.md",
     "Boos/C++ Primer/CPPPrimer-Chapter7-Notes.md",
     "Boos/3D Math Primer For Graphics and Game Development.md",
     "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
@@ -160,7 +169,6 @@
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 3 1.png",
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 2.png",
     "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 07 Polar Coordinate Systems.md"
+    "Boos/3D Math Primer For Graphics and Game Development/Ch 09 Geometric Primitives.md"
   ]
 }
