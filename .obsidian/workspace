@@ -7,11 +7,9 @@
         "id": "fe6d1776fa79cc1f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
-            "mode": "preview",
-            "source": true
+            "file": "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png"
           }
         }
       }
@@ -70,7 +68,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md"
+                "file": "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png"
               }
             }
           },
@@ -91,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
+                "file": "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +122,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
+                "file": "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,15 +159,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
-    "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
-    "Boos/C++ Primer/Ch 08 The IO Library.md",
-    "Boos/C++ Primer/Ch 07 Classes.md",
-    "Boos/C++ Primer/Ch 06 Functions.md",
-    "Boos/C++ Primer/Ch 05 Statements.md",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-16-54.png",
     "Boos/C++ Primer/Ch 04 Expressions.md",
-    "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md",
-    "Boos/C++ Primer/Ch 01 Getting Started.md",
-    "Boos/C++ Primer/Ch 00 Perface.md",
-    "Boos/3D Math Primer For Graphics and Game Development.md"
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter2-Notes/2020-04-15-22-06-48.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter2-Notes/2020-02-07-18-04-25.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter2-Notes/2020-02-07-17-59-23.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter2-Notes/2020-02-07-17-43-40.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter2-Notes/2020-02-07-16-03-22.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/Ch4.png",
+    "Boos/C++ Primer/assets/CPPPrimer-Chapter5-Notes/Ch_5.png"
   ]
 }
