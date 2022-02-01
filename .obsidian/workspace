@@ -4,20 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "2bab721a45acf019",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Books/Learn Vim (The Smart Way).md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "6266e0aae2bf3f69",
+        "id": "12d6838d5873c284",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -37,11 +24,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cc0feaeb644e8d33",
+        "id": "4c299212244df453",
         "type": "tabs",
         "children": [
           {
-            "id": "ce10ad134417c42c",
+            "id": "2e2964158a2f5d05",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -49,7 +36,7 @@
             }
           },
           {
-            "id": "dec0f36b584acfce",
+            "id": "8fb228bd56d851b0",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -74,23 +61,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a920c0b03f312a16",
+        "id": "e9ec0dddb66d9d6b",
         "type": "tabs",
         "children": [
           {
-            "id": "a88227ad391a7366",
+            "id": "a7e39143692349f8",
             "type": "leaf",
             "state": {
-              "type": "outgoing-link",
+              "type": "outline",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "file": "Books.md"
               }
             }
           },
           {
-            "id": "53727ae9bab7a5a4",
+            "id": "4026a1071cb6fc93",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -101,22 +86,22 @@
             }
           },
           {
-            "id": "abd02e0ac9aa509b",
+            "id": "3707600d9a8c3fc4",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "outgoing-link",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md"
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a18ccac3c838de18",
+            "id": "53af9ce9e788a870",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,14 +116,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 449.5,
-    "collapsed": true
+    "width": 449.5
   },
-  "active": "2bab721a45acf019",
+  "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books.md",
     "Books/Learn Vim (The Smart Way).md",
     "Books/Learn OpenGL.md",
-    "Books.md",
     "Books/C++ Primer.md",
     "Books/3D Math Primer For Graphics and Game Development.md",
     "Books/Render Hell.md",
