@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tutorials/Unity Catlike.md",
+            "file": "Books.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tutorials/Unity Catlike.md"
+                "file": "Books.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tutorials/Unity Catlike.md",
+                "file": "Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tutorials/Unity Catlike.md",
+                "file": "Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,6 +122,7 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books.md",
     "Tutorials/Unity Catlike.md",
     "Tutorials/Unity Learn.md",
     "Books/Render Hell.md",
@@ -130,7 +131,6 @@
     "Books/C++ Primer.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md",
-    "Templates/Note-Template.md",
-    "Introduction to Algorithms.md"
+    "Templates/Note-Template.md"
   ]
 }
