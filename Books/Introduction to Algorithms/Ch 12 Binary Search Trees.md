@@ -1,22 +1,15 @@
 ---
-title: 《算法导论》 第十二章笔记
-mathjax: true
-date: 2019-11-06 14:10:37
-categories: 
-- 读书笔记
-- 数据结构与算法
 tags:
-- 读书笔记
-- 数据结构与算法
+    - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
-
-## Chapter 12. Binary Search Trees
 
 `搜索树(Search tree)`结构支持许多动态数组的操作，包括SEARCH，MINIMUM，MAXIMUM，PREDESCESSOR，SUCESSOR，INSERT和DELETE。
 
 对于一个有$n$个结点的完全二叉树，这些操作在最坏情况下的时间复杂度应该为$\Theta(n)$，而如果是一个随机建立的二叉树，复杂度应该为$\Theta(\lg n)$
 
-### What is a binary search tree?
+# What is a binary search tree?
 
 二叉搜索树的每一个结点（下使用`x`来表示）都包含一个$key$值以及三个指针$p$、$left$和$right$分别表示结点的父结点，左子结点和右子结点。
 
@@ -24,7 +17,7 @@ tags:
 
 大部分搜索树的操作都与树的高度有关，下图是两个搜索二叉树的情况：
 
-![二叉搜索树](IA-Chapter12-Notes/2019-10-26-16-21-45.png)
+![二叉搜索树](Ch%2012%20Binary%20Search%20Trees/2019-10-26-16-21-45.png)
 
 可以看到两个树都有8个结点，但(a)中的树较为平衡，树的深度较低，(b)树则很不平衡都集中在了右树上，树的深度较深。
 
@@ -58,11 +51,11 @@ $$
 
 满足猜测，所以证明得$T(n)=O(n)$。因此结合$T(n)=\Omega(n)$可得$T(n)=\Theta(n)$
 
-### Querying a binary search tree
+# Querying a binary search tree
 
 二叉树的一系列操作，如`MINIMUM`，`MAXIMUM`,`SUCCESSOR`,`PREDECESSOR`的时间复杂度都与树的高度有关，对一个高度为$h$的数，这些操作的复杂度为$O(h)$
 
-#### Searching
+## Searching
 
 根据二叉搜索树的特性，我们只要判断目标值是否与当前值相同，如果相同则返回当前节点，如果小于则在当前节点的左树搜索，否则在右树搜索
 
@@ -123,7 +116,7 @@ TreeNode* BinarySearchTree::Search(TreeNode* rootNode, int value)
 }
 ```
 
-#### Minimum and Maximum
+## Minimum and Maximum
 
 最大最小值的获取很简单，找到最左的节点即为最小值，找到最右的节点即为最大值，伪代码如下
 
@@ -177,7 +170,7 @@ TreeNode* BinarySearchTree::Minimum(TreeNode* node)
 }
 ```
 
-#### Successor and predecessor
+## Successor and predecessor
 
 `Successor`函数是找比当前结点值大的所有结点中，最小的一个
 `Predecessor`函数值找比当前结点值小的所有结点中，最大的一个
@@ -194,7 +187,7 @@ TreeNode* BinarySearchTree::Minimum(TreeNode* node)
 
 （2） 如果左子树为空，则需要从父节点中找寻比自己刚好小的节点，使用x.p遍历逐渐向上寻找祖先节点，直到遇到第一个祖先结点让当前结点或当前节点的祖先是它的右子树，这个父结点就是刚好小的节点。
 
-![二叉搜索树](IA-Chapter12-Notes/2019-11-05-17-12-58.png)
+![二叉搜索树](Ch%2012%20Binary%20Search%20Trees/2019-11-05-17-12-58.png)
 
 `Successor`和`Predecessor`伪代码
 
@@ -284,11 +277,11 @@ BSTreeNode* BinarySearchTree::Predecessor(int value)
 
 {% endnote %}
 
-### Insertion and deletion
+# Insertion and deletion
 
 二叉搜索树的插入和删除操作都需要保证改变的结点不会影响二叉搜索树的特性。
 
-#### Insertion
+## Insertion
 
 插入算法的思想是用一个变量（伪代码中是变量$x$）来找寻插入结点(伪代码中被插入结点为$z$)的位置，用另一个变量（伪代码中为$y$）来记录第一个变量的父节点。
 
@@ -352,7 +345,7 @@ void BinarySearchTree::Insert(int value)
 
 插入算法需要从上到下遍历整棵树，所以时间复杂度为$O(h)$
 
-#### Delete
+## Delete
 
 删除操作相比插入操作更复杂一些，需要考虑三种情况。将需要删除的结点称为$z$
 
@@ -384,7 +377,7 @@ void BinarySearchTree::Insert(int value)
 
 * $z$没有子结点的情况，也可以用(a)(b)表示，即将存在的结点看作为空。
 
-![删除示意图](IA-Chapter12-Notes/2019-11-06-13-46-14.png)
+![删除示意图](Ch%2012%20Binary%20Search%20Trees/2019-11-06-13-46-14.png)
 
 在实现DELETE算法前，需要先实现被反复用到的`替换`算法，伪代码如下
 
@@ -484,16 +477,6 @@ void BinarySearchTree::Delete(int value)
 
 删除操作算法并不存在循环，所以大部分操作都是固定时间，除了用来找`Successor`的MINIMUM算法，因为MINIMUM算法的复杂度为$O(h)$，所以删除算法的复杂度也为$O(h)$
 
-### Randomly built binary search trees
+# Randomly built binary search trees
 
 //TODO
-
-{% note primary %}
-
-引用：
-
-1. *Introduction to Algorithms* 3rd Sep.2009
-
-{% endnote %}
-
-***

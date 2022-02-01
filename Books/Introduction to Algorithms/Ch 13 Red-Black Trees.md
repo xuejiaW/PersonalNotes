@@ -1,22 +1,7 @@
 ---
-title: 《算法导论》 第十三章笔记
-mathjax: true
-date: 2019-11-16 23:12:31
-categories: 
-- 读书笔记
-- 数据结构与算法
 tags:
-- 读书笔记
-- 数据结构与算法
+    - Algorithms
 ---
-
-{% cq %}
-
-《算法导论》 第十三章笔记 红黑树实现
-
-{% endcq %}
-
-<!--more-->
 
 # Chapter 13. Red-Black Trees
 
