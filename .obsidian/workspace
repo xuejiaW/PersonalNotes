@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books.md",
-            "mode": "preview",
+            "file": "Books/Introduction to Algorithms.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books.md"
+                "file": "Books/Introduction to Algorithms.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books.md",
+                "file": "Books/Introduction to Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books.md",
+                "file": "Books/Introduction to Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,6 +122,8 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books/Introduction to Algorithms.md",
+    "Templates/Book-Template.md",
     "Books.md",
     "Tutorials/Unity Catlike.md",
     "Tutorials/Unity Learn.md",
@@ -129,8 +131,6 @@
     "Books/Learn OpenGL.md",
     "Books/3D Math Primer For Graphics and Game Development.md",
     "Books/C++ Primer.md",
-    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
-    "Books/Learn Vim (The Smart Way)/Ch 09 Macros.md",
-    "Templates/Note-Template.md"
+    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png"
   ]
 }
