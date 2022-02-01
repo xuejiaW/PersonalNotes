@@ -1,13 +1,14 @@
 ---
 tags:
     - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-# Chapter 13. Red-Black Trees
 
 红黑树是众多让二叉搜索树达到平衡的树形结构之一。树达到平衡可以保证动态操作，如删除，插入，搜索等，复杂度都为$O(lgn)$。
 
-## Properties of red-black trees
+# Properties of red-black trees
 
 红黑树是一种特殊的二叉搜索树，每个结点需要花费额外一个bit来存储结点的颜色信息，颜色为红或者黑。红黑树保证了整棵树，不会有一个路径是另一个路径的两倍长。
 
@@ -84,7 +85,7 @@ tags:
 
 因为一个有$n$个结点的红黑树，其高度$h$最多为$2\lg (n+1)$，且二叉搜索树的操作时间复杂度都为$O(h)$，所以红黑树操作的时间复杂度为$O(\lg n)$
 
-## Rotations
+# Rotations
 
 红黑树的插入和删除操作都可能破坏红黑树特性。为了保证红黑树的特性，可以在两个操作后通过修改结点的颜色，和改变树的部分结构保证其仍然满足红黑树的特性。
 
@@ -217,7 +218,7 @@ bool RBTree::RightRotate(RBTreeNode* node)
 
 左旋及右旋操作的时间复杂度都为$O(1)$
 
-## Insertion
+# Insertion
 
 红黑树插入算法的思想为，先像普通的二叉搜索树一样插入结点，然后调用`RB-INSERT-FIXUP`函数调整树使其满足红黑树特性。
 
@@ -478,7 +479,7 @@ void RBTree::InsertFixUp(RBTreeNode* node)
 
 因为`RB-INSERT`操作是一层层的向下搜索可以插入的点，所以复杂度与树的高度有关，即为$O(\lg n)$，`RB-INSERT-FIXUP`操作只有在情况1的情况下会继续循环，且每次循环前都将$z$向上移两位，因此执行次数是层数的一半，时间复杂度也为$O(\lg n)$。综上，红黑树插入操作总体的时间复杂度为$O(\lg n)$。
 
-## Deletion
+# Deletion
 
 如二叉搜索树一样，红黑树的删除操作同样需要`Transplant`操作来用一个结点替换另一个，这里与二叉搜索树不同的只是将`Null`变为了`T.nil`，以及在设置$v.p$时不需要额外的判断，因为即使$v$是哨兵，访问$v.p$也不会出错
 

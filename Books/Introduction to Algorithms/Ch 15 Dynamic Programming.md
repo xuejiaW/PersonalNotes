@@ -1,26 +1,9 @@
 ---
-title: 《算法导论》 第十五章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 数据结构与算法
 tags:
-  - 读书笔记
-  - 数据结构与算法
-date: 2019-11-26 13:51:03
+    - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
-
-{% cq %}
-
-《算法导论》 第十五章笔记，介绍动态规划的概念及一些运用了动态规划的算法。
-
-15.4及15.5节尚未整理
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 15. Dynamic Programming
 
 动态规划(Dynamic Programming)如分治法(divide-and-conquer method)一样都是通过组合子问题的解答来解决问题。两者的区别在于：
 
@@ -38,7 +21,7 @@ date: 2019-11-26 13:51:03
 
 步骤1-3是动态规划解决问题的基础，如果只需要求得最优解的值而非最优解本身，可以忽略步骤4。
 
-## Rod cutting
+# Rod cutting
 
 钢条切割问题(Rod cutting)是假设存在一个钢条，切割成不同长度可以卖不同的钱，设切割出的长度为$i$，对应这一段长度的卖价为$P_i$。假设钢条长度从1-10的卖价如下
 
@@ -80,7 +63,7 @@ $$
 
 这就是钢条切割问题的最佳解结构：整个问题的最佳解是与子问题的最佳解相关的。如上式中，最佳解的值是依赖于子问题的最佳解的值得到的。
 
-### 递归解法
+## 递归解法
 
 递归解法的伪代码如下，这个方法就是对式子$r_n=\max_{1\leq i \leq n}(p_i + r_{n-i})$的实现
 
@@ -146,7 +129,7 @@ int CutRod(int* priceTable, int rodLength)
 }
 ```
 
-### using dynamic programming for optimal rod cutting
+## using dynamic programming for optimal rod cutting
 
 在上一节的递归算法中，因为大量重复的计算导致了算法的低效。在动态规划的解法中，实际上是通过将计算过的子问题的解存储下来，之后再次遇到直接返回结果即可，所以动态规划本质上是一个空间与时间的权衡(time-memory trade-off)。
 
@@ -302,7 +285,7 @@ int CutRod(int* priceTable, int rodLength)
 
 虽然两个方法的时间复杂度都是$\Theta(n^2)$，但是`BOTTOM-UP-CUT-ROD`在实际使用中因为减少了函数的递归调用时间，所以更为高效。
 
-### Subproblem graphs
+## Subproblem graphs
 
 子问题图（subproblem graphs）是一个有向图，每一个顶点都对应一个子问题。如果代表子问题$x$的结点指向代表子结点$y$的结点，则说明$x$问题的解依赖于$y$。
 
@@ -312,7 +295,7 @@ int CutRod(int* priceTable, int rodLength)
 
 子问题图可以用来获知动态规划问题的时间复杂度，因为图中的一个结点表示一个子问题，图中连接结点的边表示用来组合两个子问题答案的时间，因此用来解决整个动态规划问题的时间基本上与子问题图的顶点数+边数是呈线性关系的。
 
-### Reconstructing a solution
+## Reconstructing a solution
 
 上面的所有关于钢条切割问题的算法都只计算了钢条的最大售价（最佳解的值），而对于这个问题真正的解，如何切割钢条（最后钢条要切成几块，每块多长），并没有得出。所以上面的所有步骤都只完成了解动态规划问题四步骤的前三步。
 
@@ -414,7 +397,7 @@ int CutRodSolution(int* priceTable, int rodLength)
 }
 ```
 
-## Matrix-chain multiplication
+# Matrix-chain multiplication
 
 定义有一系列的矩阵$<A_1,A_2,...,A_n>$，要计算这一些矩阵的乘积即$A_1A_2...A_n$。因为矩阵满足乘法合并律，所以可以决定哪一部分先相乘。
 
@@ -471,7 +454,7 @@ Matrix* Matrix::multiply(Matrix* mat)
 
 `将矩阵乘法问题（matrix-chain multiplication problem）`定义为：对于数目为$n$的一些列矩阵$<A_1,A_2,...,A_n>$，为了满足矩阵相乘的要求，矩阵$A_i$的大小都为$p_{i-1}\times p_i$，要求的使相乘计算量最小的矩阵相乘顺序。
 
-### Counting the number of parenthesizations
+## Counting the number of parenthesizations
 
 首先确认暴力枚举所有可能的顺序这个方法是很低效的，用$P(n)$来表示所有可能的计算顺序。设有$n$个矩阵，当$n=1$的情况下，只有一种可能，当$n\geq 2$的情况下，可以将$n$拆成两部分，$k$和$n-k$，所有的可能为这两部分可能的乘积，即$P(k)P(n-k)$。所以,
 
@@ -500,7 +483,7 @@ $$
 
 因此暴力枚举所有可能的顺序时间复杂度是一个指数型的函数， 效率是十分低下的。
 
-### Applying dynamic programming
+## Applying dynamic programming
 
 可以用动态规划来解决这个问题，这里根据之前定义的动态规划四步骤来解决答案：
 
@@ -509,7 +492,7 @@ $$
 3. 计算出最优解的值，通常是通过一个自下而上的递归方式解决
 4. 使用计算得出的数据构建出最优解
 
-#### Step 1:The structure of an optimal parethesization
+### Step 1:The structure of an optimal parethesization
 
 用符号$A_{i...j}$表示矩阵序列$A_i,A_{i+1},...,A_{j}$的乘积，在$i\neq j$的情况下，可以将矩阵序列拆成两部分，$A_i,A_{i+1},...,A_{k}$和$A_{k+1},A_{k+2},...,A_{j}$，其中$i\leq k < j$。
 
@@ -519,7 +502,7 @@ $$
 
 因此矩阵相乘问题的最优解也变为了先求得两个子问题的最优解，再将两个最优解合并起来。
 
-#### Step2: A recursive solution
+### Step2: A recursive solution
 
 用$m[i,j]$来表示$A_{i...j}$的操作量，根据Step1中的解释，$A_{i...j}$的花费变成了$A_{i...k}$的花费加上$A_{k+1...j}$的花费再加上将两部分结果相乘的时间。
 
@@ -536,7 +519,7 @@ $$
 
 但$m[i,j]$表示的只是最佳解的值，为了获得最佳解，需要定义一个$s[i,j]$，它记录每个子问题的最佳解时$k$的值。
 
-#### Step 3: Computing the optimal costs
+### Step 3: Computing the optimal costs
 
 $m[i,j]$的计算依赖于矩阵的尺寸$p_{i-1} \times p_i$，如果存在$n$个矩阵，则表示数据尺寸的数组有$n+1$个元素，因为对于$A_1$而言，尺寸为$p_0 \times p_1$，所以$p$的数组是从0到$n$。
 
@@ -642,7 +625,7 @@ int matrixSizeArray[] = { 30,35,15,5,10,20,25 };
 
 因为算法有三种循环，所以时间复杂度为$O(n^3)$，且算法需要$\Theta(n^2)$的空间复杂度。
 
-#### Step 4: Constructing an optimal solution
+### Step 4: Constructing an optimal solution
 
 在步骤三中求得的$m[i,j]$只是最佳解的值。如例子中如果要求6个矩阵的最小工作量，可以从$m[i,j]$的最顶部获得，为$15125$。但如果要求6个矩阵最佳情况下该以怎样的顺序进行计算，步骤三并没有直接给出。这里可以通过步骤三中获得的$s[i,j]$矩阵获取矩阵相乘最佳情况下的顺序。
 
@@ -688,11 +671,11 @@ void PrintOptimalParens(Matrix* minMultiplicationsCut, int i, int j)
 
 输入值为$0\sim5$的话，最终结果为$((A_0(A_1A_2))((A_3A_4)A_5))$。
 
-## Elements of dynamic programming
+# Elements of dynamic programming
 
 一个优化问题可以用动态规划解决必须有两个关键因素：`最优子结构（Optimal substructure）`和`重叠的子问题（overlapping subproblems）`。
 
-### Optimal substructure
+## Optimal substructure
 
 如果一个问题具有最优子结构，那么这个问题的最优解一定是伴随着他的子问题的最优解。
 
@@ -728,7 +711,7 @@ void PrintOptimalParens(Matrix* minMultiplicationsCut, int i, int j)
 
 例如钢条切割问题，长度为$n$的钢条，一共有$\Theta(n)$个子问题，每个子问题最多有$n$个可能性，所以时间复杂度为$O(n^2)$。对于矩阵乘法问题，因为$i$和$j$的变化，一共有$\Theta(n^2)$个子问题，每个子问题最多有$n-1$个可能性，所以时间复杂度为$O(n^3)$。
 
-#### Subtitles
+### Subtitles
 
 需要注意不要在不是最优子结构的时候使用动态规划。
 
@@ -748,7 +731,7 @@ void PrintOptimalParens(Matrix* minMultiplicationsCut, int i, int j)
 
 如果从$u$到$w$和从$w$到$v$两个子问题中都需要经过结点$x$，即路径时$u\rightarrow x\rightarrow w$和$w \rightarrow x \rightarrow v$，那么$x \rightarrow w$和$w \rightarrow x$可以相互抵消，最终路径为$u \rightarrow x \rightarrow v$。这又与经过$w$的假设不匹配，所以两端路径不可能都经过$x$。
 
-### Overlapping subproblems
+## Overlapping subproblems
 
 另一个动态规划需要满足的要求是重叠子问题，即在递归子问题空间中的问题时，子问题是需要是重复出现的，而不是一直出现新的子问题。与动态规划相对的是分治法，在分治法中，解决的每个的子问题都是全新的子问题，其中也不包含已经解决的小子问题。
 
@@ -824,11 +807,11 @@ $$
 
 得证。而使用动态递归的方法，将时间复杂度变味了$n^3$，大幅提升了算法的效率。
 
-### Reconstructing an optimal solution
+## Reconstructing an optimal solution
 
 为了重构出最佳解（在写算法时，关注的是最佳解的值），需要在计算过程中保留一些关键数据，如在矩阵乘法问题中保存每一步的$k$值，即矩阵$s[i,j]$
 
-### Memoization
+## Memoization
 
 如在求解钢条切割问题一样，矩阵乘法问题也可以通过自顶向下的备忘录法解决，伪代码如下：
 
@@ -892,11 +875,11 @@ int LookupChain(int* matrixSizeArray, Matrix* minMultiplications, int i, int j)
 
 如果一个问题的子问题空间中的所有问题都必须被解决，那么自底向上法的效率更高，因为它减少了函数调用堆栈的花销。但如果子问题空间的问题并一定需要全部被解决，那么自顶向下备忘法可能效率更高，因为他只会计算需要用到的子问题。
 
-## Longest common subsequence
+# Longest common subsequence
 
 //TODO
 
-## Optimal binary search trees
+# Optimal binary search trees
 
 //TODO
 
