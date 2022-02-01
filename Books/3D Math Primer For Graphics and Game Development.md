@@ -1,6 +1,6 @@
 ---
 created: 2022-01-20
-updated: 2022-02-01
+updated: 2022-02-02
 Cover: https://images-na.ssl-images-amazon.com/images/I/51Dake5LWcL._SX404_BO1,204,203,200_.jpg
 Author:
     - Fletcher Dunn

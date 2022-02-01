@@ -1,32 +1,17 @@
 ---
-title: 《算法导论》 第三章笔记
-mathjax: true
-date: 2019-11-05 13:55:48
-categories: 
-- 读书笔记
-- 数据结构与算法
 tags:
-- 读书笔记
-- 数据结构与算法
+    - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
+# Asymptotic notation
 
-《算法导论》 第三章笔记，包括时间复杂度符号即一些基本的数学公式
-
-{% endcq %}
-
-<!--more-->
-
-## Chapter 3. Growth of Functions
-
-### Asymptotic notation
-
-#### Asymptotic notation,functions,and running time
+## Asymptotic notation,functions,and running time
 
 书中所有的渐进符号都是用来用来表达算法的运算时间的，虽然渐进符号也能用来表示算法的其他资源，如内存，硬盘空间等。
 
-#### $\Theta$-notation
+## $\Theta$-notation
 
 在第二章中，描述插入算法的最坏情况下$T(n)=\Theta(n^2)$，但没有详细解释$\Theta$含义，
 这一节给出了定义。
@@ -64,7 +49,7 @@ $$
 
 那么当$n$足够大时（大于$n_0$）,则逼近于$c_1 \leq \frac{1}{2}\leq c_2$，明显可以可以找到$c_1$和$c_2$满足该不等式是。这里的$c_1$和$c_2$取值可以有无数种组合。
 
-#### $O$-notation
+## $O$-notation
 
 $O$标记表示渐进上边界，定义为对函数$f(n)$，如果存在常数$c$和$n_0$使得对于任意$n\geq n_0$，满足
 
@@ -84,7 +69,7 @@ $$
 
 而渐进紧确界$\Theta$则不满足上述情况，在插入算法中，最坏和最好情况下，表达式分别为$\Theta(n^2)$和$\Theta(n)$。这里不同的是$\Theta(n^2)$不能用于描述最好情况，因为你无法找到一个常量$c$，在$n$足够大的情况下，仍然满足$n^2<cn$。
 
-#### $\Omega$-notation
+## $\Omega$-notation
 
 $\Omega$标记提供了符号渐进下边界，定义为存在常数$c$和$n_0$使得对于任意$n\geq n_0$，满足
 
@@ -105,11 +90,11 @@ $\Omega$标记的证明与$\Theta$类似，且与$O$一样都能描述算法的�
 
 {% endnote %}
 
-#### Asymoptotic notation in equations and inequalities
+## Asymoptotic notation in equations and inequalities
 
 在书中，有时会在表达式和不等式中用渐进表达式来省去一些不关注的细节，如表达式$2n^2+3n+1=2n^2+\Theta(n)$表示$2n^2+3n+1=2n^2+f(n)$，其中$f(n)\in \Theta(n)$
 
-#### $o$-notation
+## $o$-notation
 
 如之前在$O$标记一节中描述的，$O$标记可以表示紧密上边界和非紧密上边界，如对于函数$2n^2$,$O(n^2)$即为紧密上边界，而$O(n^3)$则不是。
 
@@ -129,7 +114,7 @@ $$
 \lim_{n\rightarrow \infty}\frac{f(n)}{g(n)}=0
 $$
 
-#### $\omega$ -notation
+## $\omega$ -notation
 
 $\omega$标记对于$\Omega$标记就如同$o$标记对于$O$标记。$\omega$标记的定义为，对于任意正常量$c$，都存在一个对应的常量$n_0$使得在$n\geq n_0$时满足
 
@@ -145,7 +130,7 @@ $$
 
 $o$标记和$\omega$标记的关系可以表达为：当且仅当$g(n)\in o(f(n))$时，$f(n)\in \omega(g(n))$
 
-#### Comparing functions
+## Comparing functions
 
 渐进标记与数学中的不等式有点类似，同样都满足传递法，如a<b，b<c，则a<c。
 
@@ -161,11 +146,11 @@ $f(n)=\omega(g(n))$ 类似于 $a > b$
 
 但与不等式不同的是，对于两个数字，关系要么满足大于等于，要么满足小于等于。但对于渐进标记，存在两个函数$f(n)$和$g(n)$，可能即不满足$f(n)=O(g(n))$，也不满足$f(n)=\Omega(g(n))$，如函数$n$与$n^{1+\sin n}$，因为$n^{1+\sin n}$的次幂始终在变化，在0-2之间摇摆。
 
-### Standard notations and common functions
+# Standard notations and common functions
 
 这一节主要是介绍一些数学内容，这里只列出关键的结论，定理和公式，并没有完整证明。
 
-#### Floors and ceilings（向上取整与向下取整）
+## Floors and ceilings（向上取整与向下取整）
 
 一些定理及公式
 
@@ -179,17 +164,17 @@ $$ \lceil \frac{a}{b} \rceil \leq \frac{a+(b-1)}{b} $$
 
 $$ \lfloor \frac{a}{b} \rfloor \geq \frac{a-(b-1)}{b} $$
 
-#### Modular arithmetic（求余）
+## Modular arithmetic（求余）
 
 $$ a mod n =a -n\lfloor a/n \rfloor$$
 
 如果存在$(a mod n ) = (b mod n)$，可写作$a\equiv b \text { (mod n)}$
 
-#### Polunomials(多项式)
+## Polunomials(多项式)
 
 对于某个常量$k$，如果有$f(n)=O(n^k)$则称函数$f(n)$是多项式有界的
 
-#### Exponentials（指数）
+## Exponentials（指数）
 
 $$(a^m)^n=a^{mn}$$
 
@@ -208,7 +193,7 @@ $$ \lim_{n\rightarrow \infty}\frac{n^b}{a^n}=0$$
 
 $$n^b=o(a^n)$$
 
-#### Logarithms（对数）
+## Logarithms（对数）
 
 $$ \lg ^kn=(\lg n)^k$$
 $$ a=b^{\log_ba} $$
@@ -229,13 +214,13 @@ $$ \lim_{n\rightarrow \infty}\frac{\lg^bn}{n^a}=0$$
 
 $$\lg^bn=o(n^a)$$
 
-#### Factorials(阶乘)
+## Factorials(阶乘)
 
 $$n!\leq n^n \text{ 即 }n!=o(n^n)$$
 $$ n!=\omega 2^n$$
 $$ \lg(n^!)=\Theta(n\lg n)$$
 
-#### Functional iteration (多重函数)
+## Functional iteration (多重函数)
 
 可看作是函数的递归嵌套，递归次数用括号包裹的次幂表示，如$f^{(i)}(n)$，表示递归$i$次
 
@@ -251,7 +236,7 @@ $$
 
 注意区分$\lg^in$与$\lg^{(i)}n$，前者是$\lg n$的$i$次幂，后者是对$n$连续使用$i$次对数函数。
 
-#### The iterated logarithm function (多重对数函数)
+## The iterated logarithm function (多重对数函数)
 
 使用$lg*n$表示多重对数函数，定义为
 
@@ -266,7 +251,7 @@ $$\log_265536=16 \rightarrow \log_216=4 \rightarrow \log_24=2 \rightarrow \log_2
 
 即分别需要三次和四次运算才能满足条件。
 
-#### 斐波那契数列
+## 斐波那契数列
 
 斐波那契数列定义为：
 

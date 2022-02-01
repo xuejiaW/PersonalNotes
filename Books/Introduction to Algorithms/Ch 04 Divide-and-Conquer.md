@@ -1,33 +1,16 @@
 ---
-title: 《算法导论》 第四章笔记
-mathjax: true
-date: 2019-11-05 14:07:07
-categories: 
-- 读书笔记
-- 数据结构与算法
 tags:
-- 读书笔记
-- 数据结构与算法
+    - Algorithms
 ---
 
-{% cq %}
-
-《算法导论》第四章笔记。包括分治法的介绍，最大子数组问题算法与分析，矩阵相乘问题问题算法与分析，代入法、递归树法、主方法求时间复杂度。
-4.6节尚未整理。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 4. Divide-and-Conquer
 
 在分析分治法的时候一般无视了许多细节，例如在分析归并排序时，如果考虑到$n$存在奇、偶情况，那么表达式应该写成
 
 $$
 T(n)=\begin{cases}
-     \Theta(1) & \text{ if }  n=1
+     \Theta(1) & \text{ if } n=1
      \\\\
-     T(\lceil n/2 \rceil)+T(\lfloor n/2 \rfloor)+\Theta(n) & \text{ if }  n>1
+     T(\lceil n/2 \rceil)+T(\lfloor n/2 \rfloor)+\Theta(n) & \text{ if } n>1
 \end{cases}
 $$
 
@@ -37,7 +20,7 @@ $$T(n)=2T(n/2)+\Theta(n)$$
 
 ## The Maximum-subarray problem
 
-从一个整数数组中找寻出值最大的子数组。如下图所示的数组中，$A[8..11]$即为最大数组，和为43
+从一个整数数组中找寻出值最大的子数组。如下图所示的数组中，$A[8..11]$即为最大数组，和为 43
 
 ![最大子数组](IA-Chapter4-Notes/2019-10-20-10-30-15.png)
 
@@ -50,23 +33,23 @@ $$T(n)=2T(n/2)+\Theta(n)$$
 ```cpp
 int FindMaximumSubarray_BruteForce(int* originArray, int arrayLength, int& leftIndex, int& rightIndex)
 {
-	int maxSum = -INT_MAX, sum = 0;
-	leftIndex = rightIndex = 0;
-	for (int i = 0; i < arrayLength; i++)
-	{
-		sum = 0;
-		for (int j = i; j < arrayLength; ++j)
-		{
-			sum += originArray[j];
-			if (sum > maxSum)
-			{
-				maxSum = sum;
-				leftIndex = i;
-				rightIndex = j;
-			}
-		}
-	}
-	return maxSum;
+    int maxSum = -INT_MAX, sum = 0;
+    leftIndex = rightIndex = 0;
+    for (int i = 0; i < arrayLength; i++)
+    {
+        sum = 0;
+        for (int j = i; j < arrayLength; ++j)
+        {
+            sum += originArray[j];
+            if (sum > maxSum)
+            {
+                maxSum = sum;
+                leftIndex = i;
+                rightIndex = j;
+            }
+        }
+    }
+    return maxSum;
 }
 ```
 
@@ -96,9 +79,9 @@ else
         return [cross-low,cross-high,cross-sum]
 ```
 
-在求左右半边的最大子数组时使用了迭代，现在还要解决的就是求交叉最大子数组FIND-MAX-CROSSING-SUBARRAY函数的定义。
+在求左右半边的最大子数组时使用了迭代，现在还要解决的就是求交叉最大子数组 FIND-MAX-CROSSING-SUBARRAY 函数的定义。
 
-交叉最大子数组一定一部分处于左半数组，一部分处于右半。从Index mid处向左和向右各寻找最大的左部分，然后将左右部分结合便形成了最大的交叉子数组。
+交叉最大子数组一定一部分处于左半数组，一部分处于右半。从 Index mid 处向左和向右各寻找最大的左部分，然后将左右部分结合便形成了最大的交叉子数组。
 
 求交叉最大子数组伪代码如下：
 
@@ -127,76 +110,76 @@ return (max-left-index,max-right-index,left-sum + right-sum)
 
 ```
 
-完整C++实现代码如下：
+完整 C++实现代码如下：
 
 ```c++
 int FindMaximumSubarray_DivideAConquer(int* originArray, int leftIndex, int rightIndex, int& maxLeftIndex, int& maxRightIndex)
 {
-	if (leftIndex == rightIndex)
-	{
-		maxLeftIndex = maxRightIndex = leftIndex;
-		return originArray[leftIndex];
-	}
+    if (leftIndex == rightIndex)
+    {
+        maxLeftIndex = maxRightIndex = leftIndex;
+        return originArray[leftIndex];
+    }
 
-	int midIndex = (leftIndex + rightIndex) / 2;
+    int midIndex = (leftIndex + rightIndex) / 2;
 
-	int sumLeft = 0, leftMaxLeftIndex = 0, leftMaxRightIndex = 0;
-	sumLeft = FindMaximumSubarray_DivideAConquer(originArray, leftIndex, midIndex, leftMaxLeftIndex, leftMaxRightIndex);
+    int sumLeft = 0, leftMaxLeftIndex = 0, leftMaxRightIndex = 0;
+    sumLeft = FindMaximumSubarray_DivideAConquer(originArray, leftIndex, midIndex, leftMaxLeftIndex, leftMaxRightIndex);
 
-	int sumRight = 0, rightMaxLeftIndex = 0, rightMaxRightIndex = 0;
-	sumRight = FindMaximumSubarray_DivideAConquer(originArray, midIndex + 1, rightIndex, rightMaxLeftIndex, rightMaxRightIndex);
+    int sumRight = 0, rightMaxLeftIndex = 0, rightMaxRightIndex = 0;
+    sumRight = FindMaximumSubarray_DivideAConquer(originArray, midIndex + 1, rightIndex, rightMaxLeftIndex, rightMaxRightIndex);
 
-	int sumCross = 0, crossMaxLeftIndex = 0, crossMaxRightIndex = 0;
-	sumCross = FindCrossingMaximumSubarray(originArray, leftIndex, midIndex, rightIndex, crossMaxLeftIndex, crossMaxRightIndex);
+    int sumCross = 0, crossMaxLeftIndex = 0, crossMaxRightIndex = 0;
+    sumCross = FindCrossingMaximumSubarray(originArray, leftIndex, midIndex, rightIndex, crossMaxLeftIndex, crossMaxRightIndex);
 
-	if (sumLeft >= sumRight && sumLeft >= sumCross)
-	{
-		maxLeftIndex = leftMaxLeftIndex;
-		maxRightIndex = leftMaxRightIndex;
-		return sumLeft;
-	}
-	else if (sumRight >= sumLeft && sumRight >= sumCross)
-	{
-		maxLeftIndex = rightMaxLeftIndex;
-		maxRightIndex = rightMaxRightIndex;
-		return sumRight;
-	}
-	else
-	{
-		maxLeftIndex = crossMaxLeftIndex;
-		maxRightIndex = crossMaxRightIndex;
-		return sumCross;
-	}
+    if (sumLeft >= sumRight && sumLeft >= sumCross)
+    {
+        maxLeftIndex = leftMaxLeftIndex;
+        maxRightIndex = leftMaxRightIndex;
+        return sumLeft;
+    }
+    else if (sumRight >= sumLeft && sumRight >= sumCross)
+    {
+        maxLeftIndex = rightMaxLeftIndex;
+        maxRightIndex = rightMaxRightIndex;
+        return sumRight;
+    }
+    else
+    {
+        maxLeftIndex = crossMaxLeftIndex;
+        maxRightIndex = crossMaxRightIndex;
+        return sumCross;
+    }
 }
 
 int FindCrossingMaximumSubarray(int* originArray, int leftIndex, int midIndex, int rightIndex, int& maxLeftIndex, int& maxRightIndex)
 {
-	int maxSumLeft = -INT_MAX;
-	int sum = 0;
-	for (int i = midIndex; i >= leftIndex; i--)
-	{
-		sum += originArray[i];
-		if (sum > maxSumLeft)
-		{
-			maxLeftIndex = i;
-			maxSumLeft = sum;
-		}
-	}
+    int maxSumLeft = -INT_MAX;
+    int sum = 0;
+    for (int i = midIndex; i >= leftIndex; i--)
+    {
+        sum += originArray[i];
+        if (sum > maxSumLeft)
+        {
+            maxLeftIndex = i;
+            maxSumLeft = sum;
+        }
+    }
 
-	int maxSumRight = -INT_MAX;
-	sum = 0;
+    int maxSumRight = -INT_MAX;
+    sum = 0;
 
-	for (int i = midIndex + 1; i <= rightIndex; i++)
-	{
-		sum += originArray[i];
-		if (sum > maxSumRight)
-		{
-			maxRightIndex = i;
-			maxSumRight = sum;
-		}
-	}
+    for (int i = midIndex + 1; i <= rightIndex; i++)
+    {
+        sum += originArray[i];
+        if (sum > maxSumRight)
+        {
+            maxRightIndex = i;
+            maxSumRight = sum;
+        }
+    }
 
-	return maxSumLeft + maxSumRight;
+    return maxSumLeft + maxSumRight;
 }
 ```
 
@@ -228,10 +211,10 @@ SQUARE-MATRIX-MULTIPLY(A,B)
 n= A.rows
 let C be a new n*n matrix
 for i = 1 to n
-	for j = 1 to n
-		c_ij = 0
-		for k = 1 to n
-			c_ij=c_ij+a_ik*b_kj
+    for j = 1 to n
+        c_ij = 0
+        for k = 1 to n
+            c_ij=c_ij+a_ik*b_kj
 return C
 ```
 
@@ -240,67 +223,67 @@ c++实现如下：
 ```cpp
 Matrix MatrixMultiply(const Matrix& A, const Matrix& B)
 {
-	Matrix result(A.row, B.column);
+    Matrix result(A.row, B.column);
 
-	for (int i = 0; i < A.row; i++)
-	{
-		for (int j = 0; j < B.column; ++j)
-		{
-			for (int k = 0; k < A.column; k++)
-			{
-				result.data[i][j] = result.data[i][j] + A.data[i][k] * B.data[k][j];
-			}
-		}
-	}
-	return result;
+    for (int i = 0; i < A.row; i++)
+    {
+        for (int j = 0; j < B.column; ++j)
+        {
+            for (int k = 0; k < A.column; k++)
+            {
+                result.data[i][j] = result.data[i][j] + A.data[i][k] * B.data[k][j];
+            }
+        }
+    }
+    return result;
 }
 ```
 
-* 伪代码实现假设相乘的两个矩阵大小都是$n\times n$，在c++实现中可以是任意满足矩阵相乘的条件的矩阵大小。
+- 伪代码实现假设相乘的两个矩阵大小都是$n\times n$，在 c++实现中可以是任意满足矩阵相乘的条件的矩阵大小。
 
-可以很容易的看出，`SQUARE-MATRIX-MULTIPLY`的复杂度为$O(n^3)$
+可以很容易的看出，`SQUARE-MATRIX-MULTIPLY` 的复杂度为$O(n^3)$
 
 ### A simple dividea-and-conquer algorithm
 
-可以用分治法来解决矩阵相乘问题，为了简化问题，假设两个相乘的矩阵大小都是$n\times n$，且$n$的值为某个2的次幂。
+可以用分治法来解决矩阵相乘问题，为了简化问题，假设两个相乘的矩阵大小都是$n\times n$，且$n$的值为某个 2 的次幂。
 
 首先将两个相乘的矩阵都拆成四部分，即每部分的长度为$n/2$，可以将每部分都看作是一个简单元素，于是问题转换为了两个$2\times2$矩阵的运算（两个$2\times2$矩阵中的每个元素都是一个子矩阵）。对于其中子矩阵相乘的计算可使用相同策略，即再进一步拆分成四个更小的子矩阵。
 
-数学说明如下，A和B为两个相乘的矩阵，C为结果矩阵：
+数学说明如下，A 和 B 为两个相乘的矩阵，C 为结果矩阵：
 
 $$
 A=\begin{pmatrix}
-	A_{11} & A_{12}\\\\
-	A_{21} & A_{22}
+    A_{11} & A_{12}\\\\
+    A_{21} & A_{22}
 \end{pmatrix}
 $$
 $$
 B=\begin{pmatrix}
-	B_{11} & B_{12}\\\\
-	B_{21} & B_{22}
+    B_{11} & B_{12}\\\\
+    B_{21} & B_{22}
 \end{pmatrix},
 $$
 $$
 C=\begin{pmatrix}
-	C_{11} & C_{12}\\\\
-	C_{21} & C_{22}
+    C_{11} & C_{12}\\\\
+    C_{21} & C_{22}
 \end{pmatrix}
 $$
 $$
 
 C=A \cdot B =\begin{pmatrix}
-	C_{11} & C_{12}\\\\
-	C_{21} & C_{22}
+    C_{11} & C_{12}\\\\
+    C_{21} & C_{22}
 \end{pmatrix}=\begin{pmatrix}
-	A_{11} & A_{12}\\\\
-	A_{21} & A_{22}
+    A_{11} & A_{12}\\\\
+    A_{21} & A_{22}
 \end{pmatrix}\cdot \begin{pmatrix}
-	B_{11} & B_{12}\\\\
-	B_{21} & B_{22}
+    B_{11} & B_{12}\\\\
+    B_{21} & B_{22}
 \end{pmatrix}
 $$
 
-C中的各子矩阵的计算可以看作是普通元素的计算，即满足：
+C 中的各子矩阵的计算可以看作是普通元素的计算，即满足：
 $$
 C_{11}=A_{11}\cdot B_{11} +A_{12} \cdot B_{21}\\\\
 C_{12}=A_{11}\cdot B_{12} +A_{12} \cdot B_{22}\\\\
@@ -308,7 +291,7 @@ C_{21}=A_{21}\cdot B_{11} +A_{22} \cdot B_{21}\\\\
 C_{22}=A_{21}\cdot B_{12} +A_{22} \cdot B_{22}\\\\
 $$
 
-可以看到，需要8个子矩阵的相乘，每个子矩阵的大小是$n/2$，即将问题拆分成了8个子问题。
+可以看到，需要 8 个子矩阵的相乘，每个子矩阵的大小是$n/2$，即将问题拆分成了 8 个子问题。
 
 分治计算矩阵相乘的伪代码如下：
 
@@ -318,82 +301,82 @@ SQUARE-MATRIX-MULTIPLY-RECURSIVE(A,B)
 n = a.rows;
 let C be a new n*n matrix
 if n == 1
-	c_11=a_11 * b_11
+    c_11=a_11 * b_11
 else
-	divide A,B,C into 4 submatrix
-	C_11 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_11,B_11)+
-		SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_12,B_21)
-	C_12 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_11,B_22)+
-		SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_12,B_22)
-	C_21 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_21,B_11)+
-		SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_22,B_21)
-	C_12 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_21,B_12)+
-		SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_22,B_22)
+    divide A,B,C into 4 submatrix
+    C_11 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_11,B_11)+
+        SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_12,B_21)
+    C_12 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_11,B_22)+
+        SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_12,B_22)
+    C_21 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_21,B_11)+
+        SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_22,B_21)
+    C_12 = SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_21,B_12)+
+        SQUARE-MATRIX-MULTIPLY-RECURSIVE(A_22,B_22)
 return C
 ```
 
-其中`divide A,B,C into 4 submatrix`将产生3*4个子矩阵，每个子矩阵的大小为$n/2$，创建子矩阵时需要拷贝数据，即这操作的总时间复杂度为$\Theta(n^2)$。
+其中 `divide A,B,C into 4 submatrix` 将产生 3*4 个子矩阵，每个子矩阵的大小为$n/2$，创建子矩阵时需要拷贝数据，即这操作的总时间复杂度为$\Theta(n^2)$。
 
 另外计算$C$的各部分时，需要将迭代得到的数据进行累加，每次累加的对象都是一个大小为$n/2$的子矩阵，因此这些累加操作的时间复杂度也为$\Theta(n^2)$。
 
 综上，这个分治法的时间表达式为$T(n)=8T(n/2)+\Theta(n^2)$。根据之后的章节可得知，该式子符合主方法的第一个情况，因此复杂度为$O(n^3)$。
 
-伪代码中的创建子矩阵和数据拷贝的相关操作实际上是可以通过指针操作来省掉的，如以下C++实现，通过函数的形参来标识子矩阵的位置和大小：
+伪代码中的创建子矩阵和数据拷贝的相关操作实际上是可以通过指针操作来省掉的，如以下 C++实现，通过函数的形参来标识子矩阵的位置和大小：
 
 ```cpp
 Matrix* MatrixMultiply_Recursive(Matrix* A, Matrix* B, Matrix* result, int resultStartRow, int resultStartCol,
-	int aStartRow, int aStartCol, int bStartRow, int bStartColumn, int subMatSize)
+    int aStartRow, int aStartCol, int bStartRow, int bStartColumn, int subMatSize)
 {
-	//This method assume that the size of Matrix is n*n where n is an exact power of 2
-	//StartRow and startColumn indicate where subMatrix starts, three pairs of value individually for A,B and result
-	//The subMatrix of A and B should be the same size, so there is only on subMatrixSize value
+    //This method assume that the size of Matrix is n*n where n is an exact power of 2
+    //StartRow and startColumn indicate where subMatrix starts, three pairs of value individually for A,B and result
+    //The subMatrix of A and B should be the same size, so there is only on subMatrixSize value
 
-	if (result == nullptr)
-		result = new Matrix(A->row, B->column);
+    if (result == nullptr)
+        result = new Matrix(A->row, B->column);
 
-	if (subMatSize == 1)
-		result->data[resultStartRow][resultStartCol] = result->data[resultStartRow][resultStartCol] + A->data[aStartRow][aStartCol] * B->data[bStartRow][bStartColumn];
-	else
-	{
-		subMatSize /= 2;
-		//result 11
-		MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol, aStartRow, aStartCol, bStartRow, bStartColumn, subMatSize);//A11*B11
-		MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol, aStartRow, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn, subMatSize);//A12*B21;
-		//result 12
-		MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol + subMatSize, aStartRow, aStartCol, bStartRow, bStartColumn + subMatSize, subMatSize);//A11*B12
-		MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol + subMatSize, aStartRow, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn + subMatSize, subMatSize);//A12*B22
-		//result 21
-		MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol, aStartRow + subMatSize, aStartCol, bStartRow, bStartColumn, subMatSize);//A21*B11
-		MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol, aStartRow + subMatSize, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn, subMatSize);//A22*B21
-		//result 22
-		MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol + subMatSize, aStartRow + subMatSize, aStartCol, bStartRow, bStartColumn + subMatSize, subMatSize);//A21*B12
-		MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol + subMatSize, aStartRow + subMatSize, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn + subMatSize, subMatSize);//A22*B22
-	}
-	return result;
+    if (subMatSize == 1)
+        result->data[resultStartRow][resultStartCol] = result->data[resultStartRow][resultStartCol] + A->data[aStartRow][aStartCol] * B->data[bStartRow][bStartColumn];
+    else
+    {
+        subMatSize /= 2;
+        //result 11
+        MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol, aStartRow, aStartCol, bStartRow, bStartColumn, subMatSize);//A11*B11
+        MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol, aStartRow, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn, subMatSize);//A12*B21;
+        //result 12
+        MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol + subMatSize, aStartRow, aStartCol, bStartRow, bStartColumn + subMatSize, subMatSize);//A11*B12
+        MatrixMultiply_Recursive(A, B, result, resultStartRow, resultStartCol + subMatSize, aStartRow, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn + subMatSize, subMatSize);//A12*B22
+        //result 21
+        MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol, aStartRow + subMatSize, aStartCol, bStartRow, bStartColumn, subMatSize);//A21*B11
+        MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol, aStartRow + subMatSize, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn, subMatSize);//A22*B21
+        //result 22
+        MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol + subMatSize, aStartRow + subMatSize, aStartCol, bStartRow, bStartColumn + subMatSize, subMatSize);//A21*B12
+        MatrixMultiply_Recursive(A, B, result, resultStartRow + subMatSize, resultStartCol + subMatSize, aStartRow + subMatSize, aStartCol + subMatSize, bStartRow + subMatSize, bStartColumn + subMatSize, subMatSize);//A22*B22
+    }
+    return result;
 }
 ```
 
-注意上述C++实现中，子矩阵结果的累加也放到了$n==1$情况下处理，因此整个算法的时间复杂度可表示为$T=8T(n/2)$
+注意上述 C++实现中，子矩阵结果的累加也放到了$n==1$情况下处理，因此整个算法的时间复杂度可表示为$T=8T(n/2)$
 
 虽然少了后置项$\Theta(n^2)$，但此式仍然是满足主方法的第一种情况，且结果仍然是$T=\Theta(n^3)$
 
 ### Strassen's method
 
-在上述的分治法中，一共需要8次子矩阵的相乘才能得到最终结果。而在施特拉森方法（Stressen's method）中，仅需要7次子矩阵的相乘。
+在上述的分治法中，一共需要 8 次子矩阵的相乘才能得到最终结果。而在施特拉森方法（Stressen's method）中，仅需要 7 次子矩阵的相乘。
 
-如上节一样，将A，B视作两个需要相乘的矩阵，矩阵大小都是$n\times n$，且$n$的值为某个2的次幂。C为相乘的结果。
+如上节一样，将 A，B 视作两个需要相乘的矩阵，矩阵大小都是$n\times n$，且$n$的值为某个 2 的次幂。C 为相乘的结果。
 
 施特拉森方法的步骤如下：
 
-1. 将A，B，C各拆分成四部分。
-2. 创建10个矩阵 $S_1 \dotsc S_{10}$，每个子矩阵的大小都是$n/2$。这10个矩阵的值都可以通过A，B的子矩阵相互加减得到。
-3. 创建7个矩阵，$P_1 \dotsc P_7$，每个子矩阵的值都可以通过步骤2的10个矩阵与A，B的子矩阵相乘得到。
-4. 结果C的4个子矩阵，可以通过步骤3中的7个矩阵加减得到。
+1.  将 A，B，C 各拆分成四部分。
+2.  创建 10 个矩阵 $S_1 \dotsc S_{10}$，每个子矩阵的大小都是$n/2$。这 10 个矩阵的值都可以通过 A，B 的子矩阵相互加减得到。
+3.  创建 7 个矩阵，$P_1 \dotsc P_7$，每个子矩阵的值都可以通过步骤 2 的 10 个矩阵与 A，B 的子矩阵相乘得到。
+4.  结果 C 的 4 个子矩阵，可以通过步骤 3 中的 7 个矩阵加减得到。
 
-步骤1如果通过拷贝，则时间复杂度为$\Theta(n^2)$，如果通过指针操作，时间复杂度为$\Theta(1)$
-步骤2是加减操作，所以时间复杂度为$\Theta(n^2)$
-步骤3是子矩阵的相乘，但是与分治法不同的是，这里只需要7个矩阵的相乘操作，即原问题拆分为了7个子问题。
-步骤3是加减操作，所以时间复杂度为$\Theta(n^2)$。
+步骤 1 如果通过拷贝，则时间复杂度为$\Theta(n^2)$，如果通过指针操作，时间复杂度为$\Theta(1)$
+步骤 2 是加减操作，所以时间复杂度为$\Theta(n^2)$
+步骤 3 是子矩阵的相乘，但是与分治法不同的是，这里只需要 7 个矩阵的相乘操作，即原问题拆分为了 7 个子问题。
+步骤 3 是加减操作，所以时间复杂度为$\Theta(n^2)$。
 
 可以看出，施特拉森方法的时间复杂度表达式为：
 
@@ -401,22 +384,22 @@ $T(n)=7T(n/2)+\Theta(n^2)$
 
 符合主方法的第一种情况，可得出时间复杂度为$T(n)=O(n^{\lg 7})$，比递归法求解矩阵相乘效率更高。
 
-步骤2的10个矩阵的值具体计算如下：
+步骤 2 的 10 个矩阵的值具体计算如下：
 
 $$
 S_1=B_{12}-B_{22} \\\\
 S_2 = A_{11} +A_{12} \\\\
-S_3 = A_{21}+A_{22} \\\\ 
+S_3 = A_{21}+A_{22} \\\\
 S_4 = B_{21}-B_{11} \\\\
 S_5 = A_{11}+A_{22} \\\\
 S_6 = B_{11}+B_{22} \\\\
-S_7 = A_{12}-A_{22} \\\\ 
+S_7 = A_{12}-A_{22} \\\\
 S_8 = B_{21}+B_{22} \\\\
 S_9 = A_{11}-A_{21} \\\\
 S_{10} = B_{11}+B_{12} :
 $$
 
-步骤3的7个矩阵的值具体计算如下：
+步骤 3 的 7 个矩阵的值具体计算如下：
 
 $$
 P_{1} = A_{11} \cdot S_{1} =  A_{11} \cdot B_{12} - A_{11} \cdot B_{22}\\\\
@@ -428,9 +411,9 @@ P_{6} = S_{7}  \cdot S_{8} =  A_{12} \cdot B_{21} + A_{12} \cdot B_{22} - A_{22}
 P_{7} = S_{9}  \cdot S_{10} = A_{11} \cdot B_{11} + A_{11} \cdot B_{12} - A_{21} \cdot B_{11} - A_{21} \cdot B_{12}
 $$
 
-可以发现最终7个矩阵的计算都可以通过A和B的子矩阵获得，即在实际算法的实现中，可以跳过步骤2中关于$S_1 \dotsc S_10$的实现。
+可以发现最终 7 个矩阵的计算都可以通过 A 和 B 的子矩阵获得，即在实际算法的实现中，可以跳过步骤 2 中关于$S_1 \dotsc S_10$的实现。
 
-步骤4的C子矩阵值计算如下：
+步骤 4 的 C 子矩阵值计算如下：
 
 $$
 C_{11}=P_{5} +P_{4}-P_{2}+P_{6} \\\\
@@ -439,49 +422,49 @@ C_{21}=P_{3} +P_{4} \\\\
 C_{22}=P_{5} +P_{1}-P_{3}+P_{7} \\\\
 $$
 
-完整的C++实现如下:
+完整的 C++实现如下:
 
 ```cpp
 Matrix MatrixMultiply_Strassen(const Matrix& A, const Matrix& B)
 {
-	if (A.row == 1 && A.column == 1 && B.row == 1 && B.column == 1)
-	{
-		Matrix result(A.row, B.column);
-		result.data[0][0] += A.data[0][0] * B.data[0][0];
-		return result;
-	}
-	else
-	{
-		Matrix A_11 = createSubMatrix(A, 0, 0, A.row / 2), A_12 = createSubMatrix(A, 0, A.column / 2, A.row / 2);
-		Matrix A_21 = createSubMatrix(A, A.row / 2, 0, A.row / 2), A_22 = createSubMatrix(A, A.row / 2, A.column / 2, A.row / 2);
+    if (A.row == 1 && A.column == 1 && B.row == 1 && B.column == 1)
+    {
+        Matrix result(A.row, B.column);
+        result.data[0][0] += A.data[0][0] * B.data[0][0];
+        return result;
+    }
+    else
+    {
+        Matrix A_11 = createSubMatrix(A, 0, 0, A.row / 2), A_12 = createSubMatrix(A, 0, A.column / 2, A.row / 2);
+        Matrix A_21 = createSubMatrix(A, A.row / 2, 0, A.row / 2), A_22 = createSubMatrix(A, A.row / 2, A.column / 2, A.row / 2);
 
-		Matrix B_11 = createSubMatrix(B, 0, 0, B.row / 2), B_12 = createSubMatrix(B, 0, B.column / 2, B.row / 2);
-		Matrix B_21 = createSubMatrix(B, B.row / 2, 0, B.row / 2), B_22 = createSubMatrix(B, B.row / 2, B.column / 2, B.row / 2);
+        Matrix B_11 = createSubMatrix(B, 0, 0, B.row / 2), B_12 = createSubMatrix(B, 0, B.column / 2, B.row / 2);
+        Matrix B_21 = createSubMatrix(B, B.row / 2, 0, B.row / 2), B_22 = createSubMatrix(B, B.row / 2, B.column / 2, B.row / 2);
 
-		Matrix P_1 = MatrixMultiply_Strassen(A_11, B_12) - (MatrixMultiply_Strassen(A_11, B_22));
-		Matrix P_2 = MatrixMultiply_Strassen(A_11, B_22) + (MatrixMultiply_Strassen(A_12, B_22));
-		Matrix P_3 = MatrixMultiply_Strassen(A_21, B_11) + (MatrixMultiply_Strassen(A_22, B_11));
-		Matrix P_4 = MatrixMultiply_Strassen(A_22, B_21) - (MatrixMultiply_Strassen(A_22, B_11));
-		Matrix P_5 = MatrixMultiply_Strassen(A_11, B_11) + (MatrixMultiply_Strassen(A_11, B_22)) + (MatrixMultiply_Strassen(A_22, B_11)) + (MatrixMultiply_Strassen(A_22, B_22));
-		Matrix P_6 = MatrixMultiply_Strassen(A_12, B_21) + (MatrixMultiply_Strassen(A_12, B_22)) - (MatrixMultiply_Strassen(A_22, B_21)) - (MatrixMultiply_Strassen(A_22, B_22));
-		Matrix P_7 = MatrixMultiply_Strassen(A_11, B_11) + (MatrixMultiply_Strassen(A_11, B_12)) - (MatrixMultiply_Strassen(A_21, B_11)) - (MatrixMultiply_Strassen(A_21, B_12));
+        Matrix P_1 = MatrixMultiply_Strassen(A_11, B_12) - (MatrixMultiply_Strassen(A_11, B_22));
+        Matrix P_2 = MatrixMultiply_Strassen(A_11, B_22) + (MatrixMultiply_Strassen(A_12, B_22));
+        Matrix P_3 = MatrixMultiply_Strassen(A_21, B_11) + (MatrixMultiply_Strassen(A_22, B_11));
+        Matrix P_4 = MatrixMultiply_Strassen(A_22, B_21) - (MatrixMultiply_Strassen(A_22, B_11));
+        Matrix P_5 = MatrixMultiply_Strassen(A_11, B_11) + (MatrixMultiply_Strassen(A_11, B_22)) + (MatrixMultiply_Strassen(A_22, B_11)) + (MatrixMultiply_Strassen(A_22, B_22));
+        Matrix P_6 = MatrixMultiply_Strassen(A_12, B_21) + (MatrixMultiply_Strassen(A_12, B_22)) - (MatrixMultiply_Strassen(A_22, B_21)) - (MatrixMultiply_Strassen(A_22, B_22));
+        Matrix P_7 = MatrixMultiply_Strassen(A_11, B_11) + (MatrixMultiply_Strassen(A_11, B_12)) - (MatrixMultiply_Strassen(A_21, B_11)) - (MatrixMultiply_Strassen(A_21, B_12));
 
-		Matrix C_11 = P_5 + (P_4)-(P_2)+(P_6);
-		Matrix C_12 = P_1 + (P_2);
-		Matrix C_21 = P_3 + (P_4);
-		Matrix C_22 = P_5 + (P_1)-(P_3)-(P_7);
+        Matrix C_11 = P_5 + (P_4)-(P_2)+(P_6);
+        Matrix C_12 = P_1 + (P_2);
+        Matrix C_21 = P_3 + (P_4);
+        Matrix C_22 = P_5 + (P_1)-(P_3)-(P_7);
 
-		Matrix result(C_11, C_12, C_21, C_22);
-		return result;
-	}
+        Matrix result(C_11, C_12, C_21, C_22);
+        return result;
+    }
 }
 ```
 
 ## The substitution method for solving recurrences
 
 代入法求迭代复杂度分为两步：
-1. 猜出解的表达形式
-2. 用数学归纳法找出解的常数并证明解是正确的。
+1.  猜出解的表达形式
+2.  用数学归纳法找出解的常数并证明解是正确的。
 
 如有表达式
 $$T(n)=2T(\lfloor n/2 \rfloor)+n$$
@@ -517,7 +500,7 @@ $$
 
 这只能表明，$T(n)\leq cn+1$但不能证明想要的$T(n)\leq cn$。
 
-但可以通过一个有更低项的表达式来证明我猜测，如$T(n)=cn-d$，$d$为大于0的常数，代入上式得，
+但可以通过一个有更低项的表达式来证明我猜测，如$T(n)=cn-d$，$d$为大于 0 的常数，代入上式得，
 
 $$
 T(n) \leq (c\lfloor n/2 \rfloor -d)+ (c \lceil n/2 \rceil -d )+1 \\\\
@@ -595,15 +578,15 @@ $T(\frac{n}{4})$又可以表达为$T(\frac{n}{4})=3T(\frac{n}{16})+c(\frac{n}{4}
 
 ![递归树_3](IA-Chapter4-Notes/2019-10-21-00-17-03.png)
 
-每一层都对需要平方的$n$除以4，直到最后变为1，设最后一层（数值为1）的层数为$i$，则有表达式
+每一层都对需要平方的$n$除以 4，直到最后变为 1，设最后一层（数值为 1）的层数为$i$，则有表达式
 
 $$\frac{n}{4^i}=1$$
 
-注意，这里的x取值是从0，所以第一层的数值为$n(\frac{1}{4})^0=n$，求得最后一层的层数为
+注意，这里的 x 取值是从 0，所以第一层的数值为$n(\frac{1}{4})^0=n$，求得最后一层的层数为
 
 $$i=\log_4n$$
 
-* 因为是从0开始，所以总层数为$\log_4n+1$
+- 因为是从 0 开始，所以总层数为$\log_4n+1$
 
 设行数为$i$，则每一层的节点数为$3^i$，每个节点为$c(\frac{n}{4^i})^2$，所以每一层的值为
 
@@ -657,25 +640,25 @@ $$
 
 主方法定理存在三个情况：
 
-1. 如果存在常量$\epsilon$满足$f(n)=O(n^{\log_ba-\epsilon})$，则$T(n)=\Theta(n^{\log _ba})$
-2. 如果有$f(n)=\Theta(n^{\log_ba})$，则$T(n)=\Theta(n^{\log_ba}\lg n)$
-3. 如果存在常量满足$f(n)=\Omega(n^{\log_ba+\epsilon})$，且对于足够大的$n$，存在常量$c<1$满足$af(n/b)\leq cf(n)$，则$T(n)=\Theta(f(n))$
+1.  如果存在常量$\epsilon$满足$f(n)=O(n^{\log_ba-\epsilon})$，则$T(n)=\Theta(n^{\log _ba})$
+2.  如果有$f(n)=\Theta(n^{\log_ba})$，则$T(n)=\Theta(n^{\log_ba}\lg n)$
+3.  如果存在常量满足$f(n)=\Omega(n^{\log_ba+\epsilon})$，且对于足够大的$n$，存在常量$c<1$满足$af(n/b)\leq cf(n)$，则$T(n)=\Theta(f(n))$
 
 可以发现定理的三个情况都是$f(n)$对$n^{\log_ba}$的比较。而且要注意$\epsilon$的存在，他表示关系式都必须是多项式渐进大于或多项式渐进小于。需要“即使相差一个因子$n^\epsilon$，不等式仍然成立“。
 
 ### Using the master method
 
-1. 式子$T(n)=9T(n/3)+n$
+1.  式子$T(n)=9T(n/3)+n$
 
     可知$a=9,b=3,f(n)=n$，$n^{\log_ba}=n^2$，只要$\epsilon<=1$，都可满足$f(n)=O(n^{\log_ba-\epsilon})$，符合条件一，时间复杂度为$T(n)=\Theta(n^2)$
 
-2. 式子$T(n)=T(2n/3)+1$
+2.  式子$T(n)=T(2n/3)+1$
 
     可知$a=1,b=3/2,f(n)=1$，$n^{\log_ba}=n^{\log_3/21}=n^0=1$，即$f(n)=1=\Theta(1)=\Theta(n^{\log_ba})$，所以满足条件二，时间复杂度为$T(n)=\Theta(\lg n)$
 
-3. 式子$T(n)=3T(n/4)+n\lg n$
+3.  式子$T(n)=3T(n/4)+n\lg n$
 
-    可知$a=3,b=4,f(n)=n\lg n,n^{\log_ba}=n^{\log_43}=n^{0.793}$，取$\epsilon$足够小，如取0.1则满足$f(n)=n\lg n=\Omega (n^{0.89})$
+    可知$a=3,b=4,f(n)=n\lg n,n^{\log_ba}=n^{\log_43}=n^{0.793}$，取$\epsilon$足够小，如取 0.1 则满足$f(n)=n\lg n=\Omega (n^{0.89})$
 
     如果要满足条件三，仍然需要满足，存在$c$使得$af(n/b)\leq cf(n)$，即需要满足$\frac{3n}{4}\lg \frac{n}{4}\leq cn\lg n$
 
@@ -689,7 +672,7 @@ $$
 
     条件满足，所以原式子满足条件三，所以结果为$T(n)=\Theta(n\lg n)$
 
-4. 式子$T(n)=2T(n/2)+n\lg n$
+4.  式子$T(n)=2T(n/2)+n\lg n$
 
     可知$a=2,b=2,f(n)=n\lg n,n^{\log_ba}=n$
 
@@ -703,7 +686,7 @@ $$
 
 引用：
 
-1. *Introduction to Algorithms* 3rd Sep.2009
+1.  *Introduction to Algorithms* 3rd Sep.2009
 
 {% endnote %}
 
