@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books.md",
-            "mode": "preview",
+            "file": "Notes/Obsidian/CSS Snippets.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books.md"
+                "file": "Notes/Obsidian/CSS Snippets.md"
               }
             }
           },
@@ -91,6 +91,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Obsidian/CSS Snippets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Obsidian/CSS Snippets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,6 +122,7 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Notes/Obsidian/CSS Snippets.md",
     "Books.md",
     "Books/Learn Vim (The Smart Way).md",
     "Books/Learn OpenGL.md",
@@ -128,7 +131,6 @@
     "Books/Render Hell.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "TO-DO.md",
-    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png",
-    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201201843213.png"
+    "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png"
   ]
 }

@@ -145,3 +145,15 @@ img {
     margin-right: auto;
 }
 ```
+
+## Table View Table
+
+为 Dataview 的列表增加分割线：
+
+```css
+.table-view-table tr{
+
+ border-bottom: 1px solid;
+
+}
+```

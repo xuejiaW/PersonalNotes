@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn Vim (The Smart Way)",
+  "attachmentFolderPath": "./assets/CSS Snippets",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
