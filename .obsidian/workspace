@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Plugins.md",
+            "file": "Books.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md"
+                "file": "Books.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Books.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -165,6 +165,8 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Books.md",
+    "Boos/3D Math Primer For Graphics and Game Development.md",
     "Notes/Obsidian/Plugins.md",
     "Boos/Learn OpenGL/Ch 31 HDR.md",
     "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
@@ -172,8 +174,6 @@
     "Notes/Unity.md",
     "Boos/Learn OpenGL/Ch 19 Framebuffers.md",
     "Boos/Learn OpenGL/Ch 24 Anti Aliasing.md",
-    "Book.md",
-    "Boos/C++ Primer.md",
-    "Boos/C++ Primer/Untitled.md"
+    "Boos/C++ Primer.md"
   ]
 }

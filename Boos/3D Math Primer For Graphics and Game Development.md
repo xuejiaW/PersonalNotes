@@ -1,6 +1,8 @@
 ---
 created: 2022-01-20
 updated: 2022-02-01
+Cover: assets/3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/image-20220201195538316.png
+Author: Fletcher Dunn
 tags:
     - Computer-Graphics
     - Math

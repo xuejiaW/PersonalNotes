@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Plugins",
+  "attachmentFolderPath": "./assets/3D Math Primer For Graphics and Game Development",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
