@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Learn OpenGL",
+  "attachmentFolderPath": "./assets/Learn Vim (The Smart Way)",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
