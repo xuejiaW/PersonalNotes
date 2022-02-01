@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-01-28
+updated: 2022-02-01
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -27,6 +27,10 @@ updated: 2022-01-28
 ## Random Note
 
 该插件开启后，可以通过 `Random note: Open random note` 随机开启一个笔记
+
+## Backlinks / Outgoing Links
+
+ 开启插件后，会在每个文档右侧面板中显示该引用了该文档的其他文档（Back Links）以及该文档引用的其他文档（Outgoing Links）
 
 # Community Plugins
 

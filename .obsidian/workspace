@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
+            "file": "Notes/Obsidian/Plugins.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 31 HDR.md"
+                "file": "Notes/Obsidian/Plugins.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
+                "file": "Notes/Obsidian/Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
+                "file": "Notes/Obsidian/Plugins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/Learn OpenGL/Ch 31 HDR.md",
+                "file": "Notes/Obsidian/Plugins.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -164,10 +164,10 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Obsidian/Plugins.md",
     "Boos/Learn OpenGL/Ch 31 HDR.md",
     "Boos/Learn OpenGL/Ch 21 Advanced Data, GLSL.md",
     "Boos/Learn OpenGL/Ch 25 Blinn-Phong.md",
-    "Notes/Obsidian/Plugins.md",
     "Notes/Unity.md",
     "Boos/Learn OpenGL/Ch 19 Framebuffers.md",
     "Boos/Learn OpenGL/Ch 24 Anti Aliasing.md",
