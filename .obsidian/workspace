@@ -83,7 +83,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/3D Math Primer For Graphics and Game Development.md",
+                "file": "Bookss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/3D Math Primer For Graphics and Game Development.md"
+                "file": "Bookss.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/3D Math Primer For Graphics and Game Development.md",
+                "file": "Bookss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,10 +134,10 @@
     "width": 449.5,
     "collapsed": true
   },
-  "active": "2bab721a45acf019",
+  "active": "6266e0aae2bf3f69",
   "lastOpenFiles": [
-    "Books/3D Math Primer For Graphics and Game Development.md",
     "Bookss.md",
+    "Books/3D Math Primer For Graphics and Game Development.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201202739490.png",
     "TO-DO.md",
     "Books/assets/3D Math Primer For Graphics and Game Development/image-20220201195538316.png",

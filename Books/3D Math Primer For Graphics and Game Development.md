@@ -2,8 +2,8 @@
 created: 2022-01-20
 updated: 2022-02-01
 Cover: https://images-na.ssl-images-amazon.com/images/I/51Dake5LWcL._SX404_BO1,204,203,200_.jpg
-Author: [Fletcher Dunn, ]
-    - 
+Author:
+    - Fletcher Dunn
     - Ian Parberry
 ISBN-13: 978-1568817231
 tags:
