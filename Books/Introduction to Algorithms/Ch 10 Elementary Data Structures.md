@@ -1,9 +1,9 @@
 ---
 tags:
     - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
-
-## Chapter 10. Elementary Data Structures
 
 集合`Set`作为计算机科学的基础，重要性与数学中的集合相同。但数学中的集合是不可变的，计算机中的集合可在任意时刻扩张，收缩和更改，称之为`动态集合（dynamic set）`。一般动态集合需要实现如下操作中的一部分：
 
@@ -11,17 +11,17 @@ tags:
 
 这些操作可以分为两种，`查询操作(Queries)`和`修改操作(Modifying operations)`，如`Search`，`MINIMUM`，`MAXIMUM`，`SUCCESSOR`，`PREDECESSOR`都属于前者，`Insert`，`DELETE`属于后者
 
-### Stacks and queues
+# Stacks and queues
 
 `堆栈(Stacks)`是后进先出，`队列(Queues)`是先进先出。
 
-#### Stacks
+## Stacks
 
 在堆栈上的插入操作一般成为`Push`，删除操作一般称为`Pop`。堆栈有一个`top`指针指向队列中的第一个元素，在`Pop`时返回该元素，在`Push`时top指针向前移动一格，并在新的地方插入新值，当`top`为0则说明队列为空。
 
 堆栈的图解如下图，(a)为原始样子，(b)为执行了`Push(17)和Push(3)`后的样子，(c)为执行了`Pop`后的样子。图中的`S.top`表示当前指针的索引值。
 
-![堆栈图解](IA-Chapter10-Notes/2019-10-25-12-31-40.png)
+![堆栈图解](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-31-40.png)
 
 堆栈操作微数据实现，每个步骤的复杂度都为`O(1)`
 
@@ -93,7 +93,7 @@ private:
 };
 ```
 
-#### Queues
+## Queues
 
 队列的插入操作称为`ENQUEUE`，删除操作称为`DEQUEUE`。队列的图解如下图，队列存在一个`head`指针和一个`tail`指针，两指针间的数据为队列保存的数据。当进行插入操作时，`tail`指针前移并在新地方插入数据，当进行删除操作时，`head`指针返回指着的值，并前移。
 
@@ -105,7 +105,7 @@ private:
 
 (c) 为执行了Dequeue（）操作的样子
 
-![队列图解](IA-Chapter10-Notes/2019-10-25-12-30-32.png)
+![队列图解](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-30-32.png)
 
 队列伪代码如下
 
@@ -187,7 +187,7 @@ private:
 };
 ```
 
-### Linked lists
+# Linked lists
 
 `链表(linked list)`是一种对象线性排列的数据结构。
 
@@ -205,7 +205,7 @@ private:
 
 (c) 为删除了数据4之后的列表
 
-![双向链表](IA-Chapter10-Notes/2019-10-25-16-24-36.png)
+![双向链表](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-16-24-36.png)
 
 链表通常需要支持`Search`，`Insert`和`Delete`操作，三者的伪代码分别为
 
@@ -326,7 +326,7 @@ private:
 };
 ```
 
-#### Sentinels
+## Sentinels
 
 可以使用一个哨兵结点来将列表变为循环列表，将哨兵结点命名为`nil`，`nil.next=head`且`nil.prev=tail`，这时候列表中就不需要存储`head`结点了，因为通过`nil`即可找到`head`。
 
@@ -430,39 +430,39 @@ private:
 };
 ```
 
-### Implementing pointers and objects
+# Implementing pointers and objects
 
 在上一节的实现线性列表的过程中，需要用到指针来表示上一个结点或下一个结点。但在某些语言中，并没有提供指针的概念，如C#和Java，这一节介绍了在这些语言中如何来实现列表。
 
-#### A multiple-array representation of objects
+## A multiple-array representation of objects
 
 第一种方法是使用三个大小相同的数组来分别表示`next`，`key`和`prev`，如下两图实际上是实现了同一种结构。
 
-![指针形式表现列表](IA-Chapter10-Notes/2019-10-26-14-41-54.png)
-![多数组形式表现列表](IA-Chapter10-Notes/2019-10-26-14-42-13.png)
+![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![多数组形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-42-13.png)
 
 图二是将三个数组并排显示的效果，另外有一个变量`L`来保存列表的第一个结点的索引值，在这里第一个结点的`Key`值为9，索引值为7，所以`L`中保存的值为7。
 
 以索引值为7为例，`key`值为9,`next`值为5,`prev`值为/。表示这个结点没有前一个结点，即为头结点，且后一个结点的索引值为5，数组索引值为5的地方，`key`值为16,`next`为2，`prev`为7。以此类推,可得到所有的结点。
 
-#### A single-array representation of objects
+## A single-array representation of objects
 
 第二种方法是只用一个数组来表示`next`，`key`和`prev`。每一个结点占数组中的三个位置，如一个结点的Key值在数组中的位置`A[i]`，则`next`位置为`A[i+1]`,`prev`位置为`A[i+2]`
 
-![指针形式表现列表](IA-Chapter10-Notes/2019-10-26-14-41-54.png)
-![单数组形式表现列表](IA-Chapter10-Notes/2019-10-26-14-52-00.png)
+![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![单数组形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-52-00.png)
 
 
 同理，这里仍然需要一个变量`L`来保存头结点的索引，这里的头结点索引为19，所有头结点的`Key`值为9，`next`结点为13，表示下一个结点的从索引值13开始，`prev`结点为/，表示没有前结点，该结点为头结点。
 
-#### Allocating and freeing objects
+## Allocating and freeing objects
 
 这里以多数组表示法进行说明。为了可以释放和分配结点，我们需要另一个变量`free`来记录数组的哪个索引值为空结点。我们可以将多个空结点们看作也是一个链表，但是只是一个单链表，只需要知道下一个空结点在哪即可，所以在多数组方法中也仅只需要用到`next`数组即可。
 
 分配和释放对象的过程如下图所示：
 
-![指针形式表现列表](IA-Chapter10-Notes/2019-10-26-14-41-54.png)
-![分配和释放对象](IA-Chapter10-Notes/2019-10-26-14-58-40.png)
+![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![分配和释放对象](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-58-40.png)
 
 下图中的图(a)即为用多数组方式表示上图的数据，唯一与之前说明不同的是，这里需要一个变量`free`来表示第一个空结点在哪，这里显示第一个空结点的索引值为4，而在`next`数组的索引4处，值为8，说明下一个空结点在索引8的地方。
 
@@ -493,23 +493,23 @@ free=x;
 
 另外多个链表可以共用同三个数组，且共用一个free链表，如下图所示。存在两个链表，分别以$L_2$和$L_1$作为头结点。
 
-![多个链表共享数组和空链表](IA-Chapter10-Notes/2019-10-26-15-23-27.png)
+![多个链表共享数组和空链表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-23-27.png)
 
 
-### Representing rooted trees
+# Representing rooted trees
 
 可以用表示链表的方法可以用在其他的类似的数据结构中，这一节将用列表的方法来表示有根树形结构。树的每一个结点都作为对象，如链表一样，结点中也有一个类似与`Key`值的存在，不同的是根据树的类型不同，结点中的指针会有不同的表示。
 
-#### Binary Tree
+## Binary Tree
 
 在二叉树中，每个结点都有三个变量$p$，$left$和$right$，分别表示结点的父结点，左子结点和右子结点。如没有左子结点，则`left=null`，右子结点同理。
 
 二叉树实例图如下：
 
-![二叉树](IA-Chapter10-Notes/2019-10-26-15-39-21.png)
+![二叉树](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-39-21.png)
 
 
-#### Rooted trees with unbounded branching
+## Rooted trees with unbounded branching
 
 对于分支没有限制的有根树，可以使用变量$child_1$，$child_2$，$child_3$....来替代$left$和$right$。
 
@@ -519,15 +519,5 @@ free=x;
 
 分支无限制有根树实例图如下
 
-![分支无限制有根树](IA-Chapter10-Notes/2019-10-26-15-40-32.png)
+![分支无限制有根树](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-40-32.png)
 
-
-{% note primary %}
-
-引用：
-
-1. *Introduction to Algorithms* 3rd Sep.2009
-
-{% endnote %}
-
-***

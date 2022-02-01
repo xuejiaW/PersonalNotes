@@ -10,16 +10,6 @@ tags:
 - 数据结构与算法
 ---
 
-{% cq %}
-
-《算法导论》 第十二章笔记，线性二叉树的实现。
-
-12.4节尚未整理
-
-{% endcq %}
-
-<!--more-->
-
 ## Chapter 12. Binary Search Trees
 
 `搜索树(Search tree)`结构支持许多动态数组的操作，包括SEARCH，MINIMUM，MAXIMUM，PREDESCESSOR，SUCESSOR，INSERT和DELETE。
