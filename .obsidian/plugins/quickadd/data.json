@@ -1,0 +1,32 @@
+{
+  "choices": [
+    {
+      "id": "72f28ca4-14a2-43ad-8b97-41c9ac14234f",
+      "name": "Add Book",
+      "type": "Template",
+      "command": false,
+      "templatePath": "Templates/",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    }
+  ],
+  "macros": [],
+  "inputPrompt": "single-line"
+}
