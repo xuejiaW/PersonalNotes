@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSS Snippets",
+  "attachmentFolderPath": "./assets/C++ Primer",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
