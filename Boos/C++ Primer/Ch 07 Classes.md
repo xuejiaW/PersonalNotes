@@ -1,38 +1,19 @@
 ---
-title: 《C++ Primer》 第七章笔记
-mathjax: true
-date: 2020-02-29 15:57:33
-categories:
-  - 读书笔记
-  - 计算机语言
-tags:
-  - 读书笔记
-  - C++
 created: 2022-02-01
 updated: 2022-02-01
+tags:
+    - C++
 ---
 
-{% cq %}
-
-《C++ Primer》 第七章笔记
-
-![第七章内容](assets/CPPPrimer-Chapter7-Notes/Ch_7.png)
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 7 Classes
-
-## Defining Abstract Data Types
+# Defining Abstract Data Types
 
 如果一个类让用户可以任意访问其中的数据，且必须自己定义针对相关数据的操作，则该类不是抽象类型。
 
-### Designing the Sales_data class
+## Designing the Sales_data class
 
 在本章中，会逐步完善一个称为Sales_data的类，在完善的过程中解释类的特性。
 
-### Defining the Revised Sales_data Class
+## Defining the Revised Sales_data Class
 
 成员函数必须在类内声明，可以在类内或类外进行定义。且在类内定义的函数默认是内联（inline）的。
 
@@ -65,7 +46,7 @@ ostream &print(ostream &, const Sales_data &);
 istream &read(istream &, Sales_data &);
 ```
 
-#### Introducing this
+### Introducing this
 
 首先注意成员函数:
 
@@ -90,7 +71,7 @@ Sales_data::isbn(&total);
 
 另外this是一个const指针，即无法让this指向别的变量。
 
-#### Intruducing const Member Functions
+### Intruducing const Member Functions
 
 同样还是成员函数：
 
@@ -124,11 +105,11 @@ const Sales_data cTotal;
 
 在编译器的隐式转换后，`cTotal.isbn()`会变成用一个`const Sales_data* const`类型的指针区初始化一个`Sales_data* const`类型的指针，如之前章节所述，该操作是非法的。
 
-#### Class Scope and Member Functions
+### Class Scope and Member Functions
 
 类的编译分为两步，首先会先编译所有的声明，然后再编译函数的定义（实现），因此在函数的实现中，可以任意调用其他的成员变量，无论它定义在更前面还是后面。
 
-#### Defining a Member Function outside the Class
+### Defining a Member Function outside the Class
 
 如果在类外定义const函数，同样需要在参数列表后加上const关键字
 
@@ -142,7 +123,7 @@ double Sales_data::avg_Price() const
 }
 ```
 
-#### Defining a Function to Return "This" Object
+### Defining a Function to Return "This" Object
 
 如果成员函数返回类型是该类型本身或者该类型的引用，可以返回`*this`，如：
 
@@ -155,7 +136,7 @@ Sales_data &Sales_data::combine(const Sales_data &rhs)
 }
 ```
 
-### Defining Nonmember Class-Related Functions
+## Defining Nonmember Class-Related Functions
 
 一些函数从概念上是某种类型的一部分，但却不是定义在函数的内部。这样的函数声明应该写在该类型的头文件（函数定义可以放在头文件对应的cpp文件中）。
 
@@ -195,7 +176,7 @@ istream &read(istream &is, Sales_data &item)
 
 在`add`函数中，首先是一个拷贝初始化`Sales_data sum = lhs`。C++的默认实现中，拷贝一个类类型会拷贝其中所有的成员变量，因此sum和lhs中的所有成员变量将有相同的值（但在不同的内存中）。
 
-### Constructors
+## Constructors
 
 构造函数特点：
 
@@ -204,13 +185,13 @@ istream &read(istream &is, Sales_data &item)
 3. 构造函数没有返回值
 4. 构造函数不允许被定义成const函数。因为一个对象的const与否是在创建后才决定的，所以构造函数会在决定constness前先执行。
 
-#### The Synthesized Default Constructor
+### The Synthesized Default Constructor
 
 默认构造函数（default constructor）是不需要任何形参的构造函数。
 
 当类没有定义任何构造函数时，编译器会创建合成默认构造函数（synthesized default constructor）。合成默认构造函数的操作为，当参数有类内初始化（变量定义时有初始化值），如`int a = 3;`，则使用类内初始化值进行值初始化，否则使用变量的默认初始化。
 
-#### Some Classes Cannot Rely on the synthesized Default Constructor
+### Some Classes Cannot Rely on the synthesized Default Constructor
 
 一些类无法依赖合成默认构造函数，因为
 
@@ -218,7 +199,7 @@ istream &read(istream &is, Sales_data &item)
 2. 当没有类内初始化值时，合成默认构造函数会使用变量默认初始化，但内建类型（int等）和复合类型（array，pointer）出现在函数内部时默认值是未定义的。所以当且仅当这些参数有类内初始化值时才可以依赖合成默认构造函数，否则构造的结果是未定义的。
 3. 有的情况下，编译器无法生成合成默认构造函数。如类中的一个成员变量并没有默认构造函数，合成默认构造函数也就无法去初始化这个变量。因此在这种情况下，需要自己定义默认构造函数。
    
-#### Defining the Sales_data Constructors
+### Defining the Sales_data Constructors
 
 Sales_data构造函数定义如下：
 
@@ -240,7 +221,7 @@ Sales_data::Sales_data(istream &is)
 
 在定义默认构造函数时，使用了default关键字，该关键字是C++11的特性，表示希望构造函数表现的如同合成默认构造函数一模一样。
 
-#### Constructor Initializer List
+### Constructor Initializer List
 
 在构造函数中的定义中，出现在参数列表后，函数主体前，以`:`开头的部分称为初始化列表（Initializer List）。初始化列表必须出现在函数定义中，即必须与函数主体一起出现。
 
@@ -248,7 +229,7 @@ Sales_data::Sales_data(istream &is)
 
 * 建议为每个成员参数都设置类内初始化值
 
-#### Defining a Constructor outside the Class Body
+### Defining a Constructor outside the Class Body
 
 如形参为`istream`版本的构造函数：
 
@@ -265,7 +246,7 @@ Sales_data::Sales_data(istream &is)
 
 > 尽量在初始化列表中初始化变量。如果将成员变量的赋值写在构造函数主体内，则实际上是经过了一个默认初始化，再进行了一个赋值。
 
-### Copy, Assignment, and Destruction
+## Copy, Assignment, and Destruction
 
 类还要控制对象是如何被拷贝，赋值和摧毁的。
 
@@ -284,7 +265,7 @@ total.units_sold = trans.units_sold
 total.revenue = trans.revenue
 ```
 
-#### Some Classes Canot Rely on the Synthesized Versins
+### Some Classes Canot Rely on the Synthesized Versins
 
 通常来说，有动态内存分配的类不适合合成版本的拷贝，赋值和摧毁（第12章和13.1.4节会解释）。
 
@@ -325,17 +306,17 @@ struct Test
 
 可以看到合成默认赋值正确的拷贝了vector中的每个元素。
 
-## Access Control and Encapsulation
+# Access Control and Encapsulation
 
 public关键字后的变量可以被程序的其他部分访问，private关键字后变量仅能被类中的成员函数访问。
 
 public和private关键字可以出现在类中出现任意多次。
 
-#### Using the class or struct keyboard
+### Using the class or struct keyboard
 
 struct和class的**唯一**区别在于，class中没有写在public和private后的成员默认是private的，而struct中则默认是public的（struct中同样可以定义public和private）。
 
-### Friends
+## Friends
 
 一个类可以允许其他的类或者函数访问其中的非public变量，此时其他的函数或者类被称为友类（函数）（Friends）。
 
@@ -372,7 +353,7 @@ private:
 
 `friend`关键字只可以出现在类的定义中，而且因为严格意义上它并不是类的一部分，所以可以出现在类中的任意地方，不受public和private影响。
 
-#### Declarations for Friends
+### Declarations for Friends
 
 在类内部关于friends的声明并不是函数声明，因此应该在类外部再次声明函数。如：
 
@@ -402,13 +383,13 @@ istream &read(istream &, Sales_data &);
 
 * 虽然即使不在类外部再次声明函数，大部分的编译器也都能正确编译。但是C++标准是要求在类外再次声明的，即使程序在没有再次声明的情况下正常运行了，也不能保证该代码换一个编译器仍然能正常工作。
 
-## Additional Class Features
+# Additional Class Features
 
 7.1-7.2以`Sales_data`这个类作为例子说明了类的一些特性。在这一节中会继续深入探讨这些特性。
 
-### Class Members Revisited
+## Class Members Revisited
 
-#### Defining a Type Member
+### Defining a Type Member
 
 在类内部，也可以定义Type成员。该成员与其他的成员类型一样，是受public和private关键字影响的。但与其他成员不同的是，在使用该类型前，必须已经出现了该类型的定义（对其他成员，会先编译声明，再编译定义，因此成员的位置不造成任何影响），如下：
 
@@ -428,7 +409,7 @@ private:
 
 当在类外访问该别名时，也需要像访问普通变量一样，如`Screen::pos`
 
-#### Making Members inline
+### Making Members inline
 
 如之前所述，定义在类内部的函数会隐式的认为为inline的。也可以通过显示的在函数类内声明或类外定义前加上inline来将函数变为内联函数，如：
 
@@ -456,7 +437,7 @@ inline char Screen::get(pos ht, pos wd) const
 
 注意如在第六章中所述，内联函数的定义建议与声明放在同一个头文件中
 
-#### mutable Data Members
+### mutable Data Members
 
 mutable数据成员永远不会是const的，即使在const函数中（this指针是指向const的指针）仍然能被修改。如
 
@@ -483,7 +464,7 @@ void Screen::ChangeAccessCtr() const
 
 上述代码中,`ChangeAccessCtr`是const函数，但因为accessCtr变量是mutable的，所以仍然能够修改accessCtr。
 
-### Functions That Return *this
+## Functions That Return *this
 
 如果某成员函数返回的类型为类的引用，则该函数可以被正确的级联起来，否则虽然可以通过编译，但之后的操作是基于临时变量，如下：
 
@@ -526,7 +507,7 @@ content is a
 
 如上述代码所示，`move`函数返回的是类型的引用，`move_copy`函数返回的是类型本身，因此实际上返回的是一个经过拷贝初始化临时变量。当对`move`函数的返回值调用`set`时，原先的值被修改了，而对`move_copy`函数的返回值调用`set`时，被修改的实际上是返回的临时变量。
 
-#### Returning *this from a const Member Function
+### Returning *this from a const Member Function
 
 如果成员函数是const函数，且返回类型是该类型的指针或引用，那么该指针或引用是指向const变量的。也因此无法级联调用其他非const的函数，如下所示：
 
@@ -556,7 +537,7 @@ const Screen &Screen::Display() const
 
 调用语句`sc.Display().set('a')`失败，是因为set不是const函数，所以其this指针类型为`Screen * const`，而传入的是Display返回的变量指针，类型为`const Screen * const`，所以无法进行隐式转换。
 
-#### Overloading Based on const
+### Overloading Based on const
 
 解决上述问题的方法是，定义一个非const的函数进行重载，因为函数的const与否实际是决定传入的this指针的类型，而且是low level的const区别，所以可以进行重载。如下所示：
 
@@ -598,7 +579,7 @@ sc.Display(cout).set('a'); // correct,when there is nonconst overwrite
 
 在上述代码中，`sc.Display(cout).set('a')`可以成功运行，因为类中定义了const和非const两个版本的Display函数。该语句实际调用的是非const版本的Display，其中会调用const函数`do_display`，调用中存在将指向非const对象的指针（this指针）隐式转换为指向const对象的指针的过程。
 
-### Class Type
+## Class Type
 
 每个类都定义了一个独特的类型。两个不同的类即使其中的所有成员都一模一样，也无法相互赋值，但可以通过指针进行转换。如下：
 
@@ -632,7 +613,7 @@ sp value is 2
 */
 ```
 
-#### Class Declarations
+### Class Declarations
 
 可以在没有定义类的情况下声明类，如
 
@@ -661,11 +642,11 @@ struct TestNotDefined
 };
 ```
 
-### Friendship Revisited
+## Friendship Revisited
 
 一个类可以将另一个类或者某个类中特定的成员函数作为友类或友函数。
 
-#### Friendship between Classes
+### Friendship between Classes
 
 在类中定义另一个类为友类，同样需要使用关键字`friend`，另外还需要指定类型为class，如
 
@@ -713,7 +694,7 @@ void Window_mgr::Clear(ScreenIndex index)
 
 > 友类或友函数性质不能传递，即A将B定义为朋友，B将C定义为朋友。但C并不是A的朋友，因此不能访问A中变量。
 
-#### Making A member Function a Friend
+### Making A member Function a Friend
 
 上例中是将完整的Window_mgr定义为友类，所以类中的所有函数都可以访问Screen的私有成员，存在一定的风险性。Screen可以仅将Window_mgr中的Clear函数定义为友函数，如下：
 
@@ -766,11 +747,11 @@ void Window_mgr::Clear(Window_mgr::ScreenIndex index)
 2. 定义`Screen`类，其中声明`Window::mgr`为友函数。此步骤需要引入`Window_mgr`的定义。
 3. 定义`clear`函数，此步骤需要引入`Screen`类定义
 
-#### Overloaded Functions and Friendship
+### Overloaded Functions and Friendship
 
 在声明一个函数为友函数时，需要带上函数的返回类型和参数。因此当友函数有重载类型时，仅会将满足友函数定义的那个版本作为友函数。
 
-#### Friend Declarations and Scope
+### Friend Declarations and Scope
 
 如之前所述，友类和友函数的声明，并非是该函数的真正声明。该函数未进行外部声明时，仍然是无法被其他的函数使用的，如下代码所示：
 
@@ -792,9 +773,9 @@ void X::h() { return f(); }
 
 虽然代码中声明了`f()`为友函数，但构造函数和函数`g()`都是在外部声明前想访问函数`f()`，所以都会造成编译错误，而`h()`在外部声明后再进行定义，因此就能正常访问。
 
-## Class Scope
+# Class Scope
 
-#### Scope and Members Defined outside the Class
+### Scope and Members Defined outside the Class
 
 类的定义本身就是一个作用域，因此在类外定义成员函数时需要加上`::`操作符。
 
@@ -828,7 +809,7 @@ Window_mgr::ScreenIndex Window_mgr::addScreen(const Screen &s)
 
 在例子中，当`ScreenIndex`出现在了参数列表中时不需要加上`Window_mgr::`修饰作用域，但是当`ScreenIndex`作为返回类型时则必须加上。
 
-### Name Lookup and Class Scope
+## Name Lookup and Class Scope
 
 C++找寻一个名字的含义时步骤是：
 1. 现在使用该名字的作用域里搜索该名字的声明，声明必须出现在使用之前
@@ -840,7 +821,7 @@ C++找寻一个名字的含义时步骤是：
 1. 先编译所有的声明
 2. 所有声明编译完，整个类的成员都是可见后，再编译函数主体等定义部分。
 
-#### Name Lookup for Class Member Declarations
+### Name Lookup for Class Member Declarations
 
 C++找寻名字的策略和类编译顺序共同决定了以下结果：
 
@@ -863,7 +844,7 @@ private:
 
 在上述代码中，函数`balance`返回的bal是成员变量`Money bal`，而不是全局变量string，即使成员变量的声明在全局变量`bal`使用后面。
 
-#### Type Names Are Special
+### Type Names Are Special
 
 通常而言，Type声明可以在嵌套的作用域中重新修改，如下：
 
@@ -897,9 +878,9 @@ private:
 
 > 很多的编译器仍然会允许类内进行type重定义，但这样的行为是不符合标准的，无法保证在更换了编译器后仍然能正常工作。
 
-#### Normal Block-Scope Name Lookup inside Member Definitions
+### Normal Block-Scope Name Lookup inside Member Definitions
 
-#### After Class Scope, Look in the Surrounding Scope
+### After Class Scope, Look in the Surrounding Scope
 
 ```cpp
 //In Screen.cpp
@@ -923,11 +904,11 @@ Global height is 5
 */
 ```
 
-## Constructors Revisited
+# Constructors Revisited
 
-### Constructor Initializer List
+## Constructor Initializer List
 
-#### Constructor Initializers Are Sometimes Required
+### Constructor Initializers Are Sometimes Required
 
 const成员变量必须通过初始化列表进行初始化，因为在构造函数体内部的操作实际上是赋值不是初始化，如下：
 
@@ -956,7 +937,7 @@ public:
 
 上述代码中，`ci`和`ri`必须通过初始化列表进行初始化，而i可以出现在初始化列表中（初始化），或者在出现在构造函数体内（先被默认初始化，因为是内置类型，所以结果为未定义，再将ii赋值给它）
 
-#### Order of Member Initialization
+### Order of Member Initialization
 
 成员参数的初始化顺序是由其在声明中出现的顺序决定的，和在初始化列表中的顺序无关。如：
 
@@ -990,7 +971,7 @@ j value is: 2
 
 因此输出结果为`i`为0，`j`为2，`i`的值实际上是未定义的。
 
-### Delegating Constructors
+## Delegating Constructors
 
 代理构造函数时可以通过该类中的另一个构造函数来完成初始化，如
 
@@ -1027,7 +1008,7 @@ Constructor with no Parameters
 
 可以看出，三个参数的代理构造函数先运行了，然后运行的是无参构造函数。
 
-### The Role of the Default Constructor
+## The Role of the Default Constructor
 
 无论一个对象是被默认初始化还是值初始化（相关概念在3.3.1节中），默认构造函数都会被执行。
 
@@ -1043,7 +1024,7 @@ Constructor with no Parameters
 2. 当定义局部static变量
 3. 对于类类型，使用`T()`形式进行声明，所以Vector(n)，里面的元素都进行的是值初始化。
 
-### Using the Default Constructor
+## Using the Default Constructor
 
 ```cpp
 class NoDefault
@@ -1074,7 +1055,7 @@ struct B
 
 同理，在`B`中必须手动的在初始化列表中为`NonDefault`类型变量初始化，否则在尝试调用其默认构造函数时会发生错误。
 
-### Implicit Class-Type Conversions
+## Implicit Class-Type Conversions
 
 可以通过**一个参数**被调用的类构造器提供了隐式类型转换，从调用参数转换为该类型。
 
@@ -1106,13 +1087,13 @@ item.combine(null_book);
 
 注意这一步中，`null_book`隐式转换成的对象是一个临时变量，当combine函数执行完后就会被抛弃。
 
-#### Only One Class-Type Conversions Is Allowed
+### Only One Class-Type Conversions Is Allowed
 
 需要注意，语句`item.combine("9999")`无法通过编译。
 
 因为`"9999"`类型是C类型的字符串，它要先隐式转换为`string`，`string`再隐式转换为`Sales_data`，该过程包含了两次隐式转换，而C++的隐式转换仅支持一次，所以编译器无法执行。
 
-#### Suppressing Implicit Conversions Defined by Constructors
+### Suppressing Implicit Conversions Defined by Constructors
 
 可以通过`explicit`关键字禁止构造函数的隐式转换，`explicit`关键字仅能出现在类内的成员函数声明中。如
 
@@ -1138,7 +1119,7 @@ item.combine(static_cast<Sales_data>(null_book));//static_cast
 1. string类型有通过const char*的构造函数，如`string("abc")`，该构造函数不是explicit的
 2. vector类型中有通过int的构造函数，如`vector(2)`，该构造函数是explicit的
 
-### Aggregate Classes
+## Aggregate Classes
 
 如果一个类满足以下条件，则它是一个聚合类（Aggregate Classes）：
 
@@ -1164,11 +1145,11 @@ Data val1{0, "Anna"};
 Data val2{0};
 ```
 
-### Literal Classes
+## Literal Classes
 
 //TODO,after read 2.4.4
 
-## static Class Members
+# static Class Members
 
 当给成员变量加上`static`关键字后，该变量就变成了静态成员变量，静态成员变量也受到public，private等关键字的影响。
 
@@ -1202,7 +1183,7 @@ private:
 
 一个类的对象实际上并不包含其中的静态成员，因此静态函数也没有this指针，所以定义为函数定义为const与否并没有意义。
 
-#### Using a Class static Member
+### Using a Class static Member
 
 可以通过作用域操作符，对象本身，对象引用，对象指针等来访问静态成员，如下：
 
@@ -1216,7 +1197,7 @@ r = ac2->rate();
 
 对于普通成员函数而言，可以直接通过访问静态成员，如`Account_S`中的方法`calculate`，其中直接访问了静态成员`interestRata`。
 
-#### Defining static Members
+### Defining static Members
 
 当在类外定义静态成员函数时，不需要再次写明`static`关键字，如：
 
@@ -1271,11 +1252,11 @@ double Account_S::interest = 2.0;
 
 如同在定义成员函数时一样，当成员函数的名字出现后，参数列表和函数主体就已经在作用域内部了。同理在上述定义中，当成员变量`interestRate`名字出现后，其余的部分就已经在作用域里了（变量的参数类型在名字出现前，所以不在作用域里），因此`InitRate`不需要使用作用域操作符来访问。
 
-#### In-Class Initialization of static Data Members
+### In-Class Initialization of static Data Members
 
 //TODO，关于 costexpr
 
-#### static Members Can be Used in Ways Ordinary Members Can't
+### static Members Can be Used in Ways Ordinary Members Can't
 
 1. 当一个类型是不完整类型时，无法使用该类型作为类中普通成员变量的类型，但可以作为类中静态成员变量的类型，如
 
