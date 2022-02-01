@@ -22,3 +22,9 @@ tags:
 [Ch 07 Classes](C++%20Primer/Ch%2007%20Classes.md)
 
 # The C++ Library
+
+[Ch 08 The IO Library](C++%20Primer/Ch%2008%20The%20IO%20Library.md)
+
+[Ch 09 The Sequential Containers](C++%20Primer/Ch%2009%20The%20Sequential%20Containers.md)
+
+[Ch 10 Generic Algorithms](C++%20Primer/Ch%2010%20Generic%20Algorithms.md)
