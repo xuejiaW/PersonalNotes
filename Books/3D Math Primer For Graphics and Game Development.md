@@ -1,7 +1,7 @@
 ---
 created: 2022-01-20
 updated: 2022-02-01
-Cover: notion://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbb5efdd8-989c-40c2-b790-ec189991da29%2F51aGL0vdPEL.jpg?table=block&id=88459e74-ced8-4f61-b8bc-8b18d950f095&spaceId=2c789098-0c17-407b-a6ac-479fbe8e34c6&width=600&userId=a50dafb2-bae6-490d-9c74-02bd194e8c83&cache=v2
+Cover: https://i.postimg.cc/sxQtpBWG/Dataview-Book-Library.png
 Author: Fletcher Dunn
 tags:
     - Computer-Graphics
@@ -25,3 +25,5 @@ tags:
 [Ch 08 Rotation in Three Dimensions](3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2008%20Rotation%20in%20Three%20Dimensions.md)
 
 [Ch 09 Geometric Primitives](3D%20Math%20Primer%20For%20Graphics%20and%20Game%20Development/Ch%2009%20Geometric%20Primitives.md)
+
+![abc](https://i.postimg.cc/sxQtpBWG/Dataview-Book-Library.png)
