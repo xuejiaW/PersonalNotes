@@ -1,25 +1,10 @@
 ---
-title: 《算法导论》 第六章笔记
-mathjax: true
-date: 2020-01-29 13:42:54
-categories:
-  - 读书笔记
-  - 数据结构与算法
 tags:
-  - 读书笔记
-  - 数据结构与算法
+    - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
-《算法导论》中第六章笔记。
-
-关于堆与堆排序。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 6 Heapsort
 
 如归并排序一样，堆排序的时间复杂度为$O(nlgn)$，但与归并排序不同的是，堆排序在运行过程中仅需要固定大小的外部空间，即运行时所需的内存不会因为输入规模的上升而上升，这一点与插入排序一样。
 
@@ -27,7 +12,7 @@ tags:
 
 “堆”（Heap）这一称呼最早就是针对于堆排序的，但是在一些语言的垃圾回收概念中存在堆栈的概念。这两者虽然名字相同，但实际上是完全不同的存在。
 
-## Heap
+# Heap
 
 `堆（Heap）`或称`二叉堆（Binary Heap）`是一种用数组来表示近似完全二叉树的数据结构。树中的每一个元素都对应数组中的一个元素，树除了最下面一层，其余层都是满的。
 
@@ -80,7 +65,7 @@ $$
 
 将一个堆看作一棵树后，将一个结点的高度定义为这个结点到叶子的最长单一路径，一棵树的高度定义为根节点的高度。因为堆是近似完全二叉树，所以对于有$n$个结点的堆来说，其高度为$\Omega(\log n)$。
 
-## Maintaining the heap property
+# Maintaining the heap property
 
 通过函数`MAX-HEAPIFY`来保持堆的特性，该函数需要传入需要处理的数组$A$和需要进行处理的元素索引值$i$。
 
@@ -181,7 +166,7 @@ $$
 
 该式子满足主方法的第二种情况，因此可以算出时间复杂度为$T(n)=O(\lg n)$
 
-## Building a heap
+# Building a heap
 
 可以通过自底向上（即从树的第一个非叶子结点开始向上调用直到根结点）的调用`MAX_HEAPIFY`方法将一个普通数组转换为满足最大特性的数组。将这个方法称为`BUILD-MAX-HEAP(A)`
 
@@ -275,7 +260,7 @@ $$
 
 所以`BUILD-MAX-HEAP(A)`的紧密时间复杂度为$O(n)$
 
-## The heapsort algorithm
+# The heapsort algorithm
 
 对排序算法，首先需要调用`BUILD-MAX-HEAP(A)`算法将数组转换为满足最大特性的数组。满足最大特性后，数组的第一个元素即为最大值，将数组的最后一个值与第一个值进行交换，然后将数组的有效大小缩小（相当于不再追踪最后一个元素，因为此时最后一个元素是原第一个元素即最大元素）。然后再针对新的第一个元素调用`MAX-HEAPIFY(A,1)`即可。
 
@@ -315,7 +300,7 @@ void heapSort()
 
 该算法的时间复杂度为$O(n\lg n)$。因为BUILD-MAX-HEAP的复杂度为$O(n)$，且调用了$O(n)$次复杂度为$O(\lg n)$的`MAX-HEAPIFY`算法。
 
-## Priority Queue 
+# Priority Queue 
 
 `优先队列（Priority queues）`是二叉堆排序的一个应用。
 
@@ -442,13 +427,3 @@ void Insert(int value)
 ```
 
 INSERT算法是先加入一个无限小的结点，再通过INCREASE-KEY方法将这个结点的值改为需要的值。该算法的时间复杂度与INCREASE-KEY相同，即$O(\lg n)$
-
-{% note primary %}
-
-引用：
-
-1. *Introduction to Algorithms* 3rd Sep.2009
-
-{% endnote %}
-
-***

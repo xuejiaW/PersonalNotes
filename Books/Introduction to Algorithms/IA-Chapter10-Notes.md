@@ -1,22 +1,7 @@
 ---
-title: 《算法导论》 第十章笔记
-mathjax: true
-date: 2019-11-05 14:32:10
-categories: 
-- 读书笔记
-- 数据结构与算法
 tags:
-- 读书笔记
-- 数据结构与算法
+    - Algorithms
 ---
-
-{% cq %}
-
-《算法导论》第十章笔记，包括栈，队列，链表的实现。
-
-{% endcq %}
-
-<!--more-->
 
 ## Chapter 10. Elementary Data Structures
 
