@@ -1,26 +1,13 @@
 ---
-title: 《C++ Primer》 第九章笔记
-mathjax: true 
-categories:
-- 读书笔记
-- 计算机语言
 tags:
-- 读书笔记
 - C++
+created: 2022-02-01
+updated: 2022-02-01
 ---
-{% cq %}
-
-《C++ Primer》 第十章笔记。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 10 Generic Algorithms
 
 从第九章的容器介绍中可以看出，容器本身支持的操作都关注于容器本身的变化，而一些通用的操作，如搜索容器中的元素，对元素进行排序等却没有出现在容器中，这是因为这些操作都呗抽象了出来，做成了统用的算法，而不是局限于某一个容器。
 
-### Overview
+# Overview
 大部分的算法都定义在了`algorithms`头文件中，一些关于数学的算法则定义在`numeric`头文件中。通常来说，这些算法并不局限于特定的容器，而是通过传递迭代器来让算法可以访问容器中的元素。
 
 如下是关于`find`算法的例子，该算法接纳参数，前两个参数表示要搜索的范围都是迭代器，第三个参数为搜索的目标值，如下所示：
@@ -57,29 +44,29 @@ Find Result in array
 */
 ```
 
-#### How the Algorithms Work
+### How the Algorithms Work
 
 注意，`find`函数传入的两个迭代器，如果命名为$a,b$，则`find`的范围是$[a, b)$。它工作的原理就是从给定的$a$迭代器位置开始与期望值进行比较，如果相等则返回，如果不相等则判断下一个迭代器并继续比较，直到找到一个数值与期望值相同的迭代器，或到了$b$迭代器的位置（并不会与$b$迭代器所指的位置进行比较）。
 
-#### Iterators Make the Algorithms Container Independent
+### Iterators Make the Algorithms Container Independent
 
 可以看到在上述例子中，`find`算法传入的是迭代器而不是容器，所以同一个`find`函数可以对两种容器都生效。同时又因为`build-in`的数组和迭代器十分类似，所以该算法同样可以用在内置的数组中。
 
-#### But Algorithms Do Depend on Element-Type Operations
+### But Algorithms Do Depend on Element-Type Operations
 
 虽然算法并不依赖于特定的容器，但算法与容器中的元素却有关。如`find`函数就依赖于容器内元素的`==`操作，很多排序算法依赖于容器中元素的`<`操作。如果容器内的元素没有定义算法要求的算法，则该容器也无法使用该算法。
 
-## A First Look at the Algorithms
+# A First Look at the Algorithms
 
 C++库中提供了超过100种算法，所以要记住所有的算法是不太可能的，书中将算法分为了三种进行分析，一类是只读，如`find`算法，一种是只写，如`copy`算法，另一种是重新排列，如`sort`算法。
 
 库中的绝大部分算法都是通过迭代器来指定了算法需要对容器中的哪一部分进行计算。
 
-### Read-Only Algorithms
+## Read-Only Algorithms
 
 只读算法有之前的`find`算法，还有计算容器中某元素出现次数的`count`算法，以及累加容器内元素的`accumulate`算法。
 
-#### Algorithms and Element Types
+### Algorithms and Element Types
 
 算法虽然不关心容器的类型，但关心容器中的元素类型，因为算法的实际操作对象是容器中的元素。这里以`accumulate`算法为例子，
 
@@ -96,7 +83,7 @@ cout << "result is :" << sum << endl;
 
 在上述例子中，如果使用了`" "`作为第三个参数则无法通过编译，因为`string`字面值实际上是一个`const char`数组，因此无法作为初始值进行累加。
 
-#### Algorithms That Operate on Two Sequences
+### Algorithms That Operate on Two Sequences
 
 有些算法会同时访问两个容器，这里以`equal`算法为例。
 
@@ -154,7 +141,7 @@ ccVec2 address is:
 
 在上述代码中，C风格的字符串实际上就是数组，而虽然比较的结果仍然为相等，但这是因为编译器的优化，将相同的字符串放在了同样的内存地址上，也因此比较的结果是相同的。如果编译器采取了不同的优化，即如果将相同的字符串放在不同的内存地址上，那么比较的结果就会是不同。因此要尽量避免对元素类型是数组的容器使用`equal`算法。
 
-### Algorithms That Write Container Elements
+## Algorithms That Write Container Elements
 
 这一部分是关于进行写入操作的算法。因为算法的参数是容器的迭代器而不是容器本身，所以算法并不能调整容器的大小，即无法调用类似于`push_back`之类的操作，也因此有写入操作的算法会默认容器本身的尺寸是大于等于要写入的元素数量的。
 
@@ -203,7 +190,7 @@ Value is 1
 
 ```
 
-#### Algorithms Do Not Check Write Operations
+### Algorithms Do Not Check Write Operations
 
 上述的fill和fill_n操作都不会去检查容器的大小是否大于等于要填充的元素数量，如果要填充的元素数量大于容器的大小，编译器也不会提示错误，代码的执行结果是未定义的，如下所示：
 
@@ -219,7 +206,7 @@ Segmentation fault
 
 在上述代码中，`ivec2`是一个空的`vector`，而`fill`操作尝试将它并不存在的前10个元素值填充为1，所以结果是错误。
 
-#### Introducing back_inserter
+### Introducing back_inserter
 
 如果要保证无论原容器的大小为多少，写入算法都不出错的话，可以使用`插入迭代器（insert iterator）`，当赋值给插入迭代器时，相当于将赋值操作右侧的数值通过迭代器插入进容器中。
 
@@ -257,7 +244,7 @@ value is 2
 */
 ```
 
-#### Copy Algorithms
+### Copy Algorithms
 
 `copy`算法也是写入算法中的一种，该算法接受三个迭代器参数，前两个迭代器$a和b$表示待拷贝的元素范围$[a,b)$，第三个参数$c$表示拷贝的目标地址。算法默认c表示的地址到该容器最后的大小足够将$[a,b)$范围内的元素都拷贝过来。如下所示：
 
@@ -330,7 +317,7 @@ value is 0
 
 可以看到上述例子中，`ivec`被替换后的结果通过`replace_copy`算法放置到了`iList`中，且`iList`的初始大小为0，是通过`back_insert_iterator`来进行插入的。
 
-### Algorithms That Reorder Container Elements
+## Algorithms That Reorder Container Elements
 
 重新对容器内元素排序的算法，最普遍的就是`sort`算法，该算法要求容器内的元素需要实现`<`操作符。且该算法需要两个形参，两个形参都是迭代器$a和b$，算法对范围$[a,b]$中元素进行排序。如下所示：
 
@@ -356,7 +343,7 @@ Value is 8
 */
 ```
 
-#### Eliminating Duplicates
+### Eliminating Duplicates
 
 这一节是通过一系列算法的合作来去除容器内的重复元素，该操作需要用到`sort`，`unique`两个算法以及容器本身的`erase`函数。
 
@@ -451,15 +438,15 @@ Result is 7
 
 在上述例中，因为`unique`返回的迭代器指向的是容器后半段第一个重复的元素，所以`erase`函数可以将其作为第一个参数，而第二个参数即是容器的尾部。
 
-## Customizing Operations
+# Customizing Operations
 
 许多算法是依赖于容器元素的操作的，如`find`操作符依赖于`==`操作符，`sort`依赖于`<`操作符。这一节介绍如何容自己的算法来取代这些默认依赖的操作符。如对于元素为`string`的容器，`sort`操作不再按照`string`的字典顺序进行排序，而是按照`string`的长度。
 
-### Passing a Function to an Algorithm
+## Passing a Function to an Algorithm
 
 如果要修改算法的默认依赖的操作符，就需要给算法一个额外的`谓词（Predicate）`参数表示替换的算法。
 
-#### Predicates
+### Predicates
 
 谓词是C++中的一种参数类型，该类的参数可以被调用，且可以返回一直数值作为判断条件。被库中算法使用的谓词分为两种，只接收一个参数的`一元谓词（unary predicates）`和接受两个参数的`二元谓词（binary predicates）`。使用谓词的算法会把其输入范围的元素（通常是前两个迭代器参数框定的范围）传给谓词。
 
@@ -487,7 +474,7 @@ void TestSortByLength()
 }
 ```
 
-#### Sorting Algorithms
+### Sorting Algorithms
 
 这一节介绍了`sort`函数的一个相似版本，`stable_sort`算法，该算法保证相同的元素在变换后其前后顺序不会改变（如之前有两个相同的元素$a和b$，$a$出现在$b$前面，在变换后也保证$a$出现在$b$前面）。
 
@@ -530,11 +517,11 @@ void TestStable_Sort()
 
 * 上述代码中，要先进行字典排序，然后再进行按长度排序。即靠前的判定原则在代码中需要靠后调用。
 
-### Lambda Expressions
+## Lambda Expressions
 
 在上一节中的谓词都是使用一个函数，但很多情况下算法要用的谓词并不会被重复的使用，所以可以使用`Lambda表达式（Lambda Expressions）`来替代。Lambda表达式相当于一个匿名内联函数。
 
-#### Introducing Lambdas
+### Introducing Lambdas
 
 Lambda表达式的格式如下：
 
@@ -561,7 +548,7 @@ cout << f() << endl;
 */
 ```
 
-#### Passing Arguments to a Lambda
+### Passing Arguments to a Lambda
 
 Lambda表达式的形参并没有默认值。这里用Lambda表达式取代之前的isShorter函数来展示如何使用代形参的Lambda表达式：
 
@@ -594,7 +581,7 @@ value is turtle
 
 这一段与上一节中对于`stable_sort`的例子几乎一样，只不过使用Lambda表达式取代了`isShorter`算法。
 
-#### Using the Capture List
+### Using the Capture List
 
 这里以`find_if`算法作为例子来说明`capture list`，该算法的第一与第二个参数为迭代器，记为$a和b$，表示计算范围为$[a,b)$该算法的第三个形参是一个一元的谓词，将范围内的每个元素传递给第三个形参表示的谓词。且返回第一个满足条件的元素的迭代器，如果整个范围内没有符合条件的元素，则返回迭代器$b$。
 
@@ -660,7 +647,7 @@ Found value is jumps
 
 这里的`toFindLength`即是一个局部变量，且放在了`capture list`中，因此可以在`Lambda`的函数体中使用。
 
-#### The for_each Algorithms
+### The for_each Algorithms
 
 这一节还介绍了`for_each`函数，该函数的第一第二个参数同样是表示范围的迭代器，第三个参数是一元的谓词，如下所示：
 
@@ -686,11 +673,11 @@ Value is fox
 */
 ```
 
-### Lambda Captures and Returns
+## Lambda Captures and Returns
 
 当定义一个Lambda表达式时，实际上是默认创建了一个新的未命名的类，而将Lambda作为函数的形参时，实际同时构建了新的类和新的该类的对象。Lambda表达式中的`capture_list`中捕获的局部变量作为新的类中的成员变量。
 
-#### Capture by Value
+### Capture by Value
 
 如之前例子中直接使用的`capture_list`使用的都是值传递，如下所示：
 
@@ -708,7 +695,7 @@ cout << "result is " << j << endl;
 
 * Lambda的值传递，捕捉变量的值拷贝发生在Lambda表达式定义的时候，而不是使用的时候
 
-#### Capture by Reference
+### Capture by Reference
 
 而如果要对`capture_list`使用引用捕捉，可以在`capture_list`中使用&操作符，如下所示：
 
@@ -727,7 +714,7 @@ cout << "result is " << j << endl;
 * 当使用引用捕捉时，要注意本地变量的释放问题
 * 对于一些无法拷贝的对象，如`ostream`，只能使用引用捕捉
 
-#### Implicit Captures
+### Implicit Captures
 
 可以使用隐式的方法来自动捕捉Lambda表达式中使用到的所有变量。如果需要通过值拷贝的方法来隐式捕捉，则在`capture_list`中使用`=`操作符，如果需要通过引用拷贝的方法来隐式捕捉，则使用`&`操作符。且在`capture_list`中可以混合使用，如显示的通过引用捕捉来捕获一个参数，再通过值拷贝的方式来隐式捕捉其他的所有参数。但混合使用隐式和显示捕捉参数时，第一个参数必须是隐式捕捉的，如下所示：
 
@@ -749,7 +736,7 @@ for_each(words.begin(), words.end(), [=, &os](const string &s) { os << s << c; }
 
 上述两个Lambda表达式实际上是相同的，只不过第一个是隐式引用拷贝，第二个是隐式值拷贝。
 
-#### Mutable Lambdas
+### Mutable Lambdas
 
 `capture_list`中捕捉的值拷贝参数是无法修改的，因此如下代码是无法通过编译的：
 
@@ -783,7 +770,7 @@ cout << "result is " << k << endl;
 // result is 1 
 ```
 
-#### Specifying the Lambda Return Type
+### Specifying the Lambda Return Type
 
 这一节中介绍了`transform`算法，该算法需要四个参数，前三个参数都是迭代器，前两个迭代器表示输入的范围，第三个迭代器表示输出的地址，第四个参数为一元谓词。该谓词将输入范围中的元素进行修改，如下所示：
 
@@ -823,9 +810,9 @@ transform(ivec.begin(), ivec.end(), ivec.begin(), [](int i) -> int {
 });
 ```
 
-### Binding Arguments
+## Binding Arguments
 
-#### The Library bind Function
+### The Library bind Function
 
 如之前所述，`find_if`算法只能接纳一个一元谓词，但是在判断过程中往往又需要用到额外的一个数值用来判断是否满足条件。在上面的例子中，需要用`find_if`算法找寻长度大于等于5的单词，例子中使用了带有`capture_list`的Lambda表达式解决了问题，如下所示：
 
@@ -879,7 +866,7 @@ debug2(1, 2);
 it = find_if(stringVec.begin(), stringVec.end(), bind(&check_size, std::placeholders::_1, toFindLength));
 ```
 
-#### Binding Reference Parameters
+### Binding Reference Parameters
 
 如果在`bind`算法中需要引用或指针，可以使用`ref`算法，而如果需要const引用或指针，则可以使用`cref`算法。
 
@@ -899,7 +886,7 @@ for_each(words.begin(), words.end(), bind(print, ref(os), _1, c));
 // abc|def|ghi|
 ```
 
-## Revisiting Iterators
+# Revisiting Iterators
 
 许多算法的参数是迭代器而不是容器或者流本身，因此这些算法的操作都依赖于迭代器，如果要对容器或流进行操作，也必须通过迭代器来实现。如之前就依赖`back_insert_iterator`来实现对容器的插入。在`iterator`头文件中，定义了四种特殊的迭代器类型:
 
@@ -908,7 +895,7 @@ for_each(words.begin(), words.end(), bind(print, ref(os), _1, c));
 3. `反向迭代器（Reverse iterators）`：如之前所述，除了`forward_list`，其他的容器都定义了反向迭代器，用于相反方向的访问迭代器（如++操作不再是前移一位，而是后移一位） 
 4. `移动迭代器（Move iterators）`：在13.6.2节解释
 
-### Insert Iterators
+## Insert Iterators
 
 `iterator`头文件中定义了以下三个函数，来返回不同的插入迭代器：
 
@@ -985,11 +972,11 @@ it = c.insert(it, val);
 ++it;
 ```
 
-### iostream Iterators
+## iostream Iterators
 
 流迭代器包括`istream_iterator`和`ostream_iterator`，这些迭代器对IO流进行操作。
 
-#### Operations on istream_iterators
+### Operations on istream_iterators
 
 `istream_iterator`的使用如下所示：
 
@@ -1044,7 +1031,7 @@ Output:
 1 2 3 4 5
 */
 ```
-#### Using Stream Iterators with the Algorithms
+### Using Stream Iterators with the Algorithms
 
 流迭代器也可以使用在算法的迭代器中，如可以用`accumulate`来累加所有的输入，如下所示：
 
@@ -1064,7 +1051,7 @@ Output:
 */
 ```
 
-#### Operations on ostream_iterators
+### Operations on ostream_iterators
 
 `ostream_iterator`的构造函数采纳两个参数，第一个是`ostream`的实例，如`cout`，第二个参数为每个输出元素后要跟着的`string`。如下所示：
 
@@ -1100,7 +1087,7 @@ copy(ivec.begin(), ivec.end(), out_iter);
 
 * `ostream_iterator`通常作为左参数，而`istream_iterator`通常作为右参数。
 
-### Reverse Iterators
+## Reverse Iterators
 
 
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
+            "file": "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/C++ Primer/Ch 09 The Sequential Containers.md"
+                "file": "Boos/C++ Primer/Ch 10 Generic Algorithms.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
+                "file": "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,8 +110,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -124,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
+                "file": "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -161,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
     "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
     "Boos/C++ Primer/Ch 04 Expressions.md",
     "Boos/C++ Primer/assets/Ch 04 Expressions/2020-02-17-23-17-07.png",
@@ -169,7 +169,6 @@
     "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-18-04-25.png",
     "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-17-59-23.png",
     "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-17-43-40.png",
-    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-16-03-22.png",
-    "Boos/C++ Primer/assets/CPPPrimer-Chapter4-Notes/Ch4.png"
+    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-16-03-22.png"
   ]
 }
