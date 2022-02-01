@@ -1,34 +1,11 @@
 ---
 created: 2022-02-01
 updated: 2022-02-01
----
----
-title: 《C++ Primer》 第三章笔记
-mathjax: true
-date: 2020-02-15 19:04:13
-categories:
-  - 读书笔记
-  - 计算机语言
 tags:
-  - 读书笔记
-  - C++
+    - C++
 ---
 
-{% cq %}
-
-《C++ Primer》 第三章笔记。
-
-第二章介绍的是C++中的内建类型，这一章则是会介绍C++标准库中的一些重要类型。
-
-![第三章内容](assets/CPPPrimer-Chapter3-Notes/Ch3.png)
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 3 String, Vectors, And Arrays
-
-## Namespace using Declarations
+# Namespace using Declarations
 
 可以使用`using <namespace>::<name>`的方式定义在命名空间中的一个函数或变量，注意一个`using`命令符只能对应一个名字，如下式
 
@@ -53,13 +30,13 @@ void voidTestNamespace()
 }
 ```
 
-### Header Should not include using Declarations
+## Header Should not include using Declarations
 
 如之前所述，预处理器实际上是把`#incldue`语句替换为头文件中的内容，所以如果在头文件中使用了using声明，那么所有引用了该头文件的文件都会使用该using声明。
 
 这可能会造成意想不到的情况发生，所以应该尽量避免在头文件中使用using声明。
 
-## Library string Type
+# Library string Type
 
 使用C++标准库的string前，应该首先引入string，如下
 
@@ -68,7 +45,7 @@ void voidTestNamespace()
 using std::string;
 ```
 
-### Defining and Initializing strings
+## Defining and Initializing strings
 
 初始化String的方法如下表所示：
 
@@ -92,15 +69,15 @@ cout << s3.length() << endl;                //5
 cout << s4.length() << endl;                //5
 ```
 
-#### Direct and Copy Forms of Initialization
+### Direct and Copy Forms of Initialization
 
 当使用`=`进行初始化的时候，实际上编译器执行的是`拷贝初始化(Copy Initialize)`，当不使用`=`时，是`直接初始化（Direct Initialization）`。
 
 上表中，`string s2 = s1`和`string s3 = "value"`是拷贝初始化，其他的都是直接初始化
 
-### Operations on strings
+## Operations on strings
 
-#### Reading and Writing strings
+### Reading and Writing strings
 
 下表为可以对string进行的操作：
 
@@ -149,7 +126,7 @@ result is     Hello World
 
 又因为`getline`返回的也是stream类型，所以同样可以作为判断条件。
 
-#### The string::size_type Type
+### The string::size_type Type
 
 string.size()方法返回字符串中的字符数，但是返回的结果并不是int或者unsigned，而是`string::size_type`。
 
@@ -177,7 +154,7 @@ s3 length is smaller"
 auto len = line.size()
 ```
 
-#### Adding Literals and strings
+### Adding Literals and strings
 
 string标准库允许将字符字面值和字符串字面值转换为string字面值。
 
@@ -191,7 +168,7 @@ cout << s3;
 string s4 = s1 + "," + s2; //ok, s1 + "," return string
 ```
 
-### Dealing with the Characters in a string
+## Dealing with the Characters in a string
 
 在标准库的cctype头文件中定义了许多关于字符的函数。
 
@@ -216,7 +193,7 @@ cctype中常用的函数如下：
 | tolower(c)   | 将c从大写切换为小写                                       |
 | toupper(c)   | 将c从小写切换为大写                                       |
 
-#### Processing Every Character? Use Range-Based for
+### Processing Every Character? Use Range-Based for
 
 可以使用`Range for`来改变字符串中的每个字符，`Range for`结构如下
 
@@ -251,7 +228,7 @@ for (const auto &c : s)
 }
 ```
 
-#### Using a Range for to Change the Characters in a string
+### Using a Range for to Change the Characters in a string
 
 `Range for`实际上是返回值的拷贝，如上节的例子中在每次迭代的情况下，是将str中下个字符拷贝至c中。因此如果需要通过Range for修改string中的数值，就需要使用引用，如下是将字符串中的每个字符转换为大写的代码：
 
@@ -268,7 +245,7 @@ HELLO WORLD!!!
 */
 ```
 
-#### Using a Subsctipt for Iteration
+### Using a Subsctipt for Iteration
 
 可以使用下标（`[<index>]`）取string中的每个字符。使用下标返回的并不是拷贝，而直接是string中的数值，所以可以直接进行修改，并不需要引用，如下是使用下标来将每个字符改为大写：
 
@@ -284,7 +261,7 @@ HELLO WORLD!!!
 */
 ```
 
-## Library vector Type
+# Library vector Type
 
 Vector是对象的集合，所有的对象都必须有相同的类型。Vector并不是一个具体的类，而是一个类模板。
 
@@ -292,9 +269,9 @@ Vector是对象的集合，所有的对象都必须有相同的类型。Vector�
 
 Vector中可以容纳绝大部分的类型，无论是内建类型还是自定义的类型，但是不能包含引用，严格严格来说引用并非是对象。Vector中的对象也可以是另一个Vector，在老版本中嵌套Vector的尖括号中必须带有空格，如`vector<vector<int> >`，但在C++11中不需要如此，直接写成`vector<vector<int>>`即可。
 
-### Defining and Initializing vectors
+## Defining and Initializing vectors
 
-#### Value Initialization and Default Initialization
+### Value Initialization and Default Initialization
 
 首先要说明值初始化（Value Initialization）和默认初始化（Default Initialization）的概念。
 
@@ -303,15 +280,15 @@ Vector中可以容纳绝大部分的类型，无论是内建类型还是自定�
 
 定义和初始化vector的方法如下所示：
 
-| 示例代码                 | 解释                                                         |
-| ------------------------ | ------------------------------------------------------------ |
-| vector<T> v1            | vector中的元素类型为T，v1为空                                |
-| vector<T> v2(v1)         | v2中包含有v1中每个元素的拷贝                                 |
-| vector<T> v2 = v1        | 与上式一样                                                   |
-| vector<T> v3(n,val)      | v3中有n个元素，每个元素的值都是val                           |
-| vector<T> v4(n)          | v4中有n个元素，每个元素都是T的默认值                         |
-| vector<T> v5{a, b, c}    | 如果a,b,c与T类型匹配，则v5包含a,b,c三个元素（不匹配的情况在下面有详细说明）。 |
-| vector<T> v5 = {a, b, c} | 与上式相同                                                   |
+| 示例代码                 | 解释                                                                          |
+| ------------------------ | ----------------------------------------------------------------------------- |
+| `vector<T> v1`             | vector中的元素类型为T，v1为空                                                 | 
+| `vector<T> v2(v1)`         | v2中包含有v1中每个元素的拷贝                                                  |
+| `vector<T> v2 = v1`        | 与上式一样                                                                    |
+| `vector<T> v3(n,val)`      | v3中有n个元素，每个元素的值都是val                                            |
+| `vector<T> v4(n)`          | v4中有n个元素，每个元素都是T的默认值                                          |
+| `vector<T> v5{a, b, c}`    | 如果a,b,c与T类型匹配，则v5包含a,b,c三个元素（不匹配的情况在下面有详细说明）。 |
+| `vector<T> v5 = {a, b, c}` | 与上式相同                                                                    |
 
 
 vector的创建同样分类为拷贝初始化和直接初始化，定义和string中的初始化一样，如`vector<T> v2 = v1`和`vector<T> v5 = {a, b, c}`为拷贝初始化，其他的都为直接初始化。
@@ -356,19 +333,19 @@ v8 size is 10
 */
 ```
 
-### Adding Elements to a vector
+## Adding Elements to a vector
 
 使用`push_back`方法来增加vector中的元素。
 
 在标准库中vector的实现下，vector的扩张是很高效的，所以通常来说不需要用括号的初始化方法来定义vector的大小，有的时候定义vector的大小反而会造成性能方面的影响。除了所有的元素都是相同值的情况，否则尽量避免使用括号的初始化方法。
 
-#### Programming Implications of Adding Elements to a vector
+### Programming Implications of Adding Elements to a vector
 
 在vector的循环中要注意使vector大小发生变化的操作。
 
 如果操作时关于改vector的大小的，则无法使用在string节提到的`range for`来遍历vector。
 
-### Other vector Operations
+## Other vector Operations
 
 对vector的操作如下表，绝大部分的含义与之前介绍的string的操作一样。
 
@@ -393,7 +370,7 @@ vector<int>::size_type size = 1;
 
 > 与string类似，下标操作[]也必须注意元素的存在，如果通过下标访问了不存在的元素，称为缓存区溢出错误（Buffer overflow）。通常可以通过使用range for来避免下标操作，也进而避免了缓存区溢出错误。
 
-## Introducing Iterators
+# Introducing Iterators
 
 除了Vector，标准库还定义了其他的容器（Container），所有的容器都包含迭代器操作（Iterator），但仅有部分的容器支持下标操作（`[]`）。
 
@@ -401,13 +378,13 @@ vector<int>::size_type size = 1;
 
 迭代器有的像指针，同样提供了对象的非直接访问，而且同样也有合法和非法迭代器。一个合法的迭代器应该指向容器中一个元素或者指向容器最后的元素尾部的位置（position on past the last element）。
 
-### Using Iterators
+## Using Iterators
 
 通常来说，支持迭代器的类型都有两个成员迭代器，`begin`和`end`，`begin`指向容器中的第一个元素，`end`指向最后的元素尾部的位置，所以`end`指向的位置实际上并不是任何元素，`end`是一个用来标记容器尾部的指示器，通常将`end`迭代器值称为`off-the-end`迭代器。
 
 如果一个容器是空的，则其`begin`和`end`指向的是同一个位置，都是`off-the-end`迭代器。
 
-#### Iterator Operations
+### Iterator Operations
 
 迭代器只支持部分操作，如下表所示：
 
@@ -447,7 +424,7 @@ result is HELLO WORLD!!!
 */
 ```
 
-#### Iterator Types
+### Iterator Types
 
 像`size_type`一样，含有迭代器的类型也定义了相应的同伴类型，`iterator`和`const_iterator`，且类型是属于实例化后的类，如`vector<int>`。iterator和const_iterator的关系如同pointer和pointer to const，后者只能读取指向的元素，但不能修改，而且对于const对象来说，必须使用const_iterator，如下：
 
@@ -475,17 +452,17 @@ vector<string>::const_iterator v2Iter2 = v2.begin();
 auto cIter = v1.cbegin();
 ```
 
-#### Combining Dereference and Member Access
+### Combining Dereference and Member Access
 
 可以使用`->`来取代`(*).`操作，如`it->empty()`等同于`(*it).empty()`。注意在使用后者时，必须加上括号。
 
 如果去掉括号，`*it.empty()`指的是在`it`这个迭代器中寻找成员`empty`，无疑会造成编译错误。
 
-#### Some vector Operations Invalidata Iterators
+### Some vector Operations Invalidata Iterators
 
 使用迭代器来执行循环操作时，也要注意循环操作造成容器大小变化时，很可能会造成循环的错误结果。
 
-### Iterator Arithmetic
+## Iterator Arithmetic
 
 vector和string支持一些额外的迭代器操作，如下表所示：
 
@@ -498,11 +475,11 @@ vector和string支持一些额外的迭代器操作，如下表所示：
 | iter1 - iter2 | 获得两个迭代器之间的距离，即相距多少个元素     |
 | <, <=, >, >=  | 关系比较，比较迭代器指向元素的前后，越靠前越小 |
 
-#### Arithmetic Operations on Iterators
+### Arithmetic Operations on Iterators
 
 `iter1 - iter2`操作返回的是一个名为`difference_type`的signed int类型,该类型同样属于实例化后的容器类型。
 
-#### Using Iterator Arithmetic
+### Using Iterator Arithmetic
 
 使用迭代器进行二分查找例子:
 
@@ -523,9 +500,9 @@ while (mid != end && (*mid) != toSearch)
 cout << (end != mid ? "Found" : "Not Found") << endl;
 ```
 
-## Arrays
+# Arrays
 
-### Defining and Initializaing Build-in Arrays
+## Defining and Initializaing Build-in Arrays
 
 数组同样也是复合类型（compound type）。
 
@@ -546,7 +523,7 @@ int arr3[cnum];
 
 因为引用并不是对象，所以也没有引用的数组。
 
-#### Explicitly Initializing Array Elements
+### Explicitly Initializing Array Elements
 
 对数组可以使用列表初始化，在使用列表初始化的时候可以不指定数组的大小，此时数组的大小由列表内的元素数量决定。如果指定了数组大小，那么这个大小必须大于列表中元素的数量，在比列表元素数量大的情况下，数组中剩余的部分将进行值初始化。在不适用列表初始化的情况下，必须指定数组大小，如下：
 
@@ -559,7 +536,7 @@ string sa[sz] = {"hi", "byt"}; //size is 3,value is "hi""bye" ""
 // int a4[sz] = {0, 1, 2, 3};     //error, list elements count is greater than array size
 ```
 
-#### Character Arrays Are Special
+### Character Arrays Are Special
 
 使用string字面值初始化char数组时要注意，string字面值最后是带有一个空白字符的，所以数组的大小应该是string字面值的大小+1。如：
 
@@ -570,7 +547,7 @@ char ca3[] = "abc";                 //size is 4
 // const char a4[6] = "Daniel";       //error,no space for \0
 ```
 
-#### No Copy or Assignment
+### No Copy or Assignment
 
 数组是没有拷贝初始化和赋值的，如下所示：
 
@@ -584,7 +561,7 @@ int aa[3];
 
 > 某些编译器会允许数组的赋值，但仍然建议不要这样做，因为这不是C++标准的实现，在其他编译器中可能会引发问题。
 
-#### Understanding Complicated Array Declarations
+### Understanding Complicated Array Declarations
 
 指针的数组和数组的指针的声明会看起来有点复杂，如下所示：
 
@@ -601,7 +578,7 @@ int *(*pparray)[10] = &ptrs; //pparray is a pointer point toan int* array of siz
 
 引用符号同理。
 
-### Accessing the Elements of an Array
+## Accessing the Elements of an Array
 
 当使用一个参数来作为数组的下标值时，这个参数的类型应该时`size_t`。`size_t`是一个机器相关的unsigned type。size_t定义在头文件cstddef中，该头文件是从C语言的头文件`stddef.h`改写而来。
 
@@ -632,7 +609,7 @@ for (auto c : scores)
 
 在代码的最后通过range for遍历输出了scores中的元素，因为数组的大小是数组的一部分即必须在编译时确认，所以系统可以了解究竟有多少元素在数组中。
 
-### Pointers and Arrays
+## Pointers and Arrays
 
 在C++中，数组和指针是紧密关联的。在绝大部分表达式中，当使用数组时，编译器会将其转换为对第一个元素的指针，如下所示：
 
@@ -686,7 +663,7 @@ value is
 
 如之前所述，数组的大小是数组类型的一部分，所以这里的another类型为string[3]，而列表初始化只给了两个元素，所以最有一个元素将默认为空string。
 
-#### Pointers are Iterators
+### Pointers are Iterators
 
 对于数组中元素的指针，其支持的操作与之前提到的迭代器支持的操作一样，包括`++`,`--`，通过`*`解引用，`==,!=`，关系判断，`+= n`等。
 
@@ -756,7 +733,7 @@ void Exercise3_36()
 }
 ```
 
-#### Pointer Arithmetic
+### Pointer Arithmetic
 
 两个指针也是可以相减的，结果类型为`ptrdiff_t`，是一个硬件相关的类型，定义在`cstddef`头文件中。在不同的硬件上，它可能会被转换为不同的类型，如转换为long long等。
 
@@ -773,7 +750,7 @@ cout << (p < e ? "p is smaller than e" : "p is larger thane") << endl;
 
 这些操作的结果都是未定义的，不同的硬件，不同的编译器甚至不同的运行时间都会造成不同的结果。
 
-#### Interaction between Dereference and Pointer Arithmetic
+### Interaction between Dereference and Pointer Arithmetic
 
 在对指针进行解引用时，括号的使用会影响结果,如下：
 
@@ -787,7 +764,7 @@ cout << *ia + 4 << endl;//Access the first element and add 4to the result
 */
 ```
 
-#### Subscripts and Pointers
+### Subscripts and Pointers
 
 可以对任何指针使用下标，但是大多数情况下，只有对指向数组中元素的指针使用下标才有意义，剩下的都是未定义的结果，如下：
 
@@ -807,7 +784,7 @@ cout << ap[-1] << endl; //undefined result
 
 如上所示，通过解引用符号\*对指针的访问，相当于使用`[0]`操作,因此如`iaP[-2]`和`*(iaP - 2)`是等效的。
 
-### C-Style Character Strings
+## C-Style Character Strings
 
 C++中的string字面值实际上是继承自C语言的。通过C++的string存储string字面值会将其转换为string类型，但如果要完全体现String字面值（C风格的String）本身的特性，可以使用char数组或者指针，如`char str[] = "ABC";`，该数组的大小为4，因为还有在最后包含一个空字符。
 
@@ -840,7 +817,7 @@ Although cs1>cs1 also yield correct result,but it's nomeaning.
 */
 ```
 
-#### Caller is Responsible for Size of a Destination String
+### Caller is Responsible for Size of a Destination String
 
 使用C-Stype字符串相关操作时需要额外的小心，如`strcat`和`strcpy`操作，并不会检查第一个参数，即装填最终结果的数组的大小，如果数组大小不满足，则会产生错误结果。
 
@@ -859,7 +836,7 @@ cout << strlen(ca) << endl;
 
 也正因为使用C-Style字符串需要额外的小心，一般现代C++程序推荐使用标准库中的string类型。
 
-### Interfacing to Older Code
+## Interfacing to Older Code
 
 在之前已经说明了，可以使用字符串字面值来直接初始化标准库中的string类型，更通常来说，可以使用任何最后是空白字符结尾的C-Style字符串直接转换为标准库中的string类型。如果C-Style字符串结尾不是空白字符，同样结果是未定义的。如下所示：
 
@@ -901,7 +878,7 @@ value is DEFC, size is 4
 */
 ```
 
-#### Using an Array to Initialize a vector
+### Using an Array to Initialize a vector
 
 如前所述，无法直接通过一个数组初始化另一个数组。同样的，无法通过一个vector直接初始化一个数组，但却可以通过指向数组元素的指针来初始化vector，如下所示
 
@@ -933,11 +910,11 @@ cout << endl;
 
 创建的vector和原数组是不同的内存，因此创建完后，修改原数组并不会对vector中的元素造成影响。
 
-## Multidimensional Arrays
+# Multidimensional Arrays
 
 C++并没有多维数组的概念，实际上多维数组的实现是通过数组的数组。如`ia[3][4]`可以看作是一个三行四列的数组。对于多维数组必须指定维度，不能初始值来推断。
 
-### Initializing the Elements of a Multidimensional Array
+## Initializing the Elements of a Multidimensional Array
 
 以下是初始化多维数组的几种方式：
 
@@ -952,7 +929,7 @@ int ix[3][4] = {0, 4, 8};
 
 其中`ic`和`id`的初始化结果是相同的，`ie`是初始化了每一行的第一个元素的值，`ix`的初始化了第一行的前三个元素，之后的元素都会被装填为0（进行了值初始化）。
 
-### Subscripting a Multidimentional Array
+## Subscripting a Multidimentional Array
 
 ```cpp
 int ia[3][4]= = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
@@ -978,7 +955,7 @@ cout << endl;
 */
 ```
 
-### Using a Range for with Multidimentsional Arrays
+## Using a Range for with Multidimentsional Arrays
 
 当使用C++ 11标准的`range for`遍历多维数组时，需要注意除了最内侧的数组外，外层的遍历都需要用引用，如下：
 
@@ -1022,7 +999,7 @@ cout << endl;
 
 当外层循环的row不是引用时，编译器会自动将其转换为指针，即row的类型会变为`int *`，指向每一行数组的第一个元素，而对于指针没法使用range for，所以会出现编译错误。
 
-#### Pointers and Multidimensional Arrays
+### Pointers and Multidimensional Arrays
 
 首先要注意数组与指针的关系，式子`int *ip[4]`表示ip是一个长度为4的数组，其中元素类型为int\*。式子`int (*ip)[4]`表示ip是一个指针，指向长度为4的数组。
 
@@ -1063,7 +1040,7 @@ cout << endl;
 */
 ```
 
-#### Type Aliases Simplify Pointers to Multidimensional Arrays
+### Type Aliases Simplify Pointers to Multidimensional Arrays
 
 可以通过为int数组取一个别名来简化代码，如下
 
@@ -1088,13 +1065,3 @@ cout << endl;
 
 示例中，将长度为4的int数组称为int_array。示例中使用using和typedef是等效的。
 
-
-{% note primary %}
-
-引用：
-
-1. *Cpp Primer* 5th Aug.2012
-
-{% endnote %}
-
-***

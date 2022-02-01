@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
+            "file": "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md"
+                "file": "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
+                "file": "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
+                "file": "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,6 +160,7 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Boos/C++ Primer/Ch 03 String, Vectors and Arrays.md",
     "Boos/C++ Primer/Ch 02 Variables and Basic Types.md",
     "Boos/C++ Primer/Ch 01 Getting Started.md",
     "Boos/C++ Primer/Ch 00 Perface.md",
@@ -168,7 +169,6 @@
     "Boos/Learn OpenGL/Ch 30 Parallax Mapping.md",
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 1.png",
     "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 3 1.png",
-    "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 2.png",
-    "Boos/3D Math Primer For Graphics and Game Development/Ch 08 Rotation in Three Dimensions.md"
+    "Boos/Learn OpenGL/assets/Ch 30 Parallax Mapping/Untitled 2.png"
   ]
 }
