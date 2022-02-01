@@ -46,7 +46,7 @@ C++有的算数类型如下：
 
 大多数的计算机都会给每个byte分配一个地址。如在一台8-bit byte和 32-bit words的电脑上，一个word的内存如下，可以说是地址在736424的word或地址在736427的byte。
 
-![word内存分布](assets/CPPPrimer-Chapter2-Notes/2020-02-07-16-03-22.png)
+![word内存分布](assets/Ch%2002%20Variables%20and%20Basic%20Types/2020-02-07-16-03-22.png)
 
 数据的类型决定了编译器会如何处理这些内存，即多少bit的数据会被认为是一个数据以及该如何翻译这些内存。
 
@@ -91,7 +91,7 @@ cout << "value is " << (int)c2 << endl;
 
 结果为
 
-![类型转换例子1结果](assets/CPPPrimer-Chapter2-Notes/2020-02-07-17-43-40.png)
+![类型转换例子1结果](assets/Ch%2002%20Variables%20and%20Basic%20Types/2020-02-07-17-43-40.png)
 
 规则如下：
 
@@ -118,7 +118,7 @@ cout << u1 - u2 << endl;
 
 结果为：
 
-![signed隐式转换例子](assets/CPPPrimer-Chapter2-Notes/2020-02-07-17-59-23.png)
+![signed隐式转换例子](assets/Ch%2002%20Variables%20and%20Basic%20Types/2020-02-07-17-59-23.png)
 
 第二个表达式值为4294967264，因为在计算时$i$被转换为了unsigned,值为$2^{32}-42$（32次方是因为int用32-bit表示），因此整个式子的结果为$2^{32}-42+10=4294967264$。
 
@@ -135,7 +135,7 @@ for (unsigned i = 10; i >= 0; i--)
 
 结果会变成死循环：
 
-![unsigned隐式转换造成的死循环](assets/CPPPrimer-Chapter2-Notes/2020-02-07-18-04-25.png)
+![unsigned隐式转换造成的死循环](assets/Ch%2002%20Variables%20and%20Basic%20Types/2020-02-07-18-04-25.png)
 
 因为在i变为0后，执行`i--`，i将变成$2^{32}-1$，而不是-1。
 

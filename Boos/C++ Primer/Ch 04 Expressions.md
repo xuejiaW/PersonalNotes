@@ -733,17 +733,7 @@ pv = (void *)ps;
 
 下图为C++所有操作符的含义，实例代码，结合性，优先级以双横线区分：
 
-![操作符1](assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-16-54.png)
+![操作符1](assets/Ch%2004%20Expressions/2020-02-17-23-16-54.png)
 
-![操作符2](assets/CPPPrimer-Chapter4-Notes/2020-02-17-23-17-07.png)
+![操作符2](assets/Ch%2004%20Expressions/2020-02-17-23-17-07.png)
 
-
-{% note primary %}
-
-引用：
-
-1. *Cpp Primer* 5th Aug.2012
-
-{% endnote %}
-
-***
