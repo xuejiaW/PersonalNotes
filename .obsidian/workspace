@@ -7,8 +7,13 @@
         "id": "12d6838d5873c284",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Books/Introduction to Algorithms/Ch 03 Growth of Functions.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
         }
       }
     ],
@@ -64,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Books/Introduction to Algorithms/Ch 03 Growth of Functions.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Books/Introduction to Algorithms/Ch 03 Growth of Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Books/Introduction to Algorithms/Ch 03 Growth of Functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,15 +122,15 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books/Introduction to Algorithms/Ch 03 Growth of Functions.md",
+    "Books/Introduction to Algorithms/Ch 02 Getting Started.md",
+    "Books/Introduction to Algorithms/IA-Chapter1-Chapter2-Notes.md",
+    "Books/Introduction to Algorithms/Ch 01 The Role of Algorithms in Computing.md",
     "Books/Untitled.md",
     "Books/3D Math Primer For Graphics and Game Development.md",
     "Books.md",
     "Books/Introduction to Algorithms.md",
     "Templates/Book-Template.md",
-    "Tutorials/Unity Catlike.md",
-    "Tutorials/Unity Learn.md",
-    "Books/Render Hell.md",
-    "Books/Learn OpenGL.md",
-    "Books/C++ Primer.md"
+    "Tutorials/Unity Catlike.md"
   ]
 }
