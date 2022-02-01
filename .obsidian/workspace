@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book.md",
+            "file": "Notes/Unity.md",
             "mode": "source",
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book.md"
+                "file": "Notes/Unity.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book.md",
+                "file": "Notes/Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,8 +109,21 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "a85768a881b7dd3a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Notes/Unity.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "37bd8f4e58a99db8",
@@ -123,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Book.md",
+                "file": "Notes/Unity.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,15 +173,15 @@
   },
   "active": "fe6d1776fa79cc1f",
   "lastOpenFiles": [
+    "Notes/Unity.md",
+    "Boos/Learn OpenGL/Ch 19 Framebuffers.md",
+    "Boos/Learn OpenGL/Ch 24 Anti Aliasing.md",
+    "Boos/Learn OpenGL/Ch 31 HDR.md",
     "Book.md",
     "Boos/C++ Primer.md",
     "Boos/C++ Primer/Untitled.md",
     "Boos/C++ Primer/Ch 10 Generic Algorithms.md",
     "Boos/C++ Primer/Ch 09 The Sequential Containers.md",
-    "Boos/C++ Primer/Ch 04 Expressions.md",
-    "Boos/C++ Primer/assets/Ch 04 Expressions/2020-02-17-23-17-07.png",
-    "Boos/C++ Primer/assets/Ch 04 Expressions/2020-02-17-23-16-54.png",
-    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-04-15-22-06-48.png",
-    "Boos/C++ Primer/assets/Ch 02 Variables and Basic Types/2020-02-07-18-04-25.png"
+    "Boos/C++ Primer/Ch 04 Expressions.md"
   ]
 }
