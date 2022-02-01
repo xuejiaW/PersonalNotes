@@ -1,33 +1,11 @@
 ---
-title: 《算法导论》 第五章笔记
-mathjax: truehexo
-date: 2020-02-05 13:03:30
-categories:
-  - 读书笔记
-  - 数据结构与算法
 tags:
-  - 读书笔记
-  - 数据结构与算法
+    - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
-《算法导论》 第五章笔记。
-
-5.1节介绍了整章中作为例子的雇佣问题，并简单介绍了两个分析随机问题的方法，概率分析和随机化算法。
-
-5.2节介绍了分析随机问题中的重要工具，指标随机变量，并使用概率分析方法分析了雇佣问题的平均花费。
-
-5.3节使用随机化算法分析雇佣问题的期望花费，并且介绍了两种实现随机值产生器的方法。
-
-5.4节尚未整理。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 5 Probabilistic Analysis and Randomized Algorithms
-
-## The hiring problem
+# The hiring problem
 
 雇佣问题（Hiring Problem）是假设一个雇佣公司与一家HR服务公司签订协议帮助它雇佣一位秘书。HR服务公司会每天向雇佣公司提供一个候选人，雇佣公司将面试该候选人，如果候选人比现在的秘书优秀，则解雇现在的秘书，雇佣候选人。这个操作是每天都在进行的，即如果每天来的候选人都比前一天的更优秀，则会每天解雇昨天雇佣的人，然后再雇佣新的候选人。整个过程的伪代码实现如下：
 
@@ -45,14 +23,14 @@ for i = 1 to n
 
 可以明显看出，$m$越大，即雇佣过的人越多，复杂度越高。而$m$的大小是与候选人的情况相关的。
 
-### Worst-case analysis
+## Worst-case analysis
 最坏情况下，即候选人是从最差到最好的顺序给的，那么$m=n$。在最好情况下，即候选人是从最好到最坏的顺序下给的，那么$m=1$。
 
 但是最好和最差情况是很少出现的，所以需要真正关心的是通常情况下的花费，或者说各个情况下平均需要的花费。
 
 这里先简单的阐述下概率分析方法和随机化算法方法，在6.2和6.3节会进行更详细的分析。
 
-### Probabilistic analysis
+## Probabilistic analysis
 
 概率分析（Probabilistic analysis）是通过概率来分析问题，通常使用概率分析来分析算法的运行时间，但这里用概率分析来分析雇佣的花费。
 
@@ -60,7 +38,7 @@ for i = 1 to n
 
 对于雇佣问题而言，所有输入可能的概率是相同的，即这是个`均匀概率分布（Unifrom random permutation）`。对于一共有$n$个候选人，第一个候选人一共$n$种可能，第二个候选人有$n-1$种...依次类推，最后一个候选人就只有1种可能，综合起来看，$n$个候选人的排列组合有$n!$种可能，因此每个排列的可能性为$1/n!$
 
-### Randomized algorithms
+## Randomized algorithms
 
 为了使用概率分析的方法，需要知道输入的分布可能或者对分布可能进行一个猜测，在`随机化算法（Randomized algorithms）`中则不需要。可以使用随机函数*主动*的让算法中的一部分成为随机。
 
@@ -70,7 +48,7 @@ for i = 1 to n
 
 对于随机化算法的复杂度分析，是根据随机数生成器生成的数值的概率分布来计算出运行时间，将其称为`期望运行时间（Expected running time）`。
 
-## Indicator random variables
+# Indicator random variables
 
 指标随机变量（Indicator random variables）提供一个在概率（probabilities）和期望（expectations）之间转换的方法。事件$A$的指标随机变量$I{A}$定义为：
 
@@ -111,7 +89,7 @@ E[X_A]=E[I\{A\}]\\\\
 = Pr\{A\}
 $$
 
-### Analysis of hiring problem using indicator random variables
+## Analysis of hiring problem using indicator random variables
 
 为了使用概率分析，假设候选人都是以一个随机的顺序出现（在5.3节使用随机化算法的话将不再需要这个假设）。将X作为随机变量，其值表示为整个面试过程中总计录用的次数。
 
@@ -150,7 +128,7 @@ $$
 
 因此，使用概率分析可得平均情况下录取候选人的成本为$O(C_h \ln n)$
 
-## Randomized algorithms
+# Randomized algorithms
 
 随机化算法与概率分析两个方法的不同点在于，概率分析是假设一个输入的分布，而随机化算法是**引入**输入的分布。
 
@@ -179,7 +157,7 @@ for i = 1 to n
 
 因此通过随机化算法也同样可以得到结论，录取候选人的成本为$O(C_h \ln n)$。但使用概率分析的时候，将结果称为`平均情况下的结果`，在使用随机化算法的时候，将结果称为`期望结果`。两者实际上非常相似，更多的是命名方面的区分。
 
-### Randomly permuting arrays
+## Randomly permuting arrays
 
 许多随机化算法都是通过随机排列输入数组来引入随机化的。
 
@@ -246,7 +224,7 @@ $$
 
 当取$i=n$时，即$n$个候选人时某个排列组合的概率，可得$(n-i)!/n!=1/n!$，与概率分析的结果相同。
 
-## Probabilistic analysis and further uses of indicator random variables
+# Probabilistic analysis and further uses of indicator random variables
 
 //TODO 
 

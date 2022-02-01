@@ -1,6 +1,8 @@
 ---
 tags:
     - Algorithms
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
 
@@ -18,13 +20,13 @@ $$
 
 $$T(n)=2T(n/2)+\Theta(n)$$
 
-## The Maximum-subarray problem
+# The Maximum-subarray problem
 
 从一个整数数组中找寻出值最大的子数组。如下图所示的数组中，$A[8..11]$即为最大数组，和为 43
 
 ![最大子数组](IA-Chapter4-Notes/2019-10-20-10-30-15.png)
 
-### A brute-force solution
+## A brute-force solution
 
 暴力破解法：通过双重循环遍寻所有的子数组情况，找出最大的数组。通过上一个子数组的和加上当前元素即可求得当前子数组的和，所以计算子数组和的花费为$O(1)$，遍历所有子数组需要的时间花费为$O(n^2)$，所以总体算法时间为$O(n^2)$
 
@@ -53,7 +55,7 @@ int FindMaximumSubarray_BruteForce(int* originArray, int arrayLength, int& leftI
 }
 ```
 
-### A solution using divide-and-conquer
+## A solution using divide-and-conquer
 
 分治法求最大子数组问题的思路为，把原数组等分为两个部分，左半数组和右半数组。这时候求得的最大数组只可能是三种情况：完全在左半数组中，完全在右半数组中，处在左右半数组交界的地方。
 
@@ -183,7 +185,7 @@ int FindCrossingMaximumSubarray(int* originArray, int leftIndex, int midIndex, i
 }
 ```
 
-### Analyzing the divide-and-conquer algorithm
+## Analyzing the divide-and-conquer algorithm
 
 分治法求最大子数组的是将原问题拆分为三个部分，（1）求左半部分的最大子数组 （2）求右半部分的最大子数组（3）求交叉部分的最大子数组，所以我们可以将原问题的时间花费$T(n)$改写为
 
@@ -196,7 +198,7 @@ $$
 
 这个表达式与归并排序的表达式相同，所以我们可以得出求最大子数组的分治法复杂度为$T(n)=\Theta(n\lg(n))$
 
-## Strassen's algorithms for matrix multiplication
+# Strassen's algorithms for matrix multiplication
 
 对于两个大小为$n\times n$的矩阵$A$和$B$，它们的乘积$C=A\cdot B$中的每个元素$c_{ij}, i,j = 1,2,\dotsc n$，可表示为：
 
@@ -243,7 +245,7 @@ Matrix MatrixMultiply(const Matrix& A, const Matrix& B)
 
 可以很容易的看出，`SQUARE-MATRIX-MULTIPLY` 的复杂度为$O(n^3)$
 
-### A simple dividea-and-conquer algorithm
+## A simple dividea-and-conquer algorithm
 
 可以用分治法来解决矩阵相乘问题，为了简化问题，假设两个相乘的矩阵大小都是$n\times n$，且$n$的值为某个 2 的次幂。
 
@@ -360,7 +362,7 @@ Matrix* MatrixMultiply_Recursive(Matrix* A, Matrix* B, Matrix* result, int resul
 
 虽然少了后置项$\Theta(n^2)$，但此式仍然是满足主方法的第一种情况，且结果仍然是$T=\Theta(n^3)$
 
-### Strassen's method
+## Strassen's method
 
 在上述的分治法中，一共需要 8 次子矩阵的相乘才能得到最终结果。而在施特拉森方法（Stressen's method）中，仅需要 7 次子矩阵的相乘。
 
@@ -460,7 +462,7 @@ Matrix MatrixMultiply_Strassen(const Matrix& A, const Matrix& B)
 }
 ```
 
-## The substitution method for solving recurrences
+# The substitution method for solving recurrences
 
 代入法求迭代复杂度分为两步：
 1.  猜出解的表达形式
@@ -483,7 +485,7 @@ $$
 
 注意，在数学归纳法中，边界条件也要符合猜测，在本例中，如果$T(1)$即为第一个表达式，那么需要满足$T(1)\leq 1\lg(1)=0$，但往往在$T(1)$情况下，时间为常量，于是这就存在了矛盾。为了解决这个矛盾，我们可以假设式子是在大于一个常数$n_0$情况下才满足，那么边界条件也就成为了$n_0$。
 
-### Subtleties
+## Subtleties
 
 有的时候，我们可以猜出正确的表达式，但是无法正确的证明，如表达式
 
@@ -512,7 +514,7 @@ $$
 
 这与通常的直觉相反，因为我们在证明$T(n)=cn$时失败了，那在再次尝试时，应该猜一个值更大的函数，但是我们用了一个值更小（减去了一个更小项）的函数却证明成功了。这是因为通常猜测的表达式越接近答案，证明过程也就越严格，所以我们取了一个相离较远相对宽松的值反而容易证明。
 
-### Avoiding pitfalls
+## Avoiding pitfalls
 
 避免跌入证明的陷阱里，我们在证明时要确认最终的表达式确实是我们想要的式子。例如在猜测式子$T(n)=2T(\lfloor n/2 \rfloor)+n$的复杂度，猜测$T(n)=O(n)$，即需要证明$T(n)\leq cn$，代入式子可得
 
@@ -524,7 +526,7 @@ $$
 
 这时候很容易错误的认为$\leq (c+1)n$即满足了$\leq cn$，但$c$是我们指定的常量，小于$c+1$并不一定小于$c$，所以猜测并不成立。
 
-### Changing variables
+## Changing variables
 
 有时候一些代数变换可以帮助猜测出解，如有式子
 
@@ -558,7 +560,7 @@ $$
 T(n)=O(\lg n \lg \lg n)
 $$
 
-## The recursion-tree method for solving recurrences
+# The recursion-tree method for solving recurrences
 
 在递归树中，每一个节点都表示一个子问题的花费，整个问题的时间花费即为所有节点的花费总和。在计算时我们通常计算树的每一层的花费，然后再将所有的层数花费累加进而得到整棵树的花费。
 
@@ -634,7 +636,7 @@ $$
 
 只要$\frac{3}{16}d+c$<$d$，即可满足条件，即$d\geq \frac{16}{13}c$即可
 
-## The Master method for solving recurrences
+# The Master method for solving recurrences
 
 主方法提供了针对形如$T(n)=aT(n/b)+f(n)$的一系列迭代算法的复杂度计算套用公式。
 
@@ -646,7 +648,7 @@ $$
 
 可以发现定理的三个情况都是$f(n)$对$n^{\log_ba}$的比较。而且要注意$\epsilon$的存在，他表示关系式都必须是多项式渐进大于或多项式渐进小于。需要“即使相差一个因子$n^\epsilon$，不等式仍然成立“。
 
-### Using the master method
+## Using the master method
 
 1.  式子$T(n)=9T(n/3)+n$
 
@@ -678,16 +680,6 @@ $$
 
     因为$f(n)=n\lg n$大于$n^{\log_ba}=n$，所以很容易误以为这个式子满足条件三，但实际上条件需要满足多项式渐进大于，在本例子中需要存在一个$\epsilon$，使得$\lg n$渐进大于$n^{\epsilon}$，但对于任意$\epsilon >0$，这个式子都不满足。所以这个式子并不满足条件三，不能使用主方法来求得时间复杂度。
 
-## Proof of the master theorem
+# Proof of the master theorem
 
 //TODO
-
-{% note primary %}
-
-引用：
-
-1.  *Introduction to Algorithms* 3rd Sep.2009
-
-{% endnote %}
-
-***
