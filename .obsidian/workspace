@@ -7,8 +7,13 @@
         "id": "12d6838d5873c284",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Templates/Note-Template.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
         }
       }
     ],
@@ -23,7 +28,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2e2964158a2f5d05",
+            "id": "cd48d203bcbd514d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,7 +36,7 @@
             }
           },
           {
-            "id": "8fb228bd56d851b0",
+            "id": "726f10adc88608fd",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -64,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Templates/Note-Template.md"
+              }
             }
           },
           {
@@ -79,18 +86,7 @@
             }
           },
           {
-            "id": "3707600d9a8c3fc4",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "53af9ce9e788a870",
+            "id": "2b63c7a5e340b26b",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -113,6 +109,7 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Templates/Note-Template.md",
     "Introduction to Algorithms.md",
     "Templates/Book-Template.md",
     "Books/Intruduction to Algorithms.md",
@@ -121,7 +118,6 @@
     "Books/Learn Vim (The Smart Way).md",
     "Books/Learn OpenGL.md",
     "Books/C++ Primer.md",
-    "Books/3D Math Primer For Graphics and Game Development.md",
-    "Notes/Obsidian/CSS Snippets.md"
+    "Books/3D Math Primer For Graphics and Game Development.md"
   ]
 }

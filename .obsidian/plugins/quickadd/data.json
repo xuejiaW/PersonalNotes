@@ -12,7 +12,9 @@
       },
       "folder": {
         "enabled": true,
-        "folders": [],
+        "folders": [
+          "Books"
+        ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
       },
