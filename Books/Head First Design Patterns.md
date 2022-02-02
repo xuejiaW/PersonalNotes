@@ -2,7 +2,7 @@
 created: 2022-02-02
 updated: 2022-02-02
 tags:
-    - Design Pattern
+    - Design-Patterns
 Author:
     - Eric Freeman
     - Elisabeth Robson

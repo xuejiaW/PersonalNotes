@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Head First Design Patterns",
+  "attachmentFolderPath": "./assets/Ch 01 the Strategy Pattern",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

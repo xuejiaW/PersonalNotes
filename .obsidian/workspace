@@ -9,6 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
+            "file": "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
+        }
+      },
+      {
+        "id": "16a3532c87a86447",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
             "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
             "mode": "source",
             "backlinks": false,
@@ -70,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md"
+                "file": "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md"
               }
             }
           },
@@ -91,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
+                "file": "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,14 +121,13 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
+                "file": "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -123,15 +135,15 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
     "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
-    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
-    "Books/Computer Networks and Internets/Ch 17 Repeaters, Bridges, And Switches.md",
     "Books/Head First Design Patterns.md",
     "Books.md",
+    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
+    "Books/Computer Networks and Internets/Ch 17 Repeaters, Bridges, And Switches.md",
     "Books/Computer Networks and Internets.md",
     "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md",
     "Books/Computer Networks and Internets/Ch 14 The IEEE MAC Sublayer.md",
-    "Books/Computer Networks and Internets/Ch 08 Reliability And Channel Coding.md",
-    "Books/Computer Networks and Internets/Ch 10 Modulation And Modems.md"
+    "Books/Computer Networks and Internets/Ch 08 Reliability And Channel Coding.md"
   ]
 }
