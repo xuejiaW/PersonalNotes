@@ -2,7 +2,7 @@
 tags:
     - Game-Design
 created: 2022-02-02
-updated: 2022-02-02
+updated: 2022-02-03
 ---
 
 常规元素（Formal Elements）是那些组成游戏的元素，包含玩家，目标，流程，规则，自愿，冲突，边界和结果，这些构成了游戏的本质。
