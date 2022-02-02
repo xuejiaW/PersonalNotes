@@ -7,8 +7,13 @@
         "id": "12d6838d5873c284",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
         }
       }
     ],
@@ -64,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,12 +122,12 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
     "Books/Introduction to Algorithms.md",
     "Books/Introduction to Algorithms/Ch 17 Amortized Analysis.md",
     "Books/Introduction to Algorithms/Ch 15 Dynamic Programming.md",
     "Books/Introduction to Algorithms/Ch 13 Red-Black Trees.md",
     "Books/Introduction to Algorithms/Ch 12 Binary Search Trees.md",
-    "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
     "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures/2019-10-25-12-30-32.png",
     "Books/Introduction to Algorithms/Ch 06 Heapsort.md",
     "Books/Introduction to Algorithms/Ch 05 Probabilistic Analysis and Randomized Algorithms.md",
