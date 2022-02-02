@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 01 the Strategy Pattern",
+  "attachmentFolderPath": "./assets/Ch 02 the Observer Pattern",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
