@@ -1,43 +1,17 @@
 ---
-title: 《Rules of Play》 第六章笔记
-mathjax: false
-date: 2020-03-09 20:26:24
-categories:
-  - 读书笔记
-  - 游戏设计
 tags:
-  - 读书笔记
-  - 游戏设计
+    - Game-Design
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-
-{% cq %}
-
-《Rules of Play》 第六章笔记
-
-这一章中主要讨论了游戏的交互。
-
-作者首先罗列了不同人对于交互的定义，然后推导出自己对于交互的多价模型，并强调这一章将重点讨论其中的显式交互。
-
-然后作者区分了设计者所能设计的是让交互变得有意义的环境。
-
-之后作者谈论了交互中的关键部分“选择”，先是给出了交互结构中的最小微粒"行为->结果"单元，再通过五个问题对应的五个步骤剖析了选择的过程，
-
-最后阐述游戏设计者并不能直接的限定所有的交互可能，而是通过设计的规则创建一个“可能性空间”。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 6： Interactivity
-
-## Introducing Interactivity
+# Introducing Interactivity
 
 玩的过程就暗示了存在交互性：玩游戏，玩玩具，与人玩，都是与被玩的对象进行交互。
 
 这种交互也发生在玩的各种层面上，从游戏本身的交互，到社会中与玩家的交互，还有游戏所诞生的文化的交互。
 
-## Defining Interactivity
+# Defining Interactivity
 
 首先需要定义交互是什么，如果任何事物都可以是交互的对象，那么这个概念也就不再能帮助解决设计问题，因为它实在是太过于宽泛。
 
@@ -51,7 +25,7 @@ tags:
 
 但所有的这些解释都没有解释交互应该如何发生以及在何处发生。而这俩问题才是设计游戏交互的关键点。
 
-## A Multivalent Model of Interaction
+# A Multivalent Model of Interaction
 
 作者设计了一个多价模型来描述交互，该模型将上述的所有对交互的定义蕴含在其中，且定义了四种交互的类型或者说是四种交互的参与程度，其中每个类型都有可能与其他类型同时发生。
 
@@ -73,7 +47,7 @@ tags:
 
 这章之后的章节将主要关注显式互动。但需要注意的是四种互动是相互联系的，如玩扑克牌，选择是否切牌是显式互动，牌的质量和大小影响了功能性互动，牌上印的花纹则又是超越对象互动（不同国家扑克牌的花纹通常是与其文化相关的）。
 
-## But Is it "Designed Interaction"
+# But Is it "Designed Interaction"
 
 为了设计交互性，首先需要了解设计师需要设计哪种交互。
 
@@ -83,7 +57,7 @@ tags:
 
 但如果为这交互设计一个上下文，如两个人在互相丢苹果，并且记录丢出的数量。这样通过一个简单的设计，交互就有了意义。
 
-## Interaction and Choice
+# Interaction and Choice
 
 在游戏中，玩家需要做出选择，系统会根据选择的行为做出相应的回应。选择和回应中的关系一定程度上决定了游戏交互的深度和质量。
 
@@ -101,13 +75,13 @@ tags:
 
 可以看出，宏观选择不仅包括在整个游戏过程中该做什么，它还包括是否要继续玩游戏这款游戏和与谁竞争。如果在格斗游戏中，并没有足够的meaningful play，玩家将不知道为什么输，也就会失去对游戏的兴趣。相反，如果每次都能知道为什么对手比自己做的更好，那么输这个行为就是有意义的。
 
-## Choice Molecules
+# Choice Molecules
 
 构建一个大的有意义的交互结构，其中最小的微粒就是`行为->结果`单元。
 
 如在游戏Asteroids中一共有五个按键：左转，右转，前进，开火，跳跃。每个行为->结果单元就是由这五个按键和他们对于的结果构成的。在游戏进行过程中，每个行为->结果单元都会形成后一个单元的选择时的情景，单元直接的连接是非常顺畅的，所以玩家根本意识不到自己在一分钟内会做出几百次选择。
 
-## Anatomy of a Choice
+# Anatomy of a Choice
 
 `选择`这个概念乍看起来十分的简单，但实际上是一个复杂的结构。在阐述行为->结果单元时，需要问如下五个问题，这五个问题构成了对选择的剖析（Anatomy of a Choice）。这五个问题同样也是选择时的五个步骤，这五个步骤如果可以顺畅的连接在一起，也就能产生顺畅的行为->结果单元的连接，最后meaningful play。
 
@@ -148,7 +122,7 @@ tags:
 3. 如果玩家并不知道为什么会输。问题很可能出现在步骤五中，即游戏当前的状态并没有很好的告知玩家。玩家并不知道当前的游戏状态因此无法把握游戏的走向，也就对最终的结果感到困惑。
 4. 如果玩家不知道一个操作是否产生了结果。问题可能出在步骤三和四中，即玩家做出了操作，而系统并没有对操作做出相应的反应。这种情况看似很少见，但在一些新鲜的交互方式中很有可能出现，如重力感应，运动传感器等。
 
-## Space of  Possibility
+# Space of  Possibility
 
 现在许多关于游戏和交互的作品并不是从一个玩家的视角出发，而是作为一个外在的观察者。但是游戏交互需要的是体验，而不是观察。
 
@@ -162,18 +136,8 @@ tags:
 
 >  Game design is an act of faith-in your rules, in your players, in your game itself. Will your game create meaningful play? You can never know for sure.
 
-## Further Reading
+# Further Reading
 
 1. *The Design of Everyday Things* by Donald Norman
 2. *Formal Abstract Design Tools* by Doug Church
 3. *The Art of Interactive Design: A Euphorious and Illuminating Guide to Building Successful Software*  by Chris Crawford
-
-{% note primary %}
-
-引用：
-
-1.*Rules of Play* 2003
-
-{% endnote %}
-
-***

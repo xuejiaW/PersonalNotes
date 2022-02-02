@@ -1,38 +1,18 @@
 ---
-title: 《Rules of Play》 第三章笔记
-mathjax: false
-date: 2020-03-09 14:33:58
-categories:
-  - 读书笔记
-  - 游戏设计
 tags:
-  - 读书笔记
-  - 游戏设计
+    - Game-Design
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
 
-《Rules of Play》 第三章笔记
-
-主要介绍Meaningful Play的概念
-
-可以从两方面来评判Meaningful play，描述性和评价性。
-
-其中评价性又可以从可感知性和协调性两方面进行评价。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 3: Meaningful Play
-
-## Introducing Meaningful Play
+# Introducing Meaningful Play
 
 Huizinga在他的书*Homo Ludens*中提到玩耍是比文化更古老的存在。
 
 Huizinga在很多方面去尝试重新定义玩耍，并找出玩耍的重要意义。
 
-## Meaning and Play
+# Meaning and Play
 
 创建一个对于玩家而言有意义的良好游戏体验，是成功的游戏设计中一个重要的目标，或许还是最重要的一个。可以将这种设计目标称为`meaningful play`。
 
@@ -40,7 +20,7 @@ Huizinga在很多方面去尝试重新定义玩耍，并找出玩耍的重要意
 
 玩家在游戏中每做出一个选择，实施这个选择的行为就会产出一个结果。玩游戏的过程就是不断的做选择和实施行为。在一个游戏系统中，所有的事件都被设计成要能支撑一个有意义的选择（如下棋子，如何打回球等），实施这些选择的行为产生的结果也会影响游戏系统。即玩家在游戏中每个行为都会改变游戏的状态，也就让这个游戏系统有了新的意义。
 
-## Two Kinds of Meaningful Play
+# Two Kinds of Meaningful Play
 
 定义Meaningful Play有两方面的考虑。
 
@@ -63,14 +43,3 @@ Huizinga在很多方面去尝试重新定义玩耍，并找出玩耍的重要意
 可感知的游戏行为，是让玩家知道自己的导弹有没有打中陨石，整体化的游戏行为是决定玩家打中陨石与否这个行为本身又产生了什么深远的影响（陨石轨道改变了一些，所以不会撞到地球等）。
 
 meaningful play可以在游戏的多个方面同时运用，在各种层面上提升玩家的体验。如可以在学科上，如围棋中的一步在数学上的考虑，或在社会层面上，如多个玩家组成了一个游戏论坛，甚至在文化层面上，如围棋冠军可以形成一个围棋热潮等。
-
-
-{% note primary %}
-
-引用：
-
-1.*Rules of Play* 2003
-
-{% endnote %}
-
-***

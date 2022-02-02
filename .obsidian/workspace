@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Rules of Play/Ch 03 Meaningful Play.md",
+            "file": "Books/Rules of Play/RulesOfPlay-Chapter15-Notes.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Rules of Play/Ch 03 Meaningful Play.md"
+                "file": "Books/Rules of Play/RulesOfPlay-Chapter15-Notes.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Rules of Play/Ch 03 Meaningful Play.md",
+                "file": "Books/Rules of Play/RulesOfPlay-Chapter15-Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,13 +121,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Rules of Play/Ch 03 Meaningful Play.md",
+                "file": "Books/Rules of Play/RulesOfPlay-Chapter15-Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -135,15 +136,15 @@
   },
   "active": "d48b3d41ff372c98",
   "lastOpenFiles": [
+    "Books/Rules of Play/RulesOfPlay-Chapter15-Notes.md",
+    "Books/Rules of Play/Ch 07 Defining Games.md",
+    "Books/Rules of Play/Ch 06 Interactivity.md",
     "Books/Rules of Play/Ch 03 Meaningful Play.md",
     "Books/Rules of Play.md",
     "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md",
     "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
     "Books/Game Design Workshop.md",
     "Books.md",
-    "Books/Head First Design Patterns.md",
-    "Books/Head First Design Patterns/Design Principles.md",
-    "Books/Head First Design Patterns/Ch 12 Compound Patterns.md",
-    "Books/Head First Design Patterns/Ch 11 the Proxy Pattern.md"
+    "Books/Head First Design Patterns.md"
   ]
 }
