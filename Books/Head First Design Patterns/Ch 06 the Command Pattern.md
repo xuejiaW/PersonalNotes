@@ -1,6 +1,6 @@
 ---
 tags:
-    - Design-Pattern
+    - Design-Patterns
 created: 2022-02-02
 updated: 2022-02-02
 ---

@@ -1,8 +1,11 @@
 ---
 tags:
-    - Design-Pattern
+    - Design-Patterns
+created: 2022-02-02
+updated: 2022-02-02
 ---
-## 状态模式
+
+# 状态模式
 
 状态模式(State Pattern)允许一个对象根据其内部状态的变化来选择需要执行的操作。这个对象会看起来像是改变了它的类。
 
@@ -10,9 +13,9 @@ tags:
 
 例如我们需要做一个口香糖贩卖机需要处理，投钱、退钱、旋转出货按钮这三个操作，然后机器有未投钱、投钱、货物卖出、货物卖完四个状态。我们可以将不同状态下对三个操作的处理定义在各自的状态类中。
 
-### 代码示例
+## 代码示例
 
-#### 状态类接口
+### 状态类接口
 
 ```cs 状态类接口
 public interface State
@@ -24,7 +27,7 @@ public interface State
 }
 ```
 
-#### 状态类实现
+### 状态类实现
 
 ```cs 未投钱状态
 public class NoQuarterState : State
@@ -152,7 +155,7 @@ public class SoldOutState : State
 }
 ```
 
-### 测试代码及结果
+## 测试代码及结果
 
 ```cs 测试代码
 GumballMachine gumballMachine = new GumballMachine(5);
@@ -168,4 +171,4 @@ gumballMachine.EjectQuarter();
 
 运行结果：
 
-![状态模式运行结果](HeadFirstDesignPatternNotes-3/2019-02-06-20-10-15.png)
+![状态模式运行结果](Ch%2010%20the%20State%20Pattern/2019-02-06-20-10-15.png)
