@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Introduction to Algorithms",
+  "attachmentFolderPath": "./assets/Computer Networks and Internets",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

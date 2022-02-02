@@ -15,6 +15,19 @@
             "source": true
           }
         }
+      },
+      {
+        "id": "66369a93c09c718a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Books.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -70,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Computer Networks and Internets.md"
+                "file": "Books.md"
               }
             }
           },
@@ -91,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Computer Networks and Internets.md",
+                "file": "Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Computer Networks and Internets.md",
+                "file": "Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,17 +133,17 @@
     "direction": "horizontal",
     "width": 449.5
   },
-  "active": "12d6838d5873c284",
+  "active": "66369a93c09c718a",
   "lastOpenFiles": [
-    "Books/Computer Networks and Internets.md",
-    "Books/Computer.md",
     "Books.md",
+    "Books/Computer Networks and Internets.md",
+    "Notes/VSCode/Unity.md",
+    "Notes/VSCode/GLSL.md",
+    "Tutorials/Unity Learn.md",
+    "Books/Computer.md",
     "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
     "Books/Introduction to Algorithms.md",
     "Books/Introduction to Algorithms/Ch 17 Amortized Analysis.md",
-    "Books/Introduction to Algorithms/Ch 15 Dynamic Programming.md",
-    "Books/Introduction to Algorithms/Ch 13 Red-Black Trees.md",
-    "Books/Introduction to Algorithms/Ch 12 Binary Search Trees.md",
-    "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures/2019-10-25-12-30-32.png"
+    "Books/Introduction to Algorithms/Ch 15 Dynamic Programming.md"
   ]
 }
