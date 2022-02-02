@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 05 the Singleton Pattern",
+  "attachmentFolderPath": "./assets/Ch 07 he Adapter and Facade Patterns",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
