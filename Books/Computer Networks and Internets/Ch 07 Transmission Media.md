@@ -1,40 +1,15 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第七章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-03 17:24:21
+    - Networks
 ---
 
-{% cq %}
-
-《计算机网络与因特网》 第七章笔记。
-
-这一章是关于传播媒介的，首先给出了传播媒介的分类。
-
-然后依次介绍各种媒介，包括线，光纤，红外线等。
-
-最后介绍了信道容量的概念。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 7 Transmission Media
-
-## Introduction
+# Introduction
 
 这一章将会给出传播媒介的分类，介绍电磁传播的基本概念以及展示干扰和噪音是如何被屏蔽的，最后会解释容量的概念。
 
-## Guided And Unguided Transmission
+# Guided And Unguided Transmission
 
 有两种重要的将传输媒介分类的方法：
 
@@ -42,13 +17,13 @@ date: 2019-12-03 17:24:21
 
 2. 按能的形式：分为三种类型，在线缆上的`电信号（Electrical Energy）`，无线上使用的`无线电（Radio）`和光纤中使用的`光（Light）`。
 
-## Taxonomy By Forms Of Energy
+# Taxonomy By Forms Of Energy
 
 下图展示了按能的形式分类的图，这个分类图也不是完美的，例如在无线电部分分为`陆地无线电（Terrestrial Radio）`和`卫星无线电（Satellite）`，但实际上太空空间站的无线电部分两者都不符合。
 
 ![能力形式分类](assets/CNI-Chapter7-Notes/2019-12-01-15-46-54.png)
 
-## Background Radiation And Electrical Noise
+# Background Radiation And Electrical Noise
 
 所有用电信号传输的电路都需要两根线，一根用来将信号传递给接收方，一根用来将反馈还给发送方。最简单的电传输方式就是使用两根铜线，每根线都用塑料包裹住，来防止相互之间的电干扰，在两根线外还有一层整个包裹起来，为了人方便使用。
 
@@ -58,7 +33,7 @@ date: 2019-12-03 17:24:21
 2. 当电磁辐射遇到金属会被吸收进而产生细微的信号，这些信号会对正常的信号造成干扰。
 3. 正因为金属能吸收电磁辐射，所以可以用足够的金属放在噪声源和通信系统间，将其作为`防护（Shield）`。
 
-## Twisted Pair Coppter Wiring
+# Twisted Pair Coppter Wiring
 
 有三种形式的电缆可以减少电磁噪音的干扰：
 
@@ -70,7 +45,7 @@ date: 2019-12-03 17:24:21
 
 ![双绞线](assets/CNI-Chapter7-Notes/2019-12-01-15-06-05.png)
 
-## Shielding：Coaxial Cable And Shielded Twisted Pair
+# Shielding：Coaxial Cable And Shielded Twisted Pair
 
 因为非屏蔽双绞线只是让两根线吸收了相同的能量，但噪音还是被吸收了，所以在一些情况下，非屏蔽双绞线仍然会产生问题，如有特别强的电噪音环境，或者特别接近噪声源，或者通信系统中的信号频率很高（频率越高对噪音越敏感）。为了解决这些问题，只能尽量的屏蔽噪声。
 
@@ -82,13 +57,13 @@ date: 2019-12-03 17:24:21
 
 如之前节所述，为了避免铜线间的电干扰，铜线外层会包裹一层塑料。双绞线是将两个两个包裹着塑料的铜线绞在一起，同轴电缆则是在一根包裹住塑料的导线外包裹金属屏蔽层，屏蔽双绞线是在两根包裹着塑料的铜线绞在一起后再包裹金属层。
 
-## Categories Of Twisted Pair Cable
+# Categories Of Twisted Pair Cable
 
 一些标准机构为用于计算机网络的双绞线定义了标准，这些机构包括`美国国家标准组织（American National Standards Institute，ANSI）`，`通信产业联合（Telecommunications Industry Association，TIA）`，`电子产业联合（Electronic Industries Alliance，EIA）`，下图为主要分类：
 
 ![双绞线分类](assets/CNI-Chapter7-Notes/2019-12-01-15-45-39.png)
 
-## Media Using Light Energy And Optical Fibers
+# Media Using Light Energy And Optical Fibers
 
 有三种形式的媒介是用光能携带数据的：`光纤（Optical Fibers）`，`红外线传输（Infrared transmission）`，`点对点激光（Point to Point lasers）`。
 
@@ -112,7 +87,7 @@ date: 2019-12-03 17:24:21
 
 上图中，因为接受时的能量更低，所以Y轴值更低，且因为能量更分散，所以接受的时间也会拖长，因此在X轴上如同被拉伸。
 
-## Types Of Fiber And Light Transmission
+# Types Of Fiber And Light Transmission
 
 因为光在传输中的反射导致的分散在长距离使用光纤时会成为严重问题，因此有三个种类的光纤，不同的在性能与价格上权衡，
 
@@ -124,7 +99,7 @@ date: 2019-12-03 17:24:21
 
 如之前节所述光纤的一端会用来发射光，另一端会用来接收光。在发射端，可以通过`发光二极管（Light Emitting Diode，LED）`，或者`激光二极管（Injection Laser Diode，ILD）`。在 接收端可以用`感光细胞（Phote-sensitive）`或者`光敏二极管（Photodiode）`。
 
-## Optical Fiber Compared To Copper Wiring
+# Optical Fiber Compared To Copper Wiring
 
 光纤的优势：
 
@@ -138,7 +113,7 @@ date: 2019-12-03 17:24:21
 2. 更少的设备要求（光纤的接收端必须被有效的抛光）
 3. 更不易被损坏
 
-## Infrared Communication Technologies
+# Infrared Communication Technologies
 
 `红外线通信（Infrared Communication）`也是光能通信的一种，也是点对点技术的一种,电视遥控机就是红外线通信的应用。红外线的频率在人眼可见光的范围外，但是红外线仍然表现的如同可见光，它会很快的消散，可以在坚硬光滑表面反射，会被不透明物体阻挡，薄如纸片的物体会阻挡信号，甚至大气中的水气都会阻碍信号。
 
@@ -148,7 +123,7 @@ date: 2019-12-03 17:24:21
 
 ![红外线通信技术](assets/CNI-Chapter7-Notes/2019-12-03-09-54-25.png)
 
-## Point-To-Point Laser Communication
+# Point-To-Point Laser Communication
 
 `激光通信（Laser Communication）`是另一种点对点通信，如红外线通信一样，激光通信也需要一个无阻挡的路径。
 
@@ -156,7 +131,7 @@ date: 2019-12-03 17:24:21
 
 激光通信的典型应用是楼与楼之间的信号传输，通常在相邻大楼的外墙或者顶楼安装部署用于激光通信的发射和接收装置。
 
-## Electronmagnetic(Radio) Communication
+# Electronmagnetic(Radio) Communication
 
 常用`无向性（unguided）`来描述不需要任何介质来传播能量的通信方式。在计算机网络中最常用的依赖于电磁能的无向性技术是无线电传播（Radio Frequency Transmission）。无线电传播相较于光传播有个显著的优势，即可以长距离传播且可穿透阻碍物。
 
@@ -164,7 +139,7 @@ date: 2019-12-03 17:24:21
 
 ![波谱](assets/CNI-Chapter7-Notes/2019-12-03-14-44-01.png)
 
-## Signal Progagation
+# Signal Progagation
 
 电磁波的频率也决定它传播时的特性，下表是波传播的三大类型：
 
@@ -179,7 +154,7 @@ date: 2019-12-03 17:24:21
 1. 地表（Terrestrial）：依赖相对贴近地表的设备通信，例如无线电发射器和微博发射器。这些设备一般安装在山顶，人造塔或建筑上。
 2. 非地表（Nonterrestrial）：依赖于大气层外的设备，例如轨道卫星
 
-## Types Of Satellites
+# Types Of Satellites
 
 通信卫星可以根据距离地表的距离分为三类：
 
@@ -195,7 +170,7 @@ date: 2019-12-03 17:24:21
 
   与地面可以保持固定角度，缺点是离地球较远，延迟大。
 
-## Geostationary Earth Orbit(GEO) Satellites
+# Geostationary Earth Orbit(GEO) Satellites
 
 从上节对于通信卫星的描述可以看出，通信卫星的权衡主要是在延迟和与轨道周期的权衡（轨道周期与地球自转相差越远，追踪卫星越难）。
 
@@ -221,7 +196,7 @@ $$
 
 0.2秒的延迟在许多领域上是无法被接受的。
 
-## GEO Coverage Of The Earth
+# GEO Coverage Of The Earth
 
 在对地静止轨道上的卫星数量是由限制的。为了避免星号键的相互干扰，卫星与卫星间必须有间隔，间隔的大小与信号的强度相关，但通常而言是4-8度，因为整个轨道是360度，所以对地静止轨道上最多有45-90颗卫星。
 
@@ -245,7 +220,7 @@ $$
 
 将地球半径6376KM及对地静止轨道距离35805KM代入，得能看到的范围是约为42.45%，所以最少需要三颗卫星才能覆盖地球。
 
-## Low Earch Orbit(LEO) Satellites And Clusters
+# Low Earch Orbit(LEO) Satellites And Clusters
 
 近地轨道卫星的高度最多为2000千米，其主要的缺点在于无法与地面保持相同速度，因此地面上的天线必须旋转来追踪卫星。最低的近地轨道卫星在大约90分钟就可以环绕一遍地球，移动速度还是将对较快的，因此对于地面天线来说追踪有一定难度。
 
@@ -253,7 +228,7 @@ $$
 
 如一条信息需要从欧洲传到北美，欧洲的地面基站向此时他上方的卫星发送数据，上方的卫星将信息在卫星群之间传播，一直传送到北美上方的卫星，北美上方的卫星再将信息传送给北美的地面基站。
 
-## Tradeoffs Among Media Types
+# Tradeoffs Among Media Types
 
 通信媒介的选择是复杂的，通常需要从以下几个方面权衡：
 
@@ -264,7 +239,7 @@ $$
 5. 环境（Environment）：对干扰的敏感性和电子噪音
 6. 安全性（Security）：是否容易被窃听
 
-## Measuring Transmission Media
+# Measuring Transmission Media
 
 可以从两个方面来评判传输媒介：`传播延迟（Progagation Delay）`和`信道容量（Channel Capacity）`。
 
@@ -286,7 +261,7 @@ $$
 
 时域的相应波形时一个拖尾的连续信号，这个拖尾会干扰后续信号。但是从波形上可以看出，在$t=\frac{\pi}{\omega_s},\frac{2pi}{\omega_s}...$处是0，所以如果在这些间隔点发送码元，则不会被干扰。这些点的间隔时间为$T_s=\frac{\pi}{\omega_s}=\frac{1}{2f_m}$，所以码元速率为$R=\frac{1}{T_s}=2f_m$
 
-## The Effect of Noise On Communication
+# The Effect of Noise On Communication
 
 奈奎斯特定理提供了了理论上的最高码元速率，因为他并没有将噪音纳入考虑， 而实际中噪音不可避免。香农在此基础上给出了考虑噪音的数据速率，称为香农定理（Shannon's Theorem）：
 
@@ -296,20 +271,8 @@ $$
 
 其中$S/N$称为信噪比，式子中并没有给出电平数量K，这是因为实际上在考虑噪声时，电平数量是受噪声影响的，噪声越大，为了避免干扰，电平的间隔就只能越大，因此电平数量就越少。
 
-## The Significance Of Channel Capacity
+# The Significance Of Channel Capacity
 
 奈奎斯特定律鼓励工程师探索更高效的编码方式，因为在最高码元速率受信道带宽限制时，编码方式越高效，一个码元携带的数据就越多，单位时间内就能传输更多的比特。
 
 香农定理给出了真实环境下，数据速率的上限，即无论编码多么高效，在非理想环境（有噪声）下，每秒最大的比特传输量
-
-{% note primary %}
-
-1. Xianping, W.M.L.R.T., 2002. Simple Certification of Nyquist Rule. Journal of Beijing Institufe of Petrochemical Technology, (2), p.12.
-
-2. https://zh.wikipedia.org/wiki/%E5%9C%B0%E7%90%83%E9%9D%9C%E6%AD%A2%E8%BB%8C%E9%81%93
-
-3. *Computer Networks and Internets* 6th
-
-{% endnote %}
-
-***

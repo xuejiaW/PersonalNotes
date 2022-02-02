@@ -1,28 +1,9 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第八章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-07 00:18:54
+    - Networks
 ---
-
-{% cq %}
-
-《计算机网络与因特网》 第八章笔记。
-
-给出了可能出现的错误，以及控制错误的信道编码方法，包括检测错误和修复错误。
-
-{% endcq %}
-
-<!--more-->
 
 # Chapter 8 Reliability And Channel Coding
 

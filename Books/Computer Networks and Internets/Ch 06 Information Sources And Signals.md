@@ -1,50 +1,31 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第六章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-01 08:33:03
+    - Networks
 ---
 
-{% cq %}
-
-《计算机网络与因特网》 第六章笔记。关于信源和信号的知识，包括信源的特征，模拟信号和数字信号的转换等
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 6 Information Sources And Signals
-
-## Introduction
+# Introduction
 
 这一章讲解释`信源（Information Sources）`和携带信息的信号的特征。
 
-## Information Sources
+# Information Sources
 
 数据通信理论更关注于较低层次的通信系统，因此信源可以是任意来源，不仅仅是包括计算机上层的键盘，鼠标，摄像机，传感器等等也是信源。
 
-## Analog And Digital Signals
+# Analog And Digital Signals
 
 数据通信由两种信息组成，模拟信息或数字信息。模拟信号是由一个连续变化的函数构成，而数字信号则是跳跃变换的，在某个时间点会从一个强度突然跳跃至另一个强度。下图为模拟信号和数字信号的图解，左为模拟信号，右为数字信号：
 
 ![模拟信号与数字信号](assets/CNI-Chapter6-Notes/2019-11-28-09-30-33.png)
 
-## Periodic And APeriodic Signals
+# Periodic And APeriodic Signals
 
 信号也可分类为周期信号与非周期信号。周期信号顾名思义表示信号会重复出现，反之为非周期信号。下图为周期信号：
 
 ![周期信号](assets/CNI-Chapter6-Notes/2019-11-28-09-33-10.png)
 
-## Sine Waves And Signal Characteristics
+# Sine Waves And Signal Characteristics
 
 数据通信通常使用`Sin函数`来表示信号。之所以选择Sin函数，是因为许多自然界产生的信号强度与时间的函数都是Sin，如麦克风获取声音后的输出信号，电磁波的信号等。
 
@@ -61,17 +42,17 @@ Sin函数波的信号特性由四个部分组成：
 
 ![频率单位](assets/CNI-Chapter6-Notes/2019-11-28-09-53-47.png)
 
-## Composite Signals
+# Composite Signals
 
 之前图中的波称为`简单信号(Simple Signal)`，因为只是以单一的Sin波组成。但在实际中，多数信号都是以`组合信号（Composite Signal）`的形式出现。如下图所示，就是两个不同频率及振幅的波组合成一个新的波。
 
 ![组合波](assets/CNI-Chapter6-Notes/2019-11-28-09-57-46.png)
 
-## The Importance of Composite Signals And Sine Functions
+# The Importance of Composite Signals And Sine Functions
 
 `调制（Modulation）`出来的信号通常是组合信号。数学家`傅里叶(Fourier)`发现可以从组合信号中解析出他的组成部分，即简单信号。大部分的通信系统都是用组合信号来携带信息，在接收端再将信息拆分成简单信号。
 
-## Time And Frequency Domain Representations
+# Time And Frequency Domain Representations
 
 之前的所有信号波的图片的$X轴$都是时间，称为信号在`时域(Time Domain)`内表示。
 
@@ -83,7 +64,7 @@ Sin函数波的信号特性由四个部分组成：
 
 因为每个简单波在频域图的$x$轴上只占据一点，所以频域图用来表示复合波形是简单易读的。
 
-## Bandwidth Of An Analog Signal
+# Bandwidth Of An Analog Signal
 
 在计算机网络中经常听到`网络带宽(Network Bandwidth)`一词，关于网络带宽会在之后的章节中解释，这里先介绍一个相关概念，`模拟带宽(Analog Bandwidth)`。一个模拟信号的带宽是这个信号最高频率与最低频率之间的差，单位为$Hz$。如一个信号的频域图如下图所示，那么这个信号的贷款为$4KHz$，因为这个信号的最高频率为$5KHz$，最低频率为$1KHz$。
 
@@ -91,7 +72,7 @@ Sin函数波的信号特性由四个部分组成：
 
 如果一个信号是用频域图来表示的，那么可以很快的看出这个信号的带宽。
 
-## Digital Signals And Signal Levels
+# Digital Signals And Signal Levels
 
 数字信号是由一系列的固定的`有效电平（Valid Level）`组成且在任意的时间点信号都处于这些有效电平之一。
 
@@ -107,7 +88,7 @@ Sin函数波的信号特性由四个部分组成：
 
 理论上可以将电压切分到非常小（如分割成一百万个电平等级）达到每次都能传递许多信息的目的，但是实际中因为电力系统并不能区分过小的电压间隔，所以只将电压分割为几个电平等级。
 
-## Baud And Bits Per Second
+# Baud And Bits Per Second
 
 数据速率有两方面决定，一方面是上一节中提到的信号有效电平数量（决定每次可以携带多少数据），另一方面是每个有效电平持续的时间。
 
@@ -119,7 +100,7 @@ $$
 \text{bits per second} = baud \times \lfloor \log_2{(levels)} \rfloor
 $$
 
-## Converting A Digital Signal To Analog
+# Converting A Digital Signal To Analog
 
 根据傅里叶定理，任意的波形都可以由一系列Sin波组成，其中每个Sin波都有各自的振幅，相位与频率。
 
@@ -131,11 +112,11 @@ $$
 
 ![数字电路转模拟电路](assets/CNI-Chapter6-Notes/2019-11-28-13-45-45.png)
 
-## The Bandwidth Of A Digital Signal
+# The Bandwidth Of A Digital Signal
 
 如之前所述，求一个信号的带宽是求其最大频率和最小频率的差值。对于数字信号来说可以先将他转换为模拟信号（多个Sin信号），然后找出最高频率的Sin以及最低频率的Sin。但是如上节所述，数字信号的跃变波形是由无数的Sin组成，且Sin的频率越来越高，即数字信号的最高频率是无限，因此数字信号的带宽为无限。
 
-## Synchronization And Agreement About Signals
+# Synchronization And Agreement About Signals
 
 在实际运用中，发送端和接收端必须保证信号的每次变换间隔是一样的（可看作采样频率），这个问题称为`同步问题（Synchronization）`，下图展示了发送端和接收端以不同的频率采样会引发的问题，接收端的采样频率（10次每秒）高于发送端（8次每秒）。
 
@@ -143,7 +124,7 @@ $$
 
 在实际运用中，这种频率的差异可能非常小，如误差为$10_{-8}$秒，那可能出现了几百万个Bit后才发生一次错误。但在传输速率在亿个Bit每秒时，这种细微的差距也会引发大量的错误数据。
 
-## Line Coding
+# Line Coding
 
 如上节所述，在数据传递的过程中可能会因为同步问题导致一些错误的发生，有一些方法来帮助避免这些错误的发生。一种是真正发送信号前，先发送一系列的特定模式的字节，如重复的0或者重复的1，通过这些字节来帮助接收端校准，另一种方法称为`信道编码（Line Coding）`，在这种方式下会添加一些额外的字符来保证接收端能确切的解析出真实的数据。
 
@@ -153,7 +134,7 @@ $$
 
 因为信道编码引入了额外的数据来保证真实数据的准确性，所以信道编码降低了真实数据的传输速率。
 
-## Manchester Encoding Used In Computer Networks
+# Manchester Encoding Used In Computer Networks
 
 `曼彻斯特编码(Manchester Encoding)`是一种信道编码，在计算机网络中曼彻斯特编码主要用于以太网中，所以十分重要。
 
@@ -167,7 +148,7 @@ $$
 
 差分曼彻斯特编码的好处在于，即使信号的大小意外的翻转了也不会发生错误（如5V变为-5V之类）。
 
-## Converting An Analog Signal To Digital
+# Converting An Analog Signal To Digital
 
 模拟信号为了进一步的被处理，必须转换为数字信号。一般转换为数字信号有两种方式,一是`脉冲编码调制(Pulse Code Modulation，PCM)`，另一种是`差分调制(Delta modulation)`
 
@@ -183,13 +164,13 @@ $$
 
 差分调制的主题思想与脉冲编码调制类似，不同的是在量化阶段他不是对每个采样值进行量化，而是对当前采样值与上一个采样值的差距进行量化。这样节省了许多用来表示数据的Bit数，但是缺点在于一旦之前的数据出现了误差，后面的所有数据都会收到影响。
 
-## The Nyquist Theorem And Sampling Rate
+# The Nyquist Theorem And Sampling Rate
 
 应该以怎样的采样频率进行采样是数据通信中需要考虑的问题，如果采样频率过低，那么采样出来的信号与原信号可能有较大差异，如果采样频率过高，则会产生大量的数据。
 
 奈奎斯特（Nyquist Theorem）定理提出：为了避免采样失真，采样的最低频率应该是原信号最高频率的两倍。
 
-## Nyquist Theorem And Telephone System Transmission
+# Nyquist Theorem And Telephone System Transmission
 
 经过实验，0到4000HZ的频率基本就能提供人所能接受的音频质量。因此根据奈奎斯特频率，语音信号的采样频率应该是8000HZ，既一秒有8000个采样点。通话系统所用的PCM标准规定，每个采样信号用8-bit数据表示，所以每秒通话产生的数据量为：
 
@@ -199,7 +180,7 @@ $$
 
 因此电话系统每秒传递64000-bits数据（64Kbps），也可见采样频率越高，可携带的数据也就越多。
 
-## Nonlinear Encoding
+# Nonlinear Encoding
 
 当每个采样点只能用8个比特来表示时，线性的PCM编码无法很好的体现声音，因为8个Bit只能表现256个值，且线性表示的话，无论是非常低频或高频的部分还是人身大部分集中的部分都用了一样的采样间隔，这造成了浪费。而非线性编码，解决了这个问题，他更关注与人耳最敏感的频率。数字电话标准中有两种非线性编码：
 
@@ -210,7 +191,7 @@ $\mu-law$算法的主要优势在于它覆盖了更广的频率范围（例如�
 
 对于国际电话，需要有$\alpha-law$和$\mu-law$之间的转化。
 
-## Encoding And Data Compression
+# Encoding And Data Compression
 
 `数据压缩(Data Compression)`是用来减少用来表达数据的bit数的方法。对于数据通信来说，通常在传输前对数据进行压缩。压缩分为两种类型：`有损压缩(Lossy)`和`无损压缩(Lossless)`。
 
@@ -218,14 +199,3 @@ $\mu-law$算法的主要优势在于它覆盖了更广的频率范围（例如�
 
 无损压缩保证压缩后的数据在解压后与原数据相同，一般用于压缩文档之类的文件。大部分的无损压缩都用了字典技术，即如果一个字符串在文件中重复的出现，将这个字符串存放在字典中，之后的出现只要取字典中的索引值即可。
 
-
-
-{% note primary %}
-
-引用：
-
-1. *Computer Networks and Internets* 6th
-
-{% endnote %}
-
-***

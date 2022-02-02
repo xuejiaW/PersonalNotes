@@ -176,13 +176,3 @@ TCP/IP协议比OSI协议更为高效合理，发展和部署OSI协议的工作�
 第四部分将介绍TCP/IP协议族
 
 第五部分介绍剩下的一些网络相关的技术
-
-{% note primary %}
-
-引用：
-
-1. *Computer Networks and Internets* 6th
-
-{% endnote %}
-
-***

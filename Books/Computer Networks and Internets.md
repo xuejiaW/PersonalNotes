@@ -17,3 +17,7 @@ ISBN: 978-0133587937
 # Data Communication Basics
 
 [Ch 05 Overview Of Data Communications](Computer%20Networks%20and%20Internets/Ch%2005%20Overview%20Of%20Data%20Communications.md)
+
+[Ch 06 Information Sources And Signals](Computer%20Networks%20and%20Internets/Ch%2006%20Information%20Sources%20And%20Signals.md)
+
+[Ch 07 Transmission Media](Computer%20Networks%20and%20Internets/Ch%2007%20Transmission%20Media.md)
