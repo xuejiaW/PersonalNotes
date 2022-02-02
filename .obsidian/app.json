@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 09 the Iterator and Composite Pattern",
+  "attachmentFolderPath": "./assets/Ch 12 Compound Patterns",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
