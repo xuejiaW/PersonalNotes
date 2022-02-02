@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
+            "file": "Books.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md"
+                "file": "Books.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
+                "file": "Books.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
+                "file": "Books.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,6 +122,7 @@
   },
   "active": "12d6838d5873c284",
   "lastOpenFiles": [
+    "Books.md",
     "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
     "Books/Introduction to Algorithms.md",
     "Books/Introduction to Algorithms/Ch 17 Amortized Analysis.md",
@@ -130,7 +131,6 @@
     "Books/Introduction to Algorithms/Ch 12 Binary Search Trees.md",
     "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures/2019-10-25-12-30-32.png",
     "Books/Introduction to Algorithms/Ch 06 Heapsort.md",
-    "Books/Introduction to Algorithms/Ch 05 Probabilistic Analysis and Randomized Algorithms.md",
-    "Books/Introduction to Algorithms/Ch 04 Divide-and-Conquer.md"
+    "Books/Introduction to Algorithms/Ch 05 Probabilistic Analysis and Randomized Algorithms.md"
   ]
 }
