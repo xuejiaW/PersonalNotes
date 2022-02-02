@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "16a3532c87a86447",
+        "id": "d48b3d41ff372c98",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Head First Design Patterns/Untitled.md",
+            "file": "Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -17,12 +17,12 @@
         }
       },
       {
-        "id": "db630e38100b7b34",
+        "id": "aedb306b23bed48b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
+            "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Head First Design Patterns/Untitled.md"
+                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Head First Design Patterns/Untitled.md",
+                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Head First Design Patterns/Untitled.md",
+                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,17 +133,17 @@
     "direction": "horizontal",
     "width": 449.5
   },
-  "active": "16a3532c87a86447",
+  "active": "aedb306b23bed48b",
   "lastOpenFiles": [
-    "Books/Head First Design Patterns/Untitled.md",
-    "Books/Head First Design Patterns/Ch 03 the Decorator Pattern.md",
+    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
+    "Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
+    "Books/Head First Design Patterns/Ch 04 the Factory Pattern.md",
+    "Books/Head First Design Patterns/Ch 03 the Decorator Pattern.md",
     "Books/Head First Design Patterns/Ch 02 the Observer Pattern.md",
     "Books/Head First Design Patterns/Ch 2.md",
     "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
     "Books/Head First Design Patterns.md",
-    "Books.md",
-    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
-    "Books/Computer Networks and Internets/Ch 17 Repeaters, Bridges, And Switches.md"
+    "Books.md"
   ]
 }

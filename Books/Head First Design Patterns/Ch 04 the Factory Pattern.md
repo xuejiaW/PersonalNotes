@@ -1,46 +1,17 @@
 ---
-title: 《Head First 设计模式》 笔记（一）
-date: 2019-01-27 21:07:41
-tags: 
-- 读书笔记
-- 设计模式
-categories:
-- 读书笔记
-- 设计模式
+tags:
+    - Design-Patterns
 created: 2022-02-02
 updated: 2022-02-02
 ---
 
-{% cq %}
-这一系列为读《Head First 设计模式》时的笔记。
-
-这一篇将会介绍策略模式，观察者模式，装饰模式，工厂模式。
-
-在介绍每一个设计模式时，都会用一个简单的例子来说明，完整的测试代码可以在[这里查看](https://github.com/xuejiaW/Study-Notes/tree/master/Head_First_Design_Pattern)
-
-{% endcq %}
-
-<!--more-->
-
-{% note info %}
-原书中的示例代码都是Java，而我在工作中C#用的较多，所以这里的测试代码使用的都是C#。
-{% endnote %}
-
-***
-
-
-
-***
-
-***
-
-## 工厂模式
+# 工厂模式
 
 工厂模式是为了将对象的实例化与对对象的操作解耦。因为有时我们会根据情况的不同，实例化出对象的不同版本，而我们不希望这种对于情况的判断与逻辑代码耦合在一起。
 
 工厂模式有三个较为常见的变种，简单工厂模式，工厂方法模式，抽象工厂模式，下面会以创建披萨为例子来具体说明。
 
-### 简单工厂模式
+## 简单工厂模式
 
 简单工厂模式严格意义上并不是一个设计模式，只是它被太多人的使用，所以需要单独进行说明。
 
@@ -48,7 +19,7 @@ updated: 2022-02-02
 
 我们定义一个披萨商店，他将会管理披萨产出的整个流程。我们为了将披萨的生产与之后的操作（如切披萨）拆分开，需要定义一个简单披萨工厂。
 
-#### 披萨类及其实例化
+### 披萨类及其实例化
 
 ```cs 披萨基类
 public abstract class Pizza
@@ -106,7 +77,7 @@ public class SaucePizza : Pizza
 }
 ```
 
-#### 披萨商店与简单披萨工厂
+### 披萨商店与简单披萨工厂
 
 ```cs 披萨商店
 public class PizzaStore
@@ -144,7 +115,7 @@ public class SimplePizzaFactory
 }
 ```
 
-#### 测试及结果
+### 测试及结果
 
 ```cs 测试代码
 PizzaStore store = new PizzaStore(new SimplePizzaFactory());
@@ -153,9 +124,9 @@ pizza.Debug();
 ```
 
 运行结果:
-![简单工厂运行结果](HeadFirstDesignPatternNotes-1/2019-01-20-21-24-34.png)
+![简单工厂运行结果](Ch%2004%20the%20Factory%20Pattern/2019-01-20-21-24-34.png)
 
-### 工厂方法模式
+## 工厂方法模式
 
 简单工厂提供了一个类来作为对象实例化的工厂，它解决了对象实例化与逻辑代码耦合的问题，但没有提供扩写这个工厂的方法。例如上例中，我们需要在工厂中增加新的产品只能扩写原先的工厂类，但这可能会造成单个工厂类的逻辑过于复杂。
 而工厂方法模式则是通过一个抽象函数来作为工厂，在各派生类中重写该函数，达到工厂的扩写。
@@ -166,7 +137,7 @@ pizza.Debug();
 注意这个例子完全可以通过建立多个简单工厂来实现，这里只是为了说明工厂方法模式的结构。
 {% endnote %}
 
-#### 抽象披萨商店及实例化
+### 抽象披萨商店及实例化
 
 ```cs 抽象披萨商店
 public abstract class PizzaStore
@@ -215,7 +186,7 @@ public class ChicagoPizzaStore : PizzaStore
 }
 ```
 
-#### 不同风格的披萨实现
+### 不同风格的披萨实现
 
 ```cs 纽约风格的披萨
 public class NYStyleCheesePizza : Pizza
@@ -253,7 +224,7 @@ public class ChicagoStyleSaucePizza : Pizza
 }
 ```
 
-#### 测试及结果
+### 测试及结果
 
 ```cs 测试代码
 PizzaStore store = new ChicagoPizzaStore();
@@ -266,9 +237,9 @@ pizza.Debug();
 
 运行结果：
 
-![工厂方法模式运行结果](HeadFirstDesignPatternNotes-1/2019-01-23-00-29-35.png)
+![工厂方法模式运行结果](Ch%2004%20the%20Factory%20Pattern/2019-01-23-00-29-35.png)
 
-### 抽象工厂模式
+## 抽象工厂模式
 
 工厂方法模式中的工厂的多态性依赖于继承，比如我们定义的`PizzaStore`中有个抽象函数`createPizza`，这个抽象函数即为一个工厂，在各个派生类中我们去重写这个抽象函数，通过继承来实现不同的工厂。而在抽象工厂模式中，我们将定义一个工厂接口，在需要工厂的接口中类中存储这个接口，并在不同的情况下用这个接口不同的实现，来达到工厂的多态性。
 
@@ -280,7 +251,7 @@ pizza.Debug();
 
 我们定义一个披萨原料工厂，来体现抽象工厂模式。
 
-#### 披萨原料工厂接口及实现
+### 披萨原料工厂接口及实现
 
 ```cs 披萨原料工厂接口
 public interface PizzaIngredientFactory
@@ -335,7 +306,7 @@ public class ChicagoPizzaIngredientFactory : PizzaIngredientFactory
 可以看到在抽象工厂的实现时，用到了工厂方法模式。抽象工厂模式与工厂方法模式并非互斥的两种模式，工厂方法模式实际上内嵌与抽象工厂模式中
 {% endnote %}
 
-#### 抽象披萨商店及实例化
+### 抽象披萨商店及实例化
 
 ```cs 抽象披萨商店
 public abstract class PizzaStore
@@ -387,7 +358,7 @@ public class ChicagoPizzaStore : PizzaStore
 注意，这里披萨商店的实现，仍然是通过工厂方法模式。只是在`createPizza`函数中会实例化一个抽象工厂，并将其传递给对应的`Pizza`对象
 {% endnote %}
 
-#### 披萨类及其实例化
+### 披萨类及其实例化
 
 在披萨类的实例化中，我们使用了抽象工厂模式，披萨的实例化会包含一个披萨原料的抽象工厂，通过不同的披萨原料工厂来取得不同风味的披萨
 
@@ -463,7 +434,7 @@ public class SaucePizza : Pizza
 }
 ```
 
-#### 测试及结果
+### 测试及结果
 
 ```cs 测试代码
 PizzaStore pizzaStore = new NYPizzaStore();
@@ -476,13 +447,8 @@ pizza.Debug();
 ```
 
 运行结果：
-![抽象工厂模式运行结果](HeadFirstDesignPatternNotes-1/2019-01-24-01-01-50.png)
+![抽象工厂模式运行结果](Ch%2004%20the%20Factory%20Pattern/2019-01-24-01-01-50.png)
 
-{% note primary %}
-引用：
-1. https://design-patterns.readthedocs.io/zh_CN/latest/
-2. https://dzone.com/articles/factory-method-vs-abstract
-3. https://stackoverflow.com/questions/5739611/differences-between-abstract-factory-pattern-and-factory-method
-{% endnote %}
-
-***
+# Reference
+https://dzone.com/articles/factory-method-vs-abstract
+https://stackoverflow.com/questions/5739611/differences-between-abstract-factory-pattern-and-factory-method
