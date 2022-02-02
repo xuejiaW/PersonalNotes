@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Game Design Workshop",
+  "attachmentFolderPath": "./assets/Rules of Play",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
