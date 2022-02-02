@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Computer Networks and Internets",
+  "attachmentFolderPath": "./assets/Head First Design Patterns",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
