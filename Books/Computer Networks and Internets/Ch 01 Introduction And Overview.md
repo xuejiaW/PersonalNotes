@@ -104,7 +104,7 @@ TCP/IP标准成功的一个重要原因是它宽容的异质性。TCP/IP使用�
 
 下图展示了因特网的分组模型，也成为TCP/IP分组模型：
 
-![TCP/IP分组模型](assets/CNI-Chapter1-Notes/2019-11-22-20-21-21.png)
+![TCP/IP分组模型](assets/Ch%2001%20Introduction%20And%20Overview/2019-11-22-20-21-21.png)
 
 ## Layer 1:Physical
 
@@ -134,7 +134,7 @@ TCP/IP的设计者将这一层命名为`网络接口层（Network Interface）`�
 
 如下图展示了两台电脑通过网络传输数据的过程：
 
-![网络数据传输过程](assets/CNI-Chapter1-Notes/2019-11-22-20-59-21.png)
+![网络数据传输过程](assets/Ch%2001%20Introduction%20And%20Overview/2019-11-22-20-59-21.png)
 
 一号电脑是数据的发送方，二号电脑是数据的接收方。数据从一号电脑的应用层逐渐向下传递，通过接口层进入网络，在进入网络并传输后，通过二号电脑的接口层传入，再向上逐渐传递到应用层。
 
@@ -145,7 +145,7 @@ TCP/IP的设计者将这一层命名为`网络接口层（Network Interface）`�
 
 这些被协议额外加入的数据称为`数据头(header)`。以发送端为例，数据头是在数据逐层向下的过程中一步步被加入的，即传输层增加一些数据头，网络层增加一些数据头，接口层增加一些数据头。因此最终的数据会如下图所示，最靠近原始数据的数据头是最早被添加的：
 
-![网络数据头添加](assets/CNI-Chapter1-Notes/2019-11-22-21-08-20.png)
+![网络数据头添加](assets/Ch%2001%20Introduction%20And%20Overview/2019-11-22-21-08-20.png)
 
 * 虽然图中每个被添加的数据头大小看起来相同，但实际上都不是一个固定的大小。
 
@@ -157,7 +157,7 @@ TCP/IP的设计者将这一层命名为`网络接口层（Network Interface）`�
 
 `OSI`协议图如下：
 
-![OSI协议](assets/CNI-Chapter1-Notes/2019-11-22-23-01-16.png)
+![OSI协议](assets/Ch%2001%20Introduction%20And%20Overview/2019-11-22-23-01-16.png)
 
 TCP/IP协议比OSI协议更为高效合理，发展和部署OSI协议的工作已经被停滞。许多工作者目前在扩展OSI协议的定义来让其符合TCP/IP，基本是让Network层匹配Internet层，然后再在Session层和Presentation层增加一些支持协议。
 

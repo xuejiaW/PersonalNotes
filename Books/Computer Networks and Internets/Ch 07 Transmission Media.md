@@ -21,7 +21,7 @@ tags:
 
 下图展示了按能的形式分类的图，这个分类图也不是完美的，例如在无线电部分分为`陆地无线电（Terrestrial Radio）`和`卫星无线电（Satellite）`，但实际上太空空间站的无线电部分两者都不符合。
 
-![能力形式分类](assets/CNI-Chapter7-Notes/2019-12-01-15-46-54.png)
+![能力形式分类](assets/Ch%2007%20Transmission%20Media/2019-12-01-15-46-54.png)
 
 # Background Radiation And Electrical Noise
 
@@ -43,7 +43,7 @@ tags:
 
 第一个形式，非屏蔽双绞线在通信中被广泛应用。如名字一样，双绞线是将两根铜线缠绕在一起的形式，这种相互缠绕的形式比两根线平行排布有更好的抗干扰性。如下图所示，（a）为平行排列，蓝线更接近辐射源，于是它相对于灰线吸收了更多的能量，而在（b）图的缠绕形式中，两根线都各有一部分更靠近辐射源，所以整体来说，两者收到的能量是相同的。
 
-![双绞线](assets/CNI-Chapter7-Notes/2019-12-01-15-06-05.png)
+![双绞线](assets/Ch%2007%20Transmission%20Media/2019-12-01-15-06-05.png)
 
 # Shielding：Coaxial Cable And Shielded Twisted Pair
 
@@ -51,7 +51,7 @@ tags:
 
 一种方法就是`同轴电缆（Coaxial Cable）`，它在线材的外层增加了一层`编织金属屏蔽(Braided metal shield)`（如网状）。使用编织样的金属层而非一整块金属层主要是处于便携性的考虑（后者的屏蔽性更好），但相对于非屏蔽双绞线，同轴电缆的便携性还是差的。如电视的信号线，一般都是同轴电缆，同轴电缆如下图所示：
 
-![同轴电缆](assets/CNI-Chapter7-Notes/2019-12-01-15-19-14.png)
+![同轴电缆](assets/Ch%2007%20Transmission%20Media/2019-12-01-15-19-14.png)
 
 屏蔽双绞线则是非屏蔽双绞线和同轴电缆的混合，是两者形式的折中，他在一对或多对双绞线的外层使用了更薄的金属屏蔽层，很多情况下用铝来作为金属屏蔽层（铝更软）。
 
@@ -61,7 +61,7 @@ tags:
 
 一些标准机构为用于计算机网络的双绞线定义了标准，这些机构包括`美国国家标准组织（American National Standards Institute，ANSI）`，`通信产业联合（Telecommunications Industry Association，TIA）`，`电子产业联合（Electronic Industries Alliance，EIA）`，下图为主要分类：
 
-![双绞线分类](assets/CNI-Chapter7-Notes/2019-12-01-15-45-39.png)
+![双绞线分类](assets/Ch%2007%20Transmission%20Media/2019-12-01-15-45-39.png)
 
 # Media Using Light Energy And Optical Fibers
 
@@ -77,13 +77,13 @@ tags:
 
 光从一个低密度物质照射入另一个高密度物质，随着入射的角度不同，光的反应也会不同。存在一个特定的角度，当光以这个角度入射时，光会随着两个物质的交界处传播。当光的入射角大于这个角度时，光会被反射。当光的入射角小于这个角度时，光会发生折射。如下图所示：
 
-![光的反射](assets/CNI-Chapter7-Notes/2019-12-03-08-31-03.png)
+![光的反射](assets/Ch%2007%20Transmission%20Media/2019-12-03-08-31-03.png)
 
 光纤运用的是光的反射，有一个特殊的镀层（Cladding）与光纤共同形成一个边界，在传输过程中，光会在上下两个边界内反射前进。
 
 但反射的过程中是存在能量损耗的，而且因为光的反射，光传播的路径是比光的直线传播要长的，因此光在光纤一段发射后，抵达另一端时能量会更低，而且会更分散（Dispersed），如下图所示：
 
-![光分散](assets/CNI-Chapter7-Notes/2019-12-03-08-36-42.png)
+![光分散](assets/Ch%2007%20Transmission%20Media/2019-12-03-08-36-42.png)
 
 上图中，因为接受时的能量更低，所以Y轴值更低，且因为能量更分散，所以接受的时间也会拖长，因此在X轴上如同被拉伸。
 
@@ -121,7 +121,7 @@ tags:
 
 下图是三种红外线通信的常见技术：
 
-![红外线通信技术](assets/CNI-Chapter7-Notes/2019-12-03-09-54-25.png)
+![红外线通信技术](assets/Ch%2007%20Transmission%20Media/2019-12-03-09-54-25.png)
 
 # Point-To-Point Laser Communication
 
@@ -137,7 +137,7 @@ tags:
 
 电磁能的使用依赖于他的频率属性，常用`波谱（Spectrum）`来描述可能的频率范围。全球的各政府分配不同频率的使用权，例如在美国是`联邦通信委员会（Federal Communications Commission）`。下图是主要的能量频率波谱，其中无线电的范围基本是$3KHZ$到$300GHZ$。
 
-![波谱](assets/CNI-Chapter7-Notes/2019-12-03-14-44-01.png)
+![波谱](assets/Ch%2007%20Transmission%20Media/2019-12-03-14-44-01.png)
 
 # Signal Progagation
 
@@ -202,11 +202,11 @@ $$
 
 最少则需要三颗卫星来覆盖整个地球，如下图所示：
 
-![最少三颗卫星](assets/CNI-Chapter7-Notes/2019-12-03-15-52-33.png)
+![最少三颗卫星](assets/Ch%2007%20Transmission%20Media/2019-12-03-15-52-33.png)
 
 证明如下，首先根据透视原理，距离一个球体越近，能看到球体的部分越少。在距离球体无限远的距离，最多也只能看到球体的50%，如下图所示：
 
-![透视原理](assets/CNI-Chapter7-Notes/2019-12-03-16-17-36.png)
+![透视原理](assets/Ch%2007%20Transmission%20Media/2019-12-03-16-17-36.png)
 
 将能看到球体的百分比设为X，离球体的距离设为d，求的半径设为R，表达式为：
 
@@ -216,7 +216,7 @@ $$
 
 式子是由等比三角形得出的，如下图：
 
-![等比证明](assets/CNI-Chapter7-Notes/2019-12-03-16-23-46.png)
+![等比证明](assets/Ch%2007%20Transmission%20Media/2019-12-03-16-23-46.png)
 
 将地球半径6376KM及对地静止轨道距离35805KM代入，得能看到的范围是约为42.45%，所以最少需要三颗卫星才能覆盖地球。
 
@@ -253,11 +253,11 @@ $$
 
 一个有限带宽的低通滤波器，如果其截至频率为$\omega_g$其频域图如下：
 
-![低通滤波器频域](assets/CNI-Chapter7-Notes/2019-12-03-17-06-01.png)
+![低通滤波器频域](assets/Ch%2007%20Transmission%20Media/2019-12-03-17-06-01.png)
 
 该滤波器的时域相应图为：
 
-![低通滤波器时域](assets/CNI-Chapter7-Notes/2019-12-03-17-07-06.png)
+![低通滤波器时域](assets/Ch%2007%20Transmission%20Media/2019-12-03-17-07-06.png)
 
 时域的相应波形时一个拖尾的连续信号，这个拖尾会干扰后续信号。但是从波形上可以看出，在$t=\frac{\pi}{\omega_s},\frac{2pi}{\omega_s}...$处是0，所以如果在这些间隔点发送码元，则不会被干扰。这些点的间隔时间为$T_s=\frac{\pi}{\omega_s}=\frac{1}{2f_m}$，所以码元速率为$R=\frac{1}{T_s}=2f_m$
 
