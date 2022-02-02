@@ -21,3 +21,9 @@ ISBN: 978-0133587937
 [Ch 06 Information Sources And Signals](Computer%20Networks%20and%20Internets/Ch%2006%20Information%20Sources%20And%20Signals.md)
 
 [Ch 07 Transmission Media](Computer%20Networks%20and%20Internets/Ch%2007%20Transmission%20Media.md)
+
+[Ch 08 Reliability And Channel Coding](Computer%20Networks%20and%20Internets/Ch%2008%20Reliability%20And%20Channel%20Coding.md)
+
+[Ch 10 Modulation And Modems](Computer%20Networks%20and%20Internets/Ch%2010%20Modulation%20And%20Modems.md)
+
+[Ch 11 Multiplexing And Demultiplexing（Channelization）](Computer%20Networks%20and%20Internets/Ch%2011%20Multiplexing%20And%20Demultiplexing（Channelization）.md)

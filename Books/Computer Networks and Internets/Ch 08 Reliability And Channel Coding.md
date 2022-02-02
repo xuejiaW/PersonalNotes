@@ -5,15 +5,13 @@ tags:
     - Networks
 ---
 
-# Chapter 8 Reliability And Channel Coding
-
-## Introduction
+# Introduction
 
 这一章介绍在通信过程中会出现的错误，以及控制错误的技术。
 
 其中的一部分也被纳入了因特网的协议中，这也会在本章中介绍。
 
-## The Three Main Sources Of Transmission Errors
+# The Three Main Sources Of Transmission Errors
 
 传输中发生的错误可以分为三大类：
 
@@ -27,7 +25,7 @@ tags:
 
 但是错误的监测机制无疑是会为系统增加开销的，因此系统设计时要考虑在错误影响与错误检测开销间做权衡，如金融系统，1bit的错误可能会造成很严重的错误，但是在图片中1bit的错误可能根本无法被识别到。
 
-## Effect Of Transmission Errors On Data
+# Effect Of Transmission Errors On Data
 
 这里要区分传输错误与数据错误，数据是由传输信号在经过例如解码，解调后得到的。传输错误最后都会导致最后的数据出错。主要有三类传输造成的数据错误：
 
@@ -38,7 +36,7 @@ tags:
    | ---- | --- | --- | ----- | --- | ----- | --- | ----- | ----- | ----- | --- | --- |
    | 接收 | 1   | 0   | **0** | 1   | **1** | 0   | **1** | **0** | **1** | 1   | 1   |
 
-## Two Strategies For Handling Channel Errors
+# Two Strategies For Handling Channel Errors
 
 有一系列的方法解决数据错误并增加数据的可靠性，这些方法统称为`信道编码(Channel Coding)`，这些方法可以被分为两类：`前向错误纠正技术（Forward Error Correction，FEC）`，`自动重传请求技术（Automatic Repeat reQuest，ARQ）`。
 
@@ -46,7 +44,7 @@ tags:
 
 自动重传请求技术是让接收端和发送端互换数据来保证数据被正确的传递。
 
-## Block And Convolutional Error Codes
+# Block And Convolutional Error Codes
 
 前向错误纠正技术可以再细分为两类：
 
@@ -55,7 +53,7 @@ tags:
 
 卷积错误码相对于分组错误码需要更多的计算，但是也更能检测出错误。
 
-## An Example Block Error Code：Single Parity Checking
+# An Example Block Error Code：Single Parity Checking
 
 单一奇偶校验检查（Single Parity Checking）是分组错误码检测的一个例子，可以再分为偶校验检查和奇校验检查。如果将数据分为$n$ bit一组，那么每一组增加一位数据，当是偶校验时，$n$位数据+1位额外数据应该一共有偶数个1，当是奇校验时，$n$位数据+1位额外数据应该一共有奇数个1。下表为8位数据时的例子：
 
@@ -67,7 +65,7 @@ tags:
 
 单一奇偶校验是一个比较弱的信道编码，他只能检测错误，但无法检测出错误具体出现在哪一位，也无法纠正错误。而且当有偶数个位发生错误时，错误就无法被检测出来。
 
-## The Methematics of Block Error Codes And (n,k) Notation
+# The Methematics of Block Error Codes And (n,k) Notation
 
 如有$k$位bit的数据，我们将所有$2^k$种可能出现的数据称为`数据字(Datawords)`，在这些数据中增加$r$位额外数据，一共有$n=k+r$个数据，所有$2^n$种可能称为`编码字(codeworks)`，其中编码字中合法的部分，即额外添加的数据与原数据时符合规则的部分，称为`码书(Codebook)`，并将这种方法标记为$(n,k)$
 
@@ -77,7 +75,7 @@ tags:
 
 没有一个信道编码可以达到理想状态，所以要考虑的就是，合法编码字最少多少位数据要被同时改变，才能产生另一个合法编码字。在单一数字编码中，这个位数为2。
 
-## Hamming Distance：A Measure Of A Code's Strength
+# Hamming Distance：A Measure Of A Code's Strength
 
 汉明距离（Hamming Distance）是用来测量一个合法编码字要转换为另一个合法编码字最少要改变的数据位数的方法中需要用到的概念。如果给定两个$n$长度的字符，两个字符的汉明距离就是两个字符间不同的数据数量。
 
@@ -85,7 +83,7 @@ tags:
 
 可以先对两个字符求异或，然后计算异或出来的字符1的总数，即为汉明距离。
 
-## The Hamming Distance Among String In A Codebook
+# The Hamming Distance Among String In A Codebook
 
 为了计算出一个合法编码字要转换为另一个合法编码字最少要改变的数据位数，先要计算出码书中所有编码字组合的汉明距离。如对2位bit数据进行单一奇校验检测：
 
@@ -100,13 +98,13 @@ tags:
 
 因此计算从一个合法编码字转换为另一个合法编码字最少要改变的数据位数过程是，计算出所有码书中的编码字（即合法编码字）两两配对后的所有汉明距离$d_{min}$，其中的最小值即为所求值。
 
-## The Tradeoff Between Error Detection And Overhead
+# The Tradeoff Between Error Detection And Overhead
 
 对于一个编码，最多的能被检测出来的错误位数为$e=d_{min}-1$，如单一奇偶校验，因为$d_{min}=2$，所以最多能正确检测出来的错误位数为1。
 
 虽然$d_{min}$越大能检测出来的错误位数越多，但这也意味着要增加更多的额外数据，对于$(n,k)$的编码，工程师用编码率（Code Rate）$R=\frac{k}{n}$来表示为了检测出错误信息的编码开销。
 
-## Error Correction With Row And Column(RAC) Parity
+# Error Correction With Row And Column(RAC) Parity
 
 奇偶校验本身是不能进行错误纠正的，但是通过`行列奇偶校验（Row And Column Parity）`就可以做到。如一共有12个bit的原始数据，即$k=12$，排成三行四列每一列每一行都进行奇偶校验，增加一个额外位，则一共8个额外位，即$r=8，n=k+r=20$，因此这是一个$(20,12)$的编码，如下图所示：
 
@@ -116,7 +114,7 @@ tags:
 
 奇偶校验数据的$d_{min}$还是2，因此如果错误的位数大于1，当是偶数时无法被检测到，当是奇数时虽然能检测出错误，但无法纠正。
 
-## The 16-Bit Checksum Used In The Internet
+# The 16-Bit Checksum Used In The Internet
 
 有个称为`因特网校验和（Internet checksum）`的信道编码方法在网络中扮演了重要角色。这个算法的输入可以是任意长度，将输入拆分为一段段16字节的的部分，如果不能长度不能被16整除，则最后补0。如下图所示：
 
@@ -230,7 +228,7 @@ tags:
     1111 1111 1111 1111
     ```
 
-## Cyclic Redundancy Codes(CRCs)
+# Cyclic Redundancy Codes(CRCs)
 
 在高速网络中，有一个称为`循环冗余码(Cyclic Redundancy Codes,CRCs)`的信道编码方法。循环冗余码有三个主要优点：
 
@@ -242,7 +240,7 @@ tags:
 
 ![CRC计算过程](assets/CNI-Chapter8-Notes/2019-12-07-00-01-18.png)
 
-## An Efficient Hardware Implementation Of CRC
+# An Efficient Hardware Implementation Of CRC
 
 CRC算法的实现硬件是由`移位寄存器(Shift Register)`和`异或门(Exclusive or gates)`构成的。在计算CRC前，硬件会初始化将移位寄存器中的所有位改为0，上例中的除数$1011$，对应的硬件图如下：
 
@@ -250,18 +248,13 @@ CRC算法的实现硬件是由`移位寄存器(Shift Register)`和`异或门(Exc
 
 TODO：为什么这么设计的原因。
 
-## Automatic Repeat Request(ARQ) Mechanisms
+# Automatic Repeat Request(ARQ) Mechanisms
 
 自动重传请求技术（Automatic Repeat Request,ARQ）需要发送端和接收端传递信息来检测错误。当一方发送数据给另一方时，接收方需要传递一个回执给发送方。如果在一段时间后发送方仍然没有收到回执，则认为数据丢失，重新发送数据。
 
 自动重传请求技术适合只能检测错误，但不能修复错误的系统。当接收方检测出数据有错误后，将数据丢弃并不传递回执，那么发送方就会再次发送数据。
 
-{% note primary %}
+# Reference
+[多项式除法](https://en.wikipedia.org/wiki/Polynomial_long_division)
+[1's Complement Arithmetic](https://heasarc.gsfc.nasa.gov/docs/heasarc/ofwg/docs/general/checksum/node11.html)
 
-1. *Computer Networks and Internets* 6th
-2. [多项式除法](https://en.wikipedia.org/wiki/Polynomial_long_division)
-3. [1's Complement Arithmetic](https://heasarc.gsfc.nasa.gov/docs/heasarc/ofwg/docs/general/checksum/node11.html)
-
-{% endnote %}
-
-***
