@@ -18,7 +18,7 @@ updated: 2022-02-02
 
 二叉堆与二叉树如下图所示：
 
-![二叉树与二叉堆](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-00-04-02.png)
+![二叉树与二叉堆](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-00-04-02.png)
 
 在数组中，用一个变量`heap-size`来表示数组中真正元素的个数。如一个数组可能长度为10，但其中真正的元素个数为5，剩下的都为空，即$0\leq A.heap-size \leq A.length$。
 
@@ -120,7 +120,7 @@ void MaxHeapify(int index, int dataLength)
 
 算法的图解如下：
 
-![MAX-HEAPIFY算法图解](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-14-00-33.png)
+![MAX-HEAPIFY算法图解](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-14-00-33.png)
 
 (a)图到(b)中，值为14的结点向上移动，值为4的结点向下移动。(b)到(c)图，值为8的结点向上移动，值为4的结点向下移动。
 
@@ -130,7 +130,7 @@ void MaxHeapify(int index, int dataLength)
 
 如下图所示，此时树中一共有11个结点，根节点的左子树此时拥有的结点比例是最大的，为7/11。
 
-![最大比例子树](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-14-10-18.png)
+![最大比例子树](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-14-10-18.png)
 
 一个树的结点数目为$n$，其子树最多拥有$2n/3$个结点。证明如下：
 
@@ -207,7 +207,7 @@ void BuildMaxHeap()
 
 算法图解如下，从(a)到(e)分别表示每一次的循环，(f)为最终结果。
 
-![BUILD-MAX-HEAP算法](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-15-53-17.png)
+![BUILD-MAX-HEAP算法](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-15-53-17.png)
 
 该算法会调用$O(n)$次MAX-HEAPIFY算法，所以复杂度为$O(n\lg n)$。但这个复杂度并不是紧密的上限。
 
@@ -296,7 +296,7 @@ void heapSort()
 
 算法图解如下，(a)为初始状态，(b)到(j)每次循环调用完MAX-HEAPIFY后的结果，(k)为最终结果：
 
-![HEAPSORT图解](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-15-55-14.png)
+![HEAPSORT图解](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-15-55-14.png)
 
 该算法的时间复杂度为$O(n\lg n)$。因为BUILD-MAX-HEAP的复杂度为$O(n)$，且调用了$O(n)$次复杂度为$O(\lg n)$的`MAX-HEAPIFY`算法。
 
@@ -400,7 +400,7 @@ INCREASE-KEY的算法主要思想是将更大数值的结点与父结点比较�
 
 算法图解如下,(a)图是原先的值，(b)图是将值改为15后，(c)和(d)为循环过程：
 
-![INCREASE-KEY图解](Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-16-25-30.png)
+![INCREASE-KEY图解](assets/Ch%2005%20Probabilistic%20Analysis%20and%20Randomized%20Algorithms/2020-01-28-16-25-30.png)
 
 INSERT的伪代码如下：
 

@@ -28,7 +28,7 @@ updated: 2022-02-02
 
 如下图所示：
 
-![Multipop展示](Ch%2017%20Amortized%20Analysis/2020-01-18-17-19-30.png)
+![Multipop展示](assets/Ch%2017%20Amortized%20Analysis/2020-01-18-17-19-30.png)
 
 MultiPop函数的伪代码如下：
 
@@ -66,7 +66,7 @@ While循环中处理的是进位问题，从最低位开始，如果是1则将�
 
 下图，展示了累加时数组每一位的变化情况。
 
-![Increment展示](Ch%2017%20Amortized%20Analysis/2020-01-18-18-08-28.png)
+![Increment展示](assets/Ch%2017%20Amortized%20Analysis/2020-01-18-18-08-28.png)
 
 可以看到，A[0]每次操作都发生变化，A[1]每两次操作发生变化，A[2]每四次操作发生变化....A[i]每$2^i$次操作发生变化。所以对于n次操作而言，A[i]发生了$n/2^i$次变化。因此，从第0位到第k-1位，反转的总计为：
 

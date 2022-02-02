@@ -21,7 +21,7 @@ updated: 2022-02-02
 
 堆栈的图解如下图，(a)为原始样子，(b)为执行了`Push(17)和Push(3)`后的样子，(c)为执行了`Pop`后的样子。图中的`S.top`表示当前指针的索引值。
 
-![堆栈图解](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-31-40.png)
+![堆栈图解](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-31-40.png)
 
 堆栈操作微数据实现，每个步骤的复杂度都为`O(1)`
 
@@ -105,7 +105,7 @@ private:
 
 (c) 为执行了Dequeue（）操作的样子
 
-![队列图解](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-30-32.png)
+![队列图解](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-25-12-30-32.png)
 
 队列伪代码如下
 
@@ -205,7 +205,7 @@ private:
 
 (c) 为删除了数据4之后的列表
 
-![双向链表](Ch%2010%20Elementary%20Data%20Structures/2019-10-25-16-24-36.png)
+![双向链表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-25-16-24-36.png)
 
 链表通常需要支持`Search`，`Insert`和`Delete`操作，三者的伪代码分别为
 
@@ -438,8 +438,8 @@ private:
 
 第一种方法是使用三个大小相同的数组来分别表示`next`，`key`和`prev`，如下两图实际上是实现了同一种结构。
 
-![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
-![多数组形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-42-13.png)
+![指针形式表现列表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![多数组形式表现列表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-42-13.png)
 
 图二是将三个数组并排显示的效果，另外有一个变量`L`来保存列表的第一个结点的索引值，在这里第一个结点的`Key`值为9，索引值为7，所以`L`中保存的值为7。
 
@@ -449,8 +449,8 @@ private:
 
 第二种方法是只用一个数组来表示`next`，`key`和`prev`。每一个结点占数组中的三个位置，如一个结点的Key值在数组中的位置`A[i]`，则`next`位置为`A[i+1]`,`prev`位置为`A[i+2]`
 
-![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
-![单数组形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-52-00.png)
+![指针形式表现列表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![单数组形式表现列表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-52-00.png)
 
 
 同理，这里仍然需要一个变量`L`来保存头结点的索引，这里的头结点索引为19，所有头结点的`Key`值为9，`next`结点为13，表示下一个结点的从索引值13开始，`prev`结点为/，表示没有前结点，该结点为头结点。
@@ -461,8 +461,8 @@ private:
 
 分配和释放对象的过程如下图所示：
 
-![指针形式表现列表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
-![分配和释放对象](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-58-40.png)
+![指针形式表现列表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-41-54.png)
+![分配和释放对象](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-14-58-40.png)
 
 下图中的图(a)即为用多数组方式表示上图的数据，唯一与之前说明不同的是，这里需要一个变量`free`来表示第一个空结点在哪，这里显示第一个空结点的索引值为4，而在`next`数组的索引4处，值为8，说明下一个空结点在索引8的地方。
 
@@ -493,7 +493,7 @@ free=x;
 
 另外多个链表可以共用同三个数组，且共用一个free链表，如下图所示。存在两个链表，分别以$L_2$和$L_1$作为头结点。
 
-![多个链表共享数组和空链表](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-23-27.png)
+![多个链表共享数组和空链表](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-23-27.png)
 
 
 # Representing rooted trees
@@ -506,7 +506,7 @@ free=x;
 
 二叉树实例图如下：
 
-![二叉树](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-39-21.png)
+![二叉树](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-39-21.png)
 
 
 ## Rooted trees with unbounded branching
@@ -519,5 +519,5 @@ free=x;
 
 分支无限制有根树实例图如下
 
-![分支无限制有根树](Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-40-32.png)
+![分支无限制有根树](assets/Ch%2010%20Elementary%20Data%20Structures/2019-10-26-15-40-32.png)
 

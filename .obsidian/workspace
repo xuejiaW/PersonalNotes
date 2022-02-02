@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books.md",
+            "file": "Books/Computer Networks and Internets/CNI-Chapter1-Notes.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books.md"
+                "file": "Books/Computer Networks and Internets/CNI-Chapter1-Notes.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books.md",
+                "file": "Books/Computer Networks and Internets/CNI-Chapter1-Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books.md",
+                "file": "Books/Computer Networks and Internets/CNI-Chapter1-Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,6 +135,7 @@
   },
   "active": "66369a93c09c718a",
   "lastOpenFiles": [
+    "Books/Computer Networks and Internets/CNI-Chapter1-Notes.md",
     "Books.md",
     "Books/Computer Networks and Internets.md",
     "Notes/VSCode/Unity.md",
@@ -143,7 +144,6 @@
     "Books/Computer.md",
     "Books/Introduction to Algorithms/Ch 10 Elementary Data Structures.md",
     "Books/Introduction to Algorithms.md",
-    "Books/Introduction to Algorithms/Ch 17 Amortized Analysis.md",
-    "Books/Introduction to Algorithms/Ch 15 Dynamic Programming.md"
+    "Books/Introduction to Algorithms/Ch 17 Amortized Analysis.md"
   ]
 }

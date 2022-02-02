@@ -17,7 +17,7 @@ updated: 2022-02-02
 
 大部分搜索树的操作都与树的高度有关，下图是两个搜索二叉树的情况：
 
-![二叉搜索树](Ch%2012%20Binary%20Search%20Trees/2019-10-26-16-21-45.png)
+![二叉搜索树](assets/Ch%2012%20Binary%20Search%20Trees/2019-10-26-16-21-45.png)
 
 可以看到两个树都有8个结点，但(a)中的树较为平衡，树的深度较低，(b)树则很不平衡都集中在了右树上，树的深度较深。
 
@@ -187,7 +187,7 @@ TreeNode* BinarySearchTree::Minimum(TreeNode* node)
 
 （2） 如果左子树为空，则需要从父节点中找寻比自己刚好小的节点，使用x.p遍历逐渐向上寻找祖先节点，直到遇到第一个祖先结点让当前结点或当前节点的祖先是它的右子树，这个父结点就是刚好小的节点。
 
-![二叉搜索树](Ch%2012%20Binary%20Search%20Trees/2019-11-05-17-12-58.png)
+![二叉搜索树](assets/Ch%2012%20Binary%20Search%20Trees/2019-11-05-17-12-58.png)
 
 `Successor`和`Predecessor`伪代码
 
@@ -377,7 +377,7 @@ void BinarySearchTree::Insert(int value)
 
 * $z$没有子结点的情况，也可以用(a)(b)表示，即将存在的结点看作为空。
 
-![删除示意图](Ch%2012%20Binary%20Search%20Trees/2019-11-06-13-46-14.png)
+![删除示意图](assets/Ch%2012%20Binary%20Search%20Trees/2019-11-06-13-46-14.png)
 
 在实现DELETE算法前，需要先实现被反复用到的`替换`算法，伪代码如下
 
