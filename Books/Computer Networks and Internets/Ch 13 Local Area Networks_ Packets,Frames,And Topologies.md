@@ -13,7 +13,7 @@ tags:
 
 `电路交换（Circuit Switching）`概念是指使用时在发送端和接收端之间建立不受干扰的通路的通信方法。电路交换通常与模拟电话技术相关。下图是电路交换的示意图：
 
-![电路交换](assets/CNI-Chapter13-Notes/2019-12-09-08-28-27.png)
+![电路交换](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-08-28-27.png)
 
 电路交换的主要特点是：
 
@@ -29,7 +29,7 @@ tags:
 
 分组交换（Packet Switching）使用一种统计意义上的复用，即多个信源之间竞争共享媒介的使用。电路交换通常在传统的电话通信中使用，而分组交换构成了因特网的基础。分组交换示意图如下：
 
-![分组交换](assets/CNI-Chapter13-Notes/2019-12-09-08-37-20.png)
+![分组交换](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-08-37-20.png)
 
 注意，在11章中提到的复用技术，如频分复用和时分复用是对于物理存在的信道或者像电路交换这样生成的信道使用的，与分组交换并没有关系。分组交换本身就有统计复用（Statistic Multiplexing）的概念。多个信源在媒介空闲时竞争使用，当媒介为空，且只有一个信源需要传输数据时，该信源就会独占媒介。如果同时有多个信源要传输数据，则基本每个信源占据媒介的时间是平均的，轮流使用。
 
@@ -66,7 +66,7 @@ IEEE是由一群关注于协议栈最下两层（物理层（Physical）和数�
 
 在1980年，IEEE组织了`802项目局域网/城域网标准委员（Project 802 LAN/MAN Standards Commitee）`会为网络设定标准。
 
-![组织和协议](assets/CNI-Chapter13-Notes/2019-12-09-09-12-05.png)
+![组织和协议](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-09-12-05.png)
 
 # IEEE 802 Model And Standards
 
@@ -82,7 +82,7 @@ IEEE中有许多不同的工作小组。当有新技术需要协议时，由工�
 
 当协议最终发布后，工作小组可以选择解散或者如果协议非常重要或者仍需要后续工作，小组也可以继续活动。如果小组负责的部分协议不再有意义，如商业上不被接受，或者有更新更好的技术出现，小组也可以选择直接解散而不发表任何的规范。下图是802分类下的协议，有一些规范就已经被放弃（Disbanded）了。
 
-![802协议](assets/CNI-Chapter13-Notes/2019-12-09-09-25-59.png)
+![802协议](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-09-25-59.png)
 
 ## LAN Topologies
 
@@ -154,11 +154,11 @@ IEEE定义了三种对应包传递的方法：
 
 在整个包的前后还能加入可选的前置数据（Prelude）或后置数据（Postlude）。因此整个包的结构如下所示：
 
-![包的结构](assets/CNI-Chapter13-Notes/2019-12-09-10-47-15.png)
+![包的结构](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-10-47-15.png)
 
 举一个例子，如果一个包有6个byte的数据头，然后任意长度的有效负载，在包的前后各有1byte表示包的开始和结束。且开始和结束标识用ASCII码中的SOH（Start Of Header）和EOT（End Of Transmission）表示，则整个包如下所示：
 
-![包的例子](assets/CNI-Chapter13-Notes/2019-12-09-10-49-20.png)
+![包的例子](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-10-49-20.png)
 
 上述例子有一点点数据的浪费，因为如果包是一个接一个发的，那么后一个包的SOH会紧跟着前一个包的EOT。在实际中，只需要一个来区分两个包即可。
 
@@ -175,7 +175,7 @@ IEEE定义了三种对应包传递的方法：
 
 如我们选择用ASCII码中的ESC字符（Ox1B）来作为替换字符。在发送端当有效负载中出现SOH，那么就替换为"ESC A"，如果出现EOT,就替换为"ESC B"，如果出现了ESC就替换为"ESC C"。注意这个计算是针对有效负载的，当整个发送的有效负载中就不会与EOT和SOH相同的数据。对接收端而言，去找寻背后跟着"A,B,C"的ESC字符，然后将其替换回SOH和EOT的数据。发送端的替换过程如下所示：
 
-![字节装填](assets/CNI-Chapter13-Notes/2019-12-09-11-22-32.png)
+![字节装填](assets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies/2019-12-09-11-22-32.png)
 
 # Reference
 [Switching technology](https://web.archive.org/web/20171217042848/http://www.cs.virginia.edu/~mngroup/projects/mpls/documents/thesis/node8.html)

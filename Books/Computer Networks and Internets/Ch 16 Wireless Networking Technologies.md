@@ -26,7 +26,7 @@ $16.20$介绍了软件无线电系统。
 
 无线技术通常通过其使用的范围来分类，主要可分为：`局域网（Local Area Networks,LANs）`，`城域网（Metropolitan Area Networks,MANs）`，`广域网（Wide Area Networks，WANs`）以及`个人局域网（ Personal Area Networks，PANs）`。如下图所示：
 
-![无线网络分类](assets/CNI-Chapter16-Notes/2019-12-30-15-51-47.png)
+![无线网络分类](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-15-51-47.png)
 
 # Personal Area Networks（PANs）
 
@@ -43,7 +43,7 @@ $16.20$介绍了软件无线电系统。
 
 振幅为了工业，科学以及医药领域专门预留了一部分频域，被称为ISM无线。这部分的频域并没有再进一步细分，如科学只能用哪一段频域之类。这三个领域的产品都可以使用这部分频域，具体频域如下图所示：
 
-![ISM频域](assets/CNI-Chapter16-Notes/2019-12-30-16-04-51.png)
+![ISM频域](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-16-04-51.png)
 
 # Wireless LAN Technologies And Wi-Fi
 
@@ -51,7 +51,7 @@ IEEE将局域网下的无线网络协议分类在$802.11$下。1999年一些销�
 
 下表为Wifi联盟所指定的协议：
 
-![Wifi联盟协议](assets/CNI-Chapter16-Notes/2019-12-30-16-21-32.png)
+![Wifi联盟协议](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-16-21-32.png)
 
 # Spread Spectrum Technology
 
@@ -81,7 +81,7 @@ Wifi技术主要用了以下扩频技术，其主要目的还是帮助Wifi在有
 
 除了上述Wifi联盟所指定的协议，无线局域网还有其他许多的协议，都属于$802.11$协议分类下如下图所示：
 
-![其他802.11协议](assets/CNI-Chapter16-Notes/2019-12-30-16-48-56.png)
+![其他802.11协议](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-16-48-56.png)
 
 # Wireless LAN Architecture
 
@@ -91,7 +91,7 @@ Wifi技术主要用了以下扩频技术，其主要目的还是帮助Wifi在有
 
 在实际运用中，自主网很少存在，基础设施结构如下图所示，图中的$AP$即为接入点（Access Point），一个接入点和连接它的一系列终端称为`基本服务集（Basic Service Set，BSS）`。
 
-![基础设施结构](assets/CNI-Chapter16-Notes/2019-12-30-16-59-39.png)
+![基础设施结构](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-16-59-39.png)
 
 # Overlap，Association，And 802.11 Frame Format
 
@@ -99,11 +99,11 @@ Wifi技术主要用了以下扩频技术，其主要目的还是帮助Wifi在有
 
 另外如果基础设施结构是要连接外网的，那么接入点的互联机制还需要另外一个有线连接至与外网连接的路由器，如下图所示，下图也同时展示了上述的接入点重叠情况
 
-![外网连接以及接入点重叠](assets/CNI-Chapter16-Notes/2019-12-30-17-06-11.png)
+![外网连接以及接入点重叠](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-17-06-11.png)
 
 $802.11$的定义的数据帧，还需要指定连接外网的路由器的MAC地址，综上数据帧的结构如下：
 
-![802.11数据帧](assets/CNI-Chapter16-Notes/2019-12-30-17-07-42.png)
+![802.11数据帧](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-17-07-42.png)
 
 # Coordination Among Access Points
 
@@ -133,7 +133,7 @@ $802.11$中使用的CSMA/CA还包含一些在十四章未提及的细节，如�
 
 Wifi网络中所使用的CSMA/CA如下图所示：
 
-![Wifi网络中所使用的CSMA/CA](assets/CNI-Chapter16-Notes/2019-12-30-21-20-32.png)
+![Wifi网络中所使用的CSMA/CA](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-21-20-32.png)
 
 因为各终端间的物理间隔以及环境噪声，微弱信号的检测是很困难的，因此Wifi网络并没有引入CSMA/CA中的冲突检测（Collision Detection）部分，即发送端并不会在数据发送过程中监听信道来判断是否有冲突。在Wifi网络中，发送端会等待ACK信号，如果没有收到ACK信号，发送端则认为数据发送失败。
 
@@ -145,13 +145,13 @@ WiMax可以再被细分为固定WiMax和移动WiMax，前者是指服务提供�
 
 WiMax在城域网中的使用，如果是用在回传网络（服务提供方之间的连接，通常需要较高的数据速率）中则需要无阻碍（Line-Of-Sight，LOS）的连接，如果是在服务提供方与接入点直接的连接则也可以使用有阻碍的连接（Non-Line-Of-Sight，NLOS），如下图所示：
 
-![WiMax的使用](assets/CNI-Chapter16-Notes/2019-12-30-22-02-35.png)
+![WiMax的使用](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-22-02-35.png)
 
 # PAN Technologies And Standards
 
 PAN技术被分类在$802.15$分类下，如下图所示：
 
-![PAN技术](assets/CNI-Chapter16-Notes/2019-12-30-22-04-05.png)
+![PAN技术](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-22-04-05.png)
 
 # Other Short-Distantce Communication Technologies
 
@@ -167,11 +167,11 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 蜂窝式通信系统最早是为了满足手机的电话服务设计的。在这个系统下，地区被风格为一个个小块称为`巣室（Cell）`，每个巣室都包含一个基站塔，一系列基站塔由一个移动交换中心控制。这个中心会追踪用户，并在用户从一个巣室进入另一个巣室时，提供巣室的切换服务。蜂窝式系统的结构如下图：
 
-![蜂窝式系统结构](assets/CNI-Chapter16-Notes/2019-12-30-22-18-47.png)
+![蜂窝式系统结构](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-22-18-47.png)
 
 理论上每个巣室都是六边形的，那么就能无缝的分割区域，但在实际运用中，每个基站塔的覆盖范围大致是圆形的，因此就会出现重叠或者无服务区。且基站塔的覆盖范围由所处区域的用户数量决定，如果用户数量很多，则每个基站塔的覆盖范围会较小，且有更多的基站塔，反之每个基站塔覆盖很大一块区域。理论和实际的巣室图如下，（a）图为理想情况，（b）图为实际情况：
 
-![巣室情况](assets/CNI-Chapter16-Notes/2019-12-30-22-21-33.png)
+![巣室情况](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-22-21-33.png)
 
 # Micro Cells
 
@@ -183,11 +183,11 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 蜂窝式系统使用称为巣室簇的结构构成，每个巣室簇都由特定数目的巣室构成，其中的每个巣室频率都不同。通常而言，巣室簇由3，4，7或12个巣室构成，如下图所示：
 
-![巣室簇](assets/CNI-Chapter16-Notes/2019-12-30-23-19-08.png)
+![巣室簇](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-23-19-08.png)
 
 巣室簇中的每个巣室频率不同，将巣室簇拼接后就不会有相邻巣室频率相同的情况出现，如下图为7巣室簇拼接：
 
-![巣室簇拼接](assets/CNI-Chapter16-Notes/2019-12-30-23-20-04.png)
+![巣室簇拼接](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-23-20-04.png)
 
 # Generations Of Cellular Technologies
 
@@ -212,13 +212,13 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 卫星通信的关键是用一个曲面天线（Parabolic antenna/Dish）保证电磁信号被反射到一个单一点上，如下图所示：
 
-![曲面天线](assets/CNI-Chapter16-Notes/2019-12-30-23-39-52.png)
+![曲面天线](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-23-39-52.png)
 
 为了最大化收集到的信号，早期的卫星通信系统使用直径大于3米的曲面天线，但这种尺寸的天线并不适用于个人或小商家。于是称为`甚小口径天线终端（Very Small Aperture Terminal，VSAT）`的技术出现，它指代直径小于3米的曲面天线，通常直径在1米以下。
 
 VSAT卫星通信选择的频率不同会影响信号强度，天气环境变化的敏感程度，和信号的覆盖范围（Satellite's footprint）。如下表所示：
 
-![VSAT卫星频率](assets/CNI-Chapter16-Notes/2019-12-30-23-45-24.png)
+![VSAT卫星频率](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-23-45-24.png)
 
 # GPS Satellites
 
@@ -232,7 +232,7 @@ GPS系统通过三颗卫星计算出终端的位置。首先要计算终端距�
 
 现在传统的无线电系统被软件无线电取代，可以通过软件来指定的特性如下表所示：
 
-![软件无线电可以设定的特性](assets/CNI-Chapter16-Notes/2019-12-30-23-53-54.png)
+![软件无线电可以设定的特性](assets/Ch%2016%20Wireless%20Networking%20Technologies/2019-12-30-23-53-54.png)
 
 软件无线电的一大特性是可以同时使用多个天线，称实现了多天线同时传输和接受的系统为`MIMO（Multiple-Input Multiple-Output）`系统。
 
