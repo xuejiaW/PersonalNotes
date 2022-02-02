@@ -1,44 +1,21 @@
 ---
-title: 《Head First 设计模式》 笔记（二）
-date: 2019-02-06 16:33:15
-tags: 
-- 读书笔记
-- 设计模式
-categories:
-- 读书笔记
-- 设计模式
+tags:
+    - Design-Pattern
 created: 2022-02-02
 updated: 2022-02-02
 ---
 
-{% cq %}
-这一篇将会介绍单例模式，命令模式，适配器模式，外观模式，迭代器模式及组合模式。
-{% endcq %}
-
-<!--more-->
-
-***
-
-***
-
-
-
-***
-
-
-***
-
-## 迭代器模式
+# 迭代器模式
 
 迭代器模式(Iterator Pattern)提供了一种访问聚合对象但不需要关心其内部实现方法的方式。
 
 例如我们存在两个菜单，第一个菜单表示早餐，第二个表示晚餐，第一个菜单其中的菜品用`List`来存储，第二个菜单其中的菜品用`Array`来存储。在这种情况下就需要使用迭代器模式，为两个菜单提供一个供外部调用的访问菜品的接口。
 
-### 代码示例
+## 代码示例
 
 我们在两个菜单类中添加`createIterator`函数来返回迭代器，对于外部调用者，如测试代码中的`PrintMenu`,它只需要调用`hasNext`及`next`即可而不需要关心菜单中的具体实现。
 
-#### 菜单
+### 菜单
 
 ```cs Pancake菜单
 public class PancakeHouseMenu
@@ -96,7 +73,7 @@ public class DinerMenu
 }
 ```
 
-#### 迭代器接口及实现
+### 迭代器接口及实现
 
 ```cs 迭代器接口
 public interface Iterator
@@ -148,7 +125,7 @@ public class DinerMenuIterator : Iterator
 }
 ```
 
-### 测试代码及结果
+## 测试代码及结果
 
 ```cs 测试代码
 static void Main(string[] args)
@@ -172,19 +149,17 @@ private static void PrintMenu(Iterator iterator)
   
 运行结果：
 
-![迭代器模式运行结果](HeadFirstDesignPatternNotes-2/2019-02-03-23-36-01.png)
+![迭代器模式运行结果](Ch%2009%20the%20Iterator%20and%20Composite%20Pattern/2019-02-03-23-36-01.png)
 
-***
-
-## 组合模式
+# 组合模式
 
 组合模式（Composite Pattern）是用树形结构来组合对象进而体现一种局部-整体的层次结构。组合模式可以让调用者以统一的方式对待单个物体和多个物体的组合。
 
 例如我们需要打印一个菜单上的所有菜品，但菜单中可能还包含子菜单，子菜单中又可能包含子菜单等等，但对于外部调用者而言则不希望关注这些细节。我们可以通过定义一个基类，无论是菜品还是菜单都继承自这个基类，这样对于菜单而言，无论是子菜单还是菜品都是同一个基类，可一起管理。对于外部调者而言只x需要关心这个基类即可。
 
-### 代码示例
+## 代码示例
 
-#### 共同抽象类基类
+### 共同抽象类基类
 
 ```cs 菜单元素
 public abstract class MenuComponent
@@ -203,7 +178,7 @@ public abstract class MenuComponent
 }
 ```
 
-#### 菜单及菜品实现
+### 菜单及菜品实现
 
 ```cs 菜单
 public class Menu : MenuComponent
@@ -253,7 +228,7 @@ public class MenuItem : MenuComponent
 }
 ```
 
-### 测试代码及结果
+## 测试代码及结果
 
 ```cs 测试代码
 Menu menu = new Menu("General Menu", "Holds all menus and menu items");
@@ -276,11 +251,4 @@ menu.Debug();
 
 运行结果：
 
-![组合模式运行结果](HeadFirstDesignPatternNotes-2/2019-02-06-16-23-58.png)
-
-{% note primary %}
-引用：
-1. https://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/behavioral.html
-{% endnote %}
-
-***
+![组合模式运行结果](Ch%2009%20the%20Iterator%20and%20Composite%20Pattern/2019-02-06-16-23-58.png)

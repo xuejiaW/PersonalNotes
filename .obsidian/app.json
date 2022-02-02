@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 07 he Adapter and Facade Patterns",
+  "attachmentFolderPath": "./assets/Ch 09 the Iterator and Composite Pattern",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
