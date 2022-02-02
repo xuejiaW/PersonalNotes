@@ -1,34 +1,15 @@
 ---
-title: 《Rules of Play》 第十八章笔记
-mathjax: false
-date: 2020-03-21 17:52:41
-categories:
-  - 读书笔记
-  - 游戏设计
 tags:
-  - 读书笔记
-  - 游戏设计
+  - Game-Design
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
-
-《Rules of Play》 第十八章笔记
-
-这一章作者将游戏看作是一个控制系统。
-
-主要介绍了游戏中的正反馈和负反馈。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 18: Games as Cybernetic Systems
-
-## Introducing Cybernetic Systems
+# Introducing Cybernetic Systems
 
 这一章回简单的介绍控制论（Cybernetic），主要关注于游戏运行时系统的变换，和游戏中哪些形式上的结构让这些改变发生。
 
-## Elements of a Cybernetic System
+# Elements of a Cybernetic System
 
 控制系统的概念是指一个系统的输入和输出会由系统内部的结构自行调整。通常的系统的输入是对于环境的检测，而输出是系统做出的行为，即如何去改变环境。
 
@@ -47,7 +28,7 @@ tags:
    负反馈系统是朝相反方向变换。如传感器接收到温度后，比较是否大于30°，如果大于则开始降温，如果小于10°则开始加热，这样房间的温度保持在一个区间之内。
    负反馈系统的效果是平衡（Equilbrium）。
 
-## Feedback Systems in Games
+# Feedback Systems in Games
 
 在游戏中，控制系统如下所示：
 
@@ -61,14 +42,14 @@ tags:
 
 如在一个赛车游戏中，可以通过嵌入反馈系统来决定下一轮时的发车位，如果前一轮的第一名处于最前方的发车位，那么就是正反馈系统，反之如果成绩越差的车手发车位越靠前就是负反馈系统。
 
-## Positive and Negative Basketball
+# Positive and Negative Basketball
 
 这里作者以篮球游戏作为例子来帮助分析正反馈系统和负反馈系统。
 
 在正反馈系统的实现下，如果两个队伍的分值每相差5分，分数高的队伍会增加一名球员。这样随着比赛的进行，分数高的队伍球员会越来越多，即优势越来越大，比分差距会扩大。
 在负反馈系统的实现下，如果两个队伍的分值每相差5分，分数高的队伍会失去一名球员。这样随着比赛的进行，分数高的队伍球员会越来越少，他们也就越来越难打，这样比分差距会收拢。
 
-## Racing Loops
+# Racing Loops
 
 这里作者以两个实际的游戏例子说明通过不同思路实现的负反馈系统。
 
@@ -86,7 +67,7 @@ tags:
 
 如之前所述，游戏的结果需要是不确定的，这样游玩才有意义。这上述两个例子通过负反馈缩小玩家之间的差距，都是让游戏的结果不确定，不然的话跑在前面的玩家大概率就是获胜者，对于之后的玩家而言游戏就是无意义的。
 
-## Positive Feedback in a Game
+# Positive Feedback in a Game
 
 正反馈系统出现在许多格斗游戏中。如被攻击的对象会出现硬直，这样就会收到更多的攻击。
 
@@ -98,7 +79,7 @@ tags:
 
 还有的游戏是通过策略等方法来补偿正反馈。如魔兽争霸中，拥有更多金矿的玩家会有更多的经济收入，那么就会有更多的士兵，也就导致优势会不断的扩大。但是弱势的一方却可以通过战术来终止优势方的优势扩大，如进攻分矿。
 
-## Dynamic Difficulty Adjustment
+# Dynamic Difficulty Adjustment
 
 动态难度调节（Dynamic Difficult Adjustment，DDA）根据玩家的表现使用反馈系统来调整游戏难度。
 
@@ -108,7 +89,7 @@ tags:
 
 但是DDA是一个非常刻意的调整，很可能会损害玩家的游戏体验。玩家经过了反反复复的练习，变得更加数量，想要快速的通过游戏，结果游戏却相应的变得更难，这对于玩家而言有一种欺骗感，感觉自己是在“被游戏玩”。
 
-## A Simple Die Roll
+# A Simple Die Roll
 
 游戏的反馈系统，也可以仅仅通过一个规则来实现。
 
@@ -120,7 +101,7 @@ tags:
 
 注意，这个严格意义上不是一个控制系统，因为没有传感器，比较器，催化器的元素存在。但它的思想仍然是控制系统其中负反馈的思想。
 
-## Putting Feedback to Use
+# Putting Feedback to Use
 
 反馈系统可以帮助平衡游戏。以下是正负反馈特点的总结：
 
@@ -142,19 +123,8 @@ tags:
 
 控制系统会一定程度上剥夺玩家对于游戏的控制，而控制感又是玩家游戏乐趣的一大来源。但实际上这两者并不矛盾，玩家的控制感和玩家是否真的完全控制游戏并不存在必然关系。如同之前章节中，不确定感也不一定来自不确定的随机一样。Meaningful Play针对的是玩家的感受，而不是游戏的规则。
 
-## Afterword： Don't Forget the Participant
+# Afterword： Don't Forget the Participant
 
 控制系统在学术上还分为，第一类控制系统和第二类控制系统。其中第一类控制系统完全由自身决定，而第二类控制系统还由旁观者决定。
 
 这一章中提到的控制系统为第一类控制系统，但如果考虑到了游戏的文化层面或其他社会层面，则控制系统可能会受外界因素的干扰，成为第二类控制系统。
-
-
-{% note primary %}
-
-引用：
-
-1.*Rules of Play* 2003
-
-{% endnote %}
-
-***

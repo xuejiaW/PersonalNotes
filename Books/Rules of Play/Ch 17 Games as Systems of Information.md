@@ -1,38 +1,15 @@
 ---
-title: 《Rules of Play》 第十七章笔记
-mathjax: false
-date: 2020-03-21 11:45:01
-categories:
-  - 读书笔记
-  - 游戏设计
 tags:
-  - 读书笔记
-  - 游戏设计
+  - Game-Design
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
-
-《Rules of Play》 第十七章笔记
-
-这一章中，作者将信息看作游戏中可以被交互的一部分，玩家通过对于信息的交互获得meaningful play。
-
-信息可以分为完整信息和不完整信息。
-
-信息也可以根据了解的对象被分为四种：被所有玩家知道，只被一个玩家知道，只被游戏知道，随机产生。
-
-同时，作者用桌游*魔法森林*作为例子，讲述了信息是如何运用在游戏中的。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 17: Games as Systems of Information
-
-## Introducing a Different Kind of Information
+# Introducing a Different Kind of Information
 
 这一章中，将游戏看作是一个交互系统，信息是其中一个用来玩的元素。针对不同的游戏，信息可以获取，可以被隐藏，或重新安排，被遗忘等等。如游戏扑克牌，玩家要考虑的就是如何隐藏信息（自己手上的牌），和推测出别人的信息（别人手上的牌）。
 
-## Prefect and Imperfect Information
+# Prefect and Imperfect Information
 
 完整信息（Perfecc Information）是指所有玩家在任意时刻都知道的元素，如下围棋时，棋盘上棋子的位置。
 不完整信息（Imprefect Information）是指在游戏过程中，一部分的信息对于玩家而言是隐藏的。
@@ -48,7 +25,7 @@ tags:
 
 在游戏中，信息所处的类别是在发生变化的，如一张牌在还未发出时，是`只有游戏知道的信息`，当发给一个玩家后，就成为了`只有一个玩家知道的信息`，当被使用时，就成为了`所有玩家都知道的信息`。
 
-## Enchanted Information
+# Enchanted Information
 
 时刻要注意的是，无论如何，游戏中操作信息的设计其目的都是产生meaningful play。
 
@@ -58,7 +35,7 @@ tags:
 
 可以看出，在游戏中，信息是逐渐被揭露给玩家的，玩家可以通过翻看树下的宝藏来获取信息，当某一个玩家猜对卡片后，树下的宝藏也会被展示给所有人。游戏过程中玩家首先需要记住信息，即已经翻看的卡片下的宝藏是什么，同时还需要主动的构建自己的信息系统，如玩家可以选择优先看哪条路上的树。
 
-## Each turn，Enchanted
+# Each turn，Enchanted
 
 如上节所述，在魔法森林的游戏中，玩家需要自己决定查看哪条路上的树，这种抉择就是meaningful play的信号。在游玩的过程中，充斥着玩家对于信息的处理，探索哪部分信息的决策（选择探索的路），信息记忆的挑战（记住已经翻看的宝藏），以及猜测（如果到达城堡时，需要找到的宝藏自己并没有见过）。
 
@@ -72,7 +49,7 @@ tags:
 
 作为设计师在设计游戏时要考虑到这两种信息的转换。
 
-## Hiding and Revealing Systems
+# Hiding and Revealing Systems
 
 电子游戏中有许多隐藏或揭露信息的游戏元素：
 
@@ -87,14 +64,3 @@ tags:
 对于设计师而言，信息不能隐藏太多，不然玩家可能会觉得困扰。同样的信息也不能太多，出现在游戏中的信息应该是要能从玩家的交互中获取意义的，如果一个信息并不能被理解或者不能被融入到游戏中，这个信息就是没有意义的。
 
 同时信息应该是逐渐被揭露给玩家的，否则玩家会一下子突如其来的信息吓到，而且无从下手。
-
-
-{% note primary %}
-
-引用：
-
-1.*Rules of Play* 2003
-
-{% endnote %}
-
-***

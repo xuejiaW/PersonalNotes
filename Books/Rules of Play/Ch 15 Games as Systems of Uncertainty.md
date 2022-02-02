@@ -1,34 +1,11 @@
 ---
-title: 《Rules of Play》 第十五章笔记
-mathjax: false
-date: 2020-03-20 23:57:01
-categories:
-  - 读书笔记
-  - 游戏设计
 tags:
-  - 读书笔记
-  - 游戏设计
+  - Game-Design
+created: 2022-02-02
+updated: 2022-02-02
 ---
 
-{% cq %}
-
-《Rules of Play》 第十五章笔记
-
-这一章中，作者区分了宏观层面和微观层面的不确定性。
-
-再将不确定性分为三种`certain`，`uncertain`，`risk`。
-
-之后通过两个例子说明，不确定性如何结合到游戏中。
-
-最后提出了数学层面上的概率与玩家体会到的概率之间是存在差距的。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 15: Games as Systems of Uncertainty
-
-## Introducing Uncertainty
+# Introducing Uncertainty
 
 不确定性是每个游戏的核心特征。正是有位对游戏结果的不确定性，才能给玩家目的感，如果游戏的结果是确定的，那么玩家何必要玩呢？玩家的行为并没有造成任何的区别，换句话来说，不确定性一定程度上提供了游戏的意义。
 
@@ -41,7 +18,7 @@ tags:
 
 所有游戏在宏观层面都提供了不确定性，但是在微观层面并不是都提供了（如围棋）。
 
-## Certainty，Uncertainty，and Risk
+# Certainty，Uncertainty，and Risk
 
 数学家Richard Epstein在*The Theory of Gambling and Statistical Logic*一书中将所有的赌博行为都描述为是一种决策，而决策又可根据行为与结果之间的关系，分为三种：`不确定（uncertainty）`，`冒险（risk）`，`确定（certainty）`。
 
@@ -54,7 +31,7 @@ tags:
 
 大部分的游戏都是`冒险`和`不确定`的结合。
 
-## The Feeling of Randomness
+# The Feeling of Randomness
 
 玩家的不确定感并一定来自于游戏中的随机事件。
 
@@ -66,7 +43,7 @@ tags:
 
 游戏中是否让玩家有随机感比游戏中是否真的有随机因素更重要。如果一个游戏完全没有随机感，那么玩家可能会觉得很无聊，或者觉得竞技性过强。如果一个游戏随机感过多，玩家可能就会觉得游戏很混乱。但无论是什么情况，最重要的都是让玩家的选择是有意义的，即使没有随机感，也要让玩家能通过技巧改变结果，即使很混乱，也要让玩家觉得可以通过某个策略来改变结果。
 
-## Probability in Games
+# Probability in Games
 
 这一节是针对微观层面机会的研究。数学上对于不确定性的描述为“概率（Probability）”。
 
@@ -75,7 +52,7 @@ tags:
 1. 概率本身给游戏带来了随机感和混乱，即增加了不确定性
 2. 对于概率的研究却让玩家知道了不确定性的本质，即从uncertain像risk转变，减少了不确定性
 
-## Dice Probability
+# Dice Probability
 
 这一节作者首先推导了一个色子筛出各点数的概率，又推到了两个色子筛出各点数的概率，这里不赘述。
 
@@ -83,7 +60,7 @@ tags:
 
 如两个色子筛出7的概率最大，通常大富翁棋盘有40格。这意味着6轮游戏后很可能就有玩家走到了第二圈，这时候游戏就会出现踩到别人财产付租金的情况了。
 
-## Change and Game Play
+# Change and Game Play
 
 对于那些完全由概率决定的游戏，玩家对于游戏的结果本质上是没有任何控制性的，游戏的结果纯粹由概率决定，玩家只能被动的接受游戏的结果。Rogor Caillois认为这样的游戏是没有意义的，但实际上许多完全由概率决定的游戏很有趣，最简单的就是丢硬币。
 
@@ -101,7 +78,7 @@ tags:
 
 这里作者给出了两个使用概率来增添游戏趣味性的例子，第一个是*雷暴*，第二个是*小猪*
 
-### Case Study One： Thunderstorm
+# Case Study One： Thunderstorm
 
 *雷暴（Thunderstorm）*是德国很著名的家庭游戏。
 
@@ -118,7 +95,7 @@ tags:
 
 在游戏中，每个玩家的概率是由之前玩家的结果决定的，这提供了一定的戏剧性并且会有紧张的气氛在（每个人都不希望他前面的玩家色出很多1）。这种戏剧性和紧张氛围赋予了游戏的意义。
 
-### Case Study Two：Pig
+## Case Study Two：Pig
 
 小猪（Pig）也是多人参与，通常3-5人比较合适，需要一个色子。
     a. 第一个玩家丢出色子，色子的点数即为获取的分数。玩家可以选择继续丢色子，然后累加获取的分数。但如果丢出了1，则这一轮累加的所有分数清零。玩家也可以选择不丢色子，那么这一轮获取的分数就会记录在本子上。
@@ -129,21 +106,21 @@ tags:
 
 游戏的趣味性来源于玩家的决策和概率之间的抗衡，随着丢色子的次数越来越多，丢出1的概率也就越大。玩家此时的决策也会更加的困难，这也会增加紧张气氛。这种抉择和紧张气氛赋予了游戏的意义。
 
-## Breakdowns in Uncertainty
+# Breakdowns in Uncertainty
 
 这一部分作者讨论了一些概率元素最终并不没有像设计师预想的那样工作的情况。
 
-### Breakdown 1: Computer Randomness
+## Breakdown 1: Computer Randomness
 
 实际上计算机并不能产生随机数字，所有产生随机数的程序都是伪随机。但是对于大部分的游戏设计来说，计算机产生的伪随机数也足够用了。只是设计师要记住，计算机生成的随机数有时是会出错的。
 
 比如理想上1-100的随机数，出现的数字是均匀的分布在1-100之中的，但可能因为程序的出错，在每个区间的数组出现的概率特别大。
 
-### Breakdown 2：Strategizing Change
+## Breakdown 2：Strategizing Change
 
 第二个要注意的是，玩家会不会通过某种策略将改变了原先的随机事件想要达成的效果。例如小队中的成员在个特定时间段随机一位受到伤害，玩家会不会通过在特定时间前踢出一些弱小玩家，来避免他们收到伤害。
 
-### Breakdown 3： Probability Fallacies
+## Breakdown 3： Probability Fallacies
 
 概率存在一些谬论（Fallacies），即玩家理解中的概率，和真实的概率可能是不一样的。
 
@@ -160,16 +137,6 @@ tags:
 
 同时上述提及的三个概率方面的破坏（Breakdown），实际上也可以被运用。针对电脑伪随机，是否可以以此作为灵感，故意设计一个不是那个平衡的随机方法。针对策略规避概率，是否故意的允许玩家去采取某些策略。针对谬论，是否故意设计一个运气系统，虽然运气在理性层面上是不存在的。
 
-## Meaningful Chance
+# Meaningful Chance
 
 几率存在的意义并不是单纯的增加不确定性。它是要给玩家好处，或者坏处，或者某种信念，如“我希望得到xxx”，“我猜我能得到XXX”等等。
-
-{% note primary %}
-
-引用：
-
-1.*Rules of Play* 2003
-
-{% endnote %}
-
-***
