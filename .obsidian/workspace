@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
+            "file": "Books/Head First Design Patterns/Ch 06 the Command Pattern.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md"
+                "file": "Books/Head First Design Patterns/Ch 06 the Command Pattern.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
+                "file": "Books/Head First Design Patterns/Ch 06 the Command Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
+                "file": "Books/Head First Design Patterns/Ch 06 the Command Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,8 +133,9 @@
     "direction": "horizontal",
     "width": 449.5
   },
-  "active": "aedb306b23bed48b",
+  "active": "d48b3d41ff372c98",
   "lastOpenFiles": [
+    "Books/Head First Design Patterns/Ch 06 the Command Pattern.md",
     "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
     "Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-1.md",
@@ -143,7 +144,6 @@
     "Books/Head First Design Patterns/Ch 02 the Observer Pattern.md",
     "Books/Head First Design Patterns/Ch 2.md",
     "Books/Head First Design Patterns/Ch 01 the Strategy Pattern.md",
-    "Books/Head First Design Patterns.md",
-    "Books.md"
+    "Books/Head First Design Patterns.md"
   ]
 }

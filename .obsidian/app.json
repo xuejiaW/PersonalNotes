@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 04 the Factory Pattern",
+  "attachmentFolderPath": "./assets/Ch 05 the Singleton Pattern",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
