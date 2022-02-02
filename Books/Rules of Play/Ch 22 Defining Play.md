@@ -39,7 +39,7 @@ updated: 2022-02-02
 
 上述三个活动分类的结构如下：
 
-![玩的分类](RulesOfPlay-Chapter22-Notes/2020-03-02-23-52-23.png)
+![玩的分类](Ch%2022%20Defining%20Play/2020-03-02-23-52-23.png)
 
 # A General Definition of Play
 
@@ -105,7 +105,7 @@ Coilois的四个分类都适用于作者给出的对于玩的定义：
 
 同时Coilois又进一步通过两个分类，将上述的四个分类进行扩展。这两个分类是`Paida`，表示一种无规则的，即兴的玩耍，`Ludus`表示一种受规则约束，规范化的玩耍。因此，一共又8个分类，如下所示：
 
-![Coilois八大分类](RulesOfPlay-Chapter22-Notes/2020-03-03-00-51-32.png)
+![Coilois八大分类](Ch%2022%20Defining%20Play/2020-03-03-00-51-32.png)
 
 大部分的游戏都使用了多个属于上表中不同分类的元素，如一个角色扮演游戏（Mimicry）可以在玩家快速移动时加入眩晕效果（Ilinx）。
 
