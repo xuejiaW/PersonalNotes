@@ -1,38 +1,17 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第五章笔记
-mathjax: false
-date: 2019-11-25 23:48:59
-categories: 
-- 读书笔记
-- 计算机网络
 tags:
-- 读书笔记
-- 计算机网络
+    - Networks
 ---
 
-{% cq %}
-
-《计算机网络与因特网》 第五章笔记。
-
-这一章简单定义了数据通信的概念，给出了数据通信的概念模型，并简单介绍了其中的一些关键领域的概念。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 5 Overview Of Data Communications
-
-## Introduction
+# Introduction
 
 这一章主要是分析通过物理媒介进行信息传递的方法，例如线，光和无线电波等。这些方式在一些细节上不同，但所有方法的基本原理是相通的。
 
 这一章同样会阐述一些在理论上可行，但在实际中因为现实世界的物理限制无法实现的方法。
 
-## The Essence Of Data Communications
+# The Essence Of Data Communications
 
 数据通信是物理，数学和电气工程三个学科的混合领域。
 
@@ -40,7 +19,7 @@ tags:
 2. 数学：信息需要数字化
 3. 电气工程：数据传输需要构建现实中的通信系统
 
-## Motivation And Scope Of The Subject
+# Motivation And Scope Of The Subject
 
 在数据通信领域有三个重要的点，他们定义了数据通信的一些领域
 
@@ -56,7 +35,7 @@ tags:
 
    媒介共享在计算机网络中是一个重要角色。了解哪些基础设施是可以被共享的，共享他们的优缺点，以及基于共享而设计的通信模型是很重要的。
 
-## The Conceptual Pieces Of A Communications System
+# The Conceptual Pieces Of A Communications System
 
 每一个来源都需要一些方法来获取信息，调整信息为用于传播的模式，使用共享的物理媒介来传输信息。同时也需要一些方法从物理媒介中抽取出每条信息的目的地地址，并将信息传送给目标地址。整个过程如下图所示：
 
@@ -68,7 +47,7 @@ tags:
 
 ![概念框架](assets/CNI-Chapter5-Notes/2019-11-25-23-28-26.png)
 
-## The Subtopics Of Data Communications
+# The Subtopics Of Data Communications
 
 上一节中的概念框架图中的每一部分都代表了数据通信中的一个小主题。这一节中简单介绍了图中的一些术语，之后的几章中会在对每一部分进行详细说。
 
