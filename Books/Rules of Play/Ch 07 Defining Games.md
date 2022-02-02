@@ -21,7 +21,7 @@ updated: 2022-02-02
 
 从类型学方法上来说，游戏是玩的子集，如图：
 
-![游戏是玩的子集](RulesOfPlay-Chapter7-Notes/2020-03-01-17-48-10.png)
+![游戏是玩的子集](Ch%2007%20Defining%20Games/2020-03-01-17-48-10.png)
 
 ## Relationship two：Play is a component of games
 
@@ -29,7 +29,7 @@ updated: 2022-02-02
 
 从概念方法上来说，玩时游戏的子集，如图：
 
-![玩是游戏的子集](RulesOfPlay-Chapter7-Notes/2020-03-01-17-50-39.png)
+![玩是游戏的子集](Ch%2007%20Defining%20Games/2020-03-01-17-50-39.png)
 
 # Comparing Definitions
 
@@ -115,7 +115,7 @@ Gostikyan是唯一一个没有将规则纳入游戏定义的人，他也是唯�
 
 下图是上述所有定义提到的点：
 
-![定义总结](RulesOfPlay-Chapter7-Notes/2020-03-01-23-14-15.png)
+![定义总结](Ch%2007%20Defining%20Games/2020-03-01-23-14-15.png)
 
 只有规则和目标这两项是大部分人都同意的。
 
