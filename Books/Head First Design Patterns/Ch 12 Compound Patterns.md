@@ -150,4 +150,4 @@ view.OnVolumeDownButtonClick();
 
 运行结果：
 
-![复合模式运行结果](HeadFirstDesignPatternNotes-3/2019-02-07-15-53-23.png)
+![复合模式运行结果](Ch%2012%20Compound%20Patterns/2019-02-07-15-53-23.png)

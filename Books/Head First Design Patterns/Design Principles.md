@@ -1,30 +1,11 @@
 ---
-title: 《Head First 设计模式》 笔记（三）
-date: 2019-02-07 16:28:08
 tags: 
-- 读书笔记
-- 设计模式
-categories:
-- 读书笔记
-- 设计模式
+    - Design-Patterns
 created: 2022-02-02
 updated: 2022-02-02
 ---
 
-{% cq %}
-这一篇将会介绍状态模式，代理模式和复合模式并整理了书中提到了9个设计原则。
-{% endcq %}
-
-<!--more-->
-
-***
-
-***
-
-
-***
-
-## 设计原则
+# 设计原则
 
 1. 将变化的部分封装起来（Encapsulate what varies)
 2. 组合优于继承（Favor composition over inheritance）
@@ -35,11 +16,3 @@ updated: 2022-02-02
 7. 暴露最少的信息给其他类（最少知识原则）（Talk only to your immediate friends）
 8. 高层有对底层的管理，而底层不需要关心高层何时会调用自己（好莱坞原则）（Don't call us ,we’ll call you）
 9. 一个类应该有且只有一个被改变的理由（A class should have only one reason to change）
-
-
-{% note primary %}
-引用：
-1. https://design-patterns.readthedocs.io/zh_CN/latest/behavioral_patterns/behavioral.html
-{% endnote %}
-
-***

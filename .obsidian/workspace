@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Head First Design Patterns/Ch 12 Compound Patterns.md",
+            "file": "Books/Head First Design Patterns.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-3.md",
+            "file": "Books.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Head First Design Patterns/Ch 12 Compound Patterns.md"
+                "file": "Books/Head First Design Patterns.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Head First Design Patterns/Ch 12 Compound Patterns.md",
+                "file": "Books/Head First Design Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Head First Design Patterns/Ch 12 Compound Patterns.md",
+                "file": "Books/Head First Design Patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,15 +135,15 @@
   },
   "active": "d48b3d41ff372c98",
   "lastOpenFiles": [
+    "Books/Head First Design Patterns.md",
+    "Books.md",
+    "Books/Head First Design Patterns/Design Principles.md",
     "Books/Head First Design Patterns/Ch 12 Compound Patterns.md",
-    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-3.md",
     "Books/Head First Design Patterns/Ch 11 the Proxy Pattern.md",
     "Books/Head First Design Patterns/Ch 10 the State Pattern.md",
     "Books/Head First Design Patterns/Ch 09 the Iterator and Composite Pattern.md",
     "Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "Books/Head First Design Patterns/Ch 08 the Template Method Pattern.md",
-    "Books/Head First Design Patterns/Ch 06 the Command Pattern.md",
-    "Books/Head First Design Patterns/HeadFirstDesignPatternNotes-2.md",
-    "Books/Head First Design Patterns/Ch 07 he Adapter and Facade Patterns.md"
+    "Books/Head First Design Patterns/Ch 06 the Command Pattern.md"
   ]
 }
