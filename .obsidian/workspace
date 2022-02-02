@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Computer Networks and Internets/Ch 14 The IEEE MAC Sublayer.md",
+            "file": "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Netowrks",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Computer Networks and Internets.md"
+                "file": "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Computer Networks and Internets.md",
+                "file": "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,29 +121,30 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Computer Networks and Internets.md",
+                "file": "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 449.5
   },
-  "active": "66369a93c09c718a",
+  "active": "12d6838d5873c284",
   "lastOpenFiles": [
-    "Books/Computer Networks and Internets.md",
+    "Books/Computer Networks and Internets/Ch 16 Wireless Networking Technologies.md",
+    "Books/Computer Networks and Internets/Ch 10 Modulation And Modems.md",
     "Books/Computer Networks and Internets/Ch 14 The IEEE MAC Sublayer.md",
+    "Books/Computer Networks and Internets/Ch 17 Repeaters, Bridges, And Switches.md",
+    "Books/Computer Networks and Internets.md",
     "Books/Computer Networks and Internets/Ch 13 Local Area Networks_ Packets,Frames,And Topologies.md",
     "Books/Computer Networks and Internets/Ch 11 Multiplexing And Demultiplexing（Channelization）.md",
-    "Books/Computer Networks and Internets/Ch 10 Modulation And Modems.md",
     "Books/Computer Networks and Internets/Ch 08 Reliability And Channel Coding.md",
     "Books.md",
-    "Books/Computer Networks and Internets/Ch 07 Transmission Media.md",
-    "Books/Computer Networks and Internets/Ch 01 Introduction And Overview.md",
-    "Books/Computer Networks and Internets/Ch 05 Overview Of Data Communications.md"
+    "Books/Computer Networks and Internets/Ch 07 Transmission Media.md"
   ]
 }

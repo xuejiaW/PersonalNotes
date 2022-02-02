@@ -1,30 +1,11 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第十六章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-30 23:58:24
+    - Networks
 ---
 
-{% cq %}
-
-《计算机网络与因特网》 第十六章笔记
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 16 Wireless Networking Technologies
-
-## Introduction
+# Introduction
 
 这一章主要介绍计算机网络无线部分的技术。
 
@@ -39,7 +20,7 @@ $16.15\sim16.18$介绍了广域网技术，主要关注蜂窝式网络。
 $16.19和16.20$介绍了卫星通信。
 $16.20$介绍了软件无线电系统。
 
-## A Taxonomy Of Wireless Networks
+# A Taxonomy Of Wireless Networks
 
 计算机网络无线技术的变种非常多的原因之一在于因为政府的管理，电磁信号的频谱被切分为了许多不同的部分以供不同的目的使用，而这些不同频域的技术通常都不同。
 
@@ -47,7 +28,7 @@ $16.20$介绍了软件无线电系统。
 
 ![无线网络分类](assets/CNI-Chapter16-Notes/2019-12-30-15-51-47.png)
 
-## Personal Area Networks（PANs）
+# Personal Area Networks（PANs）
 
 上节中对于无线网络的分类与在第十三章中对于网络的分类十分类似，不同的是这里还引入了个人局域网（Personal Area Networks，PANs）的概念。个人局域网是提供非常短距离下的通信，通常是只供一个用户使用，如蓝牙耳机就属于个人局域网的应用。
 
@@ -58,13 +39,13 @@ $16.20$介绍了软件无线电系统。
 3. 紫峰（ZigBee）：距离可以支撑一个住宅的范围，在智能家居中被运用。
 4. 其他ISM无线技术：为工业，科学以及医药（Industrial，Scientific，Medical，ISM）预留的频率发展的技术。
 
-## ISM Wireless Bands Used By LANs And PANs
+# ISM Wireless Bands Used By LANs And PANs
 
 振幅为了工业，科学以及医药领域专门预留了一部分频域，被称为ISM无线。这部分的频域并没有再进一步细分，如科学只能用哪一段频域之类。这三个领域的产品都可以使用这部分频域，具体频域如下图所示：
 
 ![ISM频域](assets/CNI-Chapter16-Notes/2019-12-30-16-04-51.png)
 
-## Wireless LAN Technologies And Wi-Fi
+# Wireless LAN Technologies And Wi-Fi
 
 IEEE将局域网下的无线网络协议分类在$802.11$下。1999年一些销售商建立了Wifi联盟，一个生产和验证使用802.11协议的无线设备的非盈利组织。因为这个联盟的产品在商业市场上反应很好，消费者将Wifi一词与无线局域网联系在了一起，Wifi原先是产品广告词中`Wireless Fidelity`的缩写。
 
@@ -72,7 +53,7 @@ IEEE将局域网下的无线网络协议分类在$802.11$下。1999年一些销�
 
 ![Wifi联盟协议](assets/CNI-Chapter16-Notes/2019-12-30-16-21-32.png)
 
-## Spread Spectrum Technology
+# Spread Spectrum Technology
 
 在第十一章中提到的展频技术（Spread Spectrum Technology）在wifi技术中也有应用。
 
@@ -96,13 +77,13 @@ Wifi技术主要用了以下扩频技术，其主要目的还是帮助Wifi在有
 
 三个技术都有各自的优点，OFDM有最高的适用性，DSSS性能好，FHSS对于噪声的抗干扰能力强。
 
-## Other Wireless LAN Standards
+# Other Wireless LAN Standards
 
 除了上述Wifi联盟所指定的协议，无线局域网还有其他许多的协议，都属于$802.11$协议分类下如下图所示：
 
 ![其他802.11协议](assets/CNI-Chapter16-Notes/2019-12-30-16-48-56.png)
 
-## Wireless LAN Architecture
+# Wireless LAN Architecture
 
 局域网无线网络结构主要有三个因素：（1）`接入点（Access Point）`，有时也被称为`基站（Base Station）`。（2） `互联机制（Interconnection mechanism）`，例如路由器或者交换机，用来将接入点连接在一起。（3）一系列`终端（Hosts）`，如个人手机就是一个终端。
 
@@ -112,7 +93,7 @@ Wifi技术主要用了以下扩频技术，其主要目的还是帮助Wifi在有
 
 ![基础设施结构](assets/CNI-Chapter16-Notes/2019-12-30-16-59-39.png)
 
-## Overlap，Association，And 802.11 Frame Format
+# Overlap，Association，And 802.11 Frame Format
 
 在实际运用中，基础设施结构中的接入点如果距离太远，会出现`无服务区（Dead Zone）`，距离太仅的话，他们的覆盖的范围会出现重叠（Overlap），因此终端可能会同时存在于两个接入点的范围内。在这种情况下，终端需要指定他与哪个接入点进行通信，因此在$802.11$协议定义的网络帧格式下，帧数据必须包含其连接的接入点的MAC地址。
 
@@ -124,13 +105,13 @@ $802.11$的定义的数据帧，还需要指定连接外网的路由器的MAC地
 
 ![802.11数据帧](assets/CNI-Chapter16-Notes/2019-12-30-17-07-42.png)
 
-## Coordination Among Access Points
+# Coordination Among Access Points
 
 如上节所述，在接入点重叠的情况下，终端需要决定与哪个接入点进行通信。
 
 主要有两种方法来实现接入点的切换，第一个是靠接入点本身，接入点能相互通信，当接入点发现有终端同时收到多个接入点信号时，接入点会判断信号强度然后帮助终端无缝切换，这种方法实现较为复杂且成本较高。第二种方法下，所有接入点都是独立的，切换是靠终端本身实现，这种方法的成本较低。
 
-## Contention And Contention-Free Access
+# Contention And Contention-Free Access
 
 $802.11$定义了两种信道访问的方式：无竞争（Contention-Free）的点协调方式（Point Coordinated Function，PCF）和存在竞争的分布协调方式（Distributed Coordinated Function，DCF）。
 
@@ -156,7 +137,7 @@ Wifi网络中所使用的CSMA/CA如下图所示：
 
 因为各终端间的物理间隔以及环境噪声，微弱信号的检测是很困难的，因此Wifi网络并没有引入CSMA/CA中的冲突检测（Collision Detection）部分，即发送端并不会在数据发送过程中监听信道来判断是否有冲突。在Wifi网络中，发送端会等待ACK信号，如果没有收到ACK信号，发送端则认为数据发送失败。
 
-## Wireless MAN Technology And WiMax
+# Wireless MAN Technology And WiMax
 
 城域网技术的协议被反类在$802.16$中。如同在局域网中主要使用的是Wifi，在城域网中主要使用的事WiMax（World-wide Interoperability For Microwave Access）技术。
 
@@ -166,13 +147,13 @@ WiMax在城域网中的使用，如果是用在回传网络（服务提供方之
 
 ![WiMax的使用](assets/CNI-Chapter16-Notes/2019-12-30-22-02-35.png)
 
-## PAN Technologies And Standards
+# PAN Technologies And Standards
 
 PAN技术被分类在$802.15$分类下，如下图所示：
 
 ![PAN技术](assets/CNI-Chapter16-Notes/2019-12-30-22-04-05.png)
 
-## Other Short-Distantce Communication Technologies
+# Other Short-Distantce Communication Technologies
 
 还有两种技术短距离的通信方式并没有被分类在PANs下，红外通信（Infrared Data Association，IrDA）以及射频识别（Radio Frequency Identification，RFID）通信。
 
@@ -180,7 +161,7 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 射频识别通信，是一个芯片中包含有验证信息的Tag，接收方可以将信息从芯片中读取出来。酒店的门禁卡，大学食堂的饭卡等都是使用了这个技术。
 
-## Wireless WAN Technologies
+# Wireless WAN Technologies
 
 广域网通信有两大类，蜂窝式通信系统（Cellular communication systems）和卫星通信系统（Satellite communication system）。
 
@@ -192,11 +173,11 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 ![巣室情况](assets/CNI-Chapter16-Notes/2019-12-30-22-21-33.png)
 
-## Micro Cells
+# Micro Cells
 
 如上节所述，用户密度越大，则设计时每个巣室的面积越小。在城市中，有时会出现一个巣室仅覆盖大楼的一层这种情况，这是称其为微巣室（Micro Cells）。因为巣室很小且很小块区域内有多个巣室，为了避免干扰，微巣室的功率都比较小。
 
-## Cell Clusters And Frequency Reuse
+# Cell Clusters And Frequency Reuse
 
 蜂窝式通信有一个重要原则：相邻的巣室在不使用相同频率的载波情况下，干扰最小。
 
@@ -208,7 +189,7 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 ![巣室簇拼接](assets/CNI-Chapter16-Notes/2019-12-30-23-20-04.png)
 
-## Generations Of Cellular Technologies
+# Generations Of Cellular Technologies
 
 目前通信技术的发展有四代，称为1G,2G,3G和4G：
 
@@ -227,7 +208,7 @@ PAN技术被分类在$802.15$分类下，如下图所示：
 
 3G和4G的主要区别在于，3G系统设计时仍然是基于语音通话系统考虑的，还是继承自原先的模拟电话系统，其他的数据是作为额外的要求。而在4G标准设计时主要考虑因特网协议，因此4G系统使用了帧交换而语音只是作为一个特殊应用。在实际应用中，许多蜂窝系统仍然通过3G来传输通话信息，而在其他数据时使用4G。
 
-## VSAT Satellite Technology
+# VSAT Satellite Technology
 
 卫星通信的关键是用一个曲面天线（Parabolic antenna/Dish）保证电磁信号被反射到一个单一点上，如下图所示：
 
@@ -239,13 +220,13 @@ VSAT卫星通信选择的频率不同会影响信号强度，天气环境变化�
 
 ![VSAT卫星频率](assets/CNI-Chapter16-Notes/2019-12-30-23-45-24.png)
 
-## GPS Satellites
+# GPS Satellites
 
 GPS（Global Positioning System）卫星提供实时的准确位置信息。GPS通信并非是计算机通信的一部分，但是越来越多的移动网络使用了位置信息。
 
 GPS系统通过三颗卫星计算出终端的位置。首先要计算终端距离三颗卫星的距离，距离可以通过卫星与终端的传输时间乘上光速来确定。如果一个终端与卫星的距离为$d$，则终端出现在以卫星为球星，半径为$d$的球上任意位置。通过三个卫星，可以计算出三个球，三个球的交点为两个点（两个球的交点为一个圆形）。这两个交点，一个在太空中，一个在地球上，地球上的点即为终端的位置。
 
-## Software Defined Radio And The Future Of Wireless
+# Software Defined Radio And The Future Of Wireless
 
 通常一个蜂窝网络手机需要指定天线，发射器和接收器的规格，这些数据都是需要预先指定的。如果同时支持GSM，Wifi和CDMA，则需要三套独立的无线电系统，使用时在其中切换。
 
