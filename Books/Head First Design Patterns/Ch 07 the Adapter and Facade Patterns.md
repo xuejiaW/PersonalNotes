@@ -100,7 +100,7 @@ static void TestDuck(Duck duck)
 ```
 运行结果：
 
-![适配器模式运行结果](Ch%2007%20he%20Adapter%20and%20Facade%20Patterns/2019-02-03-00-10-27.png)
+![适配器模式运行结果](Ch%2007%20the%20Adapter%20and%20Facade%20Patterns/2019-02-03-00-10-27.png)
 
 # 外观模式
 
@@ -221,4 +221,4 @@ facade.endMovie();
 
 运行结果：
 
-![外观模式运行结果](Ch%2007%20he%20Adapter%20and%20Facade%20Patterns/2019-02-03-13-53-18.png)
+![外观模式运行结果](Ch%2007%20the%20Adapter%20and%20Facade%20Patterns/2019-02-03-13-53-18.png)
