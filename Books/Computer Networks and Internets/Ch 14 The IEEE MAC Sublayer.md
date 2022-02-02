@@ -1,36 +1,17 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第十四章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-09 11:44:17
+    - Networks
 ---
-
-{% cq %}
-
-《计算机网络与因特网》 第十四章笔记。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 14 The IEEE MAC Sublayer
 
 * 这一章原书中的Statiion一词，在笔记中翻译为`终端`。
 
-## Introduction
+# Introduction
 
 这一章将会深入讨论MAC层，包括多路访问协议（multi-access protocols）以及静态和动态信道分配。
 
-## A Taxonomy Of Manchanisms For Shared Access
+# A Taxonomy Of Manchanisms For Shared Access
 
 实现多个计算机通过一个共享媒介来访问数据主要有三种方法： （1）复用技术（Multiplexing Technique） （2）分布算法来控制访问（Distributed Algorithms For Controlled Access） （3）随机访问策略（Random Access Strategy）
 
@@ -40,7 +21,7 @@ date: 2019-12-09 11:44:17
 
 ![共享媒介的分类方法](assets/CNI-Chapter14-Notes/2019-12-27-22-55-32.png)
 
-## Static And Dynamic Channel Allocation
+# Static And Dynamic Channel Allocation
 
 信道分配是与第11章中提到的复用技术相关联的。以频分复用为例子，在第11章中是每个终端都有它的载波频率，终端与载波频率是一对一的关系，这就是`信道的静态分配（Static Channel Allocation）`。
 
@@ -48,23 +29,23 @@ date: 2019-12-09 11:44:17
 
 在这种情况下就需要`信道的动态分配（Dynamic Channel Allocation）`，即当终端出现时才分配信道的资源给终端。
 
-## Channelization Protocols
+# Channelization Protocols
 
 与第11章中的复用技术相似，信道分配也存在频分多路复用（Frequency Division Multi-Access），时分多路复用（Time Division Multi—Access），码分多路复用（Code Division Multi-Access）三种类型。
 
-### FDMA
+## FDMA
 
 频分多路复用下每个终端都可以选择一个载波频率，这个频率并不会影响到其他的终端。在有些系统下存在一个中央控制器进而支持动态的频分多路复用：当一个新的终端出现，中央控制器用一个预留的信道与终端通信，然后分配一个未使用的载波频率给这个终端，之后终端都使用这个载波频率传输数据。
 
-#### TDMA
+### TDMA
 
 时分多路复用下，所有终端按顺序编号，如$1,2,3,...N$，并且会按这个顺序占据信道进行传输。如同频分多路复用，在某些系统下支持动态分配，即终端出现时再分配给他信道的占用时间段。
 
-#### CDMA
+### CDMA
 
 码分多路复用如同码分复用，通过数学方法将多个终端的数据合并在一起，再同时通过信道进行传输。
 
-## Controlled Access Protocols
+# Controlled Access Protocols
 
 访问控制协议（Controlled Access Protocols）为统计复用提供了方法，主要分为三个类型：
 
@@ -72,7 +53,7 @@ date: 2019-12-09 11:44:17
 2. 预留（Reservation）：终端需要发送信息时，发出一个在下一次循环时发送数据的申请。
 3. 令牌传递（Token Passing）：终端间循环传递一个令牌，当终端持有令牌时可以发送数据。
 
-### Polling
+## Polling
 
 `轮询（Polling）`系统是存在一个中央控制器，这个控制器会询问其下的每个终端是否需要传递数据。轮询可以再细分为两种，`轮询调度顺序（Round Robin Order）`和`优先顺序（Priority Order）`。在轮询调度顺序下，每个终端都有相同的机会传递数据，而在优先顺序下，一些终端会有更多的机会去传递数据。
 
@@ -87,7 +68,7 @@ while(true)
 }
 ```
 
-### Reservation
+## Reservation
 
 `预留（Reservation）`系统多用在航天系统中，系统分为两个步骤，在第一步中需要传输数据的终端申请，所有申请的终端构成一张表，在第二步中表中的终端开始传输数据。通常第一步与第二步使用的是不同的信道，即有一个信道专门用来接受申请信息，另一个信道作为主信道传递每个终端的数据。
 
@@ -102,7 +83,7 @@ While(true)
 }
 ```
 
-### Token Passing
+## Token Passing
 
 `令牌传递（Token Passing）`被用在多个局域网（LAN）技术中，被用的最多的就是环形拓步结构中。在一个网络中，某一台计算机持有着一个特殊的控制命令，这个命令被称作为令牌，持有令牌的计算机可以发送数据，在发送完毕后将令牌传递给下一个计算机。
 
@@ -120,7 +101,7 @@ While(true)
 
 环形拓补结构中，存在物理的环形链接，所以令牌可以直接传递给相邻的下一个电脑。在其他的拓步结构中，所有的计算机都被赋予了一个逻辑顺序，因此可以获知下一个要收取令牌的电脑是哪个。
 
-## Random Access Protocols
+# Random Access Protocols
 
 许多网络，特别是局域网络中，并不使用访问控制协议，而使用`随机访问协议（Random Access Protocols）`。随机访问协议下只有当终端存在数据要发送时，才会被给予权限（在访问控制协议中，每个终端都要被持续检查）。这里的*随机*是在所有终端都有数据要发送时的处理方式。随机访问协议也可以被分为三类：
 
@@ -128,7 +109,7 @@ While(true)
 2. CSMA/CD（Carrier Sense Multi-Access With Collision Detection）：原以太网的基础，现在也不再使用。
 3. CSMA/CA（Carrier Sense Multi-Access With Collision Avoidance）：Wifi无线网络的基础。
 
-### ALOHA
+## ALOHA
 
 在早期夏威夷的网络中使用，在这个系统下有一个强大的发送器被部署中在物理上的中心位置，其他的终端（通常对应一台计算机）在这个发送器周围部署，这些终端都没有足够的能量将数据直接传输给其他终端，因此需要通过中央的发送器。
 
@@ -142,7 +123,7 @@ ALOHA示意图如下：
 
 ![ALOHA示意图](assets/CNI-Chapter14-Notes/2019-12-28-12-56-15.png)
 
-### CSMA/CD
+## CSMA/CD
 
 1978年，数字设备联盟（Digital Equipment Corporation），英特尔（Intel）和施乐（Xerox）共同指定了个标准（DIX标准），也就是后来的以太网。最早的以太网技术使用一根长电缆连接每个电脑，这根长电缆就是共享媒介，与ALOHA使用中央发送器来实现数据传输不同，在以太网中每个终端都可以通过这个共享的线缆传输数据。以太网同样需要解决冲突问题，以太网主要引入了三个解决冲突的方法，统称为`具有冲突检测功能的载波侦听多路访问（CSMA/CD，Carrier Sense Multi-Access With Collision Detection）`：
 
@@ -181,7 +162,7 @@ While(Collision occured)
 }
 ```
 
-### CSMA/CA
+## CSMA/CA
 
 CSMA/CD并不能被运用在无线网络中，因为无线网络中的设备存在一个最远距离$\delta$。即如果两个终端的距离大于$\delta$，则CSMA/DA中的载波监听就无法被应用，因为一个终端并不能知道另一个是否在发送信息。这种情况如下图所示，如果Computer1在发送信息，Computer3是无法得知的，因此冲突只有Computer2可以知晓，这种情况称为`隐藏终端问题(Hidden Station Problem)`。
 

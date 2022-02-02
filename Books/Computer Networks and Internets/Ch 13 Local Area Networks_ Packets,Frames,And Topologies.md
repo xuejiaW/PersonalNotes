@@ -1,36 +1,15 @@
 ---
 created: 2022-02-02
 updated: 2022-02-02
----
----
-title: 《计算机网络与因特网》 第十三章笔记
-mathjax: true
-categories:
-  - 读书笔记
-  - 计算机网络
 tags:
-  - 读书笔记
-  - 计算机网络
-date: 2019-12-09 11:44:17
+    - Networks
 ---
 
-{% cq %}
-
-《计算机网络与因特网》 第十三章笔记
-
-主要讨论了分组交换，包的概念，局域网中的拓扑等。
-
-{% endcq %}
-
-<!--more-->
-
-# Chapter 13 Local Area Networks: Packets,Frames,And Topologies
-
-## Introduction
+# Introduction
 
 这一章主要会介绍分组交换，计算机网络技术，硬件地址，帧识别等概念。
 
-## Circuit Switching And Analog Communication
+# Circuit Switching And Analog Communication
 
 `电路交换（Circuit Switching）`概念是指使用时在发送端和接收端之间建立不受干扰的通路的通信方法。电路交换通常与模拟电话技术相关。下图是电路交换的示意图：
 
@@ -46,7 +25,7 @@ date: 2019-12-09 11:44:17
 
 电路交换建立的电路最终使用频分复用或者时分复用使用同一个媒介进行传输。电路建立的过程包括在频分复用或时分复用中分配频率或时间段。
 
-## Packet Switching
+# Packet Switching
 
 分组交换（Packet Switching）使用一种统计意义上的复用，即多个信源之间竞争共享媒介的使用。电路交换通常在传统的电话通信中使用，而分组交换构成了因特网的基础。分组交换示意图如下：
 
@@ -64,7 +43,7 @@ date: 2019-12-09 11:44:17
 
 分组交换的主要优点在于成本的控制。对于电路交换来说，如果有$N$个电脑，则需要$N/2$个独立的路径（虽然在连接时才创建）。但对于分组交换只要一个共享的电路就行。
 
-## Local And Wide Area Packet Networks
+# Local And Wide Area Packet Networks
 
 分组交换技术通常根据传输距离的距离进行分类。通常分为三类：
 
@@ -79,7 +58,7 @@ date: 2019-12-09 11:44:17
 1. `个人局域网络（Personal Area Network，PAN）`，通常范围在几米内，如蓝牙通信等。
 2. `芯片局域网络（Chip Area Network）`，芯片厂商提出的概念，通常是超大型电路（Very-Large-Scale-Integration,VLSI）中多个核之间的通信。
 
-## Standards For Packet Format And Identification
+# Standards For Packet Format And Identification
 
 每个在网络中传输的包都必须包含其目标收信人的标识。需要有规范来制定标识的格式以及添加的位置，在LAN领域最常用的标准是由IEEE（Institute Electrical And Electronics Engineers）创建的。
 
@@ -89,7 +68,7 @@ IEEE是由一群关注于协议栈最下两层（物理层（Physical）和数�
 
 ![组织和协议](assets/CNI-Chapter13-Notes/2019-12-09-09-12-05.png)
 
-## IEEE 802 Model And Standards
+# IEEE 802 Model And Standards
 
 IEEE将数据链接层又在细分为了两层，`逻辑链接控制层（Logical Link Control,LLC）`(第15章中描述)和`媒介访问控制层（Media Access Control,MAC）`。
 
@@ -105,31 +84,31 @@ IEEE中有许多不同的工作小组。当有新技术需要协议时，由工�
 
 ![802协议](assets/CNI-Chapter13-Notes/2019-12-09-09-25-59.png)
 
-### LAN Topologies
+## LAN Topologies
 
 因为有许多不同的LAN技术，通常使用拓扑型或者网络的基本形状来进行分类。LAN有四个基本的拓扑型，`总线型结构（Bus）`，`环状结构（Ring）`，`星状结构（Star）`，`网状结构（Mesh）`。
 
-### Bus Topology
+## Bus Topology
 
 `总线型结构（Bus Topology）`是如同以太网一样，用一根电缆连接所有电脑，任何电脑都可以将数据传输到电缆上，然后所有的计算机都可以接受到数据。
 
-### Ring Topology
+## Ring Topology
 
 `环状结构（Ring Topology）`是多个电脑首尾相接的连接，直至成为环形。环形结构的优点是对于相连的两台设备来说连接是安全的，即使别的设备出现问题仍然可以连接。
 
-### Mesh Topology
+## Mesh Topology
 
 `网状结构（Mesh Topology）`为任意两两配对的电脑都提供了连接线路，这意味着如果有$N$台电脑，就需要$\frac{n^2-n}{2}$个连接。当增加电脑时，连接电缆的增加是平方级的，因此开销巨大，也因此网状结构在局域网中不常被使用
 
-### Star Topology
+## Star Topology
 
 `星状结构（Star Topology）`是所有的电脑都连接在一个中心设备（Hub）上。注意星状结构并不严格要求中心设备真的在所有电脑的中心，与所有电脑的距离相同。
 
-### The Reason For Multiple Topologies
+## The Reason For Multiple Topologies
 
 每个结构都有各自的优点，如环状结构很适合各电脑间协调访问，但当其中一个设备出现问题时，通路就会出现问题。星状结构下单一设备出现了问题，其他设备都可以正常访问。总线结构有最少的连接需求，但与环状结构与相同的缺点。网状结构因为连接数量过多，通常不在局域网中使用。
 
-## Packet Identification，Demultiplexing，Mac Addresses
+# Packet Identification，Demultiplexing，Mac Addresses
 
 IEEE为寻址（Addressing）创建了标准。在分组交换中，解复用是依赖于一个称为`地址（Address）`的标识。每个电脑都分配了一个独特的地址，每个传输的包中都包含其目标收件人（Intended Recipent）的地址。
 
@@ -141,7 +120,7 @@ IEEE为每块网卡（Network Interface Card，NIC）都分配了地址，因此
 
 组织唯一标识符的最高有效字节（Most Significant Byte，即大端模式下即最左端）的倒数两位有特殊含义。其最低位表示是单播（0）还是双播（1）。倒数第二位决定该设备是全球唯一（0）（Globally Unique）还是是本地分配（1）（Locally Assigned），全球唯一表明地址是IEEE分配，即世界上的每块网卡都有不同的表示，而本地分配是实验性网卡或者某组织自己地址空间等，即这张卡是在一个小范围内内部使用。
 
-## Unicast，Broadcast，And Multicast Addresses
+# Unicast，Broadcast，And Multicast Addresses
 
 IEEE定义了三种对应包传递的方法：
 
@@ -151,7 +130,7 @@ IEEE定义了三种对应包传递的方法：
 
 对于广播来说，因为是所有电脑都收到包，所以目标地址实际是没有意义的。将地址的48位全部设为1，则表示是广播模式。广播模式也可看作是多播模式的一个特殊情况。
 
-## Broadcast,Multicast,And Efficient Multi-Point Delivery
+# Broadcast,Multicast,And Efficient Multi-Point Delivery
 
 广播和多播模式在局域网中特别有用，对于要传递给多台电脑的数据来说，用这两种方法进行传递特别的高效。
 
@@ -167,7 +146,7 @@ IEEE定义了三种对应包传递的方法：
 
 如在局域网情况下，如果多台电脑使用同一个媒介，且包需要传递给多态电脑，那么使用多播和广播模式，数据仅需要发送一次即可。
 
-## Frames And Framing
+# Frames And Framing
 
 在同步通信系统中，帧的概念是让接收者知道数据的开始和结束。但在更宽泛的概念下，帧是表示一系列bit或byte的特定结构，让接收方和发送方都能一致同意的特定格式。
 
@@ -185,7 +164,7 @@ IEEE定义了三种对应包传递的方法：
 
 虽然包的前置数据和后置数据是可选的，但在实际使用中，他们可以一定程度上提升异步传输数据的处理速度和对错误的检测。在异步传输中，如果接收方收到了EOT，它就知道数据包传输完成了，可以直接开始处理数据而不需要等到下一个包的到来再根据新包确定上个包是否完成。当发送端发送数据到一般崩溃时，因为接收端始终收不到EOT，也就能知道错误的发生。
 
-## Byte And Bit Stuffing
+# Byte And Bit Stuffing
 
 在ASCII码中，SOH用十六进制0x01表示，EOT用0x04表示。如果有效负载中也出现了0x01和0x04，接收端就无法判定到底是真实数据还是前置或后置标识。
 

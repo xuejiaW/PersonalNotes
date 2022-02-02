@@ -27,3 +27,7 @@ ISBN: 978-0133587937
 [Ch 10 Modulation And Modems](Computer%20Networks%20and%20Internets/Ch%2010%20Modulation%20And%20Modems.md)
 
 [Ch 11 Multiplexing And Demultiplexing（Channelization）](Computer%20Networks%20and%20Internets/Ch%2011%20Multiplexing%20And%20Demultiplexing（Channelization）.md)
+
+[Ch 13 Local Area Networks_ Packets,Frames,And Topologies](Computer%20Networks%20and%20Internets/Ch%2013%20Local%20Area%20Networks_%20Packets,Frames,And%20Topologies.md)
+
+[Ch 14 The IEEE MAC Sublayer](Computer%20Networks%20and%20Internets/Ch%2014%20The%20IEEE%20MAC%20Sublayer.md)
