@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
+            "file": "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md"
+                "file": "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
+                "file": "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
+                "file": "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,8 +135,8 @@
   },
   "active": "d48b3d41ff372c98",
   "lastOpenFiles": [
-    "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
     "Books/Game Design Workshop/Ch 03 Working with Formal Elements.md",
+    "Books/Game Design Workshop/Ch 04 Working  with Dramatic Elements.md",
     "Books/Game Design Workshop.md",
     "Books.md",
     "Books/Head First Design Patterns.md",

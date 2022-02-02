@@ -329,14 +329,3 @@ Huizinga将玩家同意游戏的规则，开始游戏的行为称为，进入“
 这一章中介绍了游戏的常规元素，设计师可以通过结合这些元素来创造不同的游戏体验。
 
 也可以通过分析游戏中的这些元素来学习游戏设计。
-
-
-{% note primary %}
-
-引用：
-
-1.*Game Design Workshop* 4th 2019 by Tracy Fullerton
-
-{% endnote %}
-
-***
