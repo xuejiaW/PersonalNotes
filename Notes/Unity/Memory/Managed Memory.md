@@ -59,6 +59,27 @@ Heap 的`地址空间（Address Space）` 永远都不会返还给操作系统�
 
 ```
 
+# Basic memory conservation
+
+## Collection and array reuse
+
+如果存在如下需要每帧使用全新的容器的情况：
+```csharp
+void Update() {
+
+    List<float> nearestNeighbors = new List<float>();
+
+    findDistancesToNearestNeighbors(nearestNeighbors);
+
+    nearestNeighbors.Sort();
+
+    // … use the sorted list somehow …
+
+}
+```
+
+可以选择将容器定义为类的成员变量，bin
+
 # Reference
 
 [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
