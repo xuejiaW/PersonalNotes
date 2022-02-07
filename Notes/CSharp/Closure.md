@@ -29,4 +29,14 @@ Func<string,string> myFunc = var1 => "some value";
 
 ## Free Variables
 
-`Free Variables` 表示在一个函数的实现中，既不是函数的  
+`Free Variables` 表示在一个函数的实现中，既不是函数的形参也不是函数局部变量的其他变量。如下例子中的 `myVar` 即为 `Free Variables`：
+```csharp
+var myVar = "this is good";
+
+Func<string,string> myFunc = delegate(string var1)
+                                {
+                                    return var1 + myVar;
+                                };
+```
+
+## Example
