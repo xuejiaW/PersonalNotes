@@ -161,7 +161,11 @@ public class MyEnumComparer : IEqualityComparer<MyEnum>
 }
 ```
 
-将上述类的实例传入 Dictionary 构造函数，即能
+将上述类的实例传入 Dictionary 构造函数，即能实现无装箱操作的 Enum Key 判断。
+
+## Foreach loops
+
+
 
 # Reference
 
