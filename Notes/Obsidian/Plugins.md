@@ -33,6 +33,10 @@ updated: 2022-02-01
  开启插件后，会在每个文档右侧面板中显示该引用了该文档的其他文档（Back Links）以及该文档引用的其他文档（Outgoing LinksS）
  ![|300](assets/Plugins/image-20220201194452192.png)
 
+## Template
+
+开启该插件后，可以通过选项 `Settings -> Templates` 设置模板存在的文件夹，如下所示将文件夹 `Teampltes` 设定为目标文件夹：
+![|500](assets/Plugins/image-20220207115932841.png)
 
 # Community Plugins
 
@@ -441,6 +445,11 @@ nmap <Space>ff :search
 
 该插件安装后，会在打开每个文件时自动触发上述命令，达到打开文件时在 File Explorer 自动高亮的效果。
 
+## Quick Add[^18]
+
+该插件可以用来快速添加笔记模板，其中模板依赖于 Core Plugins [Template](#Template)。
+
+启用该插件后，可以在 `Te`
 
 # Reference
 
@@ -461,3 +470,4 @@ nmap <Space>ff :search
 [^15]: [obsidian-vimrc-support (github.com)](https://github.com/esm7/obsidian-vimrc-support)
 [^16]: [FlorianWoelki/obsidian-icon-folder:](https://github.com/FlorianWoelki/obsidian-icon-folder)
 [^17]:[Automatically Reveal Active File](https://github.com/shichongrui/obsidian-reveal-active-file)
+[^18]: [QuickAdd for Obsidian](https://github.com/chhoumann/quickadd)

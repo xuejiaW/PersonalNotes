@@ -4,21 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "b18a9710f58575c8",
-        "type": "leaf",
-        "state": {
-          "type": "empty",
-          "state": {}
-        }
-      },
-      {
         "id": "2d8c988df7596dee",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Notes/Obsidian/Plugins.md",
-            "mode": "preview",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
