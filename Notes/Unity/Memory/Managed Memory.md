@@ -78,7 +78,26 @@ void Update() {
 }
 ```
 
-可以选择将容器定义为类的成员变量，bin
+可以选择将容器定义为类的成员变量，并使用 `Clear` 函数在每帧清空数据。`Clear` 函数会清除容器内已有的数据，但会保留容器的内存占用，以此减少 Heap 堆内存的分配。修改方式如下所示：
+```csharp
+List<float> m_NearestNeighbors = new List<float>();
+
+void Update() {
+
+    m_NearestNeighbors.Clear();
+
+    findDistancesToNearestNeighbors(NearestNeighbors);
+
+    m_NearestNeighbors.Sort();
+
+    // … use the sorted list somehow …
+
+}
+```
+
+## Closures and anonymous methods
+
+
 
 # Reference
 
