@@ -101,6 +101,10 @@ void Update() {
 1. C# 中所有函数的引用都是引用类型，即会在 Heap 进行分配。所以当使用函数作为形参时都会发生 Heap 的分配操作，无论该函数是匿名函数或已定义的函数。
 2. 当匿名函数中存在 [Closure](../../CSharp/Closure.md) 时，它作为参数传递时的内存开销会增大许多，因为编译器需要为其创建一个帮助类。
 
+```ad-warning
+因为 `LINQ` 极大程度的依赖于匿名函数和闭包，因此 `LINQ` 的使用也会造成大量的内存分配。
+```
+
 ## Boxing
 
 `装箱（Boxing）` 是 Unity 项目中最常见的在 Heap 中意外分配内存的情况。当值类型需要转换为引用类型时就会发生 Boxing。如下代码所示：
@@ -132,7 +136,32 @@ enum MyEnum { a, b, c };
 var myDictionary = new Dictionary<MyEnum, object>();
 
 myDictionary.Add(MyEnum.a, new object());
- ```
+```
+
+因为 Enum 是值类型的，而 Dictionary 通常会调用函数 `Object.getHashCode(Object)` 来判断 Key 是否相同，即 Enum 在作为 Dictionary 的 Key 时会被转换为 Object，即发生了装箱操作。
+
+为了解决这个问题，需要自定义 Dictionary 的比较函数，如下所示：
+```csharp
+public class MyEnumComparer : IEqualityComparer<MyEnum>
+{
+
+    public bool Equals(MyEnum x, MyEnum y)
+    {
+
+        return x == y;
+
+    }
+
+    public int GetHashCode(MyEnum x)
+    {
+
+        return (int)x;
+
+    }
+}
+```
+
+将上述类的实例传入 Dictionary 构造函数，即能
 
 # Reference
 
