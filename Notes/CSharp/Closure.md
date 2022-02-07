@@ -29,4 +29,4 @@ Func<string,string> myFunc = var1 => "some value";
 
 ## Free Variables
 
-`Free Variables` 表示在一个函数的实现中，既不是函数的 
+`Free Variables` 表示在一个函数的实现中，既不是函数的  
