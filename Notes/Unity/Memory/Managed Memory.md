@@ -1,6 +1,6 @@
 ---
 created: 2022-01-27
-updated: 2022-01-30
+updated: 2022-02-07
 tags:
     - Unity
     - Memory
@@ -49,6 +49,15 @@ Unity 的 managed memory system 依赖 [Mono](../Scripting%20Architecture/Script
 扩张后的 Heap，即使在 GC后存在大量的空闲内存，Unity 也不会立即将内存返还给系统。这一行为是为了避免 Unity 在后续需要分配内存时反复的重新扩张 Heap 导致性能开销。
 
 Unity 最终还是会在某个时间点将 Heap 内存返还给系统，但返还的时间是无法保证且不可依赖的。
+
+```ad-warning
+Heap 的`地址空间（Address Space）` 永远都不会返还给操作系统。
+
+因此对于 32 位的应用，如果频繁的扩张和收缩 Heap 堆，那么内存地址空间可能会被耗尽，在这种情况下系统会终止应用的运行。
+
+对于
+
+```
 
 # Reference
 
