@@ -101,6 +101,10 @@ void Update() {
 1. C# 中所有函数的引用都是引用类型，即会在 Heap 进行分配。所以当使用函数作为形参时都会发生 Heap 的分配操作，无论该函数是匿名函数或已定义的函数。
 2. 当匿名函数中存在 [Closure](../../CSharp/Closure.md) 时，它作为参数传递时的内存开销会增大许多，因为编译器需要为其创建一个帮助类。
 
+### Anonymous methods under IL2CPP
+
+
+
 # Reference
 
 [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
