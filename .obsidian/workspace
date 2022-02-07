@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/Closure.md",
+            "file": "Notes/Unity/Memory/Managed Memory.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/Closure.md"
+                "file": "Notes/Unity/Memory/Managed Memory.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/Closure.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/CSharp/Closure.md",
+                "file": "Notes/Unity/Memory/Managed Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +122,9 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
-    "Notes/CSharp/Closure.md",
-    "Notes/Obsidian/Plugins.md",
     "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Obsidian/Plugins.md",
+    "Notes/CSharp/Closure.md",
     "Notes/Tools/Anki.md",
     "Notes/Tools/Clash.md",
     "Untitled.md",

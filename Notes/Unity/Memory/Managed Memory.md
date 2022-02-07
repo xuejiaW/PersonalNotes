@@ -97,7 +97,8 @@ void Update() {
 
 ## Closures and anonymous methods
 
-
+对于函数本身的内存开销，有两点需要注意：
+1. 
 
 # Reference
 
