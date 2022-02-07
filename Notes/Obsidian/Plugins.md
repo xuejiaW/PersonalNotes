@@ -456,6 +456,8 @@ nmap <Space>ff :search
 ![|500](assets/Plugins/GIF%202-7-2022%2012-05-25%20PM.gif)
 
 
+
+
 # Reference
 
 [^1]: [Admonition](https://github.com/valentine195/obsidian-admonition)

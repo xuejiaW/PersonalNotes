@@ -30,7 +30,7 @@ choco install --yes clash
 
 # FAQ
 
-## UWP 应用无法走代理
+## UWP 应用无法走代理[^1]
 
 几乎所有 UWP 应用（如系统的 Mail，Microsoft Store 等）在使用了 Clash 后都无法进行访问。
 
@@ -40,3 +40,9 @@ choco install --yes clash
 ![|500](assets/Clash/GIF%202-7-2022%2012-43-21%20PM.gif)
 
 其中 `AppContainer Loopback Exemption Utility` 应用界面中被勾选的应用即表示已经解除了限制的应用。
+
+# Reference
+
+[^1]: [UWP应用联网 ](https://github.com/Fndroid/clash_for_windows_pkg/wiki/UWP%E5%BA%94%E7%94%A8%E8%81%94%E7%BD%91)
+
+[clash_for_windows_pkg)](https://github.com/Fndroid/clash_for_windows_pkg)
