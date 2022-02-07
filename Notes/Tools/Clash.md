@@ -36,4 +36,7 @@ choco install --yes clash
 
 这是因为代理需要首先需要应用访问回环地址（127.0.0.1），而默认情况下 UWP 应用会禁止使用回环地址。
 
-为了解决这个问题，需要关闭 UWP 应用无法访问hui'hua
+为了解决这个问题，需要关闭 UWP 应用无法访问回环地址的限制，为此可以使用 General 界面中的 `EnableLoopback`：
+![|500](assets/Clash/GIF%202-7-2022%2012-43-21%20PM.gif)
+
+其中 `AppContainer Loopback Exemption Utility` 应用界面中被勾选的应用即表示已经解除了限制的应用。
