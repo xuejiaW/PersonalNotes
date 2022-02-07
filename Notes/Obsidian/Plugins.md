@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-02-01
+updated: 2022-02-07
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -449,7 +449,11 @@ nmap <Space>ff :search
 
 该插件可以用来快速添加笔记模板，其中模板依赖于 Core Plugins [Template](#Template)。
 
-启用该插件后，可以在 `Te`
+启用该插件后，可以在 `Settings -> QuickAdd` 页面添加增加快速通过模板创建笔记的命令，如下：
+![|500](assets/Plugins/GIF%202-7-2022%2012-02-46%20PM.gif)
+
+添加后，可以配置新增的命令并设定该命令依赖的额模板，如下：
+
 
 # Reference
 

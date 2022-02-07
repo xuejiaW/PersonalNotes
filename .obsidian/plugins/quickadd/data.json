@@ -29,7 +29,7 @@
       "openFileInMode": "default"
     },
     {
-      "id": "154108c5-7469-4a9d-932c-f29d45ac83e5",
+      "id": "de9274ae-0b97-4871-90ec-3dc70cb33357",
       "name": "Add Note",
       "type": "Template",
       "command": true,
@@ -40,7 +40,9 @@
       },
       "folder": {
         "enabled": true,
-        "folders": [],
+        "folders": [
+          "Notes"
+        ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
       },
