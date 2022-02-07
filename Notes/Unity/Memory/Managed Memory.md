@@ -163,8 +163,22 @@ public class MyEnumComparer : IEqualityComparer<MyEnum>
 
 将上述类的实例传入 Dictionary 构造函数，即能实现无装箱操作的 Enum Key 判断。
 
-## Foreach loops
+## foreach loops
 
+如下使用 `foreach` 的代码会产生装箱操作：
+```csharp
+int accum = 0;
+foreach(int x in myList)
+{
+    accum += x;
+}
+```
+
+这是因为在使用 `foreach` 时，C# 编译器会为其生成一个`值类型的迭代器（value-type Enumerator）`。这个迭代器实现了 `IDisposable` 接口，在 `foreach` 循环退出后
+
+```ad-tip
+在 Unity 5.5 以上的版本，`foreach` 已经不会有额外的内存开销，但因为其依赖于迭代器，所以仍然比 `for` 和 `while` 效率低。
+```
 
 
 # Reference
