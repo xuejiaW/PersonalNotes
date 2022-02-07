@@ -9,21 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
-        }
-      },
-      {
-        "id": "6168e260673e1a8b",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Notes/Unity/Memory/Garbage Collector.md",
-            "mode": "source",
+            "file": "Notes/Unity/Memory.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -67,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276,
-    "collapsed": true
+    "width": 276
   },
   "right": {
     "id": "086a6696003cb579",
@@ -84,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Unity/Memory.md"
               }
             }
           },
@@ -105,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Unity/Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,15 +122,15 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/Unity/Memory.md",
     "Notes/Unity/Memory/Managed Memory.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Notes/Unity/Memory/Garbage Collector.md",
+    "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/CSharp/Closure.md",
     "Notes/Tools/Anki.md",
     "Notes/Tools/Clash.md",
     "Untitled.md",
-    "Notes/Unity/Memory.md",
     "Tutorials/Unity Learn/Memory Management in Unity.md"
   ]
 }
