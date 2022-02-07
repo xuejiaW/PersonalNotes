@@ -466,7 +466,7 @@ nmap <Space>ff :search
 ![](assets/Plugins/GIF%202-7-2022%201-06-49%20PM.gif)
 
 ```ad-tip
-`Ctrl-Tab` 为 `Text Snippets: Run snippet replacement` 命令的默认按键，可以在 `Settings/Hotkeys` 中进行修改
+`Ctrl-Tab` 为 `Text Snippets: Run snippet replacement` 命令的默认按键，可以在 `Settings/Hotkeys` 中进行修改。
 ```
 
 ```ad-error
