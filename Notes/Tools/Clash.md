@@ -1,6 +1,8 @@
 ---
 tags:
     - Tool
+created: 2022-02-07
+updated: 2022-02-07
 ---
 
 # Installation
@@ -18,7 +20,7 @@ choco install --yes clash
 ## Global / Rule
 
 可以为 Clash 设置全局代理或规则代理，在全局代理的情况下理论上所有的网络访问都会走代理，规则代理的情况下，则会按照设定的规则选择走或不走代理进行访问。规则代理的示意图如下所示：
-
+![|500](assets/Clash/image-20220207122017567.png)
 
 
 
