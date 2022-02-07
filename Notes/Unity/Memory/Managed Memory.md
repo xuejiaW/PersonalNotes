@@ -101,9 +101,18 @@ void Update() {
 1. C# 中所有函数的引用都是引用类型，即会在 Heap 进行分配。所以当使用函数作为形参时都会发生 Heap 的分配操作，无论该函数是匿名函数或已定义的函数。
 2. 当匿名函数中存在 [Closure](../../CSharp/Closure.md) 时，它作为参数传递时的内存开销会增大许多，因为编译器需要为其创建一个帮助类。
 
-### Anonymous methods under IL2CPP
+## Boxing
 
+`装箱（Boxing）` 是 Unity 项目中最常见的在 Heap 中意外分配内存的情况。当值类型需要转换为引用类型时就会发生 Boxing。如下代码所示：
+```csharp
+int x = 1;
+object y = new object();
+y.Equals(x);
+```
 
+```ad-warning
+通常 C# 的编译器和 IDEs 并不会对 Boxing 进行提示，这是因为 C# 语言的实现默认认为可以对小的临时的堆内存分配
+```
 
 # Reference
 
