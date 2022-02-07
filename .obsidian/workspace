@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Obsidian/Plugins.md",
+            "file": "Notes/Tools/Anki.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cssclass",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md"
+                "file": "Notes/Tools/Anki.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Notes/Tools/Anki.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Obsidian/Plugins.md",
+                "file": "Notes/Tools/Anki.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,6 +123,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/Tools/Anki.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/Tools/Clash.md",
     "Untitled.md",
@@ -130,7 +132,6 @@
     "Tutorials/Unity Learn/Memory Management in Unity.md",
     "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Boehm GC algorithm.md",
-    "Books.md",
-    "Books/Rules of Play.md"
+    "Books.md"
   ]
 }

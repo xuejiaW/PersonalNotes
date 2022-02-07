@@ -2,7 +2,7 @@
 tags:
     - Tool
 created: 2022-01-30
-updated: 2022-01-30
+updated: 2022-02-07
 cssclass: [table-border]
 ---
 
@@ -45,3 +45,6 @@ cssclass: [table-border]
 
 其中可以指定为卡片的不同字段用不同的词典搜索
 ![|500](assets/Anki/Untitled%207.png)
+
+tableborder
+snippets

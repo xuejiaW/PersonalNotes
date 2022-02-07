@@ -1,0 +1,14 @@
+{
+  "snippets_file": "snippets : It is an obsidian plugin, that replaces your selected text.\ntableborder : cssclass: [table-border]",
+  "snippets": [
+    "snippets : It is an obsidian plugin, that replaces your selected text.",
+    "tableborder : cssclass: [table-border]"
+  ],
+  "endSymbol": "$end$",
+  "newlineSymbol": "$nl$",
+  "stopSymbol": "$tb$",
+  "pasteSymbol": "$pst$",
+  "useTab": false,
+  "useSpace": false,
+  "wordDelimiters": "$()[]{}<>,.!?;:'\"\\/"
+}
