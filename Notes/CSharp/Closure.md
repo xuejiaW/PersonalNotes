@@ -45,17 +45,17 @@ Func<string,string> myFunc = delegate(string var1)
 
 如下例子展现了 `Closure` 的使用，其中 `inc` 为 [First class function](#First%20class%20function)，`myVar` 为 [Free Variables](#Free%20Variables)：
 ```csharp
-static void Main(string[] args)
+private void Start()
 {
     var inc = GetAFunc();
-    Console.WriteLine(inc(5));
-    Console.WriteLine(inc(6));
+    Debug.Log(inc(5));
+    Debug.Log(inc(6));
 }
 
-public static Func<int,int> GetAFunc()
+public static Func<int, int> GetAFunc()
 {
     var myVar = 1;
-    Func<int, int> inc = delegate(int var1)
+    Func<int, int> inc = delegate (int var1)
                             {
                                 myVar = myVar + 1;
                                 return var1 + myVar;
@@ -65,7 +65,7 @@ public static Func<int,int> GetAFunc()
 ```
 
 该例子的输出结果为：
-![|300](assets/Closure/image-20220207151544773.png)
+![|300](assets/Closure/image-20220207155349359.png)
 
 其中 `inc(5)` 的结果为 $7$ ，符合预期，而 `inc(6)` 的结果为 $9$ 而不是预期的 $8$。
 
