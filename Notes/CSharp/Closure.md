@@ -83,7 +83,7 @@ Closure 的实现原理大致为：C# 编译器检测到委托中存在[Free Var
 
 需要注意的是，编译生成类实例时是将 [Free Variables](#Free%20Variables) 的变量本身作为类成员变量，而非将其数值作为成员变量。
 
-因此如下的示例代码结果为 $1$ 而非 $0$，因此成员变量shi：
+因此如下的示例代码结果为 $1$ 而非 $0$，因此成员变量是 [Free Variables](#Free%20Variables) `x` 本身，所以在 `action` 定义后对 `x` 修改仍然有效：
 ```csharp
 int x = 0;
 Action action = () => Debug.Log(x);
