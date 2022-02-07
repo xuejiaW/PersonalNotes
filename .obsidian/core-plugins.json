@@ -9,7 +9,9 @@
   "page-preview",
   "templates",
   "command-palette",
+  "random-note",
   "outline",
   "word-count",
+  "open-with-default-app",
   "workspaces"
 ]
