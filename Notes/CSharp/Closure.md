@@ -69,5 +69,6 @@ public static Func<int,int> GetAFunc()
 
 ## How it works
 
-通常而言，
-产生上述结果的原因是 C# 的编译器在
+对于上例中的 [Free Variables](#Free%20Variables) `myVar`，通常而言在运行完函数 `GetAFunc` 后就会从 Stack 中销毁。正是因为 Closure 的存在，让其仍然能被 [First class function](#First%20class%20function) 访问。
+
+C# 编译器检测到委托中存在 Closure 时会生成一个全新的类实例，并将 [Free Variables](#Free%20Variables) 作为类的成员变量，而委托函数作为类的成员函数。即堆 [[#fr]]
