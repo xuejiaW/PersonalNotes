@@ -73,10 +73,13 @@ public static Func<int,int> GetAFunc()
 
 ## How it works
 
-对于上例中的 [Free Variables](#Free%20Variables) `myVar`，通常而言在运行完函数 `GetAFunc` 后就会从 Stack 中销毁。正是因为 Closure 的存在，让其仍然能被 [First class function](#First%20class%20function) 访问。
+对于上例中的 [Free Variables](#Free%20Variables) `myVar`，通常而言在运行完函数 `GetAFunc` 后就会从 Stack 中销毁。但正是因为 Closure 的存在，让其仍然能被 [First class function](#First%20class%20function) 访问。
 
 Closure 的实现原理大致为：C# 编译器检测到委托中存在[Free Variables](#Free%20Variables) 时会生成一个全新的类实例，并将 [Free Variables](#Free%20Variables) 作为类的成员变量，而 [First class function](#First%20class%20function) 作为类的成员函数。
 
 ```ad-note
 在上述例子中，第二次访问 `inc` 时的结果为 $9$，正是因为 `myVar` 变为了编译生成类的成员变量，所以第一次 `inc` 运行时相当于对成员变量进行了修改，而不是对函数内的局部变量进行修改。
 ```
+
+# Reference
+[A Simple Explanation of C# Closures](https://www.simplethread.com/c-closures-explained/)
