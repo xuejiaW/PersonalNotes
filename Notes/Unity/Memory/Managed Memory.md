@@ -118,6 +118,13 @@ y.Equals(x);
 
 ## Identifying boxing
 
+Boxing 通常可以通过反编译或 IL viewer 查看，可以在反编译的代码中搜索类似下列的内容来判断是否有 Boxing 的发生：
+- `<some class>::Box(…)`
+- `Box(…)`
+- `<some class>_Box(…)` 
+
+## Dictionaries and enums
+
 
 # Reference
 
