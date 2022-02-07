@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Clash",
+  "attachmentFolderPath": "./assets/Plugins",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

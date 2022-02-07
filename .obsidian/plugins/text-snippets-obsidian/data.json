@@ -1,8 +1,7 @@
 {
-  "snippets_file": "snippets : It is an obsidian plugin, that replaces your selected text.\ntableborder : cssclass: [table-border]",
+  "snippets_file": "tbc : cssclass: [table-border]",
   "snippets": [
-    "snippets : It is an obsidian plugin, that replaces your selected text.",
-    "tableborder : cssclass: [table-border]"
+    "tbc : cssclass: [table-border]"
   ],
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",

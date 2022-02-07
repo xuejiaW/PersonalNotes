@@ -449,13 +449,20 @@ nmap <Space>ff :search
 
 该插件可以用来快速添加笔记模板，其中模板依赖于 Core Plugins [Template](#Template)。
 
-启用该插件后，可以在 `Settings -> QuickAdd` 页面添加增加快速通过模板创建笔记的命令，如下：
+启用该插件后，可以在 `Settings/QuickAdd` 页面添加增加快速通过模板创建笔记的命令，如下：
 ![|500](assets/Plugins/GIF%202-7-2022%2012-02-46%20PM.gif)
 
 添加后，可以配置新增的命令并设定该命令依赖的额模板，如下：
 ![|500](assets/Plugins/GIF%202-7-2022%2012-05-25%20PM.gif)
 
+## Text Snippets[^19]
 
+该插件可以用来快速输入 Snippets。
+
+启用该插件后，可以在 `Settings/TextSnippets` 中设置需要替换的 Snippets，如下所示：
+![500](assets/Plugins/image-20220207130524132.png)
+
+此时，当输入了 `tbc` 并按下 `C`
 
 
 # Reference
@@ -478,3 +485,4 @@ nmap <Space>ff :search
 [^16]: [FlorianWoelki/obsidian-icon-folder:](https://github.com/FlorianWoelki/obsidian-icon-folder)
 [^17]:[Automatically Reveal Active File](https://github.com/shichongrui/obsidian-reveal-active-file)
 [^18]: [QuickAdd for Obsidian](https://github.com/chhoumann/quickadd)
+[^19]:[text-snippets-obsidian](https://github.com/ArianaKhit/text-snippets-obsidian)
