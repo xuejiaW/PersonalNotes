@@ -462,8 +462,34 @@ nmap <Space>ff :search
 启用该插件后，可以在 `Settings/TextSnippets` 中设置需要替换的 Snippets，如下所示：
 ![500](assets/Plugins/image-20220207130524132.png)
 
-此时，当输入了 `tbc` 并按下 `C`
+此时，当输入了 `tbc` 并按下 `Ctrl-Tab` 后，`tbc` 会被替换为 `tbc : cssclass: [table-border]`，如下所示：
+![](assets/Plugins/GIF%202-7-2022%201-06-49%20PM.gif)
 
+```ad-tip
+`Ctrl-Tab` 为 `Text Snippets: Run snippet replacement` 命令的默认按键，可以在 `Settings/Hotkeys` 中进行修改
+```
+
+```ad-error
+在 Obsidian 0.13.23 版本下使用该插件 0.0.6 版本会存在无法替换 Snippets 的问题，可以通过对 `.obsidian\plugins\text-snippets-obsidian\main.js` 进行如下修改修复：
+~~~js
+@@ -97,12 +99,12 @@ class TextSnippets extends obsidian.Plugin {
+     getWordBoundaries(editor) {
+         var cursor = editor.getCursor();
+         var line = cursor.line;
+-        var word = editor.findWordAt({
++        var word = editor.wordAt({
+             line: line,
+             ch: cursor.ch
+         });
+-        var wordStart = word.anchor.ch;
+-        var wordEnd = word.head.ch;
++        var wordStart = word.from.ch;
++        var wordEnd = word.to.ch;
+         return {
+             start: {
+                 line: line,
+~~~
+```
 
 # Reference
 
