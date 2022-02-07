@@ -125,6 +125,14 @@ Boxing 通常可以通过反编译或 IL viewer 查看，可以在反编译的�
 
 ## Dictionaries and enums
 
+ 使用 `enums` 作为 `Dictionary` 的 Key 是一个常见的产生 Boxing 的方式。如下代码就会产生 Boxing：
+ ```csharp
+enum MyEnum { a, b, c };
+
+var myDictionary = new Dictionary<MyEnum, object>();
+
+myDictionary.Add(MyEnum.a, new object());
+ ```
 
 # Reference
 
