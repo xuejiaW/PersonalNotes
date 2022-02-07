@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "file": "Notes/CSharp/Closure.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/CSharp/Closure.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/CSharp/Closure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,13 +108,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/CSharp/Closure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -122,6 +123,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/CSharp/Closure.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/Tools/Anki.md",
@@ -130,7 +132,6 @@
     "Notes/Unity/Memory.md",
     "Tutorials/Unity Learn/Memory Management in Unity.md",
     "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md",
-    "Books.md"
+    "Notes/Unity/Memory/Boehm GC algorithm.md"
   ]
 }
