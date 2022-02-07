@@ -4,12 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "d48b3d41ff372c98",
+        "id": "b18a9710f58575c8",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "2d8c988df7596dee",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Managed Memory.md",
+            "file": "Notes/Obsidian/Plugins.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -54,8 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409,
-    "collapsed": true
+    "width": 409
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +78,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md"
+                "file": "Notes/Obsidian/Plugins.md"
               }
             }
           },
@@ -92,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Obsidian/Plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,21 +116,22 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Memory/Managed Memory.md",
+                "file": "Notes/Obsidian/Plugins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 277.5
   },
-  "active": "d48b3d41ff372c98",
+  "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/Obsidian/Plugins.md",
+    "Untitled.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Memory.md",
     "Tutorials/Unity Learn/Memory Management in Unity.md",
@@ -131,8 +139,6 @@
     "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Books.md",
     "Books/Rules of Play.md",
-    "Books/Rules of Play/Ch 22 Defining Play.md",
-    "Books/Rules of Play/Ch 18 Games as Cybernetic Systems.md",
-    "Books/Rules of Play/Ch 17 Games as Systems of Information.md"
+    "Books/Rules of Play/Ch 22 Defining Play.md"
   ]
 }

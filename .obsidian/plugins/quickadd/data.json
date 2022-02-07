@@ -53,6 +53,13 @@
       },
       "openFile": false,
       "openFileInMode": "default"
+    },
+    {
+      "id": "3d339806-8636-4b93-907b-ea0bbdbbb499",
+      "name": "AddTag",
+      "type": "Macro",
+      "command": false,
+      "macroId": null
     }
   ],
   "macros": [],
