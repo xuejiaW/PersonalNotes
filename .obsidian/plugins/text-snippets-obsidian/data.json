@@ -1,8 +1,8 @@
 {
-  "snippets_file": "tbc : cssclass: [table-border]\ncbcs : ```csharp $nl}$ $end$```",
+  "snippets_file": "tbc : cssclass: [table-border]\ncbcs : ```csharp$nl$$end$$nl$```",
   "snippets": [
     "tbc : cssclass: [table-border]",
-    "cbcs : ```csharp $nl}$ $end$```"
+    "cbcs : ```csharp$nl$$end$$nl$```"
   ],
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",
