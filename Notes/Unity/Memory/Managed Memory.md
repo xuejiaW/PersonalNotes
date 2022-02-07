@@ -61,6 +61,8 @@ Heap 的`地址空间（Address Space）` 永远都不会返还给操作系统�
 
 # Basic memory conservation
 
+如下为一些常见的 H
+
 ## Collection and array reuse
 
 如果存在如下需要每帧使用全新的容器的情况：
@@ -174,11 +176,17 @@ foreach(int x in myList)
 }
 ```
 
-这是因为在使用 `foreach` 时，C# 编译器会为其生成一个`值类型的迭代器（value-type Enumerator）`。这个迭代器实现了 `IDisposable` 接口，在 `foreach` 循环退出后
+这是因为在使用 `foreach` 时，C# 编译器会为其生成一个实现了 `IDisposable` 接口`值类型的迭代器（value-type Enumerator）`，`foreach` 循环退出后，需要调用 `IDisposable.Dispose` 函数。而对值类型对象调用接口函数前必须先对其进行装箱。
+
+```ad-important
+对 `foreach` 进行装箱操作发生在循环结束时而非每次循环过程中，因此无论循环的此时是2次还是 20000 次，分配的内存都无区别。
+```
 
 ```ad-tip
 在 Unity 5.5 以上的版本，`foreach` 已经不会有额外的内存开销，但因为其依赖于迭代器，所以仍然比 `for` 和 `while` 效率低。
 ```
+
+## 
 
 
 # Reference
