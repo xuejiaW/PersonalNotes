@@ -40,10 +40,8 @@
       },
       "folder": {
         "enabled": true,
-        "folders": [
-          "Notes"
-        ],
-        "chooseWhenCreatingNote": false,
+        "folders": [],
+        "chooseWhenCreatingNote": true,
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,

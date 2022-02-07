@@ -453,6 +453,7 @@ nmap <Space>ff :search
 ![|500](assets/Plugins/GIF%202-7-2022%2012-02-46%20PM.gif)
 
 添加后，可以配置新增的命令并设定该命令依赖的额模板，如下：
+![|500](assets/Plugins/GIF%202-7-2022%2012-05-25%20PM.gif)
 
 
 # Reference
