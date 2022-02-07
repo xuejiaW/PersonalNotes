@@ -40,3 +40,17 @@ Func<string,string> myFunc = delegate(string var1)
 ```
 
 ## Example
+
+如下例子展现了 `Closure` 的使用：
+```csharp
+var myVar = "this is good";
+
+Func<string,string> myFunc = delegate(string var1)
+                                {
+                                    return var1 + myVar;
+                                };
+```
+
+cssclass: [table-border]
+
+```csharp${nl}$ ```
