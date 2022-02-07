@@ -15,6 +15,19 @@
             "source": true
           }
         }
+      },
+      {
+        "id": "6168e260673e1a8b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Unity/Memory/Garbage Collector.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -54,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276
+    "width": 276,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -123,14 +137,14 @@
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
     "Notes/Unity/Memory/Managed Memory.md",
+    "Notes/Unity/Memory/Boehm GC algorithm.md",
+    "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Obsidian/Plugins.md",
     "Notes/CSharp/Closure.md",
     "Notes/Tools/Anki.md",
     "Notes/Tools/Clash.md",
     "Untitled.md",
     "Notes/Unity/Memory.md",
-    "Tutorials/Unity Learn/Memory Management in Unity.md",
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md"
+    "Tutorials/Unity Learn/Memory Management in Unity.md"
   ]
 }

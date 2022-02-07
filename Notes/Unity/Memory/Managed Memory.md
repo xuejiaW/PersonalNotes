@@ -111,8 +111,13 @@ y.Equals(x);
 ```
 
 ```ad-warning
-通常 C# 的编译器和 IDEs 并不会对 Boxing 进行提示，这是因为 C# 语言的实现默认认为可以对小的临时的堆内存分配
+通常 C# 的编译器和 IDEs 并不会对 Boxing 进行提示，这是因为 C# 语言的实现默认认为可以对小的，临时的堆内存分配进行高效的分配和释放。
+
+但因为 Unity 的 [Garbage Collector](Garbage%20Collector.md) 使用的 [Boehm GC algorithm](Boehm%20GC%20algorithm.md) 是 `Non-Generational` 的，所以在处理这种小内存分配时效率并不高。
 ```
+
+## Identifying boxing
+
 
 # Reference
 
