@@ -61,7 +61,7 @@ Heap 的`地址空间（Address Space）` 永远都不会返还给操作系统�
 
 # Basic memory conservation
 
-如下为一些常见的 H
+如下为一些常见的 Heap 堆意外分配内存的情况：
 
 ## Collection and array reuse
 
@@ -186,9 +186,18 @@ foreach(int x in myList)
 在 Unity 5.5 以上的版本，`foreach` 已经不会有额外的内存开销，但因为其依赖于迭代器，所以仍然比 `for` 和 `while` 效率低。
 ```
 
-## 
+## Array-valued Unity APIs
 
+对于返回数组的 Unity API，每次返回的数组都是全新的拷贝。因此如下代码会在循环的每一次过程中分配内存：
+```csharp
+for (int i = 0; i < mesh.vertices.Length; i++) { }
+```
 
+应该将其修改为如下的实现：
+```csharp
+int length = mesh.vertices.Length;
+for (int i = 0; i < length; i++) { }
+```
 # Reference
 
 [Unity - Manual: Memory in Unity (unity3d.com)](https://docs.unity3d.com/2022.1/Documentation/Manual/performance-memory-overview.html) 
