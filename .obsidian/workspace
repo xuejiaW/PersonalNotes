@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/Unity/Test Framework.md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -54,7 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276,
+    "width": 348,
     "collapsed": true
   },
   "right": {

@@ -25,14 +25,18 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 ## Run Test
 
-当 Test A
+当 Test Assembly 及 Test Script 创建后，即可在 `Test Runner` 窗口中看到所有定义的测试函数，如下：
+![|300](assets/Test%20Framework/image-20220209075630528.png)
+
+双击其中的 Assembly / Script/ Function 名即可执行其下的所有测试，可以选择窗口上方的 `Run All` 执行所有测试。
+
 
 # Edit Mode vs. Play Mode
 
 ## Edit Mode
 
 Edit Mode 使用的 Assembly 的 Platforms 仅支持 `Editor`。
-![|500](assets/Test%20Framework/image-20220209075114741.png)
+![|300](assets/Test%20Framework/image-20220209075114741.png)
 
 
 ## Play Mode
