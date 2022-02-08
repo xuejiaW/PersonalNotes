@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Learn Vim (The Smart Way).md",
-            "mode": "preview",
+            "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md"
+                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md",
+                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way).md",
+                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +123,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
     "Books/Learn Vim (The Smart Way).md",
     "TO-DO.md",
     "Notes/Unity/Memory/Managed Memory.md",
@@ -131,7 +132,6 @@
     "Notes/Unity/Mipmap Bias.md",
     "Notes/Unity/Memory.md",
     "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md",
-    "Notes/Obsidian/Plugins.md"
+    "Notes/Unity/Memory/Boehm GC algorithm.md"
   ]
 }
