@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
+            "file": "Notes/CSharp/LINQ.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276,
-    "collapsed": true
+    "width": 276
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md"
+                "file": "Notes/CSharp/LINQ.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
+                "file": "Notes/CSharp/LINQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
+                "file": "Notes/CSharp/LINQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +122,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/CSharp/LINQ.md",
     "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
     "Books/Learn Vim (The Smart Way).md",
     "TO-DO.md",
@@ -131,7 +131,6 @@
     "Notes/Unity/fixed vs  half  vs fixed.md",
     "Notes/Unity/Mipmap Bias.md",
     "Notes/Unity/Memory.md",
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md"
+    "Notes/Unity/Memory/Garbage Collector.md"
   ]
 }
