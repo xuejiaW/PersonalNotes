@@ -14,6 +14,11 @@ updated: 2022-02-08
 float[] itemSizeArray = Enumerable.Repeat(1.0f,100).ToArray();
 ```
 
+```ad-warning
+当使用 `Repeat` 创建引用类型的数据时，容器中所有的元素都指向相同的引用地址。如下：
+
+```
+
 ## Take
 
 从容器开端取 x 个元素，如下：
