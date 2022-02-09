@@ -29,6 +29,9 @@ tags:
 在 VSCode 中运行调试器：
 ![|500](assets/Unity/image-20211203094043714.png)
 
+此时切回 Unity 可能会提醒项目并没有开启 Debug 模式，可以选择 `Enable Debugging for this session` 来暂时开启 Debug 模式：
+![|400](assets/Unity/image-20220209133351075.png)
+
 然后在 Unity Editor 中运行游戏：
 ![|500](assets/Unity/image-20211203094054665.png)
 
