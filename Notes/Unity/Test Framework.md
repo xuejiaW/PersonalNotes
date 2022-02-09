@@ -30,6 +30,7 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 双击其中的 Assembly / Script/ Function 名即可执行其下的所有测试，可以选择窗口上方的 `Run All` 执行所有测试。
 
+在 [Play Mode](#Play%20Mode) 下，可以在 
 
 # Edit Mode vs. Play Mode
 
