@@ -1,6 +1,6 @@
 ---
 created: 2021-12-22
-updated: 2022-01-30
+updated: 2022-02-09
 tags:
     - Unity
     - VSCode
@@ -15,9 +15,9 @@ tags:
 ![|500](assets/Unity/image-20211203093349860.png)
 
 在 Run and Debug 面板中选择 create a launcher.json file 创建 VSCode 的调试配置文件：
-![](assets/Unity/image-20211203093401425.png)
+![|400](assets/Unity/image-20211203093401425.png)
 
-![](assets/Unity/image-20211203093406916.png)
+![|400](assets/Unity/image-20211203093406916.png)
 
 至此，使用 VSCode 调试 Unity 的所有前置条件完成。
 
