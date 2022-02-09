@@ -41,10 +41,23 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 ## Edit Mode
 
-Edit Mode 使用的 Assembly 的 Platforms 仅支持 `Editor`。
-![|300](assets/Test%20Framework/image-20220209075114741.png)
+Edit Mode 仅能在 Unity 编辑器中运行，除了游戏代码外， Edit Mode 还可以测试自定义 Edit  Extension代码。
+
+```ad-note
+Edit Mode 使用的 Assembly 的 Platforms 必须 **仅 **支持 `Editor`。
+```
+
+```ad-tip
+Edit Mode 的测试代码运行在 [EditorApplication.update](https://docs.unity3d.com/ScriptReference/EditorApplication-update.html) 回调中。
+```
+
+
 
 
 ## Play Mode
+
+# Reference
+
+[About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
 
 
