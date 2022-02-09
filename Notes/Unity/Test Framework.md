@@ -30,8 +30,10 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 双击其中的 Assembly / Script/ Function 名即可执行其下的所有测试，可以选择窗口上方的 `Run All` 执行所有测试。
 
-在 [Play Mode](#Play%20Mode) 下，可以在 `Test Runner` 窗口中选择 `Run All Test ()`
-![](assets/Test%20Framework/image-20220209094859570.png)
+在 [Play Mode](#Play%20Mode) 下，可以在 `Test Runner` 窗口中选择 `Run All Test (<Platform>)` 进行打包后的验证，其中 `Platform` 与当前项目选择的平台相关，如下所示：
+![|300](assets/Test%20Framework/image-20220209094859570.png)
+
+真机测试时会以一个空场景运行，当所有测试结束后应用将会被关闭，且结果会显示在 `Test Runner` 窗口中。
 
 
 

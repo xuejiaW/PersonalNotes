@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2022-02-08
-updated: 2022-02-08
+updated: 2022-02-09
 ---
 
 # Code Snippets
