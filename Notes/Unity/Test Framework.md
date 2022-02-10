@@ -3,7 +3,7 @@ tags:
     - Unity
     - QA
 created: 2022-02-09
-updated: 2022-02-10
+updated: 2022-02-11
 ---
 
 # Prepare
@@ -70,11 +70,33 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 ### Test
 
-用来标识一个方法是测试方法
+用来标识一个方法是测试方法，如下：
+```csharp
+[Test]
+public void NewTestScriptSimplePasses()
+{
+    // Use the Assert class to test conditions
+}
+```
+
+可以直接在 `TestAttribute` 中指明预取结果：
+```csharp
+
+```
 
 ### TestCase
 
-用来标识一个方法是测试方法，并且提供diao
+用来标识一个方法是测试方法，并且提供调用时的测试用例，如下：
+```csharp
+[TestCase(12, 3, 4)]
+[TestCase(12, 2, 6)]
+[TestCase(12, 4, 3)]
+public void TestCase(int n, int d, int q)
+{
+    Debug.Log($"{n},{d},{q}");
+    Assert.AreEqual(q, n / d);
+}
+```
 
 ### TestCaseSource
 
