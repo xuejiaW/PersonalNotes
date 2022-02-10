@@ -60,6 +60,14 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 # Attribute
 
+## TestFixture
+
+该 Attribute 标识一个类中包含有测试方法。
+
+```ad-tip
+此 Attribute 在 NUnit 2.5 以上的版本中对于无泛型，无参数化的测试类而言是一个可选参数，只要类中包含有被 
+```
+
 ## UnityTest
 
 # Reference
@@ -68,3 +76,5 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 
 [NUnit Documentation | NUnit Docs](https://docs.nunit.org/articles/nunit/intro.html)
+
+[^1]: [TestFixture | NUnit Docs](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixture.html)
