@@ -60,15 +60,22 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 # Attribute
 
-## TestFixture
+## Test 标识
 
-该 Attribute 标识一个类中包含有测试方法。
+### TestFixture
 
-```ad-tip
-此 Attribute 在 NUnit 2.5 以上的版本中对于无泛型，无参数化的测试类而言是一个可选参数，只要类中包含有被 
-```
+该 Attribute 用来标识一个类中包含有测试方法。
 
-## UnityTest
+此 Attribute 在 NUnit 2.5 以上的版本中对于无泛型的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test)，[TestCase](#TestCase)，[TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
+
+### Test
+
+### TestCase
+
+### TestCaseSource
+
+### UnityTest
+
 
 # Reference
 
