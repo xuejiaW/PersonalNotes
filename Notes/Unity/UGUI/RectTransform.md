@@ -1,6 +1,6 @@
 ---
 created: 2022-01-25
-updated: 2022-01-30
+updated: 2022-02-10
 cssclass: [table-border]
 tags:
     - Unity
@@ -89,7 +89,9 @@ tags:
 当 `Pivot` 为 $(0,1)$ 时，缩放与旋转则会基于物体的左上角，如下所示：
 ![](assets/RectTransform/Pivot_03.gif)
 
-# Blur Print Mode
+# Edit Mode
+
+## Blur Print Mode
 
 蓝图模式通过在 `RectTransform` 的如下按钮启用：
 ![|500](assets/RectTransform/image-20220126231416341.png)
@@ -101,7 +103,7 @@ tags:
 
 ![](assets/RectTransform/image-20220126234213646.png)
 
-# Raw Edit Mode
+## Raw Edit Mode
 
 通常在修改物体的 `Anchors` 和 `Pivot` 时，该物体基于父物体的位置并不会发送变化，因此物体本地的 `Pos X/Y` 值等会随着 `Anchors` 和 `Pivot` 的改变而改变，如下所示：
 ![](assets/RectTransform/GIF%201-26-2022%2011-44-49%20PM.gif)
@@ -109,6 +111,14 @@ tags:
 当开启 `Raw Edit Mode` 后，则会保证 `Pos X/Y` 等数值不变，而变化物体相对于父物体的位置，如下所示：
 ![](assets/RectTransform/GIF%201-26-2022%2011-51-26%20PM.gif)
 
+
+# APIs
+
+## GetLocalCorners
+
+该函数返回 RectTransform 的四个顶点的本地位置，顺序为左下角，左上角，右上角，右下角。
+
+返回的位置的基于 [Pivot](#Pivot) 点为原点。即如果 [Pivot](#Pivot) 点定义为左上角，则返回的左上角数据为 $(0,0,0)$，如果 [Pivot](#Pivot) 点定义为右上角，则返回的右上角数据为 $(0,0,0)$，其他情况类似。
 
 # Reference
 
