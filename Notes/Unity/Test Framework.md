@@ -60,6 +60,18 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 # Attribute
 
+## Description
+
+该 Attribute 用来给测试函数添加描述信息，如下：
+```csharp
+[Test, Description("My really really cool test")]
+public void Add()
+{ /* ... */}
+```
+
+在 Test Runner 界面中显示为：
+
+
 ## Test 标识
 
 ### TestFixture
