@@ -36,6 +36,11 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 真机测试时会以一个空场景运行，当所有测试结束后应用将会被关闭，且结果会显示在 `Test Runner` 窗口中。
 
+
+```ad-note
+因为所有的测试代码都有自己的 Assembly，所以如果要访问具体的工程代码，需要设置 Assembly 的 Reference。
+```
+
 # Edit Mode vs. Play Mode
 
 ## Edit Mode
@@ -54,10 +59,6 @@ Edit Mode 的测试代码运行在 [EditorApplication.update](https://docs.unity
 ## Play Mode
 
 Play Mode 可以以游戏运行的模式运行测试用例。
-
-```ad-note
-[UnityTest](#UnityTest) Attribute 仅能在 Play Mode 中运行
-```
 
 # Setup and cleanup
 
