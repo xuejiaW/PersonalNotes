@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Test Framework.md",
+            "file": "Notes/Unity/Scripting Architecture/CSharp.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cssclass",
+                "query": "anchor",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Test Framework.md"
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +122,8 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/Unity/Scripting Architecture/CSharp.md",
+    "Notes/Unity/UGUI/RectTransform.md",
     "Notes/Unity/Test Framework.md",
     "Notes/CSharp/LINQ.md",
     "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
@@ -130,8 +131,6 @@
     "TO-DO.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/GL.md",
-    "Notes/Unity/fixed vs  half  vs fixed.md",
-    "Notes/Unity/Mipmap Bias.md",
-    "Notes/Unity/Memory.md"
+    "Notes/Unity/fixed vs  half  vs fixed.md"
   ]
 }
