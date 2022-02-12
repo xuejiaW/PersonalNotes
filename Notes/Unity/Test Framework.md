@@ -261,6 +261,6 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 // TODO
 [Working with Unity Test Framework: Part 1: Preparing Test Runner – Digital Ephemera (videlais.com)](https://videlais.com/2021/03/02/working-with-unity-test-framework-part-1-preparing-test-runner/)
 
-
-// TODO
 [Integration testing in Unity using the command pattern | by Colin Bellino | Medium](https://medium.com/@colinbellino/integration-testing-in-unity-using-the-command-pattern-641bb68cd77e)
+
+[Continuous Integration & Unit Tests | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality! (codereality.net)](https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/)
