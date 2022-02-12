@@ -255,3 +255,5 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 [About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
 
 [NUnit Documentation | NUnit Docs](https://docs.nunit.org/articles/nunit/intro.html)
+
+[Everything you need to know about Testing In Unity3D (even if you've never written a unit test) - YouTube](https://www.youtube.com/watch?v=qCghhGLUa-Y&ab_channel=JasonWeimann)   
