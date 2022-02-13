@@ -280,6 +280,8 @@ NSubstitute
 Substitute.For
 xxx.received
 
+[Installed Unity Test runner but can't access NSubstitute - Unity Answers](https://answers.unity.com/questions/1424108/installed-unity-test-runner-but-cant-access-nsubst.html)
+
 [NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
 
 [Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
