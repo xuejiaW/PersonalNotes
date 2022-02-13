@@ -253,7 +253,7 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 
 # Structure
 
-Arrange（准备工作） && Act（具体逻辑） && Assert（）
+Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 
 # Reference
 
