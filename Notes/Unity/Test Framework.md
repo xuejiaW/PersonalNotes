@@ -243,7 +243,9 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 
 ### Setup
 
+在每个测试函数前执行的准备函数。
 
+通常而言，一个类中应当仅定义一个 Setup 函数。如果基类和
 
 ### TearDown
 
@@ -285,3 +287,5 @@ xxx.received
 [NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
 
 [Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
+
+[Practical Unit Testing in Unity3D | by Kuldeep Singh | XRPractices | Medium](https://medium.com/xrpractices/practical-unit-testing-in-unity3d-f8d5f777c5db)
