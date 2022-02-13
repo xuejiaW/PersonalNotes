@@ -251,6 +251,10 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 如果被标识 [Setup](#Setup) 函数执行错误，那么对应的标识 [TearDown](#TearDown) 的函数也不会被执行。
 ```
 
+# Structure
+
+Act && Assert
+
 # Reference
 
 [About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
