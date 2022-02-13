@@ -277,6 +277,9 @@ NSubstitute
 
 [Thundernerd/Unity3D-NSubstitute: NSubstitute is designed as a friendly substitute for .NET mocking libraries. (github.com)](https://github.com/Thundernerd/Unity3D-NSubstitute)
 
+Substitute.For
+xxx.received
+
 [NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
 
 [Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
