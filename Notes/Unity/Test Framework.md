@@ -255,6 +255,8 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 
 Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 
+NSubstitute
+
 # Reference
 
 [About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
@@ -266,6 +268,13 @@ Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 // TODO
 [Working with Unity Test Framework: Part 1: Preparing Test Runner – Digital Ephemera (videlais.com)](https://videlais.com/2021/03/02/working-with-unity-test-framework-part-1-preparing-test-runner/)
 
+
 [Integration testing in Unity using the command pattern | by Colin Bellino | Medium](https://medium.com/@colinbellino/integration-testing-in-unity-using-the-command-pattern-641bb68cd77e)
 
 [Continuous Integration & Unit Tests | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality! (codereality.net)](https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/)
+
+// Mocking
+
+[NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
+
+[Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
