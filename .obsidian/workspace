@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Test Framework.md",
+            "file": "Notes/Android/Android Debug Bridge.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Test Framework.md"
+                "file": "Notes/Android/Android Debug Bridge.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Notes/Android/Android Debug Bridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Notes/Android/Android Debug Bridge.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +123,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Notes/Android/Android Debug Bridge.md",
     "Notes/Unity/Test Framework.md",
     "Notes/CSharp/LINQ.md",
     "Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
@@ -131,7 +132,6 @@
     "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/GL.md",
     "Notes/Unity/fixed vs  half  vs fixed.md",
-    "Notes/Unity/Mipmap Bias.md",
-    "Notes/Unity/Memory.md"
+    "Notes/Unity/Mipmap Bias.md"
   ]
 }
