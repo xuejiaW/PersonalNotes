@@ -255,9 +255,17 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 如果被标识 [Setup](#Setup) 函数执行错误，那么对应的标识 [TearDown](#TearDown) 的函数也不会被执行。
 ```
 
-# Assets
+# Assertions
 
-断言（Assetion）
+断言（Assertion）是单元测试的核心部分，NUnit 为 Assertion 生成了一系列的静态方法和相关函数。
+
+在一个测试函数中，如果一个断言失败，该测试函数就会被认为测试失败，且后续的代码也不再会被执行。
+
+NUnit 中实现了两种模式的断言，经典模型（Classic）和约束模型
+
+## Classic Model
+
+## Constraint Model
 
 # Structure
 
