@@ -149,7 +149,9 @@ public void TestCase(int n, int d, int q)
 
 ### TestCaseSource
 
-用来标识一个方法是测试方法，同时指定作为测试用例的外部数据。数据可以是 `field`，`property` 或 `method`，但自身或返回的数据类型必须是 `IEnumerable`。
+用来标识一个方法是测试方法，同时指定作为测试用例的外部数据。
+
+外部数据可以是 `field`，`property` 或 `method`，但自身或返回的数据类型必须是 `IEnumerable`。
 
 示例如下：
 ```csharp
