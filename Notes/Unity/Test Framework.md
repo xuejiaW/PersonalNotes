@@ -294,3 +294,8 @@ xxx.received
 [Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
 
 [Practical Unit Testing in Unity3D | by Kuldeep Singh | XRPractices | Medium](https://medium.com/xrpractices/practical-unit-testing-in-unity3d-f8d5f777c5db)
+
+
+Discussion
+
+[Help Wanted - How to use automated testing in Unity in a productive way? Tips or best practices? - Unity Forum](https://forum.unity.com/threads/how-to-use-automated-testing-in-unity-in-a-productive-way-tips-or-best-practices.814227/)
