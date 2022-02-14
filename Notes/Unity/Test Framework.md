@@ -269,6 +269,8 @@ NUnit 中实现了两种模式的断言，`经典模型（Classic Model）`和 `
 
 ## Constraint Model
 
+约束模式下，所有的断言都使用 `Assert.That` 函数，对不同的使用场景需要传递不同的 [Constraints Object](https://docs.nunit.org/articles/nunit/writing-tests/constraints/Constraints.html) 作为函数的第二形参。
+
 # Structure
 
 Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
