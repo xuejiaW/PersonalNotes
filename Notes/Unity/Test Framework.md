@@ -265,6 +265,8 @@ NUnit 中实现了两种模式的断言，`经典模型（Classic Model）`和 `
 
 ## Classic Model
 
+经典模式下，所有断言都使用单独的函数标识，如 `Assert.True`，`Assert.Null` 等，常用的支持列表见： [Common Assertions](https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/classic.html))
+
 ## Constraint Model
 
 # Structure
