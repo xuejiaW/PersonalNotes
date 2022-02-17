@@ -75,9 +75,9 @@ UTF 中包含有三种测试前后的设置与清除处理：
 
 ## Everytime setup and cleanup
 
-
-
 对于 Test Class 中的每个测试函数，可以通过 [Setup](#Setup) 和 [TearDown](#TearDown) 设定每个函数执行前后需要进行的操作。
+
+## Example
 
 示例如下，在一个测试类中定义了两个测试方法，并为测试类及测试函数都设定了对应的 Setup 和 Cleanup：
 ```csharp
