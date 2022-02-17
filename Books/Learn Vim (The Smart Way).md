@@ -1,9 +1,9 @@
 ---
 created: 2022-01-20
-updated: 2022-02-01
+updated: 2022-02-17
 Author: Igor Irianto
 Source: https://github.com/iggredible/Learn-Vim](https://github.com/iggredible/Learn-Vim
-Cover: https://s3.us-west-2.amazonaws.com/secure.notion-static.com/aa219d9c-9f18-498b-b11e-119dffddee97/s_hero.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220201T132159Z&X-Amz-Expires=86400&X-Amz-Signature=a4d5890e6f81e4881f4b75b96ea9c622b31bf6a2468992602c98242bc9040b9b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22s_hero.png%22&x-id=GetObject
+Cover: https://d2sofvawe08yqg.cloudfront.net/learnvim/s_hero2x?1620664651
 ---
 
 ```ad-warning
