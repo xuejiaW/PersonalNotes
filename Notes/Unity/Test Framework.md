@@ -62,6 +62,8 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 # Setup and cleanup
 
+// TODO
+
 对于一个 Test Class 而言，可以通过继承实现 `IPrebuildSetup` 和 `IPostBuildCleanup` 接口设定该 Test Class 下的所有测试函数执行前以及执行后需要进行的操作。
 
 对于 Test Class 中的每个测试函数，可以通过 [Setup](#Setup) 和 [TearDown](#TearDown) 设定每个函数执行前后需要进行的操作。
