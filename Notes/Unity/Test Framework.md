@@ -64,8 +64,9 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 UTF 中包含有三种测试前后的设置与清除处理：
 
-- [Setup and cleanup at build time](#Setup%20and%20cleanup%20at%20build%20time)：提供在编译生成测试应用时前后可进行的操作
-
+- [Setup and cleanup at build time](#Setup%20and%20cleanup%20at%20build%20time)：提供在编译生成测试应用时前后可进行的操作。
+- [Onetime setup and cleanup](#Onetime%20setup%20and%20cleanup)：所有测试函数之前会执行的 setup 和 cleanup 操作。
+- [Everytime setup and cleanup](#Everytime%20setup%20and%20cleanup)：每次测试函数执行前都会进行的 Setup 和 Cleanup 操作。
 
 ## Setup and cleanup at build time
 
