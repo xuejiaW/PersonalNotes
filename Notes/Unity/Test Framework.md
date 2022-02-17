@@ -62,7 +62,7 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 # Setup and cleanup
 
-// TODO
+
 
 对于一个 Test Class 而言，可以通过继承实现 `IPrebuildSetup` 和 `IPostBuildCleanup` 接口设定该 Test Class 下的所有测试函数执行前以及执行后需要进行的操作。
 
@@ -281,6 +281,7 @@ Assert.That(myString, Is.EqualTo("Hello"));
 Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 
 NSubstitute
+
 
 # Reference
 
