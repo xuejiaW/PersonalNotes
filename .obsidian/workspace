@@ -114,7 +114,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -123,14 +124,14 @@
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
     "Books.md",
+    "Books/Render Hell.md",
+    "Books/Vulkan Tutorial.md",
     "Notes/Unity/Test Framework.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
     "Notes/Unity/Memory/Managed Memory.md",
     "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Notes/Unity/Memory.md",
-    "Notes/Unity.md",
-    "Books/Learn OpenGL/Ch 23 Instancing.md",
-    "Notes/Android/Android Debug Bridge.md"
+    "Notes/Unity.md"
   ]
 }
