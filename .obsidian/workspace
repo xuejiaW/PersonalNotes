@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Templates/Book-Chapter-Template.md",
+            "file": "Books/Vulkan Tutorial.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Book-Chapter-Template.md"
+                "file": "Books/Vulkan Tutorial.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Book-Chapter-Template.md",
+                "file": "Books/Vulkan Tutorial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Book-Chapter-Template.md",
+                "file": "Books/Vulkan Tutorial.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,15 +123,15 @@
   },
   "active": "e9591b4acc1802ea",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial.md",
     "Templates/Book-Chapter-Template.md",
+    "Books/Vulkan Tutorial/Introduction.md",
     "Templates/Note-Template.md",
     "Templates/Book-Template.md",
     "Books/Untitled.md",
     "Introduction.md",
-    "Books/Vulkan Tutorial.md",
     "Books.md",
     "Books/Learn Vim (The Smart Way).md",
-    "Books/Learn OpenGL.md",
-    "Books/Render Hell.md"
+    "Books/Learn OpenGL.md"
   ]
 }

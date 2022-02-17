@@ -1,21 +1,19 @@
 {
   "choices": [
     {
-      "id": "72f28ca4-14a2-43ad-8b97-41c9ac14234f",
-      "name": "Add Book",
+      "id": "1c5aae3d-7a69-452e-ae90-7128343411b7",
+      "name": "New Book Chapter",
       "type": "Template",
       "command": true,
-      "templatePath": "Templates/Book-Template.md",
+      "templatePath": "Templates/Book-Chapter-Template.md",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
       },
       "folder": {
         "enabled": true,
-        "folders": [
-          "Books"
-        ],
-        "chooseWhenCreatingNote": false,
+        "folders": [],
+        "chooseWhenCreatingNote": true,
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
@@ -29,8 +27,8 @@
       "openFileInMode": "default"
     },
     {
-      "id": "de9274ae-0b97-4871-90ec-3dc70cb33357",
-      "name": "Add Note",
+      "id": "94367824-c193-4e26-8f40-4a8aba32d4c0",
+      "name": "New Note",
       "type": "Template",
       "command": true,
       "templatePath": "Templates/Note-Template.md",
@@ -55,18 +53,20 @@
       "openFileInMode": "default"
     },
     {
-      "id": "3f8b1718-fc36-4014-ae77-527a0ae10c32",
-      "name": "Add Book Chapter",
+      "id": "7389dd91-8048-4f0c-ae2b-45db29ae0025",
+      "name": "New Book",
       "type": "Template",
       "command": true,
-      "templatePath": "",
+      "templatePath": "Templates/Book-Template.md",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
       },
       "folder": {
-        "enabled": false,
-        "folders": [],
+        "enabled": true,
+        "folders": [
+          "Books"
+        ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false
       },
@@ -77,7 +77,7 @@
         "direction": "vertical",
         "focus": true
       },
-      "openFile": false,
+      "openFile": true,
       "openFileInMode": "default"
     }
   ],

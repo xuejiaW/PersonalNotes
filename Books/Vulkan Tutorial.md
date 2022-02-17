@@ -2,7 +2,6 @@
 created: 2022-02-17
 updated: 2022-02-17
 tags:
-    - Computer-Graphics
     - Vulkan
 Author:
     - Khronos Group
