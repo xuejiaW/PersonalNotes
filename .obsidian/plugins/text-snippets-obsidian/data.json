@@ -1,8 +1,10 @@
 {
-  "snippets_file": "tbc : cssclass: [table-border]\ncbcs : ```csharp$nl$$end$$nl$```",
+  "snippets_file": "tbc : cssclass: [table-border]\ncbcs : ```csharp$nl$$end$$nl$```\ncg : Computer-Graphics\nvk : Vulkan",
   "snippets": [
     "tbc : cssclass: [table-border]",
-    "cbcs : ```csharp$nl$$end$$nl$```"
+    "cbcs : ```csharp$nl$$end$$nl$```",
+    "cg : Computer-Graphics",
+    "vk : Vulkan"
   ],
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",
