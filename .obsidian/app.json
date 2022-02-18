@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Vulkan Tutorial",
+  "attachmentFolderPath": "./assets/Textures",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
