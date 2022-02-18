@@ -291,6 +291,9 @@ public IEnumerator BlitTexture_SamePixelsData(string fileName)
 
 ## ValueSource
 
+[ValueSource](#ValueSource) 与 [TestCase](#TestCase) 和 [TestCaseSource](#TestCaseSource) 设计目的类似，都是为了提供参数化测试的可能性，但 [ValueSource](#ValueSource) 是直接对函数的形参进行修饰，而不是对函数进行修饰：
+
+
 # Assertions
 
 断言（Assertion）是单元测试的核心部分，NUnit 为 Assertion 生成了一系列的静态方法和相关函数。
