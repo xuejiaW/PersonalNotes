@@ -249,13 +249,31 @@ static IEnumerable<string> TestStrings(bool generateLongTestCase)
 在 NUnit 中为数据函数传递形参时，如果数据函数与测试方法在同一个类下，则 TestCaseSource 的构造仅需要传递数据函数名即可。但在 UTF 测试中，即使数据函数与测试方法在同一类下，也必须为 TestCasuSource 传递 Type 信息，即如上例所示。
 ```
 
+
 ### UnityTest
 
 UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Test) Attribute。
 
 被 UnityTest 标识的测试函数可以以 Coroutine 的方式运行，在 [Edit Mode](#Edit%20Mode) 下只能 yields null，而在 [Play Mode](#Play%20Mode) 下可以额外使用 `WaitForFixedUpdate` 和 `WaitForSeconds`。
 
-当使用 UnityTest 时 [TestCase](#TestCase) 不能
+当使用 UnityTest 时 [TestCase](#TestCase) 不被支持，如下代码会产生运行失败：
+```csharp
+[UnityTest]
+[TestCase("red")]
+[TestCase("cube_texture")]
+public IEnumerator BlitTexture_SamePixelsData(string fileName)
+{
+    // ...
+}
+
+
+// Error： Method has non-void return value, but no result is expected
+```
+
+因此只能使用 [ValueSource](#ValueSource) Attribute，如下所示：
+```csharp
+
+```
 
 ## Setup and Cleanup
 
@@ -270,6 +288,8 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 ```ad-note
 如果被标识 [Setup](#Setup) 函数执行错误，那么对应的标识 [TearDown](#TearDown) 的函数也不会被执行。
 ```
+
+## ValueSource
 
 # Assertions
 
