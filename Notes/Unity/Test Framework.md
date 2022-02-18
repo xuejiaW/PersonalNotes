@@ -272,6 +272,13 @@ public IEnumerator BlitTexture_SamePixelsData(string fileName)
 
 因此只能使用 [ValueSource](#ValueSource) Attribute，如下所示：
 ```csharp
+private static string[] testImages = new string[] { "red", "cube_texture" };
+
+[UnityTest]
+public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string fileName)
+{
+    // ...
+}
 
 ```
 
@@ -292,7 +299,21 @@ public IEnumerator BlitTexture_SamePixelsData(string fileName)
 ## ValueSource
 
 [ValueSource](#ValueSource) 与 [TestCase](#TestCase) 和 [TestCaseSource](#TestCaseSource) 设计目的类似，都是为了提供参数化测试的可能性，但 [ValueSource](#ValueSource) 是直接对函数的形参进行修饰，而不是对函数进行修饰：
+```csharp
+private static readonly HttpStatusCode[] RequiresInterventionCodes =
+{
+    HttpStatusCode.Moved,
+    HttpStatusCode.Redirect,
+    HttpStatusCode.Unauthorized,
+    HttpStatusCode.UseProxy
+};
 
+[Test]
+public void RequiresInterventionReturnsTrueForAppropriateCodes( [ValueSource("RequiresInterventionCodes")] HttpStatusCode code)
+{
+    Assert.IsTrue(GetClassUnderTest().RequiresIntervention(code));
+}
+```
 
 # Assertions
 
