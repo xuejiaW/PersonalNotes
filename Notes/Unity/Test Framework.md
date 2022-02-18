@@ -255,6 +255,8 @@ UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Tes
 
 被 UnityTest 标识的测试函数可以以 Coroutine 的方式运行，在 [Edit Mode](#Edit%20Mode) 下只能 yields null，而在 [Play Mode](#Play%20Mode) 下可以额外使用 `WaitForFixedUpdate` 和 `WaitForSeconds`。
 
+当使用 UnityTest 时 [TestCase](#TestCase) 不能
+
 ## Setup and Cleanup
 
 ### Setup
