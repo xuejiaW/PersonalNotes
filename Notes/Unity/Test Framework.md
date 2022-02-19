@@ -36,7 +36,6 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 真机测试时会以一个空场景运行，当所有测试结束后应用将会被关闭，且结果会显示在 `Test Runner` 窗口中。
 
-
 ```ad-note
 因为所有的测试代码都有自己的 Assembly，所以如果要访问具体的工程代码，需要设置 Assembly 的 Reference。
 ```
@@ -45,7 +44,7 @@ Unity 会默认的为 Test Assembly 创建新的文件夹。
 
 ## Edit Mode
 
-Edit Mode 仅能在 Unity 编辑器中运行，除了游戏代码外， Edit Mode 还可以测试自定义 Edit  Extension代码。
+Edit Mode 仅能在 Unity 编辑器中运行，除了游戏代码外， Edit Mode 还可以测试自定义 Edit  Extension 代码。
 
 ```ad-note
 Edit Mode 使用的 Assembly 的 Platforms 必须 **仅 **支持 `Editor`。
@@ -55,7 +54,6 @@ Edit Mode 使用的 Assembly 的 Platforms 必须 **仅 **支持 `Editor`。
 Edit Mode 的测试代码运行在 [EditorApplication.update](https://docs.unity3d.com/ScriptReference/EditorApplication-update.html) 回调中。
 ```
 
-
 ## Play Mode
 
 Play Mode 可以以游戏运行的模式运行测试用例。
@@ -64,9 +62,9 @@ Play Mode 可以以游戏运行的模式运行测试用例。
 
 UTF 中包含有三种测试前后的设置与清除处理：
 
-- [Setup and cleanup at build time](#Setup%20and%20cleanup%20at%20build%20time)：提供在编译生成测试应用时前后可进行的操作。
-- [Onetime setup and cleanup](#Onetime%20setup%20and%20cleanup)：所有测试函数之前会执行的 setup 和 cleanup 操作。
-- [Everytime setup and cleanup](#Everytime%20setup%20and%20cleanup)：每次测试函数执行前都会进行的 Setup 和 Cleanup 操作。
+- [Setup and cleanup at build time](#Setup%20and%20cleanup%20at%20build%20time) ：提供在编译生成测试应用时前后可进行的操作。
+- [Onetime setup and cleanup](#Onetime%20setup%20and%20cleanup) ：所有测试函数之前会执行的 setup 和 cleanup 操作。
+- [Everytime setup and cleanup](#Everytime%20setup%20and%20cleanup) ：每次测试函数执行前都会进行的 Setup 和 Cleanup 操作。
 
 ## Setup and cleanup at build time
 
@@ -111,7 +109,7 @@ public class EditTest2 : IPrebuildSetup, IPostBuildCleanup
 
 # Attribute
 
-## Description 
+## Description
 
 该 Attribute 用来给测试函数添加描述信息，如下：
 ```csharp
@@ -129,7 +127,7 @@ public void Add()
 
 该 Attribute 用来标识一个类中包含有测试方法。
 
-此 Attribute 在 NUnit 2.5 以上的版本中对于非参数化的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test)，[TestCase](#TestCase)，[TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
+此 Attribute 在 NUnit 2.5 以上的版本中对于非参数化的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test) ， [TestCase](#TestCase) ， [TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
 
 可以通过为 `TestFixture` 设定参数来调用测试类不同的构造函数，如下所示：
 ```csharp
@@ -299,7 +297,6 @@ static IEnumerable<string> TestStrings(bool generateLongTestCase)
 在 NUnit 中为数据函数传递形参时，如果数据函数与测试方法在同一个类下，则 TestCaseSource 的构造仅需要传递数据函数名即可。但在 UTF 测试中，即使数据函数与测试方法在同一类下，也必须为 TestCasuSource 传递 Type 信息，即如上例所示。
 ```
 
-
 ### UnityTest
 
 UnityTest Attribute 是 UTF 对 NUnit 的拓展，其功能类似于 [Test](#Test) Attribute。
@@ -315,7 +312,6 @@ public IEnumerator BlitTexture_SamePixelsData(string fileName)
 {
     // ...
 }
-
 
 // Error： Method has non-void return value, but no result is expected
 ```
@@ -338,7 +334,7 @@ public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string
 
 在每个测试函数前执行的准备函数。
 
-通常而言，一个类中应当仅定义一个 Setup 函数。如果基类和派生类中都定义了 Setup，则基类中的会率先执行，再执行派生类中的。但如果派生类中的 Setup 是对基类中的重写，则基类中的不会被调用。
+通常而言，一个类中应当仅定义一个 `Setup` 函数。如果基类和派生类中都定义了 `Setup`，则基类中的会率先执行，再执行派生类中的。但如果派生类中的 `Setup` 是对基类中的重写，则基类中的不会被调用。
 
 ### TearDown
 
@@ -348,17 +344,27 @@ public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string
 如果被标识 [Setup](#Setup) 函数执行错误，那么对应的标识 [TearDown](#TearDown) 的函数也不会被执行。
 ```
 
+当存在继承时被 `TearDown` 修饰的函数调用逻辑与 [#Setup](#Setup) 类似。
+
 ### OneTimeSetUp
 
 ### OneTimeTearDown
 
 ### UnitySetUp
 
-### Unity
+```ad-info
+没有 OneTimeUnitySetUp 版本
+```
+
+### UnityTearDown
+
+```ad-info
+没有 OneTimeUnityTearDown 版本
+```
 
 ## ValueSource
 
-[ValueSource](#ValueSource) 与 [TestCase](#TestCase) 和 [TestCaseSource](#TestCaseSource) 设计目的类似，都是为了提供参数化测试的可能性，但 [ValueSource](#ValueSource) 是直接对函数的形参进行修饰，而不是对函数进行修饰：
+ [ValueSource](#ValueSource) 与 [TestCase](#TestCase) 和 [TestCaseSource](#TestCaseSource) 设计目的类似，都是为了提供参数化测试的可能性，但 [ValueSource](#ValueSource) 是直接对函数的形参进行修饰，而不是对函数进行修饰：
 ```csharp
 private static readonly HttpStatusCode[] RequiresInterventionCodes =
 {
@@ -381,11 +387,11 @@ public void RequiresInterventionReturnsTrueForAppropriateCodes( [ValueSource("Re
 
 在一个测试函数中，如果一个断言失败，该测试函数就会被认为测试失败，且后续的代码也不再会被执行。
 
-NUnit 中实现了两种模式的断言，`经典模型（Classic Model）`和 `约束模型(COnstraint Model)`。在 NUnit 3.0 及后续的版本，都推荐使用约束模型的断言，后续的新增断言方式也都会以约束模型实现，而经典模型的实现不再会进行拓展。
+NUnit 中实现了两种模式的断言，` 经典模型（Classic Model）` 和 ` 约束模型(COnstraint Model)`。在 NUnit 3.0 及后续的版本，都推荐使用约束模型的断言，后续的新增断言方式也都会以约束模型实现，而经典模型的实现不再会进行拓展。
 
 ## Classic Model
 
-经典模式下，所有断言都使用单独的函数标识，如 `Assert.True`，`Assert.Null` 等，常用的支持列表见： [Common Assertions](https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/classic.html))
+经典模式下，所有断言都使用单独的函数标识，如 `Assert.True`，`Assert.Null` 等，常用的支持列表见： [Common Assertions](https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/classic.html) )
 
 ## Constraint Model
 
@@ -406,36 +412,34 @@ Before/After all testing 的 Callback
 
 # Reference
 
-[About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
+ [About Unity Test Framework | Test Framework | 1.1.30 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html)
 
-[NUnit Documentation | NUnit Docs](https://docs.nunit.org/articles/nunit/intro.html)
+ [NUnit Documentation | NUnit Docs](https://docs.nunit.org/articles/nunit/intro.html)
 
-[Everything you need to know about Testing In Unity3D (even if you've never written a unit test) - YouTube](https://www.youtube.com/watch?v=qCghhGLUa-Y&ab_channel=JasonWeimann)   
+ [Everything you need to know about Testing In Unity3D (even if you've never written a unit test) - YouTube](https://www.youtube.com/watch?v=qCghhGLUa-Y&ab_channel=JasonWeimann)
 
 // TODO
-[Working with Unity Test Framework: Part 1: Preparing Test Runner – Digital Ephemera (videlais.com)](https://videlais.com/2021/03/02/working-with-unity-test-framework-part-1-preparing-test-runner/)
+ [Working with Unity Test Framework: Part 1: Preparing Test Runner – Digital Ephemera (videlais.com)](https://videlais.com/2021/03/02/working-with-unity-test-framework-part-1-preparing-test-runner/)
 
+ [Integration testing in Unity using the command pattern | by Colin Bellino | Medium](https://medium.com/@colinbellino/integration-testing-in-unity-using-the-command-pattern-641bb68cd77e)
 
-[Integration testing in Unity using the command pattern | by Colin Bellino | Medium](https://medium.com/@colinbellino/integration-testing-in-unity-using-the-command-pattern-641bb68cd77e)
-
-[Continuous Integration & Unit Tests | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality! (codereality.net)](https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/)
+ [Continuous Integration & Unit Tests | The Open Augmented Reality Teaching Book - Create and Code Augmented Reality! (codereality.net)](https://codereality.net/ar-for-eu-book/chapter/development/tools/unity/advanced/ci_unity/)
 
 // Mocking
 
-[Thundernerd/Unity3D-NSubstitute: NSubstitute is designed as a friendly substitute for .NET mocking libraries. (github.com)](https://github.com/Thundernerd/Unity3D-NSubstitute)
+ [Thundernerd/Unity3D-NSubstitute: NSubstitute is designed as a friendly substitute for .NET mocking libraries. (github.com)](https://github.com/Thundernerd/Unity3D-NSubstitute)
 
 Substitute.For
 xxx.received
 
-[Installed Unity Test runner but can't access NSubstitute - Unity Answers](https://answers.unity.com/questions/1424108/installed-unity-test-runner-but-cant-access-nsubst.html)
+ [Installed Unity Test runner but can't access NSubstitute - Unity Answers](https://answers.unity.com/questions/1424108/installed-unity-test-runner-but-cant-access-nsubst.html)
 
-[NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
+ [NSubstitute: A friendly substitute for .NET mocking libraries](https://nsubstitute.github.io/)
 
-[Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
+ [Mocking Web Requests in Unity — Fake it until you make it! | by goedle.io | Medium](https://medium.com/@goedle_io/mocking-web-requests-in-unity-fake-it-until-you-make-it-98496e859c94)
 
-[Practical Unit Testing in Unity3D | by Kuldeep Singh | XRPractices | Medium](https://medium.com/xrpractices/practical-unit-testing-in-unity3d-f8d5f777c5db)
-
+ [Practical Unit Testing in Unity3D | by Kuldeep Singh | XRPractices | Medium](https://medium.com/xrpractices/practical-unit-testing-in-unity3d-f8d5f777c5db)
 
 Discussion
 
-[Help Wanted - How to use automated testing in Unity in a productive way? Tips or best practices? - Unity Forum](https://forum.unity.com/threads/how-to-use-automated-testing-in-unity-in-a-productive-way-tips-or-best-practices.814227/)
+ [Help Wanted - How to use automated testing in Unity in a productive way? Tips or best practices? - Unity Forum](https://forum.unity.com/threads/how-to-use-automated-testing-in-unity-in-a-productive-way-tips-or-best-practices.814227/)
