@@ -342,9 +342,19 @@ public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string
 
 ### TearDown
 
+每个测试函数执行完后的清理函数
+
 ```ad-note
 如果被标识 [Setup](#Setup) 函数执行错误，那么对应的标识 [TearDown](#TearDown) 的函数也不会被执行。
 ```
+
+### OneTimeSetUp
+
+### OneTimeTearDown
+
+### UnitySetUp
+
+### Unity
 
 ## ValueSource
 
