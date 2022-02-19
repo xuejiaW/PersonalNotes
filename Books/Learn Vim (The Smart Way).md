@@ -1,6 +1,6 @@
 ---
 created: 2022-01-20
-updated: 2022-02-18
+updated: 2022-02-19
 Author: Igor Irianto
 Source: https://github.com/iggredible/Learn-Vim](https://github.com/iggredible/Learn-Vim
 Cover: https://d2sofvawe08yqg.cloudfront.net/learnvim/s_hero2x?1620664651
