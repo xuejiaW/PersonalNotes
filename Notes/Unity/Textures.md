@@ -1,7 +1,7 @@
 ---
 tags: Unity
 created: 2022-02-18
-updated: 2022-02-18
+updated: 2022-02-19
 ---
 
 # Texture2D
