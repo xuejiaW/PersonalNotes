@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Test Framework.md",
+            "file": "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cssclass",
+                "query": "facade",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Test Framework.md"
+                "file": "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,6 +123,7 @@
   },
   "active": "2d8c988df7596dee",
   "lastOpenFiles": [
+    "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md",
     "Notes/Unity/Test Framework.md",
     "Notes/Unity/Textures.md",
     "Notes/Unity/Color vs Color32.md",
@@ -130,7 +132,6 @@
     "Notes/Unity/Memory/Garbage Collector.md",
     "Notes/Unity/Memory/Boehm GC algorithm.md",
     "Notes/Unity/Memory.md",
-    "Notes/Unity.md",
-    "Books/Learn OpenGL/Ch 23 Instancing.md"
+    "Notes/Unity.md"
   ]
 }
