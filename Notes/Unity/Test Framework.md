@@ -131,7 +131,46 @@ public void Add()
 
 此 Attribute 在 NUnit 2.5 以上的版本中对于非参数化的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test)，[TestCase](#TestCase)，[TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
 
-对于测试类，可以为 `TestFixture` 设定
+可以通过为 `TestFixture` 设定参数来调用测试类不同的构造函数，如下所示：
+```csharp
+namespace Test
+{
+    [TestFixture("hello", "hello", "goodbye")]
+    [TestFixture("zip", "zip")]
+    public class ParameterizedTestFixture
+    {
+        private string eq1;
+        private string eq2;
+        private string neq;
+
+        [UnityEngine.Scripting.Preserve]
+        public ParameterizedTestFixture(string eq1, string eq2, string neq)
+        {
+            this.eq1 = eq1;
+            this.eq2 = eq2;
+            this.neq = neq;
+        }
+
+        [UnityEngine.Scripting.Preserve]
+        public ParameterizedTestFixture(string eq1, string eq2) : this(eq1, eq2, null) { }
+
+        [Test]
+        public void TestEquality()
+        {
+            Assert.AreEqual(eq1, eq2);
+            if (eq1 != null && eq2 != null)
+                Assert.AreEqual(eq1.GetHashCode(), eq2.GetHashCode());
+        }
+    }
+}
+```
+
+此时在 Test Runner 窗口中会显示分别显示调用不同构造函数时的测试类：
+![](assets/Test%20Framework/image-20220219181546807.png)
+
+```ad-warning
+当 Unity 的 [Scripting backends](Scripting%20Architecture/Scripting%20backends.md) 为 [IL2CPP](Scripting%20Architecture/Scripting%20backends/IL2CPP.md) 时，构造函数很可能在打包时被剔除导致运行时产生 `No suitable constructor was found` 的错误，因此需要为构造函数加上 [[]]
+```
 
 ### Test
 
