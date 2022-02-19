@@ -340,6 +340,9 @@ Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 
 NSubstitute
 
+# Bugs ?
+
+TestFixture With source 在安卓平台下不工作
 
 # Reference
 
