@@ -129,7 +129,9 @@ public void Add()
 
 该 Attribute 用来标识一个类中包含有测试方法。
 
-此 Attribute 在 NUnit 2.5 以上的版本中对于无泛型的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test)，[TestCase](#TestCase)，[TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
+此 Attribute 在 NUnit 2.5 以上的版本中对于非参数化的测试类而言是一个可选参数[^1]。只要类中包含有被 [Test](#Test)，[TestCase](#TestCase)，[TestCaseSource](#TestCaseSource) 修饰的函数。该类就会被自动标识为测试类。
+
+对于测试类，可以为 `TestFixture` 设定
 
 ### Test
 
