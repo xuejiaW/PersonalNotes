@@ -169,7 +169,16 @@ namespace Test
 ![](assets/Test%20Framework/image-20220219181546807.png)
 
 ```ad-warning
-当 Unity 的 [Scripting backends](Scripting%20Architecture/Scripting%20backends.md) 为 [IL2CPP](Scripting%20Architecture/Scripting%20backends/IL2CPP.md) 时，构造函数很可能在打包时被剔除导致运行时产生 `No suitable constructor was found` 的错误，因此需要为构造函数加上 [[]]
+当 Unity 的 [Scripting backends](Scripting%20Architecture/Scripting%20backends.md) 为 [IL2CPP](Scripting%20Architecture/Scripting%20backends/IL2CPP.md) 时，构造函数很可能在打包时因为[Managed Code Stripping](Scripting%20Architecture/Scripting%20backends/Managed%20Code%20Stripping.md)产生 `No suitable constructor was found` 的错误，因此需要为构造函数加上 [Preserve Attribute](Scripting%20Architecture/Scripting%20backends/Managed%20Code%20Stripping.md#Preserve%20Attribute)。
+```
+
+```ad-error
+必须为 Parameterized Test Fixture 增添 namespace，否则会引起如下错误：
+~~~text
+An exception was thrown while loading the test.  
+System.ArgumentNullException: pathName  
+Parameter name: Argument pathName must not be null
+~~~
 ```
 
 ### Test
@@ -380,10 +389,6 @@ Assert.That(myString, Is.EqualTo("Hello"));
 Arrange（准备工作） && Act（具体逻辑） && Assert（判断 ）
 
 NSubstitute
-
-# Bugs ?
-
-TestFixture With source 在安卓平台下不工作
 
 # Question
 
