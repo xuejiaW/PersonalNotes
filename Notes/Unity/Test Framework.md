@@ -330,6 +330,8 @@ public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string
 
 ## Setup and Cleanup
 
+### SetUpFixture
+
 ### Setup
 
 在每个测试函数前执行的准备函数。
