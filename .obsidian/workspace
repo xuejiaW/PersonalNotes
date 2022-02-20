@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2d8c988df7596dee",
+        "id": "e9591b4acc1802ea",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Test Framework.md",
+            "file": "Books/Vulkan Tutorial/Introduction.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "facade",
+                "query": "cssclass",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,13 +50,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -72,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Test Framework.md"
+                "file": "Books/Vulkan Tutorial/Introduction.md"
               }
             }
           },
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Books/Vulkan Tutorial/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,29 +108,30 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Test Framework.md",
+                "file": "Books/Vulkan Tutorial/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 277.5
   },
-  "active": "2d8c988df7596dee",
+  "active": "e9591b4acc1802ea",
   "lastOpenFiles": [
-    "Notes/Unity/Test Framework.md",
-    "Notes/Unity/Textures.md",
-    "Books/Head First Design Patterns/Ch 07 the Adapter and Facade Patterns.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/Managed Code Stripping.md",
-    "Notes/Unity/Color vs Color32.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-    "Notes/Unity/Memory/Managed Memory.md",
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Memory/Boehm GC algorithm.md",
-    "Notes/Unity/Memory.md"
+    "Books/Vulkan Tutorial/Introduction.md",
+    "Books/Vulkan Tutorial.md",
+    "Templates/Book-Chapter-Template.md",
+    "Templates/Note-Template.md",
+    "Templates/Book-Template.md",
+    "Books/Untitled.md",
+    "Introduction.md",
+    "Books.md",
+    "Books/Learn Vim (The Smart Way).md",
+    "Books/Learn OpenGL.md"
   ]
 }
