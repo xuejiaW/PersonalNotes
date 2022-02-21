@@ -9,4 +9,4 @@ Cover: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Vulkan_API_logo
 ISBN:
 ---
 
-[[Introduction]]
+[[Vulkan Tutorial/Ch 00 Introduction]]

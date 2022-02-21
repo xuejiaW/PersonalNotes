@@ -11,4 +11,4 @@ Vulkan 是由 Khronos 提供了一套新图形 API，旨在为现代显卡提供
 Vulkan 的设计想法与 Direct3D 12 及 Metal 类似，但 Vulkan 提供了跨平台的能力
 ```
 
-但 Vulkan 为了满足上述的优点，提供了一些更为冗长的 API，即要求开发者关心更多的细节，如如何初始化 Framebuffer，如何为 buffer 或 texture 分配内存等。
+但 Vulkan 为了满足上述的优点，提供了一些更为冗长的 API进而提供更多的控制能力，这就要求开发者关心更多的细节，如如何初始化 Framebuffer，如何为 buffer 或 texture 分配内存等。
