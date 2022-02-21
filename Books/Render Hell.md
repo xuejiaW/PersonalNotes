@@ -1,6 +1,6 @@
 ---
 created: 2022-01-20
-updated: 2022-02-20
+updated: 2022-02-21
 tags:
     - GPU
 Author: Simon

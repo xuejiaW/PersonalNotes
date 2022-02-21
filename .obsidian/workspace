@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Introduction.md",
+            "file": "Notes/Tools/Pandoc.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Introduction.md"
+                "file": "Notes/Tools/Pandoc.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Introduction.md",
+                "file": "Notes/Tools/Pandoc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Introduction.md",
+                "file": "Notes/Tools/Pandoc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +124,7 @@
   },
   "active": "e9591b4acc1802ea",
   "lastOpenFiles": [
+    "Notes/Tools/Pandoc.md",
     "Books/Vulkan Tutorial/Introduction.md",
     "Books/Vulkan Tutorial.md",
     "Templates/Book-Chapter-Template.md",
@@ -131,7 +133,6 @@
     "Books/Untitled.md",
     "Introduction.md",
     "Books.md",
-    "Books/Learn Vim (The Smart Way).md",
-    "Books/Learn OpenGL.md"
+    "Books/Learn Vim (The Smart Way).md"
   ]
 }
