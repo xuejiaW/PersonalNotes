@@ -13,4 +13,6 @@ updated: 2022-02-21
 
 另外因为显卡厂商的不同，在编写 Shader 时可能需要额外的 syntax 来保证 Shader 在不同厂商的显卡中运行效果的一致性。
 
-同时对于一些移动端的特性，如 [TBR](../../Notes/Computer%20Graphics/Tiled-Baed%20Rendering.md)，传统的图形 API 也没有提供相应的结构
+同时对于一些移动端的特性，如 [TBR](../../Notes/Computer%20Graphics/Tiled-Baed%20Rendering.md)，传统的图形 API 也没有提供相应的结构。
+
+Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，另外 Vulkan 还允许多线程提交渲染命令来降低 CPU 侧的开销。
