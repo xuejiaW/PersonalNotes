@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+            "file": "Notes/Tools/Markdown.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
+                "file": "Notes/Tools/Markdown.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Notes/Tools/Markdown.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Notes/Tools/Markdown.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +123,7 @@
   },
   "active": "e9591b4acc1802ea",
   "lastOpenFiles": [
+    "Notes/Tools/Markdown.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Books/Vulkan Tutorial/Ch 00 Introduction.md",
     "Notes/Tools/Pandoc.md",
@@ -131,7 +132,6 @@
     "Templates/Note-Template.md",
     "Templates/Book-Template.md",
     "Books/Untitled.md",
-    "Introduction.md",
-    "Books.md"
+    "Introduction.md"
   ]
 }
