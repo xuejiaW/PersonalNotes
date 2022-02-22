@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Markdown.md",
+            "file": "Notes/C++/Threading.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Markdown.md"
+                "file": "Notes/C++/Threading.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Markdown.md",
+                "file": "Notes/C++/Threading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Markdown.md",
+                "file": "Notes/C++/Threading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +124,7 @@
   },
   "active": "e9591b4acc1802ea",
   "lastOpenFiles": [
+    "Notes/C++/Threading.md",
     "Notes/Tools/Markdown.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Books/Vulkan Tutorial/Ch 00 Introduction.md",
@@ -131,7 +133,6 @@
     "Templates/Book-Chapter-Template.md",
     "Templates/Note-Template.md",
     "Templates/Book-Template.md",
-    "Books/Untitled.md",
-    "Introduction.md"
+    "Books/Untitled.md"
   ]
 }

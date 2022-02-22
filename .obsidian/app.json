@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Introduction",
+  "attachmentFolderPath": "./assets/Threading",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
