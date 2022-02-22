@@ -10,8 +10,6 @@ updated: 2022-02-22
 ## 锚点
 
 Markdown 中的每一个标题都是一个锚点，可以通过 `#<ancrhor>` 超链接到锚点，如下所示：
-
-如有以下 markdown 内容：
 ```markdown
 ## 目录
 
