@@ -1,6 +1,8 @@
 ---
 created: 2021-12-27
-updated: 2021-12-28
+updated: 2022-02-23
+tags:
+    - Computer-Graphics
 ---
 `Swap Chain` 是一系列（大于等于2）用来渲染的缓冲，每次渲染内容刷新时 `Swap Chain` 中的第一个缓冲与当前渲染的缓冲会进行交换，这个过程称为 `Swapping` 或 `Flipping` 。
 
