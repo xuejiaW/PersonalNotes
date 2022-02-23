@@ -49,4 +49,10 @@ Vulkan API 本身完全与平台不相关的，因此 Surface 在初始化时需
 
 ## Image views and framebuffers
 
-为了将内容
+为了将内容绘制到纹理上，首先需要将其 Warp 到 `VKImageView` 和 `VKFramebuffer` 上。 Image View 用来标识图片中的一个特定区域，Framebuffer 用来标识需要用给 Color / Depth / Stencil Buffer 上的 Image View。
+
+因为 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md) 需要有多张 Image，所以针对每张 Image 都需要创建一个 Image view 和 framebuffer。
+
+## Render passes
+
+Render Passes 用来描述在渲染操作中需要用到的 Image 类型，以及 Images 的用处，
