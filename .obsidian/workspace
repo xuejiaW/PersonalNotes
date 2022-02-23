@@ -4,11 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "dc0cfcc72036d924",
+        "id": "fa8247774896e095",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
         }
       }
     ],
@@ -65,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
+              }
             }
           },
           {
@@ -85,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,15 +122,15 @@
     "direction": "horizontal",
     "width": 277.5
   },
-  "active": "dc0cfcc72036d924",
+  "active": "fa8247774896e095",
   "lastOpenFiles": [
-    "Books/Vulkan Tutorial (DESKTOP-98TEV03's conflicted copy 2022-02-21).md",
-    "Books/Vulkan Tutorial.md",
-    "Books/Vulkan Tutorial/Introduction.md",
-    "Notes/Tools/Markdown.md",
-    "Notes/C++/Threading.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Books/Vulkan Tutorial/Ch 00 Introduction.md",
+    "Books/Vulkan Tutorial/Introduction.md",
+    "Books/Vulkan Tutorial (DESKTOP-98TEV03's conflicted copy 2022-02-21).md",
+    "Books/Vulkan Tutorial.md",
+    "Notes/Tools/Markdown.md",
+    "Notes/C++/Threading.md",
     "Notes/Tools/Pandoc.md",
     "Templates/Book-Chapter-Template.md",
     "Templates/Note-Template.md"
