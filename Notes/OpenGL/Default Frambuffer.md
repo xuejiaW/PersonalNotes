@@ -26,7 +26,7 @@ updated: 2022-01-27
 
 ## Swap Buffer
 
-四个缓冲中的 Front 和 Back Buffer 就对应 [Swap Chain](Swap%20Chain.md)  中的多缓冲。其中的 `Front Buffer` 就是上屏的缓冲， `Back Buffer` 就是渲染的目标缓冲。平台相关的 `Swap Buffer` 操作就是快速的切换这两个缓冲。
+四个缓冲中的 Front 和 Back Buffer 就对应 [Swap Chain](../Computer%20Graphics/Swap%20Chain.md)  中的多缓冲。其中的 `Front Buffer` 就是上屏的缓冲， `Back Buffer` 就是渲染的目标缓冲。平台相关的 `Swap Buffer` 操作就是快速的切换这两个缓冲。
 
 ```ad-warning
 并不建议直接向 `Front Buffer` 中读取和写入数据

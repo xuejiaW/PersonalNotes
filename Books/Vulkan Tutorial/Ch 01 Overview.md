@@ -35,4 +35,11 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 除非一个应用仅仅关心离屏渲染，开发者通常需要创建一个窗口用来展示渲染后的图像结果。在本教程中使用 [GLFW](../Learn%20OpenGL/Ch%2000%20Creating%20a%20Window.md#GLFW) 创建窗口。
 
-为了真正渲染到窗口中，还需要创建一个 Window Surface (`VkSurfaceKHR`) 和一个 Swap Chain（`VkSwapchainKHR`）。
+为了真正渲染到窗口中，还需要创建一个 Window Surface (`VkSurfaceKHR`) 和一个 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md)（`VkSwapchainKHR`）。
+
+```ad-note
+`KHR` 后缀，标识这个对象是 Vulkan 拓展中的一部分。
+```
+
+Vulkan API 本身完全与平台不相关的，因此 Surface 在初始化时需要提供操作系统的 Window Handle，比如在 Windows 系统下为 `HWND`。 这些操作系统相关的细节，GLFW 都有内置的 API 提供相应信息。
+

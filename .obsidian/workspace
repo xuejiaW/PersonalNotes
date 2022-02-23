@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+            "file": "Notes/Computer Graphics/Swap Chain.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
+                "file": "Notes/Computer Graphics/Swap Chain.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Notes/Computer Graphics/Swap Chain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Notes/Computer Graphics/Swap Chain.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,15 +123,15 @@
   },
   "active": "fa8247774896e095",
   "lastOpenFiles": [
+    "Notes/Computer Graphics/Swap Chain.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
+    "Notes/OpenGL/Default Frambuffer.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Books/Learn OpenGL/Ch 01 Hello Window.md",
     "Books/Vulkan Tutorial/Ch 00 Introduction.md",
     "Books/Vulkan Tutorial/Introduction.md",
     "Books/Vulkan Tutorial (DESKTOP-98TEV03's conflicted copy 2022-02-21).md",
     "Books/Vulkan Tutorial.md",
-    "Notes/Tools/Markdown.md",
-    "Notes/C++/Threading.md",
-    "Notes/Tools/Pandoc.md"
+    "Notes/Tools/Markdown.md"
   ]
 }
