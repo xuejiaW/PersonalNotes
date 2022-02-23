@@ -51,7 +51,7 @@ Vulkan API 本身完全与平台不相关的，因此 Surface 在初始化时需
 
 为了将内容绘制到纹理上，首先需要将其 Warp 到 `VKImageView` 和 `VKFramebuffer` 上。 Image View 用来标识图片中的一个特定区域，Framebuffer 用来标识需要用给 Color / Depth / Stencil Buffer 上的 Image View。
 
-因为 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md) 需要有多张 Image，所以针对每张 Image 都需要创建一个 Image view 和 framebuffer。
+因为 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md) 需要有多张 Image，所以针对每张 Image 都需要创建一个 Image view 和 framebuffer。在渲染时切换选择当前需要的 Image Views 和 Framebuffer。
 
 ## Render passes
 
@@ -73,7 +73,13 @@ Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定�
 
 ## Command pools and command buffers
 
-如在 [Logical device and queue families](#Logical%20device%20and%20queue%20families) 中所述，Vulkan 中的指定都需要被提交到 Queue 中。这些指令都会
+如在 [Logical device and queue families](#Logical%20device%20and%20queue%20families) 中所述，Vulkan 中的指定都需要被提交到 Queue 中。这些指令都需要首先被记录在 `VKCommandBuffer` 对象中，所有这些指令都会从 `VkCommandPool` 中分配，`VkCommandPool` 会与特定的 [queue families](#Logical%20device%20and%20queue%20families) 绑定。
+
+为了渲染一个三角形，需要使用一个 Command Buffer 记录以下操作：
+1. 开始 Render Pass
+2. 绑定 Graphics Pipeline
+3. 画三个顶点
+4. 结束 Render Pass
 
 
 
