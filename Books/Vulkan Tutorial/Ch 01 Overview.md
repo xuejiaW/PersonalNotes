@@ -67,5 +67,13 @@ Vulkan 中使用的 `图形管线（Graphics Pipeline）` 需要通过创建 `VK
 
 Vulkan 与其他图形 APIs 最大区别之一是几乎图形管线中所有的配置项都需要提前设定，这意味着如果要切换成其他的 Shader 或调整 Vertex layout，就需要完整的重建图形管线，所以在渲染前，需要为不同的设定预先创建许多 `VKPipleine` 对象。只有一些基本的配置，如更改  viewport size 和 clear color 可以在运行时调整。
 
-图形管线中所有的配置需要显示的定义，在 Vulkan zhon
+图形管线中所有的配置需要显示的被定义，在 Vulkan 中没有类似于默认 Color Blend 方式这样的默认值。
+
+Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定，而非必须等待运行时，这样就能让驱动有更多的优化空间，同时应用整体的性能也能更好地预测。
+
+## Command pools and command buffers
+
+如在 [Logical device and queue families](#Logical%20device%20and%20queue%20families) 中所述，Vulkan 中的指定都需要被提交到 Queue 中。这些指令都会
+
+
 
