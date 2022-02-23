@@ -21,17 +21,17 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 对于一个 Vulkan 程序需要使用如下的步骤绘制一个三角形，所有的步骤在后续的章节中都会进行更详细的解释：
 
-## Instance and physical device selection
+## Step 1 - Instance and physical device selection
 
 对于一个 Vulkan 应用首先需要创建 `VkInstance` ，并通过它进行一系列的设置。在创建后，可以通过它查询 Vulkan 支持的硬件并选择一个或多个 `VkPhysicalDevice` 作为后续需要使用的硬件。
 
-## Logical device and queue families
+## Step 2 - Logical device and queue families
 
 当选择了需要使用的硬件后，需要进一步创建 `VkDevice`，它作为逻辑上的设备。当创建 `VkDevice` 时需要描述后续具体需要使用的 `VkPhysicalDeviceFeatures`，如需要使用 `64-bits  float` 或需要支持 `multi viewport rendering`。
 
 同时还需要指定需要使用哪个`队列家族（Queue Family），大多数的 Vulkan操作都会异步的被提交到 `VkQueue` 中，它是从队列家族中被分配的。每个队列家族都支持将一个特定系列的操作放到它的队列中，如可以有不同的队列家族分别负责 Graphics / Cimputer / memory transfer 的操作。
 
-## Window surface and swap chain
+## Step 3 -Window surface and swap chain
 
 除非一个应用仅仅关心离屏渲染，开发者通常需要创建一个窗口用来展示渲染后的图像结果。在本教程中使用 [GLFW](../Learn%20OpenGL/Ch%2000%20Creating%20a%20Window.md#GLFW) 创建窗口。
 
@@ -47,12 +47,19 @@ Vulkan API 本身完全与平台不相关的，因此 Surface 在初始化时需
 一些操作系统允许通过 `VK_KHR_display` 和 `VK_KHR_display_swapchain` 拓展函数，直接将内容绘制到 Display 上。
 ```
 
-## Image views and framebuffers
+## Step 4 - Image views and framebuffers
 
 为了将内容绘制到纹理上，首先需要将其 Warp 到 `VKImageView` 和 `VKFramebuffer` 上。 Image View 用来标识图片中的一个特定区域，Framebuffer 用来标识需要用给 Color / Depth / Stencil Buffer 上的 Image View。
 
 因为 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md) 需要有多张 Image，所以针对每张 Image 都需要创建一个 Image view 和 framebuffer。
 
-## Render passes
+## Step 5 - Render passes
 
-Render Passes 用来描述在渲染操作中需要用到的 Image 类型，以及 Images 的用处，
+Render Passes 用来描述在渲染操作中需要用到的 Image 类型，Images 的用处，以及该如何对待 Image 的内容。
+
+如，在最初的绘制三角形的应用中，Render passes 会将 Image 作为 color target，并指明在每次 drawing 操作前将其 clear。
+
+## Step 6 - Graphics pipeline
+
+Vulkan 中使用的 `图形管线（Graphics Pipeline）` 需要通过创建 `VKPiepeline` 对象设置。它描述了显卡中的可设置阶段，例如 viewport 的大小，对 depth bu'f
+
