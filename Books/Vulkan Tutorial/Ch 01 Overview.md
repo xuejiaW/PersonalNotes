@@ -2,7 +2,7 @@
 tags:
     - Vulkan
 created: 2022-02-21
-updated: 2022-02-22
+updated: 2022-02-23
 ---
 
 这一部分会先介绍 Vulkan 以及它解决的问题，然后会阐述绘制第一个三角形所需要的组成部分。
@@ -16,3 +16,10 @@ updated: 2022-02-22
 同时对于一些移动端的特性，如 [TBR](../../Notes/Computer%20Graphics/Tiled-Baed%20Rendering.md)，传统的图形 API 也没有提供相应的结构。
 
 Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，另外 Vulkan 还允许多线程提交渲染命令来降低 CPU 侧的开销。
+
+# What it takes to draw a triangle
+
+对于一个 Vulkan 程序需要使用如下的步骤绘制一个三角形，所有的步骤在后续的章节中都会进行更详细的解释：
+
+## Instance and physical device selection
+

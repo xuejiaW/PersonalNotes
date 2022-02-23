@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
-            "mode": "preview",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -115,8 +115,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
