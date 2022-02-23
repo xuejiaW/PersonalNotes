@@ -81,5 +81,10 @@ Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定�
 3. 画三个顶点
 4. 结束 Render Pass
 
+因为 Framebuffer 中的 Image 依赖于当前 Swap Chain 中的 Image，因此需要为每个可能的 Image 记录一个 Command buffer，并在渲染时切换到当前需要的一个。
 
+## Main Loop
 
+渲染主流程首先需要通过 `vkAcquireNextImageKHR`从 Swap Chain 中获取到一个 Image，然后为这个 Image 选择正确的 Command buffer ，并用 `vkQueueSubmit` 执行它，最后用 `vkQueuePresentKHR` 将这个 Image 返回给 Swap Chain 并最终在屏幕上显示。
+
+提交给 Queue 的命令会被异步的执行，
