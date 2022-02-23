@@ -23,10 +23,9 @@ void MultiThreadFunction()
 
 可以使用 `unique_lock` 可以控制对 [mutex](#mutex) 的加解锁操作。当 `unique_lock` 的构造函数调用时会对 [mutex](#mutex) 进行加锁，当析构函数调用时会对 [mutex](#mutex) 进行解锁。示例如下所示：
 ```cpp
-std::mutex mtx;           // mutex for critical section
+std::mutex mtx;
 
 void print_block (int n, char c) {
-  // critical section (exclusive access to std::cout signaled by lifetime of lck):
   std::unique_lock<std::mutex> lck (mtx);
   for (int i=0; i<n; ++i) { std::cout << c; }
   std::cout << '\n';
@@ -43,6 +42,11 @@ int main ()
   return 0;
 }
 ```
+
+可能的输出为，其中可能先打印 `$` 也可能先打印 `*`，但两者不会交替打印：
+```text
+**************************************************
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ```
 
 # condition_variable
@@ -50,17 +54,18 @@ int main ()
 可以使用 `std::condition_variable` 阻塞/唤醒某一个线程 ，示例如下所示：
 ```cpp
 std::condition_variable condition;
+std::mutex mtx;
 
 void Push(const T& data)
 {
-    std::unique_lock<std::mutex> lock;
+    std::unique_lock<std::mutex> lock(mutex);
     queue.push(data);
     condition.notify_all();
 }
 
 void BlockPop(T& data)
 {
-    std::unique_lock<std::mutex> lock;
+    std::unique_lock<std::mutex> lock(mutex);
 
     if (queue.empty()) condition.wait(lock);
 
@@ -69,6 +74,7 @@ void BlockPop(T& data)
 }
 ```
 
+当 `condition.wait` 函数触发时，会自动对 `mutex` 进行解锁。
 
 # Reference
 [c++ - Mutex example / tutorial? - Stack Overflow](https://stackoverflow.com/questions/4989451/mutex-example-tutorial)
