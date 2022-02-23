@@ -65,5 +65,5 @@ Vulkan 中使用的 `图形管线（Graphics Pipeline）` 需要通过创建 `VK
 
 驱动还需要知道在管线中具体使用的 render targers，这个需要通过引用 [Render passes](#Step%205%20-%20Render%20passes) 指定。
 
-Vulkan 与其他图形 APIs 最大区别之一是几乎图形管线中所有的配置项都需要提前设定，
+Vulkan 与其他图形 APIs 最大区别之一是几乎图形管线中所有的配置项都需要提前设定，zhe
 
