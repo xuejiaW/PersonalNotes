@@ -43,3 +43,9 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 Vulkan API 本身完全与平台不相关的，因此 Surface 在初始化时需要提供操作系统的 Window Handle，比如在 Windows 系统下为 `HWND`。 这些操作系统相关的细节，GLFW 都有内置的 API 提供相应信息。
 
+```ad-note
+一些操作系统允许通过 `VK_KHR_display` 和 `VK_KHR_display_swapchain` 拓展函数，直接将内容绘制到 Display 上。
+```
+
+## Image views and framebuffers
+
