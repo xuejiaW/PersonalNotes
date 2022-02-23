@@ -26,3 +26,7 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 对于一个 Vulkan 应用首先需要创建 `VkInstance` ，并通过它进行一系列的设置。在创建后，可以通过它查询 Vulkan 支持的硬件并选择一个或多个 `VkPhysicalDevice` 作为后续需要使用的硬件。
 
 ## Logical device and queue families
+
+当选择了需要使用的硬件后，需要进一步创建 `VkDevice`，它作为逻辑上的设备。当创建 `VkDevice` 时需要描述后续具体需要使用的 `VkPhysicalDeviceFeatures`，如需要使用 `64-bits  float` 或需要支持 `multi viewport rendering`。
+
+同时还需要指定需要使用哪个 queue families，大多数的
