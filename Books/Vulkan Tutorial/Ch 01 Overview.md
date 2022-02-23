@@ -23,3 +23,6 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 ## Instance and physical device selection
 
+对于一个 Vulkan 应用首先需要创建 `VkInstance` ，并通过它进行一系列的设置。在创建后，可以通过它查询 Vulkan 支持的硬件并选择一个或多个 `VkPhysicalDevice` 作为后续需要使用的硬件。
+
+## Logical device and queue families
