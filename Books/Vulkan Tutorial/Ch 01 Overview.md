@@ -29,4 +29,4 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 当选择了需要使用的硬件后，需要进一步创建 `VkDevice`，它作为逻辑上的设备。当创建 `VkDevice` 时需要描述后续具体需要使用的 `VkPhysicalDeviceFeatures`，如需要使用 `64-bits  float` 或需要支持 `multi viewport rendering`。
 
-同时还需要指定需要使用哪个 queue families，大多数的 Vulkan操作都会异步的被提交到 `VkQueue` 中，它是从 queue families 中被分配的。每个  queue family 
+同时还需要指定需要使用哪个`队列家族（Queue Family），大多数的 Vulkan操作都会异步的被提交到 `VkQueue` 中，它是从队列家族中被分配的。每个  queue family 都支持
