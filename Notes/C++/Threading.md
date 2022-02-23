@@ -19,6 +19,32 @@ void MultiThreadFunction()
 }
 ```
 
+# unique_lock
+
+可以使用 `unique_lock` 可以控制对 [mutex](#mutex) 的加解锁操作。当 `unique_lock` 的构造函数调用时会对 [mutex](#mutex) 进行加锁，当析构函数调用时会对 [mutex](#mutex) 进行解锁。示例如下所示：
+```cpp
+std::mutex mtx;           // mutex for critical section
+
+void print_block (int n, char c) {
+  // critical section (exclusive access to std::cout signaled by lifetime of lck):
+  std::unique_lock<std::mutex> lck (mtx);
+  for (int i=0; i<n; ++i) { std::cout << c; }
+  std::cout << '\n';
+}
+
+int main ()
+{
+  std::thread th1 (print_block,50,'*');
+  std::thread th2 (print_block,50,'$');
+
+  th1.join();
+  th2.join();
+
+  return 0;
+}
+```
+```
+
 # condition_variable
 
 可以使用 `std::condition_variable` 阻塞/唤醒某一个线程 ，示例如下所示：
