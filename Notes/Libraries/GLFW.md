@@ -2,7 +2,7 @@
 tags:
     - Library
 created: 2022-02-24
-updated: 2022-02-24
+updated: 2022-02-25
 ---
 
 GLFW 库主要为创建系统窗口 / 渲染上下文，处理用户输入等功能提供了简单的API。
@@ -36,5 +36,5 @@ GLFW 库主要为创建系统窗口 / 渲染上下文，处理用户输入等功
 
 # Windows 预编译二进制文件
 
-从官网中选择 `64/32-bit Windows binaries`，其中会包含各编译器所依赖的库文件，如 Visual Studio 2022 依赖的库存放在
+从官网中选择 `64/32-bit Windows binaries`，其中会包含各编译器所依赖的库文件，如 Visual Studio 2022 依赖的库存放在 `glfw-<version>.bin.WIN64\glfw-<version>.bin.WIN64\lib-vc2022` 文件夹下
 

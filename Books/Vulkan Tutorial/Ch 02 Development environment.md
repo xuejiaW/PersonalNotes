@@ -2,7 +2,7 @@
 tags:
     - Vulkan
 created: 2022-02-24
-updated: 2022-02-24
+updated: 2022-02-25
 ---
 
 # Visual Studio
@@ -29,6 +29,20 @@ updated: 2022-02-24
 
 ![](assets/Ch%2002%20Development%20environment/image-20220224231002367.png)
 
+在项目的目录下添加 `Include` 和 `Lib` 文件夹，结构如下：
+```text
+├───Include
+│   ├───GLFW
+│   └───glm
+│       ├───detail
+│       ├───gtc
+│       ├───gtx
+│       └───simd
+└───Lib
+    glfw3.lib
+```
+
+
 在 `Project/Vulkan Property Pages` 窗口中添加 Include Directories：
 ![](assets/Ch%2002%20Development%20environment/image-20220224232224877.png)
 
@@ -47,4 +61,3 @@ updated: 2022-02-24
 
 最后选择支持 `C++ 17` 的编译器：
 ![](assets/Ch%2002%20Development%20environment/image-20220224233429504.png)
-
