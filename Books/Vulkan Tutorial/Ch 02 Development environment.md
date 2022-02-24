@@ -23,3 +23,9 @@ updated: 2022-02-24
 
 如 DirectX 12 不同，Vulkan 并没有提供线性代数的库，可以选择使用 [GLM](../../Notes/Libraries/GLM.md) 进行相应的运算。
 
+## Settingup Visual Studio
+
+创建 Visual Studio 新工程，并选择 `Windows 桌面向导（Windows Desktop Wizard）` 作为模板，并在创建时选择 `控制台应用程序（Console Application)`，并勾选 `空项目（Empty Project）`。
+
+![](assets/Ch%2002%20Development%20environment/image-20220224231002367.png)
+
