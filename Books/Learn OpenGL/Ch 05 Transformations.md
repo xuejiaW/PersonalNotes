@@ -1,18 +1,13 @@
 ---
 created: 2021-12-15
-updated: 2022-01-20
+updated: 2022-02-24
 tags:
     - OpenGL
 ---
+
 # GLM
 
-因为OpenGL没有自带的矩阵和向量，所以相关的变换操作需要自定义，可以使用第三方库[GLM](https://glm.g-truc.net/0.9.9/index.html)替代。GLM是一个纯头文件的库，因此不需要额外的链接和编译，将下载的头文件放到 `include` 下即可。通过以下代码引入：
-
-```cpp
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-```
+因为OpenGL没有自带的矩阵和向量，所以相关的变换操作需要自定义，可以选择依赖 [GLM](../../Notes/Libraries/GLM.md) 解决。
 
 # 变换
 

@@ -9,8 +9,21 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books.md",
-            "mode": "preview",
+            "file": "Books/Learn OpenGL/Ch 00 Creating a Window.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
+          }
+        }
+      },
+      {
+        "id": "986f16aa81506c53",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Libraries/GLFW.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -41,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GLM",
+                "query": "GLFW",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books.md"
+                "file": "Notes/Libraries/GLFW.md"
               }
             }
           },
@@ -91,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,17 +134,17 @@
     "direction": "horizontal",
     "width": 277.5
   },
-  "active": "0d1ed7310827d4a7",
+  "active": "986f16aa81506c53",
   "lastOpenFiles": [
-    "Books.md",
-    "Notes/Tools/GLM.md",
+    "Notes/Libraries/GLFW.md",
+    "Books/Learn OpenGL/Ch 00 Creating a Window.md",
+    "Notes/Libraries/GLM.md",
     "Books/Learn OpenGL/Ch 05 Transformations.md",
+    "Books.md",
+    "Notes/VSCode.md",
+    "Notes/Tools/GLM.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
-    "Notes/Computer Graphics/Swap Chain.md",
-    "Notes/OpenGL/Default Frambuffer.md",
-    "Books/Learn OpenGL/Ch 00 Creating a Window.md",
-    "Books/Learn OpenGL/Ch 01 Hello Window.md",
-    "Books/Vulkan Tutorial/Ch 00 Introduction.md"
+    "Notes/Computer Graphics/Swap Chain.md"
   ]
 }
