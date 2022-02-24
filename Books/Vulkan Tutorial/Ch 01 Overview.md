@@ -33,7 +33,7 @@ Vulkan 通过针对现代 GPU 架构从头开始设计来解决这些问题，�
 
 ## Window surface and swap chain
 
-除非一个应用仅仅关心离屏渲染，开发者通常需要创建一个窗口用来展示渲染后的图像结果。在本教程中使用 [GLFW](../Learn%20OpenGL/Ch%2000%20Creating%20a%20Window.md#GLFW) 创建窗口。
+除非一个应用仅仅关心离屏渲染，开发者通常需要创建一个窗口用来展示渲染后的图像结果。在本教程中使用 [GLFW](../../Notes/Libraries/GLFW.md) 创建窗口。
 
 为了真正渲染到窗口中，还需要创建一个 Window Surface (`VkSurfaceKHR`) 和一个 [Swap Chain](../../Notes/Computer%20Graphics/Swap%20Chain.md)（`VkSwapchainKHR`）。
 

@@ -4,25 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0d1ed7310827d4a7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Books/Learn OpenGL/Ch 00 Creating a Window.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
-        }
-      },
-      {
         "id": "986f16aa81506c53",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Libraries/GLFW.md",
+            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -83,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Libraries/GLFW.md"
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
               }
             }
           },
@@ -104,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Libraries/GLFW.md",
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,30 +108,70 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Libraries/GLFW.md",
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "e3e645e0ac60b225",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "893334fd1bdb602d",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 509.5
   },
   "active": "986f16aa81506c53",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Notes/Libraries/GLFW.md",
+    "吃.md",
+    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Libraries/GLM.md",
     "Books/Learn OpenGL/Ch 05 Transformations.md",
     "Books.md",
     "Notes/VSCode.md",
-    "Notes/Tools/GLM.md",
-    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-    "Books/Vulkan Tutorial/Ch 01 Overview.md",
-    "Notes/Computer Graphics/Swap Chain.md"
+    "Notes/Tools/GLM.md"
   ]
 }
