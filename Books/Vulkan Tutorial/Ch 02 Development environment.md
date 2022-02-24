@@ -18,3 +18,8 @@ updated: 2022-02-24
 ## GLFW
 
 通过 [GLFW](../../Notes/Libraries/GLFW.md) 创建系统窗口
+
+## GLM
+
+如 DirectX 12 不同，Vulkan 并没有提供线性代数的库，可以选择使用 [GLM](../../Notes/Libraries/GLM.md) 进行相应的运算。
+
