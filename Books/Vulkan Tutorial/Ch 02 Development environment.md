@@ -39,7 +39,7 @@ updated: 2022-02-25
 │       ├───gtx
 │       └───simd
 └───Lib
-    glfw3.lib
+        glfw3.lib
 ```
 
 
@@ -61,3 +61,7 @@ updated: 2022-02-25
 
 最后选择支持 `C++ 17` 的编译器：
 ![](assets/Ch%2002%20Development%20environment/image-20220224233429504.png)
+
+此时运行程序，命令行中应当显示支持的拓展数目：
+![](assets/Ch%2002%20Development%20environment/image-20220225000216293.png)
+
