@@ -32,16 +32,19 @@ updated: 2022-02-24
 在 `Project/Vulkan Property Pages` 窗口中添加 Include Directories：
 ![](assets/Ch%2002%20Development%20environment/image-20220224232224877.png)
 
-![](assets/Ch%2002%20Development%20environment/image-20220224232558908.png)
+![|300](assets/Ch%2002%20Development%20environment/image-20220224232558908.png)
 
 然后再 `Linker/General` 中选择 `Additional Library Directories`：
-![](assets/Ch%2002%20Development%20environment/image-20220224232653361.png)
+![|600](assets/Ch%2002%20Development%20environment/image-20220224232653361.png)
 
-![](assets/Ch%2002%20Development%20environment/image-20220224232928350.png)
+![|300](assets/Ch%2002%20Development%20environment/image-20220224232928350.png)
 
 然后在 `Linker/Input` 中选择 `Additional Dependencies`：
 
-![](assets/Ch%2002%20Development%20environment/image-20220224233046607.png)
+![|600](assets/Ch%2002%20Development%20environment/image-20220224233046607.png)
 
 ![](assets/Ch%2002%20Development%20environment/image-20220224233114393.png)
+
+最后选择支持 `C++ 17` 的编译器：
+![](assets/Ch%2002%20Development%20environment/image-20220224233429504.png)
 

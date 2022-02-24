@@ -7,12 +7,9 @@
         "id": "986f16aa81506c53",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
+            "file": "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png"
           }
         }
       }
@@ -54,8 +51,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +67,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
+                "file": "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png"
               }
             }
           },
@@ -92,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,6 +160,7 @@
   },
   "active": "986f16aa81506c53",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Notes/Libraries/GLFW.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
@@ -172,7 +169,6 @@
     "Notes/Libraries/GLM.md",
     "Books/Learn OpenGL/Ch 05 Transformations.md",
     "Books.md",
-    "Notes/VSCode.md",
-    "Notes/Tools/GLM.md"
+    "Notes/VSCode.md"
   ]
 }
