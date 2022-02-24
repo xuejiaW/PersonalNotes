@@ -106,3 +106,22 @@ Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定�
 
 ## Coding conventions
 
+所有的 Vulkan 函数，枚举和结构体都定义在 `vulkan.h` 头文件中。
+
+函数有 `vk` 前缀，类型如枚举和结构体有 `Vk` 前缀，枚举值有 `VK_` 前缀。如下为 Vulkan 的代码片段示例：
+```cpp
+VkXXXCreateInfo createInfo{};
+createInfo.sType = VK_STRUCTURE_TYPE_XXX_CREATE_INFO;
+createInfo.pNext = nullptr;
+createInfo.foo = ...;
+createInfo.bar = ...;
+
+VkXXX object;
+if (vkCreateXXX(&createInfo, nullptr, &object) != VK_SUCCESS)
+{
+    std::cerr << "failed to create object" << std::endl;
+    return false;
+}
+```
+
+qi'zhon
