@@ -37,13 +37,13 @@ updated: 2022-02-24
 然后再 `Linker/General` 中选择 `Additional Library Directories`：
 ![|500](assets/Ch%2002%20Development%20environment/image-20220224232653361.png)
 
-![|300](assets/Ch%2002%20Development%20environment/image-20220224232928350.png)
+![|400](assets/Ch%2002%20Development%20environment/image-20220224234301818.png)
 
 然后在 `Linker/Input` 中选择 `Additional Dependencies`：
 
 ![|500](assets/Ch%2002%20Development%20environment/image-20220224233046607.png)
 
-![|300](assets/Ch%2002%20Development%20environment/image-20220224233631948.png)
+![|400](assets/Ch%2002%20Development%20environment/image-20220224233631948.png)
 
 最后选择支持 `C++ 17` 的编译器：
 ![](assets/Ch%2002%20Development%20environment/image-20220224233429504.png)

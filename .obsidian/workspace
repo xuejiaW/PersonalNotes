@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "13c345288d0e2291",
+        "id": "5fa089d5159cd232",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-            "mode": "source",
+            "file": "Notes/Libraries/GLFW.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
+                "file": "Notes/Libraries/GLFW.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,17 +162,17 @@
     "direction": "horizontal",
     "width": 509.5
   },
-  "active": "13c345288d0e2291",
+  "active": "5fa089d5159cd232",
   "lastOpenFiles": [
-    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
     "Notes/Libraries/GLFW.md",
+    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224232928350.png",
+    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "吃.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Libraries/GLM.md",
     "Books/Learn OpenGL/Ch 05 Transformations.md",
-    "Books.md",
-    "Notes/VSCode.md"
+    "Books.md"
   ]
 }
