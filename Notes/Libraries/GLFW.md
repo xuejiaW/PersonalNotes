@@ -8,9 +8,10 @@ updated: 2022-02-24
 GLFW 库主要为创建系统窗口 / 渲染上下文，处理用户输入等功能提供了简单的API。
 
 # 源码编译
+
 从[官网](https://www.glfw.org/download.html)中下载GLFW源文件，然后再下载并安装[CMake](https://cmake.org/download/)软件，如使用 [Chocolatey](../../Notes/Tools/Chocolatey.md)，可直接通过 `choco install --yes cmake` 进行安装。
 
-安装Cmake后，按下图进行配置，从上到下三个红框分别表示，GLFW的源代码地址，编译后结果的输出地址以及编译对象，这里因为想搭建的是VSCode环境下的地址，所以选择了`MinGW Makefiles`。其中第三个红框的窗口时通过按左下角的`Configure`按钮呼出的。
+安装Cmake后，按下图进行配置，从上到下三个红框分别表示，GLFW的源代码地址，编译后结果的输出地址以及编译对象，这里编译对象以 `MinGW Makefiles`作为示例。其中第三个红框的窗口时通过按左下角的`Configure`按钮呼出的。
 
 ![|400](assets/GLFW/image-20211214094401003.png)
 
@@ -32,4 +33,8 @@ GLFW 库主要为创建系统窗口 / 渲染上下文，处理用户输入等功
 而需要的头文件，则在glfw3的源代码路径下的include文件夹中
 
 ![](assets/GLFW/image-20211214094504490.png)
+
+# Windows 预编译二进制文件
+
+从官网中选择 `64/32-bit Windows binaries`，其中会包含各编译器所依赖的库文件，如 Visual Studio 2022 依赖的库存放在
 
