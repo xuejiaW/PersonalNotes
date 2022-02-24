@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,10 +163,10 @@
   },
   "active": "986f16aa81506c53",
   "lastOpenFiles": [
-    "Books/Vulkan Tutorial/Ch 01 Overview.md",
-    "Notes/Libraries/GLFW.md",
-    "吃.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "Notes/Libraries/GLFW.md",
+    "Books/Vulkan Tutorial/Ch 01 Overview.md",
+    "吃.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Libraries/GLM.md",
     "Books/Learn OpenGL/Ch 05 Transformations.md",
