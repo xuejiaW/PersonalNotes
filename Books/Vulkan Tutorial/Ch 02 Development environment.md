@@ -29,3 +29,10 @@ updated: 2022-02-24
 
 ![](assets/Ch%2002%20Development%20environment/image-20220224231002367.png)
 
+在 `Project/Vulkan Property Pages` 窗口中添加 Include Directories：
+![](assets/Ch%2002%20Development%20environment/image-20220224232224877.png)
+
+![](assets/Ch%2002%20Development%20environment/image-20220224232558908.png)
+
+然后再 `Linker/General` 中选择 `Additional Library Directories`
+
