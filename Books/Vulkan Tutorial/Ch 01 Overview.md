@@ -124,4 +124,12 @@ if (vkCreateXXX(&createInfo, nullptr, &object) != VK_SUCCESS)
 }
 ```
 
-qi'zhon
+其中结构体的类型需要显式的通过 `sType` 指定，`pNext` 可以用来指向一个拓展的结构体，在本教程中始终为 `nullptr`。创建和销毁一个对象的函数，如上例中的 `vkCreateXXX` 可以定义一个 `VkAllocationCallbacks` 的形参，该形参可用来设定自定义的内存分配分时，在本教程中该参数也始终为 `nullptr`。
+
+几乎所有的函数都会返回值 `VkResult`，该参数值为 `Vk_SUCCESS` 或错误码。
+
+## Validation layers
+
+因为 Vulkan 设计为高性能和低驱动负载，因此默认而言，它只提供了非常有限的错误检查以及调适能力。
+
+但 Vulkan 允许开发中通过 `Validation layers` 开启额外的检查能力。 `Validation Layers` 是在 AP
