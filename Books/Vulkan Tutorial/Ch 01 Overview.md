@@ -92,5 +92,17 @@ Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定�
 ## Summary
 
 总结而言，绘制第一个三角形，需要：
-1. 创建一个 `VKInstance`
-2. 选择一个支持的显卡，由 ``
+1. 创建一个 `VkInstance`
+2. 选择一个支持的显卡，由 `VkPhysicalDevice` 表示
+3. 创建一个 `VkDevice` 和 `VkQueue`，用来渲染和显示
+4. 创建 Window，Window Surface，Swap Chain
+5. 将 Swap Chain 中的 Image 用 `VkImageView` 封装
+6. 创建一个 Render pass 用来表示渲染目标和用法
+7. 为了 Render Pass 创建 Framebuffer
+8. 设置图形管线
+9. 为 Swap Chain 中的每个 Image 分配记录渲染指令的 Command buffer
+10. 在渲染帧前获取 Image，提交需要的 Command Buffer，再讲渲染完的 Image 返回给 Swap Chain。
+# API concepts
+
+## Coding conventions
+
