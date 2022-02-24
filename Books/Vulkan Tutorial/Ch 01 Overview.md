@@ -132,4 +132,4 @@ if (vkCreateXXX(&createInfo, nullptr, &object) != VK_SUCCESS)
 
 因为 Vulkan 设计为高性能和低驱动负载，因此默认而言，它只提供了非常有限的错误检查以及调适能力。
 
-但 Vulkan 允许开发中通过 `Validation layers` 开启额外的检查能力。 `Validation Layers` 是在 AP
+但 Vulkan 允许开发中通过 `Validation layers` 开启额外的检查能力。 `Validation Layers` 是在 API 和驱动间的一层代码，它可以额外进行例如函数的参数是否合法，内存分配是否有错误这样的检查。

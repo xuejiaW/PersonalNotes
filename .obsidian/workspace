@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md"
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 01 Overview.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,6 +123,7 @@
   },
   "active": "fa8247774896e095",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Notes/Computer Graphics/Swap Chain.md",
     "Notes/OpenGL/Default Frambuffer.md",
@@ -131,7 +132,6 @@
     "Books/Vulkan Tutorial/Ch 00 Introduction.md",
     "Books/Vulkan Tutorial/Introduction.md",
     "Books/Vulkan Tutorial (DESKTOP-98TEV03's conflicted copy 2022-02-21).md",
-    "Books/Vulkan Tutorial.md",
-    "Notes/Tools/Markdown.md"
+    "Books/Vulkan Tutorial.md"
   ]
 }
