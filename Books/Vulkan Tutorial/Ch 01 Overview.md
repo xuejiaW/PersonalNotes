@@ -88,3 +88,9 @@ Vulkan 对图形管线的这些设定让所有的配置在编译时就能确定�
 渲染主流程首先需要通过 `vkAcquireNextImageKHR`从 Swap Chain 中获取到一个 Image，然后为这个 Image 选择正确的 Command buffer ，并用 `vkQueueSubmit` 执行它，最后用 `vkQueuePresentKHR` 将这个 Image 返回给 Swap Chain 并最终在屏幕上显示。
 
 提交给 Queue 的命令会被异步的执行，因此需要用 Synchronization Object 来保证所有指令以正确的顺序被执行。
+
+## Summary
+
+总结而言，绘制第一个三角形，需要：
+1. 创建一个 `VKInstance`
+2. 选择一个支持的显卡，由 ``
