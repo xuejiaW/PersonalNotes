@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Android/Android Debug Bridge.md",
-            "mode": "source",
+            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Android/Android Debug Bridge.md"
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Android/Android Debug Bridge.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Android/Android Debug Bridge.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Android/Android Debug Bridge.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,8 +164,8 @@
   },
   "active": "5fa089d5159cd232",
   "lastOpenFiles": [
-    "Notes/Android/Android Debug Bridge.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "Notes/Android/Android Debug Bridge.md",
     "Notes/Libraries/GLFW.md",
     "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224232928350.png",
     "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
