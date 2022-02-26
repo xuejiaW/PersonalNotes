@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+            "file": "Notes/Obsidian/Commands.md",
             "mode": "preview",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GLFW",
+                "query": "vimrc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -71,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
+                "file": "Notes/Obsidian/Commands.md"
               }
             }
           },
@@ -92,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Obsidian/Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Obsidian/Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Notes/Obsidian/Commands.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,15 +165,15 @@
   },
   "active": "5fa089d5159cd232",
   "lastOpenFiles": [
+    "Notes/Obsidian/Commands.md",
+    "Notes/Obsidian/Plugins.md",
+    "Books/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Notes/Android/Android Debug Bridge.md",
     "Notes/Libraries/GLFW.md",
     "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224232928350.png",
     "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png",
     "Books/Vulkan Tutorial/Ch 01 Overview.md",
-    "吃.md",
-    "Books/Learn OpenGL/Ch 00 Creating a Window.md",
-    "Notes/Libraries/GLM.md",
-    "Books/Learn OpenGL/Ch 05 Transformations.md"
+    "吃.md"
   ]
 }
