@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/CSharp/LINQ.md",
+            "file": "Notes/Coding Style.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/CSharp/LINQ.md"
+                "file": "Notes/Coding Style.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/CSharp/LINQ.md",
+                "file": "Notes/Coding Style.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/CSharp/LINQ.md",
+                "file": "Notes/Coding Style.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/CSharp/LINQ.md",
+                "file": "Notes/Coding Style.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,6 +163,8 @@
   },
   "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
+    "Notes/Coding Style.md",
+    "Books/Head First Design Patterns/Design Principles.md",
     "Notes/CSharp/LINQ.md",
     "TO-DO.md",
     "Notes/Tools/Visual Studio.md",
@@ -170,8 +172,6 @@
     "Notes/Tools/Untitled.md",
     "Notes/Tools/Visual Studio Code.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-    "Notes/Tools/Obsidian/Commands.md",
-    "Notes/Tools/Obsidian/Plugins.md",
-    "Books/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md"
+    "Notes/Tools/Obsidian/Commands.md"
   ]
 }
