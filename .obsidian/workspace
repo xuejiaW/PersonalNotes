@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Coding Style.md",
+            "file": "Notes/Code Inspection.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Coding Style.md"
+                "file": "Notes/Code Inspection.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Coding Style.md",
+                "file": "Notes/Code Inspection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Coding Style.md",
+                "file": "Notes/Code Inspection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Coding Style.md",
+                "file": "Notes/Code Inspection.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,7 +163,7 @@
   },
   "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
-    "Notes/Coding Style.md",
+    "Notes/Code Inspection.md",
     "Books/Head First Design Patterns/Design Principles.md",
     "Notes/CSharp/LINQ.md",
     "TO-DO.md",
