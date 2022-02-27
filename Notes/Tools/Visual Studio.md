@@ -93,6 +93,16 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 ### Settings
 
+#### 关闭命令行栏
+
+默认设置下，在窗口的最下方会有一条命令行栏供输入 Vim 的命令：
+
+![ 500](assets/Visual%20Studio/image-20220227165907558.png)
+
+此时
+
+
+
 ### Fixing
 
 1.  `<C-k>` 无效

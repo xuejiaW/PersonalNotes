@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Code Inspection",
+  "attachmentFolderPath": "./assets/Visual Studio",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
