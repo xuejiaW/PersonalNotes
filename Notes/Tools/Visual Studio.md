@@ -106,8 +106,6 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 ![| 500](assets/Visual%20Studio/image-20220227170236953.png)
 
 
-
-
 ### Fixing
 
 1.  `<C-k>` 无效
@@ -116,7 +114,7 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 ## VSColorOutput
 
-VSColorOutput[^3]
+VSColorOutput[^3] 插件可以让输出的 Log 有颜色区分，如下所示：
 ![](assets/Visual%20Studio/image-20220227201729969.png)
 
 
