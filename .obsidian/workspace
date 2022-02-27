@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Visual Studio.md",
+            "file": "Notes/Libraries/GLFW.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vimrc",
+                "query": "mingw32-make",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md"
+                "file": "Notes/Libraries/GLFW.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Libraries/GLFW.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,15 +164,15 @@
   },
   "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
+    "Notes/Libraries/GLFW.md",
+    "Books/Learn OpenGL/Ch 00 Creating a Window.md",
+    "Notes/Tools/Chocolatey.md",
     "Notes/Tools/Visual Studio.md",
     "Notes/Code Inspection.md",
     "Books/Head First Design Patterns/Design Principles.md",
     "Notes/CSharp/LINQ.md",
     "TO-DO.md",
     "Notes/Tools/Power Toys.md",
-    "Notes/Tools/Untitled.md",
-    "Notes/Tools/Visual Studio Code.md",
-    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-    "Notes/Tools/Obsidian/Commands.md"
+    "Notes/Tools/Untitled.md"
   ]
 }
