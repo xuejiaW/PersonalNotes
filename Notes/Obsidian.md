@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2022-01-05
-updated: 2022-01-20
+updated: 2022-02-27
 ---
 
 
@@ -11,13 +11,13 @@ Obsidian 中所有设置都是基于 `Valut（库）`的。所有的设置信息
 快捷键的更改时全局的改动
 ```
 
-[Commands](Obsidian/Commands.md)：Obsidian 中的指令
-[CSS Snippets](Obsidian/CSS%20Snippets.md)：Obsidian 中自定义 CSS 代码块
-[Image Gallery](Obsidian/Image%20Gallery.md)：Obsidian 中实现无缝的并排图片的方法
-[Tag](Obsidian/Tag.md)：Obsidian 中 Tag 的使用
-[Plugins](Obsidian/Plugins.md)：Obsidian 中核心插件的说明
-[Settings](Obsidian/Settings.md)：Obsidian 中设置相关的说明
-[MetaData](Obsidian/MetaData.md)：Obsidian 中关于 Metadata 的说明
+[Commands](Tools/Obsidian/Commands.md)：Obsidian 中的指令
+[CSS Snippets](Tools/Obsidian/CSS%20Snippets.md)：Obsidian 中自定义 CSS 代码块
+[Image Gallery](Tools/Obsidian/Image%20Gallery.md)：Obsidian 中实现无缝的并排图片的方法
+[Tag](Tools/Obsidian/Tag.md)：Obsidian 中 Tag 的使用
+[Plugins](Tools/Obsidian/Plugins.md)：Obsidian 中核心插件的说明
+[Settings](Tools/Obsidian/Settings.md)：Obsidian 中设置相关的说明
+[MetaData](Tools/Obsidian/MetaData.md)：Obsidian 中关于 Metadata 的说明
 
 # 教程资源
 
