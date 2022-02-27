@@ -91,6 +91,8 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 [keithn/vsvimguide: Guide to VsVim and Resharper (github.com)](https://github.com/keithn/vsvimguide)
 
+### Settings
+
 ### Fixing
 
 1.  `<C-k>` 无效
