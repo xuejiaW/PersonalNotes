@@ -114,6 +114,12 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
     因为 Visual Studio 有大量的快捷键依赖 `Ctrl-k`，而这个会造成与 Vim 按键的冲突。
     为了解决这个问题，可以先在 [Keymap](#Keymap) 中先将任意按键的快捷键设定为 `Ctrl-k`，然后再进行Remove。
 
+## VSColorOutput
+
+VSColorOutput[^3]
+![](assets/Visual%20Studio/image-20220227201729969.png)
+
+
 
 # Make-File Project
 
@@ -123,3 +129,4 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 [^1]: [Auto Save File - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=HRai.AutoSaveFile)
 [^2]: [Release VS2022 Build · jagt/vs-NavigateTabGroups (github.com)](https://github.com/jagt/vs-NavigateTabGroups/releases/tag/vs2022)
+[^3]: [mike-ward/VSColorOutput64 (github.com)](https://github.com/mike-ward/VSColorOutput64)
