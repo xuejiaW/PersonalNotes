@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Ch 02 Development environment",
+  "attachmentFolderPath": "./assets/Visual Studio",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,

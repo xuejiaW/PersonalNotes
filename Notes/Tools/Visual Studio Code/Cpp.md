@@ -2,11 +2,11 @@
 tags:
     - VSCode
 created: 2021-11-21
-updated: 2022-01-30
+updated: 2022-02-27
 cssclass: [table-border]
 ---
 
-> 本部分说明在 [VSCode](../VSCode.md) 中编写 C++ 项目相关的配置
+> 本部分说明在 [Visual Studio Code](../Visual%20Studio%20Code.md) 中编写 C++ 项目相关的配置
 
 # Overview
 

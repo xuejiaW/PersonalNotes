@@ -2,7 +2,7 @@
 tags:
     - Obsidian
 created: 2021-11-21
-updated: 2022-02-08
+updated: 2022-02-27
 ---
 
 在 `Settings/CorePlugins` 中选择启用或关闭 [Obsidian](../Obsidian.md) 官方的插件，在 `Settings/Community Plugins` 中安装和搜索社区的插件。
@@ -20,7 +20,7 @@ updated: 2022-02-08
 
 ## Quick Switcher
 
-该插件开启后，可通过默认为 `Ctrl+O` 的快捷键快速选择文件跳转，类似于 [VSCode](../VSCode.md) 中的 `Go to file (Ctrl + P)` 功能。
+该插件开启后，可通过默认为 `Ctrl+O` 的快捷键快速选择文件跳转，类似于 [Visual Studio Code](../Tools/Visual%20Studio%20Code.md) 中的 `Go to file (Ctrl + P)` 功能。
 
 可在 `Settings/Quick switcher / Quick Switcher / Show attachments` 中选择跳转文件时，是否要展示附件文件。
 
@@ -286,7 +286,7 @@ console.log("Hello!");
 ## Custom Attachment Location[^2] 
 
 该插件控制在
-Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中的插件 [Extensions](../VSCode/Extensions.md)
+Obsidian 中插入图片后图片资源存储地址，效果类似于 VSCode 中的插件 [Extensions](../Tools/Visual%20Studio%20Code/Extensions.md)
 
 当安装完成后，可直接通过 `Ctrl+V` 在界面中以 markdown 格式黏贴图片，图片的源文件会被保存在 `./asset/` 目录下的与文件同名的子文件夹下。
 
