@@ -91,6 +91,8 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 [keithn/vsvimguide: Guide to VsVim and Resharper (github.com)](https://github.com/keithn/vsvimguide)
 
+### .vsvimrc
+
 ### Settings
 
 #### 关闭命令行栏
@@ -99,7 +101,10 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 
 ![ 500](assets/Visual%20Studio/image-20220227165907558.png)
 
-此时
+该选项可以通过在 [vsvimrc](#vsvimrc) 中设置 `:set novsvim_useeditorcommandmargin` 或者通过将 ` Tools -> Options -> VsVim -> General -> Use Editor Command Margin` 设置为 False 隐藏。当隐藏后，命令将显示在界面最下方的 Status Bar 中：
+
+![| 500](assets/Visual%20Studio/image-20220227170236953.png)
+
 
 
 
