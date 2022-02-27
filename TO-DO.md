@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2022-01-28
+updated: 2022-02-27
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
@@ -29,3 +29,9 @@ updated: 2022-01-28
 
 - [ ] Overdraw
  [Unity3D 研究院之 LWRP 中计算准确 overdraw（一百一十）](https://www.xuanyusong.com/archives/4674)
+
+- [ ] Code Style
+    [Use EditorConfig | ReSharper (jetbrains.com)](https://www.jetbrains.com/help/resharper/Using_EditorConfig.html)
+    [.NET code style rule options - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?view=vs-2022)
+    [Code-style naming rules - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules)
+    [Naming style | ReSharper (jetbrains.com)](https://www.jetbrains.com/help/resharper/Coding_Assistance__Naming_Style.html#configure)
