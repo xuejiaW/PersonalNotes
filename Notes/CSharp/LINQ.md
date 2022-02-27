@@ -2,7 +2,7 @@
 tags:
     - C#
 created: 2022-02-08
-updated: 2022-02-10
+updated: 2022-02-27
 ---
 
 # Code Snippets
@@ -53,7 +53,7 @@ var firstThreeItems = itemSizeArray.Take(3);
 从容器开端跳过 x 个元素，如下：
 
 ```csharp
-var forthFifthItems= itemSizeArray.Skip(3).Take(2);
+var forthFifthItems = itemSizeArray.Skip(3).Take(2);
 ```
 
 ## Sum
@@ -62,3 +62,6 @@ var forthFifthItems= itemSizeArray.Skip(3).Take(2);
 ```csharp
 float sum = itemSizeArray.Sum();
 ```
+
+## Any
+

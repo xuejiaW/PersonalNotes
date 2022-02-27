@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TO-DO.md",
+            "file": "Notes/CSharp/LINQ.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO-DO.md"
+                "file": "Notes/CSharp/LINQ.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/CSharp/LINQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/CSharp/LINQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "TO-DO.md",
+                "file": "Notes/CSharp/LINQ.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,6 +163,7 @@
   },
   "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
+    "Notes/CSharp/LINQ.md",
     "TO-DO.md",
     "Notes/Tools/Visual Studio.md",
     "Notes/Tools/Power Toys.md",
@@ -171,7 +172,6 @@
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Notes/Obsidian/Commands.md",
     "Notes/Obsidian/Plugins.md",
-    "Books/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
-    "Notes/Android/Android Debug Bridge.md"
+    "Books/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md"
   ]
 }
