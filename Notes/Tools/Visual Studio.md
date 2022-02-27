@@ -114,6 +114,11 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
     因为 Visual Studio 有大量的快捷键依赖 `Ctrl-k`，而这个会造成与 Vim 按键的冲突。
     为了解决这个问题，可以先在 [Keymap](#Keymap) 中先将任意按键的快捷键设定为 `Ctrl-k`，然后再进行Remove。
 
+
+# Make-File Project
+
+[(6条消息) 【Android 逆向】Android 进程注入工具开发 ( Visual Studio 开发 Android NDK 应用 | 使用 Makefile 构建 Android 平台 NDK 应用 )_让 学习 成为一种 习惯 ( 韩曙亮 の 技术博客 )-CSDN博客](https://blog.csdn.net/shulianghan/article/details/121087484)
+
 # Referencce
 
 [^1]: [Auto Save File - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=HRai.AutoSaveFile)
