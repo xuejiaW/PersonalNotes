@@ -52,6 +52,10 @@ updated: 2022-02-27
 
 `Edit.LineDown`，`Edit.LineUp`
 
+```ad-note
+该命令只用于代码的只能提示，但如跳转到目标文件这样的窗口就无法使用该命令选择，因此可以使用 [Keyboard Manager](Power%20Toys.md#Keyboard%20Manager) 全局替换上下按键。
+```
+
 ### 注释
 
 `Edit.CommentSelection`

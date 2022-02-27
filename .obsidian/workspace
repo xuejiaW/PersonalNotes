@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "5fa089d5159cd232",
+        "id": "d7422ee19d258cbc",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -161,17 +161,17 @@
     "direction": "horizontal",
     "width": 509.5
   },
-  "active": "5fa089d5159cd232",
+  "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
     "Notes/Tools/Visual Studio.md",
+    "Notes/Tools/Power Toys.md",
+    "Notes/Tools/Untitled.md",
     "Notes/Tools/Visual Studio Code.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Notes/Obsidian/Commands.md",
     "Notes/Obsidian/Plugins.md",
     "Books/Learn Vim (The Smart Way)/Ch 01 Starting Vim.md",
     "Notes/Android/Android Debug Bridge.md",
-    "Notes/Libraries/GLFW.md",
-    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224232928350.png",
-    "Books/Vulkan Tutorial/assets/Ch 02 Development environment/image-20220224233114393.png"
+    "Notes/Libraries/GLFW.md"
   ]
 }
