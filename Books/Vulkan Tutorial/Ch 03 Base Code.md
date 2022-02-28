@@ -51,4 +51,7 @@ int main()
 }
 ```
 
-其中所有初始化操作会放到 `initVulkan` 中，渲染的zhu
+其中所有初始化操作会放到 `initVulkan` 中，渲染的操作会被放置到 `mainLoop` 中，当窗口关闭时 `cleanup` 会保证相应资源的释放。
+
+# Resource management
+
