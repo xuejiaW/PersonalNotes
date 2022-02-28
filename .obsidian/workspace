@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Code Inspection.md",
+            "file": "Notes/Unity/Scripting Architecture/CSharp.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -50,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -71,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Code Inspection.md"
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md"
               }
             }
           },
@@ -92,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Code Inspection.md",
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,13 +110,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Code Inspection.md",
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "e3e645e0ac60b225",
@@ -127,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Code Inspection.md",
+                "file": "Notes/Unity/Scripting Architecture/CSharp.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,6 +166,8 @@
   },
   "active": "e19a0c7fd64b9c42",
   "lastOpenFiles": [
+    "Notes/Unity/Scripting Architecture/CSharp.md",
+    "Notes/Unity/Scripting Architecture/assets/CSharp/image-20211213084706350.png",
     "Notes/Code Inspection.md",
     "TO-DO.md",
     "Notes/Tools/Visual Studio.md",
@@ -171,8 +175,6 @@
     "Notes/Libraries/GLFW.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Tools/Chocolatey.md",
-    "Books/Head First Design Patterns/Design Principles.md",
-    "Notes/CSharp/LINQ.md",
-    "Notes/Tools/Power Toys.md"
+    "Books/Head First Design Patterns/Design Principles.md"
   ]
 }
