@@ -66,6 +66,10 @@ Visual 自带的 `Edit.CommentSelection` 当遇到空白行时无法正常的处
 
 # Settings
 
+## 只编译特定项目
+
+可以对解决方案（Solution）
+
 # Extensions
 
 ## AutoSave
