@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Visual Studio.md",
+            "file": "Notes/Android/EGL.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mingw32-make",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,13 +50,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -72,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md"
+                "file": "Notes/Android/EGL.md"
               }
             }
           },
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/EGL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/EGL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/EGL.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -165,6 +163,7 @@
   },
   "active": "e19a0c7fd64b9c42",
   "lastOpenFiles": [
+    "Notes/Android/EGL.md",
     "Notes/Tools/Visual Studio.md",
     "Notes/Libraries/GLFW.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
@@ -173,7 +172,6 @@
     "Books/Head First Design Patterns/Design Principles.md",
     "Notes/CSharp/LINQ.md",
     "TO-DO.md",
-    "Notes/Tools/Power Toys.md",
-    "Notes/Tools/Untitled.md"
+    "Notes/Tools/Power Toys.md"
   ]
 }
