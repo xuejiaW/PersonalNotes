@@ -21,10 +21,17 @@ private GameObject m_GameObject; // Game object hit by the raycast
 
 ## Public
 
-驼峰命名，第一个单词首字母小写， `lowerCamelCase`：
+`lowerCamelCase`：
 
 ```csharp
 public float distance;
 ```
 
-## Property
+# Property
+
+无论大小写，都以 `lowerCamelCase` 形式
+
+```csharp
+public bool isValid => module != null && gameObject != null;
+```
+
