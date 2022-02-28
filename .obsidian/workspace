@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-            "mode": "preview",
+            "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -72,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
+                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md"
               }
             }
           },
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -165,15 +165,15 @@
   },
   "active": "d7422ee19d258cbc",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial/Ch 03 Base Code.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "Books/Vulkan Tutorial/Ch 01 Overview.md",
     "Notes/Tools/Visual Studio.md",
     "Notes/Libraries/GLFW.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Tools/Chocolatey.md",
     "Notes/Code Inspection.md",
     "Books/Head First Design Patterns/Design Principles.md",
-    "Notes/CSharp/LINQ.md",
-    "TO-DO.md",
-    "Notes/Tools/Power Toys.md"
+    "Notes/CSharp/LINQ.md"
   ]
 }

@@ -2,7 +2,7 @@
 tags:
     - Vulkan
 created: 2022-02-24
-updated: 2022-02-25
+updated: 2022-02-28
 ---
 
 # Visual Studio
@@ -62,6 +62,46 @@ updated: 2022-02-25
 最后选择支持 `C++ 17` 的编译器：
 ![](assets/Ch%2002%20Development%20environment/image-20220224233429504.png)
 
-此时运行程序，命令行中应当显示支持的拓展数目：
+此时在 `main.cpp` 中添加如下内容：
+```cpp
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/vec4.hpp>
+#include <glm/mat4x4.hpp>
+
+#include <iostream>
+
+int main() {
+    glfwInit();
+
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan window", nullptr, nullptr);
+
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
+
+    std::cout << extensionCount << " extensions supported\n";
+
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
+
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
+
+    glfwDestroyWindow(window);
+
+    glfwTerminate();
+
+    return 0;
+}
+
+```
+
+并运行程序，命令行中应当显示支持的拓展数目：
 ![](assets/Ch%2002%20Development%20environment/image-20220225000216293.png)
 
