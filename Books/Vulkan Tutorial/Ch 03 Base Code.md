@@ -7,4 +7,48 @@ tags:
 
 # General structure
 
+三角形应用的基本代码结构如下所示：
+```cpp
+class HelloTriangleApplication
+{
+public:
+	void run();
 
+private:
+	void initVulkan();
+	void mainLoop();
+	void cleanup();
+};
+
+void HelloTriangleApplication::run()
+{
+	initVulkan();
+	mainLoop();
+	cleanup();
+}
+
+void HelloTriangleApplication::initVulkan() { }
+
+void HelloTriangleApplication::mainLoop() { }
+
+void HelloTriangleApplication::cleanup() { }
+
+int main()
+{
+    HelloTriangleApplication app;
+
+    try
+    {
+        app.run();
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
+}
+```
+
+其中所有初始化操作会放到 `initVulkan` 中，渲染的zhu
