@@ -119,6 +119,10 @@ VSColorOutput[^3] 插件可以让输出的 Log 有颜色区分，如下所示：
 
 其中蓝色的捐赠信息，可以在 `Options/VSColorOutput64/General`中将 `Yes, I Donated!` 设为 `True` 关闭。
 
+## PeasyMotion
+
+提供类似于 Vim 中 EasyMotion 的功能，对于根据两个字符跳转，可以使用命令 `Tools.InvokePeasyMotionTwoCharJump`
+
 # Make-File Project
 
 [(6条消息) 【Android 逆向】Android 进程注入工具开发 ( Visual Studio 开发 Android NDK 应用 | 使用 Makefile 构建 Android 平台 NDK 应用 )_让 学习 成为一种 习惯 ( 韩曙亮 の 技术博客 )-CSDN博客](https://blog.csdn.net/shulianghan/article/details/121087484)
@@ -128,3 +132,4 @@ VSColorOutput[^3] 插件可以让输出的 Log 有颜色区分，如下所示：
 [^1]: [Auto Save File - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=HRai.AutoSaveFile)
 [^2]: [Release VS2022 Build · jagt/vs-NavigateTabGroups (github.com)](https://github.com/jagt/vs-NavigateTabGroups/releases/tag/vs2022)
 [^3]: [mike-ward/VSColorOutput64 (github.com)](https://github.com/mike-ward/VSColorOutput64)
+[^4]: [PeasyMotion - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=maksim-vorobiev.PeasyMotion2022)
