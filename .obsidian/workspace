@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Coding Conventions/EditorConfig.md",
+            "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -50,11 +50,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/EditorConfig.md"
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md"
               }
             }
           },
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/EditorConfig.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/EditorConfig.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/EditorConfig.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,15 +166,15 @@
   },
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
+    "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
+    "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
     "Notes/Tools/Coding Conventions/EditorConfig.md",
     "Notes/Tools/Coding Conventions/C++ Naming Style.md",
     "Notes/Tools/Coding Conventions/Clang-Format.md",
-    "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
     "Notes/Tools/Visual Studio (DESKTOP-98TEV03's conflicted copy 2022-02-28).md",
     "Notes/Tools/Visual Studio.md",
     "TO-DO.md",
     "Notes/Unity/Scripting Architecture/CSharp.md",
-    "Notes/Unity/Scripting Architecture/assets/CSharp/image-20211213084706350.png",
-    "Notes/Android/EGL.md"
+    "Notes/Unity/Scripting Architecture/assets/CSharp/image-20211213084706350.png"
   ]
 }
