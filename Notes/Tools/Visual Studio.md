@@ -117,7 +117,7 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 VSColorOutput[^3] 插件可以让输出的 Log 有颜色区分，如下所示：
 ![](assets/Visual%20Studio/image-20220227201729969.png)
 
-
+其中蓝色的捐赠信息，可以在 `Options/VSColorOutput64/General`中将 `Yes, I Donated!` 设为 `True` 关闭。
 
 # Make-File Project
 
