@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/CSharp Naming Style",
+  "attachmentFolderPath": "./assets/CSharp Syntax Style",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
