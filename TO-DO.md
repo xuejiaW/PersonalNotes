@@ -1,6 +1,6 @@
 ---
 created: 2021-12-08
-updated: 2022-02-27
+updated: 2022-02-28
 ---
 - [ ] Switch Expression 笔记整理
  [C# 8.0: Pattern Matching in Switch Expressions – Thomas Claudius Huber](https://www.thomasclaudiushuber.com/2021/02/25/c-9-0-pattern-matching-in-switch-expressions/)
@@ -35,3 +35,7 @@ updated: 2022-02-27
     [.NET code style rule options - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?view=vs-2022)
     [Code-style naming rules - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules)
     [Naming style | ReSharper (jetbrains.com)](https://www.jetbrains.com/help/resharper/Coding_Assistance__Naming_Style.html#configure)
+
+
+- C# Pattern
+    [Patterns - C# reference | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns)

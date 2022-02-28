@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Visual Studio.md",
+            "file": "Notes/Code Inspection.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md"
+                "file": "Notes/Code Inspection.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Code Inspection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Code Inspection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Code Inspection.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,15 +164,15 @@
   },
   "active": "e19a0c7fd64b9c42",
   "lastOpenFiles": [
+    "Notes/Code Inspection.md",
+    "TO-DO.md",
     "Notes/Tools/Visual Studio.md",
     "Notes/Android/EGL.md",
     "Notes/Libraries/GLFW.md",
     "Books/Learn OpenGL/Ch 00 Creating a Window.md",
     "Notes/Tools/Chocolatey.md",
-    "Notes/Code Inspection.md",
     "Books/Head First Design Patterns/Design Principles.md",
     "Notes/CSharp/LINQ.md",
-    "TO-DO.md",
     "Notes/Tools/Power Toys.md"
   ]
 }
