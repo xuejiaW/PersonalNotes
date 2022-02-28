@@ -66,9 +66,11 @@ Visual 自带的 `Edit.CommentSelection` 当遇到空白行时无法正常的处
 
 # Settings
 
-## 只编译特定项目
+## 只构建特定项目
 
-可以对解决方案（Solution）
+可以对`解决方案（Solution）`右键打开 `Conguration Manager` 配置需要构建的项目：
+![](assets/Visual%20Studio/image-20220228182752223.png)
+
 
 # Extensions
 
@@ -90,6 +92,14 @@ Visual Studio 默认不支持在 Tab Groups 间切换，因此需要 NavigateTab
 | `Tools.NavigateTabGroups.Previous` | Moves to **previous** tab group in the list              | 
 
 ## ReSharper
+
+### Push-to-Hint
+
+对于 `Inlay Hints` 可以选择 `Push-to-Hint` 模式，仅在长按 `Ctrl` 后才显示，`Push-to-Hint` 模式也可以通过窗机 `Ctrl` 进行切换。
+
+```ad-error
+`Push-to-Hint` 未找到可用的 Command 命令进行切换
+```
 
 ## VsVim
 
