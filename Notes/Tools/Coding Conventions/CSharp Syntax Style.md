@@ -11,13 +11,13 @@ updated: 2022-03-01
 ### Do
 
 ```csharp
+public TextGenerator cachedTextGeneratorForLayout => m_TextCacheForLayout ??= new TextGenerator();
 ```
 
 ### Do Not
 ```csharp
 public TextGenerator cachedTextGeneratorForLayout => m_TextCacheForLayout ?? (m_TextCacheForLayout = new TextGenerator());
 ```
-
 
 # Code body
 
