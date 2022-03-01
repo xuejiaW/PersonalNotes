@@ -10,19 +10,16 @@ updated: 2022-03-01
 ```
 
 # Field
+
 ## Non-Static
 
-`Private` 字段以
-
-以 `m_` 作为前缀，后续以驼峰命名，第一个单词首字母大写：`m_UpperCamelCase`  
+`Private` 字段 以 `m_` 作为前缀，后续以驼峰命名，第一个单词首字母大写：`m_UpperCamelCase`  
 
 ```csharp
 private GameObject m_GameObject; // Game object hit by the raycast
 ```
 
-## Public
-
-`lowerCamelCase`：
+`Public`字段以  `lowerCamelCase` 形式：
 
 ```csharp
 public float distance;
