@@ -68,7 +68,19 @@ int this[int i]
 
 ## Explicit/Implicit modier
 
-y
+永远显示定义修饰符
+
+### Do
+```csharp
+private int a;
+private int b;
+```
+
+### Do not
+```csharp
+int a;
+private int b;
+```
 
 ## Order
 
