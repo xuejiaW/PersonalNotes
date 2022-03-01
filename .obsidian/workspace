@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e19a0c7fd64b9c42",
+        "id": "0966512c7544c4cd",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
+            "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -50,11 +50,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Memory/Boehm GC algorithm.md"
+                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md"
               }
             }
           },
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Memory/Boehm GC algorithm.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -162,17 +164,17 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "e19a0c7fd64b9c42",
+  "active": "0966512c7544c4cd",
   "lastOpenFiles": [
-    "Notes/Unity/Memory/Boehm GC algorithm.md",
-    "Notes/Unity/Memory.md",
-    "Notes/Unity/Memory/Garbage Collector.md",
-    "Notes/Unity/Scripting Architecture/CSharp.md",
-    "Notes/Unity/Scripting Architecture/assets/CSharp/image-20211213084706350.png",
-    "Notes/Code Inspection.md",
-    "TO-DO.md",
+    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+    "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
+    "Notes/Tools/Coding Conventions/C++ Naming Style.md",
+    "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
+    "Notes/Tools/Coding Conventions/EditorConfig.md",
+    "Notes/Tools/Coding Conventions/Clang-Format.md",
+    "Notes/Tools/Visual Studio (DESKTOP-98TEV03's conflicted copy 2022-02-28).md",
     "Notes/Tools/Visual Studio.md",
-    "Notes/Android/EGL.md",
-    "Notes/Libraries/GLFW.md"
+    "TO-DO.md",
+    "Notes/Unity/Scripting Architecture/CSharp.md"
   ]
 }
