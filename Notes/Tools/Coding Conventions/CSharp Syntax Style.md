@@ -4,6 +4,21 @@ created: 2022-03-01
 updated: 2022-03-01
 ---
 
+# Assignment
+
+## 尽可能使用 Compound 形式
+
+### Do
+
+```csharp
+```
+
+### Do Not
+```csharp
+public TextGenerator cachedTextGeneratorForLayout => m_TextCacheForLayout ?? (m_TextCacheForLayout = new TextGenerator());
+```
+
+
 # Code body
 
 `Code body`  是针对函数体的设置
