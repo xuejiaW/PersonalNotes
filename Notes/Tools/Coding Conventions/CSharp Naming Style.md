@@ -29,9 +29,19 @@ public float distance;
 
 # Property
 
-无论大小写，都以 `lowerCamelCase` 形式
+无论作用域，都以 `lowerCamelCase` 形式
 
 ```csharp
 public bool isValid => module != null && gameObject != null;
 ```
 
+# Method
+
+无论作用域，都以 `UpperCamelCase` 形式
+
+```csharp
+protected Text()
+{
+    useLegacyMeshGeneration = false;
+}
+```
