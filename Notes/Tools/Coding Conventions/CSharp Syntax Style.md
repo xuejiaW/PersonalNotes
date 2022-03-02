@@ -63,7 +63,9 @@ int this[int i]
 }
 ```
 
-# 
+# Var
+
+不要使用 `Var` 关键字
 
 # Modifer
 
