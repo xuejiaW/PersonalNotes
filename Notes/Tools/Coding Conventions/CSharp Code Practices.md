@@ -2,7 +2,7 @@
 tags:
     - Coding-Conventions
 created: 2022-02-27
-updated: 2022-03-02
+updated: 2022-03-03
 ---
 
 # Invert 'if' statement to reduce nesting
