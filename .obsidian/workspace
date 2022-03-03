@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Notes/Unity/Android Symbols.md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -114,8 +115,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "e3e645e0ac60b225",

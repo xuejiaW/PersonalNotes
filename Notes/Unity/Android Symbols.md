@@ -23,19 +23,10 @@ updated: 2022-03-03
 
 其中如 `0000000001063c34`的字符即为内存地址，如`/data/app/com.yvr.home--uTefOl7d6zOeo_9fsRfrg==/lib/arm64/libil2cpp.so`的字符表示内存地址对应的 `.so`库。
 
-  
-  
-
 本文章旨在说明将这些近乎不可读的内存地址转换到具体函数符号表的方式，同时也会阐述 Log 中相关 .so 文件的含义。
 
-​
 
-  
-
-## 异常环境创建
-
-  
-  
+# 异常环境创建
 
 为方便说明，首先需要使用如下的 C# 代码创建出一个会 Crash 的 Unity 应用，如下所示。
 
@@ -53,26 +44,14 @@ protected override void OnInit()
 
 }
 
-  
-
 // YVRManager.cs
 
 public float batteryLevel => hmdManager.batteryLevel;
 
 ```
-
-​
-
-  
-
 其中 `Il2CppSetOption`Attribute 关闭了 Unity 对 NullReference 的异常捕捉，因此当代码中访问了空对象应用会直接 Crash。
 
-​
-
-  
-
 此时运行应用后会产生如下的 Crash Log：
-
 ```text
 
  *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
@@ -181,87 +160,39 @@ public float batteryLevel => hmdManager.batteryLevel;
 
 ```
 
-​
-
-  
 
 可以看到相关的调用堆栈中主要涉及了 `libunity.so`和 `libil2cpp.so`两个文件。
 
-​
-
-  
-
-## .so
-
-  
-  
-
-### libil2cpp.so
-
-  
-  
+# .so
+## libil2cpp.so
 
 当应用的 Scripting Backend 设为 IL2CPP 后，Unity 工程中的 C# 代码在编译时都会转换为 C++ 代码并被编译为 `libil2cpp.so`文件。
 
-​
-
-  
-
 如果对编译出的 `.apk`文件进行解压缩，可以在 `lib\<architecture>\`目录下找到该文件。如目标设备架构为 ARM64，则文件地址为 `lib\arm64-v8a\libil2cpp.so`。
 
-​
-
-  
-
-:::warning
-
+```ad-warning
 每一次修改 Unity 工程后都会编译产生不同的 `libil2cpp.so`
+```
 
-:::
-
-​
-
-  
-
-### libunity.so
+## libunity.so
 
 `libunity.so`中包含了 Unity 引擎工程的 Cpp 实现，通常可以在 Unity 安装路径下找到。但 Unity 针对 Release / Debug 模式，Scripting Backend （IL2Cpp / Mono）以及目标设备架构的不同组合，提供了不同的 `libunity.so`文件，即同一个 Unity 版本下会存在多个 `libUnity.so`文件，如下所示：
-
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/1513872/1646288396885-0e741db6-e66d-43f0-95d2-56d3741dc7e7.png#clientId=u415ca09e-d538-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=227&id=u744678a4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=1044&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44461&status=done&style=none&taskId=u54367b88-10f6-4e1d-80c5-fd24c209d1f&title=&width=1044)
-
-  
-  
+![](assets/Android%20Symbols/image-20220303193842523.png)
 
 例如产生了 Crash 的应用使用的是 Unity 2020.3.25f1c1 版本，使用了 Release 模式，Scripting Backend 设定为 IL2CPP，目标设备架构为移动设备的 64 位，则打包在 apk 中 `libunity.so`对应在 Unity 安装路径下的文件地址位：
-
 `C:\Program Files\Unity\Hub\Editor\2020.3.25f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Release\Libs\arm64-v8a\libunity.so`
 
-  
-  
-
-## .sym.so
-
-  
-  
+# .sym.so
 
 `.so` 文件可以用以反编译，但无法直接通过 `.so`文件将内存地址转换为函数符号。
 
 具体转换时需要用到 `.so`文件对应的 `.sym.so`文件。
 
-  
-  
-
-### libil2cpp.sym.so
-
-  
-  
+## libil2cpp.sym.so
 
 `libil2cpp.sym.so`默认不会生成，需要在打包时勾选 `Create symbols.zip`，如下所示：
+![](assets/Android%20Symbols/image-20220303193907152.png)
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/1513872/1646299055999-affa743b-4cc0-4321-8f61-e8bab908a711.png#clientId=u415ca09e-d538-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=415&id=u02874793&margin=%5Bobject%20Object%5D&name=image.png&originHeight=415&originWidth=627&originalType=binary&ratio=1&rotation=0&showTitle=false&size=54488&status=done&style=none&taskId=u4f69aba2-e059-4851-9f07-09664217b4f&title=&width=627)
-
-  
-  
 
 如果是脚本打包，则需要添加如下命令：
 
@@ -271,132 +202,60 @@ EditorUserBuildSettings.androidCreateSymbolsZip = true;
 
 ```
 
-  
-  
 
 此时编译 apk 后，会在生成 apk 的同目录下产生 `<apkName>.symbols.zip`文件，解压该文件后可在 `<apkName>.symbols/<Architecture>/`目录下找到对应文件，如 `crashDemo.symbols\arm64-v8a\libil2cpp.sym.so`。
 
-  
-  
-
-:::warning
-
+```ad-warning
 与 `libil2cpp.so`类似，每一次项目修改后编译生成的 `libil2cpp.sym.so`也都不同。
+```
 
-:::
-
-  
-  
-
-### libunity.sym.so
-
-  
-  
+## libunity.sym.so
 
 `libunity.sym.so`与 `libunity.so`类似，都是在 Unity 安装目录下，同时也都会根据项目设置的不同进行区分。
 
-​
-
-  
-
 例如产生了 Crash 的应用使用的是 Unity 2020.3.25f1c1 版本，使用了 Release 模式，Scripting Backend 设定为 IL2CPP，目标设备架构为移动设备的 64 位，则需要使用的 `libunity.sym.so`路径为：
-
 `‪C:\Program Files\Unity\Hub\Editor\2020.3.25f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\il2cpp\Release\Symbols\arm64-v8a\libunity.sym.so`
-
-​
-
-  
-
-​
-
-  
 
 如果在工程的 `Project Settings -> Player -> Android -> Other Settings -> Otiomization -> Strip Engine Code`选项被勾选上，那么解析符号表时需要的 `libunity.sym.so`就不再是 Unity 安装目录下的源文件。此时同样需要在打包时生成 `symbols.zip`文件，在解压缩后可找到目标文件 `<apkName>.symbols/<Architecture>/libunity.sym.so`。
 
-​
 
-  
-
-## 使用 .sym.so 找寻函数路径
-
-  
-  
+# 使用 .sym.so 找寻函数路径
 
 当有了正确的 `.sym.so`时，可以使用如下的命令将内存地址转换为函数路径：
 
 ```bash
-
 <add2line> -f -C -e <.sym.so Path> <memory address>
-
 ```
-
-  
-  
 
 其中 `addr2line`为 Android NDK 中提供的将内存地址转换为函数路径的工具，其使用的版本必须和 Unity 编译时使用的 NDK 版本匹配。如 Unity 工程使用的 NDK 版本为 `19.0.5232133`则需要使用的 `addr2line`工具地址应为 `<ndkPath>\19.0.5232133\toolchains\aarch64-linux-android-4.9\prebuilt\windows-x86_64\bin\aarch64-linux-android-addr2line.exe`。
 
-​
-
-  
-
-:::warning
-
+```ad-warning
 注意需要使用 aarch64-linux-android-addr2line.exe  而不是 arm-linux-androideabi-addr2line.exe
-
-:::
-
-​
-
-  
+```
 
 `-f`，`-C`，`-e`分别为 `add2line`工具需要的 Flag，其含义分别为：
-
-  
-
 - `-f`：需要显示函数名
 
 - `-C`：标准化函数名（去除一些无意义字符）
 
 - `-e`：需要设置输入的 `.sym.so`文件
 
-  
-
-​
-
-  
-
 `.sym.so Path`即为上述找寻到的 `.sym.so`文件地址
-
-​
-
-  
 
 `memory address`即为需要找寻的内存地址。
 
-​
-
-  
-
 一个完整的将内存地址转换为函数路径的调用如下：
-
-```latex
-
+```text
 C:\Android\android-sdk\ndk\19.0.5232133\toolchains\aarch64-linux-android-4.9\prebuilt\windows-x86_64\bin\aarch64-linux-android-addr2line.exe -f -e D:\YUI_Home\Build\2022_02_27-1.6-v1.symbols\arm64-v8a\libil2cpp.sym.so 0000000001063c34
 
 ```
 
 其输出结果如下：
-
-```latex
-
+```text
 YVRManager_t4874062D82B0C0D2D40B50895B6E4D80AB9165B9::get_hmdManager_14() const
 
 D:\YUI_Home\Library\Il2cppBuildCache\Android\arm64-v8a\il2cppOutput/Unity.com.yvr.core.cpp:11417
 
 ```
-
-​
-
-  
 
 可以看到该地址对应的函数有 `get_hmdManager` 字符，其与 C# 代码 `hmdManager.batteryLevel`可匹配上。
