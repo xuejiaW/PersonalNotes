@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/UGUI.md",
-            "mode": "preview",
+            "file": "Notes/Unity/Android Symbols.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/UGUI.md"
+                "file": "Notes/Unity/Android Symbols.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/UGUI.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/UGUI.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/UGUI.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,6 +164,8 @@
   },
   "active": "dee1519379667db8",
   "lastOpenFiles": [
+    "Notes/Unity/Android Symbols.md",
+    "Notes/Unity/Attributes.md",
     "Notes/Unity/UGUI.md",
     "Notes/Unity/fixed vs  half  vs fixed.md",
     "Notes/Unity/Memory.md",
@@ -171,8 +173,6 @@
     "Notes/Unity/Test Framework (DESKTOP-9KPUHB6's conflicted copy 2022-02-20).md",
     "Notes/Unity/Test Framework.md",
     "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-    "TO-DO.md",
-    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
-    "Notes/Tools/Coding Conventions/CSharp Code Practices.md"
+    "TO-DO.md"
   ]
 }
