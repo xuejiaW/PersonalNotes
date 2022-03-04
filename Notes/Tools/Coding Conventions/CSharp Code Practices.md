@@ -2,7 +2,7 @@
 tags:
     - Coding-Conventions
 created: 2022-02-27
-updated: 2022-03-03
+updated: 2022-03-04
 ---
 
 # Invert 'if' statement to reduce nesting
@@ -66,7 +66,30 @@ private static void Print(string name)
 
 # readonly
 
-如果一个 Field 仅在构造函数中被赋值，可以将其设定为 `readonly`
+如果一个 Field 仅在构造函数中被赋值，可以将其设定为 `readonly`，如下变量：
+```csharp
+public class Person
+{
+    private string m_Name;
+    private int m_Age;
+    public Person(string name, int age)
+    {
+        this.m_Name = name;
+        this.m_Age = age;
+    }
+}
+```
+
+## Prefer
+```csharp
+public class Person
+{
+    private readonly string m_Name;
+    private readonly int m_Age;
+    // ...
+}
+```
+
 
 
 # Reference

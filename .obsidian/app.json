@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/Android Symbols",
+  "attachmentFolderPath": "./assets/CSharp Code Practices",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
