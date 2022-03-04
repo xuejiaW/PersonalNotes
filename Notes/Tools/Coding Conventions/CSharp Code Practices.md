@@ -5,9 +5,9 @@ created: 2022-02-27
 updated: 2022-03-04
 ---
 
-# Invert 'if' statement to reduce nesting
+# 提前 Return 减少嵌套作用域
 
-当 `if` 包含整个函数的有效函数体时，可以通过提前返回减少 `nested scope` [^1][^2]。
+如当 `if` 包含整个函数的有效函数体时，可以通过提前返回减少 `nested scope` [^1][^2]。
 
 ## Do not
 
@@ -35,7 +35,7 @@ void PrintName(Person p)
 ```
 
 
-# Specific type while 'new'
+# 构造对象时指明类型
 
 当使用 new 构造对象时，指定构造的类型。
 
@@ -138,7 +138,9 @@ if (comps.Any(cur => cur is Behaviour { isActiveAndEnabled: true }))
 }
 ```
 
+# 使用 ?: return 操作
 
+可
 
 # Reference
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+            "file": "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md"
+                "file": "Notes/Tools/Coding Conventions/CSharp Code Practices.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,8 +164,8 @@
   },
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
-    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
     "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
+    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
     "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
     "TO-DO.md",
     "Notes/Tools/Coding Conventions/C++ Naming Style.md",
