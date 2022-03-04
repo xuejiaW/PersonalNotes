@@ -64,6 +64,10 @@ private static void Print(string name)
 }
 ```
 
+# readonly
+
+如果一个 Field 仅在构造函数中被赋值，可以将其设定为 `readonly`
+
 
 # Reference
 
