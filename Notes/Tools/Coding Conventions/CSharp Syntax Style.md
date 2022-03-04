@@ -4,7 +4,7 @@ created: 2022-03-01
 updated: 2022-03-04
 ---
 
-# Set default Value for Field
+# Fied 初始化时需指明默认值
 
 ## Do not
 ```csharp
@@ -21,7 +21,7 @@ private YVRManager m_Manager = null;
 ```
 
 
-# Use ??= if possible 
+# 尽可能使用 `??=` 
 
 ```ad-warning
 不要对继承了 Unity.Object 的对象使用 `??=`
@@ -105,5 +105,7 @@ private int b;
 ```
 
 ## Order
+
+关键字的定义顺序如下所示
 
 `public/private/protected` -> `internal` -> `new` -> `static` -> `abstract/virtual/sealed/override` -> `readonly` -> `extern` -> `unsafe` -> `volatile` -> `async`
