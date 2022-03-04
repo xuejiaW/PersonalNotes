@@ -140,7 +140,22 @@ if (comps.Any(cur => cur is Behaviour { isActiveAndEnabled: true }))
 
 # 使用 ?: return 操作
 
-可
+使用 `?:` 减少 return 操作
+
+## Do not
+
+```csharp
+if (m_Material != null)
+    return m_Material.mainTexture;
+
+return base.mainTexture;
+```
+
+## Do
+
+```csharp
+return m_Material != null ? m_Material.mainTexture : base.mainTexture;
+```
 
 # Reference
 
