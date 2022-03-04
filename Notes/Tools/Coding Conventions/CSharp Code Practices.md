@@ -105,9 +105,13 @@ public class Person
 }
 ```
 
-# Use LinQ while possibly
+# 尽可能使用 LINQ 表达式
 
-尽可能使用 LINQ 表达式简化循环判断的操作。
+```ad-warning
+每帧都需要执行的代码中谨慎使用 LINQ，LINQ 表达式会造成一部分的内存分配
+```
+
+使用 LINQ 表达式可简化循环判断的操作。
 
 ## Do not
 
@@ -134,21 +138,6 @@ if (comps.Any(cur => cur is Behaviour { isActiveAndEnabled: true }))
 }
 ```
 
-# Set default Value for Field
-
-## Do not
-```csharp
-private int m_Value;
-private bool m_Status;
-private YVRManager m_Manager;
-```
-
-## Do
-```csharp
-private int m_Value = null;
-private bool m_Status = null;
-private YVRManager m_Manager = null;
-```
 
 
 # Reference

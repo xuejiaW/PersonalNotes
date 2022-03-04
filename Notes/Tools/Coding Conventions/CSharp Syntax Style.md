@@ -4,7 +4,24 @@ created: 2022-03-01
 updated: 2022-03-04
 ---
 
-## Use ??= if possible 
+# Set default Value for Field
+
+## Do not
+```csharp
+private int m_Value;
+private bool m_Status;
+private YVRManager m_Manager;
+```
+
+## Do
+```csharp
+private int m_Value = null;
+private bool m_Status = null;
+private YVRManager m_Manager = null;
+```
+
+
+# Use ??= if possible 
 
 ```ad-warning
 不要对继承了 Unity.Object 的对象使用 `??=`
