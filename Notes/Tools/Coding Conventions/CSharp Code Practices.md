@@ -134,6 +134,22 @@ if (comps.Any(cur => cur is Behaviour { isActiveAndEnabled: true }))
 }
 ```
 
+# Set default Value for Field
+
+## Do not
+```csharp
+private int m_Value;
+private bool m_Status;
+private YVRManager m_Manager;
+```
+
+## Do
+```csharp
+private int m_Value = null;
+private bool m_Status = null;
+private YVRManager m_Manager = null;
+```
+
 
 # Reference
 
