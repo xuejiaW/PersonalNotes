@@ -11,7 +11,6 @@ updated: 2022-03-04
 
 在代码中统一使用 C# 类型关键。：
 
-
 ## Do not
 
 ```csharp
@@ -40,8 +39,13 @@ private bool m_Status = null;
 private YVRManager m_Manager = null;
 ```
 
+# 使用 String Interpolation Expression
 
-# 尽可能使用 `??=` 
+## Do not
+
+## Do
+
+# 使用 ??=
 
 ```ad-warning
 不要对继承了 Unity.Object 的对象使用 `??=`

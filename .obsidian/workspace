@@ -165,6 +165,7 @@
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
     "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+    "Notes/CSharp/$ String Interpolation.md",
     "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
     "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
     "TO-DO.md",
@@ -172,7 +173,6 @@
     "Notes/Tools/Coding Conventions/EditorConfig.md",
     "Notes/Tools/Coding Conventions/Clang-Format.md",
     "Notes/Tools/Visual Studio (DESKTOP-98TEV03's conflicted copy 2022-02-28).md",
-    "Notes/Tools/Visual Studio.md",
-    "Notes/Unity/Scripting Architecture/CSharp.md"
+    "Notes/Tools/Visual Studio.md"
   ]
 }
