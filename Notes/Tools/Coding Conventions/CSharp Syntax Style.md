@@ -50,8 +50,9 @@ return string.Format("Image Size: {0}x{1}", x, y);
 ## Do
 
 ```csharp
-return $"Image Size: {x}x{y}";
-```
+
+
+`
 
 # 使用 ??=
 
