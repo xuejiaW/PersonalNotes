@@ -9,16 +9,6 @@ updated: 2022-03-04
 
 当 `if` 包含整个函数的有效函数体时，可以通过提前返回减少 `nested scope` [^1][^2]。
 
-## Do
-
-```csharp
-void PrintName(Person p)
-{
-  if (p?.Name == null) return
-  Console.WriteLine(p.Name);
-}
-```
-
 ## Do not
 
 ```csharp
@@ -34,14 +24,20 @@ void PrintName(Person p)
 }
 ```
 
+## Do
+
+```csharp
+void PrintName(Person p)
+{
+  if (p?.Name == null) return
+  Console.WriteLine(p.Name);
+}
+```
+
+
 # Specific type while 'new'
 
 当使用 new 构造对象时，指定构造的类型。
-
-## Do
-```csharp
-private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new ObjectPool<LayoutRebuilder>(null, x => x.Clear());
-```
 
 ## Do not
 
@@ -49,6 +45,10 @@ private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new ObjectPoo
 private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new(null, x => x.Clear());
 ```
 
+## Do
+```csharp
+private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new ObjectPool<LayoutRebuilder>(null, x => x.Clear());
+```
 
 # Static Member 
 
@@ -105,6 +105,23 @@ public class Person
 }
 ```
 
+# Use LinQ while possibly
+
+尽可能使用 LINQ 表达式简化循环判断的操作。
+
+## Do not
+
+```csharp
+for (int i = 0; i < components.Count; i++)
+    if (components[i] is ILayoutSelfController)
+        action(components[i]);
+```
+
+## Do
+
+```csharp
+
+```
 
 
 # Reference
