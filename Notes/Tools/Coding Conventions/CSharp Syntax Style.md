@@ -7,7 +7,22 @@ updated: 2022-03-04
 
 # 统一使用 C# 类型关键字
 
-对于内置的变量类型，C# 类型和 CLR 类型可互相转换，如 `bool -> Sysytem.Boolean`，
+对于内置的变量类型，C# 类型和 CLR 类型可互相转换，如 `bool -> System.Boolean`，`int -> System.Int32`，完整的转换可见 [Built-in types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types)
+
+在代码中统一使用 C# 类型关键。：
+
+
+## Do not
+
+```csharp
+String.IsNullOrEmpty(value)
+```
+
+## Do
+
+```csharp
+string.IsNullOrEmpty(value)
+```
 
 # Fied 初始化时需指明默认值
 
