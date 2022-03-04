@@ -34,6 +34,21 @@ void PrintName(Person p)
 }
 ```
 
+# Specific type while 'new'
+
+当使用 new 构造对象时，指定构造的类型。
+
+## Do
+```csharp
+private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new ObjectPool<LayoutRebuilder>(null, x => x.Clear());
+```
+
+## Do not
+
+```csharp
+private static readonly ObjectPool<LayoutRebuilder> s_Rebuilders = new(null, x => x.Clear());
+```
+
 
 # Static Member 
 
