@@ -185,11 +185,15 @@ private int m_Value = 0;
 public int value
 {
     get => m_Value;
-    set => m_Value;
+    set => m_Value = value;
 }
 ```
 
 ## Do
+
+```csharp
+public int value{get;set;}
+```
 
 # Reference
 
