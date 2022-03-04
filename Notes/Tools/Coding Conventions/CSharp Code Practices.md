@@ -176,6 +176,21 @@ if(next == null)
 next?.Break();
 ```
 
+# 使用 Auto Property
+
+## Do not
+
+```csharp
+private int m_Value = 0;
+public int value
+{
+    get => m_Value;
+    set => m_Value;
+}
+```
+
+## Do
+
 # Reference
 
 [^1]: [coding style - Should I return from a function early or use an if statement? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/18454/should-i-return-from-a-function-early-or-use-an-if-statement)
