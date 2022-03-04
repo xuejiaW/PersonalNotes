@@ -113,14 +113,14 @@ public class Person
 
 ```csharp
 for (int i = 0; i < components.Count; i++)
-    if (components[i] is ILayoutSelfController)
-        action(components[i]);
+    action(components[i]);
+
 ```
 
 ## Do
 
 ```csharp
-
+components.ForEach(component => action(component));
 ```
 
 
