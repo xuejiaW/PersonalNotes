@@ -3,7 +3,7 @@ tags:
     - Unity
     - Android
 created: 2022-03-03
-updated: 2022-03-03
+updated: 2022-03-04
 ---
 
 如果 Unity 的应用发生了 Crash 或开发者主动的去获取当前 SysTrace，往往会看到 Unity 应用中的调用堆栈是以内存地址的方式显示，如下：
