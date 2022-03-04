@@ -2,7 +2,7 @@
 tags:
     - Coding-Conventions
 created: 2022-02-28
-updated: 2022-03-02
+updated: 2022-03-04
 ---
 
 ```ad-note
@@ -24,6 +24,8 @@ private GameObject m_GameObject;
 ```csharp
 public float distance;
 ```
+
+## Static
 
 # Property
 

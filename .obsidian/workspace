@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "dee1519379667db8",
+        "id": "0966512c7544c4cd",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Unity/Android Symbols.md",
-            "mode": "preview",
+            "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Unity/Android Symbols.md"
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Unity/Android Symbols.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,13 +109,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Unity/Android Symbols.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "e3e645e0ac60b225",
@@ -127,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Unity/Android Symbols.md",
+                "file": "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -162,17 +163,17 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "dee1519379667db8",
+  "active": "0966512c7544c4cd",
   "lastOpenFiles": [
-    "Notes/Unity/Android Symbols.md",
-    "Notes/Unity/Attributes.md",
-    "Notes/Unity/UGUI.md",
-    "Notes/Unity/fixed vs  half  vs fixed.md",
-    "Notes/Unity/Memory.md",
-    "Notes/Unity/Textures.md",
-    "Notes/Unity/Test Framework (DESKTOP-9KPUHB6's conflicted copy 2022-02-20).md",
-    "Notes/Unity/Test Framework.md",
-    "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
-    "TO-DO.md"
+    "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
+    "TO-DO.md",
+    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
+    "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
+    "Notes/Tools/Coding Conventions/C++ Naming Style.md",
+    "Notes/Tools/Coding Conventions/EditorConfig.md",
+    "Notes/Tools/Coding Conventions/Clang-Format.md",
+    "Notes/Tools/Visual Studio (DESKTOP-98TEV03's conflicted copy 2022-02-28).md",
+    "Notes/Tools/Visual Studio.md",
+    "Notes/Unity/Scripting Architecture/CSharp.md"
   ]
 }
