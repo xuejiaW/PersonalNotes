@@ -112,15 +112,26 @@ public class Person
 ## Do not
 
 ```csharp
-for (int i = 0; i < components.Count; i++)
-    action(components[i]);
-
+for (int i = 0; i < comps.Count; ++i)
+{
+    var cur = comps[i];
+    if (cur is Behaviour { isActiveAndEnabled: true })
+    {
+        validLayoutGroup = true;
+        layoutRoot = parent;
+        break;
+    }
+}
 ```
 
 ## Do
 
 ```csharp
-components.ForEach(component => action(component));
+if (comps.Any(cur => cur is Behaviour { isActiveAndEnabled: true }))
+{
+    validLayoutGroup = true;
+    layoutRoot = parent;
+}
 ```
 
 
