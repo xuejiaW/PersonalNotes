@@ -159,7 +159,22 @@ return m_Material != null ? m_Material.mainTexture : base.mainTexture;
 
 # 使用 ?. 操作符
 
+```ad-warning
+不要对继承自 `Unity.Object` 的对象使用 `?.` 操作符
+```
 
+## Do not
+
+```csharp
+if(next == null)
+    next.Break();
+```
+
+## Do
+
+```csharp
+next?.Break();
+```
 
 # Reference
 
