@@ -1,20 +1,22 @@
 ---
 tags: Coding-Conventions
 created: 2022-03-01
-updated: 2022-03-03
+updated: 2022-03-04
 ---
 
-# Assignment
+## Use ??= if possible 
 
-## 尽可能使用 Compound 形式
+```ad-warning
+不要对继承了 Unity.Object 的对象使用 `??=`
+```
 
-### Do
+## Do
 
 ```csharp
 public TextGenerator cachedTextGeneratorForLayout => m_TextCacheForLayout ??= new TextGenerator();
 ```
 
-### Do Not
+## Do Not
 ```csharp
 public TextGenerator cachedTextGeneratorForLayout => m_TextCacheForLayout ?? (m_TextCacheForLayout = new TextGenerator());
 ```
