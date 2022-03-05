@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Tools/Visual Studio.md",
+            "file": "Notes/Android/Android Debug Bridge.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md"
+                "file": "Notes/Android/Android Debug Bridge.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/Android Debug Bridge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/Android Debug Bridge.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tools/Visual Studio.md",
+                "file": "Notes/Android/Android Debug Bridge.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,15 +164,15 @@
   },
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
-    "Notes/Tools/Visual Studio.md",
+    "Notes/Android/Android Debug Bridge.md",
     "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
+    "Notes/Tools/Visual Studio.md",
     "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
     "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
     "Notes/CSharp/$ String Interpolation.md",
     "TO-DO.md",
     "Notes/Tools/Coding Conventions/C++ Naming Style.md",
     "Notes/Tools/Coding Conventions/EditorConfig.md",
-    "Notes/Tools/Coding Conventions/Clang-Format.md",
-    "Notes/Tools/Visual Studio (DESKTOP-98TEV03's conflicted copy 2022-02-28).md"
+    "Notes/Tools/Coding Conventions/Clang-Format.md"
   ]
 }
