@@ -9,6 +9,10 @@ updated: 2022-03-04
 该命名规范主要用于 Unity 项目使用的 C# 语言
 ```
 
+# 类型与命名空间
+
+以`UpperCamelCase` 形式
+
 # Field
 
 ## Non-Static
