@@ -4,7 +4,7 @@ tags:
     - Tool
 Alias: VS
 created: 2022-02-26
-updated: 2022-03-02
+updated: 2022-03-05
 ---
 
 ```ad-tip
@@ -71,6 +71,9 @@ Visual 自带的 `Edit.CommentSelection` 当遇到空白行时无法正常的处
 可以对`解决方案（Solution）`右键打开 `Conguration Manager` 配置需要构建的项目：
 ![](assets/Visual%20Studio/image-20220228182752223.png)
 
+## 自动保存
+
+在 `Tools -> Options -> Environment -> Documents -> Save documents ...` 选择在 VS 失去焦点时自动保存。
 
 # Extensions
 
