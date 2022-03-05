@@ -26,6 +26,7 @@ updated: 2022-03-05
 # Property
 
 所有属性都以 `lowerCamelCase` 形式。
+
 # Events
 
 所有事件都以 `lowerCamelCase` 形式
@@ -44,8 +45,8 @@ updated: 2022-03-05
 
 `Private/ protected / internal` 的字段：
 - 普通字段以 `m_UpperCamelCase`  形式
-    - `static` 字段以 `s_UpperCamelCase` 形式
-    - `const` 字段以 `k_UpperCamelCase` 形式：
+- `static` 字段以 `s_UpperCamelCase` 形式
+- `const` 字段以 `k_UpperCamelCase` 形式：
 
 ```csharp
 public GameObject gameObject = null;
