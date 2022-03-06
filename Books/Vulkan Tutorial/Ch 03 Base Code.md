@@ -1,6 +1,6 @@
 ---
 created: 2022-02-28
-updated: 2022-03-02
+updated: 2022-03-06
 tags:
     - Vulkan
 ---
@@ -55,4 +55,9 @@ int main()
 
 # Resource management
 
-Vulkan 对象会从类似于 `vkCreateXXX` 或者 `vkAllocateXXX` 的函数中创建，对应的当这些物体不再需要时，需要调用 `vkDestoryxxx` 或 `vk`
+Vulkan 对象会从类似于 `vkCreateXXX` 或者 `vkAllocateXXX` 的函数中创建，对应的当这些物体不再需要时，需要调用 `vkDestoryxxx` 或 `vkFreeXXX` 进行释放。
+
+这些函数的形参会根据具体需要的类型而不同，但所有函数都有一个 `pAllocator` 的形参，这个形参用来指定内存操作后的回调，在本教程中，这个形参始终会被设为 `nullptr`。
+
+# Integrating GLW
+
