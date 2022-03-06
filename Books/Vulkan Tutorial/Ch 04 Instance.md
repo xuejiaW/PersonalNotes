@@ -96,4 +96,6 @@ void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateIn
 
  # Cleaning up
 
- 
+ 在退出时，需要调用 `vkDestroyInstance` 销毁 Instance：
+ ```csharp
+ ```
