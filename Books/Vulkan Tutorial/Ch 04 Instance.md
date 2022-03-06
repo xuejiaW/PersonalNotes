@@ -51,4 +51,19 @@ void HelloTriangleApplication::createInstance()
 Vulkan 设计中，许多函数需要的信息都是通过结构体，而不是一系列函数形参。
 ```
 
-之后可以通过 `vkCreateInstance` 函数创建 Instance，这类 Create 函数通常有以下特性：
+之后可以通过 `vkCreateInstance` 函数创建 Instance：
+```csharp
+if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
+{
+	throw std::runtime_error("failed to create instance!");
+}
+```
+
+这类 Create 函数通常有以下的形参：
+1. 一个指针指向创建需要的信息结构体
+2. 一个指针指向创建后的回调函数，在本教程中一直是 `nullptr`
+3. 一个指针指向存储创建物体内存的对象。
+
+同时几乎所有的 Vulkan 函数都会返回一个 `VkResult` 值表示接口运行是否成功，`VkResult 的值是 ·VK_SUCCESS` 或其他错误值。
+
+## Checking for extension support
