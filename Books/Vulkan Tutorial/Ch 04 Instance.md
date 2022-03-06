@@ -44,4 +44,11 @@ void HelloTriangleApplication::createInstance()
 
 其中首先需要创建两个结构体 `VkApplicationInfo` 和 `VkInstanceCreateInfo`。
 - `VkApplicationInfo`透露了关于应用的一些信息，驱动可以根据这些信息对程序做一些优化
-- `VkInstanceCrateInfo` 描述了创建 Instance 所需要的信息，其中 ``
+- `VkInstanceCrateInfo` 描述了创建 Instance 所需要的信息。
+    因为 Vulkan 本身是一个与平台不相关的接口，因此在 Create Info 中需要描述与平台 Surface 相关的 Extension，这些 Extension 可以从 GLFW 的接口 `glfwGetRequiredInstanceExtensions` 中获取。
+
+```ad-note
+Vulkan 设计中，许多函数需要的信息都是通过结构体，而不是一系列函数形参。
+```
+
+之后可以通过 `vkCreateInstance` 函数创建 Instance，这类 Create 函数通常有以下特性：
