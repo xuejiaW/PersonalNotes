@@ -98,4 +98,12 @@ void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateIn
 
  在退出时，需要调用 `vkDestroyInstance` 销毁 Instance：
  ```csharp
+void HelloTriangleApplication::cleanup()
+{
+	vkDestroyInstance(instance, nullptr);
+	glfwDestroyWindow(window);
+	glfwTerminate();
+}
  ```
+
+ 之后所有创建的 Vulkan 资源都需要在销毁 Instance 前被销毁。
