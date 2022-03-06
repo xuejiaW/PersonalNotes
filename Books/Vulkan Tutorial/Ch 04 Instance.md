@@ -67,7 +67,7 @@ if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
 
 同时几乎所有的 Vulkan 函数都会返回一个 `VkResult` 值表示接口运行是否成功，`VkResult 的值是 ·VK_SUCCESS` 或其他错误值。
 
-## Checking for extension support
+# Checking for extension support
 
 可以通过 `vkEnumerateInstanceExtensionProperties` 函数获取所有支持的 extensions，其中第一个参数为用来过滤 extensions 的 validation layer 的名称，这里暂不使用，第二个参数为 extensions 的数目，第三个参数为所有 extension 的数据。
 
@@ -92,5 +92,8 @@ void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateIn
 ```
 
 上例中调用了两次 `vkEnumerateInstanceExtensionProperties` 函数，第一次是为了获取数量，第二次则是完整的获取所有的 Extensions。
+
+
+ # Cleaning up
 
  
