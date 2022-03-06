@@ -73,7 +73,9 @@ void HelloTriangleApplication::initWindow()
 }
 ```
 
-因为 GLFW 被she'ji'we
+因为 GLFW 起初是为 OpenGL 设计的，因此这里需要显式的调用 `GLFWwindow* window = nullptr` 告知 GLFW 不需要创建 OpenGL 的上下文。
+
+另外当窗口大小变化时，需要额外处理，因此这里显式的设定窗口不可改变`glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE)`。
 
 其中 `WIDTH`, `HEIGHT` 和 `window` 的定义如下：
 ```csharp
@@ -81,4 +83,24 @@ const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
 GLFWwindow* window = nullptr;
+```
+
+在主循环中，需要判断窗口是否应当关闭，且运行时检测是否有按键时间发生：
+```csharp
+void HelloTriangleApplication::mainLoop()
+{
+	while (!glfwWindowShouldClose(window))
+	{
+		glfwPollEvents();
+	}
+}
+```
+
+在退出时需要清理 GLFW 窗口：
+```csharp
+void HelloTriangleApplication::cleanup()
+{
+	glfwDestroyWindow(window);
+	glfwTerminate();
+}
 ```
