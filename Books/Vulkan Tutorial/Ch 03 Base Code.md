@@ -55,3 +55,4 @@ int main()
 
 # Resource management
 
+Vulkan 对象会从类似于 `vkCreateXXX` 或者 `vkAllocateXXX` 的函数中创建，对应的当这些物体不再需要时，需要调用 `vkDestoryxxx` 或 `vk`
