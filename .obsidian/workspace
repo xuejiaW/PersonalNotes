@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+            "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md"
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Books/Vulkan Tutorial/Ch 02 Development environment.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,15 +163,15 @@
   },
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
-    "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "Books/Vulkan Tutorial/Ch 01 Overview.md",
+    "Books/Vulkan Tutorial/Ch 00 Introduction.md",
+    "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
     "Notes/C++/Threading.md",
     "Books/Vulkan Tutorial/Ch 04 Instance.md",
     "Notes/Tools/Visual Studio.md",
     "Books/Vulkan Tutorial.md",
     "Books/Vulkan Tutorial/Ch 03 Base Code.md",
-    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
-    "Notes/Tools/Coding Conventions/CSharp Code Practices.md",
-    "Notes/Tools/Coding Conventions/CSharp Naming Style.md"
+    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md"
   ]
 }
