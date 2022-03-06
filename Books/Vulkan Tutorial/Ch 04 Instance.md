@@ -46,6 +46,7 @@ void HelloTriangleApplication::createInstance()
 - `VkApplicationInfo`透露了关于应用的一些信息，驱动可以根据这些信息对程序做一些优化
 - `VkInstanceCrateInfo` 描述了创建 Instance 所需要的信息。
     因为 Vulkan 本身是一个与平台不相关的接口，因此在 Create Info 中需要描述与平台 Surface 相关的 Extension，这些 Extension 可以从 GLFW 的接口 `glfwGetRequiredInstanceExtensions` 中获取。
+    CreateInfo 中的 `enabledLayerCount` 和 `ppEnabledLayerNames` 用来表示启用的 Validation Layers，这里暂时不启用，因此将 `enabledLayouCount` 设为 0。
 
 ```ad-note
 Vulkan 设计中，许多函数需要的信息都是通过结构体，而不是一系列函数形参。
@@ -67,3 +68,25 @@ if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
 同时几乎所有的 Vulkan 函数都会返回一个 `VkResult` 值表示接口运行是否成功，`VkResult 的值是 ·VK_SUCCESS` 或其他错误值。
 
 ## Checking for extension support
+
+可以通过 `vkEnumerateInstanceExtensionProperties` 函数获取所有支持的 extensions，其中第一个参数使用如下所示：
+```csharp
+void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateInfo& createInfo)
+{
+
+	uint32_t extensionCount = 0;
+	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
+	std::vector<VkExtensionProperties> extensions(extensionCount);
+
+	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
+
+	std::cout << "available extensions:\n";
+
+	for (const auto& extension : extensions)
+	{
+		std::cout << '\t' << extension.extensionName << std::endl;
+	}
+}
+```
+
+上例中的第一次调用仅是为了获取拓展接口的数目，因此
