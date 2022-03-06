@@ -69,7 +69,9 @@ if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
 
 ## Checking for extension support
 
-可以通过 `vkEnumerateInstanceExtensionProperties` 函数获取所有支持的 extensions，其中第一个参数使用如下所示：
+可以通过 `vkEnumerateInstanceExtensionProperties` 函数获取所有支持的 extensions，其中第一个参数为用来过滤 extensions 的 validation layer 的名称，这里暂不使用，第二个参数为 extensions 的数目，第三个参数为所有 extension 的数据。
+
+使用示例如下所示：
 ```csharp
 void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateInfo& createInfo)
 {
@@ -89,4 +91,5 @@ void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateIn
 }
 ```
 
-上例中的第一次调用仅是为了获取拓展接口的数目，因此
+上例中调用了两次 `vkEnumerateInstanceExtensionProperties` 函数，第一次是为了获取数量，第二次则是完整的获取所有的 Extensions。
+
