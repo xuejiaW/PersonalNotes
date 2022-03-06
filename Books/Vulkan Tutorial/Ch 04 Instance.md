@@ -93,3 +93,4 @@ void HelloTriangleApplication::checkAvailableExtensions(const VkInstanceCreateIn
 
 上例中调用了两次 `vkEnumerateInstanceExtensionProperties` 函数，第一次是为了获取数量，第二次则是完整的获取所有的 Extensions。
 
+ 
