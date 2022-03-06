@@ -12,5 +12,36 @@ updated: 2022-03-06
 创建 Instance 的完整实现如下所示：
 
 ```csharp
+void HelloTriangleApplication::createInstance()
+{
+	VkApplicationInfo appInfo{};
+	appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+	appInfo.pApplicationName = "Hello Triangle";
+	appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+	appInfo.pEngineName = "No Engine";
+	appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+	appInfo.apiVersion = VK_API_VERSION_1_0;
+
+	uint32_t glfwExtensionCount = 0;
+	const char** glfwExtension = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+
+	VkInstanceCreateInfo createInfo{};
+	createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+	createInfo.pApplicationInfo = &appInfo;
+	createInfo.enabledExtensionCount = glfwExtensionCount;
+	createInfo.ppEnabledExtensionNames = glfwExtension;
+	createInfo.enabledLayerCount = 0;
+
+	if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
+	{
+		throw std::runtime_error("failed to create instance!");
+	}
+
+	checkAvailableExtensions(createInfo);
+	checkRequiredGlfwExtensions();
+}
 ```
 
+其中首先需要创建两个结构体 `VkApplicationInfo` 和 `VkInstanceCreateInfo`。
+- `VkApplicationInfo`透露了关于应用的一些信息，驱动可以根据这些信息对程序做一些优化
+- `VkInstanceCrateInfo` 描述了创建 Instance 所需要的信息，其中 ``
