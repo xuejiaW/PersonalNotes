@@ -59,5 +59,26 @@ Vulkan 对象会从类似于 `vkCreateXXX` 或者 `vkAllocateXXX` 的函数中�
 
 这些函数的形参会根据具体需要的类型而不同，但所有函数都有一个 `pAllocator` 的形参，这个形参用来指定内存操作后的回调，在本教程中，这个形参始终会被设为 `nullptr`。
 
-# Integrating GLW
+# Integrating GLFW
 
+定义 `initWindow`，其中使用 GLFW 初始化窗口，并在调用 `initVulkan` 前先调用该函数：
+```csharp
+void HelloTriangleApplication::initWindow()
+{
+	glfwInit();
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+
+	window = glfwCreateWindow(WIDTH, HEIGHT, "vulkan", nullptr, nullptr);
+}
+```
+
+因为 GLFW 被she'ji'we
+
+其中 `WIDTH`, `HEIGHT` 和 `window` 的定义如下：
+```csharp
+const uint32_t WIDTH = 800;
+const uint32_t HEIGHT = 600;
+
+GLFWwindow* window = nullptr;
+```
