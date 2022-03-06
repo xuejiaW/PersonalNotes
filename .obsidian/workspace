@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
+            "file": "Books/Vulkan Tutorial.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md"
+                "file": "Books/Vulkan Tutorial.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
+                "file": "Books/Vulkan Tutorial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
+                "file": "Books/Vulkan Tutorial.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 03 Base Code.md",
+                "file": "Books/Vulkan Tutorial.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,6 +163,8 @@
   },
   "active": "0966512c7544c4cd",
   "lastOpenFiles": [
+    "Books/Vulkan Tutorial.md",
+    "Books/Vulkan Tutorial/Ch 04 Instance.md",
     "Books/Vulkan Tutorial/Ch 03 Base Code.md",
     "Books/Vulkan Tutorial/Ch 02 Development environment.md",
     "Notes/Tools/Coding Conventions/CSharp Syntax Style.md",
@@ -171,8 +172,6 @@
     "Notes/Tools/Coding Conventions/CSharp Naming Style.md",
     "Notes/Android/Android Debug Bridge.md",
     "Notes/Tools/Visual Studio.md",
-    "Notes/CSharp/$ String Interpolation.md",
-    "TO-DO.md",
-    "Notes/Tools/Coding Conventions/C++ Naming Style.md"
+    "Notes/CSharp/$ String Interpolation.md"
   ]
 }
