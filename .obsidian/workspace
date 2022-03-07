@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "0966512c7544c4cd",
+        "id": "dee1519379667db8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
-            "mode": "source",
+            "file": "Notes/Unity/Android Symbols.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md"
+                "file": "Notes/Unity/Android Symbols.md"
               }
             }
           },
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
+                "file": "Notes/Unity/Android Symbols.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -162,17 +161,17 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "0966512c7544c4cd",
+  "active": "dee1519379667db8",
   "lastOpenFiles": [
-    "Books/Vulkan Tutorial/Ch 05 Validation Layers.md",
-    "Books/Vulkan Tutorial/Ch 04 Instance.md",
-    "Books/Vulkan Tutorial/Ch 03 Base Code.md",
-    "Books/Vulkan Tutorial/Ch 02 Development environment.md",
-    "Books/Vulkan Tutorial/Ch 01 Overview.md",
-    "Books/Vulkan Tutorial/Ch 00 Introduction.md",
-    "Notes/C++/Threading.md",
-    "Notes/Tools/Visual Studio.md",
-    "Books/Vulkan Tutorial.md",
-    "Notes/Tools/Coding Conventions/CSharp Syntax Style.md"
+    "Notes/Unity/Android Symbols.md",
+    "Notes/Unity/Attributes.md",
+    "Notes/Unity/UGUI.md",
+    "Notes/Unity/fixed vs  half  vs fixed.md",
+    "Notes/Unity/Memory.md",
+    "Notes/Unity/Textures.md",
+    "Notes/Unity/Test Framework (DESKTOP-9KPUHB6's conflicted copy 2022-02-20).md",
+    "Notes/Unity/Test Framework.md",
+    "Notes/Unity/Scripting Architecture/Scripting backends/IL2CPP.md",
+    "TO-DO.md"
   ]
 }
