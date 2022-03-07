@@ -74,3 +74,27 @@ bool HelloTriangleApplication::checkValidationLayerSupport()
 ```
 
 此时修改 `createInstance` 函数如下所示：
+```cpp
+void HelloTriangleApplication::createInstance()
+{
+	if (enableValidationLayers && !checkValidationLayerSupport())
+	{
+		throw std::runtime_error("Validation layers requested, but not available!");
+	}
+    // ...
+
+    VkInstanceCreateInfo createInfo{};
+    // ....
+
+	if (enableValidationLayers)
+	{
+		createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+		createInfo.ppEnabledLayerNames = validationLayers.data();
+	}
+	else
+	{
+		createInfo.enabledLayerCount = 0;
+	}
+    // ...
+}
+```
