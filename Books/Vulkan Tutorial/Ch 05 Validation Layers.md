@@ -23,5 +23,9 @@ updated: 2022-03-07
 ```
 
 ```ad-note
-Vulkan 本身并没有提供任何的 Validation Layers，但 LumarG Vulkan SDK 则ti'go
+Vulkan 本身并没有提供任何的 Validation Layers，但 LumarG Vulkan SDK 则提供了一系列 Layers 用来进行常见的错误检查。
 ```
+
+# Using validation layers
+
+所有有用的标准 Layers 都被封装进 SDK 中一个名为 `VK_LAYER_KHRONOS_validation` 的 layer 里。
