@@ -42,4 +42,4 @@ const bool enableValidationLayers = true;
 #endif
 ```
 
-可以通过函数 `vkEnumerateInstanceLayerProperties` 检测可用的 Validation Layers，该
+可以通过函数 `vkEnumerateInstanceLayerProperties` 检测可用的 Validation Layers，该函数的用法与 `vkEnumerateInstanceExtensionProperties` 类似，整个检测函数如下所示：
