@@ -42,4 +42,35 @@ const bool enableValidationLayers = true;
 #endif
 ```
 
-可以通过函数 `vkEnumerateInstanceLayerProperties` 检测可用的 Validation Layers，该函数的用法与 `vkEnumerateInstanceExtensionProperties` 类似，整个检测函数如下所示：
+可以通过函数 `vkEnumerateInstanceLayerProperties` 检测可用的 Validation Layers，该函数的用法与 `vkEnumerateInstanceExtensionProperties` 类似。
+
+整个检测函数如下所示，其首先通过 `vkEnumerateInstanceLayerProperties` 找到所有可用的 Layers，并检测 `availableLayers` 中是否有需要的  `VK_LAYER_KHRONOS_validation`：
+```cpp
+bool HelloTriangleApplication::checkValidationLayerSupport()
+{
+	uint32_t layerCount = 0;
+	vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
+
+	std::vector<VkLayerProperties> availableLayers(layerCount);
+	vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
+
+	bool layerFound = false;
+	const char* layerName = validationLayers[0];
+
+	for (const auto& layerProperty : availableLayers)
+	{
+		if (strcmp(layerName, layerProperty.layerName) == 0)
+		{
+			layerFound = true;
+			break;
+		}
+	}
+
+	if (!layerFound)
+		return false;
+
+	return true;
+}
+```
+
+此时修改 `createInstance` 函数如下所示：
