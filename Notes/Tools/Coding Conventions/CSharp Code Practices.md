@@ -2,7 +2,7 @@
 tags:
     - Coding-Conventions
 created: 2022-02-27
-updated: 2022-03-04
+updated: 2022-03-07
 ---
 
 # 提前 Return 减少嵌套作用域
