@@ -28,4 +28,18 @@ Vulkan 本身并没有提供任何的 Validation Layers，但 LumarG Vulkan SDK 
 
 # Using validation layers
 
-所有有用的标准 Layers 都被封装进 SDK 中一个名为 `VK_LAYER_KHRONOS_validation` 的 layer 里。
+所有有用的标准 Layers 都被封装进 SDK 中一个名为 `VK_LAYER_KHRONOS_validation` 的 layer 里。可以选择仅在 debug 情况下打开检测：
+```cpp
+const uint32_t WIDTH = 800;
+const uint32_t HEIGHT = 600;
+
+const std::vector<const char*> validationLayers = { "VK_LAYER_KHRONOS_validation" };
+
+#ifdef NDEBUG
+const bool enableValidationLayers = false;
+#else
+const bool enableValidationLayers = true;
+#endif
+```
+
+可以通过函数 `vkEnumerateInstanceLayerProperties` 检测可用的 Validation Layers，该
