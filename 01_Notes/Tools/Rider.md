@@ -21,7 +21,13 @@ tags:
 
 ### actions
 
-可以
+可以通过 `IdeaVim: Track Action Ids` 开启追踪 Action Id 的窗口：
+![image-20220503163032756](assets/Rider/image-20220503163032756.png)
+
+此时当执行一个操作后，在界面的右下角会显示这个操作的 ID，如下所示：
+![|400](assets/Rider/image-20220503163017459.png)
+
+## Relative Number
 
 
 # Reference

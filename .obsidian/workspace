@@ -7,12 +7,9 @@
         "id": "852b6d82d2fc3e9b",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "01_Notes/Tools/Rider.md",
-            "mode": "preview",
-            "backlinks": false,
-            "source": true
+            "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
           }
         }
       },
@@ -20,9 +17,12 @@
         "id": "31f90d5fe8efcbc7",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png"
+            "file": "01_Notes/Tools/Rider.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": true
           }
         }
       }
@@ -80,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png"
+                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -179,17 +179,17 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "31f90d5fe8efcbc7",
+  "active": "852b6d82d2fc3e9b",
   "lastOpenFiles": [
-    "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
+    "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
     "01_Notes/Tools/Rider.md",
+    "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
     "01_Notes/Tools/assets/Rider/image-20220503163342586.png",
     "01_Notes/Tools/assets/Rider/image-20220503163032756.png",
     "01_Notes/Tools/Visual Studio.md",
     "00_Books/Learn Vim (The Smart Way).md",
     "00_Books/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md",
     "01_Notes/Tools/Power Toys.md",
-    "01_Notes/Tools/Visual Studio Code.md",
-    "01_Notes/Tools/Visual Studio Code/Extensions.md"
+    "01_Notes/Tools/Visual Studio Code.md"
   ]
 }
