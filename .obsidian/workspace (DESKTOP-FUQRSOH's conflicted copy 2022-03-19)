@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "95c6db7d675b7c2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f698437c31e3c89",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "01_Notes/Tools/Visual Studio.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6c2f54e41c69beb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c299212244df453",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd48d203bcbd514d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "726f10adc88608fd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "32 位",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 348,
+    "collapsed": true
+  },
+  "right": {
+    "id": "086a6696003cb579",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9ec0dddb66d9d6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7e39143692349f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01_Notes/Tools/Visual Studio.md"
+              }
+            }
+          },
+          {
+            "id": "4026a1071cb6fc93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "238dfcc9ab96411b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01_Notes/Tools/Visual Studio.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e3599f6a7cdb0a51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01_Notes/Tools/Visual Studio.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "776f676b36fdcb7b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "e3e645e0ac60b225",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "893334fd1bdb602d",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "01_Notes/Tools/Visual Studio.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.4019828977761015,
+                  "close": false
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 511.5
+  },
+  "active": "1f698437c31e3c89",
+  "lastOpenFiles": [
+    "01_Notes/Tools/Visual Studio.md",
+    "00_Books/Vulkan Tutorial/Ch 09 Swap Chain.md",
+    "01_Notes/Unity/Test Framework.md",
+    "01_Notes/Unity/Memory/Managed Memory.md",
+    "01_Notes/Unity/Memory/Boehm GC algorithm.md",
+    "01_Notes/Unity/Memory/Garbage Collector.md",
+    "01_Notes/Unity/Memory.md",
+    "Untitled.md",
+    "00_Books/Vulkan Tutorial/Ch 02 Development environment.md",
+    "[LunarXchange.md"
+  ]
+}

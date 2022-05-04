@@ -14,15 +14,5 @@
       "left": 2
     }
   },
-  "Notes": "RiBookMarkLine",
-  "Tutorials": "RiTodoLine",
-  "Notes/Unity": "FaUnityBrands",
-  "Notes/Android": "RiAndroidLine",
-  "Notes/C++": "RiAddFill",
-  "Notes/CSharp": "RiHashtag",
-  "Notes/Computer Graphics": "RiPaletteLine",
-  "Notes/Tools": "RiToolsFill",
-  "Notes/Virtual Reality": "FaReacteuropeBrands",
-  "Books": "RiBook3Line",
   "Templates": "RiFileCopyLine"
 }
