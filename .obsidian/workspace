@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "01_Notes/Tools/Rider.md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -20,12 +20,9 @@
         "id": "31f90d5fe8efcbc7",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "01_Notes/Tools/Visual Studio.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
+            "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png"
           }
         }
       }
@@ -83,7 +80,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/Tools/Rider.md"
+                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png"
               }
             }
           },
@@ -104,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Tools/Rider.md",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Tools/Rider.md",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +144,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Tools/Rider.md",
+                "file": "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -182,17 +179,17 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "852b6d82d2fc3e9b",
+  "active": "31f90d5fe8efcbc7",
   "lastOpenFiles": [
+    "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
     "01_Notes/Tools/Rider.md",
+    "01_Notes/Tools/assets/Rider/image-20220503163342586.png",
+    "01_Notes/Tools/assets/Rider/image-20220503163032756.png",
     "01_Notes/Tools/Visual Studio.md",
-    "01_Notes/Tools/Power Toys.md",
+    "00_Books/Learn Vim (The Smart Way).md",
     "00_Books/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md",
+    "01_Notes/Tools/Power Toys.md",
     "01_Notes/Tools/Visual Studio Code.md",
-    "01_Notes/Tools/Visual Studio Code/Extensions.md",
-    "00_Books/Learn Vim (The Smart Way)/Ch 05 Moving in a File.md",
-    "01_Notes/Unity/Test Framework.md",
-    "01_Notes/CSharp/LINQ.md",
-    "03_Daily/2022-04-30.md"
+    "01_Notes/Tools/Visual Studio Code/Extensions.md"
   ]
 }
