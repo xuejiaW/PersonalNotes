@@ -4,26 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "852b6d82d2fc3e9b",
+        "id": "c5bd6b8fe432fc9b",
         "type": "leaf",
         "state": {
-          "type": "image",
-          "state": {
-            "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
-          }
-        }
-      },
-      {
-        "id": "31f90d5fe8efcbc7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "01_Notes/Tools/Rider.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -79,9 +64,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
-              }
+              "state": {}
             }
           },
           {
@@ -101,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +125,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -179,7 +159,7 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "852b6d82d2fc3e9b",
+  "active": "c5bd6b8fe432fc9b",
   "lastOpenFiles": [
     "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
     "01_Notes/Tools/Rider.md",
