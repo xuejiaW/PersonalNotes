@@ -128,8 +128,9 @@ public void SaveLog_Default_GetLogPath()
 
 此时该测试仅会在 Android 平台下运行。
 ```ad-error
-![|](assets/Test%20Framework/image-20220507112632017.png)
+![|500](assets/Test%20Framework/image-20220507112632017.png)
 
+在目前 Test Framework 版本下（1.1.31 / 2.0.1-pre.18）即使在 Android 模式下已经正常运行了测试项，但 UI 上仍然未正常显示结果。
 ```
 
 ## Description
