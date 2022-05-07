@@ -126,7 +126,7 @@ public void SaveLog_Default_GetLogPath()
 }
 ```
 
-此时
+此时该测试仅会在 Android 平台下运行，
 
 ## Description
 
