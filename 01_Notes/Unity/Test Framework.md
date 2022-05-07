@@ -3,7 +3,7 @@ tags:
     - Unity
     - QA
 created: 2022-02-09
-updated: 2022-05-03
+updated: 2022-05-07
 Alias: UTF
 ---
 
@@ -114,6 +114,19 @@ public class EditTest2 : IPrebuildSetup, IPostBuildCleanup
 ![|300](assets/Test%20Framework/image-20220211094529947.png)
 
 # Attribute
+
+## UnityPlatforms
+
+设定测试仅在特定平台运行，如下：
+```csharp
+[Test, Order(11), UnityPlatform(RuntimePlatform.Android)]
+public void SaveLog_Default_GetLogPath()
+{
+    // ...
+}
+```
+
+此时
 
 ## Description
 
