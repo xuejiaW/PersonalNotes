@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01_Notes/Unity/Test Framework.md",
+            "file": "01_Notes/Unity/Scripting Architecture/CSharp.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/Unity/Test Framework.md"
+                "file": "01_Notes/Unity/Scripting Architecture/CSharp.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Unity/Test Framework.md",
+                "file": "01_Notes/Unity/Scripting Architecture/CSharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Unity/Test Framework.md",
+                "file": "01_Notes/Unity/Scripting Architecture/CSharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Unity/Test Framework.md",
+                "file": "01_Notes/Unity/Scripting Architecture/CSharp.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,6 +171,7 @@
   },
   "active": "c5bd6b8fe432fc9b",
   "lastOpenFiles": [
+    "01_Notes/Unity/Scripting Architecture/CSharp.md",
     "01_Notes/Unity/Test Framework.md",
     "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
     "01_Notes/Tools/Rider.md",
@@ -179,7 +180,6 @@
     "01_Notes/Tools/assets/Rider/image-20220503163032756.png",
     "01_Notes/Tools/Visual Studio.md",
     "00_Books/Learn Vim (The Smart Way).md",
-    "00_Books/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md",
-    "01_Notes/Tools/Power Toys.md"
+    "00_Books/Learn Vim (The Smart Way)/Ch 02 Buffers, Window, and Tabs.md"
   ]
 }
