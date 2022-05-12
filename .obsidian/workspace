@@ -4,16 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c5bd6b8fe432fc9b",
+        "id": "ea3ab837b788d16e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "03_Daily/2022-05-12.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": true
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,9 +64,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "03_Daily/2022-05-12.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Daily/2022-05-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Daily/2022-05-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +125,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "03_Daily/2022-05-12.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -169,7 +159,7 @@
     "direction": "horizontal",
     "width": 511.5
   },
-  "active": "c5bd6b8fe432fc9b",
+  "active": "ea3ab837b788d16e",
   "lastOpenFiles": [
     "03_Daily/2022-05-12.md",
     "01_Notes/C++/Threading.md",
