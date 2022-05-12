@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01_Notes/C++/Threading.md",
+            "file": "03_Daily/2022-05-12.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/C++/Threading.md"
+                "file": "03_Daily/2022-05-12.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/C++/Threading.md",
+                "file": "03_Daily/2022-05-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/C++/Threading.md",
+                "file": "03_Daily/2022-05-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/C++/Threading.md",
+                "file": "03_Daily/2022-05-12.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,6 +171,7 @@
   },
   "active": "c5bd6b8fe432fc9b",
   "lastOpenFiles": [
+    "03_Daily/2022-05-12.md",
     "01_Notes/C++/Threading.md",
     "00_Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "01_Notes/Unity/Scripting Architecture/CSharp.md",
@@ -179,7 +180,6 @@
     "01_Notes/Tools/Rider.md",
     "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
     "01_Notes/Tools/assets/Rider/image-20220503163342586.png",
-    "01_Notes/Tools/assets/Rider/image-20220503163032756.png",
-    "01_Notes/Tools/Visual Studio.md"
+    "01_Notes/Tools/assets/Rider/image-20220503163032756.png"
   ]
 }
