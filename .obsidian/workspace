@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
-            "mode": "source",
+            "file": "01_Notes/Unity.md",
+            "mode": "preview",
             "backlinks": false,
             "source": true
           }
@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "image",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,12 +50,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 348,
-    "collapsed": true
+    "width": 348
   },
   "right": {
     "id": "086a6696003cb579",
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md"
+                "file": "01_Notes/Unity.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Unity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Unity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Unity.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,15 +172,15 @@
   },
   "active": "ea3ab837b788d16e",
   "lastOpenFiles": [
+    "01_Notes/Unity.md",
+    "01_Notes/Unity/Editor.md",
+    "01_Notes/Unity/Editor/Editor Windows.md",
     "00_Books/Unix 编程艺术/第 1 章 哲学.md",
     "03_Daily/2022-05-12.md",
     "01_Notes/C++/Threading.md",
     "00_Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "01_Notes/Unity/Scripting Architecture/CSharp.md",
     "01_Notes/Unity/Test Framework.md",
-    "01_Notes/Tools/assets/Rider/image-20220503164403991.png",
-    "01_Notes/Tools/Rider.md",
-    "01_Notes/Tools/assets/Rider/image-20220503163017459.png",
-    "01_Notes/Tools/assets/Rider/image-20220503163342586.png"
+    "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
   ]
 }
