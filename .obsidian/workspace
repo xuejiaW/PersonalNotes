@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01_Notes/Unity.md",
-            "mode": "preview",
+            "file": "03_Daily/2022-05-23.md",
+            "mode": "source",
             "backlinks": false,
             "source": true
           }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/Unity.md"
+                "file": "03_Daily/2022-05-23.md"
               }
             }
           },
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Unity.md",
+                "file": "03_Daily/2022-05-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Unity.md",
+                "file": "03_Daily/2022-05-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Unity.md",
+                "file": "03_Daily/2022-05-23.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,6 +172,7 @@
   },
   "active": "ea3ab837b788d16e",
   "lastOpenFiles": [
+    "03_Daily/2022-05-23.md",
     "01_Notes/Unity.md",
     "01_Notes/Unity/Editor.md",
     "01_Notes/Unity/Editor/Editor Windows.md",
@@ -180,7 +181,6 @@
     "01_Notes/C++/Threading.md",
     "00_Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md",
     "01_Notes/Unity/Scripting Architecture/CSharp.md",
-    "01_Notes/Unity/Test Framework.md",
-    "01_Notes/Tools/assets/Rider/image-20220503164403991.png"
+    "01_Notes/Unity/Test Framework.md"
   ]
 }
