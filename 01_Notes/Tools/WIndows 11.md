@@ -1,7 +1,7 @@
 ---
 tags: Tools
 created: 2022-05-25
-updated: 2022-05-25
+updated: 2022-05-26
 ---
 
 # 关闭登录画面
