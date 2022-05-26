@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "01_Notes/Tools/WIndows 11.md",
+            "file": "01_Notes/CSharp/@ Verbatim Identifier.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Notes/Tools/WIndows 11.md"
+                "file": "01_Notes/CSharp/@ Verbatim Identifier.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Notes/Tools/WIndows 11.md",
+                "file": "01_Notes/CSharp/@ Verbatim Identifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Notes/Tools/WIndows 11.md",
+                "file": "01_Notes/CSharp/@ Verbatim Identifier.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01_Notes/Tools/WIndows 11.md",
+                "file": "01_Notes/CSharp/@ Verbatim Identifier.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -157,7 +157,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.18462326225858167,
+                  "scale": 1.0000000000000029,
                   "close": false
                 }
               }
@@ -171,6 +171,8 @@
   },
   "active": "bac1f95b861d4d99",
   "lastOpenFiles": [
+    "01_Notes/CSharp/@ Verbatim Identifier.md",
+    "01_Notes/CSharp/$ String Interpolation.md",
     "01_Notes/Tools/WIndows 11.md",
     "01_Notes/Tools/Windows 11.md",
     "03_Daily/2022-05-23.md",
@@ -178,8 +180,6 @@
     "01_Notes/Unity/Editor.md",
     "01_Notes/Unity/Editor/Editor Windows.md",
     "00_Books/Unix 编程艺术/第 1 章 哲学.md",
-    "03_Daily/2022-05-12.md",
-    "01_Notes/C++/Threading.md",
-    "00_Books/Head First Design Patterns/Ch 05 the Singleton Pattern.md"
+    "03_Daily/2022-05-12.md"
   ]
 }
