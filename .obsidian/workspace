@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+            "file": "01_Notes/Tools/Rider.md",
             "mode": "source",
             "backlinks": false,
             "source": true
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348
+    "width": 348,
+    "collapsed": true
   },
   "right": {
     "id": "086a6696003cb579",
@@ -70,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md"
+                "file": "01_Notes/Tools/Rider.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Tools/Rider.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Tools/Rider.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "00_Books/Unix 编程艺术/第 1 章 哲学.md",
+                "file": "01_Notes/Tools/Rider.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,6 +172,7 @@
   },
   "active": "bac1f95b861d4d99",
   "lastOpenFiles": [
+    "01_Notes/Tools/Rider.md",
     "00_Books/Unix 编程艺术/第 1 章 哲学.md",
     "00_Books/Unix 编程艺术.md",
     "01_Notes/Unity/Test Framework.md",
@@ -179,7 +181,6 @@
     "01_Notes/CSharp/$ String Interpolation.md",
     "01_Notes/Tools/WIndows 11.md",
     "01_Notes/Tools/Windows 11.md",
-    "03_Daily/2022-05-23.md",
-    "01_Notes/Unity.md"
+    "03_Daily/2022-05-23.md"
   ]
 }
