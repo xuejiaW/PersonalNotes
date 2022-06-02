@@ -3,7 +3,7 @@ tags:
     - Unity
     - QA
 created: 2022-02-09
-updated: 2022-05-10
+updated: 2022-06-02
 Alias: UTF
 ---
 
@@ -341,7 +341,7 @@ public IEnumerator BlitTexture_SamePixelsData(string fileName)
 // Error： Method has non-void return value, but no result is expected
 ```
 
-因此只能使用 [ValueSource](#ValueSource) Attribute，如下所示：
+可以使用 [ValueSource](#ValueSource) Attribute，如下所示：
 ```csharp
 private static string[] testImages = new string[] { "red", "cube_texture" };
 
@@ -352,6 +352,24 @@ public IEnumerator BlitTexture_SamePixelsData([ValueSource("testImages")] string
 }
 
 ```
+
+也可以使用 [TestCaseSource](#TestCaseSource) Attribute，只不过必须使用 `TestCaseData` 进行封装，如下所示：
+```csharp
+private static object[] s_TestingImageWithSize =
+{
+     new TestCaseData("JPG1920X1080.jpg", 500, 500).Returns(null),
+     new TestCaseData("JPG1920X1080.jpg", 2000, 500).Returns(null)
+};
+
+[UnityTest]
+[TestCaseSource(nameof(s_TestingImageWithSize))]
+public IEnumerator LoadTex2D_JpgWithTargetSize_LoadSuccess(string imageFile, int targetWidth, int targetHeight)
+{
+   // ... 
+}
+```
+
+
 
 ## Setup and Cleanup
 

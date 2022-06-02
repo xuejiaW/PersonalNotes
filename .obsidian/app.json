@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "./assets/WIndows 11",
+  "attachmentFolderPath": "./assets/Test Framework",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "foldIndent": true,
